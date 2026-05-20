@@ -1,71 +1,146 @@
 """
-FX Signal Board — Currency Strength Model (CSM)
+FX Signal Board — Currency Strength Model
+Ported from Forex1212 scanner/csm.py for calculation coherence.
 
-For each timeframe (D1 / H4):
-  1. Compute % return for each pair over the last completed bar
-  2. Distribute returns to currencies: base gets +ret, quote gets −ret
-  3. Average across all pairs each currency appears in
-  4. Normalise to 0–100 (weakest=0, strongest=100)
+D1 CSM : ATR-normalised 14-bar return, D1×0.7 + H4×0.3 blend, 16 pairs
+H4 CSM : ATR-normalised 5-bar H4 return, H4×0.8 + H1×0.2 (if H1 available), 16 pairs
 
-Returns:
-  {
-    "d1": {"USD":100, "CHF":68, ...},
-    "h4": {"GBP":100, "CHF":75, ...}
-  }
+These parameters exactly match Forex1212 so both dashboards show the same values.
 """
+import numpy as np
+import pandas as pd
 from scanner.config import CURRENCIES
 
+# ── Parameters — match Forex1212 exactly ─────────────────────────────────────
+LOOKBACK   = 14     # D1 CSM: 14-bar price return window
+ATR_PERIOD = 14     # ATR smoothing period
+D1_WEIGHT  = 0.7   # D1 return weight in combined score
+H4_WEIGHT  = 0.3   # H4 return weight in combined score
 
-def _pct_return(df, bars_back: int = 1) -> float | None:
-    """Return of last `bars_back` closed bars."""
-    if df is None or len(df) < bars_back + 1:
-        return None
-    prev  = df["close"].iloc[-(bars_back + 1)]
-    close = df["close"].iloc[-1]
-    if prev == 0:
-        return None
-    return (close / prev - 1.0) * 100.0
+H4_LOOKBACK = 5    # H4 CSM: 5 H4 bars ≈ 20 hours
+H1_LOOKBACK = 8    # H1 component lookback in H4 CSM
+H4_CSM_W    = 0.8
+H1_CSM_W    = 0.2
+
+# 16-pair set — same as Forex1212 STRENGTH_PAIRS
+STRENGTH_PAIRS = [
+    "EUR/USD", "GBP/USD", "USD/JPY", "USD/CHF",
+    "AUD/USD", "USD/CAD", "NZD/USD",
+    "AUD/JPY", "NZD/JPY", "CAD/JPY",
+    "EUR/GBP", "EUR/CHF", "GBP/CHF",
+    "AUD/NZD", "AUD/CAD", "GBP/AUD",
+]
 
 
-def compute_csm(pair_ohlcv: dict) -> dict:
+# ── ATR helper ────────────────────────────────────────────────────────────────
+def _atr(df: pd.DataFrame, period: int = ATR_PERIOD) -> float:
+    """Simple rolling ATR — matches Forex1212 _atr14() which sums last 14 TRs."""
+    h = df["high"].astype(float)
+    l = df["low"].astype(float)
+    c = df["close"].astype(float)
+    tr = pd.concat([
+        h - l,
+        (h - c.shift()).abs(),
+        (l - c.shift()).abs(),
+    ], axis=1).max(axis=1)
+    val = tr.iloc[-period:].mean()
+    return float(val) if not np.isnan(val) else 0.0
+
+
+# ── ATR-normalised return ─────────────────────────────────────────────────────
+def _adj_return(df: pd.DataFrame, lookback: int = LOOKBACK) -> float | None:
     """
-    pair_ohlcv = { "EURUSD": {"d1": df, "h4": df, ...}, ... }
-    Returns  { "d1": {cur: score}, "h4": {cur: score} }
+    ATR-normalised percentage return over `lookback` bars.
+    Matches Forex1212: (close[-1] - close[-lookback-1]) / close[-lookback-1] * 100 / ATR
     """
-    result = {}
+    if df is None or len(df) < lookback + ATR_PERIOD + 1:
+        return None
+    c = df["close"].astype(float)
+    ret = (c.iloc[-1] - c.iloc[-(lookback + 1)]) / c.iloc[-(lookback + 1)] * 100
+    atr = _atr(df)
+    return ret / atr if atr > 0 else None
 
-    for tf, bars_back in (("d1", 5), ("h4", 6)):
-        raw    = {c: 0.0 for c in CURRENCIES}
-        counts = {c: 0   for c in CURRENCIES}
 
-        for pair_key, tfs in pair_ohlcv.items():
-            df = tfs.get(tf)
-            if df is None or len(pair_key) != 6:
-                continue
-            base  = pair_key[:3]
-            quote = pair_key[3:]
-            ret   = _pct_return(df, bars_back)
-            if ret is None:
-                continue
-            if base in raw:
-                raw[base]    += ret
-                counts[base] += 1
-            if quote in raw:
-                raw[quote]    -= ret
-                counts[quote] += 1
+# ── D1 CSM ────────────────────────────────────────────────────────────────────
+def compute_csm_d1(ohlcv: dict) -> dict:
+    """
+    D1 currency strength (0–100, 100=strongest).
+    Uses D1 (70%) + H4 (30%) ATR-normalised 14-bar returns across 16 pairs.
+    ohlcv keys like "EURUSD" → {"d1": df, "h4": df}
+    """
+    raw    = {c: [] for c in CURRENCIES}
 
-        avg = {c: raw[c] / counts[c] if counts[c] > 0 else 0.0
-               for c in CURRENCIES}
+    for pair in STRENGTH_PAIRS:
+        key   = pair.replace("/", "")
+        base  = pair[:3]
+        quote = pair[3:] if "/" not in pair else pair.split("/")[1]
+        base  = pair.split("/")[0]
+        quote = pair.split("/")[1]
 
-        vals   = list(avg.values())
-        min_v  = min(vals)
-        max_v  = max(vals)
-        spread = max_v - min_v
+        d1_ret = _adj_return(ohlcv.get(key, {}).get("d1"))
+        h4_ret = _adj_return(ohlcv.get(key, {}).get("h4"))
 
-        if spread == 0:
-            result[tf] = {c: 50 for c in CURRENCIES}
-        else:
-            result[tf] = {c: round((avg[c] - min_v) / spread * 100)
-                          for c in CURRENCIES}
+        if d1_ret is None:
+            continue
 
-    return result
+        combined = (D1_WEIGHT * d1_ret + H4_WEIGHT * h4_ret
+                    if h4_ret is not None else d1_ret)
+
+        if base in raw:
+            raw[base].append(combined)
+        if quote in raw:
+            raw[quote].append(-combined)
+
+    return _normalise(raw)
+
+
+# ── H4 CSM ────────────────────────────────────────────────────────────────────
+def compute_csm_h4(ohlcv: dict) -> dict:
+    """
+    H4 currency strength (0–100, 100=strongest).
+    Uses H4 5-bar (80%) + H1 8-bar (20%) ATR-normalised returns across 16 pairs.
+    """
+    raw = {c: [] for c in CURRENCIES}
+
+    for pair in STRENGTH_PAIRS:
+        key   = pair.replace("/", "")
+        base  = pair.split("/")[0]
+        quote = pair.split("/")[1]
+
+        h4_ret = _adj_return(ohlcv.get(key, {}).get("h4"), lookback=H4_LOOKBACK)
+        h1_ret = _adj_return(ohlcv.get(key, {}).get("h1"), lookback=H1_LOOKBACK)
+
+        if h4_ret is None:
+            continue
+
+        combined = (H4_CSM_W * h4_ret + H1_CSM_W * h1_ret
+                    if h1_ret is not None else h4_ret)
+
+        if base in raw:
+            raw[base].append(combined)
+        if quote in raw:
+            raw[quote].append(-combined)
+
+    return _normalise(raw)
+
+
+# ── Normalise to 0-100 ────────────────────────────────────────────────────────
+def _normalise(raw: dict) -> dict:
+    avg    = {c: float(np.mean(v)) if v else 0.0 for c, v in raw.items()}
+    vals   = list(avg.values())
+    min_v  = min(vals)
+    max_v  = max(vals)
+    spread = max_v - min_v if max_v != min_v else 1.0
+    return {c: round((avg[c] - min_v) / spread * 100, 1) for c in CURRENCIES}
+
+
+# ── Public entry point ────────────────────────────────────────────────────────
+def compute_csm(ohlcv: dict) -> dict:
+    """
+    Compute both D1 and H4 CSM.
+    Returns {"d1": {cur: 0-100}, "h4": {cur: 0-100}}
+    """
+    return {
+        "d1": compute_csm_d1(ohlcv),
+        "h4": compute_csm_h4(ohlcv),
+    }
