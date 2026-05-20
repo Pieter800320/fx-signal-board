@@ -34,7 +34,7 @@ def compute_csm(pair_ohlcv: dict) -> dict:
     """
     result = {}
 
-    for tf, bars_back in (("d1", 1), ("h4", 1)):
+    for tf, bars_back in (("d1", 5), ("h4", 6)):
         raw    = {c: 0.0 for c in CURRENCIES}
         counts = {c: 0   for c in CURRENCIES}
 
