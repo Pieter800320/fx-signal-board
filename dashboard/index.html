@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FX Signal Board</title>
+<style>
+  :root {
+    --bg:#0a0e13; --surf:#111820; --bord:#1e2b3a;
+    --text:#cdd9e5; --muted:#576a7d; --dim:#1e2d3d;
+    --buy:#00dc37; --sell:#f85149; --amber:#e3b341;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    padding:10px;max-width:430px;margin:0 auto;
+  }
+
+  /* TOP BAR */
+  .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .app-name{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+  .scan-info{display:flex;align-items:center;gap:5px;font-size:9px;color:var(--muted);}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--buy);
+       box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+  /* MARKET STATE */
+  .mstate{
+    border-radius:10px;padding:9px 13px;margin-bottom:7px;
+    background:var(--surf);border:1.5px solid var(--bord);
+    transition:border-color .4s,box-shadow .4s;
+  }
+  .mstate.ro {border-color:rgba(248,81,73,.5);box-shadow:0 0 14px rgba(248,81,73,.08);}
+  .mstate.ron{border-color:rgba(0,220,55,.5); box-shadow:0 0 14px rgba(0,220,55,.08);}
+  .mstate.mix{border-color:rgba(227,179,65,.35);}
+  .ms-lbl{font-size:8px;font-weight:700;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+  .ms-row{display:flex;align-items:center;justify-content:space-between;}
+  .ms-item{display:flex;flex-direction:column;gap:2px;align-items:center;flex:1;}
+  .ms-key{font-size:8px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+  .ms-val{font-size:12px;font-weight:800;text-align:center;}
+  .ms-sub{font-size:8px;color:var(--muted);text-align:center;}
+  .ms-div{width:1px;height:30px;background:var(--bord);flex-shrink:0;}
+
+  /* NEWS */
+  .news{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+        padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
+  .news-line{width:2px;min-width:2px;height:26px;border-radius:2px;
+             background:var(--sell);margin-top:1px;transition:background .4s;}
+  .news-line.ron{background:var(--buy);}
+  .news-line.mix{background:var(--amber);}
+  .news-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+             letter-spacing:.07em;color:var(--muted);margin-bottom:2px;opacity:.6;}
+  .news-txt{font-size:10px;color:var(--muted);line-height:1.4;}
+
+  /* CSM */
+  .csm-wrap{
+    background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+    padding:9px 12px;margin-bottom:10px;cursor:pointer;user-select:none;
+  }
+  .csm-wrap:active{opacity:.8;}
+  .csm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .csm-ttl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.07em;color:var(--muted);}
+  .csm-tf{color:var(--text);font-weight:700;}
+  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:34px;}
+  .csm-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;}
+  .csm-b{width:100%;border-radius:2px;min-height:2px;transition:height .35s,background .35s;}
+  .csm-l{font-size:7px;font-weight:700;text-transform:uppercase;}
+
+  /* GRID */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+
+  /* PAIR BLOCK */
+  .block{
+    background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+    padding:8px 10px;cursor:pointer;user-select:none;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  .block.bear-hi{border-color:rgba(248,81,73,.5);
+    box-shadow:0 0 10px rgba(248,81,73,.09),inset 0 0 18px rgba(248,81,73,.03);}
+  .block.bear-med{border-color:rgba(248,81,73,.28);}
+  .block.bull-hi{border-color:rgba(0,220,55,.5);
+    box-shadow:0 0 10px rgba(0,220,55,.09);}
+  .block.bull-med{border-color:rgba(0,220,55,.28);}
+
+  /* Top row: pair + changes */
+  .b-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;}
+  .b-pair{font-size:12px;font-weight:700;letter-spacing:.02em;padding-top:1px;}
+  .b-chgs{display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+  .b-d1{font-size:11px;font-weight:700;}
+  .b-d5{font-size:8px;color:var(--muted);font-weight:600;}
+
+  /* Flip face area */
+  .b-face{margin-bottom:7px;}
+
+  /* PILLS face */
+  .pills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:3px;}
+  .tf-lbl{text-align:center;font-size:7px;font-weight:700;
+           color:var(--muted);letter-spacing:.04em;text-transform:uppercase;}
+  .pill{height:22px;border-radius:4px;display:flex;align-items:center;
+        justify-content:center;font-size:13px;font-weight:700;}
+  .pill.bull_strong{background:rgba(0,220,55,.22); color:var(--buy);}
+  .pill.bull       {background:rgba(0,220,55,.13); color:var(--buy);}
+  .pill.neutral    {background:rgba(46,58,72,.5);  color:#3a4d5e;}
+  .pill.bear       {background:rgba(248,81,73,.13);color:var(--sell);}
+  .pill.bear_strong{background:rgba(248,81,73,.22);color:var(--sell);}
+
+  /* CONT row */
+  .cont-row{display:flex;align-items:baseline;justify-content:space-between;
+             margin-top:5px;padding-top:5px;border-top:1px solid var(--dim);}
+  .cont-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+             letter-spacing:.06em;color:var(--muted);}
+  .cont-val{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;}
+
+  /* Correlates */
+  .b-corr{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap;}
+  .corr-tag{font-size:8px;font-weight:700;letter-spacing:.01em;}
+
+  /* MOM face */
+  .mom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:3px;}
+  .mom-val{text-align:center;font-size:14px;font-weight:700;
+           font-variant-numeric:tabular-nums;line-height:1.1;}
+  .mom-dlt{text-align:center;font-size:9px;font-weight:700;
+           font-variant-numeric:tabular-nums;}
+  .mom-sep{height:1px;background:var(--dim);margin:5px 0 4px;}
+  .mom-bot{display:flex;align-items:baseline;justify-content:space-between;}
+  .mom-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.06em;color:var(--muted);}
+  .mom-big{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .adx-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;}
+
+  /* CSM pair bar */
+  .b-csm{display:flex;align-items:center;gap:4px;padding-top:6px;border-top:1px solid var(--dim);}
+  .csm-base{font-size:8px;font-weight:700;min-width:20px;}
+  .csm-track{flex:1;height:2px;background:var(--dim);border-radius:1px;overflow:hidden;position:relative;}
+  .csm-fill{position:absolute;height:100%;border-radius:1px;transition:width .3s;}
+  .csm-quote{font-size:8px;font-weight:700;min-width:20px;text-align:right;}
+
+  /* Loading */
+  .loading{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="app-name">FX Signal Board</div>
+  <div class="scan-info"><div class="dot"></div><span id="scan-time">Loading…</span></div>
+</div>
+
+<div class="mstate" id="mstate">
+  <div class="ms-lbl">Market State</div>
+  <div class="ms-row" id="ms-row">
+    <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
+  </div>
+</div>
+
+<div class="news" id="news-wrap">
+  <div class="news-line" id="news-line"></div>
+  <div>
+    <div class="news-lbl" id="news-lbl">AI · —</div>
+    <div class="news-txt" id="news-txt">Loading…</div>
+  </div>
+</div>
+
+<div class="csm-wrap" onclick="toggleCSM()">
+  <div class="csm-head">
+    <div class="csm-ttl">Currency Strength · <span class="csm-tf" id="csm-tf">D1</span></div>
+  </div>
+  <div class="csm-bars" id="csm-bars"><div class="loading">—</div></div>
+</div>
+
+<div class="grid" id="pair-grid"><div class="loading" style="grid-column:1/-1">Loading…</div></div>
+
+<script>
+// ── CONFIG ───────────────────────────────────────────────────────────────────
+const REPO     = "Pieter800320/fx-signal-board";
+const API_BASE = `https://api.github.com/repos/${REPO}/contents/data/signals.json`;
+
+const PAIRS_ORDER = [
+  "EURUSD","GBPUSD","USDJPY","USDCHF",
+  "AUDUSD","USDCAD","NZDUSD",
+  "EURJPY","GBPJPY","AUDJPY","NZDJPY","CADJPY"
+];
+
+const CORRELATES = {
+  EURUSD:[["GBPUSD",true], ["NZDUSD",true]],
+  GBPUSD:[["EURUSD",true], ["GBPJPY",true]],
+  USDJPY:[["EURJPY",true], ["GBPJPY",true]],
+  USDCHF:[["USDJPY",true], ["EURUSD",false]],
+  AUDUSD:[["NZDUSD",true], ["AUDJPY",true]],
+  USDCAD:[["CADJPY",false],["USDJPY",true]],
+  NZDUSD:[["AUDUSD",true], ["NZDJPY",true]],
+  EURJPY:[["EURUSD",true], ["USDJPY",false]],
+  GBPJPY:[["GBPUSD",true], ["USDJPY",false]],
+  AUDJPY:[["AUDUSD",true], ["NZDJPY",true]],
+  NZDJPY:[["NZDUSD",true], ["AUDJPY",true]],
+  CADJPY:[["USDCAD",false],["USDJPY",false]],
+};
+
+// ── STATE ────────────────────────────────────────────────────────────────────
+let D        = null;   // signals.json
+let csmTf    = "d1";
+const face   = {};
+PAIRS_ORDER.forEach(p => face[p] = 0);
+
+// ── FETCH ────────────────────────────────────────────────────────────────────
+async function loadData(){
+  try {
+    const res = await fetch(API_BASE, {
+      headers: {"Accept": "application/vnd.github.v3.raw"},
+      cache:   "no-store",
+    });
+    if (!res.ok) throw new Error(res.status);
+    D = await res.json();
+    render();
+  } catch(e) {
+    document.getElementById("scan-time").textContent = "Error loading data";
+    console.error(e);
+  }
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function fmtTime(iso){
+  if (!iso) return "—";
+  const d = new Date(iso);
+  return d.getUTCHours().toString().padStart(2,"0") + ":" +
+         d.getUTCMinutes().toString().padStart(2,"0") + " UTC";
+}
+
+function regimeColor(r){
+  if (r === "Risk-Off") return "var(--sell)";
+  if (r === "Risk-On")  return "var(--buy)";
+  if (r === "Mixed")    return "var(--amber)";
+  return "var(--muted)";
+}
+
+function mstateClass(r){
+  if (r === "Risk-Off") return "mstate ro";
+  if (r === "Risk-On")  return "mstate ron";
+  if (r === "Mixed")    return "mstate mix";
+  return "mstate";
+}
+
+function pillArrow(p){
+  if (p === "bull_strong" || p === "bull") return "↑";
+  if (p === "bear_strong" || p === "bear") return "↓";
+  return "·";
+}
+
+function momColor(v){
+  if (v === null || v === undefined) return "var(--muted)";
+  return v >= 65 ? "var(--buy)" : v >= 35 ? "var(--amber)" : "var(--sell)";
+}
+
+function deltaColor(d){
+  if (d === null || d === undefined) return "var(--muted)";
+  return d > 0 ? "var(--buy)" : d < 0 ? "var(--sell)" : "var(--muted)";
+}
+
+function deltaStr(d){
+  if (d === null || d === undefined) return "—";
+  return (d > 0 ? "+" : "") + d;
+}
+
+function adxColor(v){
+  if (!v) return "var(--muted)";
+  return v >= 55 ? "var(--amber)" : v >= 25 ? "var(--buy)" : v >= 20 ? "var(--amber)" : "var(--muted)";
+}
+
+function contColor(v){
+  return v >= 70 ? "var(--buy)" : v >= 50 ? "var(--amber)" : v >= 35 ? "rgba(248,140,0,.8)" : "var(--sell)";
+}
+
+function fmtPct(v){
+  if (v === null || v === undefined) return "—";
+  return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function render(){
+  if (!D) return;
+
+  // Scan time
+  document.getElementById("scan-time").textContent =
+    "Scanned " + fmtTime(D.updated);
+
+  renderMarketState();
+  renderNews();
+  renderCSM();
+  renderGrid();
+}
+
+function renderMarketState(){
+  const h4  = D.regime_h4  || {};
+  const w1  = D.regime_w1  || {};
+  const mac = D.macro       || {};
+
+  const el = document.getElementById("mstate");
+  el.className = mstateClass(h4.regime);
+
+  const regStr = (r, conf, sub) =>
+    `<div class="ms-item">
+      <div class="ms-key">${r.key}</div>
+      <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||"—"}</div>
+      <div class="ms-sub">${sub}</div>
+    </div>`;
+
+  document.getElementById("ms-row").innerHTML =
+    `<div class="ms-item">
+       <div class="ms-key">W1</div>
+       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
+       <div class="ms-sub">${w1.score!=null?w1.score+"/10":""} · ${w1.confidence||"—"}</div>
+     </div>
+     <div class="ms-div"></div>
+     <div class="ms-item">
+       <div class="ms-key">H4</div>
+       <div class="ms-val" style="color:${regimeColor(h4.regime)}">${h4.regime||"—"}</div>
+       <div class="ms-sub">${h4.confidence||"—"} · ${h4.stable?"Stable":"Shifting"}</div>
+     </div>
+     <div class="ms-div"></div>
+     <div class="ms-item">
+       <div class="ms-key">Macro</div>
+       <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
+       <div class="ms-sub">${mac.signals!=null?(mac.signals>0?"+":"")+mac.signals+"/"+mac.total:"—"}</div>
+     </div>`;
+}
+
+function renderNews(){
+  const news = D.news || {};
+  const mac  = D.macro || {};
+  const line = document.getElementById("news-line");
+  const r    = mac.label || "";
+  line.className = "news-line" + (r==="Risk-On"?" ron":r==="Mixed"?" mix":"");
+  document.getElementById("news-lbl").textContent =
+    "AI · " + fmtTime(news.updated);
+  document.getElementById("news-txt").textContent =
+    news.text || "Awaiting scan…";
+}
+
+function renderCSM(){
+  const data = D.csm?.[csmTf] || {};
+  document.getElementById("csm-tf").textContent = csmTf.toUpperCase();
+
+  // Sort weakest → strongest
+  const sorted = Object.entries(data).sort((a, b) => a[1] - b[1]);
+
+  document.getElementById("csm-bars").innerHTML = sorted.map(([cur, val]) => {
+    const h   = Math.round(3 + val * 0.31) + "px";
+    const col = val >= 60 ? "var(--buy)" : val <= 40 ? "var(--sell)" : "#576a7d";
+    return `<div class="csm-col">
+      <div class="csm-b" style="height:${h};background:${col}"></div>
+      <div class="csm-l" style="color:${col}">${cur}</div>
+    </div>`;
+  }).join("");
+}
+
+function toggleCSM(){
+  csmTf = csmTf === "d1" ? "h4" : "d1";
+  renderCSM();
+  renderGrid();  // update per-pair CSM bars
+}
+
+// ── BLOCK RENDERING ──────────────────────────────────────────────────────────
+const TFS = ["w1","d1","h4","h1"];
+
+function pillsFace(pair, p){
+  const pills  = p.pills || {};
+  const labels = TFS.map(t => `<div class="tf-lbl">${t.toUpperCase()}</div>`).join("");
+  const pillH  = TFS.map(t => {
+    const v = pills[t] || "neutral";
+    return `<div class="pill ${v}">${pillArrow(v)}</div>`;
+  }).join("");
+
+  const cont    = p.cont ?? 0;
+  const contCol = contColor(cont);
+
+  const corrs = (CORRELATES[pair] || []).map(([cp, same]) =>
+    `<span class="corr-tag" style="color:${same===true ?
+      (pills.d1 in ["bull","bull_strong"] ? "var(--buy)" : "var(--sell)") :
+      (pills.d1 in ["bull","bull_strong"] ? "var(--sell)" : "var(--buy)")
+    }">${cp} ${same ? pillArrow(pills.d1||"neutral") : pillArrow(pills.d1==="bull"?"bear":pills.d1==="bull_strong"?"bear_strong":pills.d1==="bear"?"bull":"bull_strong")}</span>`
+  ).join("");
+
+  // Simpler corr coloring: just use the pair's d1 direction + same flag
+  const d1p = pills.d1 || "neutral";
+  const corrHtml = (CORRELATES[pair] || []).map(([cp, same]) => {
+    const dir = same
+      ? (d1p.includes("bull") ? "↑" : d1p.includes("bear") ? "↓" : "·")
+      : (d1p.includes("bull") ? "↓" : d1p.includes("bear") ? "↑" : "·");
+    const col = dir === "↑" ? "var(--buy)" : dir === "↓" ? "var(--sell)" : "var(--muted)";
+    return `<span class="corr-tag" style="color:${col}">${cp} ${dir}</span>`;
+  }).join("");
+
+  return `<div class="b-face">
+    <div class="pills-grid">${labels}</div>
+    <div class="pills-grid">${pillH}</div>
+    <div class="cont-row">
+      <span class="cont-lbl">Cont.</span>
+      <span class="cont-val" style="color:${contCol}">${cont}%</span>
+    </div>
+    ${corrHtml ? `<div class="b-corr">${corrHtml}</div>` : ""}
+  </div>`;
+}
+
+function momFace(p){
+  const mom = p.mom || {};
+  const labels = TFS.map(t => `<div class="tf-lbl">${t.toUpperCase()}</div>`).join("");
+  const vals   = TFS.map(t => {
+    const v = mom[t];
+    return `<div class="mom-val" style="color:${momColor(v)}">${v ?? "—"}</div>`;
+  }).join("");
+  const dlts   = TFS.map(t => {
+    const d = mom["d" + t];
+    return `<div class="mom-dlt" style="color:${deltaColor(d)}">${deltaStr(d)}</div>`;
+  }).join("");
+
+  const cmp = mom.cmp;
+  const adx = p.adx;
+
+  return `<div class="b-face">
+    <div class="mom-grid">${labels}</div>
+    <div class="mom-grid">${vals}</div>
+    <div class="mom-grid">${dlts}</div>
+    <div class="mom-sep"></div>
+    <div class="mom-bot">
+      <span class="mom-lbl">CMP</span>
+      <span class="mom-big" style="color:${momColor(cmp)}">${cmp ?? "—"}</span>
+      <span style="color:var(--muted);font-size:11px;padding:0 6px">·</span>
+      <span class="mom-lbl">ADX</span>
+      <span class="adx-val" style="color:${adxColor(adx)}">${adx ?? "—"}</span>
+    </div>
+  </div>`;
+}
+
+function pairCSMBar(pair){
+  const data = D.csm?.[csmTf] || {};
+  const base  = pair.slice(0, 3);
+  const quote = pair.slice(3);
+  const bv    = data[base]  ?? 50;
+  const qv    = data[quote] ?? 50;
+  const tot   = bv + qv || 1;
+  const bPct  = Math.round(bv / tot * 100);
+  const bCol  = bv > qv ? "var(--sell)" : "var(--buy)";
+  const qCol  = qv > bv ? "var(--buy)"  : "var(--sell)";
+  return `<div class="b-csm">
+    <span class="csm-base"  style="color:${bCol}">${base} ${bv}</span>
+    <div class="csm-track">
+      <div class="csm-fill" style="width:${bPct}%;background:${bCol}"></div>
+    </div>
+    <span class="csm-quote" style="color:${qCol}">${quote} ${qv}</span>
+  </div>`;
+}
+
+function blockHTML(pair){
+  const p   = (D.pairs || {})[pair] || {};
+  const cls = p.regime_cls || "";
+  const d1p = p.d1_pct;
+  const d5p = p.d5_pct;
+  const d1Pos = d1p !== null && d1p !== undefined && d1p >= 0;
+
+  return `<div class="block ${cls}" onclick="flipBlock('${pair}')">
+    <div class="b-top">
+      <span class="b-pair">${pair}</span>
+      <div class="b-chgs">
+        <span class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
+        <span class="b-d5">${fmtPct(d5p)}</span>
+      </div>
+    </div>
+    ${face[pair] === 0 ? pillsFace(pair, p) : momFace(p)}
+    ${pairCSMBar(pair)}
+  </div>`;
+}
+
+function renderGrid(){
+  document.getElementById("pair-grid").innerHTML =
+    PAIRS_ORDER.map(p => D.pairs?.[p] ? blockHTML(p) :
+      `<div class="block"><div class="b-pair">${p}</div><div style="color:var(--muted);font-size:9px;margin-top:4px">No data</div></div>`
+    ).join("");
+}
+
+function flipBlock(pair){
+  face[pair] = face[pair] === 0 ? 1 : 0;
+  renderGrid();
+}
+
+// ── INIT + REFRESH ────────────────────────────────────────────────────────────
+loadData();
+setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
+</script>
+</body>
+</html>

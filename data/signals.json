@@ -1,0 +1,9 @@
+{
+  "updated": null,
+  "regime_h4": {"regime": "Unknown", "confidence": "Low", "score": 5.0, "stable": false},
+  "regime_w1": {"regime": "Unknown", "confidence": "Low", "score": 5.0},
+  "macro":     {"label": "Unknown", "signals": 0, "total": 6},
+  "news":      {"text": "Awaiting first scan…", "updated": null},
+  "csm":       {"d1": {}, "h4": {}},
+  "pairs":     {}
+}
