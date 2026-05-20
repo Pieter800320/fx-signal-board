@@ -1,9 +1,9 @@
 {
-  "updated": "2026-05-20T18:18:06.348227+00:00",
+  "updated": "2026-05-20T18:28:15.418529+00:00",
   "regime_h4": {
-    "regime": "Ranging",
-    "confidence": "Low",
-    "score": 5.0,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 2.3,
     "stable": false
   },
   "csm": {
@@ -18,13 +18,13 @@
       "USD": 100.0
     },
     "h4": {
-      "GBP": 64.1,
-      "EUR": 84.7,
-      "AUD": 100.0,
-      "NZD": 39.6,
-      "CAD": 8.4,
-      "JPY": 39.3,
-      "CHF": 71.0,
+      "GBP": 73.3,
+      "EUR": 65.7,
+      "AUD": 89.1,
+      "NZD": 100.0,
+      "CAD": 48.6,
+      "JPY": 43.1,
+      "CHF": 81.7,
       "USD": 0.0
     }
   },
@@ -50,14 +50,14 @@
       "adx": 29.0,
       "d1_pct": 0.15,
       "d5_pct": -0.01,
-      "cont": 60,
+      "cont": 55,
       "regime_cls": ""
     },
     "GBPUSD": {
       "pills": {
         "w1": "neutral",
         "d1": "neutral",
-        "h4": "neutral",
+        "h4": "bull",
         "h1": "bull"
       },
       "mom": {
@@ -98,8 +98,8 @@
       "adx": 12.4,
       "d1_pct": -0.13,
       "d5_pct": 0.07,
-      "cont": 54,
-      "regime_cls": ""
+      "cont": 64,
+      "regime_cls": "bull-med"
     },
     "USDCHF": {
       "pills": {
@@ -129,7 +129,7 @@
       "pills": {
         "w1": "bull_strong",
         "d1": "neutral",
-        "h4": "neutral",
+        "h4": "bear_strong",
         "h1": "neutral"
       },
       "mom": {
@@ -194,7 +194,7 @@
       "adx": null,
       "d1_pct": 0.63,
       "d5_pct": 0.57,
-      "cont": 35,
+      "cont": 30,
       "regime_cls": ""
     },
     "EURJPY": {
@@ -225,7 +225,7 @@
       "pills": {
         "w1": "bull_strong",
         "d1": "neutral",
-        "h4": "neutral",
+        "h4": "bull",
         "h1": "neutral"
       },
       "mom": {
@@ -266,7 +266,7 @@
       "adx": 26.4,
       "d1_pct": 0.56,
       "d5_pct": 0.18,
-      "cont": 40,
+      "cont": 50,
       "regime_cls": ""
     },
     "NZDJPY": {
@@ -297,7 +297,7 @@
       "pills": {
         "w1": "bull_strong",
         "d1": "bull_strong",
-        "h4": "neutral",
+        "h4": "bull",
         "h1": "neutral"
       },
       "mom": {
@@ -314,8 +314,8 @@
       "adx": 14.0,
       "d1_pct": -0.18,
       "d5_pct": 0.04,
-      "cont": 25,
-      "regime_cls": ""
+      "cont": 50,
+      "regime_cls": "bull-med"
     }
   },
   "regime_w1": {
