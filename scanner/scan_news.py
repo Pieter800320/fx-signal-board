@@ -46,12 +46,12 @@ def compute_w1_regime(cross: dict) -> dict:
         # direction="up" means rising = risk-off signal
         return 1 if (pct > 0) == (direction == "up") else -1
 
-    signals.append(safe_chg("VIX",   "up"))    # VIX up = risk-off
-    signals.append(safe_chg("GOLD",  "up"))    # Gold up = risk-off
-    signals.append(safe_chg("DXY",   "up"))    # DXY up = risk-off
-    signals.append(safe_chg("SPX",   "down"))  # SPX down = risk-off
-    signals.append(safe_chg("COPPER","down"))  # Copper down = risk-off
-    signals.append(safe_chg("US10Y", "down"))  # Yield down = flight to safety
+    signals.append(safe_chg("GOLD",   "up"))    # Gold up = risk-off
+    signals.append(safe_chg("RISK1",  "down"))  # AUD/JPY down = risk-off
+    signals.append(safe_chg("RISK2",  "down"))  # AUD/USD down = risk-off
+    signals.append(safe_chg("USD",    "down"))  # EUR/USD down = USD strong = risk-off
+    signals.append(safe_chg("SAFE",   "down"))  # USD/CHF down = CHF strong = risk-off
+    signals.append(safe_chg("GROWTH", "down"))  # NZD/JPY down = risk-off
 
     ro_count  = signals.count(1)
     ron_count = signals.count(-1)
@@ -95,12 +95,12 @@ def compute_macro(cross: dict) -> dict:
         pct = (d["close"] / prev - 1) * 100
         return 1 if (pct > 0) == (direction == "up") else -1
 
-    signals.append(daily_chg("VIX",    "up"))
     signals.append(daily_chg("GOLD",   "up"))
-    signals.append(daily_chg("DXY",    "up"))
-    signals.append(daily_chg("SPX",    "down"))
-    signals.append(daily_chg("COPPER", "down"))
-    signals.append(daily_chg("US10Y",  "down"))
+    signals.append(daily_chg("RISK1",  "down"))
+    signals.append(daily_chg("RISK2",  "down"))
+    signals.append(daily_chg("USD",    "down"))
+    signals.append(daily_chg("SAFE",   "down"))
+    signals.append(daily_chg("GROWTH", "down"))
 
     net = sum(signals)
 
@@ -127,15 +127,22 @@ def call_news_summary(cross: dict) -> str:
     if not ANTHROPIC_KEY:
         return "No API key — narrative unavailable."
 
-    def fmt(name):
+    def fmt(name, symbol):
         d = cross.get(name)
         if not d:
-            return f"{name}: n/a"
+            return f"{symbol}: n/a"
         prev = d.get("prev_close", d["close"])
         pct  = (d["close"] / prev - 1) * 100 if prev else 0
-        return f"{name}: {d['close']:.2f} ({pct:+.1f}%)"
+        return f"{symbol}: {d['close']:.4f} ({pct:+.2f}%)"
 
-    lines = "\n".join(fmt(n) for n in ("SPX", "VIX", "GOLD", "DXY", "US10Y", "COPPER"))
+    lines = "\n".join(fmt(n, s) for n, s in [
+        ("GOLD",   "XAU/USD"),
+        ("RISK1",  "AUD/JPY"),
+        ("RISK2",  "AUD/USD"),
+        ("USD",    "EUR/USD"),
+        ("SAFE",   "USD/CHF"),
+        ("GROWTH", "NZD/JPY"),
+    ])
 
     prompt = (
         "Cross-asset snapshot (daily change):\n"
