@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T08:36:20.325797+00:00",
+  "updated": "2026-05-20T08:44:26.322981+00:00",
   "regime_h4": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -319,19 +319,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 4.2,
-    "signals": -1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
     "total": 6
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
+    "label": "Risk-On",
+    "signals": -4,
     "total": 6
   },
   "news": {
-    "text": "Gold holds steady near record highs, suggesting risk-off sentiment and safe-haven demand despite limited volatility data, indicating elevated geopolitical or economic uncertainty.",
-    "updated": "2026-05-20T08:36:20.325797+00:00"
+    "text": "Dollar strength dominates as USD/CHF and EUR/USD reflect safe-haven demand, while commodity currencies remain resilient amid mixed risk sentiment.",
+    "updated": "2026-05-20T08:44:26.322981+00:00"
   }
 }
