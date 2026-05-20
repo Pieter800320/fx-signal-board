@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T09:14:02.137063+00:00",
+  "updated": "2026-05-20T09:19:11.139556+00:00",
   "regime_h4": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -331,12 +331,12 @@
     "total": 6
   },
   "news": {
-    "themes": "Eurozone inflation surge (3%) and Middle East geopolitical risk pushing EUR down; USD weakness on Iran deal hopes.",
-    "event": "No high-impact events scheduled; market focus remains on inflation data interpretation and geopolitical developments affecting oil and safe-havens.",
-    "updated": "2026-05-20T09:14:02.137063+00:00"
+    "themes": "Eurozone inflation surge (3%) and geopolitical tensions (Middle East/Iran) pressuring EUR, supporting USD and oil-driven volatility.",
+    "event": "No high-impact events scheduled; market focus shifts to Fed hawkishness and geopolitical resolution timelines for directional clarity.",
+    "updated": "2026-05-20T09:19:11.139556+00:00"
   },
   "analysis": {
-    "text": "USD strength dominates H4 despite D1 bearishness in EURUSD and AUDUSD, creating whipsaw risk on mean reversion.",
-    "updated": "2026-05-20T09:14:02.137063+00:00"
+    "text": "USD strength (D1 bull signals in JPY/CAD/CHF) conflicts with weak H4 momentum and risk-on macro favoring commodity currencies.",
+    "updated": "2026-05-20T09:19:11.139556+00:00"
   }
 }
