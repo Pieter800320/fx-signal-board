@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T15:52:34.804392+00:00",
+  "updated": "2026-05-20T16:52:48.453663+00:00",
   "regime_h4": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -319,10 +319,10 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
+    "regime": "Risk-On",
+    "confidence": "High",
+    "score": 0.0,
+    "signals": -6,
     "total": 6
   },
   "macro": {
@@ -331,8 +331,12 @@
     "total": 6
   },
   "news": {
-    "themes": "Inflation persistence in eurozone amid Middle East oil spike; ECB/BoE hold rates unchanged today.",
-    "event": "No high-impact events scheduled; market focus shifts to Fed rhetoric and geopolitical risk developments.",
-    "updated": "2026-05-20T12:24:02.272644+00:00"
+    "themes": "Iran nuclear deal hopes and oil shock boosting USD; ECB hawkishness supporting EUR despite inflation concerns.",
+    "event": "ECB June rate hike decision; hawkish guidance could strengthen EUR despite oil-driven inflation headwinds.",
+    "updated": "2026-05-20T16:52:48.453663+00:00"
+  },
+  "analysis": {
+    "text": "GBPJPY bull alignment with 80% continuation conflicts with GBPUSD bearish D1 trend, creating arbitrage tension across GBP pairs.",
+    "updated": "2026-05-20T16:52:48.453663+00:00"
   }
 }
