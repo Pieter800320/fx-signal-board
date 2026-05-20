@@ -14,14 +14,15 @@ CURRENCIES = ["GBP", "EUR", "AUD", "NZD", "CAD", "JPY", "CHF", "USD"]
 RISK_ON  = {"AUD", "NZD", "GBP", "EUR", "CAD"}
 RISK_OFF = {"JPY", "CHF", "USD"}
 
-# Cross-asset symbols for W1 backdrop + macro momentum (Twelvedata)
+# Cross-asset symbols for W1 backdrop + macro momentum (Twelvedata free tier)
+# Using ETF proxies — scoring logic unchanged (direction relationships hold)
 CROSS_ASSET = {
-    "SPX":   "SPX",       # S&P 500
-    "VIX":   "VIX",       # Volatility index
-    "GOLD":  "XAU/USD",   # Gold
-    "DXY":   "DX-Y.NYB",  # US Dollar Index
-    "US10Y": "TNX",       # 10-year yield
-    "COPPER":"HG1!",      # Copper futures
+    "SPX":   "SPY",      # S&P 500 ETF      — up = risk-on
+    "VIX":   "VIXY",     # VIX Long ETF     — up = risk-off
+    "GOLD":  "XAU/USD",  # Gold spot        — up = risk-off
+    "DXY":   "UUP",      # USD Bullish ETF  — up = risk-off
+    "US10Y": "TLT",      # 20yr Treasury    — up = yields down = risk-off (flight to safety)
+    "COPPER":"CPER",     # Copper ETF       — up = risk-on
 }
 
 # Static correlates per pair (pair, direction_same_as_pair)
