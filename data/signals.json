@@ -1,31 +1,31 @@
 {
-  "updated": "2026-05-20T09:19:11.139556+00:00",
+  "updated": "2026-05-20T09:25:16.135165+00:00",
   "regime_h4": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 2.7,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "High",
+    "score": 9.9,
+    "stable": false
   },
   "csm": {
     "d1": {
-      "GBP": 50,
-      "EUR": 23,
-      "AUD": 100,
-      "NZD": 100,
+      "GBP": 49,
+      "EUR": 31,
+      "AUD": 91,
+      "NZD": 79,
       "CAD": 0,
-      "JPY": 94,
-      "CHF": 19,
-      "USD": 87
+      "JPY": 99,
+      "CHF": 11,
+      "USD": 100
     },
     "h4": {
       "GBP": 100,
-      "EUR": 27,
-      "AUD": 85,
-      "NZD": 71,
-      "CAD": 8,
-      "JPY": 28,
-      "CHF": 35,
-      "USD": 0
+      "EUR": 99,
+      "AUD": 65,
+      "NZD": 0,
+      "CAD": 60,
+      "JPY": 79,
+      "CHF": 41,
+      "USD": 95
     }
   },
   "pairs": {
@@ -43,15 +43,15 @@
         "dd1": -14,
         "h4": 61,
         "dh4": 0,
-        "h1": 46,
-        "dh1": 6,
+        "h1": 48,
+        "dh1": 8,
         "cmp": 42
       },
       "adx": 32.4,
-      "d1_pct": -0.13,
-      "d5_pct": -0.29,
-      "cont": 70,
-      "regime_cls": ""
+      "d1_pct": -0.12,
+      "d5_pct": -0.28,
+      "cont": 85,
+      "regime_cls": "bear-hi"
     },
     "GBPUSD": {
       "pills": {
@@ -67,21 +67,21 @@
         "dd1": -25,
         "h4": 100,
         "dh4": 1,
-        "h1": 54,
-        "dh1": 6,
+        "h1": 53,
+        "dh1": 5,
         "cmp": 53
       },
       "adx": 47.5,
-      "d1_pct": -0.06,
-      "d5_pct": 0.47,
-      "cont": 54,
+      "d1_pct": -0.07,
+      "d5_pct": 0.46,
+      "cont": 75,
       "regime_cls": ""
     },
     "USDJPY": {
       "pills": {
         "w1": "bull_strong",
         "d1": "bull_strong",
-        "h4": "neutral",
+        "h4": "bull",
         "h1": "neutral"
       },
       "mom": {
@@ -91,15 +91,15 @@
         "dd1": 46,
         "h4": 48,
         "dh4": -1,
-        "h1": 18,
-        "dh1": -4,
-        "cmp": 52
+        "h1": 21,
+        "dh1": -1,
+        "cmp": 53
       },
       "adx": 9.7,
-      "d1_pct": -0.03,
-      "d5_pct": 0.16,
-      "cont": 35,
-      "regime_cls": ""
+      "d1_pct": -0.02,
+      "d5_pct": 0.17,
+      "cont": 50,
+      "regime_cls": "bull-hi"
     },
     "USDCHF": {
       "pills": {
@@ -111,19 +111,19 @@
       "mom": {
         "w1": 57,
         "dw1": 0,
-        "d1": 89,
-        "dd1": 28,
-        "h4": 50,
-        "dh4": -2,
-        "h1": 55,
-        "dh1": -15,
-        "cmp": 65
+        "d1": 90,
+        "dd1": 29,
+        "h4": 52,
+        "dh4": 0,
+        "h1": 58,
+        "dh1": -12,
+        "cmp": 66
       },
       "adx": 36.8,
-      "d1_pct": 0.16,
-      "d5_pct": 0.42,
+      "d1_pct": 0.19,
+      "d5_pct": 0.45,
       "cont": 85,
-      "regime_cls": "bull-med"
+      "regime_cls": "bull-hi"
     },
     "AUDUSD": {
       "pills": {
@@ -135,19 +135,19 @@
       "mom": {
         "w1": 90,
         "dw1": -1,
-        "d1": 2,
-        "dd1": -17,
-        "h4": 43,
-        "dh4": 1,
-        "h1": 78,
-        "dh1": 8,
-        "cmp": 43
+        "d1": 1,
+        "dd1": -18,
+        "h4": 41,
+        "dh4": -1,
+        "h1": 74,
+        "dh1": 4,
+        "cmp": 41
       },
       "adx": 24.9,
-      "d1_pct": 0.1,
-      "d5_pct": -0.46,
-      "cont": 30,
-      "regime_cls": ""
+      "d1_pct": 0.05,
+      "d5_pct": -0.52,
+      "cont": 45,
+      "regime_cls": "bear-hi"
     },
     "USDCAD": {
       "pills": {
@@ -157,21 +157,21 @@
         "h1": "bull_strong"
       },
       "mom": {
-        "w1": 38,
-        "dw1": -5,
-        "d1": 97,
-        "dd1": 23,
-        "h4": 61,
-        "dh4": 0,
-        "h1": 46,
-        "dh1": -3,
-        "cmp": 67
+        "w1": 39,
+        "dw1": -4,
+        "d1": 98,
+        "dd1": 24,
+        "h4": 63,
+        "dh4": 2,
+        "h1": 50,
+        "dh1": 1,
+        "cmp": 68
       },
-      "adx": 28.4,
-      "d1_pct": 0.2,
-      "d5_pct": 0.17,
-      "cont": 70,
-      "regime_cls": ""
+      "adx": 28.5,
+      "d1_pct": 0.22,
+      "d5_pct": 0.19,
+      "cont": 85,
+      "regime_cls": "bull-hi"
     },
     "NZDUSD": {
       "pills": {
@@ -183,18 +183,18 @@
       "mom": {
         "w1": 74,
         "dw1": 9,
-        "d1": 9,
-        "dd1": 0,
-        "h4": 69,
-        "dh4": -3,
-        "h1": 82,
-        "dh1": 8,
-        "cmp": 52
+        "d1": 8,
+        "dd1": -1,
+        "h4": 66,
+        "dh4": -6,
+        "h1": 77,
+        "dh1": 3,
+        "cmp": 50
       },
       "adx": 36.5,
-      "d1_pct": 0.1,
-      "d5_pct": 0.04,
-      "cont": 30,
+      "d1_pct": 0.01,
+      "d5_pct": -0.05,
+      "cont": 52,
       "regime_cls": ""
     },
     "EURJPY": {
@@ -207,17 +207,17 @@
       "mom": {
         "w1": 32,
         "dw1": 2,
-        "d1": 44,
-        "dd1": 44,
-        "h4": 67,
-        "dh4": -2,
-        "h1": 23,
-        "dh1": 4,
-        "cmp": 46
+        "d1": 45,
+        "dd1": 45,
+        "h4": 70,
+        "dh4": 1,
+        "h1": 30,
+        "dh1": 11,
+        "cmp": 49
       },
       "adx": 22.6,
-      "d1_pct": -0.17,
-      "d5_pct": -0.13,
+      "d1_pct": -0.14,
+      "d5_pct": -0.1,
       "cont": 0,
       "regime_cls": ""
     },
@@ -235,12 +235,12 @@
         "dd1": 34,
         "h4": 100,
         "dh4": 0,
-        "h1": 39,
-        "dh1": 8,
+        "h1": 37,
+        "dh1": 6,
         "cmp": 56
       },
       "adx": 70.4,
-      "d1_pct": -0.08,
+      "d1_pct": -0.09,
       "d5_pct": 0.64,
       "cont": 0,
       "regime_cls": ""
@@ -255,17 +255,17 @@
       "mom": {
         "w1": 80,
         "dw1": -1,
-        "d1": 24,
-        "dd1": 24,
+        "d1": 23,
+        "dd1": 23,
         "h4": 50,
         "dh4": 0,
-        "h1": 67,
-        "dh1": 7,
+        "h1": 66,
+        "dh1": 6,
         "cmp": 49
       },
       "adx": 27.5,
-      "d1_pct": 0.07,
-      "d5_pct": -0.3,
+      "d1_pct": 0.05,
+      "d5_pct": -0.32,
       "cont": 0,
       "regime_cls": ""
     },
@@ -274,23 +274,23 @@
         "w1": "bull",
         "d1": "bear",
         "h4": "neutral",
-        "h1": "bull"
+        "h1": "neutral"
       },
       "mom": {
         "w1": 67,
         "dw1": 9,
-        "d1": 33,
-        "dd1": 21,
-        "h4": 70,
-        "dh4": -5,
-        "h1": 68,
-        "dh1": 8,
-        "cmp": 57
+        "d1": 32,
+        "dd1": 20,
+        "h4": 68,
+        "dh4": -7,
+        "h1": 64,
+        "dh1": 4,
+        "cmp": 55
       },
       "adx": 26.6,
-      "d1_pct": 0.07,
-      "d5_pct": 0.2,
-      "cont": 20,
+      "d1_pct": 0.01,
+      "d5_pct": 0.14,
+      "cont": 42,
       "regime_cls": ""
     },
     "CADJPY": {
@@ -301,20 +301,20 @@
         "h1": "bear"
       },
       "mom": {
-        "w1": 55,
-        "dw1": 2,
+        "w1": 56,
+        "dw1": 3,
         "d1": 33,
         "dd1": 23,
-        "h4": 58,
-        "dh4": -2,
-        "h1": 1,
-        "dh1": -3,
-        "cmp": 40
+        "h4": 60,
+        "dh4": 0,
+        "h1": 8,
+        "dh1": 4,
+        "cmp": 42
       },
-      "adx": 11.4,
-      "d1_pct": -0.24,
-      "d5_pct": -0.02,
-      "cont": 35,
+      "adx": 11.5,
+      "d1_pct": -0.23,
+      "d5_pct": -0.0,
+      "cont": 20,
       "regime_cls": ""
     }
   },
@@ -333,10 +333,6 @@
   "news": {
     "themes": "Eurozone inflation surge (3%) and geopolitical tensions (Middle East/Iran) pressuring EUR, supporting USD and oil-driven volatility.",
     "event": "No high-impact events scheduled; market focus shifts to Fed hawkishness and geopolitical resolution timelines for directional clarity.",
-    "updated": "2026-05-20T09:19:11.139556+00:00"
-  },
-  "analysis": {
-    "text": "USD strength (D1 bull signals in JPY/CAD/CHF) conflicts with weak H4 momentum and risk-on macro favoring commodity currencies.",
     "updated": "2026-05-20T09:19:11.139556+00:00"
   }
 }
