@@ -13,13 +13,16 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
-from scanner.config    import PAIRS, CORRELATES
-from scanner.fetch     import fetch_all_pairs
-from scanner.pills     import classify_all
-from scanner.mom1212   import compute_all as compute_mom
-from scanner.csm       import compute_csm
-from scanner.regime    import classify_regime, regime_block_cls
+from scanner.config     import PAIRS, CORRELATES
+from scanner.fetch      import fetch_all_pairs, fetch_ohlcv, TF_INTERVAL, TF_BARS
+from scanner.pills      import classify_all
+from scanner.mom1212    import compute_all as compute_mom
+from scanner.csm        import compute_csm, STRENGTH_PAIRS
+from scanner.regime     import classify_regime, regime_block_cls
 from scanner.cont_score import compute_cont
+
+# Extra cross pairs needed for CSM 16-pair set (not in main PAIRS list)
+CSM_EXTRA = ["EUR/GBP","EUR/CHF","GBP/CHF","AUD/NZD","AUD/CAD","GBP/AUD"]
 
 
 def load_prev_signals() -> dict:
@@ -101,6 +104,19 @@ def main():
     # ── 1. Fetch all TFs ───────────────────────────────────────────────────────
     print("\n[1/5] Fetching OHLCV (W1 / D1 / H4 / H1) for 12 pairs…")
     ohlcv = fetch_all_pairs(["w1", "d1", "h4", "h1"])
+
+    # Fetch extra cross pairs for CSM 16-pair calculation
+    print("\n  Fetching CSM cross pairs (EUR/GBP, EUR/CHF, GBP/CHF, AUD/NZD, AUD/CAD, GBP/AUD)…")
+    for pair in CSM_EXTRA:
+        key = pair.replace("/", "")
+        if key not in ohlcv:
+            ohlcv[key] = {}
+        for tf in ("d1", "h4", "h1"):
+            import time as _time
+            df = fetch_ohlcv(pair, TF_INTERVAL[tf], TF_BARS[tf])
+            if df is not None:
+                ohlcv[key][tf] = df
+            _time.sleep(8)
 
     # ── 2. Pills ───────────────────────────────────────────────────────────────
     print("\n[2/5] Classifying pills…")
