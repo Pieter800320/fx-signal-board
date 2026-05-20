@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T22:23:38.172635+00:00",
+  "updated": "2026-05-20T23:24:57.394304+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -18,13 +18,13 @@
       "USD": 100.0
     },
     "h4": {
-      "GBP": 100.0,
-      "EUR": 99.0,
-      "AUD": 39.8,
-      "NZD": 39.8,
-      "CAD": 39.8,
-      "JPY": 40.0,
-      "CHF": 39.8,
+      "GBP": 0.0,
+      "EUR": 0.0,
+      "AUD": 0.0,
+      "NZD": 0.0,
+      "CAD": 0.0,
+      "JPY": 0.0,
+      "CHF": 0.0,
       "USD": 0.0
     }
   },
@@ -33,7 +33,7 @@
       "pills": {
         "w1": "neutral",
         "d1": "bear",
-        "h4": "bear_strong",
+        "h4": "neutral",
         "h1": "bull"
       },
       "mom": {
@@ -50,7 +50,7 @@
       "adx": 26.9,
       "d1_pct": 0.01,
       "d5_pct": 0.02,
-      "cont": 60,
+      "cont": 0,
       "regime_cls": ""
     },
     "GBPUSD": {
@@ -74,7 +74,7 @@
       "adx": 39.6,
       "d1_pct": 0.02,
       "d5_pct": 0.84,
-      "cont": 45,
+      "cont": 0,
       "regime_cls": ""
     },
     "USDJPY": {
@@ -98,7 +98,7 @@
       "adx": 12.6,
       "d1_pct": -0.05,
       "d5_pct": 0.1,
-      "cont": 39,
+      "cont": 0,
       "regime_cls": ""
     },
     "USDCHF": {
@@ -122,7 +122,7 @@
       "adx": null,
       "d1_pct": -0.02,
       "d5_pct": -0.04,
-      "cont": 35,
+      "cont": 0,
       "regime_cls": ""
     },
     "AUDUSD": {
