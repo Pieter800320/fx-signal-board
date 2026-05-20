@@ -1,30 +1,30 @@
 {
-  "updated": "2026-05-20T21:07:19.770517+00:00",
+  "updated": "2026-05-20T21:51:14.407645+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
     "score": 5.0,
-    "stable": false
+    "stable": true
   },
   "csm": {
     "d1": {
-      "GBP": 67.7,
-      "EUR": 48.6,
-      "AUD": 49.7,
-      "NZD": 0.0,
-      "CAD": 70.0,
-      "JPY": 63.6,
-      "CHF": 47.7,
+      "GBP": 48.4,
+      "EUR": 26.6,
+      "AUD": 67.8,
+      "NZD": 67.8,
+      "CAD": 67.8,
+      "JPY": 67.3,
+      "CHF": 0.0,
       "USD": 100.0
     },
     "h4": {
-      "GBP": 73.1,
-      "EUR": 67.9,
-      "AUD": 78.3,
-      "NZD": 85.2,
-      "CAD": 50.3,
-      "JPY": 41.4,
-      "CHF": 100.0,
+      "GBP": 100.0,
+      "EUR": 99.0,
+      "AUD": 39.8,
+      "NZD": 39.8,
+      "CAD": 39.8,
+      "JPY": 40.0,
+      "CHF": 39.8,
       "USD": 0.0
     }
   },
@@ -39,42 +39,42 @@
       "mom": {
         "w1": 41,
         "dw1": -7,
-        "d1": 42,
-        "dd1": -11,
-        "h4": 41,
+        "d1": 37,
+        "dd1": -16,
+        "h4": 39,
         "dh4": 26,
-        "h1": 53,
-        "dh1": 23,
-        "cmp": 43
+        "h1": 64,
+        "dh1": 32,
+        "cmp": 42
       },
-      "adx": 29.0,
-      "d1_pct": 0.15,
-      "d5_pct": -0.01,
+      "adx": 26.9,
+      "d1_pct": 0.01,
+      "d5_pct": 0.02,
       "cont": 60,
       "regime_cls": ""
     },
     "GBPUSD": {
       "pills": {
         "w1": "neutral",
-        "d1": "neutral",
+        "d1": "bear",
         "h4": "neutral",
         "h1": "bull"
       },
       "mom": {
-        "w1": null,
-        "dw1": null,
-        "d1": null,
-        "dd1": null,
-        "h4": null,
-        "dh4": null,
-        "h1": 60,
-        "dh1": 26,
-        "cmp": 60
+        "w1": 44,
+        "dw1": -7,
+        "d1": 31,
+        "dd1": -16,
+        "h4": 69,
+        "dh4": 55,
+        "h1": 70,
+        "dh1": 36,
+        "cmp": 50
       },
-      "adx": null,
-      "d1_pct": null,
-      "d5_pct": null,
-      "cont": 0,
+      "adx": 39.6,
+      "d1_pct": 0.02,
+      "d5_pct": 0.84,
+      "cont": 45,
       "regime_cls": ""
     },
     "USDJPY": {
@@ -82,70 +82,70 @@
         "w1": "bull_strong",
         "d1": "bull_strong",
         "h4": "neutral",
-        "h1": "neutral"
+        "h1": "bear"
       },
       "mom": {
         "w1": 62,
         "dw1": 5,
-        "d1": 59,
-        "dd1": 27,
-        "h4": 58,
-        "dh4": -20,
-        "h1": null,
-        "dh1": null,
-        "cmp": 59
+        "d1": 70,
+        "dd1": 34,
+        "h4": 57,
+        "dh4": -22,
+        "h1": 43,
+        "dh1": -24,
+        "cmp": 61
       },
-      "adx": 12.4,
-      "d1_pct": -0.13,
-      "d5_pct": 0.07,
+      "adx": 12.6,
+      "d1_pct": -0.05,
+      "d5_pct": 0.1,
       "cont": 39,
       "regime_cls": ""
     },
     "USDCHF": {
       "pills": {
         "w1": "neutral",
+        "d1": "bull",
+        "h4": "neutral",
+        "h1": "neutral"
+      },
+      "mom": {
+        "w1": 53,
+        "dw1": 11,
+        "d1": 57,
+        "dd1": 20,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": 56
+      },
+      "adx": null,
+      "d1_pct": -0.02,
+      "d5_pct": -0.04,
+      "cont": 35,
+      "regime_cls": ""
+    },
+    "AUDUSD": {
+      "pills": {
+        "w1": "neutral",
         "d1": "neutral",
-        "h4": "bull_strong",
-        "h1": "bear"
+        "h4": "neutral",
+        "h1": "neutral"
       },
       "mom": {
         "w1": null,
         "dw1": null,
         "d1": null,
         "dd1": null,
-        "h4": 63,
-        "dh4": -12,
-        "h1": 46,
-        "dh1": -19,
-        "cmp": 59
-      },
-      "adx": 35.0,
-      "d1_pct": null,
-      "d5_pct": null,
-      "cont": 0,
-      "regime_cls": ""
-    },
-    "AUDUSD": {
-      "pills": {
-        "w1": "bull_strong",
-        "d1": "neutral",
-        "h4": "bear_strong",
-        "h1": "neutral"
-      },
-      "mom": {
-        "w1": 67,
-        "dw1": -6,
-        "d1": 50,
-        "dd1": -12,
         "h4": null,
         "dh4": null,
         "h1": null,
         "dh1": null,
-        "cmp": 53
+        "cmp": null
       },
       "adx": null,
-      "d1_pct": 0.71,
-      "d5_pct": 0.14,
+      "d1_pct": null,
+      "d5_pct": null,
       "cont": 0,
       "regime_cls": ""
     },
@@ -154,20 +154,20 @@
         "w1": "neutral",
         "d1": "neutral",
         "h4": "neutral",
-        "h1": "bear"
+        "h1": "neutral"
       },
       "mom": {
         "w1": null,
         "dw1": null,
         "d1": null,
         "dd1": null,
-        "h4": 55,
-        "dh4": -13,
-        "h1": 56,
-        "dh1": -8,
-        "cmp": 55
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 28.5,
+      "adx": null,
       "d1_pct": null,
       "d5_pct": null,
       "cont": 0,
@@ -176,25 +176,25 @@
     "NZDUSD": {
       "pills": {
         "w1": "neutral",
-        "d1": "bear",
-        "h4": "bear",
+        "d1": "neutral",
+        "h4": "neutral",
         "h1": "neutral"
       },
       "mom": {
-        "w1": 49,
-        "dw1": -8,
-        "d1": 49,
-        "dd1": -12,
+        "w1": null,
+        "dw1": null,
+        "d1": null,
+        "dd1": null,
         "h4": null,
         "dh4": null,
         "h1": null,
         "dh1": null,
-        "cmp": 49
+        "cmp": null
       },
       "adx": null,
-      "d1_pct": 0.63,
-      "d5_pct": 0.57,
-      "cont": 50,
+      "d1_pct": null,
+      "d5_pct": null,
+      "cont": 0,
       "regime_cls": ""
     },
     "EURJPY": {
@@ -202,42 +202,42 @@
         "w1": "neutral",
         "d1": "neutral",
         "h4": "neutral",
-        "h1": "bull"
+        "h1": "neutral"
       },
       "mom": {
         "w1": null,
         "dw1": null,
-        "d1": 49,
-        "dd1": 14,
-        "h4": 48,
-        "dh4": 12,
-        "h1": 51,
-        "dh1": 14,
-        "cmp": 49
-      },
-      "adx": 20.2,
-      "d1_pct": 0.03,
-      "d5_pct": 0.07,
-      "cont": 0,
-      "regime_cls": ""
-    },
-    "GBPJPY": {
-      "pills": {
-        "w1": "bull_strong",
-        "d1": "neutral",
-        "h4": "neutral",
-        "h1": "neutral"
-      },
-      "mom": {
-        "w1": 57,
-        "dw1": -3,
         "d1": null,
         "dd1": null,
         "h4": null,
         "dh4": null,
         "h1": null,
         "dh1": null,
-        "cmp": 57
+        "cmp": null
+      },
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "cont": 0,
+      "regime_cls": ""
+    },
+    "GBPJPY": {
+      "pills": {
+        "w1": "neutral",
+        "d1": "neutral",
+        "h4": "neutral",
+        "h1": "neutral"
+      },
+      "mom": {
+        "w1": null,
+        "dw1": null,
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
       "adx": null,
       "d1_pct": null,
@@ -248,44 +248,44 @@
     "AUDJPY": {
       "pills": {
         "w1": "neutral",
-        "d1": "bull",
-        "h4": "neutral",
-        "h1": "bull"
-      },
-      "mom": {
-        "w1": null,
-        "dw1": null,
-        "d1": 55,
-        "dd1": 8,
-        "h4": 39,
-        "dh4": -7,
-        "h1": 79,
-        "dh1": 57,
-        "cmp": 52
-      },
-      "adx": 26.4,
-      "d1_pct": 0.56,
-      "d5_pct": 0.18,
-      "cont": 40,
-      "regime_cls": ""
-    },
-    "NZDJPY": {
-      "pills": {
-        "w1": "bull_strong",
         "d1": "neutral",
         "h4": "neutral",
         "h1": "neutral"
       },
       "mom": {
-        "w1": 56,
-        "dw1": -8,
+        "w1": null,
+        "dw1": null,
         "d1": null,
         "dd1": null,
         "h4": null,
         "dh4": null,
         "h1": null,
         "dh1": null,
-        "cmp": 56
+        "cmp": null
+      },
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "cont": 0,
+      "regime_cls": ""
+    },
+    "NZDJPY": {
+      "pills": {
+        "w1": "neutral",
+        "d1": "neutral",
+        "h4": "neutral",
+        "h1": "neutral"
+      },
+      "mom": {
+        "w1": null,
+        "dw1": null,
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
       "adx": null,
       "d1_pct": null,
@@ -295,26 +295,26 @@
     },
     "CADJPY": {
       "pills": {
-        "w1": "bull_strong",
-        "d1": "bull_strong",
+        "w1": "neutral",
+        "d1": "neutral",
         "h4": "neutral",
         "h1": "neutral"
       },
       "mom": {
-        "w1": 62,
-        "dw1": 0,
-        "d1": 38,
-        "dd1": 11,
-        "h4": 55,
-        "dh4": -7,
-        "h1": 40,
-        "dh1": -8,
-        "cmp": 47
+        "w1": null,
+        "dw1": null,
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 14.0,
-      "d1_pct": -0.18,
-      "d5_pct": 0.04,
-      "cont": 25,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "cont": 0,
       "regime_cls": ""
     }
   },
