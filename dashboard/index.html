@@ -159,8 +159,17 @@
 <div class="news" id="news-wrap">
   <div class="news-line" id="news-line"></div>
   <div>
-    <div class="news-lbl" id="news-lbl">AI · —</div>
-    <div class="news-txt" id="news-txt">Loading…</div>
+    <div class="news-lbl" id="news-lbl">NEWS · —</div>
+    <div class="news-txt" id="news-themes">Loading…</div>
+    <div class="news-txt" id="news-event" style="margin-top:3px;opacity:.75;"></div>
+  </div>
+</div>
+
+<div class="news" id="analysis-wrap" style="margin-top:-3px;">
+  <div class="news-line" style="background:var(--amber);"></div>
+  <div>
+    <div class="news-lbl" id="analysis-lbl">AI ANALYSIS · —</div>
+    <div class="news-txt" id="analysis-txt">Loading…</div>
   </div>
 </div>
 
@@ -328,15 +337,24 @@ function renderMarketState(){
 }
 
 function renderNews(){
-  const news = D.news || {};
-  const mac  = D.macro || {};
-  const line = document.getElementById("news-line");
-  const r    = mac.label || "";
+  const news     = D.news     || {};
+  const analysis = D.analysis || {};
+  const mac      = D.macro    || {};
+  const line     = document.getElementById("news-line");
+  const r        = mac.label  || "";
   line.className = "news-line" + (r==="Risk-On"?" ron":r==="Mixed"?" mix":"");
+
   document.getElementById("news-lbl").textContent =
-    "AI · " + fmtTime(news.updated);
-  document.getElementById("news-txt").textContent =
-    news.text || "Awaiting scan…";
+    "NEWS · " + fmtTime(news.updated);
+  document.getElementById("news-themes").textContent =
+    news.themes || "Awaiting scan…";
+  document.getElementById("news-event").textContent =
+    news.event  || "";
+
+  document.getElementById("analysis-lbl").textContent =
+    "AI ANALYSIS · " + fmtTime(analysis.updated);
+  document.getElementById("analysis-txt").textContent =
+    analysis.text || "Awaiting scan…";
 }
 
 function renderCSM(){
