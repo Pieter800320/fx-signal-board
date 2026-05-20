@@ -70,26 +70,24 @@ def fetch_all_pairs(timeframes: list[str]) -> dict:
 
 def fetch_cross_asset() -> dict:
     """
-    Fetch latest daily bar for each cross-asset instrument.
-    Returns: { "SPX": {"close": 5100, "prev_close": 5050, "w1_close": 4900}, ... }
+    Fetch latest daily bars for each cross-asset instrument.
+    Returns: { "SPX": {"close": ..., "prev_close": ..., "w1_close": ...}, ... }
     """
-    out = {}
+    out   = {}
     items = list(CROSS_ASSET.items())
     for i, (name, symbol) in enumerate(items):
-        print(f"  Cross-asset [{i+1}/{len(items)}] {name}")
+        print(f"  Cross-asset [{i+1}/{len(items)}] {name} ({symbol})")
         try:
-            # Daily: last 10 bars for D1 and W1 change calculation
             df = fetch_ohlcv(symbol, "1day", 10)
             if df is not None and len(df) >= 2:
                 out[name] = {
                     "close":      float(df["close"].iloc[-1]),
                     "prev_close": float(df["close"].iloc[-2]),
-                    # 5 trading days ago for weekly change
-                    "w1_close":   float(df["close"].iloc[max(0, len(df)-6)]),
+                    "w1_close":   float(df["close"].iloc[max(0, len(df) - 6)]),
                 }
         except Exception as e:
             print(f"  ⚠ cross-asset {name}: {e}")
         if i < len(items) - 1:
-            time.sleep(DELAY)
+            time.sleep(12)   # 12s gap → max 5/min, well within free tier limit
 
     return out
