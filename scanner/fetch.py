@@ -6,7 +6,7 @@ import time
 import urllib.request
 import json
 import pandas as pd
-from scanner.config import PAIRS, CROSS_ASSET, TF_INTERVAL, TF_BARS
+from scanner.config import PAIRS, TF_INTERVAL, TF_BARS
 
 API_KEY = os.environ.get("TWELVEDATA_KEY", "")
 BASE    = "https://api.twelvedata.com"
@@ -66,28 +66,3 @@ def fetch_all_pairs(timeframes: list[str]) -> dict:
                 time.sleep(DELAY)
 
     return result
-
-
-def fetch_cross_asset() -> dict:
-    """
-    Fetch latest daily bars for each cross-asset instrument.
-    Returns: { "SPX": {"close": ..., "prev_close": ..., "w1_close": ...}, ... }
-    """
-    out   = {}
-    items = list(CROSS_ASSET.items())
-    for i, (name, symbol) in enumerate(items):
-        print(f"  Cross-asset [{i+1}/{len(items)}] {name} ({symbol})")
-        try:
-            df = fetch_ohlcv(symbol, "1day", 10)
-            if df is not None and len(df) >= 2:
-                out[name] = {
-                    "close":      float(df["close"].iloc[-1]),
-                    "prev_close": float(df["close"].iloc[-2]),
-                    "w1_close":   float(df["close"].iloc[max(0, len(df) - 6)]),
-                }
-        except Exception as e:
-            print(f"  ⚠ cross-asset {name}: {e}")
-        if i < len(items) - 1:
-            time.sleep(12)   # 12s gap → max 5/min, well within free tier limit
-
-    return out
