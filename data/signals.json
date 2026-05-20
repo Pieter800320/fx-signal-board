@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T08:20:45.465861+00:00",
+  "updated": "2026-05-20T08:29:17.285164+00:00",
   "regime_h4": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -319,17 +319,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Unknown",
-    "confidence": "Low",
-    "score": 5.0
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 4.2,
+    "signals": -1,
+    "total": 6
   },
   "macro": {
-    "label": "Unknown",
-    "signals": 0,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 6
   },
   "news": {
-    "text": "Awaiting first scan\u2026",
-    "updated": null
+    "text": "Gold holding steady at record highs signals persistent inflation concerns and safe-haven demand amid uncertain macro outlook.",
+    "updated": "2026-05-20T08:29:17.285164+00:00"
   }
 }
