@@ -14,15 +14,16 @@ CURRENCIES = ["GBP", "EUR", "AUD", "NZD", "CAD", "JPY", "CHF", "USD"]
 RISK_ON  = {"AUD", "NZD", "GBP", "EUR", "CAD"}
 RISK_OFF = {"JPY", "CHF", "USD"}
 
-# Cross-asset symbols for W1 backdrop + macro momentum (Twelvedata free tier)
-# Using ETF proxies — scoring logic unchanged (direction relationships hold)
+# Cross-asset signals via forex pairs — all available on Twelvedata free tier
+# Key = semantic name used in scan_news.py scoring
+# Value = Twelvedata symbol
 CROSS_ASSET = {
-    "SPX":   "SPY",      # S&P 500 ETF      — up = risk-on
-    "VIX":   "VIXY",     # VIX Long ETF     — up = risk-off
-    "GOLD":  "XAU/USD",  # Gold spot        — up = risk-off
-    "DXY":   "UUP",      # USD Bullish ETF  — up = risk-off
-    "US10Y": "TLT",      # 20yr Treasury    — up = yields down = risk-off (flight to safety)
-    "COPPER":"CPER",     # Copper ETF       — up = risk-on
+    "GOLD":   "XAU/USD",  # Gold — up = risk-off
+    "RISK1":  "AUD/JPY",  # Risk appetite — down = risk-off
+    "RISK2":  "AUD/USD",  # Commodity currency — down = risk-off
+    "USD":    "EUR/USD",  # USD proxy (inverse) — down = risk-off
+    "SAFE":   "USD/CHF",  # Safe haven demand — down = risk-off (CHF strengthens)
+    "GROWTH": "NZD/JPY",  # Global growth proxy — down = risk-off
 }
 
 # Static correlates per pair (pair, direction_same_as_pair)
