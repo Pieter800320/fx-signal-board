@@ -92,7 +92,6 @@ def compute_macro(cross: dict) -> dict:
 RSS_FEEDS = [
     "https://www.forexlive.com/feed/news",
     "https://feeds.finance.yahoo.com/rss/2.0/headline?s=EURUSD%3DX&region=US&lang=en-US",
-    "https://www.dailyfx.com/feeds/news",
 ]
 
 def fetch_headlines(max_per_feed: int = 6, max_age_hours: int = 8) -> list[str]:
