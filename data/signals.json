@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T16:52:48.453663+00:00",
+  "updated": "2026-05-20T18:11:54.728018+00:00",
   "regime_h4": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -320,10 +320,10 @@
   },
   "regime_w1": {
     "regime": "Risk-On",
-    "confidence": "High",
-    "score": 0.0,
-    "signals": -6,
-    "total": 6
+    "confidence": "Medium",
+    "score": 3.3,
+    "signals": -1,
+    "total": 3
   },
   "macro": {
     "label": "Risk-On",
@@ -331,12 +331,12 @@
     "total": 6
   },
   "news": {
-    "themes": "Iran nuclear deal hopes and oil shock boosting USD; ECB hawkishness supporting EUR despite inflation concerns.",
-    "event": "ECB June rate hike decision; hawkish guidance could strengthen EUR despite oil-driven inflation headwinds.",
-    "updated": "2026-05-20T16:52:48.453663+00:00"
+    "themes": "Iran nuclear deal progress reducing geopolitical risk premium; ECB hawkishness supporting EUR despite inflation concerns.",
+    "event": "ECB June rate decision likely; hawkish hold could support EUR/USD despite eurozone growth slowdown headwinds.",
+    "updated": "2026-05-20T18:11:54.728018+00:00"
   },
   "analysis": {
-    "text": "GBPJPY bull alignment with 80% continuation conflicts with GBPUSD bearish D1 trend, creating arbitrage tension across GBP pairs.",
-    "updated": "2026-05-20T16:52:48.453663+00:00"
+    "text": "NZDUSD and GBPUSD show directional conflict between D1 and H4, contradicting overall risk-on environment and creating whipsaw risk.",
+    "updated": "2026-05-20T18:11:54.728018+00:00"
   }
 }
