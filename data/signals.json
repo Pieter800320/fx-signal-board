@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T21:51:14.407645+00:00",
+  "updated": "2026-05-20T22:23:38.172635+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -331,8 +331,12 @@
     "total": 6
   },
   "news": {
-    "themes": "Iran nuclear deal progress reducing geopolitical risk premium; ECB hawkishness supporting EUR despite inflation concerns.",
-    "event": "ECB June rate decision likely; hawkish hold could support EUR/USD despite eurozone growth slowdown headwinds.",
-    "updated": "2026-05-20T18:11:54.728018+00:00"
+    "themes": "Risk-on sentiment with falling yields and dollar weakness; energy inflation pressures eurozone while US stability maintained.",
+    "event": "Australian jobs data May 21 will test AUD; weaker employment could trigger RBA rate cut expectations.",
+    "updated": "2026-05-20T22:23:38.172635+00:00"
+  },
+  "analysis": {
+    "text": "EURUSD shows strongest tension: D1 bear with H4 bear_strong contradicts 60% continuation and risk-on macro environment.",
+    "updated": "2026-05-20T22:23:38.172635+00:00"
   }
 }
