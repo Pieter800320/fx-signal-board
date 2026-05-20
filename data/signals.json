@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-20T09:04:45.295028+00:00",
+  "updated": "2026-05-20T09:14:02.137063+00:00",
   "regime_h4": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -331,7 +331,12 @@
     "total": 6
   },
   "news": {
-    "text": "Dollar strength dominates as USD/CHF and EUR/USD reflect safe-haven demand, while commodity currencies remain resilient amid mixed risk sentiment.",
-    "updated": "2026-05-20T08:44:26.322981+00:00"
+    "themes": "Eurozone inflation surge (3%) and Middle East geopolitical risk pushing EUR down; USD weakness on Iran deal hopes.",
+    "event": "No high-impact events scheduled; market focus remains on inflation data interpretation and geopolitical developments affecting oil and safe-havens.",
+    "updated": "2026-05-20T09:14:02.137063+00:00"
+  },
+  "analysis": {
+    "text": "USD strength dominates H4 despite D1 bearishness in EURUSD and AUDUSD, creating whipsaw risk on mean reversion.",
+    "updated": "2026-05-20T09:14:02.137063+00:00"
   }
 }
