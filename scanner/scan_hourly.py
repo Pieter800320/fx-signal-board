@@ -20,9 +20,11 @@ sys.path.insert(0, str(ROOT))
 from scanner.config     import PAIRS, TF_INTERVAL, TF_BARS
 from scanner.fetch      import fetch_ohlcv
 from scanner.pills      import classify_all
-from scanner.csm        import compute_csm
+from scanner.csm        import compute_csm, STRENGTH_PAIRS
 from scanner.regime     import classify_regime, regime_block_cls
 from scanner.cont_score import compute_cont
+
+CSM_EXTRA = ["EUR/GBP","EUR/CHF","GBP/CHF","AUD/NZD","AUD/CAD","GBP/AUD"]
 
 DELAY = 8  # seconds between API calls
 
@@ -69,7 +71,7 @@ def main():
     prev_h4 = prev.get("regime_h4", {})
     prev_regime_name = prev_h4.get("regime", "Unknown")
 
-    # ── Fetch H4 for all 12 pairs ──────────────────────────────────────────────
+    # ── Fetch H4 only for 12 pairs (lean hourly scan = 12 API calls) ──────────
     print(f"\nFetching H4 OHLCV for {len(PAIRS)} pairs…")
     ohlcv_h4 = {}
     for i, pair in enumerate(PAIRS):
@@ -79,7 +81,7 @@ def main():
             ohlcv_h4[key] = {"h4": df}
         if i < len(PAIRS) - 1:
             time.sleep(DELAY)
-        print(f"  {key}: {'ok' if df is not None else 'ERROR'}")
+        print(f"  {key}: {'ok' if key in ohlcv_h4 else 'ERROR'}")
 
     # ── H4 pills (h4 only) ────────────────────────────────────────────────────
     pair_pills_h4 = {}
