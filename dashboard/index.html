@@ -460,8 +460,8 @@ function pairCSMBar(pair){
   const qv    = data[quote] ?? 50;
   const tot   = bv + qv || 1;
   const bPct  = Math.round(bv / tot * 100);
-  const bCol  = bv > qv ? "var(--sell)" : "var(--buy)";
-  const qCol  = qv > bv ? "var(--buy)"  : "var(--sell)";
+  const bCol  = bv > qv ? "var(--buy)" : "var(--sell)";
+  const qCol  = qv > bv ? "var(--buy)" : "var(--sell)";
   return `<div class="b-csm">
     <span class="csm-base"  style="color:${bCol}">${base} ${bv}</span>
     <div class="csm-track">
