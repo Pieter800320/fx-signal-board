@@ -13,12 +13,19 @@ BASE    = "https://api.twelvedata.com"
 DELAY   = 8  # seconds between calls — free tier: 8 req/min
 
 
-def _get(endpoint: str, params: dict) -> dict:
+def _get(endpoint: str, params: dict, retries: int = 2) -> dict:
     params["apikey"] = API_KEY
-    qs = "&".join(f"{k}={v}" for k, v in params.items())
+    qs  = "&".join(f"{k}={v}" for k, v in params.items())
     url = f"{BASE}/{endpoint}?{qs}"
-    with urllib.request.urlopen(url, timeout=30) as r:
-        return json.loads(r.read().decode())
+    for attempt in range(1, retries + 1):
+        try:
+            with urllib.request.urlopen(url, timeout=60) as r:
+                return json.loads(r.read().decode())
+        except Exception as e:
+            print(f"  ⚠ _get attempt {attempt}/{retries} failed: {e}")
+            if attempt < retries:
+                time.sleep(10)
+    raise TimeoutError(f"All {retries} attempts failed for {url[:80]}")
 
 
 def fetch_ohlcv(symbol: str, interval: str, outputsize: int) -> pd.DataFrame | None:
