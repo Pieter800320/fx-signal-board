@@ -1,8 +1,8 @@
-name: Full Scan + Deploy
+# RETIRED — replaced by scan_h1.yml
+# Kept for emergency manual use only. Schedule removed.
+name: Full Scan (Retired)
 
 on:
-  schedule:
-    - cron: '0 0,4,8,12,16,20 * * *'   # every 4 hours
   workflow_dispatch:
 
 permissions:
@@ -39,23 +39,3 @@ jobs:
           git diff --cached --quiet || git commit -m "chore: full scan $(date -u +%Y-%m-%dT%H:%M)"
           git pull --rebase origin main
           git push
-
-  deploy:
-    needs: scan
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url:  ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-
-      - uses: actions/configure-pages@v5
-
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dashboard
-
-      - id: deployment
-        uses: actions/deploy-pages@v4
