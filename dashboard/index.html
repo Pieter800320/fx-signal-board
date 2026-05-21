@@ -683,11 +683,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   cursor:default;
 }
 #cht-chart-area.draw-mode{cursor:crosshair;}
-#cht-price{flex:0 0 65%;min-height:0;position:relative;}
+#cht-price{flex:1;min-height:0;position:relative;}
 #cht-divider{
   flex-shrink:0;height:1px;background:var(--bord);
 }
-#cht-macd{flex:0 0 35%;min-height:0;position:relative;}
+#cht-macd{flex-shrink:0;height:140px;min-height:80px;position:relative;}
 
 /* ── Bottom strip ───────────────────────────────────────────────────────── */
 #cht-bottom{
@@ -1010,14 +1010,6 @@ function _chtRender(pair, tf, ohlcv) {
   const isJpy   = pair.includes('JPY');
   const priceFmt = { type:'price', precision: isJpy?3:5, minMove: isJpy?0.001:0.00001 };
 
-  // Fix: compute pixel heights from the parent area so clientHeight is
-  // never 0 (flex % basis doesn't resolve to a definite height on mobile)
-  const areaH  = document.getElementById('cht-chart-area').clientHeight || 440;
-  const priceH = Math.floor((areaH - 1) * 0.65);
-  const macdH  = areaH - 1 - priceH;
-  priceEl.style.height = priceH + 'px';
-  macdEl.style.height  = macdH  + 'px';
-
   const chartOpts = (el, height, showTime) => ({
     width:  el.clientWidth || window.innerWidth,
     height: el.clientHeight || height,
@@ -1104,6 +1096,11 @@ function _chtRender(pair, tf, ohlcv) {
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     if (range && _chtMacdInst) { try { _chtMacdInst.timeScale().setVisibleLogicalRange(range); } catch(e){} }
   });
+
+  new ResizeObserver(() => {
+    if (_chtInst)     _chtInst.applyOptions({ width: priceEl.clientWidth, height: priceEl.clientHeight });
+    if (_chtMacdInst) _chtMacdInst.applyOptions({ width: macdEl.clientWidth, height: macdEl.clientHeight });
+  }).observe(priceEl);
 
   chtRenderLevelsList();
 }
