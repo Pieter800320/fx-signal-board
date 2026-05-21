@@ -43,7 +43,8 @@ from scanner.csm        import compute_csm, STRENGTH_PAIRS
 from scanner.regime     import classify_regime, regime_block_cls
 from scanner.cont_score import compute_cont
 from scanner.correlate  import compute_correlation
-from scanner.score      import compute_reset_score, atr_percentile
+from scanner.score              import compute_reset_score, atr_percentile
+from scanner.level_ema_alerts   import check_levels, check_ema_touches
 
 # Extra pairs needed for CSM 16-pair set (not in main PAIRS list)
 CSM_EXTRA = ["EUR/GBP", "EUR/CHF", "GBP/CHF", "AUD/NZD", "AUD/CAD", "GBP/AUD"]
@@ -284,6 +285,28 @@ def main():
 
     save_signals(out)
     print(f"\n✓ signals.json saved")
+
+    # ── Level alerts + EMA touch alerts ───────────────────────────────────────
+    print("\n[Alerts] Checking level alerts + EMA touches…")
+
+    # Build per-pair current price (H1 last close) and H4 EMA values
+    _pair_prices = {}
+    _pair_emas   = {}
+    for pair in PAIRS:
+        key = pair.replace("/", "")
+        sc  = pair_scores.get(key, {})
+        h1r = (sc.get("h1") or {}).get("raw") or {}
+        h4r = (sc.get("h4") or {}).get("raw") or {}
+        if h1r.get("close"):
+            _pair_prices[key] = h1r["close"]
+        if h4r.get("ema200"):
+            _pair_emas[key] = {
+                "ema200": h4r["ema200"],
+                "ema50":  h4r.get("ema50"),
+            }
+
+    check_levels(_pair_prices, send_telegram)
+    check_ema_touches(_pair_prices, _pair_emas, send_telegram)
 
     # ── Telegram on regime transition ─────────────────────────────────────────
     if new_regime_name != prev_regime_name and prev_regime_name != "Unknown":
