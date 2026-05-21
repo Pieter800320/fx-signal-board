@@ -683,11 +683,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   cursor:default;
 }
 #cht-chart-area.draw-mode{cursor:crosshair;}
-#cht-price{flex-shrink:0;min-height:0;position:relative;}
+#cht-price{flex-shrink:0;min-height:0;position:relative;overflow:hidden;}
 #cht-divider{
   flex-shrink:0;height:1px;background:var(--bord);
 }
-#cht-macd{flex-shrink:0;min-height:0;position:relative;}
+#cht-macd{flex-shrink:0;min-height:0;position:relative;overflow:hidden;}
 
 /* ── Bottom strip ───────────────────────────────────────────────────────── */
 #cht-bottom{
@@ -903,8 +903,12 @@ function _chtDestroyCharts() {
   _chtAlertRefs = [];
   _chtPriceLine = null;
   _chtCandles   = null;
-  if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
-  if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
+  if (_chtInst)     { try { _chtInst.remove();     console.log('[destroy] price chart removed'); } catch(e){ console.warn('[destroy] price remove failed:', e); } _chtInst     = null; }
+  if (_chtMacdInst) { try { _chtMacdInst.remove(); console.log('[destroy] macd chart removed');  } catch(e){ console.warn('[destroy] macd remove failed:',  e); } _chtMacdInst = null; }
+  const priceEl = document.getElementById('cht-price');
+  const macdEl  = document.getElementById('cht-macd');
+  if (priceEl) console.log('[destroy] priceEl style.height after remove:', priceEl.style.height, 'clientH:', priceEl.clientHeight);
+  if (macdEl)  console.log('[destroy] macdEl  style.height after remove:', macdEl.style.height,  'clientH:', macdEl.clientHeight);
 }
 
 function setChtTf(tf) {
@@ -1017,6 +1021,10 @@ function _chtRender(pair, tf, ohlcv) {
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
+  console.log('[render] priceEl style.height:', priceEl.style.height, 'clientH:', priceEl.clientHeight);
+  console.log('[render] macdEl  style.height:', macdEl.style.height,  'clientH:', macdEl.clientHeight);
+  priceEl.innerHTML = '';
+  macdEl.innerHTML  = '';
   const isJpy   = pair.includes('JPY');
   const priceFmt = { type:'price', precision: isJpy?3:5, minMove: isJpy?0.001:0.00001 };
 
