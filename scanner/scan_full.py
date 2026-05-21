@@ -156,14 +156,21 @@ def main():
         d1p   = d_pct(ohlcv.get(key, {}).get("d1"), 1)
         d5p   = d_pct(ohlcv.get(key, {}).get("d1"), 5)
 
+        # Anchor closes for live WebSocket D1%/D5% in dashboard
+        d1_df       = ohlcv.get(key, {}).get("d1")
+        prev_close  = round(float(d1_df["close"].iloc[-2]), 6) if d1_df is not None and len(d1_df) >= 2 else None
+        prev5_close = round(float(d1_df["close"].iloc[-6]), 6) if d1_df is not None and len(d1_df) >= 6 else None
+
         pairs_out[key] = {
-            "pills":      pills,
-            "mom":        mom,
-            "adx":        adx,
-            "d1_pct":     d1p,
-            "d5_pct":     d5p,
-            "cont":       cont,
-            "regime_cls": cls,
+            "pills":       pills,
+            "mom":         mom,
+            "adx":         adx,
+            "d1_pct":      d1p,
+            "d5_pct":      d5p,
+            "prev_close":  prev_close,
+            "prev5_close": prev5_close,
+            "cont":        cont,
+            "regime_cls":  cls,
         }
         print(f"  {key}: cont={cont}% cls={cls}")
 
