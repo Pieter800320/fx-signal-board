@@ -336,7 +336,6 @@ function renderMarketState(){
 
   document.getElementById("ms-row").innerHTML =
     `<div class="ms-item">
-     <div class="ms-item">
        <div class="ms-key">H4</div>
        <div class="ms-val" style="color:${regimeColor(h4.regime)}">${h4.regime||"—"}</div>
        <div class="ms-sub">${h4.confidence||"—"} · ${h4.stable?"Stable":"Shifting"}</div>
@@ -498,8 +497,10 @@ function blockHTML(pair){
 }
 
 function renderGrid(){
+  const sorted = [...PAIRS_ORDER].sort((a, b) =>
+    (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0));
   document.getElementById("pair-grid").innerHTML =
-    PAIRS_ORDER.map(p => D.pairs?.[p] ? blockHTML(p) :
+    sorted.map(p => D.pairs?.[p] ? blockHTML(p) :
       `<div class="block"><div class="b-pair">${p}</div><div style="color:var(--muted);font-size:9px;margin-top:4px">No data</div></div>`
     ).join("");
 }
