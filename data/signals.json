@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T15:48:36.884096+00:00",
+  "updated": "2026-05-21T16:38:51.877741+00:00",
   "regime_h4": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -500,18 +500,18 @@
     "total": 3
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
+    "label": "Risk-On",
+    "signals": -2,
     "total": 6
   },
   "news": {
-    "themes": "Risk-off geopolitics (Iran nuclear escalation) colliding with mixed US data; energy shock threatening EUR growth.",
-    "event": "No imminent high-impact events; geopolitical risk premium and Fed hawkishness will sustain USD strength.",
-    "updated": "2026-05-21T12:44:41.925883+00:00"
+    "themes": "Iran-Hormuz toll threat lifting USD/JPY and pressuring EUR as energy shock risks stagflation in eurozone.",
+    "event": "No high-impact events scheduled; market focus remains on Iran geopolitical escalation and Fed hawkishness implications.",
+    "updated": "2026-05-21T16:38:51.877741+00:00"
   },
   "analysis": {
-    "text": "USDCHF shows maximum conflict: D1 neutral contradicts H4 bull_strong with zero continuation, signaling unreliable strength.",
-    "updated": "2026-05-21T12:44:41.925883+00:00"
+    "text": "USDJPY shows maximum conflict: strong D1 bull bias versus neutral H4 and only 45% continuation, contradicting risk-on environment.",
+    "updated": "2026-05-21T16:38:51.877741+00:00"
   },
   "last_alert": "2026-05-21T14:21:32.208563+00:00"
 }
