@@ -252,7 +252,7 @@ def main():
     # Preserve news / macro / analysis from previous scan_news.py run
     preserved = {
         k: prev.get(k)
-        for k in ("regime_w1", "macro", "news", "analysis")
+        for k in ("regime_w1", "macro", "news", "analysis", "last_alert")
         if prev.get(k)
     }
 
@@ -280,6 +280,9 @@ def main():
         )
         print(f"\n⚡ Regime transition → sending Telegram alert")
         send_telegram(msg)
+        # Stamp the transition time — dashboard shows glowing dot
+        out["last_alert"] = now.isoformat()
+        save_signals(out)
     else:
         print("\nNo regime transition.")
 
@@ -287,4 +290,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--test-telegram" in sys.argv:
+        print("Sending Telegram test message…")
+        send_telegram(
+            "\U0001f916 <b>FX Signal Board</b> — Telegram test OK\n"
+            "If you see this, bot token + chat ID are correct."
+        )
+    else:
+        main()
