@@ -1,103 +1,193 @@
 """
-FX Signal Board — Continuation score (0–100)
+FX Signal Board — Continuation Score (0-100)
+Port of Forex1212 computeQAI() to Python.
 
-Five components:
+Six components (weights match Forex1212 exactly):
+  1. TF Alignment      35%  - D1/H4/H1 pill direction agreement
+  2. Entry Position    23%  - reset_score + atr_percentile (H4-based)
+  3. CSM Divergence    16%  - H4 CSM base vs quote spread
+  4. Regime Fit        13%  - macro context supports trade direction
+  5. Rate Differential  5%  - DEFAULTS TO NEUTRAL (no rates data in FSB)
+  6. Session Fit        8%  - is current UTC session optimal for this pair
 
-  1. TF Alignment (D1 / H4 / H1)          max 40 pts
-     All 3 aligned : 40
-     2 of 3        : 25
-     1 of 3        : 10
-
-  2. CSM Divergence (D1, base vs quote)   max 20 pts
-     Spread > 50   : 20
-     Spread > 30   : 14
-     Spread > 15   : 7
-
-  3. ADX (directional energy)             max 15 pts
-     ADX ≥ 40      : 15
-     ADX ≥ 25      : 10
-     ADX ≥ 20      : 5
-
-  4. Regime Fit (H4 regime)               max 15 pts
-     Strongly fits : 15
-     Neutral       : 5
-     Opposes       : 0
-
-  5. W1 pill confirms D1                  max 10 pts
-     Agrees        : 10
-
-Direction is derived from the D1 pill.  If D1 is neutral the score is 0.
+Gates (applied after weighted sum):
+  - ADX < 20  -> score capped at 45
+  - Counter-regime trade -> score capped (varies by pair type)
 """
-from scanner.config import RISK_ON, RISK_OFF
+
+from datetime import datetime, timezone
+
+# Session definitions (UTC hours): start, end (wraps midnight if start > end)
+_SESSIONS = {
+    "SY": (22, 7),
+    "TK": (23, 8),
+    "LN": (7,  16),
+    "NY": (12, 21),
+}
+
+_PAIR_SESSIONS = {
+    "EURUSD": ["LN", "NY"],
+    "GBPUSD": ["LN", "NY"],
+    "USDJPY": ["TK", "NY"],
+    "USDCHF": ["LN", "NY"],
+    "AUDUSD": ["SY", "TK", "NY"],
+    "USDCAD": ["NY"],
+    "NZDUSD": ["SY", "TK", "NY"],
+    "EURJPY": ["LN", "TK"],
+    "GBPJPY": ["LN", "TK"],
+    "AUDJPY": ["SY", "TK"],
+    "NZDJPY": ["SY", "TK"],
+    "CADJPY": ["TK", "NY"],
+}
+
+_RISK_BASES  = {"AUD", "NZD", "CAD"}
+_SAFE_HAVENS = {"CHF", "JPY"}
+_GROWTH_CCYS = {"EUR", "GBP"}
 
 
-def compute_cont(
-    pair:      str,
-    pills:     dict,
-    adx:       float | None,
-    csm_d1:    dict,
-    regime_h4: dict,
-) -> int:
+def _active_sessions(utc_hour):
+    active = []
+    for abbr, (start, end) in _SESSIONS.items():
+        if start > end:
+            if utc_hour >= start or utc_hour < end:
+                active.append(abbr)
+        else:
+            if start <= utc_hour < end:
+                active.append(abbr)
+    return active
+
+
+def _market_closed(utc_weekday, utc_hour):
+    if utc_weekday == 5:
+        return True
+    if utc_weekday == 4 and utc_hour >= 22:
+        return True
+    if utc_weekday == 6 and utc_hour < 22:
+        return True
+    return False
+
+
+def compute_cont(pair, pills, adx, csm_h4, regime_h4,
+                 reset_score=None, atr_pct=None):
+    """
+    Compute continuation score for one pair (0-100).
+
+    pair        : "EURUSD" etc.
+    pills       : {"d1": "bear", "h4": "bear_strong", "h1": "bear"}
+    adx         : H4 ADX float or None
+    csm_h4      : {"USD": 80, "EUR": 20, ...}
+    regime_h4   : {"regime": "Risk-Off", ...}
+    reset_score : 0-100 from compute_reset_score() or None
+    atr_pct     : 0-100 from atr_percentile() or None
+    """
     base  = pair[:3]
     quote = pair[3:]
 
     d1_pill = pills.get("d1", "neutral")
-    if d1_pill in ("bull", "bull_strong"):
-        direction = "bull"
-    elif d1_pill in ("bear", "bear_strong"):
-        direction = "bear"
-    else:
-        return 0   # no D1 conviction
+    h4_pill = pills.get("h4", "neutral")
+    h1_pill = pills.get("h1", "neutral")
 
-    # ── 1. TF Alignment ────────────────────────────────────────────────────────
-    aligned = 0
-    for tf in ("d1", "h4", "h1"):
-        p = pills.get(tf, "neutral")
-        if direction == "bull" and p in ("bull", "bull_strong"):
-            aligned += 1
-        elif direction == "bear" and p in ("bear", "bear_strong"):
-            aligned += 1
+    is_bull = d1_pill in ("bull", "bull_strong")
+    is_bear = d1_pill in ("bear", "bear_strong")
 
-    align_pts = 40 if aligned == 3 else 25 if aligned == 2 else 10
+    if not is_bull and not is_bear:
+        return 0
 
-    # ── 2. CSM Divergence ──────────────────────────────────────────────────────
-    b_score = csm_d1.get(base, 50)
-    q_score = csm_d1.get(quote, 50)
-    # Effective spread: positive = base is stronger
-    eff = b_score - q_score if direction == "bull" else q_score - b_score
-    csm_pts = 20 if eff > 50 else 14 if eff > 30 else 7 if eff > 15 else 0
+    d1_strong = "_strong" in d1_pill
+    h4_strong = "_strong" in h4_pill
 
-    # ── 3. ADX ─────────────────────────────────────────────────────────────────
-    adx = adx or 0
-    adx_pts = 15 if adx >= 40 else 10 if adx >= 25 else 5 if adx >= 20 else 0
+    # 1. TF ALIGNMENT (35%)
+    h4m = h4_pill in ("bull", "bull_strong") if is_bull else h4_pill in ("bear", "bear_strong")
+    h4n = h4_pill == "neutral"
+    h1m = h1_pill in ("bull", "bull_strong") if is_bull else h1_pill in ("bear", "bear_strong")
+    h1n = h1_pill == "neutral"
 
-    # ── 4. Regime Fit ──────────────────────────────────────────────────────────
-    regime = regime_h4.get("regime", "Mixed")
-    regime_pts = 5  # neutral default
+    if   h4m and h1m:               align_score = 10 if (d1_strong or h4_strong) else 9
+    elif h4m and h1n:               align_score = 7
+    elif h4m and not h1m and not h1n: align_score = 5
+    elif h4n and h1m:               align_score = 5
+    elif h4n and h1n:               align_score = 3
+    else:                           align_score = 1
 
-    if regime == "Risk-Off":
-        fits_bear = base in RISK_ON  or quote in RISK_OFF
-        fits_bull = base in RISK_OFF or quote in RISK_ON
-        if   direction == "bear" and fits_bear: regime_pts = 15
-        elif direction == "bull" and fits_bull: regime_pts = 15
-        elif (direction == "bear" and not fits_bear) or \
-             (direction == "bull" and not fits_bull): regime_pts = 0
+    # 2. ENTRY POSITION (23%)
+    reset_comp = (5  if reset_score is None else
+                  2  if reset_score <= 20   else
+                  4  if reset_score <= 35   else
+                  7  if reset_score <= 50   else 10)
+    atr_comp   = (5  if atr_pct is None     else
+                  10 if 20 <= atr_pct <= 70 else
+                  7  if atr_pct < 20        else 3)
+    entry_score = round(reset_comp * 0.6 + atr_comp * 0.4)
 
-    elif regime == "Risk-On":
-        fits_bull = base in RISK_ON  or quote in RISK_OFF
-        fits_bear = base in RISK_OFF or quote in RISK_ON
-        if   direction == "bull" and fits_bull: regime_pts = 15
-        elif direction == "bear" and fits_bear: regime_pts = 15
-        elif (direction == "bull" and not fits_bull) or \
-             (direction == "bear" and not fits_bear): regime_pts = 0
+    # 3. CSM DIVERGENCE (16%)
+    csm_base  = csm_h4.get(base,  50)
+    csm_quote = csm_h4.get(quote, 50)
+    csm_div   = (csm_base - csm_quote) if is_bull else (csm_quote - csm_base)
+    csm_score = (10 if csm_div >= 30 else
+                 7  if csm_div >= 15 else
+                 5  if csm_div >= 5  else
+                 3  if csm_div >= -5 else 1)
 
-    # ── 5. W1 Pill Confirmation ────────────────────────────────────────────────
-    w1_pill = pills.get("w1", "neutral")
-    w1_pts  = 0
-    if direction == "bull" and w1_pill in ("bull", "bull_strong"):
-        w1_pts = 10
-    elif direction == "bear" and w1_pill in ("bear", "bear_strong"):
-        w1_pts = 10
+    # 4. REGIME FIT (13%)
+    regime          = regime_h4.get("regime", "Mixed")
+    is_risk_pair    = (base in _RISK_BASES or
+                       (quote in _RISK_BASES and base not in _SAFE_HAVENS))
+    is_safe_haven   = base in _SAFE_HAVENS or quote in _SAFE_HAVENS
+    is_growth_pair  = base in _GROWTH_CCYS or quote in _GROWTH_CCYS
 
-    total = align_pts + csm_pts + adx_pts + regime_pts + w1_pts
-    return min(100, max(0, total))
+    reg_score = 5
+    if regime == "Risk-On":
+        if   is_bull and is_risk_pair:   reg_score = 10
+        elif is_bull and is_growth_pair: reg_score = 8
+        elif is_bull:                    reg_score = 6
+        elif is_bear and is_safe_haven:  reg_score = 2
+        elif is_bear and is_risk_pair:   reg_score = 3
+        elif is_bear:                    reg_score = 4
+    elif regime == "Risk-Off":
+        if   is_bear and is_safe_haven:  reg_score = 10
+        elif is_bear and is_growth_pair: reg_score = 7
+        elif is_bear:                    reg_score = 6
+        elif is_bull and is_risk_pair:   reg_score = 2
+        elif is_bull and is_growth_pair: reg_score = 3
+        elif is_bull:                    reg_score = 4
+    elif regime == "Ranging":
+        reg_score = 4
+
+    # 5. RATE DIFFERENTIAL (5%) - neutral default
+    rate_score = 5
+
+    # 6. SESSION FIT (8%)
+    now       = datetime.now(timezone.utc)
+    closed    = _market_closed(now.weekday(), now.hour)
+    active    = _active_sessions(now.hour)
+    pair_sess = _PAIR_SESSIONS.get(pair, [])
+    sess_match = any(s in pair_sess for s in active)
+
+    sess_score = (3  if closed     else
+                  3  if not active else
+                  10 if sess_match else 2)
+
+    # Weighted sum
+    raw = round((
+        align_score * 0.35 +
+        entry_score * 0.23 +
+        csm_score   * 0.16 +
+        reg_score   * 0.13 +
+        rate_score  * 0.05 +
+        sess_score  * 0.08
+    ) * 10)
+
+    # ADX gate
+    capped = raw
+    if adx is not None and adx < 20:
+        capped = min(capped, 45)
+
+    # Regime cap
+    if regime == "Risk-Off" and is_bull:
+        lim    = 40 if is_risk_pair else 70 if is_safe_haven else 50
+        capped = min(capped, lim)
+    elif regime == "Risk-On" and is_bear:
+        lim    = 40 if is_safe_haven else 70 if is_risk_pair else 50
+        capped = min(capped, lim)
+
+    return min(100, max(0, capped))
