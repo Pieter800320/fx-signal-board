@@ -24,6 +24,13 @@
   .dot{width:5px;height:5px;border-radius:50%;background:var(--buy);
        box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .ws-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:background .4s;}
+  .ws-dot.live{background:var(--buy);box-shadow:0 0 5px rgba(0,220,55,.5);}
+  .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
+  .td-key-row{display:none;align-items:center;gap:6px;margin-bottom:6px;padding:6px 8px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;font-size:10px;}
+  .td-key-row.open{display:flex;}
+  .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
+  .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
 
   /* MARKET STATE */
   .mstate{
@@ -146,7 +153,17 @@
 
 <div class="topbar">
   <div class="app-name">FX Signal Board</div>
-  <div class="scan-info"><div class="dot"></div><span id="scan-time">Loading…</span></div>
+  <div class="scan-info">
+    <div class="dot"></div><span id="scan-time">Loading…</span>
+    <div class="ws-dot" id="ws-dot" title="Live prices"></div>
+    <button class="gear-btn" onclick="toggleKeyRow()" title="API key">⚙</button>
+  </div>
+</div>
+<div class="td-key-row" id="td-key-row">
+  <span style="color:var(--muted);white-space:nowrap;">TD Key</span>
+  <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…">
+  <button onclick="saveTdKey()">Save</button>
+  <button onclick="clearTdKey()">Clear</button>
 </div>
 
 <div class="mstate" id="mstate">
@@ -224,6 +241,7 @@ async function loadData(){
     if (!res.ok) throw new Error(res.status);
     D = await res.json();
     render();
+    wsStart();
   } catch(e) {
     document.getElementById("scan-time").textContent = "Error loading data";
     console.error(e);
@@ -482,8 +500,8 @@ function blockHTML(pair){
     <div class="b-top">
       <span class="b-pair">${pair}</span>
       <div class="b-chgs">
-        <span class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
-        <span class="b-d5">${fmtPct(d5p)}</span>
+        <span id="d1-${pair}" class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
+        <span id="d5-${pair}" class="b-d5" style="${(d5p!=null)?d5p>=0?'var(--buy)":'var(--sell)":'var(--muted)'}">${fmtPct(d5p)}</span>
       </div>
     </div>
     ${face[pair] === 0 ? pillsFace(pair, p) : momFace(p)}
@@ -502,6 +520,85 @@ function flipBlock(pair){
   face[pair] = face[pair] === 0 ? 1 : 0;
   renderGrid();
 }
+
+// ── WEBSOCKET — live prices (Twelvedata) ─────────────────────────────────────
+const TD_WS = 'wss://ws.twelvedata.com/v1/quotes/price';
+const LS_KEY = 'fsb_td_key';
+let _ws = null;
+let _livePrice = {};
+
+function toggleKeyRow(){
+  const row = document.getElementById('td-key-row');
+  row.classList.toggle('open');
+  if(row.classList.contains('open')){
+    const saved = localStorage.getItem(LS_KEY);
+    document.getElementById('td-key-inp').placeholder =
+      saved ? 'Key saved ✓ (enter new to replace)' : 'paste Twelvedata key…';
+  }
+}
+function saveTdKey(){
+  const inp = document.getElementById('td-key-inp');
+  const val = inp.value.trim();
+  if(!val) return;
+  localStorage.setItem(LS_KEY, val);
+  inp.value = ''; inp.placeholder = 'Key saved ✓';
+  wsRestart();
+}
+function clearTdKey(){
+  localStorage.removeItem(LS_KEY);
+  wsStop();
+  document.getElementById('td-key-inp').placeholder = 'paste Twelvedata key…';
+}
+function setWsDot(live){
+  const el = document.getElementById('ws-dot');
+  if(el) el.className = 'ws-dot' + (live ? ' live' : '');
+}
+function updatePairPcts(pair){
+  const lp = _livePrice[pair];
+  if(lp == null) return;
+  const p = (D && D.pairs) ? (D.pairs[pair] || {}) : {};
+  const d1Span = document.getElementById('d1-' + pair);
+  const d5Span = document.getElementById('d5-' + pair);
+  if(d1Span && p.prev_close){
+    const pct = (lp - p.prev_close) / p.prev_close * 100;
+    d1Span.textContent = fmtPct(pct);
+    d1Span.style.color = pct >= 0 ? 'var(--buy)' : 'var(--sell)';
+  }
+  if(d5Span && p.prev5_close){
+    const pct = (lp - p.prev5_close) / p.prev5_close * 100;
+    d5Span.textContent = fmtPct(pct);
+    d5Span.style.color = pct >= 0 ? 'var(--buy)' : 'var(--sell)';
+  }
+}
+function wsStart(){
+  wsStop();
+  const key = localStorage.getItem(LS_KEY);
+  if(!key) return;
+  try{
+    _ws = new WebSocket(`${TD_WS}?apikey=${key}`);
+    _ws.onopen = () => {
+      _ws.send(JSON.stringify({action:'subscribe', params:{symbols: PAIRS_ORDER.join(',')}}));
+      setWsDot(true);
+    };
+    _ws.onmessage = (e) => {
+      try{
+        const d = JSON.parse(e.data);
+        if(d.event === 'price' && d.symbol && d.price){
+          const pair = d.symbol.replace(/\//g, '');
+          _livePrice[pair] = parseFloat(d.price);
+          updatePairPcts(pair);
+        }
+      }catch(err){}
+    };
+    _ws.onerror = () => { setWsDot(false); _ws = null; };
+    _ws.onclose = () => { setWsDot(false); _ws = null; };
+  }catch(e){ _ws = null; }
+}
+function wsStop(){
+  if(_ws){ try{ _ws.close(); }catch(e){} _ws = null; }
+  setWsDot(false);
+}
+function wsRestart(){ wsStop(); wsStart(); }
 
 // ── INIT + REFRESH ────────────────────────────────────────────────────────────
 loadData();
