@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T11:34:55.293346+00:00",
+  "updated": "2026-05-21T12:44:41.925883+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -493,11 +493,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 3.3,
+    "signals": -1,
+    "total": 3
   },
   "macro": {
     "label": "Mixed",
@@ -505,13 +505,13 @@
     "total": 6
   },
   "news": {
-    "themes": "European economic deterioration accelerating (Germany, France, Eurozone) amid fiscal stress and high energy costs pressuring EUR.",
-    "event": "No high-impact events scheduled; focus remains on economic data flow and geopolitical developments affecting risk sentiment.",
-    "updated": "2026-05-21T09:39:10.643930+00:00"
+    "themes": "Risk-off geopolitics (Iran nuclear escalation) colliding with mixed US data; energy shock threatening EUR growth.",
+    "event": "No imminent high-impact events; geopolitical risk premium and Fed hawkishness will sustain USD strength.",
+    "updated": "2026-05-21T12:44:41.925883+00:00"
   },
   "analysis": {
-    "text": "EURUSD shows strongest bear conviction (D1+H4 aligned, 81% continuation), conflicting with H4 risk-off and mixed macro backdrop.",
-    "updated": "2026-05-21T09:39:10.643930+00:00"
+    "text": "USDCHF shows maximum conflict: D1 neutral contradicts H4 bull_strong with zero continuation, signaling unreliable strength.",
+    "updated": "2026-05-21T12:44:41.925883+00:00"
   },
   "last_alert": "2026-05-21T11:34:55.293346+00:00"
 }
