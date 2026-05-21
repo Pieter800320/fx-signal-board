@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T20:54:24.192647+00:00",
+  "updated": "2026-05-21T22:18:32.251547+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -493,11 +493,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2
   },
   "macro": {
     "label": "Risk-On",
@@ -505,13 +505,13 @@
     "total": 6
   },
   "news": {
-    "themes": "Iran-Hormuz toll threat lifting USD/JPY and pressuring EUR as energy shock risks stagflation in eurozone.",
-    "event": "No high-impact events scheduled; market focus remains on Iran geopolitical escalation and Fed hawkishness implications.",
-    "updated": "2026-05-21T16:38:51.877741+00:00"
+    "themes": "Iran nuclear deal progress reducing geopolitical risk premium; energy shock concerns weighing on EUR outlook.",
+    "event": "No high-impact events scheduled; market focus remains on Iran negotiations and US-Iran Strait of Hormuz resolution.",
+    "updated": "2026-05-21T22:18:32.251547+00:00"
   },
   "analysis": {
-    "text": "USDJPY shows maximum conflict: strong D1 bull bias versus neutral H4 and only 45% continuation, contradicting risk-on environment.",
-    "updated": "2026-05-21T16:38:51.877741+00:00"
+    "text": "EURUSD and GBPUSD show D1 bear signals conflicting with risk-on macro environment and W1 risk-on bias.",
+    "updated": "2026-05-21T22:18:32.251547+00:00"
   },
   "last_alert": "2026-05-21T18:07:23.092589+00:00"
 }
