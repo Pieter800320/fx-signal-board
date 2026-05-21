@@ -6,5 +6,8 @@
   "EURUSD": {
     "ema200": false,
     "ema50": false
+  },
+  "GBPJPY": {
+    "ema200": false
   }
 }
