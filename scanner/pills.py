@@ -1,84 +1,82 @@
 """
-FX Signal Board — pill classification
-pill = bull_strong | bull | neutral | bear | bear_strong
+FX Signal Board — pill classifier
+Thin wrapper around score.py (full Forex1212 scoring engine).
 
-Same logic across all TFs (W1/D1/H4/H1):
-  - EMA200: long-term trend anchor
-  - EMA50:  medium-term structure
-  - RSI14:  momentum confirmation
-
-bull_strong : price > EMA200, EMA50 > EMA200, RSI > 55
-bull        : price > EMA50, RSI > 52
-neutral     : neither clearly bullish nor bearish
-bear        : price < EMA50, RSI < 48
-bear_strong : price < EMA200, EMA50 < EMA200, RSI < 45
+Maps Forex1212 labels → FSB pill strings:
+  Strong Buy  → bull_strong
+  Buy         → bull
+  Neutral     → neutral
+  Sell        → bear
+  Strong Sell → bear_strong
+  Filtered    → neutral  (ATR contraction — treat as no signal)
 """
-import numpy as np
-import pandas as pd
+
+from scanner.score import score_pair
+
+_LABEL_TO_PILL = {
+    "Strong Buy":  "bull_strong",
+    "Buy":         "bull",
+    "Neutral":     "neutral",
+    "Sell":        "bear",
+    "Strong Sell": "bear_strong",
+    "Filtered":    "neutral",
+}
+
+_TF_MAP = {"d1": "D1", "h4": "H4", "h1": "H1"}
 
 
-def _ema(series: np.ndarray, span: int) -> np.ndarray:
-    alpha = 2.0 / (span + 1)
-    out   = np.empty_like(series)
-    out[0] = series[0]
-    for i in range(1, len(series)):
-        out[i] = alpha * series[i] + (1.0 - alpha) * out[i - 1]
+def classify(df, timeframe: str, regime: str = "unknown") -> str:
+    """
+    Classify one DataFrame into a pill string.
+    timeframe: "H1" | "H4" | "D1"
+    """
+    result = score_pair(df, timeframe=timeframe, regime=regime)
+    if result is None:
+        return "neutral"
+    return _LABEL_TO_PILL.get(result["label"], "neutral")
+
+
+def classify_all(tfs: dict, regime: str = "unknown") -> dict:
+    """
+    Classify all available timeframes.
+
+    Parameters
+    ----------
+    tfs    : {"d1": df, "h4": df, "h1": df}  (any subset)
+    regime : current regime string for threshold adjustment
+
+    Returns
+    -------
+    {"d1": "bear", "h4": "bear_strong", "h1": "bear"}
+    """
+    out = {}
+    for tf, df in tfs.items():
+        if df is not None and tf in _TF_MAP:
+            out[tf] = classify(df, timeframe=_TF_MAP[tf], regime=regime)
     return out
 
 
-def _rsi(closes: np.ndarray, period: int = 14) -> float:
-    if len(closes) < period + 2:
-        return 50.0
-    delta  = np.diff(closes[-(period + 2):])
-    gains  = np.where(delta > 0, delta, 0.0)
-    losses = np.where(delta < 0, -delta, 0.0)
-    ag = gains[-period:].mean()
-    al = losses[-period:].mean()
-    if al == 0:
-        return 100.0
-    return 100.0 - 100.0 / (1.0 + ag / al)
-
-
-def classify_pill(df: pd.DataFrame) -> str:
+def classify_full(tfs: dict, regime: str = "unknown") -> dict:
     """
-    Classify a single timeframe OHLCV DataFrame.
-    Requires at least 220 rows for EMA200 to be meaningful.
+    Like classify_all but also returns the full score_pair result per TF.
+    Used by scan_h1.py to extract reset_score, atr_percentile, raw indicators.
+
+    Returns
+    -------
+    {
+        "pills":  {"d1": "bear", "h4": "bear_strong", "h1": "bear"},
+        "scores": {"d1": {...}, "h4": {...}, "h1": {...}},
+    }
     """
-    if df is None or len(df) < 60:
-        return "neutral"
-
-    closes = df["close"].values.astype(float)
-
-    # Use all available data for EMAs; min 220 for EMA200 meaningfulness
-    e200 = _ema(closes, 200)[-1] if len(closes) >= 200 else None
-    e50  = _ema(closes, 50)[-1]  if len(closes) >= 50  else None
-
-    if e50 is None:
-        return "neutral"
-
-    rsi = _rsi(closes)
-    c   = closes[-1]
-
-    # Strong classifications require EMA200
-    if e200 is not None:
-        if c > e200 and c > e50 and e50 > e200 and rsi > 55:
-            return "bull_strong"
-        if c < e200 and c < e50 and e50 < e200 and rsi < 45:
-            return "bear_strong"
-
-    # Regular classifications
-    if c > e50 and rsi > 52:
-        return "bull"
-    if c < e50 and rsi < 48:
-        return "bear"
-
-    return "neutral"
-
-
-def classify_all(ohlcv: dict) -> dict:
-    """
-    Classify pills for all available timeframes.
-    ohlcv = {"w1": df, "d1": df, "h4": df, "h1": df}
-    Returns {"w1": "bear_strong", "d1": "bear", ...}
-    """
-    return {tf: classify_pill(ohlcv.get(tf)) for tf in ("w1", "d1", "h4", "h1")}
+    pills  = {}
+    scores = {}
+    for tf, df in tfs.items():
+        if df is not None and tf in _TF_MAP:
+            result = score_pair(df, timeframe=_TF_MAP[tf], regime=regime)
+            if result is None:
+                pills[tf]  = "neutral"
+                scores[tf] = None
+            else:
+                pills[tf]  = _LABEL_TO_PILL.get(result["label"], "neutral")
+                scores[tf] = result
+    return {"pills": pills, "scores": scores}
