@@ -135,9 +135,12 @@ def main():
     for i, pair in enumerate(all_pairs):
         key = pair.replace("/", "")
         print(f"  [{i+1}/{total_fetches}] {key} H1")
-        df = fetch_ohlcv(pair, TF_INTERVAL["h1"], TF_BARS["h1"])
-        if df is not None:
-            raw_ohlcv[key] = df
+        try:
+            df = fetch_ohlcv(pair, TF_INTERVAL["h1"], TF_BARS["h1"])
+            if df is not None:
+                raw_ohlcv[key] = df
+        except Exception as e:
+            print(f"  ⚠ {key} skipped: {e}")
         if i < total_fetches - 1:
             time.sleep(DELAY)
 
