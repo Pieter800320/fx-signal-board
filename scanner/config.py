@@ -33,17 +33,17 @@ CORRELATES = {
 }
 
 # Timeframe intervals for Twelvedata
+# W1 dropped — FSB uses D1/H4/H1 only (D1/H4 aggregated from H1)
 TF_INTERVAL = {
-    "w1": "1week",
-    "d1": "1day",
-    "h4": "4h",
     "h1": "1h",
 }
 
-# Bars needed per TF (enough for EMA200 + MOM lookback + history)
+# 5000 H1 bars covers:
+#   H4 EMA200 : 1250 H4 bars  (200 needed)
+#   D1 EMA200 : ~208 D1 bars  (200 needed, just sufficient)
+#   H1 MOM delta : 146 bars   (OK)
+#   H4 MOM delta : 224 bars   (OK)
+#   D1 MOM delta : 744 bars   (OK)
 TF_BARS = {
-    "w1": 300,
-    "d1": 400,
-    "h4": 500,
-    "h1": 300,
+    "h1": 5000,
 }
