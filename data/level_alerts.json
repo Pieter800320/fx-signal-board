@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "id": 1779388766578,
+    "pair": "USDCAD",
+    "price": 1.36872,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779389030524,
+    "pair": "GBPJPY",
+    "price": 211.984,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779390717647,
+    "pair": "AUDUSD",
+    "price": 0.7211,
+    "direction": "above",
+    "active": true
+  }
+]
