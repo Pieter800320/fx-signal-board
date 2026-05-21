@@ -26,6 +26,9 @@
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   .ws-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:background .4s;}
   .ws-dot.live{background:var(--buy);box-shadow:0 0 5px rgba(0,220,55,.5);}
+  .tg-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:background .4s;display:none;}
+  .tg-dot.fired{display:block;background:var(--buy);box-shadow:0 0 6px rgba(0,220,55,.7);animation:pulse 2s infinite;}
+  .ms-lbl-row{display:flex;align-items:center;gap:5px;margin-bottom:5px;}
   .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
   .td-key-row{display:none;align-items:center;gap:6px;margin-bottom:6px;padding:6px 8px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;font-size:10px;}
   .td-key-row.open{display:flex;}
@@ -167,7 +170,10 @@
 </div>
 
 <div class="mstate" id="mstate">
-  <div class="ms-lbl">Market State</div>
+  <div class="ms-lbl-row">
+    <div class="ms-lbl">Market State</div>
+    <div class="tg-dot" id="tg-dot" title="Regime alert sent"></div>
+  </div>
   <div class="ms-row" id="ms-row">
     <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
   </div>
@@ -242,7 +248,7 @@ async function loadData(){
     if (!res.ok) throw new Error(res.status);
     D = await res.json();
     render();
-    wsStart();
+    if(!_ws) wsStart();   // keep existing connection alive across refreshes
   } catch(e) {
     document.getElementById("scan-time").textContent = "Error loading data";
     console.error(e);
@@ -333,6 +339,16 @@ function renderMarketState(){
       <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||"—"}</div>
       <div class="ms-sub">${sub}</div>
     </div>`;
+
+  // Telegram dot — glows if last alert was within 2 hours
+  const tgDot = document.getElementById("tg-dot");
+  if(tgDot && D.last_alert){
+    const age = (Date.now() - new Date(D.last_alert).getTime()) / 36e5;
+    tgDot.className = age < 2 ? "tg-dot fired" : "tg-dot";
+    tgDot.title = age < 2
+      ? "Regime alert sent " + new Date(D.last_alert).toUTCString()
+      : "Last alert: " + new Date(D.last_alert).toUTCString();
+  }
 
   document.getElementById("ms-row").innerHTML =
     `<div class="ms-item">
