@@ -103,7 +103,7 @@
   .b-face{margin-bottom:7px;}
 
   /* PILLS face */
-  .pills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:3px;}
+  .pills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px;}
   .tf-lbl{text-align:center;font-size:7px;font-weight:700;
            color:var(--muted);letter-spacing:.04em;text-transform:uppercase;}
   .pill{height:22px;border-radius:4px;display:flex;align-items:center;
@@ -126,7 +126,7 @@
   .corr-tag{font-size:8px;font-weight:700;letter-spacing:.01em;}
 
   /* MOM face */
-  .mom-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;margin-bottom:3px;}
+  .mom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px;}
   .mom-val{text-align:center;font-size:14px;font-weight:700;
            font-variant-numeric:tabular-nums;line-height:1.1;}
   .mom-dlt{text-align:center;font-size:9px;font-weight:700;
@@ -210,20 +210,21 @@ const PAIRS_ORDER = [
   "EURJPY","GBPJPY","AUDJPY","NZDJPY","CADJPY"
 ];
 
-const CORRELATES = {
-  EURUSD:[["GBPUSD",true], ["NZDUSD",true]],
-  GBPUSD:[["EURUSD",true], ["GBPJPY",true]],
-  USDJPY:[["EURJPY",true], ["GBPJPY",true]],
-  USDCHF:[["USDJPY",true], ["EURUSD",false]],
-  AUDUSD:[["NZDUSD",true], ["AUDJPY",true]],
-  USDCAD:[["CADJPY",false],["USDJPY",true]],
-  NZDUSD:[["AUDUSD",true], ["NZDJPY",true]],
-  EURJPY:[["EURUSD",true], ["USDJPY",false]],
-  GBPJPY:[["GBPUSD",true], ["USDJPY",false]],
-  AUDJPY:[["AUDUSD",true], ["NZDJPY",true]],
-  NZDJPY:[["NZDUSD",true], ["AUDJPY",true]],
-  CADJPY:[["USDCAD",false],["USDJPY",false]],
-};
+function getCorrelates(pair){
+  const corr = D && D.correlations;
+  if(!corr) return [];
+  const idx = corr.pairs.indexOf(pair);
+  if(idx < 0) return [];
+  const result = [];
+  corr.pairs.forEach((cp, j) => {
+    if(j === idx) return;
+    const v = corr.matrix[idx][j];
+    if(v === null || Math.abs(v) < 0.70) return;
+    result.push({cp, same: v > 0, strength: Math.abs(v)});
+  });
+  result.sort((a, b) => b.strength - a.strength);
+  return result.slice(0, 3);
+}
 
 // ── STATE ────────────────────────────────────────────────────────────────────
 let D        = null;   // signals.json
@@ -321,7 +322,6 @@ function render(){
 
 function renderMarketState(){
   const h4  = D.regime_h4  || {};
-  const w1  = D.regime_w1  || {};
   const mac = D.macro       || {};
 
   const el = document.getElementById("mstate");
@@ -336,11 +336,6 @@ function renderMarketState(){
 
   document.getElementById("ms-row").innerHTML =
     `<div class="ms-item">
-       <div class="ms-key">W1</div>
-       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
-       <div class="ms-sub">${w1.score!=null?w1.score+"/10":""} · ${w1.confidence||"—"}</div>
-     </div>
-     <div class="ms-div"></div>
      <div class="ms-item">
        <div class="ms-key">H4</div>
        <div class="ms-val" style="color:${regimeColor(h4.regime)}">${h4.regime||"—"}</div>
@@ -399,7 +394,7 @@ function toggleCSM(){
 }
 
 // ── BLOCK RENDERING ──────────────────────────────────────────────────────────
-const TFS = ["w1","d1","h4","h1"];
+const TFS = ["d1","h4","h1"];
 
 function pillsFace(pair, p){
   const pills  = p.pills || {};
@@ -412,16 +407,9 @@ function pillsFace(pair, p){
   const cont    = p.cont ?? 0;
   const contCol = contColor(cont);
 
-  const corrs = (CORRELATES[pair] || []).map(([cp, same]) =>
-    `<span class="corr-tag" style="color:${same===true ?
-      (pills.d1 in ["bull","bull_strong"] ? "var(--buy)" : "var(--sell)") :
-      (pills.d1 in ["bull","bull_strong"] ? "var(--sell)" : "var(--buy)")
-    }">${cp} ${same ? pillArrow(pills.d1||"neutral") : pillArrow(pills.d1==="bull"?"bear":pills.d1==="bull_strong"?"bear_strong":pills.d1==="bear"?"bull":"bull_strong")}</span>`
-  ).join("");
-
-  // Simpler corr coloring: just use the pair's d1 direction + same flag
+  // Correlation display: computed from D.correlations
   const d1p = pills.d1 || "neutral";
-  const corrHtml = (CORRELATES[pair] || []).map(([cp, same]) => {
+  const corrHtml = getCorrelates(pair).map(({ cp, same }) => {
     const dir = same
       ? (d1p.includes("bull") ? "↑" : d1p.includes("bear") ? "↓" : "·")
       : (d1p.includes("bull") ? "↓" : d1p.includes("bear") ? "↑" : "·");
