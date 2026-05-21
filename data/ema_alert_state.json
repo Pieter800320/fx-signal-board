@@ -1,5 +1,8 @@
 {
   "EURUSD": {
     "ema50_side": "below"
+  },
+  "USDCAD": {
+    "ema200_side": "above"
   }
 }
