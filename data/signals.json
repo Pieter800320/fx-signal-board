@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T04:40:20.406845+00:00",
+  "updated": "2026-05-21T05:15:38.352717+00:00",
   "regime_h4": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -319,20 +319,24 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
+    "label": "Mixed",
+    "signals": 0,
     "total": 6
   },
   "news": {
-    "themes": "Risk-on sentiment with falling yields and dollar weakness; energy inflation pressures eurozone while US stability maintained.",
-    "event": "Australian jobs data May 21 will test AUD; weaker employment could trigger RBA rate cut expectations.",
-    "updated": "2026-05-20T22:23:38.172635+00:00"
+    "themes": "Australian labor market deterioration driving AUD weakness; Eurozone inflation spike pressuring EUR amid growth concerns.",
+    "event": "No high-impact events scheduled; market focusing on Fed hawkishness and oil price dynamics.",
+    "updated": "2026-05-21T05:15:38.352717+00:00"
+  },
+  "analysis": {
+    "text": "W1 risk-on conflicts H4 risk-off; GBPUSD and GBPJPY show weakest conviction (50-55%), suggesting GBP uncertainty.",
+    "updated": "2026-05-21T05:15:38.352717+00:00"
   }
 }
