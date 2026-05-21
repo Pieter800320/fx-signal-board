@@ -1,8 +1,8 @@
-name: Hourly Regime Check
+# RETIRED — replaced by scan_h1.yml
+# Kept for emergency manual use only. Schedule removed.
+name: Hourly Regime Check (Retired)
 
 on:
-  schedule:
-    - cron: '5 * * * *'   # :05 past every hour (offset from full scan)
   workflow_dispatch:
 
 permissions:
