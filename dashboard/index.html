@@ -903,12 +903,8 @@ function _chtDestroyCharts() {
   _chtAlertRefs = [];
   _chtPriceLine = null;
   _chtCandles   = null;
-  if (_chtInst)     { try { _chtInst.remove();     console.log('[destroy] price chart removed'); } catch(e){ console.warn('[destroy] price remove failed:', e); } _chtInst     = null; }
-  if (_chtMacdInst) { try { _chtMacdInst.remove(); console.log('[destroy] macd chart removed');  } catch(e){ console.warn('[destroy] macd remove failed:',  e); } _chtMacdInst = null; }
-  const priceEl = document.getElementById('cht-price');
-  const macdEl  = document.getElementById('cht-macd');
-  if (priceEl) console.log('[destroy] priceEl style.height after remove:', priceEl.style.height, 'clientH:', priceEl.clientHeight);
-  if (macdEl)  console.log('[destroy] macdEl  style.height after remove:', macdEl.style.height,  'clientH:', macdEl.clientHeight);
+  if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
+  if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
 
 function setChtTf(tf) {
@@ -1021,8 +1017,10 @@ function _chtRender(pair, tf, ohlcv) {
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
-  console.log('[render] priceEl style.height:', priceEl.style.height, 'clientH:', priceEl.clientHeight);
-  console.log('[render] macdEl  style.height:', macdEl.style.height,  'clientH:', macdEl.clientHeight);
+  // Read clientHeight now to force a layout flush — ensures heights set by
+  // chtSetPaneSizes are resolved before LightweightCharts reads them
+  const priceH  = priceEl.clientHeight || 300;
+  const macdH   = macdEl.clientHeight  || 140;
   priceEl.innerHTML = '';
   macdEl.innerHTML  = '';
   const isJpy   = pair.includes('JPY');
@@ -1039,7 +1037,7 @@ function _chtRender(pair, tf, ohlcv) {
     handleScroll: true, handleScale: true,
   });
 
-  const chart   = LightweightCharts.createChart(priceEl, chartOpts(priceEl, 300, true));
+  const chart   = LightweightCharts.createChart(priceEl, chartOpts(priceEl, priceH, true));
   _chtInst      = chart;
   const candles = chart.addCandlestickSeries({
     upColor:'rgba(0,220,55,.15)', downColor:'rgba(248,81,73,.15)',
@@ -1093,7 +1091,7 @@ function _chtRender(pair, tf, ohlcv) {
   }
 
   const macdChart = LightweightCharts.createChart(macdEl, {
-    ...chartOpts(macdEl, 140, false),
+    ...chartOpts(macdEl, macdH, false),
     crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
     rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.1, bottom:0.1 } },
     timeScale: { visible:false },
