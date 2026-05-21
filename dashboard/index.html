@@ -30,7 +30,7 @@
   .tg-dot.fired{display:block;background:var(--buy);box-shadow:0 0 6px rgba(0,220,55,.7);animation:pulse 2s infinite;}
   .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
   .td-key-row{display:none;align-items:center;gap:6px;margin-bottom:6px;padding:6px 8px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;font-size:10px;}
-  .td-key-row.open{display:flex;}
+  .td-key-row.open{display:flex;flex-direction:column;align-items:stretch;}
   .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
   .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
 
@@ -164,10 +164,18 @@
   </div>
 </div>
 <div class="td-key-row" id="td-key-row">
-  <span style="color:var(--muted);white-space:nowrap;">TD Key</span>
-  <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…">
-  <button onclick="saveTdKey()">Save</button>
-  <button onclick="clearTdKey()">Clear</button>
+  <div style="display:flex;align-items:center;gap:6px;">
+    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">TD Key</span>
+    <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…">
+    <button onclick="saveTdKey()">Save</button>
+    <button onclick="clearTdKey()">Clear</button>
+  </div>
+  <div style="display:flex;align-items:center;gap:6px;margin-top:5px;padding-top:5px;border-top:1px solid var(--bord);">
+    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">GH PAT</span>
+    <input type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+    <button onclick="chtSavePat()">Save</button>
+    <button onclick="chtClearPat()">Clear</button>
+  </div>
 </div>
 
 <div class="mstate" id="mstate">
@@ -540,6 +548,7 @@ function toggleKeyRow(){
     const saved = localStorage.getItem(LS_KEY);
     document.getElementById('td-key-inp').placeholder =
       saved ? 'Key saved ✓ (enter new to replace)' : 'paste Twelvedata key…';
+    chtUpdatePatPlaceholder();
   }
 }
 function saveTdKey(){
@@ -610,6 +619,7 @@ function wsRestart(){ wsStop(); wsStart(); }
 loadData();
 setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 </script>
+
 <!-- ═══════════════════════════════════════════════════════════════════════
      CHART OVERLAY — styles, HTML, JS  (additive — no existing code changed)
      ═══════════════════════════════════════════════════════════════════════ -->
@@ -761,7 +771,7 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     <div id="cht-macd"></div>
   </div>
 
-  <!-- Bottom: levels + EMA toggles + settings -->
+  <!-- Bottom: levels + EMA toggles -->
   <div id="cht-bottom">
 
     <div>
@@ -777,15 +787,6 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       </div>
     </div>
 
-    <div>
-      <div class="cht-section-lbl">GitHub PAT <span style="font-size:7px;color:var(--muted);font-weight:400;">(for alert persistence — repo contents:write)</span></div>
-      <div id="cht-settings-row">
-        <input  class="cht-settings-inp" type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…">
-        <button class="cht-settings-btn" onclick="chtSavePat()">Save</button>
-        <button class="cht-settings-btn" onclick="chtClearPat()">Clear</button>
-      </div>
-    </div>
-
   </div>
 </div>
 
@@ -795,23 +796,23 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 //  FSB Chart overlay  — all identifiers prefixed cht_ to avoid collisions
 // ════════════════════════════════════════════════════════════════════════
 
-const CHT_LA_KEY  = 'fsb_la_v1';       // level alerts  localStorage
-const CHT_EA_KEY  = 'fsb_ea_v1';       // ema alert settings localStorage
-const CHT_PAT_KEY = 'fsb_gh_pat';      // GitHub PAT
+const CHT_LA_KEY  = 'fsb_la_v1';
+const CHT_EA_KEY  = 'fsb_ea_v1';
+const CHT_PAT_KEY = 'fsb_gh_pat';
 const CHT_LA_PATH = 'data/level_alerts.json';
 const CHT_EA_PATH = 'data/ema_alerts.json';
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let _chtPair      = null;
 let _chtTf        = 'H4';
-let _chtInst      = null;   // LightweightCharts price chart instance
-let _chtMacdInst  = null;   // LightweightCharts MACD instance
-let _chtCandles   = null;   // candlestick series
+let _chtInst      = null;
+let _chtMacdInst  = null;
+let _chtCandles   = null;
 let _chtDrawMode  = false;
-let _chtAlertRefs = [];     // [{id, priceLine, price}]
-let _chtPriceLine = null;   // live price line on chart
+let _chtAlertRefs = [];
+let _chtPriceLine = null;
 let _chtPointerMoved = false;
-let _chtOhlcvCache = {};    // {pair: {D1:[…], H4:[…], H1:[…]}}
+let _chtOhlcvCache = {};
 let _chtTimerInt  = null;
 
 // ── localStorage helpers ──────────────────────────────────────────────────────
@@ -926,13 +927,11 @@ async function _chtLoadAndRender() {
   const pair = _chtPair;
   const tf   = _chtTf;
 
-  // Use cache if available
   if (_chtOhlcvCache[pair]?.[tf]) {
     _chtRender(pair, tf, _chtOhlcvCache[pair][tf]);
     return;
   }
 
-  // Show loading state
   _chtDestroyCharts();
   document.getElementById('cht-price').innerHTML =
     '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">Fetching…</div>';
@@ -1022,7 +1021,6 @@ function _chtRender(pair, tf, ohlcv) {
     handleScroll: true, handleScale: true,
   });
 
-  // ── Price chart ─────────────────────────────────────────────────────────
   const chart   = LightweightCharts.createChart(priceEl, chartOpts(priceEl, 300, true));
   _chtInst      = chart;
   const candles = chart.addCandlestickSeries({
@@ -1036,19 +1034,16 @@ function _chtRender(pair, tf, ohlcv) {
 
   const closes = ohlcv.map(d => d.close);
 
-  // EMA200 — text colour (neutral, dominant)
   const e200 = chtEMA(closes, 200);
-  chart.addLineSeries({ color:'var(--text)', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+  chart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
     .setData(ohlcv.map((d,i) => ({ time:d.time, value:e200[i] })));
 
-  // EMA50 — buy colour
   const e50 = chtEMA(closes, 50);
-  chart.addLineSeries({ color:'var(--buy)', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+  chart.addLineSeries({ color:'#00dc37', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
     .setData(ohlcv.map((d,i) => ({ time:d.time, value:e50[i] })));
 
-  // Bollinger Bands — muted
-  const bb     = chtBB(ohlcv);
-  const bbCol  = 'rgba(87,106,125,.55)';
+  const bb    = chtBB(ohlcv);
+  const bbCol = 'rgba(87,106,125,.55)';
   chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
     .setData(bb.map(d => ({ time:d.time, value:d.upper })));
   chart.addLineSeries({ color:bbCol, lineWidth:1, lineStyle:2, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
@@ -1056,7 +1051,6 @@ function _chtRender(pair, tf, ohlcv) {
   chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
     .setData(bb.map(d => ({ time:d.time, value:d.lower })));
 
-  // Active level lines
   _chtAlertRefs = [];
   laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
     try {
@@ -1069,19 +1063,17 @@ function _chtRender(pair, tf, ohlcv) {
     } catch(e) {}
   });
 
-  // Live price line
   const lp = _livePrice[pair];
   if (lp) {
     try {
       _chtPriceLine = candles.createPriceLine({
-        price:lp, color:'var(--amber)', lineWidth:1,
+        price:lp, color:'#e3b341', lineWidth:1,
         lineStyle: LightweightCharts.LineStyle.Dashed,
         axisLabelVisible:true, title:''
       });
     } catch(e) {}
   }
 
-  // ── MACD sub-chart ───────────────────────────────────────────────────────
   const macdChart = LightweightCharts.createChart(macdEl, {
     ...chartOpts(macdEl, 140, false),
     crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
@@ -1095,18 +1087,16 @@ function _chtRender(pair, tf, ohlcv) {
   if (macdData.length) {
     macdChart.addHistogramSeries({ priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.histogram, color: d.histogram >= 0 ? 'rgba(0,220,55,.55)' : 'rgba(248,81,73,.55)' })));
-    macdChart.addLineSeries({ color:'var(--buy)', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+    macdChart.addLineSeries({ color:'#00dc37', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.macd })));
-    macdChart.addLineSeries({ color:'var(--muted)', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+    macdChart.addLineSeries({ color:'#576a7d', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.signal })));
   }
 
-  // Sync time scales
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     if (range && _chtMacdInst) { try { _chtMacdInst.timeScale().setVisibleLogicalRange(range); } catch(e){} }
   });
 
-  // Render levels list
   chtRenderLevelsList();
 }
 
@@ -1117,7 +1107,6 @@ function chtToggleDrawMode() {
   document.getElementById('cht-draw-btn').classList.toggle('active', _chtDrawMode);
 }
 
-// Pointer handler on chart area — distinguishes tap (place level) from pan
 (function() {
   let _pStart = null;
   document.addEventListener('pointerdown', e => {
@@ -1135,7 +1124,6 @@ function chtToggleDrawMode() {
     if (!_chtDrawMode || !_pStart || _chtPointerMoved) { _pStart = null; return; }
     const area = document.getElementById('cht-chart-area');
     if (!area || !area.contains(e.target)) { _pStart = null; return; }
-    // Only act on taps inside the price pane (not MACD)
     const priceEl = document.getElementById('cht-price');
     if (!priceEl || !priceEl.contains(e.target)) { _pStart = null; return; }
     if (!_chtCandles) { _pStart = null; return; }
@@ -1157,7 +1145,6 @@ function chtCommitLevel(price) {
   const alerts = laLoad();
   alerts.push({ id, pair: _chtPair, price, direction, active: true });
   laSave(alerts);
-  // Add line to chart
   if (_chtCandles) {
     try {
       const pl = _chtCandles.createPriceLine({
@@ -1175,7 +1162,6 @@ function chtCommitLevel(price) {
 function chtDeleteLevel(id) {
   const alerts = laLoad().map(a => a.id === id ? {...a, active:false} : a);
   laSave(alerts);
-  // Remove price line
   const ref = _chtAlertRefs.find(r => r.id === id);
   if (ref && _chtCandles) { try { _chtCandles.removePriceLine(ref.priceLine); } catch(e){} }
   _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
@@ -1234,14 +1220,13 @@ function chtUpdatePatPlaceholder() {
 const _origUpdatePairPcts = updatePairPcts;
 updatePairPcts = function(pair) {
   _origUpdatePairPcts(pair);
-  // Update chart live price line when chart is open on this pair
   if (_chtPair === pair && _chtCandles && _livePrice[pair]) {
     const lp = _livePrice[pair];
     try {
       if (_chtPriceLine) { _chtPriceLine.applyOptions({ price: lp }); }
       else {
         _chtPriceLine = _chtCandles.createPriceLine({
-          price:lp, color:'var(--amber)', lineWidth:1,
+          price:lp, color:'#e3b341', lineWidth:1,
           lineStyle: LightweightCharts.LineStyle.Dashed,
           axisLabelVisible:true, title:''
         });
@@ -1253,7 +1238,7 @@ updatePairPcts = function(pair) {
 // ── Long-press on pair blocks ─────────────────────────────────────────────────
 function chtAttachLongPress() {
   document.querySelectorAll('#pair-grid .block').forEach(el => {
-    if (el.dataset.chtLp) return;  // already attached
+    if (el.dataset.chtLp) return;
     el.dataset.chtLp = '1';
     let _lpTimer = null;
     let _lpMoved = false;
@@ -1274,7 +1259,6 @@ function chtAttachLongPress() {
   });
 }
 
-// Observe grid for re-renders and reattach long-press handlers
 (function() {
   const grid = document.getElementById('pair-grid');
   if (!grid) return;
