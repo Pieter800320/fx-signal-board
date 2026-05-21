@@ -18,6 +18,13 @@
     "pair": "AUDUSD",
     "price": 0.7211,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779393520446,
+    "pair": "USDCAD",
+    "price": 1.37333,
+    "direction": "above",
     "active": true
   }
 ]
