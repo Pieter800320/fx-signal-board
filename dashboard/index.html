@@ -151,6 +151,7 @@
   /* Loading */
   .loading{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
 </style>
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
 </head>
 <body>
 
@@ -608,6 +609,678 @@ function wsRestart(){ wsStop(); wsStart(); }
 // ── INIT + REFRESH ────────────────────────────────────────────────────────────
 loadData();
 setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CHART OVERLAY — styles, HTML, JS  (additive — no existing code changed)
+     ═══════════════════════════════════════════════════════════════════════ -->
+<style>
+/* ── Chart overlay shell ────────────────────────────────────────────────── */
+#cht-overlay{
+  position:fixed;inset:0;z-index:100;
+  background:var(--bg);
+  display:none;flex-direction:column;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+#cht-overlay.open{display:flex;}
+
+/* ── Top bar ────────────────────────────────────────────────────────────── */
+#cht-topbar{
+  flex-shrink:0;height:44px;
+  display:flex;align-items:center;gap:6px;
+  padding:0 10px;
+  border-bottom:1px solid var(--bord);
+  background:var(--surf);
+}
+#cht-pair-lbl{
+  font-size:12px;font-weight:800;letter-spacing:.08em;
+  color:var(--text);text-transform:uppercase;min-width:52px;
+}
+.cht-tf{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 7px;cursor:pointer;letter-spacing:.04em;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.cht-tf.active{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
+  color:var(--buy);
+}
+#cht-draw-btn{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 8px;cursor:pointer;margin-left:auto;
+  transition:background .15s,color .15s,border-color .15s;
+  white-space:nowrap;
+}
+#cht-draw-btn.active{
+  background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
+  color:var(--amber);
+}
+#cht-close-btn{
+  background:none;border:none;color:var(--muted);
+  font-size:18px;line-height:1;cursor:pointer;padding:0 2px;
+}
+#cht-timer{
+  font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+
+/* ── Chart area ─────────────────────────────────────────────────────────── */
+#cht-chart-area{
+  flex:1;min-height:0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  cursor:default;
+}
+#cht-chart-area.draw-mode{cursor:crosshair;}
+#cht-price{flex:0 0 65%;min-height:0;position:relative;}
+#cht-divider{
+  flex-shrink:0;height:1px;background:var(--bord);
+}
+#cht-macd{flex:0 0 35%;min-height:0;position:relative;}
+
+/* ── Bottom strip ───────────────────────────────────────────────────────── */
+#cht-bottom{
+  flex-shrink:0;max-height:36vh;overflow-y:auto;
+  border-top:1px solid var(--bord);
+  background:var(--surf);
+  padding:8px 10px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.cht-section-lbl{
+  font-size:8px;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+  margin-bottom:4px;
+}
+/* Levels */
+#cht-levels-list{display:flex;flex-direction:column;gap:4px;}
+.cht-level-row{
+  display:flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:600;
+  padding:4px 6px;border-radius:5px;
+  background:var(--dim);
+}
+.cht-level-price{flex:1;font-variant-numeric:tabular-nums;}
+.cht-level-dir-up{color:var(--buy);}
+.cht-level-dir-dn{color:var(--sell);}
+.cht-del-btn{
+  background:none;border:none;color:var(--muted);
+  font-size:13px;line-height:1;cursor:pointer;padding:0 2px;
+}
+.cht-del-btn:hover{color:var(--sell);}
+/* EMA toggles */
+#cht-ema-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.cht-ema-chip{
+  border-radius:4px;border:1px solid var(--bord);
+  font-size:9px;font-weight:700;letter-spacing:.04em;
+  padding:3px 9px;cursor:pointer;background:none;color:var(--muted);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.cht-ema-chip.on{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.45);
+  color:var(--buy);
+}
+/* Settings row inside chart */
+#cht-settings-row{
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+}
+.cht-settings-inp{
+  flex:1;min-width:120px;background:var(--dim);
+  border:1px solid var(--bord);border-radius:4px;
+  color:var(--text);font-size:9px;padding:4px 6px;outline:none;
+}
+.cht-settings-btn{
+  background:var(--bord);border:none;border-radius:4px;
+  color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;
+  white-space:nowrap;
+}
+.cht-pat-hint{
+  font-size:8px;color:var(--muted);line-height:1.4;
+  flex-basis:100%;
+}
+</style>
+
+<!-- ── Chart overlay HTML ──────────────────────────────────────────────── -->
+<div id="cht-overlay">
+
+  <!-- Top bar -->
+  <div id="cht-topbar">
+    <span id="cht-pair-lbl">—</span>
+    <button class="cht-tf active" id="cht-tf-D1" onclick="setChtTf('D1')">D1</button>
+    <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
+    <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
+    <span id="cht-timer"></span>
+    <button id="cht-draw-btn" onclick="chtToggleDrawMode()">＋ Level</button>
+    <button id="cht-close-btn" onclick="closeChart()">✕</button>
+  </div>
+
+  <!-- Chart panes -->
+  <div id="cht-chart-area">
+    <div id="cht-price"></div>
+    <div id="cht-divider"></div>
+    <div id="cht-macd"></div>
+  </div>
+
+  <!-- Bottom: levels + EMA toggles + settings -->
+  <div id="cht-bottom">
+
+    <div>
+      <div class="cht-section-lbl">Levels  <span id="cht-gh-status" style="font-size:8px;color:var(--muted);font-weight:400;"></span></div>
+      <div id="cht-levels-list"><span style="font-size:9px;color:var(--muted);">No levels set — tap ＋ Level then tap the chart</span></div>
+    </div>
+
+    <div>
+      <div class="cht-section-lbl">EMA Alerts <span style="font-size:7px;color:var(--muted);font-weight:400;">(fires via scanner, next H1 scan)</span></div>
+      <div id="cht-ema-row">
+        <button class="cht-ema-chip" id="cht-ema200" onclick="chtToggleEma('ema200')">EMA 200</button>
+        <button class="cht-ema-chip" id="cht-ema50"  onclick="chtToggleEma('ema50')">EMA 50</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="cht-section-lbl">GitHub PAT <span style="font-size:7px;color:var(--muted);font-weight:400;">(for alert persistence — repo contents:write)</span></div>
+      <div id="cht-settings-row">
+        <input  class="cht-settings-inp" type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…">
+        <button class="cht-settings-btn" onclick="chtSavePat()">Save</button>
+        <button class="cht-settings-btn" onclick="chtClearPat()">Clear</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── Chart JS ───────────────────────────────────────────────────────── -->
+<script>
+// ════════════════════════════════════════════════════════════════════════
+//  FSB Chart overlay  — all identifiers prefixed cht_ to avoid collisions
+// ════════════════════════════════════════════════════════════════════════
+
+const CHT_LA_KEY  = 'fsb_la_v1';       // level alerts  localStorage
+const CHT_EA_KEY  = 'fsb_ea_v1';       // ema alert settings localStorage
+const CHT_PAT_KEY = 'fsb_gh_pat';      // GitHub PAT
+const CHT_LA_PATH = 'data/level_alerts.json';
+const CHT_EA_PATH = 'data/ema_alerts.json';
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let _chtPair      = null;
+let _chtTf        = 'H4';
+let _chtInst      = null;   // LightweightCharts price chart instance
+let _chtMacdInst  = null;   // LightweightCharts MACD instance
+let _chtCandles   = null;   // candlestick series
+let _chtDrawMode  = false;
+let _chtAlertRefs = [];     // [{id, priceLine, price}]
+let _chtPriceLine = null;   // live price line on chart
+let _chtPointerMoved = false;
+let _chtOhlcvCache = {};    // {pair: {D1:[…], H4:[…], H1:[…]}}
+let _chtTimerInt  = null;
+
+// ── localStorage helpers ──────────────────────────────────────────────────────
+const laLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY) || '[]'); } catch { return []; } };
+const laSave = a  => localStorage.setItem(CHT_LA_KEY, JSON.stringify(a));
+const eaLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_EA_KEY) || '{}'); } catch { return {}; } };
+const eaSave = o  => localStorage.setItem(CHT_EA_KEY, JSON.stringify(o));
+
+// ── GitHub PAT settings ───────────────────────────────────────────────────────
+function chtSavePat() {
+  const v = document.getElementById('cht-pat-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(CHT_PAT_KEY, v);
+  document.getElementById('cht-pat-inp').value = '';
+  document.getElementById('cht-pat-inp').placeholder = 'PAT saved ✓';
+  chtSetGhStatus('PAT saved');
+}
+function chtClearPat() {
+  localStorage.removeItem(CHT_PAT_KEY);
+  document.getElementById('cht-pat-inp').placeholder = 'paste GitHub PAT…';
+  chtSetGhStatus('PAT cleared');
+}
+function chtSetGhStatus(msg) {
+  const el = document.getElementById('cht-gh-status');
+  if (!el) return;
+  el.textContent = msg;
+  setTimeout(() => { el.textContent = ''; }, 3000);
+}
+
+// ── GitHub push helper ────────────────────────────────────────────────────────
+async function chtPushToGitHub(ghPath, data) {
+  const pat = localStorage.getItem(CHT_PAT_KEY);
+  if (!pat) { chtSetGhStatus('No PAT — saved locally only'); return; }
+  const apiUrl = `https://api.github.com/repos/${REPO}/contents/${ghPath}`;
+  let sha = null;
+  try {
+    const r = await fetch(apiUrl, { headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github.v3+json' } });
+    if (r.ok) { const j = await r.json(); sha = j.sha; }
+  } catch(e) {}
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2) + '\n')));
+  const body = { message: `fsb: update ${ghPath} ${new Date().toISOString()}`, content };
+  if (sha) body.sha = sha;
+  try {
+    const r = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${pat}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      body: JSON.stringify(body)
+    });
+    if (r.ok) { chtSetGhStatus('Synced to GitHub ✓'); }
+    else      { const j = await r.json(); console.warn('GitHub push failed:', j); chtSetGhStatus('GitHub push failed'); }
+  } catch(e) { console.warn('GitHub push error:', e); chtSetGhStatus('GitHub push error'); }
+}
+
+// ── Open / close chart ────────────────────────────────────────────────────────
+function openChart(pair) {
+  _chtPair = pair;
+  _chtTf   = 'H4';
+  document.getElementById('cht-pair-lbl').textContent = pair;
+  document.getElementById('cht-overlay').classList.add('open');
+  ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === _chtTf));
+  chtUpdatePatPlaceholder();
+  chtRenderEmaToggles();
+  _chtLoadAndRender();
+  chtStartTimer();
+}
+
+function closeChart() {
+  document.getElementById('cht-overlay').classList.remove('open');
+  _chtPair = null;
+  _chtDrawMode = false;
+  document.getElementById('cht-chart-area').classList.remove('draw-mode');
+  document.getElementById('cht-draw-btn').classList.remove('active');
+  _chtDestroyCharts();
+  if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
+}
+
+function _chtDestroyCharts() {
+  _chtAlertRefs = [];
+  _chtPriceLine = null;
+  _chtCandles   = null;
+  if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
+  if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
+}
+
+function setChtTf(tf) {
+  _chtTf = tf;
+  ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === tf));
+  _chtLoadAndRender();
+  chtStartTimer();
+}
+
+// ── Candle countdown timer ────────────────────────────────────────────────────
+function chtStartTimer() {
+  if (_chtTimerInt) clearInterval(_chtTimerInt);
+  function tick() {
+    const el = document.getElementById('cht-timer');
+    if (!el) return;
+    const secs = { D1: 86400, H4: 14400, H1: 3600 }[_chtTf] || 3600;
+    const left = secs - (Math.floor(Date.now() / 1000) % secs);
+    const h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+    const p = n => String(n).padStart(2, '0');
+    el.textContent = h > 0 ? `${h}:${p(m)}:${p(s)}` : `${p(m)}:${p(s)}`;
+    el.style.color = left <= 60 ? 'var(--sell)' : 'var(--muted)';
+  }
+  tick();
+  _chtTimerInt = setInterval(tick, 1000);
+}
+
+// ── OHLCV fetch ───────────────────────────────────────────────────────────────
+async function _chtLoadAndRender() {
+  if (!_chtPair) return;
+  const pair = _chtPair;
+  const tf   = _chtTf;
+
+  // Use cache if available
+  if (_chtOhlcvCache[pair]?.[tf]) {
+    _chtRender(pair, tf, _chtOhlcvCache[pair][tf]);
+    return;
+  }
+
+  // Show loading state
+  _chtDestroyCharts();
+  document.getElementById('cht-price').innerHTML =
+    '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">Fetching…</div>';
+
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) {
+    document.getElementById('cht-price').innerHTML =
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">No TD key — tap ⚙ on main dashboard</div>';
+    return;
+  }
+
+  const sym      = pair.slice(0,3) + '/' + pair.slice(3);
+  const interval = { D1:'1day', H4:'4h', H1:'1h' }[tf];
+  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(sym)}&interval=${interval}&outputsize=5000&order=ASC&type=price&apikey=${key}`;
+
+  try {
+    const r    = await fetch(url);
+    const json = await r.json();
+    if (!json.values || !json.values.length) throw new Error(json.message || 'no data');
+    const ohlcv = json.values.map(v => ({
+      time:  Math.floor(new Date(v.datetime + (v.datetime.length === 10 ? 'T00:00:00Z' : 'Z')).getTime() / 1000),
+      open:  +v.open, high: +v.high, low: +v.low, close: +v.close
+    }));
+    if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+    _chtOhlcvCache[pair][tf] = ohlcv;
+    if (_chtPair === pair && _chtTf === tf) _chtRender(pair, tf, ohlcv);
+  } catch(e) {
+    document.getElementById('cht-price').innerHTML =
+      `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">Fetch error: ${e.message}</div>`;
+  }
+}
+
+// ── Indicator math ────────────────────────────────────────────────────────────
+function chtEMA(closes, period) {
+  if (!closes.length) return [];
+  const k = 2 / (period + 1);
+  const out = new Array(closes.length);
+  out[0] = closes[0];
+  for (let i = 1; i < closes.length; i++) out[i] = closes[i] * k + out[i-1] * (1-k);
+  return out;
+}
+
+function chtBB(ohlcv, period=20, mult=2) {
+  const closes = ohlcv.map(d => d.close);
+  const out = [];
+  for (let i = period-1; i < closes.length; i++) {
+    const sl   = closes.slice(i-period+1, i+1);
+    const mean = sl.reduce((a,b)=>a+b,0) / period;
+    const std  = Math.sqrt(sl.reduce((a,b)=>a+(b-mean)**2, 0) / period);
+    out.push({ time: ohlcv[i].time, upper: mean+mult*std, middle: mean, lower: mean-mult*std });
+  }
+  return out;
+}
+
+function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
+  if (ohlcv.length < slow + sig) return [];
+  const closes  = ohlcv.map(d => d.close);
+  const ema12   = chtEMA(closes, fast);
+  const ema26   = chtEMA(closes, slow);
+  const macdLn  = closes.map((_, i) => ema12[i] - ema26[i]);
+  const signal  = chtEMA(macdLn, sig);
+  const start   = slow + sig - 2;
+  return ohlcv.slice(start).map((bar, i) => {
+    const idx = start + i;
+    return { time: bar.time, macd: macdLn[idx], signal: signal[idx], histogram: macdLn[idx] - signal[idx] };
+  });
+}
+
+// ── Chart render ──────────────────────────────────────────────────────────────
+function _chtRender(pair, tf, ohlcv) {
+  _chtDestroyCharts();
+  if (!ohlcv.length) return;
+
+  const priceEl = document.getElementById('cht-price');
+  const macdEl  = document.getElementById('cht-macd');
+  const isJpy   = pair.includes('JPY');
+  const priceFmt = { type:'price', precision: isJpy?3:5, minMove: isJpy?0.001:0.00001 };
+
+  const chartOpts = (el, height, showTime) => ({
+    width:  el.clientWidth || window.innerWidth,
+    height: el.clientHeight || height,
+    layout: { background:{ color:'transparent' }, textColor:'#576a7d' },
+    grid:   { vertLines:{ color:'#1e2b3a' }, horzLines:{ color:'#1e2b3a' } },
+    rightPriceScale: { borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.08, bottom:0.08 } },
+    timeScale: { borderColor:'#1e2b3a', timeVisible:showTime, secondsVisible:false },
+    crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    handleScroll: true, handleScale: true,
+  });
+
+  // ── Price chart ─────────────────────────────────────────────────────────
+  const chart   = LightweightCharts.createChart(priceEl, chartOpts(priceEl, 300, true));
+  _chtInst      = chart;
+  const candles = chart.addCandlestickSeries({
+    upColor:'rgba(0,220,55,.15)', downColor:'rgba(248,81,73,.15)',
+    borderUpColor:'rgba(0,220,55,.8)', borderDownColor:'rgba(248,81,73,.8)',
+    wickUpColor:'rgba(0,220,55,.5)',   wickDownColor:'rgba(248,81,73,.5)',
+    priceLineVisible:false, lastValueVisible:false, priceFormat: priceFmt,
+  });
+  candles.setData(ohlcv);
+  _chtCandles = candles;
+
+  const closes = ohlcv.map(d => d.close);
+
+  // EMA200 — text colour (neutral, dominant)
+  const e200 = chtEMA(closes, 200);
+  chart.addLineSeries({ color:'var(--text)', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+    .setData(ohlcv.map((d,i) => ({ time:d.time, value:e200[i] })));
+
+  // EMA50 — buy colour
+  const e50 = chtEMA(closes, 50);
+  chart.addLineSeries({ color:'var(--buy)', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+    .setData(ohlcv.map((d,i) => ({ time:d.time, value:e50[i] })));
+
+  // Bollinger Bands — muted
+  const bb     = chtBB(ohlcv);
+  const bbCol  = 'rgba(87,106,125,.55)';
+  chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+    .setData(bb.map(d => ({ time:d.time, value:d.upper })));
+  chart.addLineSeries({ color:bbCol, lineWidth:1, lineStyle:2, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+    .setData(bb.map(d => ({ time:d.time, value:d.middle })));
+  chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+    .setData(bb.map(d => ({ time:d.time, value:d.lower })));
+
+  // Active level lines
+  _chtAlertRefs = [];
+  laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
+    try {
+      const pl = candles.createPriceLine({
+        price: a.price, color:'rgba(227,179,65,.75)', lineWidth:1,
+        lineStyle: LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title:''
+      });
+      _chtAlertRefs.push({ id:a.id, priceLine:pl, price:a.price });
+    } catch(e) {}
+  });
+
+  // Live price line
+  const lp = _livePrice[pair];
+  if (lp) {
+    try {
+      _chtPriceLine = candles.createPriceLine({
+        price:lp, color:'var(--amber)', lineWidth:1,
+        lineStyle: LightweightCharts.LineStyle.Dashed,
+        axisLabelVisible:true, title:''
+      });
+    } catch(e) {}
+  }
+
+  // ── MACD sub-chart ───────────────────────────────────────────────────────
+  const macdChart = LightweightCharts.createChart(macdEl, {
+    ...chartOpts(macdEl, 140, false),
+    crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
+    rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.1, bottom:0.1 } },
+    timeScale: { visible:false },
+    handleScroll: false, handleScale: false,
+  });
+  _chtMacdInst = macdChart;
+
+  const macdData = chtMACD(ohlcv);
+  if (macdData.length) {
+    macdChart.addHistogramSeries({ priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.histogram, color: d.histogram >= 0 ? 'rgba(0,220,55,.55)' : 'rgba(248,81,73,.55)' })));
+    macdChart.addLineSeries({ color:'var(--buy)', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.macd })));
+    macdChart.addLineSeries({ color:'var(--muted)', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.signal })));
+  }
+
+  // Sync time scales
+  chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
+    if (range && _chtMacdInst) { try { _chtMacdInst.timeScale().setVisibleLogicalRange(range); } catch(e){} }
+  });
+
+  // Render levels list
+  chtRenderLevelsList();
+}
+
+// ── Draw mode ─────────────────────────────────────────────────────────────────
+function chtToggleDrawMode() {
+  _chtDrawMode = !_chtDrawMode;
+  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtDrawMode);
+  document.getElementById('cht-draw-btn').classList.toggle('active', _chtDrawMode);
+}
+
+// Pointer handler on chart area — distinguishes tap (place level) from pan
+(function() {
+  let _pStart = null;
+  document.addEventListener('pointerdown', e => {
+    if (!_chtDrawMode) return;
+    const area = document.getElementById('cht-chart-area');
+    if (!area || !area.contains(e.target)) return;
+    _pStart = { x: e.clientX, y: e.clientY };
+    _chtPointerMoved = false;
+  });
+  document.addEventListener('pointermove', e => {
+    if (!_pStart) return;
+    if (Math.abs(e.clientX - _pStart.x) > 6 || Math.abs(e.clientY - _pStart.y) > 6) _chtPointerMoved = true;
+  });
+  document.addEventListener('pointerup', e => {
+    if (!_chtDrawMode || !_pStart || _chtPointerMoved) { _pStart = null; return; }
+    const area = document.getElementById('cht-chart-area');
+    if (!area || !area.contains(e.target)) { _pStart = null; return; }
+    // Only act on taps inside the price pane (not MACD)
+    const priceEl = document.getElementById('cht-price');
+    if (!priceEl || !priceEl.contains(e.target)) { _pStart = null; return; }
+    if (!_chtCandles) { _pStart = null; return; }
+    const rect  = priceEl.getBoundingClientRect();
+    const yOff  = e.clientY - rect.top;
+    const price = _chtCandles.coordinateToPrice(yOff);
+    if (price != null) chtCommitLevel(parseFloat(price.toFixed(_chtPair?.includes('JPY') ? 3 : 5)));
+    chtToggleDrawMode();
+    _pStart = null;
+  });
+})();
+
+// ── Level management ──────────────────────────────────────────────────────────
+function chtCommitLevel(price) {
+  if (!_chtPair || price == null) return;
+  const lp = _livePrice[_chtPair];
+  const direction = (lp != null) ? (lp < price ? 'above' : 'below') : 'above';
+  const id = Date.now();
+  const alerts = laLoad();
+  alerts.push({ id, pair: _chtPair, price, direction, active: true });
+  laSave(alerts);
+  // Add line to chart
+  if (_chtCandles) {
+    try {
+      const pl = _chtCandles.createPriceLine({
+        price, color:'rgba(227,179,65,.75)', lineWidth:1,
+        lineStyle: LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title:''
+      });
+      _chtAlertRefs.push({ id, priceLine:pl, price });
+    } catch(e) {}
+  }
+  chtRenderLevelsList();
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtDeleteLevel(id) {
+  const alerts = laLoad().map(a => a.id === id ? {...a, active:false} : a);
+  laSave(alerts);
+  // Remove price line
+  const ref = _chtAlertRefs.find(r => r.id === id);
+  if (ref && _chtCandles) { try { _chtCandles.removePriceLine(ref.priceLine); } catch(e){} }
+  _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
+  chtRenderLevelsList();
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtRenderLevelsList() {
+  const el = document.getElementById('cht-levels-list');
+  if (!el) return;
+  const active = laLoad().filter(a => a.pair === _chtPair && a.active);
+  if (!active.length) {
+    el.innerHTML = '<span style="font-size:9px;color:var(--muted);">No levels set — tap ＋ Level then tap the chart</span>';
+    return;
+  }
+  el.innerHTML = active.map(a => {
+    const isUp  = a.direction === 'above';
+    const cls   = isUp ? 'cht-level-dir-up' : 'cht-level-dir-dn';
+    const arrow = isUp ? '↑' : '↓';
+    const d     = _chtPair?.includes('JPY') ? 3 : 5;
+    return `<div class="cht-level-row">
+      <span class="cht-level-price ${cls}">${arrow} ${a.price.toFixed(d)}</span>
+      <button class="cht-del-btn" onclick="chtDeleteLevel(${a.id})">✕</button>
+    </div>`;
+  }).join('');
+}
+
+// ── EMA alert toggles ─────────────────────────────────────────────────────────
+function chtRenderEmaToggles() {
+  if (!_chtPair) return;
+  const ea = eaLoad();
+  const cfg = ea[_chtPair] || {};
+  document.getElementById('cht-ema200').classList.toggle('on', !!cfg.ema200);
+  document.getElementById('cht-ema50').classList.toggle('on',  !!cfg.ema50);
+}
+
+function chtToggleEma(which) {
+  if (!_chtPair) return;
+  const ea  = eaLoad();
+  const cfg = ea[_chtPair] || {};
+  cfg[which] = !cfg[which];
+  ea[_chtPair] = cfg;
+  eaSave(ea);
+  chtRenderEmaToggles();
+  chtPushToGitHub(CHT_EA_PATH, ea);
+}
+
+// ── Settings helpers ──────────────────────────────────────────────────────────
+function chtUpdatePatPlaceholder() {
+  const inp = document.getElementById('cht-pat-inp');
+  if (!inp) return;
+  inp.placeholder = localStorage.getItem(CHT_PAT_KEY) ? 'PAT saved ✓ (enter new to replace)' : 'paste GitHub PAT…';
+}
+
+// ── Live price update (wraps existing updatePairPcts) ─────────────────────────
+const _origUpdatePairPcts = updatePairPcts;
+updatePairPcts = function(pair) {
+  _origUpdatePairPcts(pair);
+  // Update chart live price line when chart is open on this pair
+  if (_chtPair === pair && _chtCandles && _livePrice[pair]) {
+    const lp = _livePrice[pair];
+    try {
+      if (_chtPriceLine) { _chtPriceLine.applyOptions({ price: lp }); }
+      else {
+        _chtPriceLine = _chtCandles.createPriceLine({
+          price:lp, color:'var(--amber)', lineWidth:1,
+          lineStyle: LightweightCharts.LineStyle.Dashed,
+          axisLabelVisible:true, title:''
+        });
+      }
+    } catch(e) {}
+  }
+};
+
+// ── Long-press on pair blocks ─────────────────────────────────────────────────
+function chtAttachLongPress() {
+  document.querySelectorAll('#pair-grid .block').forEach(el => {
+    if (el.dataset.chtLp) return;  // already attached
+    el.dataset.chtLp = '1';
+    let _lpTimer = null;
+    let _lpMoved = false;
+    el.addEventListener('pointerdown', e => {
+      _lpMoved = false;
+      _lpTimer = setTimeout(() => {
+        if (_lpMoved) return;
+        const pairEl = el.querySelector('.b-pair');
+        if (!pairEl) return;
+        const pair = pairEl.textContent.trim();
+        if (PAIRS_ORDER.includes(pair)) { e.preventDefault(); openChart(pair); }
+      }, 500);
+    });
+    const cancel = () => { if (_lpTimer) { clearTimeout(_lpTimer); _lpTimer = null; } };
+    el.addEventListener('pointermove',   () => { _lpMoved = true; cancel(); });
+    el.addEventListener('pointerup',     cancel);
+    el.addEventListener('pointercancel', cancel);
+  });
+}
+
+// Observe grid for re-renders and reattach long-press handlers
+(function() {
+  const grid = document.getElementById('pair-grid');
+  if (!grid) return;
+  const obs = new MutationObserver(chtAttachLongPress);
+  obs.observe(grid, { childList: true });
+})();
 </script>
 </body>
 </html>
