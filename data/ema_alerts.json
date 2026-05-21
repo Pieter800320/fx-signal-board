@@ -1,10 +1,10 @@
 {
   "USDCAD": {
-    "ema200": false,
+    "ema200": true,
     "ema50": false
   },
   "EURUSD": {
     "ema200": false,
-    "ema50": true
+    "ema50": false
   }
 }
