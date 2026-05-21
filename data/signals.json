@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T07:18:25.171627+00:00",
+  "updated": "2026-05-21T09:39:10.643930+00:00",
   "regime_h4": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -505,8 +505,12 @@
     "total": 6
   },
   "news": {
-    "themes": "Australian labor market deterioration driving AUD weakness; Eurozone inflation spike pressuring EUR amid growth concerns.",
-    "event": "No high-impact events scheduled; market focusing on Fed hawkishness and oil price dynamics.",
-    "updated": "2026-05-21T05:15:38.352717+00:00"
+    "themes": "European economic deterioration accelerating (Germany, France, Eurozone) amid fiscal stress and high energy costs pressuring EUR.",
+    "event": "No high-impact events scheduled; focus remains on economic data flow and geopolitical developments affecting risk sentiment.",
+    "updated": "2026-05-21T09:39:10.643930+00:00"
+  },
+  "analysis": {
+    "text": "EURUSD shows strongest bear conviction (D1+H4 aligned, 81% continuation), conflicting with H4 risk-off and mixed macro backdrop.",
+    "updated": "2026-05-21T09:39:10.643930+00:00"
   }
 }
