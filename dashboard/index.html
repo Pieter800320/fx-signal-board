@@ -776,11 +776,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 
     <div>
       <div class="cht-section-lbl">Levels  <span id="cht-gh-status" style="font-size:8px;color:var(--muted);font-weight:400;"></span></div>
-      <div id="cht-levels-list"><span style="font-size:9px;color:var(--muted);">No levels set — tap ＋ Level then tap the chart</span></div>
+      <div id="cht-levels-list"></div>
     </div>
 
     <div>
-      <div class="cht-section-lbl">EMA Alerts <span style="font-size:7px;color:var(--muted);font-weight:400;">(fires via scanner, next H1 scan)</span></div>
+      <div class="cht-section-lbl">EMA Alerts</div>
       <div id="cht-ema-row">
         <button class="cht-ema-chip" id="cht-ema200" onclick="chtToggleEma('ema200')">EMA 200</button>
         <button class="cht-ema-chip" id="cht-ema50"  onclick="chtToggleEma('ema50')">EMA 50</button>
@@ -1010,6 +1010,14 @@ function _chtRender(pair, tf, ohlcv) {
   const isJpy   = pair.includes('JPY');
   const priceFmt = { type:'price', precision: isJpy?3:5, minMove: isJpy?0.001:0.00001 };
 
+  // Fix: compute pixel heights from the parent area so clientHeight is
+  // never 0 (flex % basis doesn't resolve to a definite height on mobile)
+  const areaH  = document.getElementById('cht-chart-area').clientHeight || 440;
+  const priceH = Math.floor((areaH - 1) * 0.65);
+  const macdH  = areaH - 1 - priceH;
+  priceEl.style.height = priceH + 'px';
+  macdEl.style.height  = macdH  + 'px';
+
   const chartOpts = (el, height, showTime) => ({
     width:  el.clientWidth || window.innerWidth,
     height: el.clientHeight || height,
@@ -1174,7 +1182,7 @@ function chtRenderLevelsList() {
   if (!el) return;
   const active = laLoad().filter(a => a.pair === _chtPair && a.active);
   if (!active.length) {
-    el.innerHTML = '<span style="font-size:9px;color:var(--muted);">No levels set — tap ＋ Level then tap the chart</span>';
+    el.innerHTML = '';
     return;
   }
   el.innerHTML = active.map(a => {
