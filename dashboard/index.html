@@ -683,11 +683,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   cursor:default;
 }
 #cht-chart-area.draw-mode{cursor:crosshair;}
-#cht-price{flex:1;min-height:0;position:relative;}
+#cht-price{flex-shrink:0;min-height:0;position:relative;}
 #cht-divider{
   flex-shrink:0;height:1px;background:var(--bord);
 }
-#cht-macd{flex-shrink:0;height:140px;min-height:80px;position:relative;}
+#cht-macd{flex-shrink:0;min-height:0;position:relative;}
 
 /* ── Bottom strip ───────────────────────────────────────────────────────── */
 #cht-bottom{
@@ -867,6 +867,13 @@ async function chtPushToGitHub(ghPath, data) {
 }
 
 // ── Open / close chart ────────────────────────────────────────────────────────
+function chtSetPaneSizes() {
+  const h = document.getElementById('cht-chart-area').clientHeight;
+  if (!h) return;
+  document.getElementById('cht-price').style.height = Math.floor(h * 0.65) + 'px';
+  document.getElementById('cht-macd').style.height  = Math.floor(h * 0.35) + 'px';
+}
+
 function openChart(pair) {
   _chtPair = pair;
   _chtTf   = 'H4';
@@ -875,8 +882,11 @@ function openChart(pair) {
   ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === _chtTf));
   chtUpdatePatPlaceholder();
   chtRenderEmaToggles();
-  _chtLoadAndRender();
   chtStartTimer();
+  requestAnimationFrame(() => {
+    chtSetPaneSizes();
+    _chtLoadAndRender();
+  });
 }
 
 function closeChart() {
