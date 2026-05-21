@@ -25,6 +25,7 @@ import sys
 import time
 import urllib.request
 import urllib.parse
+import urllib.error
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -71,17 +72,30 @@ def save_signals(data: dict):
 
 
 def send_telegram(msg: str):
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-    chat  = os.environ.get("TELEGRAM_CHAT_ID", "")
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+    chat  = os.environ.get("TELEGRAM_CHAT_ID",   "").strip()
     if not token or not chat:
-        print("  Telegram not configured")
+        print("  Telegram: BOT_TOKEN or CHAT_ID not set in secrets")
         return
-    text = urllib.parse.quote(msg)
-    url  = (f"https://api.telegram.org/bot{token}/sendMessage"
-            f"?chat_id={chat}&text={text}&parse_mode=HTML")
+    print(f"  Telegram: sending to chat_id={chat!r} (token length={len(token)})")
+    url     = f"https://api.telegram.org/bot{token}/sendMessage"
+    payload = json.dumps({
+        "chat_id":    chat,
+        "text":       msg,
+        "parse_mode": "HTML",
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=payload,
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
     try:
-        with urllib.request.urlopen(url, timeout=10) as r:
-            print(f"  Telegram: {r.status}")
+        with urllib.request.urlopen(req, timeout=10) as r:
+            body = r.read().decode()
+            print(f"  Telegram: {r.status} — {body[:200]}")
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        print(f"  Telegram error {e.code}: {body}")
     except Exception as e:
         print(f"  Telegram error: {e}")
 
