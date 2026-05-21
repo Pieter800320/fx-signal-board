@@ -1,0 +1,290 @@
+"""
+FX Signal Board — hourly master scanner
+
+Replaces scan_full.py + scan_hourly.py.
+
+Flow:
+  1. Fetch H1 OHLCV for 12 main pairs + 6 CSM cross pairs  (18 API calls)
+  2. Aggregate H1 -> H4 + D1 via aggregator.py
+  3. Pills (full Forex1212 formula) via pills.py / score.py
+  4. MOM1212 (D1/H4/H1 + deltas + CMP) via mom1212.py
+  5. CSM (D1 + H4 blend, 16-pair set) via csm.py
+  6. ADX (H4)
+  7. Correlation matrix via correlate.py
+  8. H4 Regime via regime.py
+  9. Cont. score (computeQAI port) via cont_score.py
+ 10. D1% / D5% / prev_close / prev5_close
+ 11. Preserve news/macro/analysis from previous signals.json
+ 12. Write signals.json
+ 13. Telegram on H4 regime transition
+"""
+
+import json
+import os
+import sys
+import time
+import urllib.request
+import urllib.parse
+from datetime import datetime, timezone
+from pathlib import Path
+
+import numpy as np
+
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT))
+
+from scanner.config     import PAIRS, TF_INTERVAL, TF_BARS
+from scanner.fetch      import fetch_ohlcv
+from scanner.aggregator import build_tfs
+from scanner.pills      import classify_full
+from scanner.mom1212    import compute_all as compute_mom
+from scanner.csm        import compute_csm, STRENGTH_PAIRS
+from scanner.regime     import classify_regime, regime_block_cls
+from scanner.cont_score import compute_cont
+from scanner.correlate  import compute_correlation
+from scanner.score      import compute_reset_score, atr_percentile
+
+# Extra pairs needed for CSM 16-pair set (not in main PAIRS list)
+CSM_EXTRA = ["EUR/GBP", "EUR/CHF", "GBP/CHF", "AUD/NZD", "AUD/CAD", "GBP/AUD"]
+
+DELAY = 8   # seconds between API calls — free tier rate limit
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def load_signals():
+    path = ROOT / "data" / "signals.json"
+    if path.exists():
+        try:
+            with open(path) as f:
+                return json.load(f)
+        except Exception:
+            pass
+    return {}
+
+
+def save_signals(data: dict):
+    path = ROOT / "data" / "signals.json"
+    path.parent.mkdir(exist_ok=True)
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+
+
+def send_telegram(msg: str):
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat  = os.environ.get("TELEGRAM_CHAT_ID", "")
+    if not token or not chat:
+        print("  Telegram not configured")
+        return
+    text = urllib.parse.quote(msg)
+    url  = (f"https://api.telegram.org/bot{token}/sendMessage"
+            f"?chat_id={chat}&text={text}&parse_mode=HTML")
+    try:
+        with urllib.request.urlopen(url, timeout=10) as r:
+            print(f"  Telegram: {r.status}")
+    except Exception as e:
+        print(f"  Telegram error: {e}")
+
+
+def regime_emoji(regime: str) -> str:
+    return {"Risk-Off": "🔴", "Risk-On": "🟢", "Mixed": "🟡", "Ranging": "⚪"}.get(regime, "")
+
+
+def d_pct(df, bars_back: int):
+    """Return % change over bars_back bars on D1 aggregated data."""
+    if df is None or len(df) < bars_back + 1:
+        return None
+    prev  = float(df["close"].iloc[-(bars_back + 1)])
+    close = float(df["close"].iloc[-1])
+    if prev == 0:
+        return None
+    return round((close / prev - 1) * 100, 2)
+
+
+# ── Main ──────────────────────────────────────────────────────────────────────
+
+def main():
+    print("=== FX Signal Board — Hourly Scan ===")
+    now = datetime.now(timezone.utc)
+
+    prev             = load_signals()
+    prev_h4_regime   = prev.get("regime_h4")
+    prev_regime_name = (prev_h4_regime or {}).get("regime", "Unknown")
+
+    # ── 1. Fetch H1 OHLCV ────────────────────────────────────────────────────
+    all_pairs  = PAIRS + [p for p in CSM_EXTRA if p not in PAIRS]
+    total_fetches = len(all_pairs)
+    print(f"\n[1/9] Fetching H1 OHLCV for {total_fetches} pairs "
+          f"({TF_BARS['h1']} bars each)…")
+
+    raw_ohlcv = {}   # { "EURUSD": h1_df }
+    for i, pair in enumerate(all_pairs):
+        key = pair.replace("/", "")
+        print(f"  [{i+1}/{total_fetches}] {key} H1")
+        df = fetch_ohlcv(pair, TF_INTERVAL["h1"], TF_BARS["h1"])
+        if df is not None:
+            raw_ohlcv[key] = df
+        if i < total_fetches - 1:
+            time.sleep(DELAY)
+
+    # ── 2. Aggregate H1 -> H4 + D1 ────────────────────────────────────────────
+    print("\n[2/9] Aggregating H1 -> H4 + D1…")
+    ohlcv = {}   # { "EURUSD": {"h1": df, "h4": df, "d1": df} }
+    for key, h1_df in raw_ohlcv.items():
+        tfs = build_tfs(h1_df)
+        ohlcv[key] = tfs
+        print(f"  {key}: H1={len(tfs['h1'])} H4={len(tfs['h4'])} D1={len(tfs['d1'])}")
+
+    # ── 3. Pills (full Forex1212 formula) ─────────────────────────────────────
+    print("\n[3/9] Computing pills (EMA200/50 + MACD + DMI + ADX weight)…")
+    pair_pills  = {}   # { "EURUSD": {"d1": "bear", ...} }
+    pair_scores = {}   # { "EURUSD": {"d1": result, "h4": result, "h1": result} }
+
+    for key in ohlcv:
+        tfs    = {tf: ohlcv[key][tf] for tf in ("d1", "h4", "h1")}
+        result = classify_full(tfs)
+        pair_pills[key]  = result["pills"]
+        pair_scores[key] = result["scores"]
+        print(f"  {key}: {result['pills']}")
+
+    # ── 4. MOM1212 ────────────────────────────────────────────────────────────
+    print("\n[4/9] Computing MOM1212 (D1/H4/H1 + deltas + CMP)…")
+    pair_mom = {}
+    for key in [p.replace("/", "") for p in PAIRS]:
+        tfs = {tf: ohlcv.get(key, {}).get(tf) for tf in ("d1", "h4", "h1")}
+        pair_mom[key] = compute_mom(tfs)
+        print(f"  {key}: CMP={pair_mom[key].get('cmp')}")
+
+    # ── 5. CSM ────────────────────────────────────────────────────────────────
+    print("\n[5/9] Computing CSM (16-pair D1+H4 blend)…")
+    csm = compute_csm(ohlcv)
+    print(f"  D1: {dict(sorted(csm['d1'].items(), key=lambda x: -x[1]))}")
+    print(f"  H4: {dict(sorted(csm['h4'].items(), key=lambda x: -x[1]))}")
+
+    # ── 6. ADX + per-pair entry metrics ───────────────────────────────────────
+    print("\n[6/9] Extracting ADX, reset_score, atr_percentile…")
+    pair_adx        = {}
+    pair_reset      = {}
+    pair_atr_pct    = {}
+
+    for key in [p.replace("/", "") for p in PAIRS]:
+        sc = pair_scores.get(key, {})
+
+        # ADX: from H4 score raw indicators (already computed in score_pair)
+        h4_score = sc.get("h4")
+        adx_val  = (h4_score["raw"]["adx"] if h4_score and h4_score.get("raw") else None)
+        pair_adx[key] = adx_val
+
+        # Reset score: computed from H4 closes, direction from D1 pill
+        d1_dir   = pair_pills.get(key, {}).get("d1", "neutral")
+        h4_df    = ohlcv.get(key, {}).get("h4")
+        if h4_df is not None and len(h4_df) >= 34:
+            pair_reset[key] = compute_reset_score(
+                h4_df["close"].values, direction=d1_dir
+            )
+        else:
+            pair_reset[key] = None
+
+        # ATR percentile: from D1 (or H4 as proxy if D1 is short)
+        d1_df = ohlcv.get(key, {}).get("d1")
+        h4_df = ohlcv.get(key, {}).get("h4")
+        ap = atr_percentile(d1_df) if d1_df is not None and len(d1_df) >= 52 else None
+        if ap is None and h4_df is not None and len(h4_df) >= 52:
+            ap = atr_percentile(h4_df)
+        pair_atr_pct[key] = ap
+
+        print(f"  {key}: ADX={adx_val} reset={pair_reset[key]} atr_pct={ap}")
+
+    # ── 7. Correlation matrix ─────────────────────────────────────────────────
+    print("\n[7/9] Computing correlation matrix…")
+    correlations = compute_correlation(ohlcv)
+
+    # ── 8. H4 Regime ──────────────────────────────────────────────────────────
+    print("\n[8/9] Computing H4 regime…")
+    regime_h4 = classify_regime(csm["h4"], pair_pills, prev_h4_regime)
+    new_regime_name = regime_h4["regime"]
+    print(f"  H4 Regime: {regime_h4['regime']} {regime_h4['confidence']} "
+          f"(was: {prev_regime_name})")
+
+    # ── 9. Cont. score + assemble pairs ───────────────────────────────────────
+    print("\n[9/9] Computing cont. scores + assembling pairs…")
+    pairs_out = {}
+
+    for pair in PAIRS:
+        key   = pair.replace("/", "")
+        pills = pair_pills.get(key, {})
+        mom   = pair_mom.get(key, {})
+        adx   = pair_adx.get(key)
+        cls   = regime_block_cls(key, pills, regime_h4)
+
+        cont = compute_cont(
+            pair        = key,
+            pills       = pills,
+            adx         = adx,
+            csm_h4      = csm["h4"],
+            regime_h4   = regime_h4,
+            reset_score = pair_reset.get(key),
+            atr_pct     = pair_atr_pct.get(key),
+        )
+
+        d1_df       = ohlcv.get(key, {}).get("d1")
+        d1p         = d_pct(d1_df, 1)
+        d5p         = d_pct(d1_df, 5)
+        prev_close  = (round(float(d1_df["close"].iloc[-2]), 6)
+                       if d1_df is not None and len(d1_df) >= 2 else None)
+        prev5_close = (round(float(d1_df["close"].iloc[-6]), 6)
+                       if d1_df is not None and len(d1_df) >= 6 else None)
+
+        pairs_out[key] = {
+            "pills":       pills,
+            "mom":         mom,
+            "adx":         adx,
+            "d1_pct":      d1p,
+            "d5_pct":      d5p,
+            "prev_close":  prev_close,
+            "prev5_close": prev5_close,
+            "cont":        cont,
+            "regime_cls":  cls,
+        }
+        print(f"  {key}: cont={cont}% cls={cls}")
+
+    # ── Assemble signals.json ─────────────────────────────────────────────────
+    # Preserve news / macro / analysis from previous scan_news.py run
+    preserved = {
+        k: prev.get(k)
+        for k in ("regime_w1", "macro", "news", "analysis")
+        if prev.get(k)
+    }
+
+    out = {
+        "updated":      now.isoformat(),
+        "regime_h4":    regime_h4,
+        "csm":          csm,
+        "correlations": correlations,
+        "pairs":        pairs_out,
+        **preserved,
+    }
+
+    save_signals(out)
+    print(f"\n✓ signals.json saved")
+
+    # ── Telegram on regime transition ─────────────────────────────────────────
+    if new_regime_name != prev_regime_name and prev_regime_name != "Unknown":
+        conf = regime_h4["confidence"]
+        msg  = (
+            f"{regime_emoji(new_regime_name)} <b>H4 Regime: {new_regime_name}</b> "
+            f"({conf})\n"
+            f"← was {prev_regime_name}\n"
+            f"Score: {regime_h4['score']}/10 · "
+            f"{now.strftime('%H:%M')} UTC"
+        )
+        print(f"\n⚡ Regime transition → sending Telegram alert")
+        send_telegram(msg)
+    else:
+        print("\nNo regime transition.")
+
+    print("=== Hourly Scan complete ===")
+
+
+if __name__ == "__main__":
+    main()
