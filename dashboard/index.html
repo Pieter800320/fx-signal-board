@@ -501,7 +501,7 @@ function blockHTML(pair){
       <span class="b-pair">${pair}</span>
       <div class="b-chgs">
         <span id="d1-${pair}" class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
-        <span id="d5-${pair}" class="b-d5" style="${(d5p!=null)?d5p>=0?'var(--buy)":'var(--sell)":'var(--muted)'}">${fmtPct(d5p)}</span>
+        <span id="d5-${pair}" class="b-d5" style="color:${d5p!=null?(d5p>=0?"var(--buy)":"var(--sell)"):"var(--muted)"}">${fmtPct(d5p)}</span>
       </div>
     </div>
     ${face[pair] === 0 ? pillsFace(pair, p) : momFace(p)}
