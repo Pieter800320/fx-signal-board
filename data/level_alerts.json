@@ -60,6 +60,20 @@
     "pair": "USDCAD",
     "price": 1.3716434075822392,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779428147409,
+    "pair": "USDCAD",
+    "price": 1.3802899071988035,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779428288481,
+    "pair": "USDCAD",
+    "price": 1.3832634447642338,
+    "direction": "above",
     "active": true
   }
 ]
