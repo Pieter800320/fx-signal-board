@@ -24,10 +24,6 @@
   .dot{width:5px;height:5px;border-radius:50%;background:var(--buy);
        box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
-  .ws-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:background .4s;}
-  .ws-dot.live{background:var(--buy);box-shadow:0 0 5px rgba(0,220,55,.5);}
-  .tg-dot{width:5px;height:5px;border-radius:50%;background:var(--muted);transition:background .4s;}
-  .tg-dot.fired{display:block;background:var(--buy);box-shadow:0 0 6px rgba(0,220,55,.7);animation:pulse 2s infinite;}
   .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
   .td-key-row{display:none;align-items:center;gap:6px;margin-bottom:6px;padding:6px 8px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;font-size:10px;}
   .td-key-row.open{display:flex;flex-direction:column;align-items:stretch;}
@@ -159,8 +155,7 @@
   <div class="app-name">FX Signal Board</div>
   <div class="scan-info">
     <div class="dot"></div><span id="scan-time">Loading…</span>
-    <div class="ws-dot" id="ws-dot" title="Live prices"></div>
-    <button class="gear-btn" onclick="toggleKeyRow()" title="API key">⚙</button>
+    <button class="gear-btn" onclick="toggleKeyRow()" title="API keys">⚙</button>
   </div>
 </div>
 <div class="td-key-row" id="td-key-row">
@@ -181,7 +176,6 @@
 <div class="mstate" id="mstate">
   <div class="ms-lbl-row">
     <div class="ms-lbl">Market State</div>
-    <div class="tg-dot" id="tg-dot" title="Regime alert sent"></div>
   </div>
   <div class="ms-row" id="ms-row">
     <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
@@ -257,7 +251,6 @@ async function loadData(){
     if (!res.ok) throw new Error(res.status);
     D = await res.json();
     render();
-    if(!_ws) wsStart();   // keep existing connection alive across refreshes
   } catch(e) {
     document.getElementById("scan-time").textContent = "Error loading data";
     console.error(e);
@@ -348,16 +341,6 @@ function renderMarketState(){
       <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||"—"}</div>
       <div class="ms-sub">${sub}</div>
     </div>`;
-
-  // Telegram dot — glows if last alert was within 2 hours
-  const tgDot = document.getElementById("tg-dot");
-  if(tgDot && D.last_alert){
-    const age = (Date.now() - new Date(D.last_alert).getTime()) / 36e5;
-    tgDot.className = age < 2 ? "tg-dot fired" : "tg-dot";
-    tgDot.title = age < 2
-      ? "Regime alert sent " + new Date(D.last_alert).toUTCString()
-      : "Last alert: " + new Date(D.last_alert).toUTCString();
-  }
 
   document.getElementById("ms-row").innerHTML =
     `<div class="ms-item">
@@ -535,11 +518,8 @@ function flipBlock(pair){
   renderGrid();
 }
 
-// ── WEBSOCKET — live prices (Twelvedata) ─────────────────────────────────────
-const TD_WS = 'wss://ws.twelvedata.com/v1/quotes/price';
+// ── TD KEY (used for OHLCV chart fetches only) ───────────────────────────────
 const LS_KEY = 'fsb_td_key';
-let _ws = null;
-let _livePrice = {};
 
 function toggleKeyRow(){
   const row = document.getElementById('td-key-row');
@@ -557,63 +537,13 @@ function saveTdKey(){
   if(!val) return;
   localStorage.setItem(LS_KEY, val);
   inp.value = ''; inp.placeholder = 'Key saved ✓';
-  wsRestart();
 }
 function clearTdKey(){
   localStorage.removeItem(LS_KEY);
-  wsStop();
   document.getElementById('td-key-inp').placeholder = 'paste Twelvedata key…';
 }
-function setWsDot(live){
-  const el = document.getElementById('ws-dot');
-  if(el) el.className = 'ws-dot' + (live ? ' live' : '');
-}
-function updatePairPcts(pair){
-  const lp = _livePrice[pair];
-  if(lp == null) return;
-  const p = (D && D.pairs) ? (D.pairs[pair] || {}) : {};
-  const d1Span = document.getElementById('d1-' + pair);
-  const d5Span = document.getElementById('d5-' + pair);
-  if(d1Span && p.prev_close){
-    const pct = (lp - p.prev_close) / p.prev_close * 100;
-    d1Span.textContent = fmtPct(pct);
-    d1Span.style.color = pct >= 0 ? 'var(--buy)' : 'var(--sell)';
-  }
-  if(d5Span && p.prev5_close){
-    const pct = (lp - p.prev5_close) / p.prev5_close * 100;
-    d5Span.textContent = fmtPct(pct);
-    d5Span.style.color = pct >= 0 ? 'var(--buy)' : 'var(--sell)';
-  }
-}
-function wsStart(){
-  wsStop();
-  const key = localStorage.getItem(LS_KEY);
-  if(!key) return;
-  try{
-    _ws = new WebSocket(`${TD_WS}?apikey=${key}`);
-    _ws.onopen = () => {
-      _ws.send(JSON.stringify({action:'subscribe', params:{symbols: PAIRS_ORDER.join(',')}}));
-      setWsDot(true);
-    };
-    _ws.onmessage = (e) => {
-      try{
-        const d = JSON.parse(e.data);
-        if(d.event === 'price' && d.symbol && d.price){
-          const pair = d.symbol.replace(/\//g, '');
-          _livePrice[pair] = parseFloat(d.price);
-          updatePairPcts(pair);
-        }
-      }catch(err){}
-    };
-    _ws.onerror = () => { setWsDot(false); _ws = null; };
-    _ws.onclose = () => { setWsDot(false); _ws = null; };
-  }catch(e){ _ws = null; }
-}
-function wsStop(){
-  if(_ws){ try{ _ws.close(); }catch(e){} _ws = null; }
-  setWsDot(false);
-}
-function wsRestart(){ wsStop(); wsStart(); }
+
+function updatePairPcts(){} // no-op: pair % updates come from scan data only
 
 // ── INIT + REFRESH ────────────────────────────────────────────────────────────
 loadData();
@@ -679,12 +609,6 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
   color:var(--amber);
 }
-#cht-set-btn{
-  display:none;
-  background:rgba(227,179,65,.18);border:1px solid rgba(227,179,65,.6);
-  border-radius:4px;color:var(--amber);font-size:10px;font-weight:700;
-  padding:3px 8px;cursor:pointer;white-space:nowrap;
-}
 #cht-clear-btn{
   background:none;border:1px solid var(--bord);border-radius:4px;
   color:var(--muted);font-size:10px;font-weight:700;
@@ -724,6 +648,24 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   color:#fff;font-size:14px;font-weight:700;
   width:28px;height:28px;line-height:28px;text-align:center;
   cursor:pointer;
+}
+
+/* Direction panel — appears beside staging line */
+#cht-dir-panel{
+  display:none;position:absolute;z-index:25;
+  align-items:center;gap:4px;
+  background:rgba(10,14,19,.92);
+  border:1px solid rgba(227,179,65,.55);
+  border-radius:6px;padding:4px 6px;
+}
+#cht-dir-panel button{
+  background:none;border:1px solid rgba(227,179,65,.4);border-radius:4px;
+  color:var(--amber);font-size:10px;font-weight:700;
+  padding:4px 10px;cursor:pointer;white-space:nowrap;
+  letter-spacing:.03em;transition:background .12s,border-color .12s;
+}
+#cht-dir-panel button:hover,#cht-dir-panel button:active{
+  background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.75);
 }
 
 /* ── Bottom strip ───────────────────────────────────────────────────────── */
@@ -777,7 +719,6 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
       <span id="cht-timer"></span>
       <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-      <button id="cht-set-btn"   onclick="chtCommitStaging()">Set</button>
       <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
     </div>
   </div>
@@ -788,6 +729,10 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     <div id="cht-macd"></div>
     <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
     <button id="cht-float-del" onclick="chtDeleteSelectedLevel()">✕</button>
+    <div id="cht-dir-panel">
+      <button onclick="chtCommitStaging('above')">↑ Above</button>
+      <button onclick="chtCommitStaging('below')">↓ Below</button>
+    </div>
   </div>
 
   <div id="cht-bottom">
@@ -958,7 +903,6 @@ function closeChart() {
   document.getElementById('cht-overlay').classList.remove('open');
   _chtDrawMode = false;
   document.getElementById('cht-draw-btn').classList.remove('active');
-  document.getElementById('cht-set-btn').style.display = 'none';
   _chtDestroyCharts();
   _chtPair = null;
   if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
@@ -1163,8 +1107,8 @@ function _chtRender(pair, tf, ohlcv) {
     } catch(e) {}
   });
 
-  // Price line — always created from last close; updates to live WS price if available
-  const initPrice = _livePrice[pair] || ohlcv[ohlcv.length - 1].close;
+  // Price line — always shows last completed candle close for this TF
+  const initPrice = ohlcv[ohlcv.length - 1].close;
   try {
     _chtPriceLine = candles.createPriceLine({
       price:initPrice, color:'rgba(205,217,229,0.75)', lineWidth:1,
@@ -1240,7 +1184,6 @@ function _chtRender(pair, tf, ohlcv) {
   if (_chtStagingPrice !== null) {
     _chtSetStaging(_chtStagingPrice);
   }
-
   // Attach drawing listeners (once only per page load)
   _chtInitDrawListeners();
 }
@@ -1278,7 +1221,26 @@ function _chtSetStaging(price) {
       });
     } catch(e) {}
   }
-  document.getElementById('cht-set-btn').style.display = 'inline-block';
+  _chtPositionDirPanel();
+}
+
+function _chtPositionDirPanel() {
+  if (_chtStagingPrice == null) return;
+  const panel   = document.getElementById('cht-dir-panel');
+  const area    = document.getElementById('cht-chart-area');
+  const priceEl = document.getElementById('cht-price');
+  if (!panel || !area || !priceEl) return;
+  const clientY = _chtPriceToY(_chtStagingPrice);
+  if (clientY == null) return;
+  const areaRect = area.getBoundingClientRect();
+  const y = clientY - areaRect.top;
+  // Clamp so panel stays within price pane
+  const priceH = priceEl.clientHeight;
+  const panelH = 34;
+  const clampedY = Math.max(4, Math.min(priceH - panelH - 4, y - panelH / 2));
+  panel.style.top   = clampedY + 'px';
+  panel.style.right = '58px';  // left of price axis
+  panel.style.display = 'flex';
 }
 
 function _chtRemoveStaging() {
@@ -1287,20 +1249,18 @@ function _chtRemoveStaging() {
   }
   _chtStagingLine  = null;
   _chtStagingPrice = null;
-  document.getElementById('cht-set-btn').style.display = 'none';
+  const panel = document.getElementById('cht-dir-panel');
+  if (panel) panel.style.display = 'none';
 }
 
-function chtCommitStaging() {
+function chtCommitStaging(direction) {
   if (_chtStagingPrice == null || !_chtPair) return;
   const price = _chtStagingPrice;
-  const lp    = _livePrice[_chtPair];
-  const direction = (lp != null) ? (lp < price ? 'above' : 'below') : 'above';
   const id    = Date.now();
   const alerts = laLoad();
   alerts.push({ id, pair:_chtPair, price, direction, active:true });
   laSave(alerts);
   _chtRemoveStaging();
-  // Add committed grey priceLine
   if (_chtCandles) {
     try {
       const pl = _chtCandles.createPriceLine({
@@ -1479,24 +1439,13 @@ function _chtInitDrawListeners() {
   }, true);
 }
 
-// ── Live price update ─────────────────────────────────────────────────────────
-const _origUpdatePairPcts = updatePairPcts;
-updatePairPcts = function(pair) {
-  _origUpdatePairPcts(pair);
-  if (_chtPair === pair && _chtCandles && _livePrice[pair]) {
-    const lp = _livePrice[pair];
-    try {
-      if (_chtPriceLine) { _chtPriceLine.applyOptions({ price:lp }); }
-      else {
-        _chtPriceLine = _chtCandles.createPriceLine({
-          price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
-          lineStyle:LightweightCharts.LineStyle.Dashed,
-          axisLabelVisible:true, title:''
-        });
-      }
-    } catch(e) {}
-  }
-};
+// ── Live price line update via WS (no-op stub kept for future use) ────────────
+function chtUpdateLivePriceLine(pair, price) {
+  if (_chtPair !== pair || !_chtCandles) return;
+  try {
+    if (_chtPriceLine) _chtPriceLine.applyOptions({ price });
+  } catch(e) {}
+}
 
 // ── Long-press on pair blocks ─────────────────────────────────────────────────
 function chtAttachLongPress() {
