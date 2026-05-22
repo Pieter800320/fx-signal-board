@@ -221,6 +221,34 @@
     "pair": "GBPJPY",
     "price": 214.41718671306856,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430625412,
+    "pair": "GBPJPY",
+    "price": 214.81695394385295,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430640018,
+    "pair": "GBPJPY",
+    "price": 211.2484319541834,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430653453,
+    "pair": "GBPJPY",
+    "price": 215.61414981002966,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430848176,
+    "pair": "GBPJPY",
+    "price": 215.03155102881558,
+    "direction": "above",
     "active": true
   }
 ]
