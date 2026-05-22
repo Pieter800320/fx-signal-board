@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T20:39:30.312592+00:00",
+  "updated": "2026-05-22T21:01:56.292630+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -526,13 +526,72 @@
     "stable": true
   },
   "news": {
-    "themes": "Iran nuclear deal progress reduces Middle East geopolitical premium; energy shock threatens European growth and inflation; risk-on sentiment supports EM currencies.",
-    "event": "No major scheduled events; market focus remains on Iran negotiations and Fed policy signals through economic data surprises.",
-    "updated": "2026-05-22T19:18:49.294550+00:00"
+    "themes": "Iran nuclear deal hopes easing geopolitical risk premium, supporting risk appetite and commodity currencies while pressuring safe havens.",
+    "event": "No high-impact events scheduled; focus remains on Iran negotiations outcome and Fed policy signals.",
+    "updated": "2026-05-22T21:01:56.292630+00:00"
   },
   "analysis": {
     "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
     "updated": "2026-05-22T16:46:16.827921+00:00"
   },
-  "last_alert": "2026-05-21T18:07:23.092589+00:00"
+  "last_alert": "2026-05-21T18:07:23.092589+00:00",
+  "macro_assets": {
+    "vix": {
+      "value": 16.7,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7473.47,
+      "delta_pct": 0.4,
+      "direction": "flat",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4506.5,
+      "delta_pct": -0.7,
+      "direction": "down",
+      "label": "Gold"
+    },
+    "copper": {
+      "value": 6.378,
+      "delta_pct": 1.9,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.558,
+      "delta_bp": -2.8,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "wti": {
+      "value": 96.72,
+      "delta_pct": 0.4,
+      "direction": "flat",
+      "label": "WTI Oil"
+    }
+  },
+  "ranked": {
+    "text": "USDCAD LONG: Gold weakness and risk-off regime confirm the technical USD bid, but easing Iran geopolitical risk contradicts safe-haven flows and could limit upside if risk appetite re-accelerates.\n\nEURUSD SHORT: Gold falling and USD strength align with the short case, but the Risk-On medium macro backdrop and potential Fed policy dovishness could weaken the dollar's momentum before the next guidance signal.\n\nNZDUSD SHORT: Gold weakness supports USD strength against the commodity-sensitive kiwi, but Iran deal optimism driving risk appetite directly opposes the short thesis and threatens NZD support if sentiment shifts further.\n\nBiggest risk: Iran nuclear negotiations outcome could rapidly swing geopolitical risk premium and reverse all three pairs if talks succeed and risk-on accelerates beyond current medium intensity.",
+    "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 7.95
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 7.35
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.38
+      }
+    ],
+    "updated": "2026-05-22T21:01:56.292630+00:00"
+  }
 }
