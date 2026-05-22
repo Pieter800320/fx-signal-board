@@ -78,7 +78,7 @@ def fetch_all_macro() -> dict:
 
 
 # ── W1 BACKDROP ───────────────────────────────────────────────────────────────
-def compute_w1_regime(macro: dict) -> dict:
+def compute_w1_regime(macro: dict, prev_w1: dict | None = None) -> dict:
     """
     W1 regime from weekly % changes.
     Matches Forex1212 compute_w1_regime() thresholds.
@@ -109,7 +109,8 @@ def compute_w1_regime(macro: dict) -> dict:
     score("us10y",  0.5,  -0.5, invert=True)    # Yield > +0.5% = risk-on
 
     if not scores:
-        return {"regime": "Mixed", "confidence": "Low", "score": 5.0, "signals": 0, "total": 0}
+        return {"regime": "Mixed", "confidence": "Low", "score": 5.0,
+                "signals": 0, "total": 0, "stable": False}
 
     net = sum(scores)
     n   = len(scores)
@@ -121,9 +122,10 @@ def compute_w1_regime(macro: dict) -> dict:
     else:          regime, confidence = "Mixed",     "Low"
 
     score_val = round(5.0 + net / n * 5.0, 1)
+    stable    = (prev_w1 or {}).get("regime") == regime
     return {"regime": regime, "confidence": confidence,
             "score": max(0.0, min(10.0, score_val)),
-            "signals": net, "total": n}
+            "signals": net, "total": n, "stable": stable}
 
 
 # ── SESSION DETECTION ─────────────────────────────────────────────────────────
@@ -139,7 +141,7 @@ def current_session(now: datetime) -> str:
 
 
 # ── MACRO MOMENTUM (daily, institutional thresholds) ──────────────────────────
-def compute_macro(macro: dict) -> dict:
+def compute_macro(macro: dict, prev_mac: dict | None = None) -> dict:
     """
     D1 cross-asset momentum with institutional magnitude thresholds.
     Below threshold = abstain (not counted), not neutral.
@@ -203,8 +205,10 @@ def compute_macro(macro: dict) -> dict:
     confidence = "High"   if abs_net >= 3 else \
                  "Medium" if abs_net == 2 else \
                  "Low"    if abs_net == 1 else "Neutral"
+    stable     = (prev_mac or {}).get("label") == label
 
-    return {"label": label, "signals": net, "total": total, "confidence": confidence}
+    return {"label": label, "signals": net, "total": total,
+            "confidence": confidence, "stable": stable}
 
 
 # ── RSS HEADLINES ─────────────────────────────────────────────────────────────
@@ -432,12 +436,14 @@ def main():
     macro = fetch_all_macro()
 
     print("\n[2/4] W1 backdrop + macro momentum…")
-    w1      = compute_w1_regime(macro)
-    mac     = compute_macro(macro)
+    prev_w1 = signals.get("regime_w1")
+    prev_mac = signals.get("macro")
+    w1      = compute_w1_regime(macro, prev_w1)
+    mac     = compute_macro(macro, prev_mac)
     session = current_session(now)
     print(f"  Session: {session}")
-    print(f"  W1:    {w1['regime']} {w1['confidence']} ({w1['signals']:+d}/{w1['total']})")
-    print(f"  Macro: {mac['label']} {mac['confidence']} ({mac['signals']:+d}/{mac['total']})")
+    print(f"  W1:    {w1['regime']} {w1['confidence']} ({'Stable' if w1['stable'] else 'Shifting'})")
+    print(f"  Macro: {mac['label']} {mac['confidence']} ({'Stable' if mac['stable'] else 'Shifting'})")
 
     print("\n[3/4] Headlines + calendar…")
     headlines = fetch_headlines()
