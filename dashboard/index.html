@@ -1099,6 +1099,17 @@ function _computeSubOffset(macdData, ohlcv) {
   return idx >= 0 ? idx : 0;
 }
 
+// ── Weekend filter — strip Saturday + Sunday-before-21:00 UTC candles ─────────
+function _filterWeekendCandles(bars) {
+  return bars.filter(b => {
+    const d = new Date(b.time * 1000);
+    const day = d.getUTCDay();           // 0=Sun, 6=Sat
+    if (day === 6) return false;         // whole Saturday gone
+    if (day === 0 && d.getUTCHours() < 21) return false;  // Sun before 21:00 UTC
+    return true;
+  });
+}
+
 // ── Spike filter — clamp wicks that exceed 3% of open (bad tick protection) ──
 function _filterChartSpikes(bars, pct = 0.03) {
   return bars.map(b => {
@@ -1115,6 +1126,7 @@ function _chtRender(pair, tf, ohlcv) {
   _chtDestroyCharts();
   if (!ohlcv.length) return;
   ohlcv = _filterChartSpikes(ohlcv);
+  ohlcv = _filterWeekendCandles(ohlcv);
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
