@@ -307,23 +307,31 @@ def main():
     # ── Level alerts + EMA touch alerts ───────────────────────────────────────
     print("\n[Alerts] Checking level alerts + EMA touches…")
 
-    # Build per-pair current price (H1 last close) and H4 EMA values
+    # Build per-pair H4 last bar (high/low/close) and H4 EMA values
     _pair_prices = {}
     _pair_emas   = {}
     for pair in PAIRS:
-        key = pair.replace("/", "")
-        sc  = pair_scores.get(key, {})
-        h1r = (sc.get("h1") or {}).get("raw") or {}
-        h4r = (sc.get("h4") or {}).get("raw") or {}
-        if h1r.get("close"):
-            _pair_prices[key] = h1r["close"]
+        key  = pair.replace("/", "")
+        sc   = pair_scores.get(key, {})
+        h4r  = (sc.get("h4") or {}).get("raw") or {}
+        h4df = ohlcv.get(key, {}).get("h4")
+
+        # Use H4 last bar high/low/close for wick-accurate EMA touch detection
+        if h4df is not None and len(h4df) >= 1:
+            _pair_prices[key] = {
+                "high":  float(h4df["high"].iloc[-1]),
+                "low":   float(h4df["low"].iloc[-1]),
+                "close": float(h4df["close"].iloc[-1]),
+            }
+
         if h4r.get("ema200"):
             _pair_emas[key] = {
                 "ema200": h4r["ema200"],
                 "ema50":  h4r.get("ema50"),
             }
 
-    check_levels(_pair_prices, send_telegram)
+    _pair_closes = {k: v["close"] for k, v in _pair_prices.items()}
+    check_levels(_pair_closes, send_telegram)
     check_ema_touches(_pair_prices, _pair_emas, send_telegram)
 
     # ── Telegram on H4 regime transition ─────────────────────────────────────
