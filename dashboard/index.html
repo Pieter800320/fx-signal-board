@@ -1153,21 +1153,20 @@ function _chtRender(pair, tf, ohlcv) {
     } catch(e) {}
   });
 
-  // Live price line — dim grey
+  // Live price line — dim grey, solid
   const lp = _livePrice[pair];
   if (lp) {
     try {
       _chtPriceLine = candles.createPriceLine({
-        price:lp, color:'rgba(139,148,158,0.5)', lineWidth:1,
-        lineStyle:LightweightCharts.LineStyle.Dashed,
+        price:lp, color:'rgba(205,217,229,0.6)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Solid,
         axisLabelVisible:true, title:''
       });
     } catch(e) {}
   }
 
   // ── MACD pane ────────────────────────────────────────────────────────────────
-  const macdData   = chtMACD(ohlcv);
-  const _subOffset = macdData.length ? _computeSubOffset(macdData[0].time, ohlcv) : 0;
+  const macdData = chtMACD(ohlcv);
 
   if (ind.macd && macdData.length) {
     const macdChart = LightweightCharts.createChart(macdEl, {
@@ -1191,21 +1190,19 @@ function _chtRender(pair, tf, ohlcv) {
     }).observe(macdEl);
   }
 
-  // ── Time-scale sync (price → MACD) with offset ────────────────────────────────
+  // ── Time-scale sync: price → MACD via matching timestamps (no offset needed) ──
   let _syncRaf = null;
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     // Jump button: show when scrolled back more than 5 bars from the right edge
     const jb = document.getElementById('cht-jump-btn');
-    if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? '' : 'none';
+    if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? 'block' : 'none';
 
-    if (!range || !_chtMacdInst) return;
+    if (!_chtMacdInst) return;
     if (_syncRaf) cancelAnimationFrame(_syncRaf);
     _syncRaf = requestAnimationFrame(() => {
       try {
-        _chtMacdInst.timeScale().setVisibleLogicalRange({
-          from: range.from - _subOffset,
-          to:   range.to   - _subOffset
-        });
+        const tr = chart.timeScale().getVisibleRange();
+        if (tr) _chtMacdInst.timeScale().setVisibleRange(tr);
       } catch(e) {}
     });
   });
@@ -1222,8 +1219,8 @@ function _chtRender(pair, tf, ohlcv) {
   setTimeout(() => {
     if (_chtMacdInst) {
       try {
-        const r = chart.timeScale().getVisibleLogicalRange();
-        if (r) _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset, to:r.to - _subOffset });
+        const tr = chart.timeScale().getVisibleRange();
+        if (tr) _chtMacdInst.timeScale().setVisibleRange(tr);
       } catch(e) {}
     }
   }, 120);
@@ -1252,9 +1249,8 @@ function chtToggleDrawMode() {
 function _chtSetStaging(price) {
   if (!_chtCandles || price == null) return;
   _chtStagingPrice = price;
-  const title = price.toFixed(_chtPair?.includes('JPY') ? 3 : 5);
   if (_chtStagingLine) {
-    try { _chtStagingLine.applyOptions({ price, title }); }
+    try { _chtStagingLine.applyOptions({ price, title:'' }); }
     catch(e) { _chtStagingLine = null; }
   }
   if (!_chtStagingLine) {
@@ -1262,11 +1258,11 @@ function _chtSetStaging(price) {
       _chtStagingLine = _chtCandles.createPriceLine({
         price, color:'rgba(227,179,65,0.85)', lineWidth:1,
         lineStyle:LightweightCharts.LineStyle.Dotted,
-        axisLabelVisible:true, title
+        axisLabelVisible:true, title:''
       });
     } catch(e) {}
   }
-  document.getElementById('cht-set-btn').style.display = '';
+  document.getElementById('cht-set-btn').style.display = 'inline-block';
 }
 
 function _chtRemoveStaging() {
@@ -1477,8 +1473,8 @@ updatePairPcts = function(pair) {
       if (_chtPriceLine) { _chtPriceLine.applyOptions({ price:lp }); }
       else {
         _chtPriceLine = _chtCandles.createPriceLine({
-          price:lp, color:'rgba(139,148,158,0.5)', lineWidth:1,
-          lineStyle:LightweightCharts.LineStyle.Dashed,
+          price:lp, color:'rgba(205,217,229,0.6)', lineWidth:1,
+          lineStyle:LightweightCharts.LineStyle.Solid,
           axisLabelVisible:true, title:''
         });
       }
