@@ -1,58 +1,16 @@
 [
   {
-    "id": 1779388766578,
+    "id": 1779395700069,
+    "pair": "CADJPY",
+    "price": 115.884,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779428099587,
     "pair": "USDCAD",
-    "price": 1.36872,
+    "price": 1.3734965424929875,
     "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779389030524,
-    "pair": "GBPJPY",
-    "price": 211.984,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779390717647,
-    "pair": "AUDUSD",
-    "price": 0.7211,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779393520446,
-    "pair": "USDCAD",
-    "price": 1.37333,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779393522427,
-    "pair": "USDCAD",
-    "price": 1.37434,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779395388007,
-    "pair": "USDCAD",
-    "price": 1.36649,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779395405196,
-    "pair": "USDCAD",
-    "price": 1.37272,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779424005169,
-    "pair": "USDCAD",
-    "price": 1.36631,
-    "direction": "above",
-    "active": false
+    "active": true
   }
 ]
