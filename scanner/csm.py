@@ -134,13 +134,44 @@ def _normalise(raw: dict) -> dict:
     return {c: round((avg[c] - min_v) / spread * 100, 1) for c in CURRENCIES}
 
 
+H1_ONLY_LOOKBACK = 6   # H1 CSM: 6 H1 bars ≈ 6 hours
+H1_ONLY_W        = 1.0 # pure H1, no blend
+
+
+# ── H1 CSM ────────────────────────────────────────────────────────────────────
+def compute_csm_h1(ohlcv: dict) -> dict:
+    """
+    H1 currency strength (0–100, 100=strongest).
+    Uses H1 6-bar ATR-normalised returns across 16 pairs — pure H1, no blend.
+    """
+    raw = {c: [] for c in CURRENCIES}
+
+    for pair in STRENGTH_PAIRS:
+        key   = pair.replace("/", "")
+        base  = pair.split("/")[0]
+        quote = pair.split("/")[1]
+
+        h1_ret = _adj_return(ohlcv.get(key, {}).get("h1"), lookback=H1_ONLY_LOOKBACK)
+
+        if h1_ret is None:
+            continue
+
+        if base in raw:
+            raw[base].append(h1_ret)
+        if quote in raw:
+            raw[quote].append(-h1_ret)
+
+    return _normalise(raw)
+
+
 # ── Public entry point ────────────────────────────────────────────────────────
 def compute_csm(ohlcv: dict) -> dict:
     """
-    Compute both D1 and H4 CSM.
-    Returns {"d1": {cur: 0-100}, "h4": {cur: 0-100}}
+    Compute D1, H4 and H1 CSM.
+    Returns {"d1": {cur: 0-100}, "h4": {cur: 0-100}, "h1": {cur: 0-100}}
     """
     return {
         "d1": compute_csm_d1(ohlcv),
         "h4": compute_csm_h4(ohlcv),
+        "h1": compute_csm_h1(ohlcv),
     }
