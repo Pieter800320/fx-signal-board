@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T08:07:33.188001+00:00",
+  "updated": "2026-05-22T09:21:06.716776+00:00",
   "regime_h4": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -493,11 +493,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1
   },
   "macro": {
     "label": "Risk-On",
@@ -505,13 +505,13 @@
     "total": 6
   },
   "news": {
-    "themes": "Iran nuclear deal progress reducing geopolitical risk premium; energy shock concerns weighing on EUR outlook.",
-    "event": "No high-impact events scheduled; market focus remains on Iran negotiations and US-Iran Strait of Hormuz resolution.",
-    "updated": "2026-05-21T22:18:32.251547+00:00"
+    "themes": "European growth concerns from energy shocks and weak sentiment; USD strength from hawkish Fed tightening.",
+    "event": "No high-impact events scheduled today; market focus shifts to weekly economic data and geopolitical developments.",
+    "updated": "2026-05-22T09:21:06.716776+00:00"
   },
   "analysis": {
-    "text": "EURUSD and GBPUSD show D1 bear signals conflicting with risk-on macro environment and W1 risk-on bias.",
-    "updated": "2026-05-21T22:18:32.251547+00:00"
+    "text": "EURUSD and GBPUSD show bearish D1 trends conflicting with risk-on macro environment, creating potential reversal tension.",
+    "updated": "2026-05-22T09:21:06.716776+00:00"
   },
   "last_alert": "2026-05-21T18:07:23.092589+00:00"
 }
