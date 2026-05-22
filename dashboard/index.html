@@ -1122,11 +1122,19 @@ function _chtRender(pair, tf, ohlcv) {
     autoscaleInfoProvider: (original) => {
       const res = original();
       if (!res || !res.priceRange) return res;
-      // Collect all visible bar prices, sort, clip top/bottom 1.5% to ignore outlier wicks
-      const { minValue, maxValue } = res.priceRange;
-      const range = maxValue - minValue;
-      const clip  = range * 0.015;
-      return { priceRange: { minValue: minValue + clip, maxValue: maxValue - clip }, margins: res.margins };
+      // Scale from candle bodies (open/close) only — wicks cannot distort the Y-axis
+      const visible = _chtCandles ? _chtCandles.dataByIndex(0, -1) : null;
+      if (!visible || !visible.length) return res;
+      let lo = Infinity, hi = -Infinity;
+      for (const bar of visible) {
+        const bLo = Math.min(bar.open, bar.close);
+        const bHi = Math.max(bar.open, bar.close);
+        if (bLo < lo) lo = bLo;
+        if (bHi > hi) hi = bHi;
+      }
+      if (!isFinite(lo) || !isFinite(hi)) return res;
+      const buf = (hi - lo) * 0.08;
+      return { priceRange: { minValue: lo - buf, maxValue: hi + buf }, margins: res.margins };
     },
   });
   candles.setData(ohlcv);
