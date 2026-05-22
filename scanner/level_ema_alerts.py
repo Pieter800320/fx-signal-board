@@ -3,8 +3,8 @@ FX Signal Board — level alert + EMA touch alert checker
 Called from scan_h1.py after pair scoring is complete.
 
 Level alerts  : read data/level_alerts.json (written by dashboard via GitHub API)
-EMA alerts    : read data/ema_alerts.json   (enabled pairs/EMAs, written by dashboard)
-EMA state     : read/write data/ema_alert_state.json (price-side tracking, scanner-only)
+EMA alerts    : always-on for all 12 pairs, no config file needed
+EMA state     : read/write data/ema_alert_state.json (touch tracking, scanner-only)
 """
 
 import json
@@ -14,7 +14,6 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).parent.parent
 
 LEVEL_FILE = ROOT / "data" / "level_alerts.json"
-EMA_FILE   = ROOT / "data" / "ema_alerts.json"
 EMA_STATE  = ROOT / "data" / "ema_alert_state.json"
 
 
@@ -92,57 +91,70 @@ def check_levels(pair_prices: dict, send_telegram) -> None:
 
 def check_ema_touches(pair_prices: dict, pair_emas: dict, send_telegram) -> None:
     """
-    Detect price crosses of EMA200/50 (H4) for pairs where alerts are enabled.
-    Fires Telegram once per cross; re-arms on the next cross in the opposite direction.
+    Detect price touches of H4 EMA200/EMA50 for all 12 pairs.
+    Touch = price high/low crosses the EMA (wick or body).
+    Fires Telegram once per cross; re-arms on next cross in opposite direction.
 
-    pair_prices : { "EURUSD": float }         — current H1 close per pair
-    pair_emas   : { "EURUSD": {"ema200": float, "ema50": float} }  — H4 EMA values
+    pair_prices : { "EURUSD": {"close": float, "high": float, "low": float} }
+    pair_emas   : { "EURUSD": {"ema200": float, "ema50": float} }
     """
-    settings = _load(EMA_FILE, {})
-    if not settings:
-        return
-
     state   = _load(EMA_STATE, {})
     changed = False
 
-    for pair, cfg in settings.items():
-        ema200_on = cfg.get("ema200", False)
-        ema50_on  = cfg.get("ema50",  False)
-        if not ema200_on and not ema50_on:
+    for pair, emas in pair_emas.items():
+        bar    = pair_prices.get(pair)
+        if not bar or not isinstance(bar, dict):
             continue
 
-        current = pair_prices.get(pair)
-        emas    = pair_emas.get(pair, {})
-        if current is None:
+        high    = bar.get("high")
+        low     = bar.get("low")
+        close   = bar.get("close")
+        if high is None or low is None:
             continue
 
         pair_state = state.setdefault(pair, {})
         d = _dec(pair)
 
-        for which, enabled, ema_val in [
-            ("ema200", ema200_on, emas.get("ema200")),
-            ("ema50",  ema50_on,  emas.get("ema50")),
-        ]:
-            if not enabled or ema_val is None:
+        for which, ema_val in [("ema200", emas.get("ema200")), ("ema50", emas.get("ema50"))]:
+            if ema_val is None:
                 continue
 
-            new_side  = "above" if current > ema_val else "below"
+            # Touch: candle range (high/low) overlaps the EMA
+            touched   = low <= ema_val <= high
+            new_side  = "above" if close > ema_val else "below"
             last_side = pair_state.get(f"{which}_side")
             state_key = f"{which}_side"
 
-            if last_side is not None and last_side != new_side:
-                label = "EMA 200" if which == "ema200" else "EMA 50"
-                arrow = "↑" if new_side == "above" else "↓"
-                emoji = "🟢" if new_side == "above" else "🔴"
-                msg = (
-                    f"{emoji} <b>{label} Touch — {pair}</b>\n"
-                    f"\n"
-                    f"Price crossed {label} {arrow}\n"
-                    f"{label}: <b>{ema_val:.{d}f}</b>  |  "
-                    f"Price: <b>{current:.{d}f}</b>"
-                )
-                print(f"  [EMA] {pair}: crossed {label} {arrow} → Telegram")
-                send_telegram(msg)
+            # Fire on first touch after being on one side, or on a cross
+            if touched and last_side is not None and last_side == new_side:
+                # Touched but didn't cross — check if we already fired this touch
+                if pair_state.get(f"{which}_touched"):
+                    if pair_state.get(f"{which}_side_post") == new_side:
+                        continue  # already fired this touch sequence
+            
+            crossed = last_side is not None and last_side != new_side
+            if (touched or crossed) and last_side is not None:
+                if not pair_state.get(f"{which}_fired"):
+                    label = "EMA 200" if which == "ema200" else "EMA 50"
+                    arrow = "↑" if new_side == "above" else "↓"
+                    emoji = "🟢" if new_side == "above" else "🔴"
+                    msg = (
+                        f"{emoji} <b>{label} Touch — {pair}</b>\n"
+                        f"\n"
+                        f"Price {'crossed' if crossed else 'touched'} {label} {arrow}\n"
+                        f"{label}: <b>{ema_val:.{d}f}</b>  |  "
+                        f"Close: <b>{close:.{d}f}</b>"
+                    )
+                    print(f"  [EMA] {pair}: {'crossed' if crossed else 'touched'} {label} {arrow} → Telegram")
+                    send_telegram(msg)
+                    pair_state[f"{which}_fired"] = True
+                    changed = True
+
+            # Reset fired flag when price moves clearly away (no longer touching)
+            if not touched and not crossed:
+                if pair_state.get(f"{which}_fired"):
+                    pair_state[f"{which}_fired"] = False
+                    changed = True
 
             if pair_state.get(state_key) != new_side:
                 pair_state[state_key] = new_side
