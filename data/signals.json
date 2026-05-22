@@ -1,10 +1,10 @@
 {
-  "updated": "2026-05-22T21:02:57.017948+00:00",
+  "updated": "2026-05-22T21:59:15.653579+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
     "score": 5.0,
-    "stable": false
+    "stable": true
   },
   "regime_h4": {
     "regime": "Ranging",
@@ -16,37 +16,37 @@
     "regime": "Ranging",
     "confidence": "Low",
     "score": 5.0,
-    "stable": false
+    "stable": true
   },
   "csm": {
     "d1": {
-      "GBP": 31.6,
-      "EUR": 5.2,
-      "AUD": 2.4,
-      "NZD": 60.8,
+      "GBP": 0.0,
+      "EUR": 0.0,
+      "AUD": 0.0,
+      "NZD": 0.0,
       "CAD": 0.0,
-      "JPY": 60.3,
-      "CHF": 30.3,
-      "USD": 100.0
+      "JPY": 0.0,
+      "CHF": 0.0,
+      "USD": 0.0
     },
     "h4": {
-      "GBP": 53.3,
-      "EUR": 42.2,
-      "AUD": 36.9,
-      "NZD": 48.5,
+      "GBP": 0.0,
+      "EUR": 0.0,
+      "AUD": 0.0,
+      "NZD": 0.0,
       "CAD": 0.0,
-      "JPY": 48.4,
-      "CHF": 100.0,
-      "USD": 50.1
+      "JPY": 0.0,
+      "CHF": 0.0,
+      "USD": 0.0
     },
     "h1": {
       "GBP": 0.0,
-      "EUR": 27.2,
-      "AUD": 8.4,
-      "NZD": 14.7,
-      "CAD": 26.0,
-      "JPY": 15.1,
-      "CHF": 100.0,
+      "EUR": 0.0,
+      "AUD": 0.0,
+      "NZD": 0.0,
+      "CAD": 0.0,
+      "JPY": 0.0,
+      "CHF": 0.0,
       "USD": 0.0
     }
   },
@@ -68,11 +68,11 @@
     "matrix": [
       [
         1.0,
-        0.75,
-        -0.7,
-        -0.92,
-        0.74,
-        -0.63,
+        null,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -81,12 +81,12 @@
         null
       ],
       [
-        0.75,
+        null,
         1.0,
-        -0.66,
-        -0.72,
-        0.54,
-        -0.42,
+        null,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -95,12 +95,12 @@
         null
       ],
       [
-        -0.7,
-        -0.66,
+        null,
+        null,
         1.0,
-        0.64,
-        -0.55,
-        0.36,
+        null,
+        null,
+        null,
         null,
         null,
         null,
@@ -109,12 +109,12 @@
         null
       ],
       [
-        -0.92,
-        -0.72,
-        0.64,
+        null,
+        null,
+        null,
         1.0,
-        -0.66,
-        0.57,
+        null,
+        null,
         null,
         null,
         null,
@@ -123,12 +123,12 @@
         null
       ],
       [
-        0.74,
-        0.54,
-        -0.55,
-        -0.66,
+        null,
+        null,
+        null,
+        null,
         1.0,
-        -0.54,
+        null,
         null,
         null,
         null,
@@ -137,11 +137,11 @@
         null
       ],
       [
-        -0.63,
-        -0.42,
-        0.36,
-        0.57,
-        -0.54,
+        null,
+        null,
+        null,
+        null,
+        null,
         1.0,
         null,
         null,
@@ -238,141 +238,117 @@
   },
   "pairs": {
     "EURUSD": {
-      "pills": {
-        "d1": "bear",
-        "h4": "neutral",
-        "h1": "bear"
-      },
+      "pills": {},
       "mom": {
-        "d1": 25,
-        "dd1": -24,
-        "h4": 50,
-        "dh4": 45,
-        "h1": 42,
-        "dh1": -10,
-        "cmp": 35
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 21.7,
-      "d1_pct": 0.0,
-      "d5_pct": -0.41,
-      "prev_close": 1.16042,
-      "prev5_close": 1.16528,
-      "cont": 47,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
+      "cont": 0,
       "regime_cls": ""
     },
     "GBPUSD": {
-      "pills": {
-        "d1": "bear",
-        "h4": "neutral",
-        "h1": "bull"
-      },
+      "pills": {},
       "mom": {
-        "d1": 23,
-        "dd1": -19,
-        "h4": 59,
-        "dh4": 58,
-        "h1": 59,
-        "dh1": 9,
-        "cmp": 39
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 21.1,
-      "d1_pct": -0.02,
-      "d5_pct": 0.3,
-      "prev_close": 1.34376,
-      "prev5_close": 1.33941,
-      "cont": 32,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
+      "cont": 0,
       "regime_cls": ""
     },
     "USDJPY": {
-      "pills": {
-        "d1": "bull",
-        "h4": "neutral",
-        "h1": "neutral"
-      },
+      "pills": {},
       "mom": {
-        "d1": 85,
-        "dd1": 41,
-        "h4": 53,
-        "dh4": -28,
-        "h1": 60,
-        "dh1": 15,
-        "cmp": 73
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 15.3,
-      "d1_pct": 0.02,
-      "d5_pct": 0.27,
-      "prev_close": 159.12879,
-      "prev5_close": 158.7323,
-      "cont": 42,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
+      "cont": 0,
       "regime_cls": ""
     },
     "USDCHF": {
-      "pills": {
-        "d1": "neutral",
-        "h4": "neutral",
-        "h1": "bear"
-      },
+      "pills": {},
       "mom": {
-        "d1": 70,
-        "dd1": 30,
-        "h4": 40,
-        "dh4": -46,
-        "h1": 34,
-        "dh1": -16,
-        "cmp": 54
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 22.9,
-      "d1_pct": -0.1,
-      "d5_pct": 0.01,
-      "prev_close": 0.7858,
-      "prev5_close": 0.78488,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
       "cont": 0,
       "regime_cls": ""
     },
     "AUDUSD": {
-      "pills": {
-        "d1": "neutral",
-        "h4": "neutral",
-        "h1": "neutral"
-      },
+      "pills": {},
       "mom": {
-        "d1": 36,
-        "dd1": -22,
-        "h4": 56,
-        "dh4": 54,
-        "h1": 40,
-        "dh1": -11,
-        "cmp": 42
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 16.8,
-      "d1_pct": 0.02,
-      "d5_pct": -0.61,
-      "prev_close": 0.71292,
-      "prev5_close": 0.71748,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
       "cont": 0,
       "regime_cls": ""
     },
     "USDCAD": {
-      "pills": {
-        "d1": "bull_strong",
-        "h4": "bull_strong",
-        "h1": "bull"
-      },
+      "pills": {},
       "mom": {
-        "d1": 83,
-        "dd1": 12,
-        "h4": 67,
-        "dh4": -7,
-        "h1": 75,
-        "dh1": 33,
-        "cmp": 77
+        "d1": null,
+        "dd1": null,
+        "h4": null,
+        "dh4": null,
+        "h1": null,
+        "dh1": null,
+        "cmp": null
       },
-      "adx": 38.3,
-      "d1_pct": 0.13,
-      "d5_pct": 0.53,
-      "prev_close": 1.37995,
-      "prev5_close": 1.37447,
-      "cont": 77,
+      "adx": null,
+      "d1_pct": null,
+      "d5_pct": null,
+      "prev_close": null,
+      "prev5_close": null,
+      "cont": 0,
       "regime_cls": ""
     },
     "NZDUSD": {
