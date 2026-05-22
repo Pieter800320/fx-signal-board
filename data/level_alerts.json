@@ -383,5 +383,19 @@
     "price": 0.7839450373718777,
     "direction": "below",
     "active": true
+  },
+  {
+    "id": 1779464771387,
+    "pair": "USDCHF",
+    "price": 0.7905693074798122,
+    "direction": "above",
+    "active": true
+  },
+  {
+    "id": 1779464857023,
+    "pair": "EURUSD",
+    "price": 1.166863970410012,
+    "direction": "above",
+    "active": true
   }
 ]
