@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T09:50:40.194165+00:00",
+  "updated": "2026-05-22T12:17:41.551617+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -517,13 +517,13 @@
     "total": 6
   },
   "news": {
-    "themes": "European growth concerns from energy shocks and weak sentiment; USD strength from hawkish Fed tightening.",
-    "event": "No high-impact events scheduled today; market focus shifts to weekly economic data and geopolitical developments.",
-    "updated": "2026-05-22T09:21:06.716776+00:00"
+    "themes": "Iran geopolitical risk easing, reducing energy shock fears; risk-on sentiment supports dollar weakness and commodity strength.",
+    "event": "No major events scheduled; FX momentum likely driven by existing Iran-Hormuz narrative and USD positioning flows.",
+    "updated": "2026-05-22T12:17:41.551617+00:00"
   },
   "analysis": {
-    "text": "EURUSD and GBPUSD show bearish D1 trends conflicting with risk-on macro environment, creating potential reversal tension.",
-    "updated": "2026-05-22T09:21:06.716776+00:00"
+    "text": "USD strength conflicts with CHF dominance at H4: EURUSD bear but CHF outperforms USD in intraday rankings.",
+    "updated": "2026-05-22T12:17:41.551617+00:00"
   },
   "last_alert": "2026-05-21T18:07:23.092589+00:00"
 }
