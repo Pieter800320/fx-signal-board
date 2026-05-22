@@ -968,8 +968,7 @@ function _chtDestroyCharts() {
   _chtAlertRefs  = [];
   _chtPriceLine  = null;
   _chtCandles    = null;
-  _chtStagingLine = null;
-  _chtStagingPrice = null;
+  _chtStagingLine = null;  // priceLine ref invalidated; _chtStagingPrice kept for TF-switch restore
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
@@ -1077,12 +1076,12 @@ function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
   });
 }
 
-// ── MACD offset helper (Forex1212 approach) ───────────────────────────────────
-function _computeSubOffset(subFirstTs, ohlcv) {
-  if (!ohlcv || ohlcv.length < 2) return 0;
-  const barDur = ohlcv[1].time - ohlcv[0].time;
-  if (!barDur) return 0;
-  return Math.round((subFirstTs - ohlcv[0].time) / barDur);
+// ── MACD offset helper: find bar index of MACD's first timestamp in ohlcv ────
+function _computeSubOffset(macdData, ohlcv) {
+  if (!macdData.length || !ohlcv.length) return 0;
+  const firstTs = macdData[0].time;
+  const idx = ohlcv.findIndex(b => b.time === firstTs);
+  return idx >= 0 ? idx : 0;
 }
 
 // ── Chart render ──────────────────────────────────────────────────────────────
@@ -1202,7 +1201,7 @@ function _chtRender(pair, tf, ohlcv) {
   }
 
   // ── Time-scale sync: price → MACD via logical range offset ──────────────────
-  const _subOffset = macdData.length ? _computeSubOffset(macdData[0].time, ohlcv) : 0;
+  const _subOffset = macdData.length ? _computeSubOffset(macdData, ohlcv) : 0;
   let _syncRaf = null;
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     // Jump button: show when scrolled back more than 5 bars from the right edge
@@ -1238,6 +1237,25 @@ function _chtRender(pair, tf, ohlcv) {
       } catch(e) {}
     }
   }, 120);
+
+  // Restore staging line if one was active before TF switch
+  if (_chtStagingPrice !== null) {
+    _chtSetStaging(_chtStagingPrice);
+  }
+
+  // Price line retry: WS may not have fired yet at render time — try again after 600ms
+  setTimeout(() => {
+    if (_chtPair !== pair || !_chtCandles || _chtPriceLine) return;
+    const lp = _livePrice[pair];
+    if (!lp) return;
+    try {
+      _chtPriceLine = _chtCandles.createPriceLine({
+        price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dashed,
+        axisLabelVisible:true, title:''
+      });
+    } catch(e) {}
+  }, 600);
 
   // Attach drawing listeners (once only per page load)
   _chtInitDrawListeners();
