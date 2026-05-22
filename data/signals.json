@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T18:28:34.488830+00:00",
+  "updated": "2026-05-22T18:35:21.107719+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -520,7 +520,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -530,13 +530,72 @@
     "stable": true
   },
   "news": {
-    "themes": "Iran geopolitical deescalation reducing energy shock risks, weighing on risk sentiment via US consumer weakness, and supporting USD carry.",
-    "event": "No high-impact events scheduled; market focus remains on Iran negotiations and Fed policy divergence with ECB.",
-    "updated": "2026-05-22T16:46:16.827921+00:00"
+    "themes": "Iran nuclear deal optimism reducing geopolitical premium, energy shock pressures Euro growth outlook, Fed hawkish stance supports Dollar strength.",
+    "event": "No high-impact events scheduled; market focus remains on Iran negotiations outcome and energy inflation implications.",
+    "updated": "2026-05-22T18:35:21.107719+00:00"
   },
   "analysis": {
     "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
     "updated": "2026-05-22T16:46:16.827921+00:00"
   },
-  "last_alert": "2026-05-21T18:07:23.092589+00:00"
+  "last_alert": "2026-05-21T18:07:23.092589+00:00",
+  "macro_assets": {
+    "vix": {
+      "value": 16.66,
+      "delta_pct": -0.6,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7488.89,
+      "delta_pct": 0.6,
+      "direction": "up",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4518.3,
+      "delta_pct": -0.5,
+      "direction": "flat",
+      "label": "Gold"
+    },
+    "copper": {
+      "value": 6.3945,
+      "delta_pct": 2.2,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.56,
+      "delta_bp": -2.6,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "wti": {
+      "value": 96.44,
+      "delta_pct": 0.1,
+      "direction": "flat",
+      "label": "WTI Oil"
+    }
+  },
+  "ranked": {
+    "text": "USDCAD LONG: Fed hawkish stance and Dollar strength fundamentals confirm the technical bullish case, reinforcing the risk-off regime tailwind. EURUSD SHORT: Energy inflation pressures on Euro growth and Fed hawkish support confirm the technical bearish setup despite modest momentum divergence. GBPJPY LONG: S&P 500 strength supports GBP bid but energy shock headwinds and risk-off regime create friction with the weak CMP reading, presenting a lower-conviction setup. Largest macro uncertainty is Iran nuclear deal outcome timing, which could rapidly shift geopolitical premium and energy inflation trajectory, potentially unwinding positioning across all three pairs.",
+    "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 7.8
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.65
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 3.98
+      }
+    ],
+    "updated": "2026-05-22T18:35:21.107719+00:00"
+  }
 }
