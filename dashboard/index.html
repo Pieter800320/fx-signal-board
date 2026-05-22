@@ -395,15 +395,15 @@ function renderMarketState(){
   const w1  = D.regime_w1 || {};
   document.getElementById("macro-row").innerHTML =
     `<div class="ms-item">
-       <div class="ms-key">Macro</div>
-       <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
-       <div class="ms-sub">${mac.signals!=null?(mac.signals>0?"+":"")+mac.signals+"/"+mac.total:"—"}</div>
+       <div class="ms-key">W1</div>
+       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
+       <div class="ms-sub">${w1.confidence||"—"} · ${w1.signals!=null?(w1.signals>0?"+":"")+w1.signals+"/"+w1.total:"—"}</div>
      </div>
      <div class="ms-div"></div>
      <div class="ms-item">
-       <div class="ms-key">W1</div>
-       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
-       <div class="ms-sub">${w1.confidence||"—"}</div>
+       <div class="ms-key">D1</div>
+       <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
+       <div class="ms-sub">${mac.confidence||"—"} · ${mac.signals!=null?(mac.signals>0?"+":"")+mac.signals+"/"+mac.total:"—"}</div>
      </div>`;
 }
 
