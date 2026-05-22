@@ -8,26 +8,44 @@ import json
 import pandas as pd
 from scanner.config import PAIRS, TF_INTERVAL, TF_BARS
 
-API_KEY = os.environ.get("TWELVEDATA_KEY", "")
-BASE    = "https://api.twelvedata.com"
-DELAY   = 8  # seconds between calls — free tier: 8 req/min
+API_KEY      = os.environ.get("TWELVEDATA_KEY", "")
+BASE         = "https://api.twelvedata.com"
+_RATE_TARGET = 6          # max calls/min to scanner — leaves 2/min for browser
+_MIN_DELAY   = 60 / _RATE_TARGET   # = 10s minimum spacing
+_last_call_ts: float = 0.0         # module-level timestamp of last API call
 
 
-def _get(endpoint: str, params: dict, retries: int = 2) -> dict:
+def _rate_wait():
+    """Block until at least _MIN_DELAY seconds have passed since the last call."""
+    global _last_call_ts
+    elapsed = time.monotonic() - _last_call_ts
+    wait    = _MIN_DELAY - elapsed
+    if wait > 0:
+        time.sleep(wait)
+    _last_call_ts = time.monotonic()
+
+
+def _get(endpoint: str, params: dict, retries: int = 3) -> dict:
     params["apikey"] = API_KEY
     qs  = "&".join(f"{k}={v}" for k, v in params.items())
     url = f"{BASE}/{endpoint}?{qs}"
     for attempt in range(1, retries + 1):
+        _rate_wait()
         try:
             with urllib.request.urlopen(url, timeout=60) as r:
-                return json.loads(r.read().decode())
+                data = json.loads(r.read().decode())
+            # Twelvedata returns status:"error" + code:429 on rate limit
+            if data.get("code") == 429:
+                wait = 20 * attempt
+                print(f"  ⚠ 429 rate limit — waiting {wait}s (attempt {attempt}/{retries})")
+                time.sleep(wait)
+                continue
+            return data
         except Exception as e:
             print(f"  ⚠ _get attempt {attempt}/{retries} failed: {e}")
             if attempt < retries:
-                time.sleep(10)
+                time.sleep(15)
     raise TimeoutError(f"All {retries} attempts failed for {url[:80]}")
-
-
 def fetch_ohlcv(symbol: str, interval: str, outputsize: int) -> pd.DataFrame | None:
     """Fetch OHLCV bars for a single symbol. Returns DataFrame or None on error."""
     # Twelvedata uses slash for forex pairs, e.g. EUR/USD
@@ -69,7 +87,6 @@ def fetch_all_pairs(timeframes: list[str]) -> dict:
             df = fetch_ohlcv(symbol, TF_INTERVAL[tf], TF_BARS[tf])
             if df is not None:
                 result[key][tf] = df
-            if done < total:
-                time.sleep(DELAY)
+            # No manual sleep needed — _rate_wait() inside _get() handles spacing
 
     return result
