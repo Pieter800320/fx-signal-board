@@ -410,6 +410,13 @@
     "pair": "AUDJPY",
     "price": 114.53349648345653,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779480751920,
+    "pair": "USDCAD",
+    "price": 1.365417549212021,
+    "direction": "below",
     "active": true
   }
 ]
