@@ -338,7 +338,7 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
         f"Cross-asset (daily change):\n{macro_lines}\n\n"
         f"FX headlines:\n{h_block}\n\n"
         f"Upcoming high-impact events:\n{e_block}\n\n"
-        "Output exactly 2 lines — no labels, no markdown:\n"
+        "Output exactly 2 lines — no labels, no markdown, no asterisks, no special characters:\n"
         "Line 1: 1-2 dominant macro themes driving FX. Max 20 words. Be specific.\n"
         "Line 2: Most important upcoming event and expected FX impact. Max 20 words."
     )
@@ -383,7 +383,7 @@ def call_data_analysis(signals: dict, session: str, now: datetime,
         + "\n".join(pills_lines[:10]) + "\n\n"
         "Which 1-2 pairs have the most interesting setup given the news and macro backdrop? "
         "Cross-reference the external narrative with the technical bias. "
-        "2 sentences, plain text, name the pairs explicitly."
+        "2 sentences, plain text only, no markdown, no asterisks, no special characters, name the pairs explicitly."
     )
     return _haiku(prompt, max_tokens=120)
 
