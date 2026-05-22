@@ -334,5 +334,19 @@
     "price": 158.28370850387512,
     "direction": "below",
     "active": true
+  },
+  {
+    "id": 1779442717109,
+    "pair": "USDJPY",
+    "price": 160.47802663009003,
+    "direction": "above",
+    "active": true
+  },
+  {
+    "id": 1779443489813,
+    "pair": "NZDUSD",
+    "price": 0.5889273239852763,
+    "direction": "above",
+    "active": true
   }
 ]
