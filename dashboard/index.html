@@ -63,17 +63,17 @@
     background:var(--surf);border:1px solid var(--bord);
   }
 
-  /* NEWS */
-  .news{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
-        padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
-  .news-line{width:2px;min-width:2px;height:26px;border-radius:2px;
-             background:var(--sell);margin-top:1px;transition:background .4s;}
-  .news-line.ron{background:var(--buy);}
-  .news-line.mix{background:var(--amber);}
-  .news-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
-             letter-spacing:.07em;color:var(--muted);margin-bottom:2px;opacity:.6;}
-  .news-txt{font-size:10px;color:var(--muted);line-height:1.4;}
-  #analysis-txt{font-size:10px;color:var(--muted);line-height:1.55;}
+  /* CATALYST / SETUPS / CALENDAR */
+  .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+             padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
+  .info-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;transition:background .4s;}
+  .info-line.catalyst{background:var(--sell);}
+  .info-line.catalyst.ok{background:var(--muted);}
+  .info-line.setups{background:var(--amber);}
+  .info-line.calendar{background:rgba(100,160,255,.7);}
+  .info-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .info-txt{font-size:10px;color:var(--muted);line-height:1.4;}
 
   /* Ranked setup pills */
   .ranked-pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;}
@@ -83,6 +83,13 @@
                     border:1px solid rgba(0,220,55,.3);}
   .ranked-pill.bear{background:rgba(248,81,73,.13);color:var(--sell);
                     border:1px solid rgba(248,81,73,.3);}
+
+  /* Calendar rows */
+  .cal-row{display:flex;align-items:baseline;gap:6px;padding:1px 0;}
+  .cal-time{font-size:9px;font-weight:700;color:var(--muted);white-space:nowrap;min-width:62px;}
+  .cal-curr{font-size:8px;font-weight:800;letter-spacing:.05em;
+            color:rgba(100,160,255,.85);min-width:26px;}
+  .cal-name{font-size:9px;color:var(--muted);opacity:.8;}
 
   /* CSM */
   .csm-wrap{
@@ -216,20 +223,27 @@
   </div>
 </div>
 
-<div class="news" id="news-wrap">
-  <div class="news-line" id="news-line"></div>
-  <div>
-    <div class="news-lbl" id="news-lbl">NEWS · —</div>
-    <div class="news-txt" id="news-themes">Loading…</div>
-    <div class="news-txt" id="news-event" style="margin-top:3px;opacity:.75;"></div>
+<div class="info-card" id="catalyst-wrap">
+  <div class="info-line catalyst" id="catalyst-line"></div>
+  <div style="flex:1;min-width:0;">
+    <div class="info-lbl" id="catalyst-lbl">CATALYST · —</div>
+    <div class="info-txt" id="catalyst-txt">Loading…</div>
   </div>
 </div>
 
-<div class="news" id="analysis-wrap" style="margin-top:-3px;">
-  <div class="news-line" style="background:var(--amber);"></div>
-  <div>
-    <div class="news-lbl" id="analysis-lbl">AI ANALYSIS · —</div>
-    <div class="news-txt" id="analysis-txt">Loading…</div>
+<div class="info-card" id="setups-wrap">
+  <div class="info-line setups"></div>
+  <div style="flex:1;min-width:0;">
+    <div class="info-lbl" id="setups-lbl">SETUPS · —</div>
+    <div class="info-txt" id="setups-txt">Loading…</div>
+  </div>
+</div>
+
+<div class="info-card" id="calendar-wrap">
+  <div class="info-line calendar"></div>
+  <div style="flex:1;min-width:0;">
+    <div class="info-lbl" id="calendar-lbl">CALENDAR · —</div>
+    <div class="info-txt" id="calendar-txt">Loading…</div>
   </div>
 </div>
 
@@ -418,32 +432,45 @@ function renderMarketState(){
 }
 
 function renderNews(){
-  const news     = D.news     || {};
-  const ranked   = D.ranked   || {};
-  const mac      = D.macro    || {};
-  const line     = document.getElementById("news-line");
-  const r        = mac.label  || "";
-  line.className = "news-line" + (r==="Risk-On"?" ron":r==="Mixed"?" mix":"");
+  const catalyst = D.catalyst  || {};
+  const ranked   = D.ranked    || {};
+  const calendar = D.calendar  || {};
 
-  document.getElementById("news-lbl").textContent =
-    "NEWS · " + fmtTime(news.updated);
-  document.getElementById("news-themes").textContent =
-    news.themes || "Awaiting scan…";
-  document.getElementById("news-event").textContent =
-    news.event  || "";
+  // ── CATALYST ──────────────────────────────────────────────────────────────
+  const catText = catalyst.text || "Awaiting scan…";
+  const isClean = catText.toLowerCase().includes("no breaking");
+  document.getElementById("catalyst-lbl").textContent =
+    "CATALYST · " + fmtTime(catalyst.updated);
+  document.getElementById("catalyst-txt").textContent = catText;
+  const catLine = document.getElementById("catalyst-line");
+  catLine.className = "info-line catalyst" + (isClean ? " ok" : "");
 
-  // Ranked setups — pills + Haiku narrative
+  // ── SETUPS ────────────────────────────────────────────────────────────────
   const top = ranked.top || [];
   const pillsHtml = top.map(p => {
     const cls   = p.direction === "bull" ? "bull" : "bear";
     const arrow = p.direction === "bull" ? "▲" : "▼";
     return `<span class="ranked-pill ${cls}">${p.pair} ${arrow} ${p.score.toFixed(1)}</span>`;
   }).join("");
-  document.getElementById("analysis-lbl").textContent =
-    "TOP SETUPS · " + fmtTime(ranked.updated);
-  document.getElementById("analysis-txt").innerHTML =
+  document.getElementById("setups-lbl").textContent =
+    "SETUPS · " + fmtTime(ranked.updated);
+  document.getElementById("setups-txt").innerHTML =
     (pillsHtml ? `<div class="ranked-pills">${pillsHtml}</div>` : "") +
     `<span>${ranked.text || "Awaiting scan\u2026"}</span>`;
+
+  // ── CALENDAR ──────────────────────────────────────────────────────────────
+  const events = calendar.events || [];
+  document.getElementById("calendar-lbl").textContent =
+    "CALENDAR · " + fmtTime(calendar.updated);
+  document.getElementById("calendar-txt").innerHTML = events.length
+    ? events.map(e =>
+        `<div class="cal-row">` +
+        `<span class="cal-time">${e.day} ${e.time} UTC</span>` +
+        `<span class="cal-curr">${e.currency}</span>` +
+        `<span class="cal-name">${e.name}</span>` +
+        `</div>`
+      ).join("")
+    : `<span style="opacity:.5;">No high-impact events found.</span>`;
 }
 
 function renderCSM(){
