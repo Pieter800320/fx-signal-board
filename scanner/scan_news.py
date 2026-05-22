@@ -1,5 +1,5 @@
 """
-FX Signal Board — news scanner (runs 4x daily: 06/10/14/21 UTC)
+FX Signal Board — news scanner (runs every 2 hours via GitHub Actions)
 
 1. Fetch cross-asset data via Yahoo Finance v8 API (VIX, SPX, Gold, DXY, Copper, US10Y)
    — free, no API key, works from GitHub Actions
