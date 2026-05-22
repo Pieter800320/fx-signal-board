@@ -361,6 +361,6 @@
     "pair": "USDCAD",
     "price": 1.3771930184308956,
     "direction": "above",
-    "active": true
+    "active": false
   }
 ]
