@@ -351,74 +351,41 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
 def call_data_analysis(signals: dict, session: str, now: datetime,
                        news_themes: str = "", news_event: str = "") -> str:
     """
-    Sonnet call: structured top-down FX analysis.
-    Regime → macro → news cross-reference → pair conclusions.
+    Haiku call 2: spotlight 1-2 pairs with interesting setups given
+    the news/macro backdrop. Two sentences, no technical jargon.
     """
     pairs   = signals.get("pairs", {})
-    d1_reg  = signals.get("regime_d1", {})
-    h4_reg  = signals.get("regime_h4", {})
-    h1_reg  = signals.get("regime_h1", {})
-    w1_reg  = signals.get("regime_w1", {})
-    mac     = signals.get("macro", {})
-    csm_d1  = signals.get("csm", {}).get("d1", {})
-    csm_h4  = signals.get("csm", {}).get("h4", {})
-    prev_analysis = (signals.get("analysis") or {}).get("text", "")
-
-    def reg_str(r):
-        return f"{r.get('regime','—')} ({r.get('confidence','—')}, {'Stable' if r.get('stable') else 'Shifting'})"
+    h4_reg  = signals.get("regime_h4", {}).get("regime", "—")
+    d1_reg  = signals.get("regime_d1", {}).get("regime", "—")
+    mac_lbl = signals.get("macro", {}).get("label", "—")
+    mac_conf= signals.get("macro", {}).get("confidence", "")
 
     pills_lines = []
     for pair, p in pairs.items():
         pills = p.get("pills", {})
-        d1p = pills.get("d1", "neutral")
-        h4p = pills.get("h4", "neutral")
-        h1p = pills.get("h1", "neutral")
-        cont = p.get("cont", 0)
-        mom  = p.get("mom", {})
-        cmp  = mom.get("cmp")
-        adx  = p.get("adx")
+        d1p   = pills.get("d1", "neutral")
+        h4p   = pills.get("h4", "neutral")
+        cont  = p.get("cont", 0)
+        mom   = p.get("mom", {})
+        cmp   = mom.get("cmp")
+        adx   = p.get("adx")
         if d1p != "neutral" or h4p != "neutral":
             pills_lines.append(
-                f"{pair}: D1={d1p} H4={h4p} H1={h1p} "
-                f"Cont={cont}% CMP={cmp} ADX={adx}"
+                f"{pair}: D1={d1p} H4={h4p} Cont={cont}% CMP={cmp} ADX={adx}"
             )
 
-    top_d1 = " ".join(f"{c}={v}" for c, v in sorted(csm_d1.items(), key=lambda x:-x[1])[:5])
-    top_h4 = " ".join(f"{c}={v}" for c, v in sorted(csm_h4.items(), key=lambda x:-x[1])[:5])
-
-    system = (
-        "You are a senior institutional FX analyst providing a structured market briefing. "
-        "Reason strictly top-down: (1) macro/regime backdrop, (2) cross-asset confirmation "
-        "or contradiction, (3) news alignment, (4) specific pair conclusions. "
-        "Be precise and direct. No hedging language. No bullet points. "
-        "Write in 3 concise sentences. Each sentence covers one layer of the analysis."
-    )
-
-    prev_line = f"Previous briefing: {prev_analysis}" if prev_analysis else "First briefing of the session."
-
     prompt = (
-        f"Session: {session} | {now.strftime('%H:%M')} UTC\n\n"
-        f"REGIME\n"
-        f"W1: {reg_str(w1_reg)}\n"
-        f"D1: {reg_str(d1_reg)}\n"
-        f"H4: {reg_str(h4_reg)}\n"
-        f"H1: {reg_str(h1_reg)}\n\n"
-        f"MACRO (D1)\n"
-        f"Label: {mac.get('label','—')} {mac.get('confidence','')}"
-        f" ({mac.get('signals',0):+d}/{mac.get('total',0)} instruments voted)\n\n"
-        f"CSM\n"
-        f"D1 strongest: {top_d1}\n"
-        f"H4 strongest: {top_h4}\n\n"
-        f"NEWS\n"
-        f"Themes: {news_themes or '—'}\n"
-        f"Key event: {news_event or '—'}\n\n"
-        f"PAIRS (directional only)\n"
+        f"Session: {session} | {now.strftime('%H:%M')} UTC\n"
+        f"Regime: D1={d1_reg} H4={h4_reg} | Macro: {mac_lbl} {mac_conf}\n"
+        f"News: {news_themes or '—'}\n"
+        f"Event: {news_event or '—'}\n\n"
+        f"Pairs with directional bias:\n"
         + "\n".join(pills_lines[:10]) + "\n\n"
-        f"{prev_line}\n\n"
-        "Write the briefing now. 3 sentences, plain text."
+        "Which 1-2 pairs have the most interesting setup given the news and macro backdrop? "
+        "Cross-reference the external narrative with the technical bias. "
+        "2 sentences, plain text, name the pairs explicitly."
     )
-
-    return _sonnet(system, prompt, max_tokens=200)
+    return _haiku(prompt, max_tokens=120)
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
