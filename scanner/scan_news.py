@@ -295,7 +295,7 @@ def fetch_headlines(max_per_feed: int = 6) -> list[str]:
 
 
 # ── ECONOMIC CALENDAR ─────────────────────────────────────────────────────────
-def fetch_calendar() -> list[str]:
+def fetch_calendar() -> list[dict]:
     if not TWELVEDATA:
         return []
     try:
@@ -319,11 +319,13 @@ def fetch_calendar() -> list[str]:
             dt_str  = ev.get("date") or ev.get("datetime") or ""
             if name and dt_str:
                 try:
-                    dt    = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
-                    label = dt.strftime("%a %H:%M UTC")
+                    dt  = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
+                    day = dt.strftime("%a")
+                    t   = dt.strftime("%H:%M")
                 except Exception:
-                    label = dt_str[:10]
-                out.append(f"{name} ({country}) — {label}")
+                    day = ""
+                    t   = dt_str[:10]
+                out.append({"day": day, "time": t, "currency": country, "name": name})
         print(f"  Calendar events: {len(out)}")
         return out
     except Exception as e:
@@ -361,50 +363,39 @@ def _sonnet(system: str, prompt: str, max_tokens: int = 300) -> str:
     return _claude(SONNET_MODEL, system, prompt, max_tokens)
 
 
-def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> dict:
-    """Haiku call 1: themes from headlines + biggest event."""
-    def fmt(key, label):
-        d = macro.get(key)
-        if not d:
-            return f"{label}: n/a"
-        pct = (d["close"] / d["prev_close"] - 1) * 100 if d.get("prev_close") else 0
-        return f"{label}: {d['close']:.4g} ({pct:+.2f}%)"
-
-    macro_lines = "\n".join([
-        fmt("vix", "VIX"), fmt("spx", "S&P500"),
-        fmt("gold", "Gold"), fmt("dxy", "DXY"),
-        fmt("copper", "Copper"), fmt("us10y", "US10Y"),
-    ])
-    h_block = "\n".join(f"- {h}" for h in headlines) if headlines else "No headlines."
-    e_block = "\n".join(f"- {e}" for e in events[:4]) if events else "No events."
-
-    prompt = (
-        f"Cross-asset (daily change):\n{macro_lines}\n\n"
-        f"FX headlines:\n{h_block}\n\n"
-        f"Upcoming high-impact events:\n{e_block}\n\n"
-        "Output exactly 4 lines — no labels, no markdown, no asterisks, no special characters:\n"
-        "Line 1: 2-3 dominant macro themes driving FX. Max 35 words. Be specific.\n"
-        "Line 2: Most important upcoming event and expected FX impact. Max 20 words."
-    )
-    text  = _haiku(prompt, max_tokens=120)
-    lines = [l.strip() for l in text.split("\n") if l.strip()]
-    return {"themes": lines[0] if lines else "—",
-            "event":  lines[1] if len(lines) > 1 else "—"}
-
-
-def call_ranked_analysis(signals: dict, news_themes: str = "",
-                          news_event: str = "") -> tuple:
+def call_catalyst(headlines: list[str], ranked_top: list[dict]) -> str:
     """
-    Haiku call 2: deterministic Python ranking + Haiku narrative bridge.
+    Haiku: scan recent headlines for anything that conflicts with,
+    accelerates, or invalidates the top setups. Max 25 words.
+    """
+    if not headlines:
+        return "No recent headlines available."
+    pairs_str = ", ".join(
+        f"{r['pair']} {'LONG' if r['direction'] == 'bull' else 'SHORT'}"
+        for r in ranked_top[:3]
+    )
+    h_block = "\n".join(f"- {h}" for h in headlines[:12])
+    prompt = (
+        f"Top setups: {pairs_str}\n\n"
+        f"Headlines (last 6h):\n{h_block}\n\n"
+        "Does any headline directly conflict with, accelerate, or invalidate one of these setups? "
+        "Be specific — name the pair and the catalyst. "
+        "Maximum 25 words. If nothing material, respond only with: No breaking catalysts."
+    )
+    return _haiku(prompt, max_tokens=60)
+
+
+def call_ranked_analysis(signals: dict) -> tuple:
+    """
+    Haiku: one sentence per setup, max 12 words each.
     Returns (ranked_out dict, full ranked list).
-    ranked_out: {text, top: [{pair, direction, score}]}
     """
     from scanner.rank import rank_pairs, build_haiku_prompt
     ranked = rank_pairs(signals)
     if not ranked:
-        return {"text": "No qualifying setups at this time.", "top": []}, []
-    prompt = build_haiku_prompt(ranked, signals, news_themes, news_event)
-    text   = _haiku(prompt, max_tokens=200)
+        return {"text": "No qualifying setups.", "top": []}, []
+    prompt = build_haiku_prompt(ranked, signals)
+    text   = _haiku(prompt, max_tokens=120)
     top3   = [{"pair": r["pair"], "direction": r["direction"], "score": r["score"]}
               for r in ranked[:3]]
     return {"text": text, "top": top3}, ranked
@@ -437,35 +428,26 @@ def main():
     active = {k: v['direction'] for k, v in macro_assets.items() if v.get('direction') != 'flat'}
     print(f"  Assets: {active}")
 
-    print("\n[3/5] Headlines + calendar…")
+    print("\n[4/5] Headlines + calendar…")
     headlines = fetch_headlines()
     events    = fetch_calendar()
 
-    print("\n[4/5] News themes…")
-    news_out  = call_news_themes(macro, headlines, events)
-    print(f"  Themes: {news_out['themes']}")
-    print(f"  Event:  {news_out['event']}")
-    time.sleep(3)
-
-    print("\n[5/5] Pair ranking + Haiku narrative…")
-    # Inject macro_assets so rank.py can use it
+    print("\n[5/5] Catalyst check + pair ranking…")
+    # Run ranking first so catalyst has the top setups context
     signals["macro_assets"] = macro_assets
-    ranked_out, ranked_list = call_ranked_analysis(
-        signals,
-        news_themes=news_out["themes"],
-        news_event=news_out["event"],
-    )
+    ranked_out, ranked_list = call_ranked_analysis(signals)
     print(f"  Top pairs: {[r['pair'] for r in ranked_list[:3]]}")
-    print(f"  Text: {ranked_out['text'][:100]}…")
+    time.sleep(2)
+    catalyst = call_catalyst(headlines, ranked_out.get("top", []))
+    print(f"  Catalyst: {catalyst}")
 
-    signals["regime_w1"]   = w1
-    signals["macro"]       = mac
-    signals["macro_assets"]= macro_assets
-    signals["news"]        = {"themes": news_out["themes"],
-                              "event":  news_out["event"],
-                              "updated": now.isoformat()}
-    signals["ranked"]      = {**ranked_out, "updated": now.isoformat()}
-    signals["updated"]     = now.isoformat()
+    signals["regime_w1"]    = w1
+    signals["macro"]        = mac
+    signals["macro_assets"] = macro_assets
+    signals["catalyst"]     = {"text": catalyst, "updated": now.isoformat()}
+    signals["ranked"]       = {**ranked_out, "updated": now.isoformat()}
+    signals["calendar"]     = {"events": events, "updated": now.isoformat()}
+    signals["updated"]      = now.isoformat()
 
     with open(sig_path, "w") as f:
         json.dump(signals, f, indent=2)
