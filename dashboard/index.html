@@ -446,9 +446,9 @@ function renderCSM(){
 }
 
 function toggleCSM(){
-  csmTf = csmTf === "d1" ? "h4" : "d1";
+  csmTf = csmTf === "d1" ? "h4" : csmTf === "h4" ? "h1" : "d1";
   renderCSM();
-  renderGrid();  // update per-pair CSM bars
+  renderGrid();
 }
 
 // ── BLOCK RENDERING ──────────────────────────────────────────────────────────
