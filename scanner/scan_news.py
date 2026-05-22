@@ -338,8 +338,8 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
         f"Cross-asset (daily change):\n{macro_lines}\n\n"
         f"FX headlines:\n{h_block}\n\n"
         f"Upcoming high-impact events:\n{e_block}\n\n"
-        "Output exactly 2 lines — no labels, no markdown, no asterisks, no special characters:\n"
-        "Line 1: 1-2 dominant macro themes driving FX. Max 20 words. Be specific.\n"
+        "Output exactly 4 lines — no labels, no markdown, no asterisks, no special characters:\n"
+        "Line 1: 2-3 dominant macro themes driving FX. Max 35 words. Be specific.\n"
         "Line 2: Most important upcoming event and expected FX impact. Max 20 words."
     )
     text  = _haiku(prompt, max_tokens=120)
