@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T15:52:25.570144+00:00",
+  "updated": "2026-05-22T15:59:57.177868+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -515,28 +515,28 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "news": {
-    "themes": "Iran nuclear tensions easing via Qatar mediation; energy shock risk receding, supporting risk appetite and weakening safe-havens.",
-    "event": "No high-impact events scheduled; market focus shifts to US inflation data and Fed policy signals next week.",
-    "updated": "2026-05-22T15:39:56.840244+00:00"
+    "themes": "Iran nuclear deal hopes easing geopolitical risk; US consumer weakness and energy inflation pressures diverging Fed policy.",
+    "event": "No high-impact events scheduled; market focus shifts to Fed hawkishness versus growth concerns from energy shocks.",
+    "updated": "2026-05-22T15:59:57.177868+00:00"
   },
   "analysis": {
-    "text": "Conflicting regime signals create tactical uncertainty as weekly risk-on sentiment clashes with dominant daily risk-off bias, while hourly risk-off momentum suggests near-term defensive positioning despite easing Iran nuclear tensions that should theoretically support risk appetite. Cross-asset confirmation remains weak with USD showing daily dominance at 100.0 but CHF leading intraday at 100.0, indicating fragmented safe-haven flows and incomplete risk-off execution as energy shock fears recede but broader defensive positioning persists. USDCAD and GBPJPY offer strongest directional conviction with 83% and 85% continuation probability respectively, while EURUSD bear momentum faces resistance from CHF strength dynamics and GBPUSD shows conflicting signals across timeframes despite bullish hourly breakout.",
-    "updated": "2026-05-22T15:39:56.840244+00:00"
+    "text": "GBPJPY and USDCAD stand out as the most coherent setups: both show strong D1 bull bias with matching H4 confirmation (rare in this list), elevated ADX readings suggesting trend conviction, and align with the macro narrative where risk-off sentiment supports JPY strength while CAD benefits from energy inflation pressures offsetting growth concerns. The 85% and 83% continuation probabilities on these pairs indicate high-conviction moves already in play, making them preferable to the D1-biased pairs lacking H4 confirmation.",
+    "updated": "2026-05-22T15:59:57.177868+00:00"
   },
   "last_alert": "2026-05-21T18:07:23.092589+00:00"
 }
