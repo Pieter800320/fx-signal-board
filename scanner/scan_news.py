@@ -30,6 +30,7 @@ MACRO_INSTRUMENTS = [
     ("dxy",    "DX-Y.NYB","DXY",      True),   # up = USD strength = risk-off
     ("copper", "HG=F",    "Copper",   False),  # down = growth fear = risk-off
     ("us10y",  "^TNX",    "US 10Y",   False),  # down = flight to safety = risk-off
+    ("wti",    "CL=F",    "WTI Oil",  False),  # up = risk-on demand; key CAD driver
 ]
 
 YF_HEADERS = {
@@ -75,6 +76,49 @@ def fetch_all_macro() -> dict:
         time.sleep(2)  # light throttle — no strict rate limit on YF
     print(f"  Macro: {len(macro)}/{len(MACRO_INSTRUMENTS)} fetched")
     return macro
+
+
+def build_macro_assets(macro: dict) -> dict:
+    """
+    Build per-asset summary for rank.py: value, delta, direction.
+    Direction thresholds are intentionally conservative to avoid noise.
+    Skips DXY (redundant with USD CSM).
+    """
+    out = {}
+    for key, d in macro.items():
+        if key == "dxy" or not d or not d.get("close") or not d.get("prev_close"):
+            continue
+        close = d["close"]
+        prev  = d["prev_close"]
+        label = d.get("label", key.upper())
+
+        if key == "us10y":
+            # Yield in %, so *100 = basis points
+            bp = (close - prev) * 100
+            direction = "up" if bp > 3.0 else "down" if bp < -3.0 else "flat"
+            out[key] = {"value": round(close, 3), "delta_bp": round(bp, 1),
+                        "direction": direction, "label": label}
+
+        elif key == "vix":
+            pct = (close / prev - 1) * 100
+            # Level zones override daily pct: >20 = fear regime, <15 = complacent
+            if close > 20 or pct > 3.0:
+                direction = "up"
+            elif close < 15 or pct < -3.0:
+                direction = "down"
+            else:
+                direction = "flat"
+            out[key] = {"value": round(close, 2), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
+        else:
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 0.5 else "down" if pct < -0.5 else "flat"
+            dec = 2 if close > 100 else 4
+            out[key] = {"value": round(close, dec), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
+    return out
 
 
 # ── W1 BACKDROP ───────────────────────────────────────────────────────────────
@@ -348,44 +392,22 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
             "event":  lines[1] if len(lines) > 1 else "—"}
 
 
-def call_data_analysis(signals: dict, session: str, now: datetime,
-                       news_themes: str = "", news_event: str = "") -> str:
+def call_ranked_analysis(signals: dict, news_themes: str = "",
+                          news_event: str = "") -> tuple:
     """
-    Haiku call 2: spotlight 1-2 pairs with interesting setups given
-    the news/macro backdrop. Two sentences, no technical jargon.
+    Haiku call 2: deterministic Python ranking + Haiku narrative bridge.
+    Returns (ranked_out dict, full ranked list).
+    ranked_out: {text, top: [{pair, direction, score}]}
     """
-    pairs   = signals.get("pairs", {})
-    h4_reg  = signals.get("regime_h4", {}).get("regime", "—")
-    d1_reg  = signals.get("regime_d1", {}).get("regime", "—")
-    mac_lbl = signals.get("macro", {}).get("label", "—")
-    mac_conf= signals.get("macro", {}).get("confidence", "")
-
-    pills_lines = []
-    for pair, p in pairs.items():
-        pills = p.get("pills", {})
-        d1p   = pills.get("d1", "neutral")
-        h4p   = pills.get("h4", "neutral")
-        cont  = p.get("cont", 0)
-        mom   = p.get("mom", {})
-        cmp   = mom.get("cmp")
-        adx   = p.get("adx")
-        if d1p != "neutral" or h4p != "neutral":
-            pills_lines.append(
-                f"{pair}: D1={d1p} H4={h4p} Cont={cont}% CMP={cmp} ADX={adx}"
-            )
-
-    prompt = (
-        f"Session: {session} | {now.strftime('%H:%M')} UTC\n"
-        f"Regime: D1={d1_reg} H4={h4_reg} | Macro: {mac_lbl} {mac_conf}\n"
-        f"News: {news_themes or '—'}\n"
-        f"Event: {news_event or '—'}\n\n"
-        f"Pairs with directional bias:\n"
-        + "\n".join(pills_lines[:10]) + "\n\n"
-        "Which 1-2 pairs have the most interesting setup given the news and macro backdrop? "
-        "Cross-reference the external narrative with the technical bias. "
-        "2 sentences, plain text only, no markdown, no asterisks, no special characters, name the pairs explicitly."
-    )
-    return _haiku(prompt, max_tokens=120)
+    from scanner.rank import rank_pairs, build_haiku_prompt
+    ranked = rank_pairs(signals)
+    if not ranked:
+        return {"text": "No qualifying setups at this time.", "top": []}, []
+    prompt = build_haiku_prompt(ranked, signals, news_themes, news_event)
+    text   = _haiku(prompt, max_tokens=200)
+    top3   = [{"pair": r["pair"], "direction": r["direction"], "score": r["score"]}
+              for r in ranked[:3]]
+    return {"text": text, "top": top3}, ranked
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -402,39 +424,48 @@ def main():
     print("\n[1/4] Fetching macro data (Yahoo Finance)…")
     macro = fetch_all_macro()
 
-    print("\n[2/4] W1 backdrop + macro momentum…")
+    print("\n[2/5] W1 backdrop + macro momentum…")
     prev_w1 = signals.get("regime_w1")
     prev_mac = signals.get("macro")
     w1      = compute_w1_regime(macro, prev_w1)
     mac     = compute_macro(macro, prev_mac)
+    macro_assets = build_macro_assets(macro)
     session = current_session(now)
     print(f"  Session: {session}")
     print(f"  W1:    {w1['regime']} {w1['confidence']} ({'Stable' if w1['stable'] else 'Shifting'})")
     print(f"  Macro: {mac['label']} {mac['confidence']} ({'Stable' if mac['stable'] else 'Shifting'})")
+    active = {k: v['direction'] for k, v in macro_assets.items() if v.get('direction') != 'flat'}
+    print(f"  Assets: {active}")
 
-    print("\n[3/4] Headlines + calendar…")
+    print("\n[3/5] Headlines + calendar…")
     headlines = fetch_headlines()
     events    = fetch_calendar()
 
-    print("\n[4/4] Claude analysis…")
+    print("\n[4/5] News themes…")
     news_out  = call_news_themes(macro, headlines, events)
     print(f"  Themes: {news_out['themes']}")
     print(f"  Event:  {news_out['event']}")
     time.sleep(3)
-    analysis = call_data_analysis(
-        signals, session, now,
+
+    print("\n[5/5] Pair ranking + Haiku narrative…")
+    # Inject macro_assets so rank.py can use it
+    signals["macro_assets"] = macro_assets
+    ranked_out, ranked_list = call_ranked_analysis(
+        signals,
         news_themes=news_out["themes"],
         news_event=news_out["event"],
     )
-    print(f"  Analysis: {analysis}")
+    print(f"  Top pairs: {[r['pair'] for r in ranked_list[:3]]}")
+    print(f"  Text: {ranked_out['text'][:100]}…")
 
-    signals["regime_w1"] = w1
-    signals["macro"]     = mac
-    signals["news"]      = {"themes": news_out["themes"],
-                            "event":  news_out["event"],
-                            "updated": now.isoformat()}
-    signals["analysis"]  = {"text": analysis, "updated": now.isoformat()}
-    signals["updated"]   = now.isoformat()
+    signals["regime_w1"]   = w1
+    signals["macro"]       = mac
+    signals["macro_assets"]= macro_assets
+    signals["news"]        = {"themes": news_out["themes"],
+                              "event":  news_out["event"],
+                              "updated": now.isoformat()}
+    signals["ranked"]      = {**ranked_out, "updated": now.isoformat()}
+    signals["updated"]     = now.isoformat()
 
     with open(sig_path, "w") as f:
         json.dump(signals, f, indent=2)
