@@ -34,10 +34,15 @@ def _get(endpoint: str, params: dict, retries: int = 3) -> dict:
         try:
             with urllib.request.urlopen(url, timeout=60) as r:
                 data = json.loads(r.read().decode())
-            # Twelvedata returns status:"error" + code:429 on rate limit
+            # Twelvedata returns code:429 for both per-minute AND daily limits.
+            # Daily exhaustion is unrecoverable — fail immediately.
+            # Per-minute limits are transient — retry with backoff.
             if data.get("code") == 429:
+                msg = data.get("message", "").lower()
+                if "day" in msg:
+                    raise RuntimeError(f"Daily API credit limit reached: {data.get('message')}")
                 wait = 20 * attempt
-                print(f"  ⚠ 429 rate limit — waiting {wait}s (attempt {attempt}/{retries})")
+                print(f"  ⚠ 429 per-minute limit — waiting {wait}s (attempt {attempt}/{retries})")
                 time.sleep(wait)
                 continue
             return data
