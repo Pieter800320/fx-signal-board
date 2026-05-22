@@ -1,316 +1,43 @@
 [
   {
-    "id": 1779388766578,
-    "pair": "USDCAD",
-    "price": 1.36872,
+    "id": 1779395700069,
+    "pair": "CADJPY",
+    "price": 115.884,
     "direction": "above",
     "active": false
   },
   {
-    "id": 1779389030524,
+    "id": 1779428099587,
+    "pair": "USDCAD",
+    "price": 1.3734965424929875,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779428702778,
+    "pair": "USDCAD",
+    "price": 1.3898396854851391,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779428710628,
+    "pair": "USDCAD",
+    "price": 1.362798287466583,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779437719646,
     "pair": "GBPJPY",
-    "price": 211.984,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779390717647,
-    "pair": "AUDUSD",
-    "price": 0.7211,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779393520446,
-    "pair": "USDCAD",
-    "price": 1.37333,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779393522427,
-    "pair": "USDCAD",
-    "price": 1.37434,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779395388007,
-    "pair": "USDCAD",
-    "price": 1.36649,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779395405196,
-    "pair": "USDCAD",
-    "price": 1.37272,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779424005169,
-    "pair": "USDCAD",
-    "price": 1.36631,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428133352,
-    "pair": "USDCAD",
-    "price": 1.3716434075822392,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428147409,
-    "pair": "USDCAD",
-    "price": 1.3802899071988035,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428288481,
-    "pair": "USDCAD",
-    "price": 1.3832634447642338,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428299727,
-    "pair": "USDCAD",
-    "price": 1.3831761812634475,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428310475,
-    "pair": "USDCAD",
-    "price": 1.370959291153374,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428359812,
-    "pair": "USDCAD",
-    "price": 1.3705278561663774,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428579780,
-    "pair": "USDCAD",
-    "price": 1.3576676494724997,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428832546,
-    "pair": "USDCAD",
-    "price": 1.3742358462749695,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779428912438,
-    "pair": "USDCAD",
-    "price": 1.3735857161823277,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429299984,
-    "pair": "USDCAD",
-    "price": 1.381395314450479,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429317533,
-    "pair": "USDCAD",
-    "price": 1.358875939133927,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429337567,
-    "pair": "USDCAD",
-    "price": 1.3717848719262866,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429353084,
-    "pair": "USDCAD",
-    "price": 1.3711568557474485,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429407462,
-    "pair": "USDCAD",
-    "price": 1.3699764155402308,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429413234,
-    "pair": "USDCAD",
-    "price": 1.3740892935041293,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429776051,
-    "pair": "USDCAD",
-    "price": 1.3691197783047309,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429885236,
-    "pair": "USDCAD",
-    "price": 1.380971389040425,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779429955056,
-    "pair": "USDCAD",
-    "price": 1.3800613784302542,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430245194,
-    "pair": "NZDUSD",
-    "price": 0.7280782109636175,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430474619,
-    "pair": "USDCAD",
-    "price": 1.3685130596806319,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430482748,
-    "pair": "USDCAD",
-    "price": 1.3763470066869976,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430485314,
-    "pair": "USDCAD",
-    "price": 1.3657063231175322,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430487542,
-    "pair": "USDCAD",
-    "price": 1.3711955646414626,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430614649,
-    "pair": "GBPJPY",
-    "price": 214.41718671306856,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430625412,
-    "pair": "GBPJPY",
-    "price": 214.81695394385295,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430640018,
-    "pair": "GBPJPY",
-    "price": 211.2484319541834,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430653453,
-    "pair": "GBPJPY",
-    "price": 215.61414981002966,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779430848176,
-    "pair": "GBPJPY",
-    "price": 215.03155102881558,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779436784327,
-    "pair": "USDCAD",
-    "price": 1.3652173197874526,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437079073,
-    "pair": "USDCAD",
-    "price": 1.3641703187218415,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437097224,
-    "pair": "USDCAD",
-    "price": 1.3773015514425615,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437436884,
-    "pair": "GBPJPY",
-    "price": 214.11422857432953,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437457607,
-    "pair": "GBPJPY",
-    "price": 213.8913922768794,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437483497,
-    "pair": "GBPJPY",
-    "price": 213.89139227687943,
-    "direction": "above",
-    "active": false
-  },
-  {
-    "id": 1779437569396,
-    "pair": "GBPJPY",
-    "price": 213.78193479434842,
-    "direction": "above",
-    "active": true
-  },
-  {
-    "id": 1779437604788,
-    "pair": "GBPJPY",
-    "price": 212.564655215457,
+    "price": 211.9960392340218,
     "direction": "below",
-    "active": true
+    "active": false
   },
   {
-    "id": 1779438232773,
-    "pair": "AUDUSD",
-    "price": 0.727937791384321,
+    "id": 1779442355486,
+    "pair": "GBPJPY",
+    "price": 214.90951129479768,
     "direction": "above",
     "active": true
   }
