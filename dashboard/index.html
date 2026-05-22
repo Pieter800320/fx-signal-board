@@ -729,6 +729,7 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   display:flex;flex-direction:column;gap:6px;
 }
 #cht-ind-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+#cht-copy-btn{margin-left:auto;font-size:13px;padding:3px 7px;}
 .cht-ind-chip{
   border-radius:4px;border:1px solid var(--bord);
   font-size:9px;font-weight:700;letter-spacing:.04em;
@@ -793,6 +794,7 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       <button class="cht-ind-chip on" id="cht-ind-ema50"  onclick="chtToggleInd('ema50')">EMA 50</button>
       <button class="cht-ind-chip on" id="cht-ind-bb"     onclick="chtToggleInd('bb')">BB</button>
       <button class="cht-ind-chip on" id="cht-ind-macd"   onclick="chtToggleInd('macd')">MACD</button>
+      <button class="cht-ind-chip" id="cht-copy-btn" onclick="chtCopyPrompt()" title="Copy analysis prompt for Claude">⧉</button>
     </div>
     <span id="cht-gh-status"></span>
   </div>
@@ -1508,7 +1510,126 @@ function chtUpdateLivePriceLine(pair, price) {
   } catch(e) {}
 }
 
-// ── Long-press on pair blocks ─────────────────────────────────────────────────
+// ── Copy analysis prompt for Claude FSI plugin ───────────────────────────────
+function chtCopyPrompt() {
+  if (!_chtPair || !D) return;
+  const pair = _chtPair;
+  const p    = (D.pairs || {})[pair] || {};
+  const pills = p.pills || {};
+  const mom   = p.mom   || {};
+  const d1r   = D.regime_d1 || {};
+  const h4r   = D.regime_h4 || {};
+  const h1r   = D.regime_h1 || {};
+  const w1r   = D.regime_w1 || {};
+  const mac   = D.macro     || {};
+  const csmd1 = D.csm?.d1   || {};
+  const csmh4 = D.csm?.h4   || {};
+  const news  = D.news       || {};
+  const anal  = D.analysis   || {};
+  const base  = pair.slice(0,3);
+  const quote = pair.slice(3);
+
+  // Translate pill values to plain language
+  const pillTxt = v => ({
+    bull_strong: 'strongly bullish', bull: 'bullish',
+    bear_strong: 'strongly bearish', bear: 'bearish',
+    neutral: 'neutral'
+  })[v] || v || '—';
+
+  // Translate momentum score to plain language
+  const momTxt = v => {
+    if (v == null) return '—';
+    const bias = v >= 65 ? 'bullish bias' : v >= 35 ? 'neutral' : 'bearish bias';
+    return `${v}/100 (${bias})`;
+  };
+
+  // Translate delta to plain language
+  const dltTxt = (k) => {
+    const d = mom['d'+k];
+    if (d == null) return '';
+    return d > 0 ? `, improving (+${d} since last scan)` :
+           d < 0 ? `, weakening (${d} since last scan)` : ', unchanged';
+  };
+
+  // Translate ADX to plain language
+  const adxTxt = v => {
+    if (v == null) return '—';
+    const str = v >= 50 ? 'strong trend' : v >= 25 ? 'trending' :
+                v >= 20 ? 'weak trend' : 'ranging/no trend';
+    return `${v} (${str})`;
+  };
+
+  // Translate cont score to plain language
+  const contTxt = v => {
+    if (v == null) return '—';
+    const str = v >= 70 ? 'strong alignment' : v >= 50 ? 'moderate alignment' :
+                v >= 35 ? 'weak alignment' : 'low/conflicting';
+    return `${v}% (${str})`;
+  };
+
+  // Translate regime to plain language
+  const regStr = (r, lbl) =>
+    `${lbl}: ${r.regime||'—'} (confidence: ${r.confidence||'—'}, ${r.stable?'stable':'shifting'})`;
+
+  // CSM ranking — translate scores to descriptive tiers
+  const csmRank = (csm) =>
+    Object.entries(csm).sort((a,b)=>b[1]-a[1])
+      .map(([c,v]) => {
+        const tier = v >= 70 ? 'strong' : v >= 55 ? 'mild' : v >= 45 ? 'neutral' : v >= 30 ? 'mild weak' : 'weak';
+        return `${c} (${tier})`;
+      }).join(', ');
+
+  const prompt =
+`I am analysing ${pair} for a potential H4 trade. I have not yet determined direction — please give me an unbiased macro and fundamental assessment.
+
+MARKET REGIME (proprietary multi-timeframe system)
+Weekly:  ${regStr(w1r,'W1 cross-asset macro')}
+Daily:   ${regStr(d1r,'D1 regime')}
+4-Hour:  ${regStr(h4r,'H4 regime')} ← primary trading timeframe
+1-Hour:  ${regStr(h1r,'H1 regime')} ← short-term momentum
+
+CROSS-ASSET MACRO
+Daily macro reading: ${mac.label||'—'} (confidence: ${mac.confidence||'—'}, ${mac.stable?'stable':'shifting'})
+
+${pair} TECHNICAL PICTURE
+Direction signals by timeframe:
+  Daily (D1):  ${pillTxt(pills.d1)}
+  4-Hour (H4): ${pillTxt(pills.h4)}
+  1-Hour (H1): ${pillTxt(pills.h1)}
+3-timeframe technical alignment: ${contTxt(p.cont)}
+Composite momentum score: ${momTxt(mom.cmp)}
+Trend strength: ADX ${adxTxt(p.adx)}
+Momentum by timeframe:
+  D1: ${momTxt(mom.d1)}${dltTxt('d1')}
+  H4: ${momTxt(mom.h4)}${dltTxt('h4')}
+  H1: ${momTxt(mom.h1)}${dltTxt('h1')}
+
+CURRENCY STRENGTH (relative ranking across 8 major currencies)
+Daily strength, strongest to weakest:   ${csmRank(csmd1)}
+4-Hour strength, strongest to weakest:  ${csmRank(csmh4)}
+
+CURRENT NEWS & AI ANALYSIS
+News themes: ${news.themes||'—'}
+Key event:   ${news.event||'—'}
+Automated analysis: ${anal.text||'—'}
+
+QUESTIONS
+1. What is the fundamental macro bias for ${pair} right now — bullish ${base} or bullish ${quote}, and why?
+2. What do carry rates and the ${base}/${quote} yield differential currently suggest — do they favour longs or shorts?
+3. Does the broader risk environment (VIX, equities, safe-haven flows) confirm or contradict the ${d1r.regime||'current'} daily regime reading?
+4. Are there macro risk events in the next 48 hours relevant to ${base} or ${quote} I should be aware of?`;
+
+  navigator.clipboard.writeText(prompt).then(() => {
+    const btn = document.getElementById('cht-copy-btn');
+    if (btn) {
+      btn.textContent = '✓';
+      btn.style.color = 'var(--buy)';
+      setTimeout(() => { btn.textContent = '⧉'; btn.style.color = ''; }, 1800);
+    }
+  }).catch(() => {
+    chtSetGhStatus('Clipboard unavailable');
+  });
+}
 function chtAttachLongPress() {
   document.querySelectorAll('#pair-grid .block').forEach(el => {
     if (el.dataset.chtLp) return;
