@@ -49,7 +49,7 @@ from scanner.level_ema_alerts   import check_levels, check_ema_touches
 # Extra pairs needed for CSM 16-pair set (not in main PAIRS list)
 CSM_EXTRA = ["EUR/GBP", "EUR/CHF", "GBP/CHF", "AUD/NZD", "AUD/CAD", "GBP/AUD"]
 
-DELAY = 8   # seconds between API calls — free tier rate limit
+SCAN_TF = "h1"  # primary fetch timeframe
 
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
@@ -144,8 +144,7 @@ def main():
                 raw_ohlcv[key] = df
         except Exception as e:
             print(f"  ⚠ {key} skipped: {e}")
-        if i < total_fetches - 1:
-            time.sleep(DELAY)
+        # No manual sleep — fetch.py _rate_wait() handles spacing dynamically
 
     # ── 2. Aggregate H1 -> H4 + D1 ────────────────────────────────────────────
     print("\n[2/9] Aggregating H1 -> H4 + D1…")
