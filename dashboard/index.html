@@ -1082,10 +1082,22 @@ function _computeSubOffset(macdData, ohlcv) {
   return idx >= 0 ? idx : 0;
 }
 
+// ── Spike filter — clamp wicks that exceed 3% of open (bad tick protection) ──
+function _filterChartSpikes(bars, pct = 0.03) {
+  return bars.map(b => {
+    const o = b.open; if (!o) return b;
+    const thr = o * pct;
+    const h = Math.abs(b.high  - o) > thr ? Math.max(o, b.close) : b.high;
+    const l = Math.abs(b.low   - o) > thr ? Math.min(o, b.close) : b.low;
+    return (h !== b.high || l !== b.low) ? { ...b, high: h, low: l } : b;
+  });
+}
+
 // ── Chart render ──────────────────────────────────────────────────────────────
 function _chtRender(pair, tf, ohlcv) {
   _chtDestroyCharts();
   if (!ohlcv.length) return;
+  ohlcv = _filterChartSpikes(ohlcv);
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
@@ -1119,23 +1131,6 @@ function _chtRender(pair, tf, ohlcv) {
     borderUpColor:'rgba(0,220,55,.8)', borderDownColor:'rgba(248,81,73,.8)',
     wickUpColor:'rgba(0,220,55,.5)',   wickDownColor:'rgba(248,81,73,.5)',
     priceLineVisible:false, lastValueVisible:false, priceFormat:priceFmt,
-    autoscaleInfoProvider: (original) => {
-      const res = original();
-      if (!res || !res.priceRange) return res;
-      // Scale from candle bodies (open/close) only — wicks cannot distort the Y-axis
-      const visible = _chtCandles ? _chtCandles.dataByIndex(0, -1) : null;
-      if (!visible || !visible.length) return res;
-      let lo = Infinity, hi = -Infinity;
-      for (const bar of visible) {
-        const bLo = Math.min(bar.open, bar.close);
-        const bHi = Math.max(bar.open, bar.close);
-        if (bLo < lo) lo = bLo;
-        if (bHi > hi) hi = bHi;
-      }
-      if (!isFinite(lo) || !isFinite(hi)) return res;
-      const buf = (hi - lo) * 0.08;
-      return { priceRange: { minValue: lo - buf, maxValue: hi + buf }, margins: res.margins };
-    },
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
