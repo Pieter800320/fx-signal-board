@@ -636,15 +636,22 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 
 /* ── Top bar ────────────────────────────────────────────────────────────── */
 #cht-topbar{
-  flex-shrink:0;height:44px;
-  display:flex;align-items:center;gap:6px;
-  padding:0 10px;
+  flex-shrink:0;
+  display:flex;flex-direction:column;
   border-bottom:1px solid var(--bord);
   background:var(--surf);
 }
+#cht-topbar-r1{
+  display:flex;align-items:center;
+  padding:7px 10px 3px;
+}
+#cht-topbar-r2{
+  display:flex;align-items:center;gap:6px;
+  padding:3px 10px 7px;
+}
 #cht-pair-lbl{
-  font-size:12px;font-weight:800;letter-spacing:.08em;
-  color:var(--text);text-transform:uppercase;min-width:52px;
+  font-size:13px;font-weight:800;letter-spacing:.08em;
+  color:var(--text);text-transform:uppercase;flex:1;
 }
 .cht-tf{
   background:none;border:1px solid var(--bord);border-radius:4px;
@@ -760,15 +767,19 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 <div id="cht-overlay">
 
   <div id="cht-topbar">
-    <span id="cht-pair-lbl">—</span>
-    <button class="cht-tf active" id="cht-tf-D1" onclick="setChtTf('D1')">D1</button>
-    <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
-    <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
-    <span id="cht-timer"></span>
-    <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-    <button id="cht-set-btn"   onclick="chtCommitStaging()">Set</button>
-    <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
-    <button id="cht-close-btn" onclick="closeChart()">✕</button>
+    <div id="cht-topbar-r1">
+      <span id="cht-pair-lbl">—</span>
+      <button id="cht-close-btn" onclick="closeChart()">✕</button>
+    </div>
+    <div id="cht-topbar-r2">
+      <button class="cht-tf active" id="cht-tf-D1" onclick="setChtTf('D1')">D1</button>
+      <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
+      <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
+      <span id="cht-timer"></span>
+      <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
+      <button id="cht-set-btn"   onclick="chtCommitStaging()">Set</button>
+      <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
+    </div>
   </div>
 
   <div id="cht-chart-area">
@@ -1153,13 +1164,13 @@ function _chtRender(pair, tf, ohlcv) {
     } catch(e) {}
   });
 
-  // Live price line — dim grey, solid
+  // Live price line — dim white dashed, distinct from candles
   const lp = _livePrice[pair];
   if (lp) {
     try {
       _chtPriceLine = candles.createPriceLine({
-        price:lp, color:'rgba(205,217,229,0.6)', lineWidth:1,
-        lineStyle:LightweightCharts.LineStyle.Solid,
+        price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dashed,
         axisLabelVisible:true, title:''
       });
     } catch(e) {}
@@ -1190,19 +1201,22 @@ function _chtRender(pair, tf, ohlcv) {
     }).observe(macdEl);
   }
 
-  // ── Time-scale sync: price → MACD via matching timestamps (no offset needed) ──
+  // ── Time-scale sync: price → MACD via logical range offset ──────────────────
+  const _subOffset = macdData.length ? _computeSubOffset(macdData[0].time, ohlcv) : 0;
   let _syncRaf = null;
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     // Jump button: show when scrolled back more than 5 bars from the right edge
     const jb = document.getElementById('cht-jump-btn');
     if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? 'block' : 'none';
 
-    if (!_chtMacdInst) return;
+    if (!_chtMacdInst || !range) return;
     if (_syncRaf) cancelAnimationFrame(_syncRaf);
     _syncRaf = requestAnimationFrame(() => {
       try {
-        const tr = chart.timeScale().getVisibleRange();
-        if (tr) _chtMacdInst.timeScale().setVisibleRange(tr);
+        _chtMacdInst.timeScale().setVisibleLogicalRange({
+          from: range.from - _subOffset,
+          to:   range.to   - _subOffset
+        });
       } catch(e) {}
     });
   });
@@ -1219,8 +1233,8 @@ function _chtRender(pair, tf, ohlcv) {
   setTimeout(() => {
     if (_chtMacdInst) {
       try {
-        const tr = chart.timeScale().getVisibleRange();
-        if (tr) _chtMacdInst.timeScale().setVisibleRange(tr);
+        const r = chart.timeScale().getVisibleLogicalRange();
+        if (r) _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset, to:r.to - _subOffset });
       } catch(e) {}
     }
   }, 120);
@@ -1473,8 +1487,8 @@ updatePairPcts = function(pair) {
       if (_chtPriceLine) { _chtPriceLine.applyOptions({ price:lp }); }
       else {
         _chtPriceLine = _chtCandles.createPriceLine({
-          price:lp, color:'rgba(205,217,229,0.6)', lineWidth:1,
-          lineStyle:LightweightCharts.LineStyle.Solid,
+          price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
+          lineStyle:LightweightCharts.LineStyle.Dashed,
           axisLabelVisible:true, title:''
         });
       }
