@@ -75,6 +75,15 @@
   .news-txt{font-size:10px;color:var(--muted);line-height:1.4;}
   #analysis-txt{font-size:10px;color:var(--muted);line-height:1.55;}
 
+  /* Ranked setup pills */
+  .ranked-pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;}
+  .ranked-pill{font-size:8px;font-weight:800;letter-spacing:.05em;padding:2px 7px;
+               border-radius:3px;white-space:nowrap;}
+  .ranked-pill.bull{background:rgba(0,220,55,.13);color:var(--buy);
+                    border:1px solid rgba(0,220,55,.3);}
+  .ranked-pill.bear{background:rgba(248,81,73,.13);color:var(--sell);
+                    border:1px solid rgba(248,81,73,.3);}
+
   /* CSM */
   .csm-wrap{
     background:var(--surf);border:1px solid var(--bord);border-radius:10px;
@@ -410,7 +419,7 @@ function renderMarketState(){
 
 function renderNews(){
   const news     = D.news     || {};
-  const analysis = D.analysis || {};
+  const ranked   = D.ranked   || {};
   const mac      = D.macro    || {};
   const line     = document.getElementById("news-line");
   const r        = mac.label  || "";
@@ -423,10 +432,18 @@ function renderNews(){
   document.getElementById("news-event").textContent =
     news.event  || "";
 
+  // Ranked setups — pills + Haiku narrative
+  const top = ranked.top || [];
+  const pillsHtml = top.map(p => {
+    const cls   = p.direction === "bull" ? "bull" : "bear";
+    const arrow = p.direction === "bull" ? "▲" : "▼";
+    return `<span class="ranked-pill ${cls}">${p.pair} ${arrow} ${p.score.toFixed(1)}</span>`;
+  }).join("");
   document.getElementById("analysis-lbl").textContent =
-    "AI ANALYSIS · " + fmtTime(analysis.updated);
-  document.getElementById("analysis-txt").textContent =
-    analysis.text || "Awaiting scan…";
+    "TOP SETUPS · " + fmtTime(ranked.updated);
+  document.getElementById("analysis-txt").innerHTML =
+    (pillsHtml ? `<div class="ranked-pills">${pillsHtml}</div>` : "") +
+    `<span>${ranked.text || "Awaiting scan\u2026"}</span>`;
 }
 
 function renderCSM(){
