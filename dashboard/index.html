@@ -41,13 +41,27 @@
   .mstate.mix{border-color:rgba(227,179,65,.35);}
   .ms-lbl{font-size:8px;font-weight:700;letter-spacing:.08em;
            text-transform:uppercase;color:var(--muted);}
-  .ms-lbl-row{display:flex;align-items:center;gap:5px;margin-bottom:5px;}
+  .ms-lbl-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
   .ms-row{display:flex;align-items:center;justify-content:space-between;}
   .ms-item{display:flex;flex-direction:column;gap:2px;align-items:center;flex:1;}
   .ms-key{font-size:8px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
   .ms-val{font-size:12px;font-weight:800;text-align:center;}
   .ms-sub{font-size:8px;color:var(--muted);text-align:center;}
   .ms-div{width:1px;height:30px;background:var(--bord);flex-shrink:0;}
+  .ms-confluence{
+    font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 7px;border-radius:3px;
+    background:rgba(0,220,55,.15);border:1px solid rgba(0,220,55,.35);
+    color:var(--buy);
+  }
+  .ms-confluence.ro{
+    background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.35);color:var(--sell);
+  }
+  /* Macro card */
+  .macro-card{
+    border-radius:10px;padding:8px 13px;margin-bottom:7px;
+    background:var(--surf);border:1px solid var(--bord);
+  }
 
   /* NEWS */
   .news{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
@@ -175,10 +189,20 @@
 
 <div class="mstate" id="mstate">
   <div class="ms-lbl-row">
-    <div class="ms-lbl">Market State</div>
+    <div class="ms-lbl">Regime</div>
+    <span id="ms-confluence" style="display:none"></span>
   </div>
   <div class="ms-row" id="ms-row">
     <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
+  </div>
+</div>
+
+<div class="macro-card" id="macro-card">
+  <div class="ms-lbl-row">
+    <div class="ms-lbl">Macro</div>
+  </div>
+  <div class="ms-row" id="macro-row">
+    <div class="ms-item"><div class="ms-val" style="color:var(--muted)">…</div></div>
   </div>
 </div>
 
@@ -329,30 +353,57 @@ function render(){
 }
 
 function renderMarketState(){
-  const h4  = D.regime_h4  || {};
-  const mac = D.macro       || {};
+  const d1  = D.regime_d1 || {};
+  const h4  = D.regime_h4 || {};
+  const h1  = D.regime_h1 || {};
+  const mac = D.macro     || {};
 
+  // Outer card border reflects H4 (primary trading TF)
   const el = document.getElementById("mstate");
   el.className = mstateClass(h4.regime);
 
-  const regStr = (r, conf, sub) =>
-    `<div class="ms-item">
-      <div class="ms-key">${r.key}</div>
+  // Confluence pill — show when all 3 agree on a directional regime
+  const confEl = document.getElementById("ms-confluence");
+  const aligned = d1.regime && d1.regime === h4.regime && h4.regime === h1.regime
+                  && !["Mixed","Ranging"].includes(h4.regime);
+  if (confEl) {
+    if (aligned) {
+      confEl.textContent = "⚡ Confluence";
+      confEl.className   = "ms-confluence" + (h4.regime === "Risk-Off" ? " ro" : "");
+      confEl.style.display = "";
+    } else {
+      confEl.style.display = "none";
+    }
+  }
+
+  // 3-column regime row
+  const col = (lbl, r) => `
+    <div class="ms-item">
+      <div class="ms-key">${lbl}</div>
       <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||"—"}</div>
-      <div class="ms-sub">${sub}</div>
+      <div class="ms-sub">${r.confidence||"—"} · ${r.stable?"Stable":"Shifting"}</div>
     </div>`;
 
   document.getElementById("ms-row").innerHTML =
+    col("D1", d1) +
+    '<div class="ms-div"></div>' +
+    col("H4", h4) +
+    '<div class="ms-div"></div>' +
+    col("H1", h1);
+
+  // Macro card
+  const w1  = D.regime_w1 || {};
+  document.getElementById("macro-row").innerHTML =
     `<div class="ms-item">
-       <div class="ms-key">H4</div>
-       <div class="ms-val" style="color:${regimeColor(h4.regime)}">${h4.regime||"—"}</div>
-       <div class="ms-sub">${h4.confidence||"—"} · ${h4.stable?"Stable":"Shifting"}</div>
-     </div>
-     <div class="ms-div"></div>
-     <div class="ms-item">
        <div class="ms-key">Macro</div>
        <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
        <div class="ms-sub">${mac.signals!=null?(mac.signals>0?"+":"")+mac.signals+"/"+mac.total:"—"}</div>
+     </div>
+     <div class="ms-div"></div>
+     <div class="ms-item">
+       <div class="ms-key">W1</div>
+       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
+       <div class="ms-sub">${w1.confidence||"—"}</div>
      </div>`;
 }
 
