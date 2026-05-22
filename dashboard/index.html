@@ -620,11 +620,12 @@ loadData();
 setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 </script>
 
+
 <!-- ═══════════════════════════════════════════════════════════════════════
-     CHART OVERLAY — styles, HTML, JS  (additive — no existing code changed)
+     CHART OVERLAY — styles, HTML, JS
      ═══════════════════════════════════════════════════════════════════════ -->
 <style>
-/* ── Chart overlay shell ────────────────────────────────────────────────── */
+/* ── Overlay shell ──────────────────────────────────────────────────────── */
 #cht-overlay{
   position:fixed;inset:0;z-index:100;
   background:var(--bg);
@@ -655,6 +656,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
   color:var(--buy);
 }
+#cht-timer{
+  font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+/* Right-side action buttons */
 #cht-draw-btn{
   background:none;border:1px solid var(--bord);border-radius:4px;
   color:var(--muted);font-size:10px;font-weight:700;
@@ -666,13 +672,20 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
   color:var(--amber);
 }
+#cht-set-btn{
+  display:none;
+  background:rgba(227,179,65,.18);border:1px solid rgba(227,179,65,.6);
+  border-radius:4px;color:var(--amber);font-size:10px;font-weight:700;
+  padding:3px 8px;cursor:pointer;white-space:nowrap;
+}
+#cht-clear-btn{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 8px;cursor:pointer;white-space:nowrap;
+}
 #cht-close-btn{
   background:none;border:none;color:var(--muted);
   font-size:18px;line-height:1;cursor:pointer;padding:0 2px;
-}
-#cht-timer{
-  font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums;
-  white-space:nowrap;
 }
 
 /* ── Chart area ─────────────────────────────────────────────────────────── */
@@ -681,59 +694,56 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   display:flex;flex-direction:column;
   overflow:hidden;
   cursor:default;
+  position:relative;
 }
 #cht-chart-area.draw-mode{cursor:crosshair;}
-#cht-price{flex-shrink:0;min-height:0;position:relative;overflow:hidden;}
-#cht-divider{
-  flex-shrink:0;height:1px;background:var(--bord);
+#cht-price{flex-shrink:0;min-height:0;position:relative;}
+#cht-divider{flex-shrink:0;height:1px;background:var(--bord);}
+#cht-macd{flex-shrink:0;min-height:0;position:relative;}
+
+/* Jump-to-current button (absolute inside #cht-chart-area) */
+#cht-jump-btn{
+  display:none;position:absolute;bottom:8px;right:52px;z-index:20;
+  background:rgba(14,22,35,.88);border:1px solid var(--bord);border-radius:5px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:4px 9px;cursor:pointer;white-space:nowrap;
+  letter-spacing:.04em;
 }
-#cht-macd{flex-shrink:0;min-height:0;position:relative;overflow:hidden;}
+
+/* Float-delete button (absolute inside #cht-chart-area) */
+#cht-float-del{
+  display:none;position:absolute;z-index:30;
+  background:rgba(248,81,73,.9);border:none;border-radius:50%;
+  color:#fff;font-size:14px;font-weight:700;
+  width:28px;height:28px;line-height:28px;text-align:center;
+  cursor:pointer;
+}
 
 /* ── Bottom strip ───────────────────────────────────────────────────────── */
 #cht-bottom{
-  flex-shrink:0;max-height:36vh;overflow-y:auto;
+  flex-shrink:0;
   border-top:1px solid var(--bord);
   background:var(--surf);
   padding:8px 10px;
-  display:flex;flex-direction:column;gap:10px;
+  display:flex;flex-direction:column;gap:6px;
 }
-.cht-section-lbl{
-  font-size:8px;font-weight:700;letter-spacing:.1em;
-  text-transform:uppercase;color:var(--muted);
-  margin-bottom:4px;
-}
-/* Levels */
-#cht-levels-list{display:flex;flex-direction:column;gap:4px;}
-.cht-level-row{
-  display:flex;align-items:center;gap:6px;
-  font-size:10px;font-weight:600;
-  padding:4px 6px;border-radius:5px;
-  background:var(--dim);
-}
-.cht-level-price{flex:1;font-variant-numeric:tabular-nums;}
-.cht-level-dir-up{color:var(--buy);}
-.cht-level-dir-dn{color:var(--sell);}
-.cht-del-btn{
-  background:none;border:none;color:var(--muted);
-  font-size:13px;line-height:1;cursor:pointer;padding:0 2px;
-}
-.cht-del-btn:hover{color:var(--sell);}
-/* EMA toggles */
-#cht-ema-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.cht-ema-chip{
+#cht-ind-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.cht-ind-chip{
   border-radius:4px;border:1px solid var(--bord);
   font-size:9px;font-weight:700;letter-spacing:.04em;
   padding:3px 9px;cursor:pointer;background:none;color:var(--muted);
   transition:background .15s,color .15s,border-color .15s;
 }
-.cht-ema-chip.on{
+.cht-ind-chip.on{
   background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.45);
   color:var(--buy);
 }
-/* Settings row inside chart */
-#cht-settings-row{
-  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+#cht-gh-status{
+  font-size:8px;color:var(--muted);font-weight:400;
+  min-height:10px;display:block;
 }
+
+/* ── PAT row (inside gear) ──────────────────────────────────────────────── */
 .cht-settings-inp{
   flex:1;min-width:120px;background:var(--dim);
   border:1px solid var(--bord);border-radius:4px;
@@ -744,49 +754,39 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;
   white-space:nowrap;
 }
-.cht-pat-hint{
-  font-size:8px;color:var(--muted);line-height:1.4;
-  flex-basis:100%;
-}
 </style>
 
 <!-- ── Chart overlay HTML ──────────────────────────────────────────────── -->
 <div id="cht-overlay">
 
-  <!-- Top bar -->
   <div id="cht-topbar">
     <span id="cht-pair-lbl">—</span>
     <button class="cht-tf active" id="cht-tf-D1" onclick="setChtTf('D1')">D1</button>
     <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
     <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
     <span id="cht-timer"></span>
-    <button id="cht-draw-btn" onclick="chtToggleDrawMode()">＋ Level</button>
+    <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
+    <button id="cht-set-btn"   onclick="chtCommitStaging()">Set</button>
+    <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
     <button id="cht-close-btn" onclick="closeChart()">✕</button>
   </div>
 
-  <!-- Chart panes -->
   <div id="cht-chart-area">
     <div id="cht-price"></div>
     <div id="cht-divider"></div>
     <div id="cht-macd"></div>
+    <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
+    <button id="cht-float-del" onclick="chtDeleteSelectedLevel()">✕</button>
   </div>
 
-  <!-- Bottom: levels + EMA toggles -->
   <div id="cht-bottom">
-
-    <div>
-      <div class="cht-section-lbl">Levels  <span id="cht-gh-status" style="font-size:8px;color:var(--muted);font-weight:400;"></span></div>
-      <div id="cht-levels-list"></div>
+    <div id="cht-ind-row">
+      <button class="cht-ind-chip on" id="cht-ind-ema200" onclick="chtToggleInd('ema200')">EMA 200</button>
+      <button class="cht-ind-chip on" id="cht-ind-ema50"  onclick="chtToggleInd('ema50')">EMA 50</button>
+      <button class="cht-ind-chip on" id="cht-ind-bb"     onclick="chtToggleInd('bb')">BB</button>
+      <button class="cht-ind-chip on" id="cht-ind-macd"   onclick="chtToggleInd('macd')">MACD</button>
     </div>
-
-    <div>
-      <div class="cht-section-lbl">EMA Alerts</div>
-      <div id="cht-ema-row">
-        <button class="cht-ema-chip" id="cht-ema200" onclick="chtToggleEma('ema200')">EMA 200</button>
-        <button class="cht-ema-chip" id="cht-ema50"  onclick="chtToggleEma('ema50')">EMA 50</button>
-      </div>
-    </div>
-
+    <span id="cht-gh-status"></span>
   </div>
 </div>
 
@@ -797,10 +797,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 // ════════════════════════════════════════════════════════════════════════
 
 const CHT_LA_KEY  = 'fsb_la_v1';
-const CHT_EA_KEY  = 'fsb_ea_v1';
 const CHT_PAT_KEY = 'fsb_gh_pat';
+const CHT_IND_KEY = 'fsb_ind_v1';
 const CHT_LA_PATH = 'data/level_alerts.json';
-const CHT_EA_PATH = 'data/ema_alerts.json';
+
+const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true };
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let _chtPair      = null;
@@ -808,20 +809,50 @@ let _chtTf        = 'H4';
 let _chtInst      = null;
 let _chtMacdInst  = null;
 let _chtCandles   = null;
-let _chtDrawMode  = false;
-let _chtAlertRefs = [];
 let _chtPriceLine = null;
-let _chtPointerMoved = false;
+let _chtAlertRefs = [];
 let _chtOhlcvCache = {};
 let _chtTimerInt  = null;
+let _chtIndState  = null;
+
+// Drawing state
+let _chtDrawMode    = false;
+let _chtStagingLine = null;
+let _chtStagingPrice= null;
+let _chtSelectedId  = null;
+let _chtDragging    = false;
+let _chtMouseDown   = false;
+let _chtLongTimer   = null;
+let _chtDrawInited  = false;
 
 // ── localStorage helpers ──────────────────────────────────────────────────────
 const laLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY) || '[]'); } catch { return []; } };
 const laSave = a  => localStorage.setItem(CHT_LA_KEY, JSON.stringify(a));
-const eaLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_EA_KEY) || '{}'); } catch { return {}; } };
-const eaSave = o  => localStorage.setItem(CHT_EA_KEY, JSON.stringify(o));
 
-// ── GitHub PAT settings ───────────────────────────────────────────────────────
+// ── Indicator state ───────────────────────────────────────────────────────────
+function chtLoadIndState() {
+  try { _chtIndState = { ...CHT_IND_DEFAULTS, ...JSON.parse(localStorage.getItem(CHT_IND_KEY) || '{}') }; }
+  catch { _chtIndState = { ...CHT_IND_DEFAULTS }; }
+}
+function chtSaveIndState() { localStorage.setItem(CHT_IND_KEY, JSON.stringify(_chtIndState)); }
+
+function chtUpdateIndChips() {
+  ['ema200','ema50','bb','macd'].forEach(k => {
+    const btn = document.getElementById('cht-ind-' + k);
+    if (btn) btn.classList.toggle('on', !!_chtIndState[k]);
+  });
+}
+
+function chtToggleInd(key) {
+  if (!_chtIndState) return;
+  _chtIndState[key] = !_chtIndState[key];
+  chtSaveIndState();
+  chtUpdateIndChips();
+  chtSetPaneSizes();
+  _chtLoadAndRender();
+}
+
+// ── GitHub PAT ────────────────────────────────────────────────────────────────
 function chtSavePat() {
   const v = document.getElementById('cht-pat-inp').value.trim();
   if (!v) return;
@@ -841,8 +872,13 @@ function chtSetGhStatus(msg) {
   el.textContent = msg;
   setTimeout(() => { el.textContent = ''; }, 3000);
 }
+function chtUpdatePatPlaceholder() {
+  const inp = document.getElementById('cht-pat-inp');
+  if (!inp) return;
+  inp.placeholder = localStorage.getItem(CHT_PAT_KEY) ? 'PAT saved ✓ (enter new to replace)' : 'paste GitHub PAT…';
+}
 
-// ── GitHub push helper ────────────────────────────────────────────────────────
+// ── GitHub push ───────────────────────────────────────────────────────────────
 async function chtPushToGitHub(ghPath, data) {
   const pat = localStorage.getItem(CHT_PAT_KEY);
   if (!pat) { chtSetGhStatus('No PAT — saved locally only'); return; }
@@ -861,27 +897,43 @@ async function chtPushToGitHub(ghPath, data) {
       headers: { 'Authorization': `token ${pat}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
       body: JSON.stringify(body)
     });
-    if (r.ok) { chtSetGhStatus('Synced to GitHub ✓'); }
-    else      { const j = await r.json(); console.warn('GitHub push failed:', j); chtSetGhStatus('GitHub push failed'); }
-  } catch(e) { console.warn('GitHub push error:', e); chtSetGhStatus('GitHub push error'); }
+    if (r.ok) { chtSetGhStatus('Synced ✓'); }
+    else { const j = await r.json(); console.warn('GitHub push failed:', j); chtSetGhStatus('Push failed'); }
+  } catch(e) { console.warn('GitHub push error:', e); chtSetGhStatus('Push error'); }
 }
 
-// ── Open / close chart ────────────────────────────────────────────────────────
+// ── Pane sizing ───────────────────────────────────────────────────────────────
 function chtSetPaneSizes() {
-  const h = document.getElementById('cht-chart-area').clientHeight;
+  if (!_chtIndState) return;
+  const h      = document.getElementById('cht-chart-area').clientHeight;
   if (!h) return;
-  document.getElementById('cht-price').style.height = Math.floor(h * 0.65) + 'px';
-  document.getElementById('cht-macd').style.height  = Math.floor(h * 0.35) + 'px';
+  const showM  = _chtIndState.macd;
+  const priceEl = document.getElementById('cht-price');
+  const macdEl  = document.getElementById('cht-macd');
+  const divEl   = document.getElementById('cht-divider');
+  if (showM) {
+    priceEl.style.height = Math.floor(h * 0.65) + 'px';
+    macdEl.style.height  = Math.floor(h * 0.35) + 'px';
+    macdEl.style.display = '';
+    if (divEl) divEl.style.display = '';
+  } else {
+    priceEl.style.height = h + 'px';
+    macdEl.style.height  = '0';
+    macdEl.style.display = 'none';
+    if (divEl) divEl.style.display = 'none';
+  }
 }
 
+// ── Open / close ──────────────────────────────────────────────────────────────
 function openChart(pair) {
   _chtPair = pair;
   _chtTf   = 'H4';
+  chtLoadIndState();
   document.getElementById('cht-pair-lbl').textContent = pair;
   document.getElementById('cht-overlay').classList.add('open');
   ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === _chtTf));
+  chtUpdateIndChips();
   chtUpdatePatPlaceholder();
-  chtRenderEmaToggles();
   chtStartTimer();
   requestAnimationFrame(() => {
     chtSetPaneSizes();
@@ -890,19 +942,23 @@ function openChart(pair) {
 }
 
 function closeChart() {
+  _chtRemoveStaging();
+  _chtHideFloatDel();
   document.getElementById('cht-overlay').classList.remove('open');
-  _chtPair = null;
   _chtDrawMode = false;
-  document.getElementById('cht-chart-area').classList.remove('draw-mode');
   document.getElementById('cht-draw-btn').classList.remove('active');
+  document.getElementById('cht-set-btn').style.display = 'none';
   _chtDestroyCharts();
+  _chtPair = null;
   if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
 }
 
 function _chtDestroyCharts() {
-  _chtAlertRefs = [];
-  _chtPriceLine = null;
-  _chtCandles   = null;
+  _chtAlertRefs  = [];
+  _chtPriceLine  = null;
+  _chtCandles    = null;
+  _chtStagingLine = null;
+  _chtStagingPrice = null;
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
@@ -920,10 +976,10 @@ function chtStartTimer() {
   function tick() {
     const el = document.getElementById('cht-timer');
     if (!el) return;
-    const secs = { D1: 86400, H4: 14400, H1: 3600 }[_chtTf] || 3600;
+    const secs = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
     const left = secs - (Math.floor(Date.now() / 1000) % secs);
     const h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
-    const p = n => String(n).padStart(2, '0');
+    const p = n => String(n).padStart(2,'0');
     el.textContent = h > 0 ? `${h}:${p(m)}:${p(s)}` : `${p(m)}:${p(s)}`;
     el.style.color = left <= 60 ? 'var(--sell)' : 'var(--muted)';
   }
@@ -991,23 +1047,31 @@ function chtBB(ohlcv, period=20, mult=2) {
     const sl   = closes.slice(i-period+1, i+1);
     const mean = sl.reduce((a,b)=>a+b,0) / period;
     const std  = Math.sqrt(sl.reduce((a,b)=>a+(b-mean)**2, 0) / period);
-    out.push({ time: ohlcv[i].time, upper: mean+mult*std, middle: mean, lower: mean-mult*std });
+    out.push({ time:ohlcv[i].time, upper:mean+mult*std, middle:mean, lower:mean-mult*std });
   }
   return out;
 }
 
 function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
   if (ohlcv.length < slow + sig) return [];
-  const closes  = ohlcv.map(d => d.close);
-  const ema12   = chtEMA(closes, fast);
-  const ema26   = chtEMA(closes, slow);
-  const macdLn  = closes.map((_, i) => ema12[i] - ema26[i]);
-  const signal  = chtEMA(macdLn, sig);
-  const start   = slow + sig - 2;
+  const closes = ohlcv.map(d => d.close);
+  const ema12  = chtEMA(closes, fast);
+  const ema26  = chtEMA(closes, slow);
+  const macdLn = closes.map((_, i) => ema12[i] - ema26[i]);
+  const signal = chtEMA(macdLn, sig);
+  const start  = slow + sig - 2;
   return ohlcv.slice(start).map((bar, i) => {
     const idx = start + i;
-    return { time: bar.time, macd: macdLn[idx], signal: signal[idx], histogram: macdLn[idx] - signal[idx] };
+    return { time:bar.time, macd:macdLn[idx], signal:signal[idx], histogram:macdLn[idx]-signal[idx] };
   });
+}
+
+// ── MACD offset helper (Forex1212 approach) ───────────────────────────────────
+function _computeSubOffset(subFirstTs, ohlcv) {
+  if (!ohlcv || ohlcv.length < 2) return 0;
+  const barDur = ohlcv[1].time - ohlcv[0].time;
+  if (!barDur) return 0;
+  return Math.round((subFirstTs - ohlcv[0].time) / barDur);
 }
 
 // ── Chart render ──────────────────────────────────────────────────────────────
@@ -1017,14 +1081,16 @@ function _chtRender(pair, tf, ohlcv) {
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
-  // Read clientHeight now to force a layout flush — ensures heights set by
-  // chtSetPaneSizes are resolved before LightweightCharts reads them
+  // Force layout flush — ensures chtSetPaneSizes heights are resolved
   const priceH  = priceEl.clientHeight || 300;
   const macdH   = macdEl.clientHeight  || 140;
   priceEl.innerHTML = '';
   macdEl.innerHTML  = '';
-  const isJpy   = pair.includes('JPY');
-  const priceFmt = { type:'price', precision: isJpy?3:5, minMove: isJpy?0.001:0.00001 };
+
+  const isJpy    = pair.includes('JPY');
+  const dec      = isJpy ? 3 : 5;
+  const priceFmt = { type:'price', precision:dec, minMove:isJpy?0.001:0.00001 };
+  const ind      = _chtIndState || CHT_IND_DEFAULTS;
 
   const chartOpts = (el, height, showTime) => ({
     width:  el.clientWidth || window.innerWidth,
@@ -1037,218 +1103,382 @@ function _chtRender(pair, tf, ohlcv) {
     handleScroll: true, handleScale: true,
   });
 
-  const chart   = LightweightCharts.createChart(priceEl, chartOpts(priceEl, priceH, true));
-  _chtInst      = chart;
+  const chart = LightweightCharts.createChart(priceEl, chartOpts(priceEl, priceH, true));
+  _chtInst = chart;
+
   const candles = chart.addCandlestickSeries({
     upColor:'rgba(0,220,55,.15)', downColor:'rgba(248,81,73,.15)',
     borderUpColor:'rgba(0,220,55,.8)', borderDownColor:'rgba(248,81,73,.8)',
     wickUpColor:'rgba(0,220,55,.5)',   wickDownColor:'rgba(248,81,73,.5)',
-    priceLineVisible:false, lastValueVisible:false, priceFormat: priceFmt,
+    priceLineVisible:false, lastValueVisible:false, priceFormat:priceFmt,
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
 
   const closes = ohlcv.map(d => d.close);
 
-  const e200 = chtEMA(closes, 200);
-  chart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-    .setData(ohlcv.map((d,i) => ({ time:d.time, value:e200[i] })));
+  // EMA 200 — dim white
+  if (ind.ema200) {
+    const e200 = chtEMA(closes, 200);
+    chart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(ohlcv.map((d,i) => ({ time:d.time, value:e200[i] })));
+  }
 
-  const e50 = chtEMA(closes, 50);
-  chart.addLineSeries({ color:'#00dc37', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-    .setData(ohlcv.map((d,i) => ({ time:d.time, value:e50[i] })));
+  // EMA 50 — blue
+  if (ind.ema50) {
+    const e50 = chtEMA(closes, 50);
+    chart.addLineSeries({ color:'#58a6ff', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(ohlcv.map((d,i) => ({ time:d.time, value:e50[i] })));
+  }
 
-  const bb    = chtBB(ohlcv);
-  const bbCol = 'rgba(87,106,125,.55)';
-  chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-    .setData(bb.map(d => ({ time:d.time, value:d.upper })));
-  chart.addLineSeries({ color:bbCol, lineWidth:1, lineStyle:2, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-    .setData(bb.map(d => ({ time:d.time, value:d.middle })));
-  chart.addLineSeries({ color:bbCol, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-    .setData(bb.map(d => ({ time:d.time, value:d.lower })));
+  // Bollinger Bands
+  if (ind.bb) {
+    const bb = chtBB(ohlcv);
+    const bbC = 'rgba(87,106,125,.55)';
+    chart.addLineSeries({ color:bbC, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.upper})));
+    chart.addLineSeries({ color:bbC, lineWidth:1, lineStyle:2, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.middle})));
+    chart.addLineSeries({ color:bbC, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.lower})));
+  }
 
+  // Committed level lines (grey dotted)
   _chtAlertRefs = [];
   laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
     try {
       const pl = candles.createPriceLine({
-        price: a.price, color:'rgba(227,179,65,.75)', lineWidth:1,
-        lineStyle: LightweightCharts.LineStyle.Dotted,
+        price:a.price, color:'rgba(139,148,158,0.65)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
       _chtAlertRefs.push({ id:a.id, priceLine:pl, price:a.price });
     } catch(e) {}
   });
 
+  // Live price line — dim grey
   const lp = _livePrice[pair];
   if (lp) {
     try {
       _chtPriceLine = candles.createPriceLine({
-        price:lp, color:'#e3b341', lineWidth:1,
-        lineStyle: LightweightCharts.LineStyle.Dashed,
+        price:lp, color:'rgba(139,148,158,0.5)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dashed,
         axisLabelVisible:true, title:''
       });
     } catch(e) {}
   }
 
-  const macdChart = LightweightCharts.createChart(macdEl, {
-    ...chartOpts(macdEl, macdH, false),
-    crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
-    rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.1, bottom:0.1 } },
-    timeScale: { visible:false },
-    handleScroll: false, handleScale: false,
-  });
-  _chtMacdInst = macdChart;
+  // ── MACD pane ────────────────────────────────────────────────────────────────
+  const macdData   = chtMACD(ohlcv);
+  const _subOffset = macdData.length ? _computeSubOffset(macdData[0].time, ohlcv) : 0;
 
-  const macdData = chtMACD(ohlcv);
-  if (macdData.length) {
+  if (ind.macd && macdData.length) {
+    const macdChart = LightweightCharts.createChart(macdEl, {
+      ...chartOpts(macdEl, macdH, false),
+      crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
+      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.1, bottom:0.1 } },
+      timeScale: { visible:false },
+      handleScroll: false, handleScale: false,
+    });
+    _chtMacdInst = macdChart;
+
     macdChart.addHistogramSeries({ priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.histogram, color: d.histogram >= 0 ? 'rgba(0,220,55,.55)' : 'rgba(248,81,73,.55)' })));
-    macdChart.addLineSeries({ color:'#00dc37', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+    macdChart.addLineSeries({ color:'#58a6ff', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.macd })));
-    macdChart.addLineSeries({ color:'#576a7d', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+    macdChart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
       .setData(macdData.map(d => ({ time:d.time, value:d.signal })));
+
+    new ResizeObserver(() => {
+      if (_chtMacdInst) _chtMacdInst.applyOptions({ width:macdEl.clientWidth, height:macdEl.clientHeight });
+    }).observe(macdEl);
   }
 
+  // ── Time-scale sync (price → MACD) with offset ────────────────────────────────
+  let _syncRaf = null;
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
-    if (range && _chtMacdInst) { try { _chtMacdInst.timeScale().setVisibleLogicalRange(range); } catch(e){} }
+    // Jump button: show when scrolled back more than 5 bars from the right edge
+    const jb = document.getElementById('cht-jump-btn');
+    if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? '' : 'none';
+
+    if (!range || !_chtMacdInst) return;
+    if (_syncRaf) cancelAnimationFrame(_syncRaf);
+    _syncRaf = requestAnimationFrame(() => {
+      try {
+        _chtMacdInst.timeScale().setVisibleLogicalRange({
+          from: range.from - _subOffset,
+          to:   range.to   - _subOffset
+        });
+      } catch(e) {}
+    });
   });
 
   new ResizeObserver(() => {
-    if (_chtInst)     _chtInst.applyOptions({ width: priceEl.clientWidth, height: priceEl.clientHeight });
-    if (_chtMacdInst) _chtMacdInst.applyOptions({ width: macdEl.clientWidth, height: macdEl.clientHeight });
+    if (_chtInst) _chtInst.applyOptions({ width:priceEl.clientWidth, height:priceEl.clientHeight });
   }).observe(priceEl);
 
-  chtRenderLevelsList();
+  // Set initial visible range (last 150 bars)
+  const visN = Math.min(150, ohlcv.length);
+  chart.timeScale().setVisibleLogicalRange({ from:ohlcv.length - visN, to:ohlcv.length + 2 });
+
+  // Initial MACD sync after layout settles
+  setTimeout(() => {
+    if (_chtMacdInst) {
+      try {
+        const r = chart.timeScale().getVisibleLogicalRange();
+        if (r) _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset, to:r.to - _subOffset });
+      } catch(e) {}
+    }
+  }, 120);
+
+  // Attach drawing listeners (once only per page load)
+  _chtInitDrawListeners();
 }
 
-// ── Draw mode ─────────────────────────────────────────────────────────────────
+// ── Jump to current ───────────────────────────────────────────────────────────
+function chtJumpToCurrent() {
+  if (!_chtInst || !_chtPair || !_chtTf) return;
+  const ohlcv = _chtOhlcvCache[_chtPair]?.[_chtTf];
+  if (!ohlcv) return;
+  const visN = Math.min(150, ohlcv.length);
+  _chtInst.timeScale().setVisibleLogicalRange({ from:ohlcv.length - visN, to:ohlcv.length + 2 });
+}
+
+// ── Drawing system ────────────────────────────────────────────────────────────
 function chtToggleDrawMode() {
   _chtDrawMode = !_chtDrawMode;
-  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtDrawMode);
   document.getElementById('cht-draw-btn').classList.toggle('active', _chtDrawMode);
+  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtDrawMode);
+  if (!_chtDrawMode) _chtRemoveStaging();
 }
 
-(function() {
-  let _pStart = null;
-  document.addEventListener('pointerdown', e => {
-    if (!_chtDrawMode) return;
-    const area = document.getElementById('cht-chart-area');
-    if (!area || !area.contains(e.target)) return;
-    _pStart = { x: e.clientX, y: e.clientY };
-    _chtPointerMoved = false;
-  });
-  document.addEventListener('pointermove', e => {
-    if (!_pStart) return;
-    if (Math.abs(e.clientX - _pStart.x) > 6 || Math.abs(e.clientY - _pStart.y) > 6) _chtPointerMoved = true;
-  });
-  document.addEventListener('pointerup', e => {
-    if (!_chtDrawMode || !_pStart || _chtPointerMoved) { _pStart = null; return; }
-    const area = document.getElementById('cht-chart-area');
-    if (!area || !area.contains(e.target)) { _pStart = null; return; }
-    const priceEl = document.getElementById('cht-price');
-    if (!priceEl || !priceEl.contains(e.target)) { _pStart = null; return; }
-    if (!_chtCandles) { _pStart = null; return; }
-    const rect  = priceEl.getBoundingClientRect();
-    const yOff  = e.clientY - rect.top;
-    const price = _chtCandles.coordinateToPrice(yOff);
-    if (price != null) chtCommitLevel(parseFloat(price.toFixed(_chtPair?.includes('JPY') ? 3 : 5)));
-    chtToggleDrawMode();
-    _pStart = null;
-  });
-})();
+function _chtSetStaging(price) {
+  if (!_chtCandles || price == null) return;
+  _chtStagingPrice = price;
+  const title = price.toFixed(_chtPair?.includes('JPY') ? 3 : 5);
+  if (_chtStagingLine) {
+    try { _chtStagingLine.applyOptions({ price, title }); }
+    catch(e) { _chtStagingLine = null; }
+  }
+  if (!_chtStagingLine) {
+    try {
+      _chtStagingLine = _chtCandles.createPriceLine({
+        price, color:'rgba(227,179,65,0.85)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title
+      });
+    } catch(e) {}
+  }
+  document.getElementById('cht-set-btn').style.display = '';
+}
 
-// ── Level management ──────────────────────────────────────────────────────────
-function chtCommitLevel(price) {
-  if (!_chtPair || price == null) return;
-  const lp = _livePrice[_chtPair];
+function _chtRemoveStaging() {
+  if (_chtStagingLine && _chtCandles) {
+    try { _chtCandles.removePriceLine(_chtStagingLine); } catch(e) {}
+  }
+  _chtStagingLine  = null;
+  _chtStagingPrice = null;
+  document.getElementById('cht-set-btn').style.display = 'none';
+}
+
+function chtCommitStaging() {
+  if (_chtStagingPrice == null || !_chtPair) return;
+  const price = _chtStagingPrice;
+  const lp    = _livePrice[_chtPair];
   const direction = (lp != null) ? (lp < price ? 'above' : 'below') : 'above';
-  const id = Date.now();
+  const id    = Date.now();
   const alerts = laLoad();
-  alerts.push({ id, pair: _chtPair, price, direction, active: true });
+  alerts.push({ id, pair:_chtPair, price, direction, active:true });
   laSave(alerts);
+  _chtRemoveStaging();
+  // Add committed grey priceLine
   if (_chtCandles) {
     try {
       const pl = _chtCandles.createPriceLine({
-        price, color:'rgba(227,179,65,.75)', lineWidth:1,
-        lineStyle: LightweightCharts.LineStyle.Dotted,
+        price, color:'rgba(139,148,158,0.65)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
       _chtAlertRefs.push({ id, priceLine:pl, price });
     } catch(e) {}
   }
-  chtRenderLevelsList();
+  _chtDrawMode = false;
+  document.getElementById('cht-draw-btn').classList.remove('active');
+  document.getElementById('cht-chart-area').classList.remove('draw-mode');
   chtPushToGitHub(CHT_LA_PATH, alerts);
 }
 
-function chtDeleteLevel(id) {
-  const alerts = laLoad().map(a => a.id === id ? {...a, active:false} : a);
+function chtClearLevels() {
+  if (!_chtPair) return;
+  _chtRemoveStaging();
+  _chtHideFloatDel();
+  const alerts = laLoad().map(a => a.pair === _chtPair ? { ...a, active:false } : a);
+  laSave(alerts);
+  _chtAlertRefs.forEach(({ priceLine }) => {
+    if (_chtCandles) try { _chtCandles.removePriceLine(priceLine); } catch(e) {}
+  });
+  _chtAlertRefs = [];
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtDeleteSelectedLevel() {
+  if (_chtSelectedId == null) return;
+  const id    = _chtSelectedId;
+  const alerts = laLoad().map(a => a.id === id ? { ...a, active:false } : a);
   laSave(alerts);
   const ref = _chtAlertRefs.find(r => r.id === id);
-  if (ref && _chtCandles) { try { _chtCandles.removePriceLine(ref.priceLine); } catch(e){} }
+  if (ref && _chtCandles) try { _chtCandles.removePriceLine(ref.priceLine); } catch(e) {}
   _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
-  chtRenderLevelsList();
+  _chtHideFloatDel();
   chtPushToGitHub(CHT_LA_PATH, alerts);
 }
 
-function chtRenderLevelsList() {
-  const el = document.getElementById('cht-levels-list');
-  if (!el) return;
-  const active = laLoad().filter(a => a.pair === _chtPair && a.active);
-  if (!active.length) {
-    el.innerHTML = '';
-    return;
+// ── Float-del helpers ─────────────────────────────────────────────────────────
+function _chtShowFloatDel(id, clientX, clientY) {
+  _chtSelectedId = id;
+  const el = document.getElementById('cht-float-del');
+  const ca = document.getElementById('cht-chart-area');
+  if (!el || !ca) return;
+  const ar = ca.getBoundingClientRect();
+  const x  = Math.max(4, Math.min(ar.width  - 32, clientX - ar.left - 14));
+  const y  = Math.max(4, Math.min(ar.height - 32, clientY - ar.top  - 14));
+  el.style.left    = x + 'px';
+  el.style.top     = y + 'px';
+  el.style.display = 'flex';
+  el.style.alignItems = 'center';
+  el.style.justifyContent = 'center';
+}
+function _chtHideFloatDel() {
+  _chtSelectedId = null;
+  const el = document.getElementById('cht-float-del');
+  if (el) el.style.display = 'none';
+}
+
+// ── Coord helpers ─────────────────────────────────────────────────────────────
+function _chtBounds() {
+  const el = document.getElementById('cht-price');
+  return el ? el.getBoundingClientRect() : null;
+}
+function _chtToPrice(clientY) {
+  const r = _chtBounds();
+  if (!r || !_chtCandles) return null;
+  try { return _chtCandles.coordinateToPrice(clientY - r.top); } catch(e) { return null; }
+}
+function _chtPriceToY(price) {
+  const r = _chtBounds();
+  if (!r || !_chtCandles) return null;
+  try { const c = _chtCandles.priceToCoordinate(price); return c != null ? c + r.top : null; } catch(e) { return null; }
+}
+function _chtNearCommitted(clientY) {
+  for (const ref of _chtAlertRefs) {
+    const ly = _chtPriceToY(ref.price);
+    if (ly != null && Math.abs(clientY - ly) < 20) return ref;
   }
-  el.innerHTML = active.map(a => {
-    const isUp  = a.direction === 'above';
-    const cls   = isUp ? 'cht-level-dir-up' : 'cht-level-dir-dn';
-    const arrow = isUp ? '↑' : '↓';
-    const d     = _chtPair?.includes('JPY') ? 3 : 5;
-    return `<div class="cht-level-row">
-      <span class="cht-level-price ${cls}">${arrow} ${a.price.toFixed(d)}</span>
-      <button class="cht-del-btn" onclick="chtDeleteLevel(${a.id})">✕</button>
-    </div>`;
-  }).join('');
+  return null;
+}
+function _chtNearStaging(clientY) {
+  if (_chtStagingPrice == null) return false;
+  const ly = _chtPriceToY(_chtStagingPrice);
+  return ly != null && Math.abs(clientY - ly) < 22;
 }
 
-// ── EMA alert toggles ─────────────────────────────────────────────────────────
-function chtRenderEmaToggles() {
-  if (!_chtPair) return;
-  const ea = eaLoad();
-  const cfg = ea[_chtPair] || {};
-  document.getElementById('cht-ema200').classList.toggle('on', !!cfg.ema200);
-  document.getElementById('cht-ema50').classList.toggle('on',  !!cfg.ema50);
+// ── Input listeners (attached once) ──────────────────────────────────────────
+function _chtInitDrawListeners() {
+  if (_chtDrawInited) return;
+  _chtDrawInited = true;
+
+  let _ts = { x:0, y:0, t:0 };
+
+  // ── Touch ──────────────────────────────────────────────────────────────────
+  document.addEventListener('touchstart', function(e) {
+    if (!_chtInst) return;
+    const t = e.touches[0];
+    _ts = { x:t.clientX, y:t.clientY, t:Date.now() };
+    if (_chtDrawMode) return;
+    // Long-press on staging line → drag
+    if (_chtNearStaging(t.clientY)) {
+      e.preventDefault();
+      _chtLongTimer = setTimeout(() => {
+        _chtLongTimer = null;
+        if (navigator.vibrate) navigator.vibrate(30);
+        _chtDragging = true;
+      }, 300);
+    }
+  }, true);
+
+  document.addEventListener('touchmove', function(e) {
+    if (_chtLongTimer && (Math.abs(e.touches[0].clientX - _ts.x) > 8 || Math.abs(e.touches[0].clientY - _ts.y) > 8)) {
+      clearTimeout(_chtLongTimer); _chtLongTimer = null;
+    }
+    if (_chtDragging) {
+      const p = _chtToPrice(e.touches[0].clientY);
+      if (p != null) _chtSetStaging(p);
+      e.preventDefault();
+    }
+  }, { passive:false, capture:true });
+
+  document.addEventListener('touchend', function(e) {
+    if (_chtLongTimer) { clearTimeout(_chtLongTimer); _chtLongTimer = null; }
+    if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    if (_chtDragging) { _chtDragging = false; return; }
+    _chtHideFloatDel();
+    const t  = e.changedTouches[0];
+    const dx = Math.abs(t.clientX - _ts.x), dy = Math.abs(t.clientY - _ts.y);
+    const isTap = dx < 12 && dy < 12 && (Date.now() - _ts.t) < 500;
+    if (!isTap) return;
+    const r = _chtBounds();
+    if (!r) return;
+    const inChart = t.clientX >= r.left && t.clientX <= r.right && t.clientY >= r.top && t.clientY <= r.bottom;
+    if (_chtDrawMode && inChart) {
+      const p = _chtToPrice(t.clientY);
+      if (p != null) _chtSetStaging(p);
+      _chtDrawMode = false;
+      document.getElementById('cht-draw-btn').classList.remove('active');
+      document.getElementById('cht-chart-area').classList.remove('draw-mode');
+      return;
+    }
+    if (!inChart) return;
+    const ref = _chtNearCommitted(t.clientY);
+    if (ref) _chtShowFloatDel(ref.id, t.clientX, t.clientY);
+  }, true);
+
+  // ── Mouse ──────────────────────────────────────────────────────────────────
+  document.addEventListener('mousedown', function(e) {
+    if (!_chtInst || _chtDrawMode) return;
+    if (_chtNearStaging(e.clientY)) _chtMouseDown = true;
+  }, true);
+  document.addEventListener('mousemove', function(e) {
+    if (!_chtMouseDown) return;
+    const p = _chtToPrice(e.clientY);
+    if (p != null) _chtSetStaging(p);
+    e.preventDefault();
+  }, { passive:false, capture:true });
+  document.addEventListener('mouseup', function() { _chtMouseDown = false; }, true);
+
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    _chtHideFloatDel();
+    if (!_chtDrawMode || !_chtInst) return;
+    const r = _chtBounds();
+    if (!r) return;
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+    const p = _chtToPrice(e.clientY);
+    if (p != null) _chtSetStaging(p);
+    _chtDrawMode = false;
+    document.getElementById('cht-draw-btn').classList.remove('active');
+    document.getElementById('cht-chart-area').classList.remove('draw-mode');
+  }, true);
 }
 
-function chtToggleEma(which) {
-  if (!_chtPair) return;
-  const ea  = eaLoad();
-  const cfg = ea[_chtPair] || {};
-  cfg[which] = !cfg[which];
-  ea[_chtPair] = cfg;
-  eaSave(ea);
-  chtRenderEmaToggles();
-  chtPushToGitHub(CHT_EA_PATH, ea);
-}
-
-// ── Settings helpers ──────────────────────────────────────────────────────────
-function chtUpdatePatPlaceholder() {
-  const inp = document.getElementById('cht-pat-inp');
-  if (!inp) return;
-  inp.placeholder = localStorage.getItem(CHT_PAT_KEY) ? 'PAT saved ✓ (enter new to replace)' : 'paste GitHub PAT…';
-}
-
-// ── Live price update (wraps existing updatePairPcts) ─────────────────────────
+// ── Live price update ─────────────────────────────────────────────────────────
 const _origUpdatePairPcts = updatePairPcts;
 updatePairPcts = function(pair) {
   _origUpdatePairPcts(pair);
   if (_chtPair === pair && _chtCandles && _livePrice[pair]) {
     const lp = _livePrice[pair];
     try {
-      if (_chtPriceLine) { _chtPriceLine.applyOptions({ price: lp }); }
+      if (_chtPriceLine) { _chtPriceLine.applyOptions({ price:lp }); }
       else {
         _chtPriceLine = _chtCandles.createPriceLine({
-          price:lp, color:'#e3b341', lineWidth:1,
-          lineStyle: LightweightCharts.LineStyle.Dashed,
+          price:lp, color:'rgba(139,148,158,0.5)', lineWidth:1,
+          lineStyle:LightweightCharts.LineStyle.Dashed,
           axisLabelVisible:true, title:''
         });
       }
@@ -1261,8 +1491,7 @@ function chtAttachLongPress() {
   document.querySelectorAll('#pair-grid .block').forEach(el => {
     if (el.dataset.chtLp) return;
     el.dataset.chtLp = '1';
-    let _lpTimer = null;
-    let _lpMoved = false;
+    let _lpTimer = null, _lpMoved = false;
     el.addEventListener('pointerdown', e => {
       _lpMoved = false;
       _lpTimer = setTimeout(() => {
@@ -1284,7 +1513,7 @@ function chtAttachLongPress() {
   const grid = document.getElementById('pair-grid');
   if (!grid) return;
   const obs = new MutationObserver(chtAttachLongPress);
-  obs.observe(grid, { childList: true });
+  obs.observe(grid, { childList:true });
 })();
 </script>
 </body>
