@@ -1038,20 +1038,36 @@ async function _chtLoadAndRender() {
   const interval = { D1:'1day', H4:'4h', H1:'1h' }[tf];
   const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(sym)}&interval=${interval}&outputsize=5000&order=ASC&type=price&apikey=${key}`;
 
-  try {
-    const r    = await fetch(url);
-    const json = await r.json();
-    if (!json.values || !json.values.length) throw new Error(json.message || 'no data');
-    const ohlcv = json.values.map(v => ({
-      time:  Math.floor(new Date(v.datetime + (v.datetime.length === 10 ? 'T00:00:00Z' : 'Z')).getTime() / 1000),
-      open:  +v.open, high: +v.high, low: +v.low, close: +v.close
-    }));
-    if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
-    _chtOhlcvCache[pair][tf] = ohlcv;
-    if (_chtPair === pair && _chtTf === tf) _chtRender(pair, tf, ohlcv);
-  } catch(e) {
+  const showStatus = msg =>
     document.getElementById('cht-price').innerHTML =
-      `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">Fetch error: ${e.message}</div>`;
+      `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">${msg}</div>`;
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const r    = await fetch(url);
+      const json = await r.json();
+      // Twelvedata rate limit returns code:429 in the JSON body
+      if (json.code === 429) {
+        const wait = 15 * attempt;
+        showStatus(`Rate limit — retrying in ${wait}s… (${attempt}/3)`);
+        await new Promise(res => setTimeout(res, wait * 1000));
+        continue;
+      }
+      if (!json.values || !json.values.length) throw new Error(json.message || 'no data');
+      const ohlcv = json.values.map(v => ({
+        time:  Math.floor(new Date(v.datetime + (v.datetime.length === 10 ? 'T00:00:00Z' : 'Z')).getTime() / 1000),
+        open:  +v.open, high: +v.high, low: +v.low, close: +v.close
+      }));
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][tf] = ohlcv;
+      if (_chtPair === pair && _chtTf === tf) _chtRender(pair, tf, ohlcv);
+      return;  // success
+    } catch(e) {
+      if (attempt === 3) {
+        document.getElementById('cht-price').innerHTML =
+          `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">Fetch error: ${e.message}</div>`;
+      }
+    }
   }
 }
 
