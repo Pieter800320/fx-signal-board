@@ -193,6 +193,34 @@
     "pair": "USDCAD",
     "price": 1.3685130596806319,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430482748,
+    "pair": "USDCAD",
+    "price": 1.3763470066869976,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430485314,
+    "pair": "USDCAD",
+    "price": 1.3657063231175322,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430487542,
+    "pair": "USDCAD",
+    "price": 1.3711955646414626,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779430614649,
+    "pair": "GBPJPY",
+    "price": 214.41718671306856,
+    "direction": "above",
     "active": true
   }
 ]
