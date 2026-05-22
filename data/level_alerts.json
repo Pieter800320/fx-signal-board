@@ -249,6 +249,13 @@
     "pair": "GBPJPY",
     "price": 215.03155102881558,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779436784327,
+    "pair": "USDCAD",
+    "price": 1.3652173197874526,
+    "direction": "above",
     "active": true
   }
 ]
