@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T16:38:44.578270+00:00",
+  "updated": "2026-05-22T16:46:16.827921+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -515,11 +515,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
@@ -530,13 +530,13 @@
     "stable": true
   },
   "news": {
-    "themes": "Iran nuclear deal negotiations and Middle East geopolitical risk driving risk sentiment and energy price volatility across FX markets.",
-    "event": "No major scheduled events today; markets await outcome of Qatar-mediated Iran talks affecting oil prices and risk currencies.",
-    "updated": "2026-05-22T16:38:44.578270+00:00"
+    "themes": "Iran geopolitical deescalation reducing energy shock risks, weighing on risk sentiment via US consumer weakness, and supporting USD carry.",
+    "event": "No high-impact events scheduled; market focus remains on Iran negotiations and Fed policy divergence with ECB.",
+    "updated": "2026-05-22T16:46:16.827921+00:00"
   },
   "analysis": {
-    "text": "GBPJPY has the most compelling setup with 85% continuation probability and strong bull bias across both D1 and H4 timeframes, perfectly aligned with the risk-on macro backdrop where safe-haven JPY weakness typically accompanies rising risk appetite despite geopolitical noise. USDCAD offers secondary interest given its 83% continuation probability and strong bull alignment across timeframes, positioning it to benefit from elevated oil prices driven by Iran tensions while the strong USD bias captures flight-to-quality flows.",
-    "updated": "2026-05-22T16:38:44.578270+00:00"
+    "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
+    "updated": "2026-05-22T16:46:16.827921+00:00"
   },
   "last_alert": "2026-05-21T18:07:23.092589+00:00"
 }
