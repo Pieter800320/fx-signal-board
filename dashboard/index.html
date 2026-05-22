@@ -1163,17 +1163,15 @@ function _chtRender(pair, tf, ohlcv) {
     } catch(e) {}
   });
 
-  // Live price line — dim white dashed, distinct from candles
-  const lp = _livePrice[pair];
-  if (lp) {
-    try {
-      _chtPriceLine = candles.createPriceLine({
-        price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
-        lineStyle:LightweightCharts.LineStyle.Dashed,
-        axisLabelVisible:true, title:''
-      });
-    } catch(e) {}
-  }
+  // Price line — always created from last close; updates to live WS price if available
+  const initPrice = _livePrice[pair] || ohlcv[ohlcv.length - 1].close;
+  try {
+    _chtPriceLine = candles.createPriceLine({
+      price:initPrice, color:'rgba(205,217,229,0.75)', lineWidth:1,
+      lineStyle:LightweightCharts.LineStyle.Dashed,
+      axisLabelVisible:true, title:''
+    });
+  } catch(e) {}
 
   // ── MACD pane ────────────────────────────────────────────────────────────────
   const macdData = chtMACD(ohlcv);
@@ -1242,20 +1240,6 @@ function _chtRender(pair, tf, ohlcv) {
   if (_chtStagingPrice !== null) {
     _chtSetStaging(_chtStagingPrice);
   }
-
-  // Price line retry: WS may not have fired yet at render time — try again after 600ms
-  setTimeout(() => {
-    if (_chtPair !== pair || !_chtCandles || _chtPriceLine) return;
-    const lp = _livePrice[pair];
-    if (!lp) return;
-    try {
-      _chtPriceLine = _chtCandles.createPriceLine({
-        price:lp, color:'rgba(205,217,229,0.75)', lineWidth:1,
-        lineStyle:LightweightCharts.LineStyle.Dashed,
-        axisLabelVisible:true, title:''
-      });
-    } catch(e) {}
-  }, 600);
 
   // Attach drawing listeners (once only per page load)
   _chtInitDrawListeners();
