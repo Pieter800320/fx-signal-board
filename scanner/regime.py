@@ -20,35 +20,36 @@ Output:
 from scanner.config import PAIRS
 
 
-def classify_regime(csm_h4: dict, pair_pills: dict, prev_regime: dict | None) -> dict:
+def classify_regime(csm: dict, pair_pills: dict, prev_regime: dict | None, tf: str = "h4") -> dict:
     """
-    csm_h4      — H4 CSM scores {cur: 0-100}
-    pair_pills  — { "EURUSD": {"h4": "bear_strong"|...|"neutral"}, ... }
+    csm         — CSM scores for the target TF {cur: 0-100}
+    pair_pills  — { "EURUSD": {"d1": "bear_strong"|..., "h4": ..., "h1": ...}, ... }
     prev_regime — previous regime dict (for stability flag)
+    tf          — timeframe to read from pair_pills: "d1" | "h4" | "h1"
     """
     # ── Vote 1: safe-haven divergence ─────────────────────────────────────────
     safe_havens = ["JPY", "CHF"]
     risk_currs  = ["AUD", "NZD", "CAD"]
 
-    sh_avg   = sum(csm_h4.get(c, 50) for c in safe_havens)  / len(safe_havens)
-    risk_avg = sum(csm_h4.get(c, 50) for c in risk_currs)   / len(risk_currs)
+    sh_avg   = sum(csm.get(c, 50) for c in safe_havens)  / len(safe_havens)
+    risk_avg = sum(csm.get(c, 50) for c in risk_currs)   / len(risk_currs)
 
     v1 = "risk_off" if sh_avg > risk_avg + 15 else \
          "risk_on"  if risk_avg > sh_avg + 15 else "mixed"
 
     # ── Vote 2: USD proxy ──────────────────────────────────────────────────────
-    usd = csm_h4.get("USD", 50)
+    usd = csm.get("USD", 50)
     non_usd_risk = ["EUR", "GBP", "AUD", "NZD"]
-    non_usd_avg  = sum(csm_h4.get(c, 50) for c in non_usd_risk) / len(non_usd_risk)
+    non_usd_avg  = sum(csm.get(c, 50) for c in non_usd_risk) / len(non_usd_risk)
 
     v2 = "risk_off" if usd > non_usd_avg + 20 else \
          "risk_on"  if non_usd_avg > usd + 20  else "mixed"
 
-    # ── Vote 3: risk basket (pill direction of risk pairs) ─────────────────────
+    # ── Vote 3: risk basket (pill direction of risk pairs at target TF) ────────
     risk_pairs = ["AUDUSD", "NZDUSD", "GBPUSD", "EURUSD", "AUDJPY", "NZDJPY"]
     bull_count = bear_count = 0
     for p in risk_pairs:
-        pill = pair_pills.get(p, {}).get("h4", "neutral")
+        pill = pair_pills.get(p, {}).get(tf, "neutral")
         if pill in ("bull", "bull_strong"):
             bull_count += 1
         elif pill in ("bear", "bear_strong"):
@@ -58,12 +59,12 @@ def classify_regime(csm_h4: dict, pair_pills: dict, prev_regime: dict | None) ->
          "risk_on"  if bull_count > bear_count + 1 else "mixed"
 
     # ── Vote 4: ranging override ───────────────────────────────────────────────
-    all_h4_pills = [
-        pair_pills.get(p, {}).get("h4", "neutral")
+    all_pills = [
+        pair_pills.get(p, {}).get(tf, "neutral")
         for p in [pair.replace("/", "") for pair in PAIRS]
     ]
-    directional = sum(1 for p in all_h4_pills if p != "neutral")
-    ranging = directional / len(all_h4_pills) < 0.40
+    directional = sum(1 for p in all_pills if p != "neutral")
+    ranging = directional / len(all_pills) < 0.40
 
     if ranging:
         return {
