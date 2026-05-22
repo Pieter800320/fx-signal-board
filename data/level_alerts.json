@@ -348,5 +348,19 @@
     "price": 0.5889273239852763,
     "direction": "above",
     "active": true
+  },
+  {
+    "id": 1779443493740,
+    "pair": "NZDUSD",
+    "price": 0.5815936397484266,
+    "direction": "below",
+    "active": true
+  },
+  {
+    "id": 1779457871614,
+    "pair": "USDCAD",
+    "price": 1.3771930184308956,
+    "direction": "above",
+    "active": true
   }
 ]
