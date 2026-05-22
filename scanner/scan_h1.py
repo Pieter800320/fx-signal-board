@@ -123,7 +123,9 @@ def main():
     now = datetime.now(timezone.utc)
 
     prev             = load_signals()
+    prev_d1_regime   = prev.get("regime_d1")
     prev_h4_regime   = prev.get("regime_h4")
+    prev_h1_regime   = prev.get("regime_h1")
     prev_regime_name = (prev_h4_regime or {}).get("regime", "Unknown")
 
     # ── 1. Fetch H1 OHLCV ────────────────────────────────────────────────────
@@ -217,12 +219,26 @@ def main():
     print("\n[7/9] Computing correlation matrix…")
     correlations = compute_correlation(ohlcv)
 
-    # ── 8. H4 Regime ──────────────────────────────────────────────────────────
-    print("\n[8/9] Computing H4 regime…")
-    regime_h4 = classify_regime(csm["h4"], pair_pills, prev_h4_regime)
+    # ── 8. D1 / H4 / H1 Regime ───────────────────────────────────────────────
+    print("\n[8/9] Computing D1 / H4 / H1 regimes…")
+    regime_d1 = classify_regime(csm["d1"], pair_pills, prev_d1_regime, tf="d1")
+    regime_h4 = classify_regime(csm["h4"], pair_pills, prev_h4_regime, tf="h4")
+    # H1 uses H4 CSM as structural backdrop; H1 pills for momentum vote
+    regime_h1 = classify_regime(csm["h4"], pair_pills, prev_h1_regime, tf="h1")
     new_regime_name = regime_h4["regime"]
-    print(f"  H4 Regime: {regime_h4['regime']} {regime_h4['confidence']} "
+
+    # Confluence: all three agree on the same non-Mixed/non-Ranging regime
+    aligned_regime = None
+    if (regime_d1["regime"] == regime_h4["regime"] == regime_h1["regime"]
+            and regime_h4["regime"] not in ("Mixed", "Ranging")):
+        aligned_regime = regime_h4["regime"]
+
+    print(f"  D1: {regime_d1['regime']} {regime_d1['confidence']}")
+    print(f"  H4: {regime_h4['regime']} {regime_h4['confidence']} "
           f"(was: {prev_regime_name})")
+    print(f"  H1: {regime_h1['regime']} {regime_h1['confidence']}")
+    if aligned_regime:
+        print(f"  ⚡ CONFLUENCE: all 3 TFs → {aligned_regime}")
 
     # ── 9. Cont. score + assemble pairs ───────────────────────────────────────
     print("\n[9/9] Computing cont. scores + assembling pairs…")
@@ -276,7 +292,9 @@ def main():
 
     out = {
         "updated":      now.isoformat(),
+        "regime_d1":    regime_d1,
         "regime_h4":    regime_h4,
+        "regime_h1":    regime_h1,
         "csm":          csm,
         "correlations": correlations,
         "pairs":        pairs_out,
@@ -308,19 +326,23 @@ def main():
     check_levels(_pair_prices, send_telegram)
     check_ema_touches(_pair_prices, _pair_emas, send_telegram)
 
-    # ── Telegram on regime transition ─────────────────────────────────────────
+    # ── Telegram on H4 regime transition ─────────────────────────────────────
     if new_regime_name != prev_regime_name and prev_regime_name != "Unknown":
         conf = regime_h4["confidence"]
+        confluence_line = (
+            f"\n⚡ <b>3-TF Confluence: {aligned_regime}</b>" if aligned_regime else
+            f"\nD1: {regime_d1['regime']} · H1: {regime_h1['regime']}"
+        )
         msg  = (
             f"{regime_emoji(new_regime_name)} <b>H4 Regime: {new_regime_name}</b> "
             f"({conf})\n"
-            f"← was {prev_regime_name}\n"
+            f"← was {prev_regime_name}"
+            f"{confluence_line}\n"
             f"Score: {regime_h4['score']}/10 · "
             f"{now.strftime('%H:%M')} UTC"
         )
         print(f"\n⚡ Regime transition → sending Telegram alert")
         send_telegram(msg)
-        # Stamp the transition time — dashboard shows glowing dot
         out["last_alert"] = now.isoformat()
         save_signals(out)
     else:
