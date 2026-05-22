@@ -9,7 +9,8 @@
   },
   "GBPUSD": {
     "ema200_side": "below",
-    "ema50_side": "above"
+    "ema50_side": "above",
+    "ema50_fired": true
   },
   "USDJPY": {
     "ema200_side": "above",
@@ -17,7 +18,8 @@
   },
   "USDCHF": {
     "ema200_side": "above",
-    "ema50_side": "below"
+    "ema50_side": "below",
+    "ema50_fired": true
   },
   "AUDUSD": {
     "ema200_side": "below",
@@ -29,7 +31,8 @@
   },
   "EURJPY": {
     "ema200_side": "below",
-    "ema50_side": "below"
+    "ema50_side": "above",
+    "ema50_fired": true
   },
   "GBPJPY": {
     "ema200_side": "above",
@@ -37,11 +40,15 @@
   },
   "AUDJPY": {
     "ema200_side": "above",
-    "ema50_side": "below"
+    "ema50_side": "above",
+    "ema200_fired": true,
+    "ema50_fired": true
   },
   "NZDJPY": {
-    "ema200_side": "below",
-    "ema50_side": "above"
+    "ema200_side": "above",
+    "ema50_side": "above",
+    "ema200_fired": true,
+    "ema50_fired": true
   },
   "CADJPY": {
     "ema200_side": "below",
