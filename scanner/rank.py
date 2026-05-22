@@ -242,7 +242,7 @@ def rank_pairs(signals):
     return sorted(results, key=lambda x: x["score"], reverse=True)
 
 
-def build_haiku_prompt(ranked, signals, news_themes="", news_event=""):
+def build_haiku_prompt(ranked, signals):
     """Build the Haiku prompt for the ranked narrative call."""
     mac      = signals.get("macro", {})
     reg_d1   = signals.get("regime_d1", {})
@@ -286,13 +286,10 @@ def build_haiku_prompt(ranked, signals, news_themes="", news_event=""):
 
     return (
         f"D1 Regime: {d1_reg} {d1_conf} | Macro: {mac_lbl} {mac_conf}\n"
-        f"Assets today: {asset_line}\n"
-        f"News: {news_themes or '—'}\n"
-        f"Next high-impact events: {news_event or '—'}\n\n"
+        f"Assets today: {asset_line}\n\n"
         "PYTHON PRE-SCORED PAIRS:\n"
         + "\n".join(pair_lines) + "\n\n"
-        "For each pair write ONE sentence: does the fundamental/macro context confirm or "
-        "challenge the technical case? Be specific — name the driver. "
-        "Then ONE final sentence flagging the biggest event risk or macro uncertainty. "
-        "Plain text only. No markdown, no asterisks, no bullet points. Max 4 lines total."
+        "For each pair write exactly ONE sentence (max 12 words): does the macro context "
+        "confirm or challenge the setup? Name the specific driver. "
+        "Plain text only. No markdown, no bullets, no labels."
     )
