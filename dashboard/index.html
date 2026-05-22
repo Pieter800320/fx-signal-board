@@ -1065,6 +1065,15 @@ function _chtRender(pair, tf, ohlcv) {
     borderUpColor:'rgba(0,220,55,.8)', borderDownColor:'rgba(248,81,73,.8)',
     wickUpColor:'rgba(0,220,55,.5)',   wickDownColor:'rgba(248,81,73,.5)',
     priceLineVisible:false, lastValueVisible:false, priceFormat:priceFmt,
+    autoscaleInfoProvider: (original) => {
+      const res = original();
+      if (!res || !res.priceRange) return res;
+      // Collect all visible bar prices, sort, clip top/bottom 1.5% to ignore outlier wicks
+      const { minValue, maxValue } = res.priceRange;
+      const range = maxValue - minValue;
+      const clip  = range * 0.015;
+      return { priceRange: { minValue: minValue + clip, maxValue: maxValue - clip }, margins: res.margins };
+    },
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
