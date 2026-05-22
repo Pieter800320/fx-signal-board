@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T21:59:15.653579+00:00",
+  "updated": "2026-05-22T22:45:25.189043+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -490,5 +490,56 @@
     "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
     "updated": "2026-05-22T16:46:16.827921+00:00"
   },
-  "last_alert": "2026-05-21T18:07:23.092589+00:00"
+  "last_alert": "2026-05-21T18:07:23.092589+00:00",
+  "macro_assets": {
+    "vix": {
+      "value": 16.7,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7473.47,
+      "delta_pct": 0.4,
+      "direction": "flat",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4510.5,
+      "delta_pct": -0.6,
+      "direction": "down",
+      "label": "Gold"
+    },
+    "copper": {
+      "value": 6.3805,
+      "delta_pct": 2.0,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.558,
+      "delta_bp": -2.8,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "wti": {
+      "value": 97.0,
+      "delta_pct": 0.7,
+      "direction": "up",
+      "label": "WTI Oil"
+    }
+  },
+  "catalyst": {
+    "text": "**EUR/USD**: Iran deal hopes clash with \"Energy shock from Iran war\" headline\u2014conflicting directional signals for Euro positioning.",
+    "updated": "2026-05-22T22:45:25.189043+00:00"
+  },
+  "ranked": {
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-05-22T22:45:25.189043+00:00"
+  },
+  "calendar": {
+    "events": [],
+    "updated": "2026-05-22T22:45:25.189043+00:00"
+  }
 }
