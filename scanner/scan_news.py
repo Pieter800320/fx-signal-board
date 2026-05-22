@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT))
 ANTHROPIC_KEY = os.environ.get("ANTHROPIC_API_KEY", "")
 TWELVEDATA    = os.environ.get("TWELVEDATA_KEY", "")
 HAIKU_MODEL   = "claude-haiku-4-5-20251001"
+SONNET_MODEL  = "claude-sonnet-4-20250514"
 
 # Yahoo Finance v8 — no API key needed
 # (key, yf_symbol, label, risk_off_when_up)
@@ -283,11 +284,13 @@ def fetch_calendar() -> list[str]:
 
 
 # ── HAIKU CALLS ───────────────────────────────────────────────────────────────
-def _haiku(prompt: str, max_tokens: int = 120) -> str:
+def _claude(model: str, system: str, prompt: str, max_tokens: int) -> str:
     if not ANTHROPIC_KEY:
         return "—"
     body = json.dumps({
-        "model": HAIKU_MODEL, "max_tokens": max_tokens,
+        "model": model,
+        "max_tokens": max_tokens,
+        "system": system,
         "messages": [{"role": "user", "content": prompt}],
     }).encode()
     req = urllib.request.Request(
@@ -298,10 +301,16 @@ def _haiku(prompt: str, max_tokens: int = 120) -> str:
         method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=25) as r:
+        with urllib.request.urlopen(req, timeout=30) as r:
             return json.loads(r.read().decode())["content"][0]["text"].strip()
     except Exception as e:
         return f"Unavailable ({e})"
+
+def _haiku(prompt: str, max_tokens: int = 120) -> str:
+    return _claude(HAIKU_MODEL, "", prompt, max_tokens)
+
+def _sonnet(system: str, prompt: str, max_tokens: int = 300) -> str:
+    return _claude(SONNET_MODEL, system, prompt, max_tokens)
 
 
 def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> dict:
@@ -335,47 +344,77 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
             "event":  lines[1] if len(lines) > 1 else "—"}
 
 
-def call_data_analysis(signals: dict, session: str, now: datetime) -> str:
-    """Haiku call 2: identify key tension in signals.json data, session-aware."""
+def call_data_analysis(signals: dict, session: str, now: datetime,
+                       news_themes: str = "", news_event: str = "") -> str:
+    """
+    Sonnet call: structured top-down FX analysis.
+    Regime → macro → news cross-reference → pair conclusions.
+    """
     pairs   = signals.get("pairs", {})
-    d1_reg  = signals.get("regime_d1", {}).get("regime", "Unknown")
-    h4_reg  = signals.get("regime_h4", {}).get("regime", "Unknown")
-    h1_reg  = signals.get("regime_h1", {}).get("regime", "Unknown")
-    w1_reg  = signals.get("regime_w1", {}).get("regime", "Unknown")
+    d1_reg  = signals.get("regime_d1", {})
+    h4_reg  = signals.get("regime_h4", {})
+    h1_reg  = signals.get("regime_h1", {})
+    w1_reg  = signals.get("regime_w1", {})
     mac     = signals.get("macro", {})
-    mac_lbl = mac.get("label", "Unknown")
-    mac_conf= mac.get("confidence", "")
     csm_d1  = signals.get("csm", {}).get("d1", {})
     csm_h4  = signals.get("csm", {}).get("h4", {})
     prev_analysis = (signals.get("analysis") or {}).get("text", "")
 
-    pills_summary = []
+    def reg_str(r):
+        return f"{r.get('regime','—')} ({r.get('confidence','—')}, {'Stable' if r.get('stable') else 'Shifting'})"
+
+    pills_lines = []
     for pair, p in pairs.items():
         pills = p.get("pills", {})
-        d1p   = pills.get("d1", "neutral")
-        h4p   = pills.get("h4", "neutral")
-        cont  = p.get("cont", 0)
+        d1p = pills.get("d1", "neutral")
+        h4p = pills.get("h4", "neutral")
+        h1p = pills.get("h1", "neutral")
+        cont = p.get("cont", 0)
+        mom  = p.get("mom", {})
+        cmp  = mom.get("cmp")
+        adx  = p.get("adx")
         if d1p != "neutral" or h4p != "neutral":
-            pills_summary.append(f"{pair}: D1={d1p} H4={h4p} Cont={cont}%")
+            pills_lines.append(
+                f"{pair}: D1={d1p} H4={h4p} H1={h1p} "
+                f"Cont={cont}% CMP={cmp} ADX={adx}"
+            )
 
-    d1s = " ".join(f"{c}={v}" for c, v in sorted(csm_d1.items(), key=lambda x:-x[1])[:4])
-    h4s = " ".join(f"{c}={v}" for c, v in sorted(csm_h4.items(), key=lambda x:-x[1])[:4])
+    top_d1 = " ".join(f"{c}={v}" for c, v in sorted(csm_d1.items(), key=lambda x:-x[1])[:5])
+    top_h4 = " ".join(f"{c}={v}" for c, v in sorted(csm_h4.items(), key=lambda x:-x[1])[:5])
 
-    prev_line = f"Previous analysis: {prev_analysis}" if prev_analysis else "No previous analysis."
+    system = (
+        "You are a senior institutional FX analyst providing a structured market briefing. "
+        "Reason strictly top-down: (1) macro/regime backdrop, (2) cross-asset confirmation "
+        "or contradiction, (3) news alignment, (4) specific pair conclusions. "
+        "Be precise and direct. No hedging language. No bullet points. "
+        "Write in 3 concise sentences. Each sentence covers one layer of the analysis."
+    )
+
+    prev_line = f"Previous briefing: {prev_analysis}" if prev_analysis else "First briefing of the session."
 
     prompt = (
-        f"Session: {session} | Time: {now.strftime('%H:%M')} UTC\n"
-        f"Regime — W1: {w1_reg} | D1: {d1_reg} | H4: {h4_reg} | H1: {h1_reg}\n"
-        f"Macro D1: {mac_lbl} {mac_conf}\n"
-        f"CSM D1 top: {d1s}\nCSM H4 top: {h4s}\n"
-        f"Pairs:\n" + "\n".join(pills_summary[:8]) + "\n\n"
+        f"Session: {session} | {now.strftime('%H:%M')} UTC\n\n"
+        f"REGIME\n"
+        f"W1: {reg_str(w1_reg)}\n"
+        f"D1: {reg_str(d1_reg)}\n"
+        f"H4: {reg_str(h4_reg)}\n"
+        f"H1: {reg_str(h1_reg)}\n\n"
+        f"MACRO (D1)\n"
+        f"Label: {mac.get('label','—')} {mac.get('confidence','')}"
+        f" ({mac.get('signals',0):+d}/{mac.get('total',0)} instruments voted)\n\n"
+        f"CSM\n"
+        f"D1 strongest: {top_d1}\n"
+        f"H4 strongest: {top_h4}\n\n"
+        f"NEWS\n"
+        f"Themes: {news_themes or '—'}\n"
+        f"Key event: {news_event or '—'}\n\n"
+        f"PAIRS (directional only)\n"
+        + "\n".join(pills_lines[:10]) + "\n\n"
         f"{prev_line}\n\n"
-        "Identify the most significant tension or confluence in this data. "
-        "Note if anything has changed since the previous analysis. "
-        "Name 1-2 specific pairs if relevant. "
-        "1 sentence, max 30 words, plain text."
+        "Write the briefing now. 3 sentences, plain text."
     )
-    return _haiku(prompt, max_tokens=80)
+
+    return _sonnet(system, prompt, max_tokens=200)
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -404,12 +443,16 @@ def main():
     headlines = fetch_headlines()
     events    = fetch_calendar()
 
-    print("\n[4/4] Claude Haiku…")
+    print("\n[4/4] Claude analysis…")
     news_out  = call_news_themes(macro, headlines, events)
     print(f"  Themes: {news_out['themes']}")
     print(f"  Event:  {news_out['event']}")
     time.sleep(3)
-    analysis = call_data_analysis(signals, session, now)
+    analysis = call_data_analysis(
+        signals, session, now,
+        news_themes=news_out["themes"],
+        news_event=news_out["event"],
+    )
     print(f"  Analysis: {analysis}")
 
     signals["regime_w1"] = w1
