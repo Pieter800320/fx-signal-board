@@ -180,6 +180,7 @@ def main():
     csm = compute_csm(ohlcv)
     print(f"  D1: {dict(sorted(csm['d1'].items(), key=lambda x: -x[1]))}")
     print(f"  H4: {dict(sorted(csm['h4'].items(), key=lambda x: -x[1]))}")
+    print(f"  H1: {dict(sorted(csm['h1'].items(), key=lambda x: -x[1]))}")
 
     # ── 6. ADX + per-pair entry metrics ───────────────────────────────────────
     print("\n[6/9] Extracting ADX, reset_score, atr_percentile…")
@@ -223,8 +224,7 @@ def main():
     print("\n[8/9] Computing D1 / H4 / H1 regimes…")
     regime_d1 = classify_regime(csm["d1"], pair_pills, prev_d1_regime, tf="d1")
     regime_h4 = classify_regime(csm["h4"], pair_pills, prev_h4_regime, tf="h4")
-    # H1 uses H4 CSM as structural backdrop; H1 pills for momentum vote
-    regime_h1 = classify_regime(csm["h4"], pair_pills, prev_h1_regime, tf="h1")
+    regime_h1 = classify_regime(csm["h1"], pair_pills, prev_h1_regime, tf="h1")
     new_regime_name = regime_h4["regime"]
 
     # Confluence: all three agree on the same non-Mixed/non-Ranging regime
