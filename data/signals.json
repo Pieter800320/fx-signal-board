@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T18:35:21.107719+00:00",
+  "updated": "2026-05-22T19:18:49.294550+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -524,15 +524,15 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "news": {
-    "themes": "Iran nuclear deal optimism reducing geopolitical premium, energy shock pressures Euro growth outlook, Fed hawkish stance supports Dollar strength.",
-    "event": "No high-impact events scheduled; market focus remains on Iran negotiations outcome and energy inflation implications.",
-    "updated": "2026-05-22T18:35:21.107719+00:00"
+    "themes": "Iran nuclear deal progress reduces Middle East geopolitical premium; energy shock threatens European growth and inflation; risk-on sentiment supports EM currencies.",
+    "event": "No major scheduled events; market focus remains on Iran negotiations and Fed policy signals through economic data surprises.",
+    "updated": "2026-05-22T19:18:49.294550+00:00"
   },
   "analysis": {
     "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
@@ -541,61 +541,61 @@
   "last_alert": "2026-05-21T18:07:23.092589+00:00",
   "macro_assets": {
     "vix": {
-      "value": 16.66,
-      "delta_pct": -0.6,
+      "value": 16.59,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7488.89,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 7480.69,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4518.3,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 4510.6,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "copper": {
-      "value": 6.3945,
-      "delta_pct": 2.2,
+      "value": 6.386,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.56,
-      "delta_bp": -2.6,
+      "value": 4.558,
+      "delta_bp": -2.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "wti": {
-      "value": 96.44,
-      "delta_pct": 0.1,
+      "value": 96.66,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
     }
   },
   "ranked": {
-    "text": "USDCAD LONG: Fed hawkish stance and Dollar strength fundamentals confirm the technical bullish case, reinforcing the risk-off regime tailwind. EURUSD SHORT: Energy inflation pressures on Euro growth and Fed hawkish support confirm the technical bearish setup despite modest momentum divergence. GBPJPY LONG: S&P 500 strength supports GBP bid but energy shock headwinds and risk-off regime create friction with the weak CMP reading, presenting a lower-conviction setup. Largest macro uncertainty is Iran nuclear deal outcome timing, which could rapidly shift geopolitical premium and energy inflation trajectory, potentially unwinding positioning across all three pairs.",
+    "text": "USDCAD LONG: The Iran deal progress reduces Middle East risk premium which typically supports CAD risk sentiment, challenging the risk-off USD bid thesis that the technicals rely on, though gold weakness does reinforce USD strength. European growth threats and potential energy shock spillovers could paradoxically support safe-haven CAD demand if EM volatility resurfaces despite current risk-on rhetoric.\n\nEURUSD SHORT: Energy shock threatening European growth directly confirms the technical short case as it pressures EUR fundamentals, while gold falling and risk-off regime both reinforce USD strength against a weakened eurozone. The critical uncertainty is whether Fed policy surprise data contradicts the current risk-off narrative and triggers a sudden risk-on reversal that could squeeze this crowded short.\n\nGBPJPY LONG: Iran nuclear progress and EM currency strength from risk-on sentiment directly contradict the weak technicals, as carry trades typically unwind",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.8
+        "score": 8.0
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.65
+        "score": 6.85
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 3.98
+        "score": 3.78
       }
     ],
-    "updated": "2026-05-22T18:35:21.107719+00:00"
+    "updated": "2026-05-22T19:18:49.294550+00:00"
   }
 }
