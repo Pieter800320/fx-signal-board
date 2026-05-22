@@ -32,8 +32,8 @@
   },
   "EURJPY": {
     "ema200_side": "below",
-    "ema50_side": "above",
-    "ema50_fired": false
+    "ema50_side": "below",
+    "ema50_fired": true
   },
   "GBPJPY": {
     "ema200_side": "above",
