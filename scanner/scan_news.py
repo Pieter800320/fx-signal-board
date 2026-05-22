@@ -125,30 +125,85 @@ def compute_w1_regime(macro: dict) -> dict:
             "signals": net, "total": n}
 
 
-# ── MACRO MOMENTUM (daily) ────────────────────────────────────────────────────
+# ── SESSION DETECTION ─────────────────────────────────────────────────────────
+def current_session(now: datetime) -> str:
+    """Returns the active FX session based on UTC hour."""
+    h = now.hour
+    if 7 <= h < 8:    return "London open"
+    if 8 <= h < 12:   return "London session"
+    if 12 <= h < 16:  return "London/NY overlap"
+    if 16 <= h < 21:  return "NY session"
+    if 0 <= h < 7:    return "Asian session"
+    return "Off-hours"  # 21:00–00:00 UTC
+
+
+# ── MACRO MOMENTUM (daily, institutional thresholds) ──────────────────────────
 def compute_macro(macro: dict) -> dict:
-    """Daily D1 cross-asset momentum — same instruments, last bar change."""
+    """
+    D1 cross-asset momentum with institutional magnitude thresholds.
+    Below threshold = abstain (not counted), not neutral.
+    Confidence reflects how many instruments agree.
+    """
     scores = []
 
-    def score(key, invert=False):
+    def score(key, threshold_pct, invert=False, level_check=None):
+        """
+        threshold_pct  — minimum absolute % change to cast a vote
+        level_check    — optional (low, high) absolute level thresholds
+                         e.g. VIX: vote risk-off if level > 20, risk-on if < 15
+        """
         d = macro.get(key)
-        if not d or not d.get("prev_close"):
+        if not d or not d.get("prev_close") or not d["prev_close"]:
             return
-        pct = (d["close"] / d["prev_close"] - 1) * 100
-        up  = pct > 0
+        pct   = (d["close"] / d["prev_close"] - 1) * 100
+        abspct = abs(pct)
+
+        # Level-based override (VIX regime zones)
+        if level_check:
+            lo, hi = level_check
+            if d["close"] > hi:
+                scores.append(1)   # risk-off zone
+                return
+            if d["close"] < lo:
+                scores.append(-1)  # risk-on / complacency zone
+                return
+
+        # Magnitude filter — abstain if move is too small
+        if abspct < threshold_pct:
+            return
+
+        up       = pct > 0
         risk_off = up if not invert else not up
         scores.append(1 if risk_off else -1)
 
-    score("vix")                # up = risk-off
-    score("spx",    invert=True) # up = risk-on
-    score("gold")               # up = risk-off
-    score("dxy")                # up = risk-off
-    score("copper", invert=True) # up = risk-on
-    score("us10y",  invert=True) # yield up = risk-on
+    # US10Y uses basis-point change, not pct — compute separately
+    def score_yield(key, bp_threshold):
+        d = macro.get(key)
+        if not d or not d.get("prev_close") or not d["prev_close"]:
+            return
+        bp_change = (d["close"] - d["prev_close"]) * 100  # yield in %, so *100 = bps
+        if abs(bp_change) < bp_threshold:
+            return
+        risk_off = bp_change < 0  # yield down = flight to safety = risk-off
+        scores.append(1 if risk_off else -1)
+
+    score("vix",    threshold_pct=5.0,  level_check=(15.0, 20.0))  # level zones override
+    score("spx",    threshold_pct=0.8,  invert=True)
+    score("gold",   threshold_pct=0.5)
+    score("dxy",    threshold_pct=0.3)
+    score("copper", threshold_pct=0.8,  invert=True)
+    score_yield("us10y", bp_threshold=5.0)
 
     net   = sum(scores)
-    label = "Risk-Off" if net > 0 else "Risk-On" if net < 0 else "Mixed"
-    return {"label": label, "signals": net, "total": len(scores)}
+    total = len(scores)  # only instruments that voted
+
+    label      = "Risk-Off" if net > 0 else "Risk-On" if net < 0 else "Mixed"
+    abs_net    = abs(net)
+    confidence = "High"   if abs_net >= 3 else \
+                 "Medium" if abs_net == 2 else \
+                 "Low"    if abs_net == 1 else "Neutral"
+
+    return {"label": label, "signals": net, "total": total, "confidence": confidence}
 
 
 # ── RSS HEADLINES ─────────────────────────────────────────────────────────────
@@ -280,14 +335,19 @@ def call_news_themes(macro: dict, headlines: list[str], events: list[str]) -> di
             "event":  lines[1] if len(lines) > 1 else "—"}
 
 
-def call_data_analysis(signals: dict) -> str:
-    """Haiku call 2: identify key tension in signals.json data."""
+def call_data_analysis(signals: dict, session: str, now: datetime) -> str:
+    """Haiku call 2: identify key tension in signals.json data, session-aware."""
     pairs   = signals.get("pairs", {})
+    d1_reg  = signals.get("regime_d1", {}).get("regime", "Unknown")
     h4_reg  = signals.get("regime_h4", {}).get("regime", "Unknown")
+    h1_reg  = signals.get("regime_h1", {}).get("regime", "Unknown")
     w1_reg  = signals.get("regime_w1", {}).get("regime", "Unknown")
-    mac     = signals.get("macro", {}).get("label", "Unknown")
+    mac     = signals.get("macro", {})
+    mac_lbl = mac.get("label", "Unknown")
+    mac_conf= mac.get("confidence", "")
     csm_d1  = signals.get("csm", {}).get("d1", {})
     csm_h4  = signals.get("csm", {}).get("h4", {})
+    prev_analysis = (signals.get("analysis") or {}).get("text", "")
 
     pills_summary = []
     for pair, p in pairs.items():
@@ -301,16 +361,21 @@ def call_data_analysis(signals: dict) -> str:
     d1s = " ".join(f"{c}={v}" for c, v in sorted(csm_d1.items(), key=lambda x:-x[1])[:4])
     h4s = " ".join(f"{c}={v}" for c, v in sorted(csm_h4.items(), key=lambda x:-x[1])[:4])
 
+    prev_line = f"Previous analysis: {prev_analysis}" if prev_analysis else "No previous analysis."
+
     prompt = (
-        f"Market snapshot:\n"
-        f"W1: {w1_reg} | H4: {h4_reg} | Macro: {mac}\n"
+        f"Session: {session} | Time: {now.strftime('%H:%M')} UTC\n"
+        f"Regime — W1: {w1_reg} | D1: {d1_reg} | H4: {h4_reg} | H1: {h1_reg}\n"
+        f"Macro D1: {mac_lbl} {mac_conf}\n"
         f"CSM D1 top: {d1s}\nCSM H4 top: {h4s}\n"
         f"Pairs:\n" + "\n".join(pills_summary[:8]) + "\n\n"
-        "Identify the most significant tension or conflict in this data. "
+        f"{prev_line}\n\n"
+        "Identify the most significant tension or confluence in this data. "
+        "Note if anything has changed since the previous analysis. "
         "Name 1-2 specific pairs if relevant. "
-        "1 sentence, max 25 words, plain text."
+        "1 sentence, max 30 words, plain text."
     )
-    return _haiku(prompt, max_tokens=60)
+    return _haiku(prompt, max_tokens=80)
 
 
 # ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -328,10 +393,12 @@ def main():
     macro = fetch_all_macro()
 
     print("\n[2/4] W1 backdrop + macro momentum…")
-    w1  = compute_w1_regime(macro)
-    mac = compute_macro(macro)
+    w1      = compute_w1_regime(macro)
+    mac     = compute_macro(macro)
+    session = current_session(now)
+    print(f"  Session: {session}")
     print(f"  W1:    {w1['regime']} {w1['confidence']} ({w1['signals']:+d}/{w1['total']})")
-    print(f"  Macro: {mac['label']} ({mac['signals']:+d}/{mac['total']})")
+    print(f"  Macro: {mac['label']} {mac['confidence']} ({mac['signals']:+d}/{mac['total']})")
 
     print("\n[3/4] Headlines + calendar…")
     headlines = fetch_headlines()
@@ -342,7 +409,7 @@ def main():
     print(f"  Themes: {news_out['themes']}")
     print(f"  Event:  {news_out['event']}")
     time.sleep(3)
-    analysis = call_data_analysis(signals)
+    analysis = call_data_analysis(signals, session, now)
     print(f"  Analysis: {analysis}")
 
     signals["regime_w1"] = w1
