@@ -564,6 +564,6 @@
     "pair": "EURUSD",
     "price": 1.179342351232948,
     "direction": "below",
-    "active": true
+    "active": false
   }
 ]
