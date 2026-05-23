@@ -63,6 +63,15 @@
     background:var(--surf);border:1px solid var(--bord);
   }
 
+  /* WEEK AHEAD card */
+  .wa-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+           padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
+  .wa-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;
+           background:rgba(130,100,220,.8);}
+  .wa-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+          letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .wa-txt{font-size:10px;color:var(--muted);line-height:1.55;}
+
   /* CATALYST / SETUPS / CALENDAR */
   .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
              padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
@@ -227,6 +236,14 @@
   </div>
 </div>
 
+<div class="wa-card" id="wa-wrap" style="display:none;">
+  <div class="wa-line"></div>
+  <div style="flex:1;min-width:0;">
+    <div class="wa-lbl" id="wa-lbl">WEEK AHEAD · —</div>
+    <div class="wa-txt" id="wa-txt"></div>
+  </div>
+</div>
+
 <div class="info-card" id="catalyst-wrap">
   <div class="info-line catalyst" id="catalyst-line"></div>
   <div style="flex:1;min-width:0;">
@@ -381,9 +398,27 @@ function render(){
     "Scanned " + fmtTime(D.updated);
 
   renderMarketState();
+  renderWeekAhead();
   renderNews();
   renderCSM();
   renderGrid();
+}
+
+function renderWeekAhead(){
+  const wa   = D.week_ahead || {};
+  const wrap = document.getElementById("wa-wrap");
+  if (!wa.text || !wa.generated_at) { wrap.style.display = "none"; return; }
+
+  // Show only between Sunday 20:00 UTC and Monday 20:00 UTC (24h window)
+  const gen  = new Date(wa.generated_at);
+  const now  = new Date();
+  const age  = (now - gen) / 3600000;   // hours since generated
+  if (age > 24) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "flex";
+  document.getElementById("wa-lbl").textContent =
+    "WEEK AHEAD · " + gen.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short", timeZone:"UTC"});
+  document.getElementById("wa-txt").textContent = wa.text;
 }
 
 function renderMarketState(){
