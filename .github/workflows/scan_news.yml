@@ -3,7 +3,7 @@ name: News Scan
 on:
   schedule:
     - cron: '0 */2 * * *'   # every 2 hours
-    - cron: '0 20 * * 0'    # Sunday 20:00 UTC — Week Ahead briefing
+    - cron: '0 21 * * 0'    # Sunday 21:00 UTC — Week Ahead briefing (not in 2h grid)
   workflow_dispatch:
 
 permissions:
@@ -33,9 +33,9 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/signals.json
-          git stash
+          git stash || true
           git pull --rebase origin main
-          git stash pop
+          git stash pop || true
           git add data/signals.json
           git diff --cached --quiet || git commit -m "chore: news scan $(date -u +%Y-%m-%dT%H:%M)"
           git push
