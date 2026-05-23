@@ -447,6 +447,206 @@ def _haiku_search(prompt: str, max_tokens: int = 400) -> str:
         return f"Unavailable ({e})"
 
 
+# ── DEEP ANALYSIS — instrument zone context ───────────────────────────────────
+# Each entry: list of (upper_bound, label) — first threshold where value <= upper wins.
+_ZONES: dict[str, list[tuple]] = {
+    "vix":    [(12,    "ultra-complacent — below long-run average, no fear priced"),
+               (15,    "complacent — markets relaxed, risk-on bias"),
+               (20,    "normal — moderate uncertainty, neutral"),
+               (25,    "elevated — stress building, hedging emerging"),
+               (30,    "high fear — institutional hedging active"),
+               (9999,  "extreme fear — crisis mode, systematic de-risking")],
+    "us10y":  [(3.0,   "accommodative — historically supports risk assets"),
+               (3.5,   "below neutral — mild bond support"),
+               (4.0,   "near neutral Fed rate"),
+               (4.5,   "restrictive — mortgage and credit stress building"),
+               (9999,  "highly restrictive — historically precedes economic slowdown")],
+    "us3m":   [(3.5,   "low short-end — easy financial conditions"),
+               (4.5,   "moderate — Fed in holding pattern"),
+               (5.5,   "tight — money market stress possible"),
+               (9999,  "very tight — cash expensive, risk appetite suppressed")],
+    "curve":  [(-100,  "deeply inverted — severe recession signal, Fed cuts priced"),
+               (-25,   "inverted — bond market pricing Fed cuts, recession risk elevated"),
+               (0,     "flat — transitional zone, directional uncertainty"),
+               (50,    "shallow positive — normalising toward historical mean"),
+               (9999,  "steep — growth expectations rising, typically risk-on")],
+    "gold":   [(1800,  "low — USD alternative demand weak, risk-on tilt"),
+               (2100,  "moderate — balanced safe haven demand"),
+               (2500,  "elevated — safe haven demand building"),
+               (3000,  "high — strong institutional flight to safety"),
+               (99999, "extreme — crisis-level safe haven demand, USD alternative surging")],
+    "dxy":    [(95,    "very weak — broad USD pressure, risk-on and EM tailwind"),
+               (100,   "weak — USD below key parity zone"),
+               (104,   "neutral range — balanced flows"),
+               (107,   "strong — USD broad bid, risk-off tilt, EM headwind"),
+               (9999,  "very strong — USD squeeze, EM stress, global liquidity tightening")],
+    "wti":    [(55,    "low — demand concern, global slowdown signalled"),
+               (70,    "moderate — balanced supply and demand"),
+               (80,    "elevated — energy inflation risk emerging"),
+               (95,    "high — stagflation risk, CAD tailwind strong"),
+               (9999,  "very high — energy shock territory, stagflation risk")],
+    "copper": [(3.0,   "low — growth alarm, industrial demand collapsing"),
+               (3.8,   "below average — soft growth signal, AUD headwind"),
+               (4.5,   "average — neutral growth outlook"),
+               (5.0,   "above average — growth acceleration signal, AUD tailwind"),
+               (9999,  "very strong — industrial demand surge, global growth optimism")],
+    "spx":    [(4000,  "bear zone — recession pricing, risk-off"),
+               (4500,  "recovering — cautious growth optimism"),
+               (5000,  "bull range — growth confidence, risk-on"),
+               (5500,  "extended — complacency risk elevated"),
+               (99999, "extreme — parabolic risk, correction vulnerability high")],
+    "btc":    [(30000,  "low — risk-off, crypto winter sentiment"),
+               (60000,  "recovery — risk appetite returning"),
+               (90000,  "strong — risk-on velocity, institutional inflows"),
+               (999999, "extreme — speculative peak risk")],
+}
+
+
+def _get_zone(value: float, key: str) -> str:
+    """Return zone label for a given instrument value."""
+    for threshold, label in _ZONES.get(key, []):
+        if value <= threshold:
+            return label
+    return ""
+
+
+def build_deep_context(signals: dict, macro: dict) -> str:
+    """
+    Build rich contextual framing for the deep analysis prompt.
+    Each instrument gets current value + zone label + delta.
+    """
+    ma     = signals.get("macro_assets", {})
+    csm    = signals.get("csm", {})
+    reg_d1 = signals.get("regime_d1", {})
+    reg_w1 = signals.get("regime_w1", {})
+    mac    = signals.get("macro", {})
+
+    lines = []
+
+    # Regime header
+    lines.append(
+        f"MACRO REGIME: D1 {reg_d1.get('regime','—')} ({reg_d1.get('confidence','')}) | "
+        f"W1 {reg_w1.get('regime','—')} ({reg_w1.get('confidence','')}) | "
+        f"D1 momentum: {mac.get('label','—')} ({mac.get('confidence','')})"
+    )
+    lines.append("")
+    lines.append("MACRO INSTRUMENTS (value, zone context, today's change):")
+
+    def _delta_str(d: dict) -> str:
+        bp  = d.get("delta_bp")
+        pct = d.get("delta_pct")
+        if bp  is not None: return f"Δ{bp:+.1f}bp"
+        if pct is not None: return f"Δ{pct:+.1f}%"
+        return ""
+
+    INSTRUMENT_ORDER = [
+        ("vix",    "VIX"),
+        ("us10y",  "US 10Y"),
+        ("us3m",   "US 3M"),
+        ("curve",  "Yield Curve 10Y-3M"),
+        ("gold",   "Gold"),
+        ("dxy",    "DXY"),
+        ("spx",    "S&P 500"),
+        ("copper", "Copper"),
+        ("wti",    "WTI Oil"),
+        ("btc",    "Bitcoin"),
+    ]
+    for key, display in INSTRUMENT_ORDER:
+        d = ma.get(key)
+        if not d:
+            continue
+        val      = d["value"]
+        zone     = _get_zone(val, key)
+        unit     = "%" if key in ("us10y", "us3m") else ("bp" if key == "curve" else "")
+        dir_sym  = {"up": "↑", "down": "↓"}.get(d.get("direction", ""), "→")
+        delta    = _delta_str(d)
+        # Format value sensibly
+        if key in ("spx", "btc"):
+            val_str = f"{val:,.0f}"
+        elif key in ("us10y", "us3m"):
+            val_str = f"{val:.2f}%"
+        elif key == "curve":
+            val_str = f"{val:+.1f}bp"
+        else:
+            val_str = f"{val:.2f}"
+        zone_str = f" [{zone}]" if zone else ""
+        lines.append(f"  {display}: {val_str} {dir_sym} {delta}{zone_str}")
+
+    # CSM rankings
+    csm_d1 = csm.get("d1", {})
+    if csm_d1:
+        sorted_csm = sorted(csm_d1.items(), key=lambda x: x[1], reverse=True)
+        csm_str = " > ".join(f"{c}:{v:.0f}" for c, v in sorted_csm)
+        lines.append(f"\nCSM D1 RANKING (100=strongest): {csm_str}")
+
+    # Top setups with key metrics
+    ranked = signals.get("ranked", {})
+    top    = ranked.get("top", [])
+    pairs  = signals.get("pairs", {})
+    if top:
+        lines.append("\nTOP SETUPS (pre-scored by machine):")
+        for r in top[:3]:
+            pd    = pairs.get(r["pair"], {})
+            mom   = pd.get("mom", {})
+            pills = pd.get("pills", {})
+            d1p   = pills.get("d1", "—")
+            cmp   = mom.get("cmp", "—")
+            dd1   = mom.get("dd1") or 0
+            cont  = pd.get("cont", "—")
+            adx   = pd.get("adx", "—")
+            arrow = "LONG" if r["direction"] == "bull" else "SHORT"
+            csm_b = csm_d1.get(r["pair"][:3], 50)
+            csm_q = csm_d1.get(r["pair"][3:], 50)
+            csm_div = (csm_b - csm_q) if r["direction"] == "bull" else (csm_q - csm_b)
+            lines.append(
+                f"  {r['pair']} {arrow} [{r['score']:.1f}/10] "
+                f"D1={d1p} cont={cont} CMP={cmp} MOMdelta={dd1:+.0f} "
+                f"CSMdiv={csm_div:+.0f} ADX={adx}"
+            )
+
+    return "\n".join(lines)
+
+
+def call_deep_analysis(signals: dict, macro: dict) -> dict:
+    """
+    Daily Sonnet call — 200-250 word interpretive macro narrative.
+    Connects quantitative data to economic mechanisms.
+    Returns {text, generated_at} for storage in signals.json deep_analysis key.
+    """
+    context = build_deep_context(signals, macro)
+
+    system = (
+        "You are a senior macro FX analyst with 20 years experience. "
+        "Your role is economic interpretation, not data description. "
+        "When you see a number, explain what it means mechanically for markets — "
+        "the transmission channel from instrument to currency pair. "
+        "Be concrete about which pairs are most affected and why. "
+        "Never list data back at the reader; they can see it themselves."
+    )
+
+    prompt = (
+        f"{context}\n\n"
+        "Write a 200-250 word deep analysis of current market conditions. "
+        "Write in continuous prose — no headers, no bullets, no markdown.\n\n"
+        "Cover these three things in order:\n"
+        "1. The 2-3 most significant or anomalous signals right now. For each, explain "
+        "the economic mechanism: why this value matters, what it signals about underlying "
+        "conditions, and what historically follows from here.\n"
+        "2. Whether these signals are telling a coherent story or showing contradictions. "
+        "If contradictions exist, name them explicitly and explain the tension.\n"
+        "3. Which specific pairs from the top setups above are most reinforced or most "
+        "challenged by the current macro context, and the precise reason why.\n\n"
+        "Plain text only. No markdown. No asterisks. No bullets. No headers. "
+        "One or two flowing paragraphs. 200-250 words."
+    )
+
+    text = _sonnet(system, prompt, max_tokens=450)
+    return {
+        "text":         text,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+    }
+
+
 def call_week_ahead(signals: dict, calendar_events: list[dict]) -> str:
     """
     Haiku + web search: synthesise a Week Ahead briefing from fresh articles
@@ -591,6 +791,16 @@ def main():
     catalyst = call_catalyst(headlines, ranked_out.get("top", []))
     print(f"  Catalyst: {catalyst}")
 
+    # ── Deep Analysis — generated once daily at 06:00 UTC ────────────────────
+    is_deep_run = (now.hour == 6)
+    if is_deep_run:
+        print("\n[DA] Deep Analysis — daily Sonnet narrative…")
+        deep = call_deep_analysis(signals, macro)
+        print(f"  Deep Analysis: {deep['text'][:80]}…")
+    else:
+        prev_deep = signals.get("deep_analysis", {})
+        deep = prev_deep if prev_deep.get("generated_at") else {}
+
     # ── Week Ahead — generated once on Sunday ~20:00 UTC ──────────────────────
     is_sunday_evening = (now.weekday() == 6 and 21 <= now.hour <= 22)
     if is_sunday_evening:
@@ -609,6 +819,8 @@ def main():
     signals["catalyst"]     = {"text": catalyst, "updated": now.isoformat()}
     signals["ranked"]       = {**ranked_out, "updated": now.isoformat()}
     signals["calendar"]     = {"events": events, "updated": now.isoformat()}
+    if deep:
+        signals["deep_analysis"] = deep
     if week_ahead:
         signals["week_ahead"] = week_ahead
     signals["updated"]      = now.isoformat()
