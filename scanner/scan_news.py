@@ -30,7 +30,7 @@ MACRO_INSTRUMENTS = [
     ("dxy",    "DX-Y.NYB","DXY",      True),   # up = USD strength = risk-off
     ("copper", "HG=F",    "Copper",   False),  # down = growth fear = risk-off
     ("us10y",  "^TNX",    "US 10Y",   False),  # down = flight to safety = risk-off
-    ("us2y",   "^IRX",    "US 2Y",    False),  # short-end rate differential driver
+    ("us3m",   "^IRX",    "US 3M",    False),  # 3M T-bill; short-end rate signal
     ("wti",    "CL=F",    "WTI Oil",  False),  # up = risk-on demand; key CAD driver
     ("btc",    "BTC-USD", "Bitcoin",  False),  # risk appetite velocity proxy
 ]
@@ -71,7 +71,6 @@ def fetch_all_macro() -> dict:
         d = fetch_yf(symbol)
         if d:
             d["label"]       = label
-            d["risk_off_up"] = risk_off_up
             macro[key]       = d
             pct = (d["close"] / d["prev_close"] - 1) * 100 if d["prev_close"] else 0
             print(f"    → {d['close']:.4g} ({pct:+.2f}%)")
@@ -93,7 +92,7 @@ def build_macro_assets(macro: dict) -> dict:
         prev  = d["prev_close"]
         label = d.get("label", key.upper())
 
-        if key in ("us10y", "us2y"):
+        if key in ("us10y", "us3m"):
             # Yields in %, delta in basis points
             bp = (close - prev) * 100
             direction = "up" if bp > 3.0 else "down" if bp < -3.0 else "flat"
@@ -126,7 +125,7 @@ def build_macro_assets(macro: dict) -> dict:
 
     # ── Yield curve spread (10Y − 2Y) — computed, no extra fetch ─────────────
     y10 = macro.get("us10y", {})
-    y2  = macro.get("us2y",  {})
+    y2  = macro.get("us3m",  {})
     if y10.get("close") and y2.get("close"):
         spread     = round((y10["close"] - y2["close"]) * 100, 1)   # basis points
         prev_sp    = round(((y10.get("prev_close", y10["close"]) -
@@ -134,7 +133,7 @@ def build_macro_assets(macro: dict) -> dict:
         delta_bp   = round(spread - prev_sp, 1)
         direction  = "up" if delta_bp > 2.0 else "down" if delta_bp < -2.0 else "flat"
         out["curve"] = {"value": spread, "delta_bp": delta_bp,
-                        "direction": direction, "label": "10Y-2Y"}
+                        "direction": direction, "label": "10Y-3M"}
 
     return out
 
@@ -198,8 +197,8 @@ def current_session(now: datetime) -> str:
     if 8 <= h < 12:   return "London session"
     if 12 <= h < 16:  return "London/NY overlap"
     if 16 <= h < 21:  return "NY session"
-    if 0 <= h < 7:    return "Asian session"
-    return "Off-hours"  # 21:00–00:00 UTC
+    if 21 <= h or h < 7: return "Asian session"  # Sydney opens 21:00 UTC
+    return "Off-hours"
 
 
 # ── MACRO MOMENTUM (daily, institutional thresholds) ──────────────────────────
@@ -258,6 +257,7 @@ def compute_macro(macro: dict, prev_mac: dict | None = None) -> dict:
     score("dxy",    threshold_pct=0.3)
     score("copper", threshold_pct=0.8,  invert=True)
     score_yield("us10y", bp_threshold=5.0)
+    score_yield("us3m",  bp_threshold=8.0)   # rising 3M = Fed hawkish = risk-off
 
     net   = sum(scores)
     total = len(scores)  # only instruments that voted
@@ -460,7 +460,10 @@ def _haiku_search(prompt: str, max_tokens: int = 400) -> str:
         # Collect all text blocks — web search responses have multiple content blocks
         texts = [b["text"].strip() for b in data.get("content", [])
                  if b.get("type") == "text" and b.get("text", "").strip()]
-        return " ".join(texts) if texts else "—"
+        if not texts:
+            print("  ⚠ _haiku_search: valid response but no text blocks returned")
+            return "—"
+        return " ".join(texts)
     except Exception as e:
         print(f"  ⚠ _haiku_search error: {e}")
         return f"Unavailable ({e})"
@@ -568,10 +571,10 @@ def main():
         with open(sig_path) as f:
             signals = json.load(f)
 
-    print("\n[1/4] Fetching macro data (Yahoo Finance)…")
+    print("\n[1/6] Fetching macro data (Yahoo Finance)…")
     macro = fetch_all_macro()
 
-    print("\n[2/5] W1 backdrop + macro momentum…")
+    print("\n[2/6] W1 backdrop + macro momentum…")
     prev_w1 = signals.get("regime_w1")
     prev_mac = signals.get("macro")
     w1      = compute_w1_regime(macro, prev_w1)
@@ -584,7 +587,7 @@ def main():
     active = {k: v['direction'] for k, v in macro_assets.items() if v.get('direction') != 'flat'}
     print(f"  Assets: {active}")
 
-    print("\n[4/5] Headlines + calendar…")
+    print("\n[3/6] Headlines + calendar…")
     headlines = fetch_headlines()
     events    = fetch_calendar()
     if events:
@@ -593,7 +596,7 @@ def main():
             e["note"] = notes[i] if i < len(notes) else ""
         print(f"  Interpreted {len(events)} events")
 
-    print("\n[5/5] Catalyst check + pair ranking…")
+    print("\n[4/6] Catalyst check + pair ranking…")
     # Run ranking first so catalyst has the top setups context
     signals["macro_assets"] = macro_assets
     ranked_out, ranked_list = call_ranked_analysis(signals)
@@ -603,9 +606,9 @@ def main():
     print(f"  Catalyst: {catalyst}")
 
     # ── Week Ahead — generated once on Sunday ~20:00 UTC ──────────────────────
-    is_sunday_evening = (now.weekday() == 6 and now.hour == 20)
+    is_sunday_evening = (now.weekday() == 6 and 21 <= now.hour <= 22)
     if is_sunday_evening:
-        print("\n[Week Ahead] Generating weekly briefing via web search…")
+        print("\n[5/6] Week Ahead — generating weekly briefing via web search…")
         wa_text = call_week_ahead(signals, events)
         week_ahead = {"text": wa_text, "generated_at": now.isoformat()}
         print(f"  Week Ahead: {wa_text[:80]}…")
