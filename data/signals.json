@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T16:55:58.946824+00:00",
+  "updated": "2026-05-23T17:00:50.648653+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,7 +567,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75420.0,
+      "value": 75391.0,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -580,33 +580,33 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. UMich sentiment miss neutral to setups.",
-    "updated": "2026-05-23T16:44:18.626819+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. NZDUSD SHORT not directly impacted by headlines.",
+    "updated": "2026-05-23T17:00:50.648653+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Macro risk-on contradicts risk-off regime short signal.\n\nUSDCAD LONG: Risk-off regime confirms USD strength macro driver.\n\nUSDJPY LONG: Copper strength challenges safe-haven JPY appreciation logic.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, strong momentum divergence driver.\n\nUSDJPY LONG: Risk-Off regime confirms setup, positive momentum divergence driver.\n\nNZDUSD SHORT: Risk-Off regime confirms setup, strong momentum divergence driver.",
     "top": [
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.42
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 7.2
+        "score": 7.62
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.58
+        "score": 6.95
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.7
       }
     ],
-    "updated": "2026-05-23T16:44:18.626819+00:00"
+    "updated": "2026-05-23T17:00:50.648653+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T16:44:18.626819+00:00"
+    "updated": "2026-05-23T17:00:50.648653+00:00"
   },
   "last_alert": "2026-05-23T16:55:58.946824+00:00"
 }
