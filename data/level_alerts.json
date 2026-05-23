@@ -445,6 +445,13 @@
     "pair": "EURUSD",
     "price": 1.1659573263820637,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779536808277,
+    "pair": "USDCAD",
+    "price": 1.3665417774226642,
+    "direction": "below",
     "active": true
   }
 ]
