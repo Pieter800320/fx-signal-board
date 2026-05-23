@@ -30,6 +30,10 @@ CROSS_ASSET = {
     ("spx",    "down"):  {"JPY": 2, "CHF": 1},
     ("copper", "up"):    {"AUD": 2, "NZD": 1},
     ("copper", "down"):  {"AUD": -1},
+    ("dxy",    "up"):    {"USD": 2},
+    ("dxy",    "down"):  {"USD": -2},
+    ("btc",    "up"):    {"AUD": 1, "NZD": 1},
+    ("btc",    "down"):  {"JPY": 1, "CHF": 1},
 }
 
 RISK_OFF_CCYS = {"JPY", "CHF", "USD"}
@@ -62,14 +66,12 @@ def _cmp_sc(cmp, direction):
     if cmp is None:
         return 5
     if direction == "bull":
-        if cmp >= 65: return 10
-        if cmp >= 55: return 6
-        if cmp >= 45: return 3
+        if cmp >= 60: return 10
+        if cmp > 50:  return 5
         return 0
     else:
-        if cmp <= 35: return 10
-        if cmp <= 45: return 6
-        if cmp <= 55: return 3
+        if cmp <= 40: return 10
+        if cmp < 50:  return 5
         return 0
 
 
