@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T07:47:38.140863+00:00",
+  "updated": "2026-05-23T08:00:08.102756+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -548,6 +548,12 @@
       "direction": "flat",
       "label": "Gold"
     },
+    "dxy": {
+      "value": 99.32,
+      "delta_pct": 0.1,
+      "direction": "flat",
+      "label": "DXY"
+    },
     "copper": {
       "value": 6.342,
       "delta_pct": 1.4,
@@ -560,19 +566,37 @@
       "direction": "flat",
       "label": "US 10Y"
     },
+    "us2y": {
+      "value": 3.585,
+      "delta_bp": 0.3,
+      "direction": "flat",
+      "label": "US 2Y"
+    },
     "wti": {
       "value": 96.6,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
+    },
+    "btc": {
+      "value": 74550.0,
+      "delta_pct": -1.2,
+      "direction": "down",
+      "label": "Bitcoin"
+    },
+    "curve": {
+      "value": 97.3,
+      "delta_bp": -3.1,
+      "direction": "down",
+      "label": "10Y-2Y"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by energy shock headlines and UMich consumer sentiment miss. Iran deal hopes support USD. USDJPY LONG supported by hawkish Fed signals. NZDUSD SHORT less directly impacted.",
-    "updated": "2026-05-23T06:57:37.527785+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and weakening euro. USDJPY LONG supported by hawkish Fed signals. No conflicts detected.",
+    "updated": "2026-05-23T08:00:08.102756+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms setup, copper strength challenges directionally.\n\nNZDUSD SHORT: Risk-Off regime confirms bearish bias, copper upside challenges.\n\nUSDJPY LONG: Risk-Off supports JPY strength, copper rally challenges positioning.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms short bias, copper strength challenges.\n\nNZDUSD SHORT: Risk-Off regime confirms short bias, copper strength challenges.\n\nUSDJPY LONG: Risk-Off regime confirms long bias, copper strength challenges.",
     "top": [
       {
         "pair": "EURUSD",
@@ -590,11 +614,11 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-05-23T06:57:37.527785+00:00"
+    "updated": "2026-05-23T08:00:08.102756+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T06:57:37.527785+00:00"
+    "updated": "2026-05-23T08:00:08.102756+00:00"
   },
   "news": {
     "themes": "Iran nuclear deal hopes easing geopolitical risk premium, supporting risk appetite and commodity currencies while pressuring safe havens.",
