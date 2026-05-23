@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T16:26:12.939185+00:00",
+  "updated": "2026-05-23T16:44:18.626819+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75372.0,
-      "delta_pct": -0.2,
+      "value": 75420.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USD strength favors the short.",
-    "updated": "2026-05-23T14:52:36.389985+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. UMich sentiment miss neutral to setups.",
+    "updated": "2026-05-23T16:44:18.626819+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms setup, copper strength challenges USD strength thesis.\n\nUSDCAD LONG: Risk-Off regime confirms setup, macro low risk-on challenges CAD weakness.\n\nUSDJPY LONG: Risk-Off regime confirms setup, JPY safe-haven aligns with macro uncertainty.",
+    "text": "EURUSD SHORT: Macro risk-on contradicts risk-off regime short signal.\n\nUSDCAD LONG: Risk-off regime confirms USD strength macro driver.\n\nUSDJPY LONG: Copper strength challenges safe-haven JPY appreciation logic.",
     "top": [
       {
         "pair": "EURUSD",
@@ -594,19 +594,19 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.25
+        "score": 7.2
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.95
+        "score": 6.58
       }
     ],
-    "updated": "2026-05-23T14:52:36.389985+00:00"
+    "updated": "2026-05-23T16:44:18.626819+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T14:52:36.389985+00:00"
+    "updated": "2026-05-23T16:44:18.626819+00:00"
   },
   "last_alert": "2026-05-23T16:26:12.939185+00:00"
 }
