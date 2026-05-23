@@ -295,6 +295,14 @@ def fetch_headlines(max_per_feed: int = 6) -> list[str]:
 
 
 # ── ECONOMIC CALENDAR ─────────────────────────────────────────────────────────
+
+# Country code → currency code mapping for calendar events
+_COUNTRY_CCY = {
+    "US": "USD", "EU": "EUR", "DE": "EUR", "FR": "EUR", "IT": "EUR",
+    "GB": "GBP", "JP": "JPY", "AU": "AUD", "NZ": "NZD",
+    "CA": "CAD", "CH": "CHF",
+}
+
 def fetch_calendar() -> list[dict]:
     if not TWELVEDATA:
         return []
@@ -313,24 +321,71 @@ def fetch_calendar() -> list[dict]:
             data = json.loads(r.read().decode())
         events = data.get("result", {}).get("list", []) or data.get("events", [])
         out = []
-        for ev in events[:6]:
+        for ev in events[:8]:
             name    = ev.get("event") or ev.get("title") or ""
             country = ev.get("country", "")
+            ccy     = _COUNTRY_CCY.get(country.upper(), country)
             dt_str  = ev.get("date") or ev.get("datetime") or ""
+            fore    = ev.get("estimate") or ev.get("forecast") or ""
+            prev    = ev.get("previous", "")
             if name and dt_str:
                 try:
                     dt  = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
                     day = dt.strftime("%a")
                     t   = dt.strftime("%H:%M")
+                    iso = dt.isoformat()
                 except Exception:
-                    day = ""
-                    t   = dt_str[:10]
-                out.append({"day": day, "time": t, "currency": country, "name": name})
+                    day = ""; t = dt_str[:10]; iso = dt_str
+                out.append({
+                    "day":      day,
+                    "time":     t,
+                    "iso":      iso,
+                    "currency": ccy,
+                    "name":     name,
+                    "forecast": str(fore) if fore not in (None, "") else "",
+                    "previous": str(prev) if prev not in (None, "") else "",
+                    "note":     "",   # filled by call_calendar_interpretation
+                })
         print(f"  Calendar events: {len(out)}")
         return out
     except Exception as e:
         print(f"  ⚠ Calendar: {e}")
         return []
+
+
+def call_calendar_interpretation(events: list[dict]) -> list[str]:
+    """
+    Haiku: one phrase per event (max 8 words) — expected FX impact if forecast is met.
+    Returns list of strings aligned to events list.
+    """
+    if not events:
+        return []
+    lines = []
+    for i, e in enumerate(events, 1):
+        fore = f"forecast {e['forecast']}" if e.get("forecast") else "no forecast"
+        prev = f"previous {e['previous']}" if e.get("previous") else "no previous"
+        lines.append(f"{i}. {e['currency']} {e['name']} — {fore}, {prev}")
+    prompt = (
+        "Upcoming high-impact FX events:\n" + "\n".join(lines) + "\n\n"
+        "For each event write ONE phrase max 8 words: expected FX direction if forecast is met. "
+        "Number each response to match. "
+        "Plain text only — no markdown, no asterisks, no special characters.\n"
+        "Example:\n1. Beat expected, USD bullish\n2. Inline with trend, EUR neutral"
+    )
+    text = _haiku(prompt, max_tokens=120)
+    # Parse numbered lines back into a list
+    result = [""] * len(events)
+    for line in text.strip().split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        for i in range(len(events), 0, -1):
+            if line.startswith(f"{i}.") or line.startswith(f"{i})"):
+                result[i-1] = line.split(".", 1)[-1].split(")", 1)[-1].strip()
+                break
+    return result
+
+
 
 
 # ── HAIKU CALLS ───────────────────────────────────────────────────────────────
@@ -432,6 +487,11 @@ def main():
     print("\n[4/5] Headlines + calendar…")
     headlines = fetch_headlines()
     events    = fetch_calendar()
+    if events:
+        notes = call_calendar_interpretation(events)
+        for i, e in enumerate(events):
+            e["note"] = notes[i] if i < len(notes) else ""
+        print(f"  Interpreted {len(events)} events")
 
     print("\n[5/5] Catalyst check + pair ranking…")
     # Run ranking first so catalyst has the top setups context
