@@ -958,33 +958,28 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   white-space:nowrap;
 }
 /* Right-side action buttons */
-#cht-draw-btn{
-  background:none;border:1px solid var(--bord);border-radius:4px;
-  color:var(--muted);font-size:10px;font-weight:700;
-  padding:3px 8px;cursor:pointer;margin-left:auto;
-  transition:background .15s,color .15s,border-color .15s;
-  white-space:nowrap;
+#cht-topbar-r3{
+  display:flex;align-items:center;gap:5px;
+  padding:0 10px 7px;
+  border-top:1px solid var(--dim);
+  padding-top:6px;
 }
-#cht-draw-btn.active{
-  background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
-  color:var(--amber);
-}
-#cht-mark-btn{
+/* Unified toolbox button */
+.cht-tool-btn{
   background:none;border:1px solid var(--bord);border-radius:4px;
   color:var(--muted);font-size:10px;font-weight:700;
   padding:3px 8px;cursor:pointer;
   transition:background .15s,color .15s,border-color .15s;
   white-space:nowrap;
 }
-#cht-mark-btn.active{
-  background:rgba(88,166,255,.18);border-color:rgba(88,166,255,.6);
-  color:#58a6ff;
+.cht-tool-btn.active{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
+  color:var(--buy);
 }
-#cht-clear-btn{
-  background:none;border:1px solid var(--bord);border-radius:4px;
-  color:var(--muted);font-size:10px;font-weight:700;
-  padding:3px 8px;cursor:pointer;white-space:nowrap;
+.cht-tool-btn.dim{
+  opacity:.35;cursor:default;
 }
+#cht-dir-panel{ display:none !important; }  /* replaced by toolbox Above/Below */
 
 /* Marker panel */
 #cht-marker-panel{
@@ -1113,9 +1108,13 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
       <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
       <span id="cht-timer"></span>
-      <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-      <button id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
-      <button id="cht-clear-btn" onclick="chtClearAll()">Clear</button>
+    </div>
+    <div id="cht-topbar-r3">
+      <button class="cht-tool-btn" id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
+      <button class="cht-tool-btn" id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
+      <button class="cht-tool-btn" id="cht-clear-btn" onclick="chtClearAll()">Clear</button>
+      <button class="cht-tool-btn dim" id="cht-above-btn" onclick="chtCommitStaging('above')" style="margin-left:auto;">↑ Above</button>
+      <button class="cht-tool-btn dim" id="cht-below-btn" onclick="chtCommitStaging('below')">↓ Below</button>
     </div>
   </div>
 
@@ -1678,22 +1677,11 @@ function _chtSetStaging(price) {
 }
 
 function _chtPositionDirPanel() {
-  if (_chtStagingPrice == null) return;
-  const panel   = document.getElementById('cht-dir-panel');
-  const area    = document.getElementById('cht-chart-area');
-  const priceEl = document.getElementById('cht-price');
-  if (!panel || !area || !priceEl) return;
-  const clientY = _chtPriceToY(_chtStagingPrice);
-  if (clientY == null) return;
-  const areaRect = area.getBoundingClientRect();
-  const y = clientY - areaRect.top;
-  // Clamp so panel stays within price pane
-  const priceH = priceEl.clientHeight;
-  const panelH = 34;
-  const clampedY = Math.max(4, Math.min(priceH - panelH - 4, y - panelH / 2));
-  panel.style.top   = clampedY + 'px';
-  panel.style.right = '58px';  // left of price axis
-  panel.style.display = 'flex';
+  // Activate Above/Below toolbox buttons when a staging line is set
+  ['cht-above-btn','cht-below-btn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.remove('dim');
+  });
 }
 
 function _chtRemoveStaging() {
@@ -1702,8 +1690,11 @@ function _chtRemoveStaging() {
   }
   _chtStagingLine  = null;
   _chtStagingPrice = null;
-  const panel = document.getElementById('cht-dir-panel');
-  if (panel) panel.style.display = 'none';
+  // Dim Above/Below buttons — no staging line pending
+  ['cht-above-btn','cht-below-btn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.add('dim');
+  });
 }
 
 function chtCommitStaging(direction) {
