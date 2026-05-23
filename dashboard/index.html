@@ -48,6 +48,15 @@
   .ms-val{font-size:12px;font-weight:800;text-align:center;}
   .ms-sub{font-size:8px;color:var(--muted);text-align:center;}
   .ms-div{width:1px;height:30px;background:var(--bord);flex-shrink:0;}
+  .ms-confluence{
+    font-size:8px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 7px;border-radius:3px;
+    background:rgba(0,220,55,.15);border:1px solid rgba(0,220,55,.35);
+    color:var(--buy);
+  }
+  .ms-confluence.ro{
+    background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.35);color:var(--sell);
+  }
   /* Macro card */
   .macro-card{
     border-radius:10px;padding:8px 13px;margin-bottom:7px;
@@ -95,9 +104,9 @@
   .cal-time{font-size:9px;font-weight:700;color:var(--muted);white-space:nowrap;min-width:62px;}
   .cal-curr{font-size:8px;font-weight:800;letter-spacing:.05em;
             color:rgba(100,160,255,.85);min-width:26px;}
-  .cal-name{font-size:10px;color:var(--muted);}
-  .cal-meta{font-size:8px;color:var(--muted);opacity:.7;margin-left:auto;white-space:nowrap;}
-  .cal-note{font-size:10px;color:var(--muted);padding:1px 0 4px 0;font-style:italic;}
+  .cal-name{font-size:9px;color:var(--muted);opacity:.8;}
+  .cal-meta{font-size:8px;color:var(--muted);opacity:.55;margin-left:auto;white-space:nowrap;}
+  .cal-note{font-size:9px;color:var(--muted);opacity:.7;padding:1px 0 4px 0;font-style:italic;}
 
   /* CSM */
   .csm-wrap{
@@ -123,6 +132,12 @@
     padding:8px 10px;cursor:pointer;user-select:none;
     transition:border-color .15s,box-shadow .15s;
   }
+  .block.bear-hi{border-color:rgba(248,81,73,.5);
+    box-shadow:0 0 10px rgba(248,81,73,.09),inset 0 0 18px rgba(248,81,73,.03);}
+  .block.bear-med{border-color:rgba(248,81,73,.28);}
+  .block.bull-hi{border-color:rgba(0,220,55,.5);
+    box-shadow:0 0 10px rgba(0,220,55,.09);}
+  .block.bull-med{border-color:rgba(0,220,55,.28);}
   .block.event{border-color:rgba(180,195,210,.65);
     box-shadow:0 0 10px rgba(180,195,210,.12);}
 
@@ -190,7 +205,6 @@
   <div class="app-name">FX Signal Board</div>
   <div class="scan-info">
     <div class="dot"></div><span id="scan-time">Loading…</span>
-    <button class="gear-btn" onclick="toggleInfo()" title="How it works">ⓘ</button>
     <button class="gear-btn" onclick="toggleKeyRow()" title="API keys">⚙</button>
   </div>
 </div>
@@ -212,6 +226,7 @@
 <div class="mstate" id="mstate">
   <div class="ms-lbl-row">
     <div class="ms-lbl">Regime</div>
+    <span id="ms-confluence" style="display:none"></span>
   </div>
   <div class="ms-row" id="ms-row">
     <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
@@ -423,6 +438,20 @@ function renderMarketState(){
   const el = document.getElementById("mstate");
   el.className = mstateClass(h4.regime);
 
+  // Confluence pill — show when all 3 agree on a directional regime
+  const confEl = document.getElementById("ms-confluence");
+  const aligned = d1.regime && d1.regime === h4.regime && h4.regime === h1.regime
+                  && !["Mixed","Ranging"].includes(h4.regime);
+  if (confEl) {
+    if (aligned) {
+      confEl.textContent = "⚡ Confluence";
+      confEl.className   = "ms-confluence" + (h4.regime === "Risk-Off" ? " ro" : "");
+      confEl.style.display = "";
+    } else {
+      confEl.style.display = "none";
+    }
+  }
+
   // 3-column regime row
   const col = (lbl, r) => `
     <div class="ms-item">
@@ -462,14 +491,14 @@ function renderMarketState(){
     const ASSETS = [
       ["vix",    "VIX"],
       ["us10y",  "US 10Y"],
-      ["us3m",   "US 3M"],
+      ["us2y",   "US 2Y"],
       ["wti",    "WTI"],
       ["gold",   "Gold"],
       ["spx",    "SPX"],
       ["copper", "Copper"],
       ["dxy",    "DXY"],
       ["btc",    "BTC"],
-      ["curve",  "10Y-3M"],
+      ["curve",  "10Y-2Y"],
     ];
     const items = ASSETS.map(([key, lbl]) => {
       const a   = ma[key] || {};
@@ -555,22 +584,26 @@ function renderNews(){
           (e.note ? `<div class="cal-note">${e.note}</div>` : "")
         );
       }).join("")
-    : `<span>No high-impact events found.</span>`;
+    : `<span style="opacity:.5;">No high-impact events found.</span>`;
 }
+
+const CSM_ORDER = ["USD","JPY","CHF","EUR","GBP","CAD","NZD","AUD"];
 
 function renderCSM(){
   const data = D.csm?.[csmTf] || {};
   document.getElementById("csm-tf").textContent = csmTf.toUpperCase();
 
-  // Sort weakest → strongest
-  const sorted = Object.entries(data).sort((a, b) => a[1] - b[1]);
-
-  document.getElementById("csm-bars").innerHTML = sorted.map(([cur, val]) => {
-    const h   = Math.round(3 + val * 0.31) + "px";
-    const col = val >= 60 ? "var(--buy)" : val <= 40 ? "var(--sell)" : "#576a7d";
+  document.getElementById("csm-bars").innerHTML = CSM_ORDER.map(cur => {
+    const val = data[cur] ?? null;
+    const h   = val !== null ? Math.round(3 + val * 0.31) + "px" : "3px";
+    const col = val === null ? "var(--muted)"
+              : val >= 60   ? "var(--buy)"
+              : val <= 40   ? "var(--sell)"
+              : "#576a7d";
+    const lbl = val !== null ? Math.round(val) : "—";
     return `<div class="csm-col">
       <div class="csm-b" style="height:${h};background:${col}"></div>
-      <div class="csm-l" style="color:${col}">${cur}</div>
+      <div class="csm-l" style="color:${col}">${cur} ${lbl}</div>
     </div>`;
   }).join("");
 }
@@ -699,16 +732,8 @@ function blockHTML(pair){
 }
 
 function renderGrid(){
-  // Sort by rank score when available, fall back to cont for unranked pairs
-  const rankedOrder = (D.ranked?.top || []).map(r => r.pair);
-  const sorted = [...PAIRS_ORDER].sort((a, b) => {
-    const ri = rankedOrder.indexOf(a);
-    const rj = rankedOrder.indexOf(b);
-    if (ri !== -1 && rj !== -1) return ri - rj;          // both ranked — use rank order
-    if (ri !== -1) return -1;                              // a ranked, b not — a first
-    if (rj !== -1) return 1;                               // b ranked, a not — b first
-    return (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0);  // neither ranked — cont
-  });
+  const sorted = [...PAIRS_ORDER].sort((a, b) =>
+    (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0));
   document.getElementById("pair-grid").innerHTML =
     sorted.map(p => D.pairs?.[p] ? blockHTML(p) :
       `<div class="block"><div class="b-pair">${p}</div><div style="color:var(--muted);font-size:9px;margin-top:4px">No data</div></div>`
@@ -722,11 +747,6 @@ function flipBlock(pair){
 
 // ── TD KEY (used for OHLCV chart fetches only) ───────────────────────────────
 const LS_KEY = 'fsb_td_key';
-
-function toggleInfo(){
-  const el = document.getElementById('info-overlay');
-  el.classList.toggle('open');
-}
 
 function toggleKeyRow(){
   const row = document.getElementById('td-key-row');
@@ -758,163 +778,10 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 </script>
 
 
-<!-- ── Info overlay ───────────────────────────────────────────────────── -->
-<div id="info-overlay">
-  <div id="info-header">
-    <span>How It Works</span>
-    <button id="info-close" onclick="toggleInfo()">✕</button>
-  </div>
-  <div id="info-body">
-
-    <div class="info-section">
-      <h3>Workflow</h3>
-      <p>This is the intended sequence for finding a trade:</p>
-      <p><strong>1.</strong> A Telegram alert fires when price touches the EMA200 or EMA50 — this means price is at a fair-value zone, not overextended.</p>
-      <p><strong>2.</strong> Open the dashboard. Find the pair in the grid. The grid is sorted by setup rank — the best setups appear top-left.</p>
-      <p><strong>3.</strong> Check the pair block: are pills aligned? Is continuation above 60%? Is CMP confirming direction? Is ADX showing a trend?</p>
-      <p><strong>4.</strong> Check SETUPS — is this pair in the top 3 ranked setups?</p>
-      <p><strong>5.</strong> Check CALENDAR — grey border on the block means an event is coming in the next 24 hours. Read the calendar section first.</p>
-      <p><strong>6.</strong> Long-press the pair block to open the chart. Confirm price action at the EMA level. Draw a level if the trade looks good.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Regime Card</h3>
-      <p>Shows the overall market environment for three timeframes: <strong>D1</strong> (daily), <strong>H4</strong> (4-hour), and <strong>H1</strong> (1-hour). Each timeframe independently votes between Risk-On, Risk-Off, Ranging, or Mixed.</p>
-      <p>Each timeframe vote is based on three signals: (1) how much stronger safe-haven currencies (USD, JPY, CHF) are vs risk-on currencies (AUD, NZD, GBP, EUR, CAD), (2) whether USD is dominant across all pairs, and (3) whether most pair pills are pointing bearishly or bullishly. If fewer than 40% of pairs show a clear direction, the regime is Ranging regardless of the other signals.</p>
-      <p><strong>Confidence</strong> is High when all 3 signals agree, Medium when 2 agree, Low when only 1 agrees or signals conflict.</p>
-      <p><strong>Stable</strong> means the regime hasn't changed since the last scan. <strong>Shifting</strong> means it just changed — treat with caution.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Macro Card</h3>
-      <p>Tap to flip between the regime summary and a live 10-asset cross-asset grid.</p>
-      <p><strong>W1</strong> is the weekly macro backdrop — uses weekly percentage changes with higher thresholds so only significant moves register. <strong>D1 macro</strong> uses daily changes.</p>
-      <p>The cross-asset grid shows 10 markets and what they're doing today. Each shows value, daily change, and a direction arrow: <span class="info-tag g">↑ green</span> = rising/bullish signal for risk-on, <span class="info-tag r">↓ red</span> = falling/risk-off signal, <span class="info-tag">· grey</span> = flat.</p>
-      <p><strong>10Y-3M spread</strong> is the yield curve — the gap between the 10-year Treasury yield and the 3-month T-bill rate. Negative means the curve is inverted, which historically precedes a recession and USD safe-haven demand. It's shown in basis points (100bp = 1%).</p>
-      <p><strong>Bitcoin</strong> acts as a risk-appetite velocity indicator — it often moves before equities and amplifies moves in AUD, NZD, and CAD.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Catalyst</h3>
-      <p>Updated every 2 hours. Reads the last 6 hours of FX headlines and asks one specific adversarial question: does any breaking news directly conflict with, accelerate, or invalidate the current top setups?</p>
-      <p>Maximum 25 words. If nothing material is found, it says <em>"No breaking catalysts."</em> The left accent bar turns grey when clean, red when something actionable is flagged.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Setups</h3>
-      <p>The system scores every pair on 6 factors and ranks them. Pairs must have a clear daily direction and a continuation score of at least 45% to qualify. The pill badges show the top 3 pairs with direction (<span class="info-tag g">▲ long</span> or <span class="info-tag r">▼ short</span>) and their score out of 10.</p>
-      <p>The text below gives a one-sentence macro/fundamental reason why each setup is ranked where it is. See the RANK SCORE section below for how the score is calculated.</p>
-      <p>Updated every 2 hours. The pair grid is sorted to match the setup ranking — the top-ranked pair appears top-left.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Calendar</h3>
-      <p>High-impact FX events for the coming week, found via web search and refreshed every 6 hours. Shows forecast vs previous values so you can judge expected market impact. The note below each event is a brief interpretation: what direction does the market expect if the forecast is met?</p>
-      <p>Pair blocks get a <strong>bright grey border</strong> when their base or quote currency has a high-impact event within the next 24 hours — a warning to check here before opening a trade.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Week Ahead</h3>
-      <p>Appears Sunday evening and stays until Monday evening. Claude searches the web for current weekly FX market previews and synthesises a 4-sentence strategic briefing: dominant macro theme carrying into the week, the most important scheduled event, one specific pair or currency to watch, and the biggest risk or wildcard.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Currency Strength (CSM)</h3>
-      <p>The bar chart ranks 8 major currencies from weakest (left) to strongest (right) on a 0–100 scale. A score of 100 means that currency is outperforming every other currency across all pairs. A score of 0 means it's the weakest.</p>
-      <p>Tap the chart to cycle between <strong>D1</strong> (daily), <strong>H4</strong> (4-hour), and <strong>H1</strong> (1-hour) views. The bar at the bottom of each pair block shows base vs quote strength on whichever timeframe is currently selected — green side winning means that side is stronger.</p>
-      <p>A large gap between base and quote (e.g. USD at 95, EUR at 20) is a strong signal that the pair has fundamental currency flow support behind the technical setup.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Pair Blocks — Pills Face (default)</h3>
-      <p>Three arrows for D1, H4, H1 timeframes:</p>
-      <p><span class="info-tag g">↑</span> bullish — price is above key EMAs, momentum is rising<br>
-         <span class="info-tag r">↓</span> bearish — price is below key EMAs, momentum is falling<br>
-         <span class="info-tag">·</span> neutral — no clear directional signal</p>
-      <p>A strong pill has a brighter background. <span class="info-tag g">↑↑</span> = strongly bullish (price well above EMAs with strong MACD).</p>
-      <p>The <strong>continuation score</strong> (bottom number, 0–100%) measures how well all timeframes align. It combines five things: TF alignment (35%), entry position and pullback quality (23%), currency strength divergence between base and quote (16%), whether the macro regime supports the direction (13%), and trend strength via ADX (13%).</p>
-      <p><span class="info-tag g">70%+</span> strong setup <span class="info-tag a">50–70%</span> moderate <span class="info-tag r">below 35%</span> weak/conflicted</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Pair Blocks — MOM Face (tap to flip)</h3>
-      <p>The three numbers (D1 / H4 / H1) are MOM1212 scores — a proprietary momentum oscillator on a 0–100 scale for each timeframe. The small numbers below each are the <strong>delta</strong> — how much the score changed since the last scan.</p>
-      <p><span class="info-tag g">60+</span> bullish momentum <span class="info-tag">40–60</span> neutral zone <span class="info-tag r">below 40</span> bearish momentum</p>
-      <p><strong>CMP</strong> (bottom left) — Composite Momentum Position. A single 0–100 number that combines all three timeframes. This is the single most important momentum reading. Above 60 = bullish, below 40 = bearish, 40–60 = no clear momentum edge.</p>
-      <p><strong>ADX</strong> (bottom right) — Average Directional Index. Measures trend strength regardless of direction. <span class="info-tag g">25+</span> trending <span class="info-tag g">50+</span> strong trend <span class="info-tag r">below 20</span> ranging/no trend. High ADX multiplies the weight of directional signals.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Setup Rank Score (0–10)</h3>
-      <p>How the SETUPS ranking is calculated. Each pair gets a score from six components:</p>
-      <p><strong>Continuation score (25%)</strong> — technical alignment quality, scaled from 45–100% → 0–10.</p>
-      <p><strong>CMP (20%)</strong> — is momentum confirming the direction? CMP ≥ 60 for a bull setup scores 10. CMP in the 40–60 neutral zone scores 0.</p>
-      <p><strong>D1 MOM delta (15%)</strong> — is momentum accelerating or fading? A large positive delta on a bull setup scores 10. Momentum fading against direction scores 0.</p>
-      <p><strong>CSM divergence (20%)</strong> — how large is the strength gap between base and quote currency on D1? A gap of 50+ points scores 10. Negative gap (setup direction contradicts CSM) scores near 0.</p>
-      <p><strong>Regime fit (10%)</strong> — does the D1 regime support the direction? Risk-Off regime supporting a USD long scores 10 × confidence multiplier.</p>
-      <p><strong>Cross-asset (10%)</strong> — how many global markets are pushing in the same direction? e.g. WTI falling + VIX rising both support a USDCAD long simultaneously.</p>
-      <p>Hard gate: D1 pill must be directional AND continuation ≥ 45% to qualify at all.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Chart Overlay</h3>
-      <p>Long-press any pair block to open the full-screen chart. Tap D1 / H4 / H1 to switch timeframes. The countdown timer shows how long until the current candle closes.</p>
-      <p><strong>EMA 200</strong> (white line) — long-term trend direction. Price above = bullish bias, below = bearish bias. EMA touches generate Telegram alerts.<br>
-         <strong>EMA 50</strong> (blue line) — medium-term trend. Combined with EMA200 it shows the current trend structure.<br>
-         <strong>BB</strong> (grey bands) — Bollinger Bands. Wide bands = high volatility. Price at the outer band = potentially overextended.<br>
-         <strong>MACD</strong> (bottom panel) — momentum. Green histogram = bullish momentum, red = bearish. Blue line crossing grey line = momentum shift.</p>
-      <p>Tap <strong>Level</strong> to draw a price level line. After drawing, tap <strong>Above</strong> or <strong>Below</strong> to set the alert direction. You'll receive a Telegram notification when price crosses that level. Tap <strong>Clear</strong> to remove all levels for this pair.</p>
-      <p>The <strong>⧉</strong> button copies a detailed analysis prompt to your clipboard — paste it into Claude for a fundamental macro assessment of the pair.</p>
-    </div>
-
-    <div class="info-section">
-      <h3>Data & Refresh</h3>
-      <p>The dashboard auto-refreshes every 5 minutes. Technical data (pills, MOM, cont scores, CSM, regime) updates <strong>every hour</strong>. AI analysis, macro cross-assets, catalyst, setups, and calendar update <strong>every 2 hours</strong>. The calendar itself refreshes every 6 hours (events don't change that quickly). The Week Ahead is generated once on Sunday evening.</p>
-      <p>The Twelvedata API key (⚙ button) is stored only in your browser's local storage and is used solely for fetching chart OHLCV data. It never goes to GitHub Actions. The GitHub PAT is optional — only needed if you want price level alerts to sync across devices.</p>
-    </div>
-
-  </div>
-</div>
-
 <!-- ═══════════════════════════════════════════════════════════════════════
      CHART OVERLAY — styles, HTML, JS
      ═══════════════════════════════════════════════════════════════════════ -->
 <style>
-/* ── Info overlay ────────────────────────────────────────────────────────── */
-#info-overlay{
-  position:fixed;inset:0;z-index:200;
-  background:rgba(10,14,19,.96);
-  display:none;flex-direction:column;
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  overflow-y:auto;
-}
-#info-overlay.open{display:flex;}
-#info-header{
-  position:sticky;top:0;z-index:10;
-  background:rgba(10,14,19,.98);
-  border-bottom:1px solid var(--bord);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:10px 14px;flex-shrink:0;
-}
-#info-header span{font-size:11px;font-weight:800;letter-spacing:.1em;
-                  text-transform:uppercase;color:var(--muted);}
-#info-close{background:none;border:none;color:var(--muted);
-            font-size:18px;cursor:pointer;line-height:1;padding:0 2px;}
-#info-body{padding:12px 14px 40px;display:flex;flex-direction:column;gap:16px;}
-.info-section{border-bottom:1px solid var(--bord);padding-bottom:14px;}
-.info-section:last-child{border-bottom:none;}
-.info-section h3{font-size:9px;font-weight:800;letter-spacing:.1em;
-                  text-transform:uppercase;color:var(--buy);margin-bottom:7px;}
-.info-section p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:5px;}
-.info-section p:last-child{margin-bottom:0;}
-.info-section strong{color:var(--text);font-weight:700;}
-.info-tag{display:inline-block;font-size:9px;font-weight:700;
-          padding:1px 6px;border-radius:3px;margin:1px 2px;
-          background:var(--dim);color:var(--muted);}
-.info-tag.g{background:rgba(0,220,55,.12);color:var(--buy);}
-.info-tag.r{background:rgba(248,81,73,.12);color:var(--sell);}
-.info-tag.a{background:rgba(227,179,65,.12);color:var(--amber);}
-
 /* ── Overlay shell ──────────────────────────────────────────────────────── */
 #cht-overlay{
   position:fixed;inset:0;z-index:100;
@@ -958,56 +825,21 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   white-space:nowrap;
 }
 /* Right-side action buttons */
-#cht-topbar-r3{
-  display:flex;align-items:center;gap:5px;
-  padding:0 10px 7px;
-  border-top:1px solid var(--dim);
-  padding-top:6px;
-}
-/* Unified toolbox button */
-.cht-tool-btn{
+#cht-draw-btn{
   background:none;border:1px solid var(--bord);border-radius:4px;
   color:var(--muted);font-size:10px;font-weight:700;
-  padding:3px 8px;cursor:pointer;
+  padding:3px 8px;cursor:pointer;margin-left:auto;
   transition:background .15s,color .15s,border-color .15s;
   white-space:nowrap;
 }
-.cht-tool-btn.active{
-  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
-  color:var(--buy);
+#cht-draw-btn.active{
+  background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
+  color:var(--amber);
 }
-#cht-above-btn:not(.dim){
-  border-color:rgba(0,220,55,.5);color:var(--buy);
-}
-#cht-below-btn:not(.dim){
-  border-color:rgba(248,81,73,.5);color:var(--sell);
-}
-.cht-tool-btn.dim{
-  opacity:.35;cursor:default;
-}
-#cht-dir-panel{ display:none !important; }  /* replaced by toolbox Above/Below */
-
-/* Marker panel */
-#cht-marker-panel{
-  display:none;position:absolute;z-index:25;
-  align-items:center;gap:4px;
-  background:rgba(10,14,19,.92);
-  border:1px solid rgba(88,166,255,.55);
-  border-radius:6px;padding:4px 6px;
-}
-#cht-marker-panel input{
-  background:var(--dim);border:1px solid var(--bord);border-radius:4px;
-  color:var(--text);font-size:10px;padding:3px 6px;outline:none;
-  width:90px;
-}
-#cht-marker-panel button{
-  background:none;border:1px solid rgba(88,166,255,.4);border-radius:4px;
-  color:#58a6ff;font-size:11px;font-weight:700;
+#cht-clear-btn{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
   padding:3px 8px;cursor:pointer;white-space:nowrap;
-  transition:background .12s;
-}
-#cht-marker-panel button:last-child{
-  border-color:rgba(248,81,73,.4);color:var(--sell);
 }
 #cht-close-btn{
   background:none;border:none;color:var(--muted);
@@ -1114,13 +946,8 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
       <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
       <span id="cht-timer"></span>
-    </div>
-    <div id="cht-topbar-r3">
-      <button class="cht-tool-btn" id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-      <button class="cht-tool-btn dim" id="cht-above-btn" onclick="chtCommitStaging('above')">↑ Above</button>
-      <button class="cht-tool-btn dim" id="cht-below-btn" onclick="chtCommitStaging('below')">↓ Below</button>
-      <button class="cht-tool-btn" id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
-      <button class="cht-tool-btn" id="cht-clear-btn" onclick="chtClearAll()" style="margin-left:auto;">Clear</button>
+      <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
+      <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
     </div>
   </div>
 
@@ -1129,16 +956,10 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     <div id="cht-divider"></div>
     <div id="cht-macd"></div>
     <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
-    <button id="cht-float-del" onclick="chtDeleteSelected()">✕</button>
+    <button id="cht-float-del" onclick="chtDeleteSelectedLevel()">✕</button>
     <div id="cht-dir-panel">
       <button onclick="chtCommitStaging('above')">↑ Above</button>
       <button onclick="chtCommitStaging('below')">↓ Below</button>
-    </div>
-    <div id="cht-marker-panel">
-      <input type="text" id="cht-marker-text" placeholder="Label…" maxlength="20">
-      <button onclick="chtCommitMarker('bull')">↑</button>
-      <button onclick="chtCommitMarker('bear')">↓</button>
-      <button onclick="chtCancelMarker()">✕</button>
     </div>
   </div>
 
@@ -1160,11 +981,10 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 //  FSB Chart overlay  — all identifiers prefixed cht_ to avoid collisions
 // ════════════════════════════════════════════════════════════════════════
 
-const CHT_LA_KEY      = 'fsb_la_v1';
-const CHT_PAT_KEY     = 'fsb_gh_pat';
-const CHT_IND_KEY     = 'fsb_ind_v1';
-const CHT_MARKERS_KEY = 'fsb_markers_v1';
-const CHT_LA_PATH     = 'data/level_alerts.json';
+const CHT_LA_KEY  = 'fsb_la_v1';
+const CHT_PAT_KEY = 'fsb_gh_pat';
+const CHT_IND_KEY = 'fsb_ind_v1';
+const CHT_LA_PATH = 'data/level_alerts.json';
 
 const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true };
 
@@ -1182,22 +1002,17 @@ let _chtIndState  = null;
 
 // Drawing state
 let _chtDrawMode    = false;
-let _chtMarkMode    = false;
-let _chtMarkTime    = null;   // timestamp of candle tapped in mark mode
 let _chtStagingLine = null;
 let _chtStagingPrice= null;
 let _chtSelectedId  = null;
-let _chtSelectedType= null;   // 'level' or 'marker'
 let _chtDragging    = false;
 let _chtMouseDown   = false;
 let _chtLongTimer   = null;
 let _chtDrawInited  = false;
 
 // ── localStorage helpers ──────────────────────────────────────────────────────
-const laLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY)      || '[]'); } catch { return []; } };
-const laSave  = a  => localStorage.setItem(CHT_LA_KEY,      JSON.stringify(a));
-const mkLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_MARKERS_KEY) || '[]'); } catch { return []; } };
-const mkSave  = a  => localStorage.setItem(CHT_MARKERS_KEY, JSON.stringify(a));
+const laLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY) || '[]'); } catch { return []; } };
+const laSave = a  => localStorage.setItem(CHT_LA_KEY, JSON.stringify(a));
 
 // ── Indicator state ───────────────────────────────────────────────────────────
 function chtLoadIndState() {
@@ -1316,10 +1131,7 @@ function closeChart() {
   _chtHideFloatDel();
   document.getElementById('cht-overlay').classList.remove('open');
   _chtDrawMode = false;
-  _chtMarkMode = false;
   document.getElementById('cht-draw-btn').classList.remove('active');
-  document.getElementById('cht-mark-btn').classList.remove('active');
-  chtCancelMarker();
   _chtDestroyCharts();
   _chtPair = null;
   if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
@@ -1525,7 +1337,6 @@ function _chtRender(pair, tf, ohlcv) {
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
-  _chtRenderMarkers();
 
   const closes = ohlcv.map(d => d.close);
 
@@ -1555,12 +1366,9 @@ function _chtRender(pair, tf, ohlcv) {
   // Committed level lines (grey dotted)
   _chtAlertRefs = [];
   laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
-    const lineCol = a.direction === 'above' ? 'rgba(0,220,55,0.7)'
-                  : a.direction === 'below' ? 'rgba(248,81,73,0.7)'
-                  : 'rgba(139,148,158,0.65)';
     try {
       const pl = candles.createPriceLine({
-        price:a.price, color:lineCol, lineWidth:1,
+        price:a.price, color:'rgba(139,148,158,0.65)', lineWidth:1,
         lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
@@ -1686,11 +1494,22 @@ function _chtSetStaging(price) {
 }
 
 function _chtPositionDirPanel() {
-  // Activate Above/Below toolbox buttons when a staging line is set
-  ['cht-above-btn','cht-below-btn'].forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) btn.classList.remove('dim');
-  });
+  if (_chtStagingPrice == null) return;
+  const panel   = document.getElementById('cht-dir-panel');
+  const area    = document.getElementById('cht-chart-area');
+  const priceEl = document.getElementById('cht-price');
+  if (!panel || !area || !priceEl) return;
+  const clientY = _chtPriceToY(_chtStagingPrice);
+  if (clientY == null) return;
+  const areaRect = area.getBoundingClientRect();
+  const y = clientY - areaRect.top;
+  // Clamp so panel stays within price pane
+  const priceH = priceEl.clientHeight;
+  const panelH = 34;
+  const clampedY = Math.max(4, Math.min(priceH - panelH - 4, y - panelH / 2));
+  panel.style.top   = clampedY + 'px';
+  panel.style.right = '58px';  // left of price axis
+  panel.style.display = 'flex';
 }
 
 function _chtRemoveStaging() {
@@ -1699,11 +1518,8 @@ function _chtRemoveStaging() {
   }
   _chtStagingLine  = null;
   _chtStagingPrice = null;
-  // Dim Above/Below buttons — no staging line pending
-  ['cht-above-btn','cht-below-btn'].forEach(id => {
-    const btn = document.getElementById(id);
-    if (btn) btn.classList.add('dim');
-  });
+  const panel = document.getElementById('cht-dir-panel');
+  if (panel) panel.style.display = 'none';
 }
 
 function chtCommitStaging(direction) {
@@ -1715,12 +1531,9 @@ function chtCommitStaging(direction) {
   laSave(alerts);
   _chtRemoveStaging();
   if (_chtCandles) {
-    const lineCol = direction === 'above' ? 'rgba(0,220,55,0.7)'
-                  : direction === 'below' ? 'rgba(248,81,73,0.7)'
-                  : 'rgba(139,148,158,0.65)';
     try {
       const pl = _chtCandles.createPriceLine({
-        price, color:lineCol, lineWidth:1,
+        price, color:'rgba(139,148,158,0.65)', lineWidth:1,
         lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
@@ -1746,112 +1559,16 @@ function chtClearLevels() {
   chtPushToGitHub(CHT_LA_PATH, alerts);
 }
 
-function chtClearMarkers() {
-  if (!_chtPair || !_chtTf) return;
-  const markers = mkLoad().map(m =>
-    m.pair === _chtPair && m.tf === _chtTf ? { ...m, active:false } : m
-  );
-  mkSave(markers);
-  if (_chtCandles) try { _chtCandles.setMarkers([]); } catch(e) {}
-}
-
-function chtClearAll() {
-  chtClearLevels();
-  chtClearMarkers();
-}
-
 function chtDeleteSelectedLevel() {
-  const id     = _chtSelectedId;
+  if (_chtSelectedId == null) return;
+  const id    = _chtSelectedId;
   const alerts = laLoad().map(a => a.id === id ? { ...a, active:false } : a);
   laSave(alerts);
   const ref = _chtAlertRefs.find(r => r.id === id);
   if (ref && _chtCandles) try { _chtCandles.removePriceLine(ref.priceLine); } catch(e) {}
   _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
-  chtPushToGitHub(CHT_LA_PATH, alerts);
-}
-
-function chtDeleteSelectedMarker() {
-  const id      = _chtSelectedId;
-  const markers = mkLoad().map(m => m.id === id ? { ...m, active:false } : m);
-  mkSave(markers);
-  _chtRenderMarkers();
-}
-
-function chtDeleteSelected() {
-  if (_chtSelectedType === 'marker') chtDeleteSelectedMarker();
-  else chtDeleteSelectedLevel();
   _chtHideFloatDel();
-}
-
-// ── Mark mode ─────────────────────────────────────────────────────────────────
-function chtToggleMarkMode() {
-  _chtMarkMode = !_chtMarkMode;
-  if (_chtMarkMode) {
-    _chtDrawMode = false;
-    document.getElementById('cht-draw-btn').classList.remove('active');
-    document.getElementById('cht-chart-area').classList.remove('draw-mode');
-    _chtRemoveStaging();
-  }
-  document.getElementById('cht-mark-btn').classList.toggle('active', _chtMarkMode);
-  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtMarkMode);
-}
-
-function _chtShowMarkerPanel(time, clientX, clientY) {
-  _chtMarkTime = time;
-  const panel = document.getElementById('cht-marker-panel');
-  const area  = document.getElementById('cht-chart-area');
-  if (!panel || !area) return;
-  const ar    = area.getBoundingClientRect();
-  const x     = Math.max(4, Math.min(ar.width  - 220, clientX - ar.left - 50));
-  const y     = Math.max(4, Math.min(ar.height -  40, clientY - ar.top  - 20));
-  panel.style.left    = x + 'px';
-  panel.style.top     = y + 'px';
-  panel.style.display = 'flex';
-  document.getElementById('cht-marker-text').value = '';
-  document.getElementById('cht-marker-text').focus();
-}
-
-function chtCommitMarker(direction) {
-  if (_chtMarkTime == null || !_chtPair || !_chtTf) return;
-  const text = document.getElementById('cht-marker-text').value.trim();
-  const id   = Date.now();
-  const markers = mkLoad();
-  markers.push({ id, pair:_chtPair, tf:_chtTf, time:_chtMarkTime,
-                 direction, text, active:true });
-  mkSave(markers);
-  chtCancelMarker();
-  _chtRenderMarkers();
-}
-
-function chtCancelMarker() {
-  _chtMarkTime = null;
-  const panel = document.getElementById('cht-marker-panel');
-  if (panel) panel.style.display = 'none';
-  _chtMarkMode = false;
-  document.getElementById('cht-mark-btn').classList.remove('active');
-  document.getElementById('cht-chart-area').classList.remove('draw-mode');
-}
-
-function _chtRenderMarkers() {
-  if (!_chtCandles || !_chtPair || !_chtTf) return;
-  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
-  const mapped = active
-    .sort((a, b) => a.time - b.time)
-    .map(m => ({
-      time:     m.time,
-      position: m.direction === 'bull' ? 'belowBar' : 'aboveBar',
-      color:    m.direction === 'bull' ? 'rgba(0,220,55,.9)' : 'rgba(248,81,73,.9)',
-      shape:    m.direction === 'bull' ? 'arrowUp'  : 'arrowDown',
-      text:     m.text || '',
-      size:     1.5,
-      id:       m.id,
-    }));
-  try { _chtCandles.setMarkers(mapped); } catch(e) {}
-}
-
-function _chtNearMarker(time) {
-  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
-  return active.find(m => m.time === time) || null;
+  chtPushToGitHub(CHT_LA_PATH, alerts);
 }
 
 // ── Float-del helpers ─────────────────────────────────────────────────────────
@@ -1870,8 +1587,7 @@ function _chtShowFloatDel(id, clientX, clientY) {
   el.style.justifyContent = 'center';
 }
 function _chtHideFloatDel() {
-  _chtSelectedId   = null;
-  _chtSelectedType = null;
+  _chtSelectedId = null;
   const el = document.getElementById('cht-float-del');
   if (el) el.style.display = 'none';
 }
@@ -1942,7 +1658,6 @@ function _chtInitDrawListeners() {
   document.addEventListener('touchend', function(e) {
     if (_chtLongTimer) { clearTimeout(_chtLongTimer); _chtLongTimer = null; }
     if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
-    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
     if (_chtDragging) { _chtDragging = false; return; }
     _chtHideFloatDel();
     const t  = e.changedTouches[0];
@@ -1952,15 +1667,6 @@ function _chtInitDrawListeners() {
     const r = _chtBounds();
     if (!r) return;
     const inChart = t.clientX >= r.left && t.clientX <= r.right && t.clientY >= r.top && t.clientY <= r.bottom;
-
-    // Mark mode — show marker panel at tapped candle
-    if (_chtMarkMode && inChart && _chtInst) {
-      const lr = _chtInst.timeScale().getVisibleLogicalRange();
-      const clickedBar = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
-      if (clickedBar != null) _chtShowMarkerPanel(clickedBar, t.clientX, t.clientY);
-      return;
-    }
-
     if (_chtDrawMode && inChart) {
       const p = _chtToPrice(t.clientY);
       if (p != null) _chtSetStaging(p);
@@ -1970,31 +1676,13 @@ function _chtInitDrawListeners() {
       return;
     }
     if (!inChart) return;
-
-    // Check marker hit first (by timestamp proximity), then level
-    if (_chtInst) {
-      const clickedTime = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
-      if (clickedTime != null) {
-        const mk = _chtNearMarker(clickedTime);
-        if (mk) {
-          _chtSelectedId   = mk.id;
-          _chtSelectedType = 'marker';
-          _chtShowFloatDel(mk.id, t.clientX, t.clientY);
-          return;
-        }
-      }
-    }
     const ref = _chtNearCommitted(t.clientY);
-    if (ref) {
-      _chtSelectedId   = ref.id;
-      _chtSelectedType = 'level';
-      _chtShowFloatDel(ref.id, t.clientX, t.clientY);
-    }
+    if (ref) _chtShowFloatDel(ref.id, t.clientX, t.clientY);
   }, true);
 
   // ── Mouse ──────────────────────────────────────────────────────────────────
   document.addEventListener('mousedown', function(e) {
-    if (!_chtInst || _chtDrawMode || _chtMarkMode) return;
+    if (!_chtInst || _chtDrawMode) return;
     if (_chtNearStaging(e.clientY)) _chtMouseDown = true;
   }, true);
   document.addEventListener('mousemove', function(e) {
@@ -2007,23 +1695,11 @@ function _chtInitDrawListeners() {
 
   document.addEventListener('click', function(e) {
     if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
-    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
     _chtHideFloatDel();
-
+    if (!_chtDrawMode || !_chtInst) return;
     const r = _chtBounds();
     if (!r) return;
-    const inChart = e.clientX >= r.left && e.clientX <= r.right &&
-                    e.clientY >= r.top  && e.clientY <= r.bottom;
-
-    // Mark mode
-    if (_chtMarkMode && _chtInst && inChart) {
-      const clickedTime = _chtInst.timeScale().coordinateToTime(e.clientX - r.left);
-      if (clickedTime != null) _chtShowMarkerPanel(clickedTime, e.clientX, e.clientY);
-      return;
-    }
-
-    if (!_chtDrawMode || !_chtInst) return;
-    if (!inChart) return;
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
     const p = _chtToPrice(e.clientY);
     if (p != null) _chtSetStaging(p);
     _chtDrawMode = false;
