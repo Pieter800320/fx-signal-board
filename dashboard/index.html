@@ -62,7 +62,7 @@
     border-radius:10px;padding:8px 13px;margin-bottom:7px;
     background:var(--surf);border:1px solid var(--bord);
   }
-  .ma-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px 6px;}
+  .ma-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 6px;}
   .ma-item{display:flex;flex-direction:column;align-items:center;padding:3px 0;}
   .ma-key{font-size:7px;font-weight:700;text-transform:uppercase;
           letter-spacing:.05em;color:var(--muted);margin-bottom:2px;}
@@ -490,12 +490,15 @@ function renderMarketState(){
     const ma = D.macro_assets || {};
     const ASSETS = [
       ["vix",    "VIX"],
-      ["us10y",  "US10Y"],
+      ["us10y",  "US 10Y"],
+      ["us2y",   "US 2Y"],
       ["wti",    "WTI"],
       ["gold",   "Gold"],
       ["spx",    "SPX"],
       ["copper", "Copper"],
       ["dxy",    "DXY"],
+      ["btc",    "BTC"],
+      ["curve",  "10Y-2Y"],
     ];
     const items = ASSETS.map(([key, lbl]) => {
       const a   = ma[key] || {};
@@ -506,9 +509,13 @@ function renderMarketState(){
       const dlt = a.delta_bp  != null ? `${a.delta_bp  > 0 ? "+" : ""}${a.delta_bp.toFixed(1)}bp`
                 : a.delta_pct != null ? `${a.delta_pct > 0 ? "+" : ""}${a.delta_pct.toFixed(1)}%`
                 : "—";
+      // Curve: value is already in bp, show sign
+      const dispVal = key === "curve" && a.value != null
+        ? `${a.value > 0 ? "+" : ""}${a.value}bp`
+        : val;
       return `<div class="ma-item">
         <div class="ma-key">${lbl}</div>
-        <div class="ma-val" style="color:${col}">${val} ${arr}</div>
+        <div class="ma-val" style="color:${col}">${dispVal} ${arr}</div>
         <div class="ma-dlt" style="color:${col}">${dlt}</div>
       </div>`;
     }).join("");
