@@ -90,6 +90,8 @@
   .cal-curr{font-size:8px;font-weight:800;letter-spacing:.05em;
             color:rgba(100,160,255,.85);min-width:26px;}
   .cal-name{font-size:9px;color:var(--muted);opacity:.8;}
+  .cal-meta{font-size:8px;color:var(--muted);opacity:.55;margin-left:auto;white-space:nowrap;}
+  .cal-note{font-size:9px;color:var(--muted);opacity:.7;padding:1px 0 4px 0;font-style:italic;}
 
   /* CSM */
   .csm-wrap{
@@ -121,6 +123,8 @@
   .block.bull-hi{border-color:rgba(0,220,55,.5);
     box-shadow:0 0 10px rgba(0,220,55,.09);}
   .block.bull-med{border-color:rgba(0,220,55,.28);}
+  .block.event{border-color:rgba(180,195,210,.65);
+    box-shadow:0 0 10px rgba(180,195,210,.12);}
 
   /* Top row: pair + changes */
   .b-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;}
@@ -266,6 +270,12 @@ const PAIRS_ORDER = [
   "AUDUSD","USDCAD","NZDUSD",
   "EURJPY","GBPJPY","AUDJPY","NZDJPY","CADJPY"
 ];
+
+// Country code → currency for calendar event border matching
+const COUNTRY_CCY = {
+  US:"USD", EU:"EUR", DE:"EUR", FR:"EUR", IT:"EUR",
+  GB:"GBP", JP:"JPY", AU:"AUD", NZ:"NZD", CA:"CAD", CH:"CHF"
+};
 
 function getCorrelates(pair){
   const corr = D && D.correlations;
@@ -460,16 +470,31 @@ function renderNews(){
 
   // ── CALENDAR ──────────────────────────────────────────────────────────────
   const events = calendar.events || [];
+  const now    = Date.now();
+  const in24h  = now + 24 * 3600 * 1000;
   document.getElementById("calendar-lbl").textContent =
     "CALENDAR · " + fmtTime(calendar.updated);
   document.getElementById("calendar-txt").innerHTML = events.length
-    ? events.map(e =>
-        `<div class="cal-row">` +
-        `<span class="cal-time">${e.day} ${e.time} UTC</span>` +
-        `<span class="cal-curr">${e.currency}</span>` +
-        `<span class="cal-name">${e.name}</span>` +
-        `</div>`
-      ).join("")
+    ? events.map(e => {
+        const t      = e.iso ? new Date(e.iso).getTime() : 0;
+        const soon   = t >= now && t <= in24h;
+        const ccy    = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency;
+        const meta   = [e.forecast ? `fcst ${e.forecast}` : "",
+                        e.previous ? `prev ${e.previous}` : ""]
+                       .filter(Boolean).join("  ·  ");
+        const timeCol = soon
+          ? `<span class="cal-time" style="color:rgba(180,195,210,.9)">${e.day} ${e.time}</span>`
+          : `<span class="cal-time">${e.day} ${e.time}</span>`;
+        return (
+          `<div class="cal-row">` +
+            timeCol +
+            `<span class="cal-curr">${ccy}</span>` +
+            `<span class="cal-name">${e.name}</span>` +
+            (meta ? `<span class="cal-meta">${meta}</span>` : "") +
+          `</div>` +
+          (e.note ? `<div class="cal-note">${e.note}</div>` : "")
+        );
+      }).join("")
     : `<span style="opacity:.5;">No high-impact events found.</span>`;
 }
 
@@ -582,10 +607,23 @@ function pairCSMBar(pair){
 
 function blockHTML(pair){
   const p   = (D.pairs || {})[pair] || {};
-  const cls = p.regime_cls || "";
   const d1p = p.d1_pct;
   const d5p = p.d5_pct;
   const d1Pos = d1p !== null && d1p !== undefined && d1p >= 0;
+
+  // Event border — check if base or quote has a high-impact event in next 24h
+  const base  = pair.slice(0, 3);
+  const quote = pair.slice(3);
+  const now   = Date.now();
+  const in24h = now + 24 * 3600 * 1000;
+  const hasEvent = (D.calendar?.events || []).some(e => {
+    if (!e.iso) return false;
+    const t = new Date(e.iso).getTime();
+    if (t < now || t > in24h) return false;
+    const ccy = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency;
+    return ccy === base || ccy === quote;
+  });
+  const cls = hasEvent ? "event" : "";
 
   return `<div class="block ${cls}" onclick="flipBlock('${pair}')">
     <div class="b-top">
