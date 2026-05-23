@@ -40,7 +40,7 @@ from scanner.aggregator import build_tfs
 from scanner.pills      import classify_full
 from scanner.mom1212    import compute_all as compute_mom
 from scanner.csm        import compute_csm, STRENGTH_PAIRS
-from scanner.regime     import classify_regime, regime_block_cls
+from scanner.regime     import classify_regime
 from scanner.cont_score import compute_cont
 from scanner.correlate  import compute_correlation
 from scanner.score              import compute_reset_score, atr_percentile
@@ -260,7 +260,6 @@ def main():
         pills = pair_pills.get(key, {})
         mom   = pair_mom.get(key, {})
         adx   = pair_adx.get(key)
-        cls   = regime_block_cls(key, pills, regime_h4)
 
         cont = compute_cont(
             pair        = key,
@@ -289,9 +288,8 @@ def main():
             "prev_close":  prev_close,
             "prev5_close": prev5_close,
             "cont":        cont,
-            "regime_cls":  cls,
         }
-        print(f"  {key}: cont={cont}% cls={cls}")
+        print(f"  {key}: cont={cont}%")
 
     # ── Assemble signals.json ─────────────────────────────────────────────────
     # Preserve keys written by scan_news.py — not touched by hourly scan
@@ -299,7 +297,7 @@ def main():
         k: prev.get(k)
         for k in ("regime_w1", "macro", "macro_assets",
                   "catalyst", "ranked", "calendar", "week_ahead",
-                  "news", "analysis", "last_alert")
+                  "last_alert")
         if prev.get(k)
     }
 
