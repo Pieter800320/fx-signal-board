@@ -976,6 +976,12 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
   color:var(--buy);
 }
+#cht-above-btn:not(.dim){
+  border-color:rgba(0,220,55,.5);color:var(--buy);
+}
+#cht-below-btn:not(.dim){
+  border-color:rgba(248,81,73,.5);color:var(--sell);
+}
 .cht-tool-btn.dim{
   opacity:.35;cursor:default;
 }
@@ -1111,10 +1117,10 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     </div>
     <div id="cht-topbar-r3">
       <button class="cht-tool-btn" id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-      <button class="cht-tool-btn" id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
-      <button class="cht-tool-btn" id="cht-clear-btn" onclick="chtClearAll()">Clear</button>
-      <button class="cht-tool-btn dim" id="cht-above-btn" onclick="chtCommitStaging('above')" style="margin-left:auto;">↑ Above</button>
+      <button class="cht-tool-btn dim" id="cht-above-btn" onclick="chtCommitStaging('above')">↑ Above</button>
       <button class="cht-tool-btn dim" id="cht-below-btn" onclick="chtCommitStaging('below')">↓ Below</button>
+      <button class="cht-tool-btn" id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
+      <button class="cht-tool-btn" id="cht-clear-btn" onclick="chtClearAll()" style="margin-left:auto;">Clear</button>
     </div>
   </div>
 
@@ -1549,9 +1555,12 @@ function _chtRender(pair, tf, ohlcv) {
   // Committed level lines (grey dotted)
   _chtAlertRefs = [];
   laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
+    const lineCol = a.direction === 'above' ? 'rgba(0,220,55,0.7)'
+                  : a.direction === 'below' ? 'rgba(248,81,73,0.7)'
+                  : 'rgba(139,148,158,0.65)';
     try {
       const pl = candles.createPriceLine({
-        price:a.price, color:'rgba(139,148,158,0.65)', lineWidth:1,
+        price:a.price, color:lineCol, lineWidth:1,
         lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
@@ -1706,9 +1715,12 @@ function chtCommitStaging(direction) {
   laSave(alerts);
   _chtRemoveStaging();
   if (_chtCandles) {
+    const lineCol = direction === 'above' ? 'rgba(0,220,55,0.7)'
+                  : direction === 'below' ? 'rgba(248,81,73,0.7)'
+                  : 'rgba(139,148,158,0.65)';
     try {
       const pl = _chtCandles.createPriceLine({
-        price, color:'rgba(139,148,158,0.65)', lineWidth:1,
+        price, color:lineCol, lineWidth:1,
         lineStyle:LightweightCharts.LineStyle.Dotted,
         axisLabelVisible:true, title:''
       });
