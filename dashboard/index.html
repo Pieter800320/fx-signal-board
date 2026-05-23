@@ -116,11 +116,11 @@
     padding:9px 12px;margin-bottom:10px;cursor:pointer;user-select:none;
   }
   .csm-wrap:active{opacity:.8;}
-  .csm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
+  .csm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
   .csm-ttl{font-size:8px;font-weight:700;text-transform:uppercase;
             letter-spacing:.07em;color:var(--muted);}
   .csm-tf{color:var(--text);font-weight:700;}
-  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:52px;}
+  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:78px;}
   .csm-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;}
   .csm-b{width:100%;border-radius:2px;min-height:2px;transition:height .35s,background .35s;}
   .csm-l{font-size:7px;font-weight:700;text-transform:uppercase;}
@@ -597,7 +597,7 @@ function renderCSM(){
 
   document.getElementById("csm-bars").innerHTML = CSM_ORDER.map(cur => {
     const val = data[cur] ?? null;
-    const h   = val !== null ? Math.round(3 + val * 0.48) + "px" : "3px";
+    const h   = val !== null ? Math.round(3 + val * 0.74) + "px" : "3px";
     const col = val === null ? "var(--muted)"
               : val >= 60   ? "var(--buy)"
               : val <= 40   ? "var(--sell)"
