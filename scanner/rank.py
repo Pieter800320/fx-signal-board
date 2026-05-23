@@ -291,5 +291,5 @@ def build_haiku_prompt(ranked, signals):
         + "\n".join(pair_lines) + "\n\n"
         "For each pair write exactly ONE sentence (max 12 words): does the macro context "
         "confirm or challenge the setup? Name the specific driver. "
-        "Plain text only. No markdown, no bullets, no labels."
+        "Plain text only — no markdown, no asterisks, no dashes, no bullet points, no special characters."
     )
