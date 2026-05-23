@@ -3,6 +3,7 @@ name: News Scan
 on:
   schedule:
     - cron: '0 */2 * * *'   # every 2 hours
+    - cron: '0 20 * * 0'    # Sunday 20:00 UTC — Week Ahead briefing
   workflow_dispatch:
 
 permissions:
