@@ -62,6 +62,12 @@
     border-radius:10px;padding:8px 13px;margin-bottom:7px;
     background:var(--surf);border:1px solid var(--bord);
   }
+  .ma-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px 6px;}
+  .ma-item{display:flex;flex-direction:column;align-items:center;padding:3px 0;}
+  .ma-key{font-size:7px;font-weight:700;text-transform:uppercase;
+          letter-spacing:.05em;color:var(--muted);margin-bottom:2px;}
+  .ma-val{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .ma-dlt{font-size:8px;font-weight:700;font-variant-numeric:tabular-nums;}
 
   /* WEEK AHEAD card */
   .wa-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
@@ -227,9 +233,9 @@
   </div>
 </div>
 
-<div class="macro-card" id="macro-card">
+<div class="macro-card" id="macro-card" onclick="flipMacro()" style="cursor:pointer;user-select:none;">
   <div class="ms-lbl-row">
-    <div class="ms-lbl">Macro</div>
+    <div class="ms-lbl" id="macro-lbl">Macro</div>
   </div>
   <div class="ms-row" id="macro-row">
     <div class="ms-item"><div class="ms-val" style="color:var(--muted)">…</div></div>
@@ -313,6 +319,7 @@ function getCorrelates(pair){
 // ── STATE ────────────────────────────────────────────────────────────────────
 let D        = null;   // signals.json
 let csmTf    = "d1";
+let macroFace = 0;     // 0 = regime, 1 = cross-asset
 const face   = {};
 PAIRS_ORDER.forEach(p => face[p] = 0);
 
@@ -462,18 +469,57 @@ function renderMarketState(){
 
   // Macro card
   const w1  = D.regime_w1 || {};
-  document.getElementById("macro-row").innerHTML =
-    `<div class="ms-item">
-       <div class="ms-key">W1</div>
-       <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
-       <div class="ms-sub">${w1.confidence||"—"} · ${w1.stable?"Stable":"Shifting"}</div>
-     </div>
-     <div class="ms-div"></div>
-     <div class="ms-item">
-       <div class="ms-key">D1</div>
-       <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
-       <div class="ms-sub">${mac.confidence||"—"} · ${mac.stable?"Stable":"Shifting"}</div>
-     </div>`;
+  document.getElementById("macro-lbl").textContent =
+    macroFace === 0 ? "Macro" : "Cross-Asset";
+
+  if (macroFace === 0) {
+    document.getElementById("macro-row").className = "ms-row";
+    document.getElementById("macro-row").innerHTML =
+      `<div class="ms-item">
+         <div class="ms-key">W1</div>
+         <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
+         <div class="ms-sub">${w1.confidence||"—"} · ${w1.stable?"Stable":"Shifting"}</div>
+       </div>
+       <div class="ms-div"></div>
+       <div class="ms-item">
+         <div class="ms-key">D1</div>
+         <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
+         <div class="ms-sub">${mac.confidence||"—"} · ${mac.stable?"Stable":"Shifting"}</div>
+       </div>`;
+  } else {
+    const ma = D.macro_assets || {};
+    const ASSETS = [
+      ["vix",    "VIX"],
+      ["us10y",  "US10Y"],
+      ["wti",    "WTI"],
+      ["gold",   "Gold"],
+      ["spx",    "SPX"],
+      ["copper", "Copper"],
+    ];
+    const items = ASSETS.map(([key, lbl]) => {
+      const a   = ma[key] || {};
+      const val = a.value != null ? a.value : "—";
+      const dir = a.direction;
+      const col = dir === "up" ? "var(--buy)" : dir === "down" ? "var(--sell)" : "var(--muted)";
+      const arr = dir === "up" ? "↑" : dir === "down" ? "↓" : "·";
+      const dlt = a.delta_bp  != null ? `${a.delta_bp  > 0 ? "+" : ""}${a.delta_bp.toFixed(1)}bp`
+                : a.delta_pct != null ? `${a.delta_pct > 0 ? "+" : ""}${a.delta_pct.toFixed(1)}%`
+                : "—";
+      return `<div class="ma-item">
+        <div class="ma-key">${lbl}</div>
+        <div class="ma-val" style="color:${col}">${val} ${arr}</div>
+        <div class="ma-dlt" style="color:${col}">${dlt}</div>
+      </div>`;
+    }).join("");
+    document.getElementById("macro-row").className = "";
+    document.getElementById("macro-row").innerHTML =
+      `<div class="ma-grid" style="width:100%">${items}</div>`;
+  }
+}
+
+function flipMacro() {
+  macroFace = macroFace === 0 ? 1 : 0;
+  renderMarketState();
 }
 
 function renderNews(){
