@@ -80,7 +80,9 @@
 
   /* CATALYST / SETUPS / CALENDAR */
   .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
-             padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
+             padding:7px 12px;margin-bottom:7px;}
+  .info-section{display:flex;align-items:flex-start;gap:8px;}
+  .info-section+.info-section{margin-top:7px;padding-top:7px;border-top:1px solid var(--dim);}
   .info-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;transition:background .4s;}
   .info-line.catalyst{background:var(--sell);}
   .info-line.catalyst.ok{background:var(--muted);}
@@ -118,7 +120,7 @@
   .csm-ttl{font-size:8px;font-weight:700;text-transform:uppercase;
             letter-spacing:.07em;color:var(--muted);}
   .csm-tf{color:var(--text);font-weight:700;}
-  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:34px;}
+  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:52px;}
   .csm-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;}
   .csm-b{width:100%;border-radius:2px;min-height:2px;transition:height .35s,background .35s;}
   .csm-l{font-size:7px;font-weight:700;text-transform:uppercase;}
@@ -250,27 +252,27 @@
   </div>
 </div>
 
-<div class="info-card" id="catalyst-wrap">
-  <div class="info-line catalyst" id="catalyst-line"></div>
-  <div style="flex:1;min-width:0;">
-    <div class="info-lbl" id="catalyst-lbl">CATALYST · —</div>
-    <div class="info-txt" id="catalyst-txt">Loading…</div>
+<div class="info-card" id="news-wrap">
+  <div class="info-section" id="setups-wrap">
+    <div class="info-line setups"></div>
+    <div style="flex:1;min-width:0;">
+      <div class="info-lbl" id="setups-lbl">SETUPS · —</div>
+      <div class="info-txt" id="setups-txt">Loading…</div>
+    </div>
   </div>
-</div>
-
-<div class="info-card" id="setups-wrap">
-  <div class="info-line setups"></div>
-  <div style="flex:1;min-width:0;">
-    <div class="info-lbl" id="setups-lbl">SETUPS · —</div>
-    <div class="info-txt" id="setups-txt">Loading…</div>
+  <div class="info-section" id="catalyst-wrap">
+    <div class="info-line catalyst" id="catalyst-line"></div>
+    <div style="flex:1;min-width:0;">
+      <div class="info-lbl" id="catalyst-lbl">CATALYST · —</div>
+      <div class="info-txt" id="catalyst-txt">Loading…</div>
+    </div>
   </div>
-</div>
-
-<div class="info-card" id="calendar-wrap">
-  <div class="info-line calendar"></div>
-  <div style="flex:1;min-width:0;">
-    <div class="info-lbl" id="calendar-lbl">CALENDAR · —</div>
-    <div class="info-txt" id="calendar-txt">Loading…</div>
+  <div class="info-section" id="calendar-wrap">
+    <div class="info-line calendar"></div>
+    <div style="flex:1;min-width:0;">
+      <div class="info-lbl" id="calendar-lbl">CALENDAR · —</div>
+      <div class="info-txt" id="calendar-txt">Loading…</div>
+    </div>
   </div>
 </div>
 
@@ -595,7 +597,7 @@ function renderCSM(){
 
   document.getElementById("csm-bars").innerHTML = CSM_ORDER.map(cur => {
     const val = data[cur] ?? null;
-    const h   = val !== null ? Math.round(3 + val * 0.31) + "px" : "3px";
+    const h   = val !== null ? Math.round(3 + val * 0.48) + "px" : "3px";
     const col = val === null ? "var(--muted)"
               : val >= 60   ? "var(--buy)"
               : val <= 40   ? "var(--sell)"
