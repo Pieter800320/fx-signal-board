@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T08:00:08.102756+00:00",
+  "updated": "2026-05-23T08:30:16.557759+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -566,11 +566,11 @@
       "direction": "flat",
       "label": "US 10Y"
     },
-    "us2y": {
+    "us3m": {
       "value": 3.585,
       "delta_bp": 0.3,
       "direction": "flat",
-      "label": "US 2Y"
+      "label": "US 3M"
     },
     "wti": {
       "value": 96.6,
@@ -579,8 +579,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74550.0,
-      "delta_pct": -1.2,
+      "value": 74536.0,
+      "delta_pct": -1.3,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -588,25 +588,25 @@
       "value": 97.3,
       "delta_bp": -3.1,
       "direction": "down",
-      "label": "10Y-2Y"
+      "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and weakening euro. USDJPY LONG supported by hawkish Fed signals. No conflicts detected.",
-    "updated": "2026-05-23T08:00:08.102756+00:00"
+    "text": "EURUSD SHORT accelerated by energy shock and hawkish Fed signals. Iran deal hopes weaken dollar, conflicting with USDJPY LONG. UMich sentiment miss bearish for risk.",
+    "updated": "2026-05-23T08:30:16.557759+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms short bias, copper strength challenges.\n\nNZDUSD SHORT: Risk-Off regime confirms short bias, copper strength challenges.\n\nUSDJPY LONG: Risk-Off regime confirms long bias, copper strength challenges.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, strong USD demand evident.\n\nNZDUSD SHORT: Risk-Off regime confirms setup, commodity currency weakness accelerates.\n\nUSDJPY LONG: Risk-Off regime confirms setup, safe-haven JPY bid strengthens.",
     "top": [
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.83
+        "score": 7.62
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.78
+        "score": 7.58
       },
       {
         "pair": "USDJPY",
@@ -614,11 +614,11 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-05-23T08:00:08.102756+00:00"
+    "updated": "2026-05-23T08:30:16.557759+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T08:00:08.102756+00:00"
+    "updated": "2026-05-23T08:30:16.557759+00:00"
   },
   "news": {
     "themes": "Iran nuclear deal hopes easing geopolitical risk premium, supporting risk appetite and commodity currencies while pressuring safe havens.",
