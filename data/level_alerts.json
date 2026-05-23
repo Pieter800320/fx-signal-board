@@ -551,5 +551,12 @@
     "price": 1.1574250963676704,
     "direction": "below",
     "active": true
+  },
+  {
+    "id": 1779549900156,
+    "pair": "EURJPY",
+    "price": 185.97627507733662,
+    "direction": "above",
+    "active": true
   }
 ]
