@@ -418,6 +418,88 @@ def _sonnet(system: str, prompt: str, max_tokens: int = 300) -> str:
     return _claude(SONNET_MODEL, system, prompt, max_tokens)
 
 
+def _haiku_search(prompt: str, max_tokens: int = 400) -> str:
+    """Haiku call with web_search tool enabled. Extracts all text blocks."""
+    if not ANTHROPIC_KEY:
+        return "—"
+    body = json.dumps({
+        "model": HAIKU_MODEL,
+        "max_tokens": max_tokens,
+        "tools": [{"type": "web_search_20250305", "name": "web_search"}],
+        "messages": [{"role": "user", "content": prompt}],
+    }).encode()
+    req = urllib.request.Request(
+        "https://api.anthropic.com/v1/messages", data=body,
+        headers={"Content-Type":      "application/json",
+                 "x-api-key":          ANTHROPIC_KEY,
+                 "anthropic-version":  "2023-06-01",
+                 "anthropic-beta":     "web-search-2025-03-05"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            data = json.loads(r.read().decode())
+        # Collect all text blocks — web search responses have multiple content blocks
+        texts = [b["text"].strip() for b in data.get("content", [])
+                 if b.get("type") == "text" and b.get("text", "").strip()]
+        return " ".join(texts) if texts else "—"
+    except Exception as e:
+        print(f"  ⚠ _haiku_search error: {e}")
+        return f"Unavailable ({e})"
+
+
+def call_week_ahead(signals: dict, calendar_events: list[dict]) -> str:
+    """
+    Haiku + web search: synthesise a Week Ahead briefing from fresh articles
+    plus current signals context. Runs once on Sunday ~20:00 UTC.
+    """
+    reg    = signals.get("regime_d1", {})
+    mac    = signals.get("macro", {})
+    ma     = signals.get("macro_assets", {})
+
+    # Asset snapshot line
+    asset_parts = []
+    for key in ("vix", "us10y", "wti", "gold", "spx"):
+        d = ma.get(key, {})
+        if d.get("direction") in ("up", "down"):
+            lbl  = d.get("label", key.upper())
+            dir_ = "↑" if d["direction"] == "up" else "↓"
+            pct  = d.get("delta_pct")
+            bp   = d.get("delta_bp")
+            ch   = f"{bp:+.1f}bp" if bp is not None else (f"{pct:+.1f}%" if pct is not None else "")
+            asset_parts.append(f"{lbl}{dir_}{ch}")
+    asset_line = " | ".join(asset_parts) if asset_parts else "—"
+
+    # Calendar events this week
+    cal_lines = []
+    for e in calendar_events[:6]:
+        fore = f"fcst {e['forecast']}" if e.get("forecast") else ""
+        prev = f"prev {e['previous']}" if e.get("previous") else ""
+        meta = "  ".join(filter(None, [fore, prev]))
+        cal_lines.append(f"{e['day']} {e['time']} {e['currency']} {e['name']}"
+                         + (f"  {meta}" if meta else ""))
+
+    cal_block = "\n".join(cal_lines) if cal_lines else "No high-impact events found"
+
+    prompt = (
+        f"Search for 'FX week ahead forex' to find current weekly FX market previews. "
+        f"Read what you find and write a Week Ahead briefing for the coming trading week.\n\n"
+        f"Current market state:\n"
+        f"D1 Regime: {reg.get('regime','—')} {reg.get('confidence','')}\n"
+        f"Macro: {mac.get('label','—')} {mac.get('confidence','')}\n"
+        f"Assets: {asset_line}\n\n"
+        f"High-impact events this week:\n{cal_block}\n\n"
+        f"Write exactly 4 sentences covering: "
+        f"(1) dominant macro theme carrying into the week, "
+        f"(2) the most important data release or central bank event and which currency it affects, "
+        f"(3) one specific pair or currency to watch and why, "
+        f"(4) the biggest risk or wildcard for the week. "
+        f"Plain text only — no markdown, no asterisks, no bullet points, no special characters. "
+        f"Write as a continuous paragraph. Maximum 80 words."
+    )
+    return _haiku_search(prompt, max_tokens=400)
+
+
 def call_catalyst(headlines: list[str], ranked_top: list[dict]) -> str:
     """
     Haiku: scan recent headlines for anything that conflicts with,
@@ -502,12 +584,26 @@ def main():
     catalyst = call_catalyst(headlines, ranked_out.get("top", []))
     print(f"  Catalyst: {catalyst}")
 
+    # ── Week Ahead — generated once on Sunday ~20:00 UTC ──────────────────────
+    is_sunday_evening = (now.weekday() == 6 and now.hour == 20)
+    if is_sunday_evening:
+        print("\n[Week Ahead] Generating weekly briefing via web search…")
+        wa_text = call_week_ahead(signals, events)
+        week_ahead = {"text": wa_text, "generated_at": now.isoformat()}
+        print(f"  Week Ahead: {wa_text[:80]}…")
+    else:
+        # Preserve existing week_ahead if still within display window (24h)
+        prev_wa = signals.get("week_ahead", {})
+        week_ahead = prev_wa if prev_wa.get("generated_at") else {}
+
     signals["regime_w1"]    = w1
     signals["macro"]        = mac
     signals["macro_assets"] = macro_assets
     signals["catalyst"]     = {"text": catalyst, "updated": now.isoformat()}
     signals["ranked"]       = {**ranked_out, "updated": now.isoformat()}
     signals["calendar"]     = {"events": events, "updated": now.isoformat()}
+    if week_ahead:
+        signals["week_ahead"] = week_ahead
     signals["updated"]      = now.isoformat()
 
     with open(sig_path, "w") as f:
