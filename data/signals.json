@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T06:57:37.527785+00:00",
+  "updated": "2026-05-23T07:03:00.606256+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -20,33 +20,33 @@
   },
   "csm": {
     "d1": {
-      "GBP": 35.2,
+      "GBP": 35.0,
       "EUR": 0.0,
-      "AUD": 40.0,
-      "NZD": 7.9,
-      "CAD": 26.2,
+      "AUD": 40.1,
+      "NZD": 7.6,
+      "CAD": 26.1,
       "JPY": 47.5,
-      "CHF": 64.3,
+      "CHF": 64.2,
       "USD": 100.0
     },
     "h4": {
       "GBP": 0.0,
-      "EUR": 18.3,
-      "AUD": 40.0,
-      "NZD": 10.0,
-      "CAD": 5.1,
-      "JPY": 35.0,
+      "EUR": 21.4,
+      "AUD": 43.0,
+      "NZD": 13.6,
+      "CAD": 11.1,
+      "JPY": 38.0,
       "CHF": 100.0,
-      "USD": 53.8
+      "USD": 58.4
     },
     "h1": {
-      "GBP": 89.5,
-      "EUR": 70.2,
-      "AUD": 69.7,
+      "GBP": 72.8,
+      "EUR": 83.7,
+      "AUD": 95.8,
       "NZD": 0.0,
-      "CAD": 72.9,
-      "JPY": 72.7,
-      "CHF": 63.3,
+      "CAD": 75.0,
+      "JPY": 79.1,
+      "CHF": 86.2,
       "USD": 100.0
     }
   },
@@ -145,10 +145,10 @@
         1.0,
         -0.49,
         -0.4,
-        -0.36,
+        -0.35,
         -0.4,
         -0.39,
-        -0.43
+        -0.42
       ],
       [
         0.83,
@@ -184,7 +184,7 @@
         0.09,
         -0.49,
         0.37,
-        -0.36,
+        -0.35,
         0.47,
         0.72,
         1.0,
@@ -226,7 +226,7 @@
         0.67,
         0.17,
         -0.17,
-        -0.43,
+        -0.42,
         -0.15,
         0.49,
         0.37,
@@ -248,8 +248,8 @@
         "dd1": -24,
         "h4": 49,
         "dh4": 23,
-        "h1": 48,
-        "dh1": 2,
+        "h1": 47,
+        "dh1": 0,
         "cmp": 36
       },
       "adx": 38.4,
@@ -271,13 +271,13 @@
         "dd1": -19,
         "h4": 58,
         "dh4": 39,
-        "h1": 49,
-        "dh1": 6,
+        "h1": 46,
+        "dh1": 0,
         "cmp": 37
       },
       "adx": 16.4,
       "d1_pct": -0.05,
-      "d5_pct": 0.27,
+      "d5_pct": 0.28,
       "prev_close": 1.34376,
       "prev5_close": 1.33941,
       "cont": 45,
@@ -294,7 +294,7 @@
         "dd1": 41,
         "h4": 59,
         "dh4": -9,
-        "h1": 63,
+        "h1": 66,
         "dh1": 2,
         "cmp": 75
       },
@@ -318,7 +318,7 @@
         "h4": 34,
         "dh4": -33,
         "h1": 30,
-        "dh1": -13,
+        "dh1": -11,
         "cmp": 51
       },
       "adx": 19.1,
@@ -341,7 +341,7 @@
         "h4": 58,
         "dh4": 37,
         "h1": 47,
-        "dh1": 9,
+        "dh1": 8,
         "cmp": 45
       },
       "adx": 17.9,
@@ -364,7 +364,7 @@
         "h4": 78,
         "dh4": 16,
         "h1": 75,
-        "dh1": 22,
+        "dh1": 21,
         "cmp": 80
       },
       "adx": 51.4,
@@ -386,12 +386,12 @@
         "dd1": -24,
         "h4": 60,
         "dh4": 35,
-        "h1": 24,
-        "dh1": -25,
-        "cmp": 39
+        "h1": 21,
+        "dh1": -28,
+        "cmp": 38
       },
       "adx": 23.9,
-      "d1_pct": -0.09,
+      "d1_pct": -0.1,
       "d5_pct": -0.5,
       "prev_close": 0.58545,
       "prev5_close": 0.58783,
@@ -410,7 +410,7 @@
         "h4": 55,
         "dh4": 4,
         "h1": 55,
-        "dh1": -2,
+        "dh1": -5,
         "cmp": 56
       },
       "adx": 25.6,
@@ -432,8 +432,8 @@
         "dd1": 7,
         "h4": 68,
         "dh4": 29,
-        "h1": 59,
-        "dh1": 5,
+        "h1": 55,
+        "dh1": -3,
         "cmp": 55
       },
       "adx": 43.2,
@@ -455,8 +455,8 @@
         "dd1": 3,
         "h4": 64,
         "dh4": 29,
-        "h1": 54,
-        "dh1": 8,
+        "h1": 53,
+        "dh1": 5,
         "cmp": 59
       },
       "adx": 16.2,
@@ -478,8 +478,8 @@
         "dd1": -1,
         "h4": 67,
         "dh4": 34,
-        "h1": 33,
-        "dh1": -22,
+        "h1": 32,
+        "dh1": -25,
         "cmp": 53
       },
       "adx": 24.5,
@@ -502,8 +502,8 @@
         "h4": 28,
         "dh4": -32,
         "h1": 33,
-        "dh1": -25,
-        "cmp": 44
+        "dh1": -28,
+        "cmp": 45
       },
       "adx": 51.5,
       "d1_pct": -0.09,
@@ -529,16 +529,6 @@
     "confidence": "Low",
     "stable": true
   },
-  "news": {
-    "themes": "Iran nuclear deal hopes easing geopolitical risk premium, supporting risk appetite and commodity currencies while pressuring safe havens.",
-    "event": "No high-impact events scheduled; focus remains on Iran negotiations outcome and Fed policy signals.",
-    "updated": "2026-05-22T21:01:56.292630+00:00"
-  },
-  "analysis": {
-    "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
-    "updated": "2026-05-22T16:46:16.827921+00:00"
-  },
-  "last_alert": "2026-05-23T06:10:26.734767+00:00",
   "macro_assets": {
     "vix": {
       "value": 16.7,
@@ -605,5 +595,15 @@
   "calendar": {
     "events": [],
     "updated": "2026-05-23T06:57:37.527785+00:00"
-  }
+  },
+  "news": {
+    "themes": "Iran nuclear deal hopes easing geopolitical risk premium, supporting risk appetite and commodity currencies while pressuring safe havens.",
+    "event": "No high-impact events scheduled; focus remains on Iran negotiations outcome and Fed policy signals.",
+    "updated": "2026-05-22T21:01:56.292630+00:00"
+  },
+  "analysis": {
+    "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
+    "updated": "2026-05-22T16:46:16.827921+00:00"
+  },
+  "last_alert": "2026-05-23T06:10:26.734767+00:00"
 }
