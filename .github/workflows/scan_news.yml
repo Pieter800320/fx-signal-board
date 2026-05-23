@@ -3,6 +3,7 @@ name: News Scan
 on:
   schedule:
     - cron: '0 */2 * * *'   # every 2 hours
+    - cron: '0 6 * * *'     # daily 06:00 UTC — Deep Analysis (Sonnet)
     - cron: '0 21 * * 0'    # Sunday 21:00 UTC — Week Ahead briefing (not in 2h grid)
   workflow_dispatch:
 
