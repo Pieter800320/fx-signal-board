@@ -43,7 +43,7 @@
     "ema200_side": "above",
     "ema50_side": "below",
     "ema200_fired": false,
-    "ema50_fired": false
+    "ema50_fired": true
   },
   "NZDJPY": {
     "ema200_side": "below",
