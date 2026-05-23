@@ -142,9 +142,21 @@ def main():
             df = fetch_ohlcv(pair, TF_INTERVAL["h1"], TF_BARS["h1"])
             if df is not None:
                 raw_ohlcv[key] = df
+        except RuntimeError as e:
+            # Daily credit limit — abort fetch loop immediately
+            print(f"  ✗ {e}")
+            print(f"  Aborting fetch — {len(raw_ohlcv)}/{total_fetches} pairs retrieved.")
+            break
         except Exception as e:
             print(f"  ⚠ {key} skipped: {e}")
         # No manual sleep — fetch.py _rate_wait() handles spacing dynamically
+
+    # Guard: fewer than half the main pairs = don't overwrite good data
+    main_fetched = sum(1 for p in PAIRS if p.replace("/", "") in raw_ohlcv)
+    if main_fetched < len(PAIRS) // 2:
+        print(f"\n✗ Only {main_fetched}/{len(PAIRS)} main pairs fetched — "
+              f"keeping existing signals.json to avoid overwriting good data.")
+        return
 
     # ── 2. Aggregate H1 -> H4 + D1 ────────────────────────────────────────────
     print("\n[2/9] Aggregating H1 -> H4 + D1…")
