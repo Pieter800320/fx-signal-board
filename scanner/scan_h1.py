@@ -294,10 +294,12 @@ def main():
         print(f"  {key}: cont={cont}% cls={cls}")
 
     # ── Assemble signals.json ─────────────────────────────────────────────────
-    # Preserve news / macro / analysis from previous scan_news.py run
+    # Preserve keys written by scan_news.py — not touched by hourly scan
     preserved = {
         k: prev.get(k)
-        for k in ("regime_w1", "macro", "news", "analysis", "last_alert")
+        for k in ("regime_w1", "macro", "macro_assets",
+                  "catalyst", "ranked", "calendar",
+                  "news", "analysis", "last_alert")
         if prev.get(k)
     }
 
