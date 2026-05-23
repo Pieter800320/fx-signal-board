@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T06:53:34.799573+00:00",
+  "updated": "2026-05-23T06:57:37.527785+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -520,7 +520,7 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -538,5 +538,72 @@
     "text": "GBPJPY offers the most compelling setup with strong bullish alignment across D1 and H4 (85% continuity, ADX 35.5) that directly benefits from the risk-on macro narrative supporting carry trades, while the USD strength from geopolitical de-escalation provides additional tailwinds. USDCAD is the secondary choice given its exceptionally strong bull bias (D1 bull_strong, H4 bull_strong, 83% continuity, ADX 36.8) that capitalizes on both USD carry support",
     "updated": "2026-05-22T16:46:16.827921+00:00"
   },
-  "last_alert": "2026-05-23T06:10:26.734767+00:00"
+  "last_alert": "2026-05-23T06:10:26.734767+00:00",
+  "macro_assets": {
+    "vix": {
+      "value": 16.7,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7473.47,
+      "delta_pct": 0.4,
+      "direction": "flat",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4521.0,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "Gold"
+    },
+    "copper": {
+      "value": 6.342,
+      "delta_pct": 1.4,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.558,
+      "delta_bp": -2.8,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "wti": {
+      "value": 96.6,
+      "delta_pct": 0.3,
+      "direction": "flat",
+      "label": "WTI Oil"
+    }
+  },
+  "catalyst": {
+    "text": "EURUSD SHORT accelerated by energy shock headlines and UMich consumer sentiment miss. Iran deal hopes support USD. USDJPY LONG supported by hawkish Fed signals. NZDUSD SHORT less directly impacted.",
+    "updated": "2026-05-23T06:57:37.527785+00:00"
+  },
+  "ranked": {
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, copper strength challenges directionally.\n\nNZDUSD SHORT: Risk-Off regime confirms bearish bias, copper upside challenges.\n\nUSDJPY LONG: Risk-Off supports JPY strength, copper rally challenges positioning.",
+    "top": [
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.83
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.78
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 6.4
+      }
+    ],
+    "updated": "2026-05-23T06:57:37.527785+00:00"
+  },
+  "calendar": {
+    "events": [],
+    "updated": "2026-05-23T06:57:37.527785+00:00"
+  }
 }
