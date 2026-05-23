@@ -86,7 +86,7 @@ def build_macro_assets(macro: dict) -> dict:
     """
     out = {}
     for key, d in macro.items():
-        if key == "dxy" or not d or not d.get("close") or not d.get("prev_close"):
+        if not d or not d.get("close") or not d.get("prev_close"):
             continue
         close = d["close"]
         prev  = d["prev_close"]
