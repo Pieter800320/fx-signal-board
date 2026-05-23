@@ -132,12 +132,6 @@
     padding:8px 10px;cursor:pointer;user-select:none;
     transition:border-color .15s,box-shadow .15s;
   }
-  .block.bear-hi{border-color:rgba(248,81,73,.5);
-    box-shadow:0 0 10px rgba(248,81,73,.09),inset 0 0 18px rgba(248,81,73,.03);}
-  .block.bear-med{border-color:rgba(248,81,73,.28);}
-  .block.bull-hi{border-color:rgba(0,220,55,.5);
-    box-shadow:0 0 10px rgba(0,220,55,.09);}
-  .block.bull-med{border-color:rgba(0,220,55,.28);}
   .block.event{border-color:rgba(180,195,210,.65);
     box-shadow:0 0 10px rgba(180,195,210,.12);}
 
@@ -491,14 +485,14 @@ function renderMarketState(){
     const ASSETS = [
       ["vix",    "VIX"],
       ["us10y",  "US 10Y"],
-      ["us2y",   "US 2Y"],
+      ["us3m",   "US 3M"],
       ["wti",    "WTI"],
       ["gold",   "Gold"],
       ["spx",    "SPX"],
       ["copper", "Copper"],
       ["dxy",    "DXY"],
       ["btc",    "BTC"],
-      ["curve",  "10Y-2Y"],
+      ["curve",  "10Y-3M"],
     ];
     const items = ASSETS.map(([key, lbl]) => {
       const a   = ma[key] || {};
@@ -728,8 +722,16 @@ function blockHTML(pair){
 }
 
 function renderGrid(){
-  const sorted = [...PAIRS_ORDER].sort((a, b) =>
-    (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0));
+  // Sort by rank score when available, fall back to cont for unranked pairs
+  const rankedOrder = (D.ranked?.top || []).map(r => r.pair);
+  const sorted = [...PAIRS_ORDER].sort((a, b) => {
+    const ri = rankedOrder.indexOf(a);
+    const rj = rankedOrder.indexOf(b);
+    if (ri !== -1 && rj !== -1) return ri - rj;          // both ranked — use rank order
+    if (ri !== -1) return -1;                              // a ranked, b not — a first
+    if (rj !== -1) return 1;                               // b ranked, a not — b first
+    return (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0);  // neither ranked — cont
+  });
   document.getElementById("pair-grid").innerHTML =
     sorted.map(p => D.pairs?.[p] ? blockHTML(p) :
       `<div class="block"><div class="b-pair">${p}</div><div style="color:var(--muted);font-size:9px;margin-top:4px">No data</div></div>`
