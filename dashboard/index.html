@@ -69,6 +69,15 @@
           letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
   .wa-txt{font-size:10px;color:var(--muted);line-height:1.55;}
 
+  /* DEEP ANALYSIS card */
+  .da-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+           padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
+  .da-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;
+           background:rgba(0,200,200,.7);}
+  .da-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+          letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .da-txt{font-size:10px;color:var(--muted);line-height:1.6;}
+
   /* CATALYST / SETUPS / CALENDAR */
   .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
              padding:7px 12px;margin-bottom:7px;}
@@ -245,6 +254,16 @@
   </div>
 </div>
 
+<!-- ── DEEP ANALYSIS card — remove this entire block to disable the feature ── -->
+<div class="da-card" id="da-wrap" style="display:none;">
+  <div class="da-line"></div>
+  <div style="flex:1;min-width:0;">
+    <div class="da-lbl" id="da-lbl">DEEP ANALYSIS · —</div>
+    <div class="da-txt" id="da-txt"></div>
+  </div>
+</div>
+<!-- ── end DEEP ANALYSIS card ─────────────────────────────────────────────── -->
+
 <div class="info-card" id="news-wrap">
   <div class="news-sec" id="setups-wrap">
     <div class="info-line setups"></div>
@@ -401,6 +420,7 @@ function render(){
 
   renderMarketState();
   renderWeekAhead();
+  renderDeepAnalysis();
   renderNews();
   renderCSM();
   renderGrid();
@@ -422,6 +442,24 @@ function renderWeekAhead(){
     "WEEK AHEAD · " + gen.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short", timeZone:"UTC"});
   document.getElementById("wa-txt").textContent = wa.text;
 }
+
+// ── DEEP ANALYSIS render — remove this function to disable the feature ────────
+function renderDeepAnalysis(){
+  const da   = D.deep_analysis || {};
+  const wrap = document.getElementById("da-wrap");
+  if (!da.text || !da.generated_at) { wrap.style.display = "none"; return; }
+
+  // Show for up to 26h (covers daily refresh + buffer)
+  const gen = new Date(da.generated_at);
+  const age = (new Date() - gen) / 3600000;
+  if (age > 26) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "flex";
+  document.getElementById("da-lbl").textContent =
+    "DEEP ANALYSIS · " + gen.toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"UTC"}) + " UTC";
+  document.getElementById("da-txt").textContent = da.text;
+}
+// ── end DEEP ANALYSIS render ─────────────────────────────────────────────────
 
 function renderMarketState(){
   const d1  = D.regime_d1 || {};
