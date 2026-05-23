@@ -72,8 +72,16 @@
   /* CATALYST / SETUPS / CALENDAR */
   .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
              padding:7px 12px;margin-bottom:7px;}
-  .info-section{display:flex;align-items:flex-start;gap:8px;}
-  .info-section+.info-section{margin-top:7px;padding-top:7px;border-top:1px solid var(--dim);}
+  .news-sec{display:flex;align-items:flex-start;gap:8px;padding-bottom:7px;}
+  .news-sec:last-child{padding-bottom:0;}
+  .news-sec+.news-sec{
+    padding-top:7px;
+    margin-left:-12px;
+    margin-right:-12px;
+    padding-left:12px;
+    padding-right:12px;
+    border-top:1px solid var(--bord);
+  }
   .info-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;transition:background .4s;}
   .info-line.catalyst{background:var(--sell);}
   .info-line.catalyst.ok{background:var(--muted);}
@@ -238,21 +246,21 @@
 </div>
 
 <div class="info-card" id="news-wrap">
-  <div class="info-section" id="setups-wrap">
+  <div class="news-sec" id="setups-wrap">
     <div class="info-line setups"></div>
     <div style="flex:1;min-width:0;">
       <div class="info-lbl" id="setups-lbl">SETUPS · —</div>
       <div class="info-txt" id="setups-txt">Loading…</div>
     </div>
   </div>
-  <div class="info-section" id="catalyst-wrap">
+  <div class="news-sec" id="catalyst-wrap">
     <div class="info-line catalyst" id="catalyst-line"></div>
     <div style="flex:1;min-width:0;">
       <div class="info-lbl" id="catalyst-lbl">CATALYST · —</div>
       <div class="info-txt" id="catalyst-txt">Loading…</div>
     </div>
   </div>
-  <div class="info-section" id="calendar-wrap">
+  <div class="news-sec" id="calendar-wrap">
     <div class="info-line calendar"></div>
     <div style="flex:1;min-width:0;">
       <div class="info-lbl" id="calendar-lbl">CALENDAR · —</div>
