@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T15:11:48.929866+00:00",
+  "updated": "2026-05-23T15:39:02.123977+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -7,10 +7,10 @@
     "stable": true
   },
   "regime_h4": {
-    "regime": "Ranging",
+    "regime": "Mixed",
     "confidence": "Low",
     "score": 5.0,
-    "stable": true
+    "stable": false
   },
   "regime_h1": {
     "regime": "Ranging",
@@ -20,33 +20,33 @@
   },
   "csm": {
     "d1": {
-      "GBP": 39.8,
+      "GBP": 38.9,
       "EUR": 0.0,
-      "AUD": 37.5,
-      "NZD": 9.2,
-      "CAD": 29.4,
-      "JPY": 48.6,
-      "CHF": 67.3,
+      "AUD": 37.4,
+      "NZD": 9.4,
+      "CAD": 28.8,
+      "JPY": 48.4,
+      "CHF": 67.0,
       "USD": 100.0
     },
     "h4": {
-      "GBP": 100.0,
+      "GBP": 79.2,
       "EUR": 0.0,
-      "AUD": 11.3,
-      "NZD": 70.0,
-      "CAD": 39.2,
-      "JPY": 40.6,
-      "CHF": 97.7,
-      "USD": 8.3
+      "AUD": 16.0,
+      "NZD": 71.9,
+      "CAD": 31.1,
+      "JPY": 44.7,
+      "CHF": 100.0,
+      "USD": 34.0
     },
     "h1": {
       "GBP": 100.0,
-      "EUR": 41.9,
-      "AUD": 49.3,
-      "NZD": 74.1,
-      "CAD": 49.5,
-      "JPY": 49.9,
-      "CHF": 84.9,
+      "EUR": 27.9,
+      "AUD": 46.9,
+      "NZD": 80.3,
+      "CAD": 35.8,
+      "JPY": 48.9,
+      "CHF": 98.9,
       "USD": 0.0
     }
   },
@@ -244,20 +244,20 @@
         "h1": "neutral"
       },
       "mom": {
-        "d1": 22,
-        "dd1": -23,
+        "d1": 21,
+        "dd1": -24,
         "h4": 48,
         "dh4": 1,
         "h1": 41,
         "dh1": -26,
         "cmp": 32
       },
-      "adx": 46.2,
-      "d1_pct": 0.01,
-      "d5_pct": -0.07,
+      "adx": 46.1,
+      "d1_pct": -0.0,
+      "d5_pct": -0.08,
       "prev_close": 1.16058,
       "prev5_close": 1.16149,
-      "cont": 63
+      "cont": 73
     },
     "GBPUSD": {
       "pills": {
@@ -274,12 +274,12 @@
         "dh1": -34,
         "cmp": 36
       },
-      "adx": 16.9,
-      "d1_pct": 0.02,
-      "d5_pct": 0.28,
+      "adx": 17.1,
+      "d1_pct": -0.0,
+      "d5_pct": 0.25,
       "prev_close": 1.34382,
       "prev5_close": 1.34038,
-      "cont": 34
+      "cont": 35
     },
     "USDJPY": {
       "pills": {
@@ -298,10 +298,10 @@
       },
       "adx": 20.4,
       "d1_pct": -0.01,
-      "d5_pct": 0.1,
+      "d5_pct": 0.09,
       "prev_close": 159.21199,
       "prev5_close": 159.04855,
-      "cont": 43
+      "cont": 44
     },
     "USDCHF": {
       "pills": {
@@ -316,11 +316,11 @@
         "dh4": -21,
         "h1": 53,
         "dh1": 21,
-        "cmp": 55
+        "cmp": 56
       },
-      "adx": 16.6,
-      "d1_pct": -0.01,
-      "d5_pct": -0.56,
+      "adx": 16.7,
+      "d1_pct": -0.0,
+      "d5_pct": -0.55,
       "prev_close": 0.78461,
       "prev5_close": 0.78893,
       "cont": 0
@@ -363,11 +363,11 @@
         "cmp": 79
       },
       "adx": 57.8,
-      "d1_pct": -0.01,
-      "d5_pct": 0.4,
+      "d1_pct": 0.0,
+      "d5_pct": 0.41,
       "prev_close": 1.38204,
       "prev5_close": 1.37643,
-      "cont": 57
+      "cont": 61
     },
     "NZDUSD": {
       "pills": {
@@ -389,12 +389,12 @@
       "d5_pct": 0.22,
       "prev_close": 0.5849,
       "prev5_close": 0.58367,
-      "cont": 43
+      "cont": 44
     },
     "EURJPY": {
       "pills": {
         "d1": "neutral",
-        "h4": "neutral",
+        "h4": "bear",
         "h1": "neutral"
       },
       "mom": {
@@ -407,8 +407,8 @@
         "cmp": 55
       },
       "adx": 25.1,
-      "d1_pct": 0.0,
-      "d5_pct": 0.03,
+      "d1_pct": -0.01,
+      "d5_pct": 0.02,
       "prev_close": 184.77567,
       "prev5_close": 184.72405,
       "cont": 0
@@ -424,16 +424,16 @@
         "dd1": 5,
         "h4": 70,
         "dh4": 13,
-        "h1": 46,
-        "dh1": -34,
-        "cmp": 54
+        "h1": 45,
+        "dh1": -35,
+        "cmp": 53
       },
-      "adx": 53.4,
-      "d1_pct": 0.01,
-      "d5_pct": 0.38,
+      "adx": 53.5,
+      "d1_pct": -0.01,
+      "d5_pct": 0.35,
       "prev_close": 213.94909,
       "prev5_close": 213.17451,
-      "cont": 81
+      "cont": 82
     },
     "AUDJPY": {
       "pills": {
@@ -448,11 +448,11 @@
         "dh4": 14,
         "h1": 44,
         "dh1": -24,
-        "cmp": 55
+        "cmp": 54
       },
-      "adx": 14.6,
-      "d1_pct": 0.01,
-      "d5_pct": 0.36,
+      "adx": 14.5,
+      "d1_pct": -0.0,
+      "d5_pct": 0.35,
       "prev_close": 113.48828,
       "prev5_close": 113.08826,
       "cont": 0
@@ -495,8 +495,8 @@
         "cmp": 46
       },
       "adx": 59.0,
-      "d1_pct": 0.0,
-      "d5_pct": -0.3,
+      "d1_pct": -0.01,
+      "d5_pct": -0.31,
       "prev_close": 115.20293,
       "prev5_close": 115.54897,
       "cont": 0
@@ -608,5 +608,5 @@
     "events": [],
     "updated": "2026-05-23T14:52:36.389985+00:00"
   },
-  "last_alert": "2026-05-23T11:20:26.406152+00:00"
+  "last_alert": "2026-05-23T15:39:02.123977+00:00"
 }
