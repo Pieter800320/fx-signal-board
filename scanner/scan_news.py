@@ -380,7 +380,8 @@ def call_catalyst(headlines: list[str], ranked_top: list[dict]) -> str:
         f"Headlines (last 6h):\n{h_block}\n\n"
         "Does any headline directly conflict with, accelerate, or invalidate one of these setups? "
         "Be specific — name the pair and the catalyst. "
-        "Maximum 25 words. If nothing material, respond only with: No breaking catalysts."
+        "Maximum 25 words. Plain text only — no markdown, no asterisks, no dashes, no special characters. "
+        "If nothing material, respond only with: No breaking catalysts."
     )
     return _haiku(prompt, max_tokens=60)
 
