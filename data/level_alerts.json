@@ -347,7 +347,7 @@
     "pair": "NZDUSD",
     "price": 0.5889273239852763,
     "direction": "above",
-    "active": true
+    "active": false
   },
   {
     "id": 1779443493740,
@@ -396,14 +396,14 @@
     "pair": "EURUSD",
     "price": 1.166863970410012,
     "direction": "above",
-    "active": true
+    "active": false
   },
   {
     "id": 1779464878097,
     "pair": "EURUSD",
     "price": 1.1523144614553498,
     "direction": "below",
-    "active": true
+    "active": false
   },
   {
     "id": 1779480644221,
@@ -424,6 +424,6 @@
     "pair": "EURUSD",
     "price": 1.1818174697522899,
     "direction": "below",
-    "active": true
+    "active": false
   }
 ]
