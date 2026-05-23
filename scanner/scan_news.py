@@ -321,87 +321,65 @@ _COUNTRY_CCY = {
     "CA": "CAD", "CH": "CHF",
 }
 
-def fetch_calendar() -> list[dict]:
-    if not TWELVEDATA:
-        return []
-    try:
-        today = datetime.now(timezone.utc)
-        end   = today + timedelta(days=7)
-        params = urllib.parse.urlencode({
-            "start_date": today.strftime("%Y-%m-%d"),
-            "end_date":   end.strftime("%Y-%m-%d"),
-            "importance": "3",
-            "apikey":     TWELVEDATA,
-        })
-        with urllib.request.urlopen(
-            f"https://api.twelvedata.com/economic_calendar?{params}", timeout=10
-        ) as r:
-            data = json.loads(r.read().decode())
-        events = data.get("result", {}).get("list", []) or data.get("events", [])
-        out = []
-        for ev in events[:8]:
-            name    = ev.get("event") or ev.get("title") or ""
-            country = ev.get("country", "")
-            ccy     = _COUNTRY_CCY.get(country.upper(), country)
-            dt_str  = ev.get("date") or ev.get("datetime") or ""
-            fore    = ev.get("estimate") or ev.get("forecast") or ""
-            prev    = ev.get("previous", "")
-            if name and dt_str:
-                try:
-                    dt  = datetime.fromisoformat(dt_str.replace("Z", "+00:00"))
-                    day = dt.strftime("%a")
-                    t   = dt.strftime("%H:%M")
-                    iso = dt.isoformat()
-                except Exception:
-                    day = ""; t = dt_str[:10]; iso = dt_str
-                out.append({
-                    "day":      day,
-                    "time":     t,
-                    "iso":      iso,
-                    "currency": ccy,
-                    "name":     name,
-                    "forecast": str(fore) if fore not in (None, "") else "",
-                    "previous": str(prev) if prev not in (None, "") else "",
-                    "note":     "",   # filled by call_calendar_interpretation
-                })
-        print(f"  Calendar events: {len(out)}")
-        return out
-    except Exception as e:
-        print(f"  ⚠ Calendar: {e}")
-        return []
-
-
-def call_calendar_interpretation(events: list[dict]) -> list[str]:
+def call_calendar_search(now: datetime) -> list[dict]:
     """
-    Haiku: one phrase per event (max 8 words) — expected FX impact if forecast is met.
-    Returns list of strings aligned to events list.
+    Single Haiku + web search call: fetch high-impact FX events for the current
+    week AND generate a brief interpretation note per event.
+    Returns list of event dicts ready for signals.json calendar.events.
     """
-    if not events:
-        return []
-    lines = []
-    for i, e in enumerate(events, 1):
-        fore = f"forecast {e['forecast']}" if e.get("forecast") else "no forecast"
-        prev = f"previous {e['previous']}" if e.get("previous") else "no previous"
-        lines.append(f"{i}. {e['currency']} {e['name']} — {fore}, {prev}")
+    week_str = now.strftime("%B %d, %Y")
     prompt = (
-        "Upcoming high-impact FX events:\n" + "\n".join(lines) + "\n\n"
-        "For each event write ONE phrase max 8 words: expected FX direction if forecast is met. "
-        "Number each response to match. "
-        "Plain text only — no markdown, no asterisks, no special characters.\n"
-        "Example:\n1. Beat expected, USD bullish\n2. Inline with trend, EUR neutral"
+        f"Search for 'high impact forex economic calendar week of {week_str}' "
+        f"to find scheduled high-impact FX events this week. "
+        f"Return ONLY a JSON array (no markdown, no backticks, no explanation) of up to 8 events. "
+        f"Each event must have these exact keys: "
+        f'currency (3-letter code e.g. USD), name, day (Mon/Tue/Wed/Thu/Fri/Sun), '
+        f'time (HH:MM UTC), date (YYYY-MM-DD), forecast, previous, note. '
+        f'The note field: one phrase max 8 words — expected FX direction if forecast is met. '
+        f'Use empty string for unknown forecast/previous. '
+        f'Example: [{{"currency":"USD","name":"NFP","day":"Fri","time":"12:30",'
+        f'"date":"2026-05-30","forecast":"185K","previous":"177K",'
+        f'"note":"Beat expected, USD bullish"}}]'
     )
-    text = _haiku(prompt, max_tokens=120)
-    # Parse numbered lines back into a list
-    result = [""] * len(events)
-    for line in text.strip().split("\n"):
-        line = line.strip()
-        if not line:
-            continue
-        for i in range(len(events), 0, -1):
-            if line.startswith(f"{i}.") or line.startswith(f"{i})"):
-                result[i-1] = line.split(".", 1)[-1].split(")", 1)[-1].strip()
-                break
-    return result
+    raw = _haiku_search(prompt, max_tokens=700)
+
+    # Extract and parse JSON array from response
+    try:
+        start = raw.find('[')
+        end   = raw.rfind(']') + 1
+        if start < 0 or end <= start:
+            print(f"  ⚠ Calendar search: no JSON array found in response")
+            return []
+        events_raw = json.loads(raw[start:end])
+    except Exception as e:
+        print(f"  ⚠ Calendar search parse error: {e}")
+        return []
+
+    out = []
+    for ev in events_raw[:8]:
+        date_str = ev.get('date', '')
+        time_str = ev.get('time', '00:00')
+        try:
+            iso = f"{date_str}T{time_str}:00+00:00"
+            dt  = datetime.fromisoformat(iso)
+            day = dt.strftime('%a')
+        except Exception:
+            day = ev.get('day', '')
+            iso = ''
+        ccy = _COUNTRY_CCY.get(ev.get('currency','').upper(), ev.get('currency',''))
+        out.append({
+            'day':      day or ev.get('day', ''),
+            'time':     time_str,
+            'iso':      iso,
+            'currency': ccy,
+            'name':     ev.get('name', ''),
+            'forecast': str(ev.get('forecast', '')),
+            'previous': str(ev.get('previous', '')),
+            'note':     ev.get('note', ''),
+        })
+    print(f"  Calendar events: {len(out)}")
+    return out
+
 
 
 
@@ -589,12 +567,20 @@ def main():
 
     print("\n[3/6] Headlines + calendar…")
     headlines = fetch_headlines()
-    events    = fetch_calendar()
-    if events:
-        notes = call_calendar_interpretation(events)
-        for i, e in enumerate(events):
-            e["note"] = notes[i] if i < len(notes) else ""
-        print(f"  Interpreted {len(events)} events")
+
+    # Calendar: refresh only every 6 hours — events don't change that quickly
+    prev_cal   = signals.get("calendar", {})
+    prev_upd   = prev_cal.get("updated", "2000-01-01T00:00:00+00:00")
+    try:
+        cal_age_h = (now - datetime.fromisoformat(prev_upd)).total_seconds() / 3600
+    except Exception:
+        cal_age_h = 99
+    if cal_age_h >= 6:
+        print(f"  Calendar cache {cal_age_h:.1f}h old — refreshing via web search…")
+        events = call_calendar_search(now)
+    else:
+        print(f"  Calendar cache {cal_age_h:.1f}h old — using cached events")
+        events = prev_cal.get("events", [])
 
     print("\n[4/6] Catalyst check + pair ranking…")
     # Run ranking first so catalyst has the top setups context
