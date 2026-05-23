@@ -17,7 +17,7 @@
     "ema50_side": "above"
   },
   "USDCHF": {
-    "ema200_side": "below",
+    "ema200_side": "above",
     "ema50_side": "below",
     "ema50_fired": false,
     "ema200_fired": true
@@ -41,7 +41,7 @@
   },
   "AUDJPY": {
     "ema200_side": "above",
-    "ema50_side": "above",
+    "ema50_side": "below",
     "ema200_fired": false,
     "ema50_fired": true
   },
