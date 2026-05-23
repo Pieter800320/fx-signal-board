@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T18:48:39.865830+00:00",
+  "updated": "2026-05-23T20:37:31.712235+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,9 +567,9 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75749.0,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 76401.0,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran nuclear deal hopes reducing oil shock risk, supporting dollar strength. USDJPY LONG supported by hawkish Fed signals. No direct conflicts identified.",
-    "updated": "2026-05-23T18:48:39.865830+00:00"
+    "text": "EURUSD SHORT accelerated by Iran nuclear deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. No conflicts detected.",
+    "updated": "2026-05-23T20:37:31.712235+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms short bias, USD strength driver.\n\nUSDCAD LONG: Risk-Off supports long, safe-haven Canadian dollar driver.\n\nUSDJPY LONG: Risk-Off confirms long, JPY safe-haven flows driver.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, USD strength primary driver.\n\nUSDCAD LONG: Risk-Off regime confirms setup, CAD weakness primary driver.\n\nUSDJPY LONG: Risk-Off regime confirms setup, JPY safe-haven flows primary driver.",
     "top": [
       {
         "pair": "EURUSD",
@@ -602,11 +602,11 @@
         "score": 7.03
       }
     ],
-    "updated": "2026-05-23T18:48:39.865830+00:00"
+    "updated": "2026-05-23T20:37:31.712235+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T18:48:39.865830+00:00"
+    "updated": "2026-05-23T20:37:31.712235+00:00"
   },
   "last_alert": "2026-05-23T17:13:37.057750+00:00"
 }
