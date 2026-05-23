@@ -80,26 +80,3 @@ def fetch_ohlcv(symbol: str, interval: str, outputsize: int) -> pd.DataFrame | N
     df.sort_values("datetime", inplace=True)
     df.reset_index(drop=True, inplace=True)
     return df
-
-
-def fetch_all_pairs(timeframes: list[str]) -> dict:
-    """
-    Fetch OHLCV for all 12 pairs across specified timeframes.
-    Returns: { "EURUSD": {"w1": df, "d1": df, ...}, ... }
-    """
-    result = {p.replace("/", ""): {} for p in PAIRS}
-    total = len(PAIRS) * len(timeframes)
-    done  = 0
-
-    for pair in PAIRS:
-        symbol = pair  # Twelvedata accepts EUR/USD directly
-        key    = pair.replace("/", "")
-        for tf in timeframes:
-            done += 1
-            print(f"  [{done}/{total}] {key} {tf.upper()}")
-            df = fetch_ohlcv(symbol, TF_INTERVAL[tf], TF_BARS[tf])
-            if df is not None:
-                result[key][tf] = df
-            # No manual sleep needed — _rate_wait() inside _get() handles spacing
-
-    return result
