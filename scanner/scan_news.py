@@ -30,7 +30,9 @@ MACRO_INSTRUMENTS = [
     ("dxy",    "DX-Y.NYB","DXY",      True),   # up = USD strength = risk-off
     ("copper", "HG=F",    "Copper",   False),  # down = growth fear = risk-off
     ("us10y",  "^TNX",    "US 10Y",   False),  # down = flight to safety = risk-off
+    ("us2y",   "^IRX",    "US 2Y",    False),  # short-end rate differential driver
     ("wti",    "CL=F",    "WTI Oil",  False),  # up = risk-on demand; key CAD driver
+    ("btc",    "BTC-USD", "Bitcoin",  False),  # risk appetite velocity proxy
 ]
 
 YF_HEADERS = {
@@ -81,8 +83,7 @@ def fetch_all_macro() -> dict:
 def build_macro_assets(macro: dict) -> dict:
     """
     Build per-asset summary for rank.py: value, delta, direction.
-    Direction thresholds are intentionally conservative to avoid noise.
-    Skips DXY (redundant with USD CSM).
+    Also computes yield curve spread (10Y-2Y) from fetched yields.
     """
     out = {}
     for key, d in macro.items():
@@ -92,8 +93,8 @@ def build_macro_assets(macro: dict) -> dict:
         prev  = d["prev_close"]
         label = d.get("label", key.upper())
 
-        if key == "us10y":
-            # Yield in %, so *100 = basis points
+        if key in ("us10y", "us2y"):
+            # Yields in %, delta in basis points
             bp = (close - prev) * 100
             direction = "up" if bp > 3.0 else "down" if bp < -3.0 else "flat"
             out[key] = {"value": round(close, 3), "delta_bp": round(bp, 1),
@@ -101,7 +102,6 @@ def build_macro_assets(macro: dict) -> dict:
 
         elif key == "vix":
             pct = (close / prev - 1) * 100
-            # Level zones override daily pct: >20 = fear regime, <15 = complacent
             if close > 20 or pct > 3.0:
                 direction = "up"
             elif close < 15 or pct < -3.0:
@@ -111,12 +111,30 @@ def build_macro_assets(macro: dict) -> dict:
             out[key] = {"value": round(close, 2), "delta_pct": round(pct, 1),
                         "direction": direction, "label": label}
 
+        elif key == "btc":
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 1.0 else "down" if pct < -1.0 else "flat"
+            out[key] = {"value": round(close, 0), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
         else:
             pct = (close / prev - 1) * 100
             direction = "up" if pct > 0.5 else "down" if pct < -0.5 else "flat"
             dec = 2 if close > 100 else 4
             out[key] = {"value": round(close, dec), "delta_pct": round(pct, 1),
                         "direction": direction, "label": label}
+
+    # ── Yield curve spread (10Y − 2Y) — computed, no extra fetch ─────────────
+    y10 = macro.get("us10y", {})
+    y2  = macro.get("us2y",  {})
+    if y10.get("close") and y2.get("close"):
+        spread     = round((y10["close"] - y2["close"]) * 100, 1)   # basis points
+        prev_sp    = round(((y10.get("prev_close", y10["close"]) -
+                             y2.get("prev_close",  y2["close"])) * 100), 1)
+        delta_bp   = round(spread - prev_sp, 1)
+        direction  = "up" if delta_bp > 2.0 else "down" if delta_bp < -2.0 else "flat"
+        out["curve"] = {"value": spread, "delta_bp": delta_bp,
+                        "direction": direction, "label": "10Y-2Y"}
 
     return out
 
