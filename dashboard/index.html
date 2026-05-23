@@ -335,7 +335,7 @@ function pillArrow(p){
 
 function momColor(v){
   if (v === null || v === undefined) return "var(--muted)";
-  return v >= 65 ? "var(--buy)" : v >= 35 ? "var(--amber)" : "var(--sell)";
+  return v >= 60 ? "var(--buy)" : v > 40 ? "var(--amber)" : "var(--sell)";
 }
 
 function deltaColor(d){
