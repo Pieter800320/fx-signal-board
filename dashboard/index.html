@@ -969,10 +969,44 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
   background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.6);
   color:var(--amber);
 }
+#cht-mark-btn{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 8px;cursor:pointer;
+  transition:background .15s,color .15s,border-color .15s;
+  white-space:nowrap;
+}
+#cht-mark-btn.active{
+  background:rgba(88,166,255,.18);border-color:rgba(88,166,255,.6);
+  color:#58a6ff;
+}
 #cht-clear-btn{
   background:none;border:1px solid var(--bord);border-radius:4px;
   color:var(--muted);font-size:10px;font-weight:700;
   padding:3px 8px;cursor:pointer;white-space:nowrap;
+}
+
+/* Marker panel */
+#cht-marker-panel{
+  display:none;position:absolute;z-index:25;
+  align-items:center;gap:4px;
+  background:rgba(10,14,19,.92);
+  border:1px solid rgba(88,166,255,.55);
+  border-radius:6px;padding:4px 6px;
+}
+#cht-marker-panel input{
+  background:var(--dim);border:1px solid var(--bord);border-radius:4px;
+  color:var(--text);font-size:10px;padding:3px 6px;outline:none;
+  width:90px;
+}
+#cht-marker-panel button{
+  background:none;border:1px solid rgba(88,166,255,.4);border-radius:4px;
+  color:#58a6ff;font-size:11px;font-weight:700;
+  padding:3px 8px;cursor:pointer;white-space:nowrap;
+  transition:background .12s;
+}
+#cht-marker-panel button:last-child{
+  border-color:rgba(248,81,73,.4);color:var(--sell);
 }
 #cht-close-btn{
   background:none;border:none;color:var(--muted);
@@ -1080,7 +1114,8 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
       <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
       <span id="cht-timer"></span>
       <button id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
-      <button id="cht-clear-btn" onclick="chtClearLevels()">Clear</button>
+      <button id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
+      <button id="cht-clear-btn" onclick="chtClearAll()">Clear</button>
     </div>
   </div>
 
@@ -1089,10 +1124,16 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     <div id="cht-divider"></div>
     <div id="cht-macd"></div>
     <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
-    <button id="cht-float-del" onclick="chtDeleteSelectedLevel()">✕</button>
+    <button id="cht-float-del" onclick="chtDeleteSelected()">✕</button>
     <div id="cht-dir-panel">
       <button onclick="chtCommitStaging('above')">↑ Above</button>
       <button onclick="chtCommitStaging('below')">↓ Below</button>
+    </div>
+    <div id="cht-marker-panel">
+      <input type="text" id="cht-marker-text" placeholder="Label…" maxlength="20">
+      <button onclick="chtCommitMarker('bull')">↑</button>
+      <button onclick="chtCommitMarker('bear')">↓</button>
+      <button onclick="chtCancelMarker()">✕</button>
     </div>
   </div>
 
@@ -1114,10 +1155,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 //  FSB Chart overlay  — all identifiers prefixed cht_ to avoid collisions
 // ════════════════════════════════════════════════════════════════════════
 
-const CHT_LA_KEY  = 'fsb_la_v1';
-const CHT_PAT_KEY = 'fsb_gh_pat';
-const CHT_IND_KEY = 'fsb_ind_v1';
-const CHT_LA_PATH = 'data/level_alerts.json';
+const CHT_LA_KEY      = 'fsb_la_v1';
+const CHT_PAT_KEY     = 'fsb_gh_pat';
+const CHT_IND_KEY     = 'fsb_ind_v1';
+const CHT_MARKERS_KEY = 'fsb_markers_v1';
+const CHT_LA_PATH     = 'data/level_alerts.json';
 
 const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true };
 
@@ -1135,17 +1177,22 @@ let _chtIndState  = null;
 
 // Drawing state
 let _chtDrawMode    = false;
+let _chtMarkMode    = false;
+let _chtMarkTime    = null;   // timestamp of candle tapped in mark mode
 let _chtStagingLine = null;
 let _chtStagingPrice= null;
 let _chtSelectedId  = null;
+let _chtSelectedType= null;   // 'level' or 'marker'
 let _chtDragging    = false;
 let _chtMouseDown   = false;
 let _chtLongTimer   = null;
 let _chtDrawInited  = false;
 
 // ── localStorage helpers ──────────────────────────────────────────────────────
-const laLoad = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY) || '[]'); } catch { return []; } };
-const laSave = a  => localStorage.setItem(CHT_LA_KEY, JSON.stringify(a));
+const laLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY)      || '[]'); } catch { return []; } };
+const laSave  = a  => localStorage.setItem(CHT_LA_KEY,      JSON.stringify(a));
+const mkLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_MARKERS_KEY) || '[]'); } catch { return []; } };
+const mkSave  = a  => localStorage.setItem(CHT_MARKERS_KEY, JSON.stringify(a));
 
 // ── Indicator state ───────────────────────────────────────────────────────────
 function chtLoadIndState() {
@@ -1264,7 +1311,10 @@ function closeChart() {
   _chtHideFloatDel();
   document.getElementById('cht-overlay').classList.remove('open');
   _chtDrawMode = false;
+  _chtMarkMode = false;
   document.getElementById('cht-draw-btn').classList.remove('active');
+  document.getElementById('cht-mark-btn').classList.remove('active');
+  chtCancelMarker();
   _chtDestroyCharts();
   _chtPair = null;
   if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
@@ -1470,6 +1520,7 @@ function _chtRender(pair, tf, ohlcv) {
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
+  _chtRenderMarkers();
 
   const closes = ohlcv.map(d => d.close);
 
@@ -1692,16 +1743,112 @@ function chtClearLevels() {
   chtPushToGitHub(CHT_LA_PATH, alerts);
 }
 
+function chtClearMarkers() {
+  if (!_chtPair || !_chtTf) return;
+  const markers = mkLoad().map(m =>
+    m.pair === _chtPair && m.tf === _chtTf ? { ...m, active:false } : m
+  );
+  mkSave(markers);
+  if (_chtCandles) try { _chtCandles.setMarkers([]); } catch(e) {}
+}
+
+function chtClearAll() {
+  chtClearLevels();
+  chtClearMarkers();
+}
+
 function chtDeleteSelectedLevel() {
-  if (_chtSelectedId == null) return;
-  const id    = _chtSelectedId;
+  const id     = _chtSelectedId;
   const alerts = laLoad().map(a => a.id === id ? { ...a, active:false } : a);
   laSave(alerts);
   const ref = _chtAlertRefs.find(r => r.id === id);
   if (ref && _chtCandles) try { _chtCandles.removePriceLine(ref.priceLine); } catch(e) {}
   _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
-  _chtHideFloatDel();
   chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtDeleteSelectedMarker() {
+  const id      = _chtSelectedId;
+  const markers = mkLoad().map(m => m.id === id ? { ...m, active:false } : m);
+  mkSave(markers);
+  _chtRenderMarkers();
+}
+
+function chtDeleteSelected() {
+  if (_chtSelectedType === 'marker') chtDeleteSelectedMarker();
+  else chtDeleteSelectedLevel();
+  _chtHideFloatDel();
+}
+
+// ── Mark mode ─────────────────────────────────────────────────────────────────
+function chtToggleMarkMode() {
+  _chtMarkMode = !_chtMarkMode;
+  if (_chtMarkMode) {
+    _chtDrawMode = false;
+    document.getElementById('cht-draw-btn').classList.remove('active');
+    document.getElementById('cht-chart-area').classList.remove('draw-mode');
+    _chtRemoveStaging();
+  }
+  document.getElementById('cht-mark-btn').classList.toggle('active', _chtMarkMode);
+  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtMarkMode);
+}
+
+function _chtShowMarkerPanel(time, clientX, clientY) {
+  _chtMarkTime = time;
+  const panel = document.getElementById('cht-marker-panel');
+  const area  = document.getElementById('cht-chart-area');
+  if (!panel || !area) return;
+  const ar    = area.getBoundingClientRect();
+  const x     = Math.max(4, Math.min(ar.width  - 220, clientX - ar.left - 50));
+  const y     = Math.max(4, Math.min(ar.height -  40, clientY - ar.top  - 20));
+  panel.style.left    = x + 'px';
+  panel.style.top     = y + 'px';
+  panel.style.display = 'flex';
+  document.getElementById('cht-marker-text').value = '';
+  document.getElementById('cht-marker-text').focus();
+}
+
+function chtCommitMarker(direction) {
+  if (_chtMarkTime == null || !_chtPair || !_chtTf) return;
+  const text = document.getElementById('cht-marker-text').value.trim();
+  const id   = Date.now();
+  const markers = mkLoad();
+  markers.push({ id, pair:_chtPair, tf:_chtTf, time:_chtMarkTime,
+                 direction, text, active:true });
+  mkSave(markers);
+  chtCancelMarker();
+  _chtRenderMarkers();
+}
+
+function chtCancelMarker() {
+  _chtMarkTime = null;
+  const panel = document.getElementById('cht-marker-panel');
+  if (panel) panel.style.display = 'none';
+  _chtMarkMode = false;
+  document.getElementById('cht-mark-btn').classList.remove('active');
+  document.getElementById('cht-chart-area').classList.remove('draw-mode');
+}
+
+function _chtRenderMarkers() {
+  if (!_chtCandles || !_chtPair || !_chtTf) return;
+  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
+  const mapped = active
+    .sort((a, b) => a.time - b.time)
+    .map(m => ({
+      time:     m.time,
+      position: m.direction === 'bull' ? 'belowBar' : 'aboveBar',
+      color:    m.direction === 'bull' ? 'rgba(0,220,55,.9)' : 'rgba(248,81,73,.9)',
+      shape:    m.direction === 'bull' ? 'arrowUp'  : 'arrowDown',
+      text:     m.text || '',
+      size:     1.5,
+      id:       m.id,
+    }));
+  try { _chtCandles.setMarkers(mapped); } catch(e) {}
+}
+
+function _chtNearMarker(time) {
+  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
+  return active.find(m => m.time === time) || null;
 }
 
 // ── Float-del helpers ─────────────────────────────────────────────────────────
@@ -1720,7 +1867,8 @@ function _chtShowFloatDel(id, clientX, clientY) {
   el.style.justifyContent = 'center';
 }
 function _chtHideFloatDel() {
-  _chtSelectedId = null;
+  _chtSelectedId   = null;
+  _chtSelectedType = null;
   const el = document.getElementById('cht-float-del');
   if (el) el.style.display = 'none';
 }
@@ -1791,6 +1939,7 @@ function _chtInitDrawListeners() {
   document.addEventListener('touchend', function(e) {
     if (_chtLongTimer) { clearTimeout(_chtLongTimer); _chtLongTimer = null; }
     if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
     if (_chtDragging) { _chtDragging = false; return; }
     _chtHideFloatDel();
     const t  = e.changedTouches[0];
@@ -1800,6 +1949,15 @@ function _chtInitDrawListeners() {
     const r = _chtBounds();
     if (!r) return;
     const inChart = t.clientX >= r.left && t.clientX <= r.right && t.clientY >= r.top && t.clientY <= r.bottom;
+
+    // Mark mode — show marker panel at tapped candle
+    if (_chtMarkMode && inChart && _chtInst) {
+      const lr = _chtInst.timeScale().getVisibleLogicalRange();
+      const clickedBar = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
+      if (clickedBar != null) _chtShowMarkerPanel(clickedBar, t.clientX, t.clientY);
+      return;
+    }
+
     if (_chtDrawMode && inChart) {
       const p = _chtToPrice(t.clientY);
       if (p != null) _chtSetStaging(p);
@@ -1809,13 +1967,31 @@ function _chtInitDrawListeners() {
       return;
     }
     if (!inChart) return;
+
+    // Check marker hit first (by timestamp proximity), then level
+    if (_chtInst) {
+      const clickedTime = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
+      if (clickedTime != null) {
+        const mk = _chtNearMarker(clickedTime);
+        if (mk) {
+          _chtSelectedId   = mk.id;
+          _chtSelectedType = 'marker';
+          _chtShowFloatDel(mk.id, t.clientX, t.clientY);
+          return;
+        }
+      }
+    }
     const ref = _chtNearCommitted(t.clientY);
-    if (ref) _chtShowFloatDel(ref.id, t.clientX, t.clientY);
+    if (ref) {
+      _chtSelectedId   = ref.id;
+      _chtSelectedType = 'level';
+      _chtShowFloatDel(ref.id, t.clientX, t.clientY);
+    }
   }, true);
 
   // ── Mouse ──────────────────────────────────────────────────────────────────
   document.addEventListener('mousedown', function(e) {
-    if (!_chtInst || _chtDrawMode) return;
+    if (!_chtInst || _chtDrawMode || _chtMarkMode) return;
     if (_chtNearStaging(e.clientY)) _chtMouseDown = true;
   }, true);
   document.addEventListener('mousemove', function(e) {
@@ -1828,11 +2004,23 @@ function _chtInitDrawListeners() {
 
   document.addEventListener('click', function(e) {
     if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
     _chtHideFloatDel();
-    if (!_chtDrawMode || !_chtInst) return;
+
     const r = _chtBounds();
     if (!r) return;
-    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) return;
+    const inChart = e.clientX >= r.left && e.clientX <= r.right &&
+                    e.clientY >= r.top  && e.clientY <= r.bottom;
+
+    // Mark mode
+    if (_chtMarkMode && _chtInst && inChart) {
+      const clickedTime = _chtInst.timeScale().coordinateToTime(e.clientX - r.left);
+      if (clickedTime != null) _chtShowMarkerPanel(clickedTime, e.clientX, e.clientY);
+      return;
+    }
+
+    if (!_chtDrawMode || !_chtInst) return;
+    if (!inChart) return;
     const p = _chtToPrice(e.clientY);
     if (p != null) _chtSetStaging(p);
     _chtDrawMode = false;
