@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T13:54:29.581771+00:00",
+  "updated": "2026-05-24T14:53:48.053872+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77000.0,
-      "delta_pct": 0.4,
+      "value": 76401.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,33 +580,33 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG invalidated by \"Pound jumps as dollar sells off\" reducing yen strength relative to pound. USDJPY LONG pressured by dollar weakness on Iran deal hopes.",
-    "updated": "2026-05-24T12:52:09.339172+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and dollar strength. USDJPY LONG supported by hawkish Fed signals. No conflicts detected.",
+    "updated": "2026-05-24T14:53:48.053872+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-Off regime confirms setup, safe-haven yen demand strengthens signal.\n\nUSDCAD LONG: Risk-Off regime confirms setup, commodity pullback supports Canadian weakness.\n\nGBPJPY LONG: Risk-Off regime conflicts setup, weak momentum and negative divergence dominate.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup; strong momentum divergence validates short.\n\nUSDJPY LONG: Risk-Off supports long; JPY safe-haven inflow drives upside.\n\nNZDUSD SHORT: Risk-Off confirms short; commodity weakness pressures NZD fundamentals.",
     "top": [
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 7.92
+      },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 7.3
+        "score": 7.53
       },
       {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 7.15
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 3.58
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.25
       }
     ],
-    "updated": "2026-05-24T12:52:09.339172+00:00"
+    "updated": "2026-05-24T14:53:48.053872+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T12:52:09.339172+00:00"
+    "updated": "2026-05-24T14:53:48.053872+00:00"
   },
   "last_alert": "2026-05-24T13:54:29.581771+00:00"
 }
