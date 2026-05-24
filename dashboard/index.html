@@ -2367,16 +2367,17 @@ function chtAttachLongPress() {
 .log-stat-row2{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid var(--bord);flex-wrap:wrap;}
 .log-stat2{font-size:9px;color:var(--muted);}
 .log-stat2 b{color:var(--text);font-weight:700;}
-#log-body{flex:1;overflow-y:auto;padding:10px 14px 4px;}
+#log-body{flex:1;overflow-x:auto;overflow-y:auto;padding:10px 14px 4px;}
 .log-section-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 5px;opacity:.7;}
-.log-trade-row{display:grid;grid-template-columns:52px 36px 1fr auto auto;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;}
+.log-trade-row{display:flex;align-items:center;gap:0;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;min-width:max-content;}
 .log-trade-row:last-child{border-bottom:none;}
-.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);}
-.log-dir{font-size:9px;font-weight:700;}
+.log-col{white-space:nowrap;padding-right:16px;}
+.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);min-width:56px;}
+.log-dir{font-size:9px;font-weight:700;min-width:36px;}
 .log-dir.buy{color:var(--buy);}.log-dir.sell{color:var(--sell);}
-.log-prices{font-size:9px;color:var(--muted);line-height:1.6;}
-.log-prices span{display:inline-block;margin-right:8px;white-space:nowrap;}
-.log-result{font-size:11px;font-weight:800;text-align:right;white-space:nowrap;}
+.log-cell{font-size:9px;color:var(--muted);min-width:72px;}
+.log-cell.val{font-variant-numeric:tabular-nums;}
+.log-result{font-size:11px;font-weight:800;min-width:52px;text-align:right;}
 .log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
 .log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
 .log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
@@ -2524,7 +2525,7 @@ function trDrawChartLines() {
 function _trRenderAllMarkers() {
   if (!_chtCandles || !_chtPair || !_chtTf) return;
   const userMarkers = mkLoad().filter(m=>m.pair===_chtPair&&m.tf===_chtTf&&m.active).map(m=>({ time:m.time, position:m.direction==='bull'?'belowBar':'aboveBar', color:m.direction==='bull'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:m.direction==='bull'?'arrowUp':'arrowDown', text:m.text||'', size:1.5, id:m.id }));
-  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair).map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:`${t.direction==='BUY'?'L':'S'} ${t.entry}${t.rr&&t.rr!=='—'?' '+t.rr:''}`, size:1.2 }));
+  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair && t.status!=='closed').map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:`${t.direction==='BUY'?'L':'S'} ${t.entry}${t.rr&&t.rr!=='—'?' '+t.rr:''}`, size:1.2 }));
   const all = [...userMarkers,...tradeMarkers].sort((a,b)=>a.time-b.time);
   try { _chtCandles.setMarkers(all); } catch(e) {}
 }
@@ -2608,6 +2609,9 @@ function tshCalcRR() {
 }
 
 function submitTrade() {
+  // Block if side validation error is showing
+  const errEl = document.getElementById('tsh-side-err');
+  if (errEl && errEl.textContent) { errEl.style.color='var(--sell)'; return; }
   const entry=parseFloat(document.getElementById('tsh-entry').value);
   const tp   =parseFloat(document.getElementById('tsh-tp').value);
   const sl   =parseFloat(document.getElementById('tsh-sl').value);
@@ -2675,8 +2679,17 @@ function _renderLogBody(trades) {
   if (open.length||pending.length) {
     html+='<div class="log-section-lbl">Open & Pending</div>';
     [...open,...pending].forEach(t=>{
-      const sl=t.status==='pending'?'pending':'open';
-      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices"><span>@ ${fmt(t.pair,t.entry)}</span><span>TP ${fmt(t.pair,t.tp)}</span><span>SL ${fmt(t.pair,t.sl)}</span><span>${t.rr}</span></span><span class="log-result ${sl}">${sl.toUpperCase()}</span><button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button></div>`;
+      const st=t.status==='pending'?'pending':'open';
+      html+=`<div class="log-trade-row">
+        <span class="log-col log-pair">${t.pair}</span>
+        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
+        <span class="log-col log-cell val">TP ${fmt(t.pair,t.tp)}</span>
+        <span class="log-col log-cell val">SL ${fmt(t.pair,t.sl)}</span>
+        <span class="log-col log-cell">${t.rr}</span>
+        <span class="log-col log-result ${st}">${st.toUpperCase()}</span>
+        <button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button>
+      </div>`;
     });
   }
   if (closed.length) {
@@ -2685,7 +2698,17 @@ function _renderLogBody(trades) {
       const rc=t.result==='win'?'win':t.result==='loss'?'loss':'open';
       const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
       const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
-      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices"><span>@ ${fmt(t.pair,t.entry)}</span><span>→ ${fmt(t.pair,t.close_price)}</span><span>${ds}</span><span>${t.rr}${t.notes?' 📝':''}</span></span><span class="log-result ${rc}">${rl}</span><button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button></div>`;
+      html+=`<div class="log-trade-row">
+        <span class="log-col log-pair">${t.pair}</span>
+        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
+        <span class="log-col log-cell val">→ ${fmt(t.pair,t.close_price)}</span>
+        <span class="log-col log-cell">${ds}</span>
+        <span class="log-col log-cell">${t.rr}</span>
+        <span class="log-col log-cell">${t.notes?'📝 '+t.notes:''}</span>
+        <span class="log-col log-result ${rc}">${rl}</span>
+        <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
+      </div>`;
     });
   }
   if (!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
