@@ -1246,7 +1246,11 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
           <span id="tsh-rr-val">—</span>
         </div>
         <textarea id="tsh-notes" placeholder="Notes (optional)…" rows="2"></textarea>
-        <button id="tsh-submit-btn" onclick="submitTrade()">Enter Trade</button>
+        <div id="tsh-side-err"></div>
+        <div id="tsh-action-row">
+          <button id="tsh-submit-btn" onclick="submitTrade()">Enter Trade</button>
+          <button id="tsh-close-trade-btn" onclick="closeActiveTrade()" style="display:none;">Close Trade</button>
+        </div>
       </div>
     </div>
 
@@ -2306,7 +2310,7 @@ function chtAttachLongPress() {
 <style>
 /* ── Trade button ───────────────────────────────────────────────────────── */
 #cht-trade-btn{
-  width:100%;padding:14px;margin-top:6px;
+  width:100%;padding:7px;margin-top:6px;
   border-radius:6px;border:1px solid rgba(0,220,55,.45);
   background:rgba(0,220,55,.15);color:var(--buy);
   font-size:11px;font-weight:800;letter-spacing:.06em;cursor:pointer;
@@ -2340,9 +2344,13 @@ function chtAttachLongPress() {
 .tsh-hint{font-size:9px;color:var(--amber);font-weight:600;}
 #tsh-rr-row{display:flex;align-items:center;gap:8px;padding:5px 0 7px;border-top:1px solid var(--bord);margin-bottom:7px;}
 #tsh-rr-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
-#tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:10px;font-family:inherit;line-height:1.5;}
-#tsh-submit-btn{width:100%;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;}
+#tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:6px;font-family:inherit;line-height:1.5;}
+#tsh-side-err{font-size:9px;color:var(--sell);font-weight:700;min-height:14px;margin-bottom:6px;}
+#tsh-action-row{display:flex;gap:8px;}
+#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;}
 #tsh-submit-btn:active{background:rgba(0,220,55,.28);}
+#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;}
+#tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
 /* ── Log overlay ────────────────────────────────────────────────────────── */
 #log-overlay{position:fixed;inset:0;z-index:150;background:var(--bg);display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
@@ -2361,13 +2369,14 @@ function chtAttachLongPress() {
 .log-stat2 b{color:var(--text);font-weight:700;}
 #log-body{flex:1;overflow-y:auto;padding:10px 14px 4px;}
 .log-section-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 5px;opacity:.7;}
-.log-trade-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;}
+.log-trade-row{display:grid;grid-template-columns:52px 36px 1fr auto auto;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;}
 .log-trade-row:last-child{border-bottom:none;}
-.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);min-width:52px;}
-.log-dir{font-size:9px;font-weight:700;min-width:32px;}
+.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);}
+.log-dir{font-size:9px;font-weight:700;}
 .log-dir.buy{color:var(--buy);}.log-dir.sell{color:var(--sell);}
-.log-prices{font-size:9px;color:var(--muted);flex:1;line-height:1.5;}
-.log-result{font-size:11px;font-weight:800;min-width:36px;text-align:right;}
+.log-prices{font-size:9px;color:var(--muted);line-height:1.6;}
+.log-prices span{display:inline-block;margin-right:8px;white-space:nowrap;}
+.log-result{font-size:11px;font-weight:800;text-align:right;white-space:nowrap;}
 .log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
 .log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
 .log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
@@ -2515,7 +2524,7 @@ function trDrawChartLines() {
 function _trRenderAllMarkers() {
   if (!_chtCandles || !_chtPair || !_chtTf) return;
   const userMarkers = mkLoad().filter(m=>m.pair===_chtPair&&m.tf===_chtTf&&m.active).map(m=>({ time:m.time, position:m.direction==='bull'?'belowBar':'aboveBar', color:m.direction==='bull'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:m.direction==='bull'?'arrowUp':'arrowDown', text:m.text||'', size:1.5, id:m.id }));
-  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair).map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,200,200,.85)':'rgba(227,179,65,.85)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:t.direction==='BUY'?`L ${t.entry}`:`S ${t.entry}`, size:1.2 }));
+  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair).map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:`${t.direction==='BUY'?'L':'S'} ${t.entry}${t.rr&&t.rr!=='—'?' '+t.rr:''}`, size:1.2 }));
   const all = [...userMarkers,...tradeMarkers].sort((a,b)=>a.time-b.time);
   try { _chtCandles.setMarkers(all); } catch(e) {}
 }
@@ -2540,9 +2549,26 @@ function openTradeSheet() {
   document.getElementById('tsh-notes').value='';
   document.getElementById('tsh-rr-val').textContent='—';
   document.getElementById('tsh-pending-hint').textContent='';
+  if (document.getElementById('tsh-side-err')) document.getElementById('tsh-side-err').textContent='';
+
+  // Show Close Trade button if there's an open/pending trade for this pair
+  const activeTrade = trLoad().find(t => t.pair===_tshPair && (t.status==='open'||t.status==='pending'));
+  const closeBtn = document.getElementById('tsh-close-trade-btn');
+  if (closeBtn) closeBtn.style.display = activeTrade ? 'flex' : 'none';
+
   const sheet = document.getElementById('trade-sheet');
   sheet.style.transform='translateY(0)'; sheet.style.display='block';
   trWsStart(_tshPair);
+}
+
+function closeActiveTrade() {
+  if (!_tshPair) return;
+  const activeTrade = trLoad().find(t => t.pair===_tshPair && (t.status==='open'||t.status==='pending'));
+  if (!activeTrade) return;
+  trManualClose(activeTrade.id);
+  // Update button visibility
+  const closeBtn = document.getElementById('tsh-close-trade-btn');
+  if (closeBtn) closeBtn.style.display = 'none';
 }
 
 function closeTradeSheet() {
@@ -2562,8 +2588,19 @@ function tshCalcRR() {
   const entry=parseFloat(document.getElementById('tsh-entry').value);
   const tp   =parseFloat(document.getElementById('tsh-tp').value);
   const sl   =parseFloat(document.getElementById('tsh-sl').value);
-  const livePrice = _trWsPrice || (D?.pairs?.[_tshPair]?.prev_close||null);
-  document.getElementById('tsh-pending-hint').textContent = (livePrice && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+  const livePrice = _trWsPrice || null;
+  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+
+  // Validate TP/SL sides
+  const errEl = document.getElementById('tsh-side-err');
+  if (entry && tp && sl) {
+    if (_tshDir==='BUY'  && tp<entry) { errEl.textContent='⚠ TP must be above entry for a BUY'; return; }
+    if (_tshDir==='BUY'  && sl>entry) { errEl.textContent='⚠ SL must be below entry for a BUY'; return; }
+    if (_tshDir==='SELL' && tp>entry) { errEl.textContent='⚠ TP must be below entry for a SELL'; return; }
+    if (_tshDir==='SELL' && sl<entry) { errEl.textContent='⚠ SL must be above entry for a SELL'; return; }
+  }
+  if (errEl) errEl.textContent='';
+
   if (!entry||!tp||!sl) { document.getElementById('tsh-rr-val').textContent='—'; return; }
   const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
   if (!risk) { document.getElementById('tsh-rr-val').textContent='—'; return; }
@@ -2578,7 +2615,7 @@ function submitTrade() {
   if (!entry||!tp||!sl) { alert('Entry, TP and SL are required.'); return; }
   const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
   const rr = risk ? (reward/risk).toFixed(2) : null;
-  const livePrice = _trWsPrice || (D?.pairs?.[_tshPair]?.prev_close||null);
+  const livePrice = _trWsPrice || null;
   const isPending = livePrice && Math.abs(entry-livePrice)>0.000005;
   const isJpy = _tshPair.includes('JPY');
   const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
@@ -2639,7 +2676,7 @@ function _renderLogBody(trades) {
     html+='<div class="log-section-lbl">Open & Pending</div>';
     [...open,...pending].forEach(t=>{
       const sl=t.status==='pending'?'pending':'open';
-      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices">@ ${fmt(t.pair,t.entry)}<br>TP ${fmt(t.pair,t.tp)}  SL ${fmt(t.pair,t.sl)}  ${t.rr}</span><span class="log-result ${sl}">${sl.toUpperCase()}</span><button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button></div>`;
+      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices"><span>@ ${fmt(t.pair,t.entry)}</span><span>TP ${fmt(t.pair,t.tp)}</span><span>SL ${fmt(t.pair,t.sl)}</span><span>${t.rr}</span></span><span class="log-result ${sl}">${sl.toUpperCase()}</span><button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button></div>`;
     });
   }
   if (closed.length) {
@@ -2648,7 +2685,7 @@ function _renderLogBody(trades) {
       const rc=t.result==='win'?'win':t.result==='loss'?'loss':'open';
       const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
       const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
-      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices">@ ${fmt(t.pair,t.entry)} → ${fmt(t.pair,t.close_price)}<br>${ds}  ${t.rr}  ${t.notes?'📝':''}</span><span class="log-result ${rc}">${rl}</span><button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button></div>`;
+      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices"><span>@ ${fmt(t.pair,t.entry)}</span><span>→ ${fmt(t.pair,t.close_price)}</span><span>${ds}</span><span>${t.rr}${t.notes?' 📝':''}</span></span><span class="log-result ${rc}">${rl}</span><button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button></div>`;
     });
   }
   if (!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
