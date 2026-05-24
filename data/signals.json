@@ -1,53 +1,53 @@
 {
-  "updated": "2026-05-24T08:31:23.558508+00:00",
+  "updated": "2026-05-24T08:50:00.819712+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
     "score": 10.0,
-    "stable": false
+    "stable": true
   },
   "regime_h4": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 8.4,
-    "stable": false
+    "score": 8.6,
+    "stable": true
   },
   "regime_h1": {
     "regime": "Ranging",
     "confidence": "Low",
     "score": 5.0,
-    "stable": false
+    "stable": true
   },
   "csm": {
     "d1": {
-      "GBP": 42.6,
-      "EUR": 2.4,
-      "AUD": 36.3,
+      "GBP": 42.7,
+      "EUR": 2.6,
+      "AUD": 37.0,
       "NZD": 0.0,
-      "CAD": 31.8,
-      "JPY": 49.1,
-      "CHF": 73.9,
+      "CAD": 31.6,
+      "JPY": 49.3,
+      "CHF": 74.3,
       "USD": 100.0
     },
     "h4": {
       "GBP": 100.0,
-      "EUR": 6.1,
-      "AUD": 60.4,
-      "NZD": 25.7,
-      "CAD": 26.1,
-      "JPY": 40.8,
-      "CHF": 90.2,
+      "EUR": 8.4,
+      "AUD": 75.7,
+      "NZD": 23.2,
+      "CAD": 17.3,
+      "JPY": 43.4,
+      "CHF": 98.2,
       "USD": 0.0
     },
     "h1": {
-      "GBP": 98.5,
-      "EUR": 50.1,
-      "AUD": 60.2,
+      "GBP": 94.9,
+      "EUR": 48.6,
+      "AUD": 63.7,
       "NZD": 0.0,
-      "CAD": 42.7,
-      "JPY": 53.8,
+      "CAD": 37.8,
+      "JPY": 52.8,
       "CHF": 100.0,
-      "USD": 32.4
+      "USD": 30.6
     }
   },
   "correlations": {
@@ -297,7 +297,7 @@
         "cmp": 78
       },
       "adx": 25.3,
-      "d1_pct": -0.0,
+      "d1_pct": 0.0,
       "d5_pct": 0.1,
       "prev_close": 159.21199,
       "prev5_close": 159.04855,
@@ -341,7 +341,7 @@
         "cmp": 39
       },
       "adx": 30.3,
-      "d1_pct": 0.02,
+      "d1_pct": 0.03,
       "d5_pct": 0.27,
       "prev_close": 0.71283,
       "prev5_close": 0.71106,
@@ -364,7 +364,7 @@
       },
       "adx": 70.9,
       "d1_pct": 0.01,
-      "d5_pct": 0.41,
+      "d5_pct": 0.42,
       "prev_close": 1.38204,
       "prev5_close": 1.37643,
       "cont": 40
@@ -446,13 +446,13 @@
         "dd1": 0,
         "h4": 50,
         "dh4": -2,
-        "h1": 50,
-        "dh1": 16,
+        "h1": 51,
+        "dh1": 17,
         "cmp": 53
       },
       "adx": 23.0,
-      "d1_pct": 0.02,
-      "d5_pct": 0.37,
+      "d1_pct": 0.03,
+      "d5_pct": 0.38,
       "prev_close": 113.48828,
       "prev5_close": 113.08826,
       "cont": 0
@@ -461,7 +461,7 @@
       "pills": {
         "d1": "neutral",
         "h4": "neutral",
-        "h1": "bear"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 50,
