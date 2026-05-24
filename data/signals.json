@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T07:52:36.381746+00:00",
+  "updated": "2026-05-24T08:11:40.867284+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -508,7 +508,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -567,9 +567,9 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76694.0,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 76650.0,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -580,33 +580,33 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by energy shock from Iran war weighing on EU economy and boosting inflation, supporting euro weakness thesis.",
-    "updated": "2026-05-24T05:49:51.570055+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting risk appetite, weakening euro. USDJPY LONG supported by Fed hawkish signals. NZDUSD SHORT remains valid.",
+    "updated": "2026-05-24T08:11:40.867284+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-on low challenges setup, needs USD strength confirmation.\n\nUSDCAD LONG: Ranging regime confirms setup, commodity sensitivity neutral today.\n\nEURUSD SHORT: Ranging low confirms bearish momentum, weak macro backdrop.",
+    "text": "USDJPY LONG: Macro confirms; risk-off environment supports safe-haven yen weakness reversal.\n\nEURUSD SHORT: Macro confirms; risk-off regime favors dollar strength over euro.\n\nNZDUSD SHORT: Macro challenges; copper strength signals risk-on contradicting risk-off short bias.",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 7.1
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.98
+        "score": 6.95
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.48
+        "score": 6.75
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.3
       }
     ],
-    "updated": "2026-05-24T05:49:51.570055+00:00"
+    "updated": "2026-05-24T08:11:40.867284+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T05:49:51.570055+00:00"
+    "updated": "2026-05-24T08:11:40.867284+00:00"
   },
   "last_alert": "2026-05-24T07:52:36.381746+00:00"
 }
