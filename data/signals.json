@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T04:23:22.551850+00:00",
+  "updated": "2026-05-24T05:49:51.570055+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -503,12 +503,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
@@ -531,7 +531,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4521.0,
+      "value": 4523.2,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "Gold"
@@ -543,8 +543,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.342,
-      "delta_pct": 1.4,
+      "value": 6.379,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76788.0,
-      "delta_pct": 1.7,
+      "value": 76694.0,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -580,33 +580,33 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. UMich sentiment miss weakens growth outlook, supporting EUR short thesis.",
-    "updated": "2026-05-24T01:51:16.840317+00:00"
+    "text": "EURUSD SHORT accelerated by energy shock from Iran war weighing on EU economy and boosting inflation, supporting euro weakness thesis.",
+    "updated": "2026-05-24T05:49:51.570055+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms setup, USD strength driver dominates.\n\nUSDCAD LONG: Risk-Off regime confirms setup, safe-haven CAD demand drives.\n\nUSDJPY LONG: Risk-Off regime confirms setup, JPY carry unwind intensifies.",
+    "text": "USDJPY LONG: Risk-on low challenges setup, needs USD strength confirmation.\n\nUSDCAD LONG: Ranging regime confirms setup, commodity sensitivity neutral today.\n\nEURUSD SHORT: Ranging low confirms bearish momentum, weak macro backdrop.",
     "top": [
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 7.53
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 7.1
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.53
+        "score": 6.98
       },
       {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 7.03
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.48
       }
     ],
-    "updated": "2026-05-24T01:51:16.840317+00:00"
+    "updated": "2026-05-24T05:49:51.570055+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T01:51:16.840317+00:00"
+    "updated": "2026-05-24T05:49:51.570055+00:00"
   },
   "last_alert": "2026-05-23T17:13:37.057750+00:00"
 }
