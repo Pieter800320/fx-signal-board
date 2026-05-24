@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T19:36:16.488253+00:00",
+  "updated": "2026-05-24T20:40:25.280033+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,7 +567,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76573.0,
+      "value": 76584.0,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -580,33 +580,28 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. No direct conflicts identified.",
-    "updated": "2026-05-24T18:55:35.437540+00:00"
+    "text": "USDCAD LONG conflicts with Iran deal hopes reducing oil risk premium, weakening safe haven USD demand versus commodity-linked CAD strength.",
+    "updated": "2026-05-24T20:40:25.280033+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-off regime confirms setup, USD strength primary driver.\n\nNZDUSD SHORT: Risk-off regime confirms setup, commodity currency weakness driver.\n\nUSDJPY LONG: Risk-off regime confirms setup, safe-haven yen bid driver.",
+    "text": "USDCAD LONG: Macro confirms setup, risk-on supports USD strength today.\n\nGBPJPY LONG: Macro challenges setup, ranging regime conflicts with weak momentum.",
     "top": [
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 7.75
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.03
-      },
-      {
-        "pair": "USDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.95
+        "score": 6.2
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 4.0
       }
     ],
-    "updated": "2026-05-24T18:55:35.437540+00:00"
+    "updated": "2026-05-24T20:40:25.280033+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T18:55:35.437540+00:00"
+    "updated": "2026-05-24T20:40:25.280033+00:00"
   },
   "last_alert": "2026-05-24T19:36:16.488253+00:00"
 }
