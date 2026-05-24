@@ -2347,9 +2347,9 @@ function chtAttachLongPress() {
 #tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:6px;font-family:inherit;line-height:1.5;}
 #tsh-side-err{font-size:9px;color:var(--sell);font-weight:700;min-height:14px;margin-bottom:6px;}
 #tsh-action-row{display:flex;gap:8px;}
-#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;}
+#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;text-align:center;}
 #tsh-submit-btn:active{background:rgba(0,220,55,.28);}
-#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;}
+#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;text-align:center;}
 #tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
 /* ── Log overlay ────────────────────────────────────────────────────────── */
@@ -2379,6 +2379,8 @@ function chtAttachLongPress() {
 .log-cell.val{font-variant-numeric:tabular-nums;}
 .log-result{font-size:11px;font-weight:800;min-width:52px;text-align:right;}
 .log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
+.log-wl{font-size:9px;font-weight:800;letter-spacing:.06em;min-width:36px;}
+.log-notes{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;cursor:default;}
 .log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
 .log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
 .log-delete-btn:hover{opacity:1;color:var(--sell);}
@@ -2696,8 +2698,10 @@ function _renderLogBody(trades) {
     html+='<div class="log-section-lbl">History</div>';
     closed.forEach(t=>{
       const rc=t.result==='win'?'win':t.result==='loss'?'loss':'open';
+      const wl=t.result==='win'?'WIN':t.result==='loss'?'LOSS':'—';
       const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
       const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
+      const note=t.notes?t.notes:'';
       html+=`<div class="log-trade-row">
         <span class="log-col log-pair">${t.pair}</span>
         <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
@@ -2705,7 +2709,8 @@ function _renderLogBody(trades) {
         <span class="log-col log-cell val">→ ${fmt(t.pair,t.close_price)}</span>
         <span class="log-col log-cell">${ds}</span>
         <span class="log-col log-cell">${t.rr}</span>
-        <span class="log-col log-cell">${t.notes?'📝 '+t.notes:''}</span>
+        <span class="log-col log-cell log-notes" title="${note}">${note}</span>
+        <span class="log-col log-result ${rc} log-wl">${wl}</span>
         <span class="log-col log-result ${rc}">${rl}</span>
         <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
       </div>`;
