@@ -1,57 +1,53 @@
 {
-<<<<<<< Updated upstream
-  "updated": "2026-05-24T08:15:18.447060+00:00",
-=======
-  "updated": "2026-05-24T08:14:27.258673+00:00",
->>>>>>> Stashed changes
+  "updated": "2026-05-24T08:31:23.558508+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
     "score": 10.0,
-    "stable": true
+    "stable": false
   },
   "regime_h4": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 8.5,
-    "stable": true
+    "score": 8.4,
+    "stable": false
   },
   "regime_h1": {
     "regime": "Ranging",
     "confidence": "Low",
     "score": 5.0,
-    "stable": true
+    "stable": false
   },
   "csm": {
     "d1": {
       "GBP": 42.6,
-      "EUR": 2.7,
-      "AUD": 37.2,
+      "EUR": 2.4,
+      "AUD": 36.3,
       "NZD": 0.0,
       "CAD": 31.8,
-      "JPY": 49.3,
-      "CHF": 74.2,
+      "JPY": 49.1,
+      "CHF": 73.9,
       "USD": 100.0
     },
     "h4": {
-      "GBP": 99.7,
-      "EUR": 9.4,
-      "AUD": 83.8,
-      "NZD": 22.6,
-      "CAD": 24.4,
-      "JPY": 45.8,
-      "CHF": 100.0,
+      "GBP": 100.0,
+      "EUR": 6.1,
+      "AUD": 60.4,
+      "NZD": 25.7,
+      "CAD": 26.1,
+      "JPY": 40.8,
+      "CHF": 90.2,
       "USD": 0.0
     },
     "h1": {
-      "GBP": 94.7,
-      "EUR": 49.9,
-      "AUD": 66.3,
+      "GBP": 98.5,
+      "EUR": 50.1,
+      "AUD": 60.2,
       "NZD": 0.0,
-      "CAD": 41.0,
-      "JPY": 54.0,
+      "CAD": 42.7,
+      "JPY": 53.8,
       "CHF": 100.0,
-      "USD": 31.7
+      "USD": 32.4
     }
   },
   "correlations": {
@@ -301,7 +297,7 @@
         "cmp": 78
       },
       "adx": 25.3,
-      "d1_pct": 0.0,
+      "d1_pct": -0.0,
       "d5_pct": 0.1,
       "prev_close": 159.21199,
       "prev5_close": 159.04855,
@@ -345,8 +341,8 @@
         "cmp": 39
       },
       "adx": 30.3,
-      "d1_pct": 0.03,
-      "d5_pct": 0.28,
+      "d1_pct": 0.02,
+      "d5_pct": 0.27,
       "prev_close": 0.71283,
       "prev5_close": 0.71106,
       "cont": 0
@@ -411,7 +407,7 @@
         "cmp": 56
       },
       "adx": 22.0,
-      "d1_pct": 0.02,
+      "d1_pct": 0.03,
       "d5_pct": 0.05,
       "prev_close": 184.77567,
       "prev5_close": 184.72405,
@@ -450,13 +446,13 @@
         "dd1": 0,
         "h4": 50,
         "dh4": -2,
-        "h1": 51,
-        "dh1": 17,
+        "h1": 50,
+        "dh1": 16,
         "cmp": 53
       },
       "adx": 23.0,
-      "d1_pct": 0.03,
-      "d5_pct": 0.38,
+      "d1_pct": 0.02,
+      "d5_pct": 0.37,
       "prev_close": 113.48828,
       "prev5_close": 113.08826,
       "cont": 0
@@ -465,7 +461,7 @@
       "pills": {
         "d1": "neutral",
         "h4": "neutral",
-        "h1": "neutral"
+        "h1": "bear"
       },
       "mom": {
         "d1": 50,
@@ -505,112 +501,5 @@
       "prev5_close": 115.54897,
       "cont": 0
     }
-  },
-  "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
-  },
-  "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
-  },
-  "macro_assets": {
-    "vix": {
-      "value": 16.7,
-      "delta_pct": -0.4,
-      "direction": "flat",
-      "label": "VIX"
-    },
-    "spx": {
-      "value": 7473.47,
-      "delta_pct": 0.4,
-      "direction": "flat",
-      "label": "S&P 500"
-    },
-    "gold": {
-      "value": 4523.2,
-      "delta_pct": -0.4,
-      "direction": "flat",
-      "label": "Gold"
-    },
-    "dxy": {
-      "value": 99.32,
-      "delta_pct": 0.1,
-      "direction": "flat",
-      "label": "DXY"
-    },
-    "copper": {
-      "value": 6.379,
-      "delta_pct": 1.9,
-      "direction": "up",
-      "label": "Copper"
-    },
-    "us10y": {
-      "value": 4.558,
-      "delta_bp": -2.8,
-      "direction": "flat",
-      "label": "US 10Y"
-    },
-    "us3m": {
-      "value": 3.585,
-      "delta_bp": 0.3,
-      "direction": "flat",
-      "label": "US 3M"
-    },
-    "wti": {
-      "value": 96.6,
-      "delta_pct": 0.3,
-      "direction": "flat",
-      "label": "WTI Oil"
-    },
-    "btc": {
-      "value": 76653.0,
-      "delta_pct": -0.0,
-      "direction": "flat",
-      "label": "Bitcoin"
-    },
-    "curve": {
-      "value": 97.3,
-      "delta_bp": -3.1,
-      "direction": "down",
-      "label": "10Y-3M"
-    }
-  },
-  "catalyst": {
-    "text": "EURUSD SHORT accelerated by energy shock weighing on EU economy and multiple headlines calling to sell the euro. USDJPY LONG supported by Fed signals. NZDUSD SHORT neutral.",
-    "updated": "2026-05-24T08:15:18.447060+00:00"
-  },
-  "ranked": {
-    "text": "USDJPY LONG: Risk-Off macro confirms setup, safe-haven yen demand strengthens.\n\nEURUSD SHORT: Risk-Off macro confirms setup, euro weakness outpaces dollar strength.\n\nNZDUSD SHORT: Risk-Off macro confirms setup, commodity currency underperforms risk-off environment.",
-    "top": [
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 6.95
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.75
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.3
-      }
-    ],
-    "updated": "2026-05-24T08:15:18.447060+00:00"
-  },
-  "calendar": {
-    "events": [],
-    "updated": "2026-05-24T08:15:18.447060+00:00"
-  },
-  "last_alert": "2026-05-24T07:52:36.381746+00:00"
+  }
 }
