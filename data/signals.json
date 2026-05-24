@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T15:14:42.629687+00:00",
+  "updated": "2026-05-24T16:46:14.571546+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76401.0,
-      "delta_pct": -0.4,
+      "value": 76436.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and dollar strength. USDJPY LONG supported by hawkish Fed signals. No conflicts detected.",
-    "updated": "2026-05-24T14:53:48.053872+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes weakening euro and oil shock concerns. USDJPY LONG supported by hawkish Fed signals. No material conflicts with setups.",
+    "updated": "2026-05-24T16:46:14.571546+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms setup; strong momentum divergence validates short.\n\nUSDJPY LONG: Risk-Off supports long; JPY safe-haven inflow drives upside.\n\nNZDUSD SHORT: Risk-Off confirms short; commodity weakness pressures NZD fundamentals.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, copper strength challenges.\n\nUSDJPY LONG: Risk-Off regime confirms, but macro low contradicts.\n\nNZDUSD SHORT: Risk-Off regime confirms, commodity strength challenges short.",
     "top": [
       {
         "pair": "EURUSD",
@@ -594,19 +594,19 @@
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 7.53
+        "score": 7.08
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.25
+        "score": 7.03
       }
     ],
-    "updated": "2026-05-24T14:53:48.053872+00:00"
+    "updated": "2026-05-24T16:46:14.571546+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T14:53:48.053872+00:00"
+    "updated": "2026-05-24T16:46:14.571546+00:00"
   },
   "last_alert": "2026-05-24T13:54:29.581771+00:00"
 }
