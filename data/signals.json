@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T17:12:42.294112+00:00",
+  "updated": "2026-05-24T18:55:35.437540+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76436.0,
-      "delta_pct": -0.3,
+      "value": 76573.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,33 +580,33 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes weakening euro and oil shock concerns. USDJPY LONG supported by hawkish Fed signals. No material conflicts with setups.",
-    "updated": "2026-05-24T16:46:14.571546+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. USDJPY LONG supported by hawkish Fed signals. No direct conflicts identified.",
+    "updated": "2026-05-24T18:55:35.437540+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms setup, copper strength challenges.\n\nUSDJPY LONG: Risk-Off regime confirms, but macro low contradicts.\n\nNZDUSD SHORT: Risk-Off regime confirms, commodity strength challenges short.",
+    "text": "EURUSD SHORT: Risk-off regime confirms setup, USD strength primary driver.\n\nNZDUSD SHORT: Risk-off regime confirms setup, commodity currency weakness driver.\n\nUSDJPY LONG: Risk-off regime confirms setup, safe-haven yen bid driver.",
     "top": [
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.92
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 7.08
+        "score": 7.75
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
         "score": 7.03
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 6.95
       }
     ],
-    "updated": "2026-05-24T16:46:14.571546+00:00"
+    "updated": "2026-05-24T18:55:35.437540+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T16:46:14.571546+00:00"
+    "updated": "2026-05-24T18:55:35.437540+00:00"
   },
   "last_alert": "2026-05-24T13:54:29.581771+00:00"
 }
