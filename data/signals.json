@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T21:07:21.936900+00:00",
+  "updated": "2026-05-24T21:57:16.153213+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76584.0,
-      "delta_pct": -0.1,
+      "value": 76088.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,28 +580,27 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG conflicts with Iran deal hopes reducing oil risk premium, weakening safe haven USD demand versus commodity-linked CAD strength.",
-    "updated": "2026-05-24T20:40:25.280033+00:00"
+    "text": "Iran nuclear deal agreement reduces oil shock risk, undermining energy-driven CAD strength. Weakens USDCAD long setup.",
+    "updated": "2026-05-24T21:57:16.153213+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, risk-on supports USD strength today.\n\nGBPJPY LONG: Macro challenges setup, ranging regime conflicts with weak momentum.",
+    "text": "USDCAD LONG: Risk-on low challenges strong momentum, copper strength undermines.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
         "score": 6.2
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 4.0
       }
     ],
-    "updated": "2026-05-24T20:40:25.280033+00:00"
+    "updated": "2026-05-24T21:57:16.153213+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T20:40:25.280033+00:00"
+    "updated": "2026-05-24T21:57:16.153213+00:00"
   },
-  "last_alert": "2026-05-24T19:36:16.488253+00:00"
+  "last_alert": "2026-05-24T19:36:16.488253+00:00",
+  "week_ahead": {
+    "text": "I'll search for current FX market previews for you. Based on the search results, here is your Week Ahead briefing: Global financial markets remain cautious as hawkish Federal Reserve expectations continue supporting the US Dollar across major FX pairs. Fed rate hike bets remain elevated ahead of key US PCE data. RBNZ decision and Australia CPI data to test steep implied rate paths. The US and Iran are close to signing a 60-day ceasefire extension that would reopen the Strait of Hormuz. This geopolitical uncertainty remains the biggest wildcard for directional moves, potentially shifting risk sentiment and commodity prices mid-week.",
+    "generated_at": "2026-05-24T21:57:16.153213+00:00"
+  }
 }
