@@ -48,7 +48,7 @@
   "NZDJPY": {
     "ema200_side": "below",
     "ema50_side": "below",
-    "ema200_fired": false,
+    "ema200_fired": true,
     "ema50_fired": true
   },
   "CADJPY": {
