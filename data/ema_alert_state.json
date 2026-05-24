@@ -49,7 +49,7 @@
     "ema200_side": "below",
     "ema50_side": "below",
     "ema200_fired": false,
-    "ema50_fired": false
+    "ema50_fired": true
   },
   "CADJPY": {
     "ema200_side": "below",

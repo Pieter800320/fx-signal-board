@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T11:04:59.603569+00:00",
+  "updated": "2026-05-24T11:36:59.269691+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -10,7 +10,7 @@
     "regime": "Mixed",
     "confidence": "Low",
     "score": 5.0,
-    "stable": false
+    "stable": true
   },
   "regime_h1": {
     "regime": "Ranging",
@@ -20,34 +20,34 @@
   },
   "csm": {
     "d1": {
-      "GBP": 42.2,
-      "EUR": 1.7,
-      "AUD": 37.8,
+      "GBP": 42.6,
+      "EUR": 2.6,
+      "AUD": 37.7,
       "NZD": 0.0,
-      "CAD": 29.9,
-      "JPY": 49.2,
-      "CHF": 75.6,
+      "CAD": 29.7,
+      "JPY": 49.0,
+      "CHF": 72.6,
       "USD": 100.0
     },
     "h4": {
-      "GBP": 59.6,
-      "EUR": 46.3,
-      "AUD": 81.0,
-      "NZD": 12.0,
-      "CAD": 0.2,
-      "JPY": 40.0,
-      "CHF": 100.0,
-      "USD": 0.0
+      "GBP": 79.2,
+      "EUR": 70.0,
+      "AUD": 100.0,
+      "NZD": 13.2,
+      "CAD": 0.0,
+      "JPY": 48.7,
+      "CHF": 82.3,
+      "USD": 6.5
     },
     "h1": {
-      "GBP": 48.9,
-      "EUR": 70.1,
-      "AUD": 99.0,
+      "GBP": 50.8,
+      "EUR": 87.5,
+      "AUD": 100.0,
       "NZD": 0.0,
-      "CAD": 35.7,
-      "JPY": 63.2,
-      "CHF": 100.0,
-      "USD": 64.8
+      "CAD": 47.0,
+      "JPY": 66.1,
+      "CHF": 59.6,
+      "USD": 79.4
     }
   },
   "correlations": {
@@ -91,7 +91,7 @@
         0.53,
         0.76,
         0.57,
-        0.66,
+        0.67,
         -0.1
       ],
       [
@@ -208,7 +208,7 @@
       ],
       [
         0.69,
-        0.66,
+        0.67,
         -0.24,
         -0.6,
         0.75,
@@ -249,7 +249,7 @@
         "h4": 41,
         "dh4": -15,
         "h1": 60,
-        "dh1": 26,
+        "dh1": 31,
         "cmp": 34
       },
       "adx": 57.5,
@@ -271,7 +271,7 @@
         "h4": 54,
         "dh4": -16,
         "h1": 57,
-        "dh1": 10,
+        "dh1": 16,
         "cmp": 37
       },
       "adx": 29.0,
@@ -292,8 +292,8 @@
         "dd1": 34,
         "h4": 82,
         "dh4": 24,
-        "h1": 49,
-        "dh1": -21,
+        "h1": 50,
+        "dh1": -22,
         "cmp": 80
       },
       "adx": 25.7,
@@ -312,15 +312,15 @@
       "mom": {
         "d1": 71,
         "dd1": 25,
-        "h4": 25,
-        "dh4": -17,
+        "h4": 26,
+        "dh4": -16,
         "h1": 40,
-        "dh1": -23,
+        "dh1": -28,
         "cmp": 51
       },
       "adx": 44.4,
-      "d1_pct": -0.04,
-      "d5_pct": -0.59,
+      "d1_pct": -0.02,
+      "d5_pct": -0.57,
       "prev_close": 0.78461,
       "prev5_close": 0.78893,
       "cont": 0
@@ -336,8 +336,8 @@
         "dd1": -20,
         "h4": 41,
         "dh4": -6,
-        "h1": 52,
-        "dh1": 33,
+        "h1": 53,
+        "dh1": 38,
         "cmp": 39
       },
       "adx": 34.6,
@@ -351,23 +351,23 @@
       "pills": {
         "d1": "bull",
         "h4": "bull",
-        "h1": "bull"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 84,
         "dd1": 10,
         "h4": 89,
         "dh4": 40,
-        "h1": 53,
+        "h1": 54,
         "dh1": -11,
         "cmp": 82
       },
       "adx": 74.6,
-      "d1_pct": 0.02,
+      "d1_pct": 0.03,
       "d5_pct": 0.43,
       "prev_close": 1.38204,
       "prev5_close": 1.37643,
-      "cont": 68
+      "cont": 65
     },
     "NZDUSD": {
       "pills": {
@@ -381,7 +381,7 @@
         "h4": 22,
         "dh4": -36,
         "h1": 58,
-        "dh1": 32,
+        "dh1": 37,
         "cmp": 32
       },
       "adx": 41.0,
@@ -403,11 +403,11 @@
         "h4": 54,
         "dh4": -10,
         "h1": 60,
-        "dh1": 10,
+        "dh1": 14,
         "cmp": 56
       },
       "adx": 20.7,
-      "d1_pct": 0.03,
+      "d1_pct": 0.02,
       "d5_pct": 0.05,
       "prev_close": 184.77567,
       "prev5_close": 184.72405,
@@ -425,7 +425,7 @@
         "h4": 67,
         "dh4": -9,
         "h1": 58,
-        "dh1": -3,
+        "dh1": 1,
         "cmp": 55
       },
       "adx": 77.0,
@@ -433,7 +433,7 @@
       "d5_pct": 0.38,
       "prev_close": 213.94909,
       "prev5_close": 213.17451,
-      "cont": 70
+      "cont": 75
     },
     "AUDJPY": {
       "pills": {
@@ -446,8 +446,8 @@
         "dd1": 0,
         "h4": 50,
         "dh4": -1,
-        "h1": 52,
-        "dh1": 28,
+        "h1": 53,
+        "dh1": 33,
         "cmp": 53
       },
       "adx": 24.5,
@@ -461,19 +461,19 @@
       "pills": {
         "d1": "neutral",
         "h4": "neutral",
-        "h1": "bear"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 50,
         "dd1": -3,
         "h4": 31,
         "dh4": -32,
-        "h1": 58,
-        "dh1": 26,
+        "h1": 59,
+        "dh1": 31,
         "cmp": 45
       },
       "adx": 42.1,
-      "d1_pct": 0.01,
+      "d1_pct": 0.0,
       "d5_pct": 0.32,
       "prev_close": 93.12043,
       "prev5_close": 92.82889,
@@ -491,7 +491,7 @@
         "h4": 18,
         "dh4": -39,
         "h1": 46,
-        "dh1": -13,
+        "dh1": -12,
         "cmp": 43
       },
       "adx": 72.9,
@@ -502,7 +502,21 @@
       "cont": 0
     }
   },
-  "last_alert": "2026-05-24T10:02:58.468681+00:00",
+  "regime_w1": {
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
+  },
   "macro_assets": {
     "vix": {
       "value": 16.7,
@@ -565,21 +579,6 @@
       "label": "10Y-3M"
     }
   },
-  "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": false
-  },
-  "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": false
-  },
   "catalyst": {
     "text": "GBPJPY LONG invalidated. Sterling jumps on Iran deal hopes, reducing safe haven demand for JPY pairs. Pound strength undermines setup.",
     "updated": "2026-05-24T11:04:59.603569+00:00"
@@ -608,5 +607,6 @@
   "calendar": {
     "events": [],
     "updated": "2026-05-24T11:04:59.603569+00:00"
-  }
+  },
+  "last_alert": "2026-05-24T10:02:58.468681+00:00"
 }
