@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T10:02:58.468681+00:00",
+  "updated": "2026-05-24T11:04:59.603569+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -502,5 +502,111 @@
       "cont": 0
     }
   },
-  "last_alert": "2026-05-24T10:02:58.468681+00:00"
+  "last_alert": "2026-05-24T10:02:58.468681+00:00",
+  "macro_assets": {
+    "vix": {
+      "value": 16.7,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7473.47,
+      "delta_pct": 0.4,
+      "direction": "flat",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4523.2,
+      "delta_pct": -0.4,
+      "direction": "flat",
+      "label": "Gold"
+    },
+    "dxy": {
+      "value": 99.32,
+      "delta_pct": 0.1,
+      "direction": "flat",
+      "label": "DXY"
+    },
+    "copper": {
+      "value": 6.379,
+      "delta_pct": 1.9,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.558,
+      "delta_bp": -2.8,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "us3m": {
+      "value": 3.585,
+      "delta_bp": 0.3,
+      "direction": "flat",
+      "label": "US 3M"
+    },
+    "wti": {
+      "value": 96.6,
+      "delta_pct": 0.3,
+      "direction": "flat",
+      "label": "WTI Oil"
+    },
+    "btc": {
+      "value": 77205.0,
+      "delta_pct": 0.7,
+      "direction": "flat",
+      "label": "Bitcoin"
+    },
+    "curve": {
+      "value": 97.3,
+      "delta_bp": -3.1,
+      "direction": "down",
+      "label": "10Y-3M"
+    }
+  },
+  "regime_w1": {
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
+  },
+  "catalyst": {
+    "text": "GBPJPY LONG invalidated. Sterling jumps on Iran deal hopes, reducing safe haven demand for JPY pairs. Pound strength undermines setup.",
+    "updated": "2026-05-24T11:04:59.603569+00:00"
+  },
+  "ranked": {
+    "text": "USDJPY LONG: Risk-off regime confirms setup, JPY safe-haven bid strengthens.\n\nUSDCAD LONG: Risk-off supports USD, but commodity weakness challenges CAD correlation.\n\nGBPJPY LONG: Risk-off favors JPY, directly contradicting long GBP exposure setup.",
+    "top": [
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 7.3
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 7.3
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 3.33
+      }
+    ],
+    "updated": "2026-05-24T11:04:59.603569+00:00"
+  },
+  "calendar": {
+    "events": [],
+    "updated": "2026-05-24T11:04:59.603569+00:00"
+  }
 }
