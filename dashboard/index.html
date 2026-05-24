@@ -1215,7 +1215,8 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     </div>
     <button id="cht-trade-btn" onclick="openTradeSheet()">+ Trade</button>
     <span id="cht-gh-status"></span>
-    <!-- ── Trade Entry Sheet ───────────────────────────────────────────── -->
+
+    <!-- ── Trade Entry Sheet (swipe down to dismiss) ──────────────────── -->
     <div id="trade-sheet" style="display:none;">
       <div id="tsh-drag-handle"></div>
       <div id="trade-sheet-inner">
@@ -1229,16 +1230,16 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
         </div>
         <div class="tsh-row">
           <span class="tsh-lbl">Entry</span>
-          <input class="tsh-inp" id="tsh-entry" type="number" step="0.00001" placeholder="0.00000" oninput="tshCalcRR()">
+          <input class="tsh-inp" id="tsh-entry" type="number" step="0.00001" placeholder="0.00000">
           <span class="tsh-hint" id="tsh-pending-hint"></span>
         </div>
         <div class="tsh-row">
           <span class="tsh-lbl">TP</span>
-          <input class="tsh-inp" id="tsh-tp" type="number" step="0.00001" placeholder="0.00000" oninput="tshCalcRR()">
+          <input class="tsh-inp" id="tsh-tp" type="number" step="0.00001" placeholder="0.00000">
         </div>
         <div class="tsh-row">
           <span class="tsh-lbl">SL</span>
-          <input class="tsh-inp" id="tsh-sl" type="number" step="0.00001" placeholder="0.00000" oninput="tshCalcRR()">
+          <input class="tsh-inp" id="tsh-sl" type="number" step="0.00001" placeholder="0.00000">
         </div>
         <div id="tsh-rr-row">
           <span class="tsh-lbl">RR</span>
@@ -1248,6 +1249,7 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
         <button id="tsh-submit-btn" onclick="submitTrade()">Enter Trade</button>
       </div>
     </div>
+
   </div><!-- end cht-bottom -->
 </div><!-- end cht-overlay -->
 
@@ -1264,758 +1266,6 @@ setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
     <button class="log-action-btn log-danger-btn" onclick="clearAllTrades()">Clear All</button>
   </div>
 </div>
-
-<!-- ══ TRADE CSS + JS ══════════════════════════════════════════════════════ -->
-<style>
-/* ── Trade entry sheet ──────────────────────────────────────────────────── */
-#cht-trade-btn{
-  width:100%;padding:14px;margin-top:6px;
-  border-radius:6px;border:1px solid rgba(0,220,55,.45);
-  background:rgba(0,220,55,.15);color:var(--buy);
-  font-size:11px;font-weight:800;letter-spacing:.06em;cursor:pointer;
-  transition:background .15s;
-}
-#cht-trade-btn:active{background:rgba(0,220,55,.28);}
-#trade-sheet{
-  position:absolute;bottom:0;left:0;right:0;z-index:50;
-  background:var(--surf);border-top:1px solid var(--bord);
-  border-radius:12px 12px 0 0;
-  touch-action:none;
-  transition:transform .22s ease-out;
-}
-#tsh-drag-handle{
-  width:36px;height:4px;border-radius:2px;
-  background:var(--bord);margin:8px auto 0;
-}
-#trade-sheet-inner{padding:8px 14px 18px;}
-#tsh-header{
-  display:flex;align-items:center;gap:8px;margin-bottom:10px;
-}
-#tsh-pair-lbl{
-  font-size:13px;font-weight:800;letter-spacing:.08em;
-  text-transform:uppercase;color:var(--text);flex:1;
-}
-#tsh-live-price{
-  font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;
-  color:var(--text);
-}
-#tsh-dir-row{display:flex;gap:8px;margin-bottom:10px;}
-.tsh-dir-btn{
-  flex:1;padding:7px;border-radius:6px;font-size:11px;font-weight:800;
-  letter-spacing:.05em;cursor:pointer;border:1px solid var(--bord);
-  background:none;color:var(--muted);transition:all .15s;
-}
-#tsh-buy-btn.active{
-  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);color:var(--buy);
-}
-#tsh-sell-btn.active{
-  background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.5);color:var(--sell);
-}
-.tsh-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
-.tsh-lbl{font-size:9px;font-weight:700;text-transform:uppercase;
-         letter-spacing:.06em;color:var(--muted);min-width:32px;}
-.tsh-inp{
-  flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;
-  color:var(--text);font-size:12px;font-variant-numeric:tabular-nums;
-  padding:5px 8px;outline:none;
-}
-.tsh-hint{font-size:9px;color:var(--amber);font-weight:600;}
-#tsh-rr-row{
-  display:flex;align-items:center;gap:8px;
-  padding:5px 0 7px;border-top:1px solid var(--bord);margin-bottom:7px;
-}
-#tsh-rr-val{
-  font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;
-  color:var(--text);
-}
-#tsh-notes{
-  width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;
-  color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;
-  margin-bottom:10px;font-family:inherit;line-height:1.5;
-}
-#tsh-submit-btn{
-  width:100%;padding:10px;border-radius:7px;border:none;cursor:pointer;
-  font-size:12px;font-weight:800;letter-spacing:.06em;
-  background:rgba(0,220,55,.15);color:var(--buy);
-  border:1px solid rgba(0,220,55,.45);
-  transition:background .15s;
-}
-#tsh-submit-btn:active{background:rgba(0,220,55,.28);}
-
-/* ── Log overlay ────────────────────────────────────────────────────────── */
-#log-overlay{
-  position:fixed;inset:0;z-index:150;
-  background:var(--bg);
-  display:none;flex-direction:column;
-  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  overflow:hidden;
-}
-#log-overlay.open{display:flex;}
-#log-header{
-  flex-shrink:0;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:10px 14px;
-  background:var(--surf);border-bottom:1px solid var(--bord);
-}
-#log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;
-                 text-transform:uppercase;color:var(--muted);}
-#log-close-btn{background:none;border:none;color:var(--muted);
-               font-size:18px;cursor:pointer;line-height:1;}
-#log-stats{
-  flex-shrink:0;padding:10px 14px;
-  background:var(--surf);border-bottom:1px solid var(--bord);
-}
-.log-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
-.log-stat{text-align:center;}
-.log-stat-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
-.log-stat-val.g{color:var(--buy);}
-.log-stat-val.r{color:var(--sell);}
-.log-stat-val.a{color:var(--amber);}
-.log-stat-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
-              letter-spacing:.05em;color:var(--muted);margin-top:2px;}
-.log-stat-row2{display:flex;gap:12px;margin-top:8px;padding-top:7px;
-               border-top:1px solid var(--bord);flex-wrap:wrap;}
-.log-stat2{font-size:9px;color:var(--muted);}
-.log-stat2 b{color:var(--text);font-weight:700;}
-#log-body{flex:1;overflow-y:auto;padding:10px 14px 4px;}
-.log-section-lbl{
-  font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
-  color:var(--muted);margin:8px 0 5px;opacity:.7;
-}
-.log-trade-row{
-  display:flex;align-items:center;gap:8px;
-  padding:7px 0;border-bottom:1px solid var(--bord);
-  font-size:10px;
-}
-.log-trade-row:last-child{border-bottom:none;}
-.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;
-          text-transform:uppercase;color:var(--text);min-width:52px;}
-.log-dir{font-size:9px;font-weight:700;min-width:32px;}
-.log-dir.buy{color:var(--buy);}
-.log-dir.sell{color:var(--sell);}
-.log-prices{font-size:9px;color:var(--muted);flex:1;line-height:1.5;}
-.log-result{font-size:11px;font-weight:800;min-width:36px;text-align:right;}
-.log-result.win{color:var(--buy);}
-.log-result.loss{color:var(--sell);}
-.log-result.open{color:var(--amber);}
-.log-result.pending{color:var(--muted);}
-.log-close-trade{
-  background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;
-  color:var(--sell);font-size:9px;font-weight:700;
-  padding:2px 7px;cursor:pointer;white-space:nowrap;
-}
-#log-footer{
-  flex-shrink:0;display:flex;gap:8px;
-  padding:10px 14px;border-top:1px solid var(--bord);
-  background:var(--surf);
-}
-.log-action-btn{
-  flex:1;padding:8px;border-radius:6px;border:1px solid var(--bord);
-  background:none;color:var(--muted);font-size:10px;font-weight:700;
-  cursor:pointer;letter-spacing:.04em;
-}
-.log-danger-btn{border-color:rgba(248,81,73,.3);color:var(--sell);}
-.log-delete-btn{
-  background:none;border:none;color:var(--muted);
-  font-size:11px;cursor:pointer;padding:2px 5px;
-  opacity:.5;transition:opacity .15s;
-}
-.log-delete-btn:hover{opacity:1;color:var(--sell);}
-</style>
-
-<script>
-// ════════════════════════════════════════════════════════════════════════
-//  FSB TRADE SYSTEM  — all identifiers prefixed tr_ / tsh_ / fsb_tr
-// ════════════════════════════════════════════════════════════════════════
-
-const FSB_TR_KEY    = 'fsb_trades_v1';
-const FSB_TG_TOKEN  = 'fsb_tg_token';
-const FSB_TG_CHAT   = 'fsb_tg_chatid';
-
-// ── Storage helpers ───────────────────────────────────────────────────────────
-function trLoad()  { try { return JSON.parse(localStorage.getItem(FSB_TR_KEY) || '[]'); } catch { return []; } }
-function trSave(t) { localStorage.setItem(FSB_TR_KEY, JSON.stringify(t)); }
-
-// ── Telegram helpers ──────────────────────────────────────────────────────────
-function tgSaveToken() {
-  const v = document.getElementById('tg-token-inp').value.trim();
-  if (!v) return;
-  localStorage.setItem(FSB_TG_TOKEN, v);
-  document.getElementById('tg-token-inp').value = '';
-  document.getElementById('tg-token-inp').placeholder = 'Token saved ✓';
-}
-function tgSaveChat() {
-  const v = document.getElementById('tg-chat-inp').value.trim();
-  if (!v) return;
-  localStorage.setItem(FSB_TG_CHAT, v);
-  document.getElementById('tg-chat-inp').value = '';
-  document.getElementById('tg-chat-inp').placeholder = 'Chat ID saved ✓';
-}
-function tgSend(msg) {
-  const token = localStorage.getItem(FSB_TG_TOKEN);
-  const chat  = localStorage.getItem(FSB_TG_CHAT);
-  if (!token || !chat) return;
-  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ chat_id: chat, text: msg, parse_mode: 'HTML' }),
-  }).catch(() => {});
-}
-
-// ── WebSocket (Twelvedata live price) ─────────────────────────────────────────
-let _trWs = null, _trWsPair = null, _trWsPrice = null;
-const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
-
-function trWsStart(pair) {
-  trWsStop();
-  const key = localStorage.getItem(LS_KEY);
-  if (!key) return;
-  _trWsPair = pair;
-  try {
-    _trWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
-    _trWs.onopen    = () => _trWs.send(JSON.stringify({ action:'subscribe', params:{ symbols: pair.replace('/','') } }));
-    _trWs.onmessage = (e) => {
-      try {
-        const d = JSON.parse(e.data);
-        if (d.event === 'price' && d.price) {
-          _trWsPrice = parseFloat(d.price);
-          trOnTick(_trWsPrice, pair);
-        }
-      } catch(err) {}
-    };
-    _trWs.onerror = () => { _trWs = null; };
-    _trWs.onclose = () => { _trWs = null; };
-  } catch(e) { _trWs = null; }
-}
-function trWsStop() {
-  if (_trWs) { try { _trWs.close(); } catch(e) {} _trWs = null; }
-  _trWsPair = null; _trWsPrice = null;
-}
-
-// ── Live price tick handler ───────────────────────────────────────────────────
-function trOnTick(price, pair) {
-  // Update entry sheet price display if open
-  const liveEl = document.getElementById('tsh-live-price');
-  if (liveEl && _tshPair === pair) {
-    const isJpy = pair.includes('JPY');
-    liveEl.textContent = price.toFixed(isJpy ? 3 : 5);
-    // If entry field is empty, keep it synced to current price
-    const entryEl = document.getElementById('tsh-entry');
-    if (entryEl && !entryEl.dataset.userSet) {
-      entryEl.value = price.toFixed(isJpy ? 3 : 5);
-      tshCalcRR();
-    }
-  }
-
-  // Check open/pending trades for this pair
-  const trades = trLoad();
-  let changed = false;
-  trades.forEach(t => {
-    if (t.pair !== pair || t.status === 'closed') return;
-
-    // Pending: activate when price reaches entry level
-    if (t.status === 'pending') {
-      const triggered = (t.direction === 'BUY'  && price <= t.entry) ||
-                        (t.direction === 'SELL' && price >= t.entry);
-      if (triggered) {
-        t.status = 'open';
-        changed = true;
-        tgSend(`🟡 <b>PENDING ORDER ACTIVATED</b>\n${t.pair} ${t.direction} @ ${t.entry}\nTP ${t.tp}  SL ${t.sl}  RR ${t.rr}`);
-        trDrawChartLines();
-      }
-      return;
-    }
-
-    // Open: check TP/SL hit
-    const isJpy    = pair.includes('JPY');
-    const pipSize  = isJpy ? 0.01 : 0.0001;
-    const tpHit    = (t.direction === 'BUY'  && price >= t.tp) ||
-                     (t.direction === 'SELL' && price <= t.tp);
-    const slHit    = (t.direction === 'BUY'  && price <= t.sl) ||
-                     (t.direction === 'SELL' && price >= t.sl);
-    if (tpHit || slHit) {
-      const result    = tpHit ? 'win' : 'loss';
-      const closePips = Math.round(Math.abs(price - t.entry) / pipSize);
-      const slPips    = Math.round(Math.abs(t.sl  - t.entry) / pipSize);
-      const rActual   = slPips ? (closePips / slPips).toFixed(2) : '—';
-      t.status      = 'closed';
-      t.result      = result;
-      t.close_price = price;
-      t.closed      = new Date().toISOString();
-      t.r_actual    = rActual;
-      changed = true;
-      const emoji = tpHit ? '✅' : '❌';
-      tgSend(`${emoji} <b>TRADE CLOSED — ${result.toUpperCase()}</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nRR planned ${t.rr}  Actual ${rActual}R\n${t.notes ? '📝 ' + t.notes : ''}`);
-      trDrawChartLines();
-    }
-  });
-  if (changed) trSave(trades);
-}
-
-// ── Signal snapshot (captured at trade entry) ─────────────────────────────────
-function trSignalSnapshot(pair) {
-  if (!D) return {};
-  const pd   = D.pairs?.[pair] || {};
-  const pills = pd.pills || {};
-  const mom  = pd.mom || {};
-  const csmd1 = D.csm?.d1 || {};
-  const base  = pair.slice(0,3), quote = pair.slice(3);
-  const ranked = (D.ranked?.top || []).find(r => r.pair === pair);
-  return {
-    d1_pill:    pills.d1  || '—',
-    h4_pill:    pills.h4  || '—',
-    h1_pill:    pills.h1  || '—',
-    cont:       pd.cont   || 0,
-    adx:        pd.adx    || 0,
-    cmp:        mom.cmp   || 0,
-    mom_d1:     mom.d1    || 0,
-    mom_dd1:    mom.dd1   || 0,
-    csm_base:   csmd1[base]  || 50,
-    csm_quote:  csmd1[quote] || 50,
-    rank_score: ranked?.score || 0,
-    regime:     D.regime_d1?.regime || '—',
-    macro:      D.macro?.label     || '—',
-    session:    _trSession(),
-  };
-}
-function _trSession() {
-  const h = new Date().getUTCHours();
-  if (h >= 7  && h < 8)  return 'London open';
-  if (h >= 8  && h < 12) return 'London session';
-  if (h >= 12 && h < 16) return 'London/NY overlap';
-  if (h >= 16 && h < 21) return 'NY session';
-  return 'Asian session';
-}
-
-// ── Chart price lines ─────────────────────────────────────────────────────────
-let _trPriceLines = {};   // { tradeId: { entry, tp, sl } }
-
-function trDrawChartLines() {
-  if (!_chtCandles || !_chtPair) return;
-  // Clear all existing trade price lines
-  Object.values(_trPriceLines).forEach(refs => {
-    ['entry','tp','sl'].forEach(k => { if (refs[k]) { try { _chtCandles.removePriceLine(refs[k]); } catch(e){} } });
-  });
-  _trPriceLines = {};
-
-  const trades = trLoad().filter(t => t.pair === _chtPair && t.status !== 'closed');
-  const isJpy  = _chtPair.includes('JPY');
-  const dec    = isJpy ? 3 : 5;
-
-  trades.forEach(t => {
-    const rLabel = t.rr ? `RR ${t.rr}` : '';
-    try {
-      const epl = _chtCandles.createPriceLine({
-        price: t.entry,
-        color: 'rgba(205,217,229,0.55)',
-        lineWidth: 1,
-        lineStyle: LightweightCharts.LineStyle.Solid,
-        axisLabelVisible: true,
-        title: rLabel,
-      });
-      const tpl = _chtCandles.createPriceLine({
-        price: t.tp,
-        color: 'rgba(0,200,55,0.5)',
-        lineWidth: 1,
-        lineStyle: LightweightCharts.LineStyle.Solid,
-        axisLabelVisible: true,
-        title: 'TP',
-      });
-      const spl = _chtCandles.createPriceLine({
-        price: t.sl,
-        color: 'rgba(248,81,73,0.5)',
-        lineWidth: 1,
-        lineStyle: LightweightCharts.LineStyle.Solid,
-        axisLabelVisible: true,
-        title: 'SL',
-      });
-      _trPriceLines[t.id] = { entry: epl, tp: tpl, sl: spl };
-    } catch(e) {}
-  });
-
-  // Render entry arrow markers (merged with existing markers)
-  _trRenderAllMarkers();
-}
-
-function _trRenderAllMarkers() {
-  if (!_chtCandles || !_chtPair || !_chtTf) return;
-  // User markers (existing pattern)
-  const userMarkers = mkLoad()
-    .filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active)
-    .map(m => ({
-      time:     m.time,
-      position: m.direction === 'bull' ? 'belowBar' : 'aboveBar',
-      color:    m.direction === 'bull' ? 'rgba(0,220,55,.9)' : 'rgba(248,81,73,.9)',
-      shape:    m.direction === 'bull' ? 'arrowUp'  : 'arrowDown',
-      text:     m.text || '',
-      size:     1.5,
-      id:       m.id,
-    }));
-
-  // Trade entry markers
-  const trades = trLoad().filter(t => t.pair === _chtPair);
-  const tradeMarkers = trades.map(t => ({
-    time:     Math.floor(new Date(t.created).getTime() / 1000),
-    position: t.direction === 'BUY' ? 'belowBar' : 'aboveBar',
-    color:    t.direction === 'BUY' ? 'rgba(0,200,200,.85)' : 'rgba(227,179,65,.85)',
-    shape:    t.direction === 'BUY' ? 'arrowUp'  : 'arrowDown',
-    text:     t.direction === 'BUY' ? `L ${t.entry}` : `S ${t.entry}`,
-    size:     1.2,
-  }));
-
-  const all = [...userMarkers, ...tradeMarkers].sort((a,b) => a.time - b.time);
-  try { _chtCandles.setMarkers(all); } catch(e) {}
-}
-
-// ── Trade entry sheet ─────────────────────────────────────────────────────────
-let _tshPair = null, _tshDir = 'BUY';
-
-function openTradeSheet() {
-  if (!_chtPair) return;
-  _tshPair = _chtPair;
-  _tshDir  = 'BUY';
-  document.getElementById('tsh-pair-lbl').textContent = _tshPair;
-  document.getElementById('tsh-buy-btn').classList.add('active');
-  document.getElementById('tsh-sell-btn').classList.remove('active');
-
-  // Populate entry with last known price
-  const isJpy = _tshPair.includes('JPY');
-  const lastClose = _trLastClose(_tshPair);
-  const priceStr  = lastClose ? lastClose.toFixed(isJpy ? 3 : 5) : '';
-  document.getElementById('tsh-live-price').textContent = priceStr || '—';
-  const entryEl = document.getElementById('tsh-entry');
-  entryEl.value = priceStr;
-  entryEl.dataset.userSet = '';
-  document.getElementById('tsh-tp').value    = '';
-  document.getElementById('tsh-sl').value    = '';
-  document.getElementById('tsh-notes').value = '';
-  document.getElementById('tsh-rr-val').textContent = '—';
-  document.getElementById('tsh-pending-hint').textContent = '';
-  document.getElementById('trade-sheet').style.display = 'block';
-
-  // Start WebSocket for live price
-  trWsStart(_tshPair);
-}
-
-function closeTradeSheet() {
-  const sheet = document.getElementById('trade-sheet');
-  if (sheet) { sheet.style.transform = 'translateY(0)'; sheet.style.display = 'none'; }
-  _tshPair = null;
-  trWsStop();
-}
-
-function tshSetDir(dir) {
-  _tshDir = dir;
-  document.getElementById('tsh-buy-btn').classList.toggle('active',  dir === 'BUY');
-  document.getElementById('tsh-sell-btn').classList.toggle('active', dir === 'SELL');
-  tshCalcRR();
-}
-
-// ── Swipe-to-dismiss trade sheet ──────────────────────────────────────────────
-(function() {
-  let _startY = 0, _curY = 0, _dragging = false;
-  function _onStart(e) {
-    const touch = e.touches ? e.touches[0] : e;
-    _startY = touch.clientY; _curY = _startY; _dragging = true;
-  }
-  function _onMove(e) {
-    if (!_dragging) return;
-    const touch = e.touches ? e.touches[0] : e;
-    _curY = touch.clientY;
-    const dy = Math.max(0, _curY - _startY);
-    const sheet = document.getElementById('trade-sheet');
-    if (sheet) sheet.style.transform = `translateY(${dy}px)`;
-    if (e.cancelable) e.preventDefault();
-  }
-  function _onEnd() {
-    if (!_dragging) return;
-    _dragging = false;
-    const dy = _curY - _startY;
-    const sheet = document.getElementById('trade-sheet');
-    if (!sheet) return;
-    if (dy > 80) {
-      sheet.style.transform = 'translateY(100%)';
-      setTimeout(closeTradeSheet, 220);
-    } else {
-      sheet.style.transform = 'translateY(0)';
-    }
-  }
-  document.addEventListener('DOMContentLoaded', () => {
-    const handle = document.getElementById('tsh-drag-handle');
-    const sheet  = document.getElementById('trade-sheet');
-    if (!handle || !sheet) return;
-    handle.addEventListener('touchstart',  _onStart, { passive:true });
-    handle.addEventListener('touchmove',   _onMove,  { passive:false });
-    handle.addEventListener('touchend',    _onEnd);
-    handle.addEventListener('mousedown',   _onStart);
-    window.addEventListener('mousemove',   _onMove);
-    window.addEventListener('mouseup',     _onEnd);
-  });
-})();
-
-function tshCalcRR() {
-  const entryEl = document.getElementById('tsh-entry');
-  const entry = parseFloat(entryEl.value);
-  const tp    = parseFloat(document.getElementById('tsh-tp').value);
-  const sl    = parseFloat(document.getElementById('tsh-sl').value);
-
-  // Mark if entry differs from live price (pending order)
-  const livePrice = _trWsPrice || _trLastClose(_tshPair);
-  const isPending = livePrice && Math.abs(entry - livePrice) > 0.000005;
-  document.getElementById('tsh-pending-hint').textContent = isPending ? 'PENDING' : '';
-
-  if (!entry || !tp || !sl) { document.getElementById('tsh-rr-val').textContent = '—'; return; }
-  const risk   = Math.abs(entry - sl);
-  const reward = Math.abs(tp    - entry);
-  if (!risk) { document.getElementById('tsh-rr-val').textContent = '—'; return; }
-  const rr   = (reward / risk).toFixed(2);
-  document.getElementById('tsh-rr-val').textContent = `1 : ${rr}`;
-}
-
-function trDeleteTrade(id) {
-  if (!confirm('Delete this trade record?')) return;
-  const trades = trLoad().filter(t => t.id !== id);
-  trSave(trades);
-  renderTradeLog();
-}
-
-function submitTrade() {
-  const entry = parseFloat(document.getElementById('tsh-entry').value);
-  const tp    = parseFloat(document.getElementById('tsh-tp').value);
-  const sl    = parseFloat(document.getElementById('tsh-sl').value);
-  const notes = document.getElementById('tsh-notes').value.trim();
-  if (!entry || !tp || !sl) { alert('Entry, TP and SL are required.'); return; }
-
-  const risk   = Math.abs(entry - sl);
-  const reward = Math.abs(tp    - entry);
-  const rr     = risk ? (reward / risk).toFixed(2) : null;
-
-  const livePrice = _trWsPrice || _trLastClose(_tshPair);
-  const isPending = livePrice && Math.abs(entry - livePrice) > 0.000005;
-
-  const t = {
-    id:         Date.now(),
-    pair:       _tshPair,
-    direction:  _tshDir,
-    entry, tp, sl,
-    rr:         rr ? `1:${rr}` : '—',
-    status:     isPending ? 'pending' : 'open',
-    result:     null,
-    close_price:null,
-    r_actual:   null,
-    notes,
-    created:    new Date().toISOString(),
-    closed:     null,
-    ...trSignalSnapshot(_tshPair),
-  };
-
-  const trades = trLoad();
-  trades.push(t);
-  trSave(trades);
-
-  const statusWord = isPending ? 'PENDING ORDER SET' : 'TRADE ENTERED';
-  const isJpy = _tshPair.includes('JPY');
-  tgSend(`🟠 <b>${statusWord}</b>\n${t.pair} ${t.direction} @ ${entry.toFixed(isJpy?3:5)}\nTP ${tp.toFixed(isJpy?3:5)}  SL ${sl.toFixed(isJpy?3:5)}  RR 1:${rr}\n${notes ? '📝 ' + notes : ''}`);
-
-  closeTradeSheet();
-  trDrawChartLines();
-}
-
-// ── Manual early close ────────────────────────────────────────────────────────
-function trManualClose(id) {
-  const trades = trLoad();
-  const t = trades.find(t => t.id === id);
-  if (!t || t.status === 'closed') return;
-  const price = _trWsPrice || _trLastClose(t.pair) || t.entry;
-  const isJpy = t.pair.includes('JPY');
-  const pipSize = isJpy ? 0.01 : 0.0001;
-  const pips    = Math.round(Math.abs(price - t.entry) / pipSize);
-  const slPips  = Math.round(Math.abs(t.sl  - t.entry) / pipSize);
-  const rActual = slPips ? (pips / slPips).toFixed(2) : '—';
-  t.status      = 'closed';
-  t.result      = 'manual';
-  t.close_price = price;
-  t.closed      = new Date().toISOString();
-  t.r_actual    = rActual;
-  trSave(trades);
-  tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${rActual}R`);
-  trDrawChartLines();
-  renderTradeLog();
-}
-
-// ── LOG overlay ───────────────────────────────────────────────────────────────
-function openTradeLog() {
-  renderTradeLog();
-  document.getElementById('log-overlay').classList.add('open');
-}
-function closeTradeLog() {
-  document.getElementById('log-overlay').classList.remove('open');
-}
-
-function renderTradeLog() {
-  const trades = trLoad();
-  _renderLogStats(trades);
-  _renderLogBody(trades);
-}
-
-function _renderLogStats(trades) {
-  const closed = trades.filter(t => t.status === 'closed');
-  const wins   = closed.filter(t => t.result === 'win');
-  const losses = closed.filter(t => t.result === 'loss');
-  const n      = closed.length;
-  const wr     = n ? Math.round(wins.length / n * 100) : 0;
-
-  // Profit factor: sum of winning Rs / sum of losing Rs
-  const sumWin  = wins.reduce((s,t)  => s + (parseFloat(t.r_actual)||0), 0);
-  const sumLoss = losses.reduce((s,t) => s + (parseFloat(t.r_actual)||0), 0);
-  const pf      = sumLoss ? (sumWin / sumLoss).toFixed(2) : wins.length ? '∞' : '—';
-  const avgRR   = n ? (wins.map(t=>parseFloat(t.rr?.replace('1:',''))||0).reduce((s,v)=>s+v,0) / Math.max(wins.length,1)).toFixed(1) : '—';
-  const avgWin  = wins.length  ? (sumWin  / wins.length ).toFixed(1) : '—';
-  const avgLoss = losses.length? (sumLoss / losses.length).toFixed(1): '—';
-
-  // Streak
-  let streak = 0, streakType = '';
-  for (let i = closed.length - 1; i >= 0; i--) {
-    const r = closed[i].result;
-    if (r === 'manual') continue;
-    if (!streakType) { streakType = r; streak = 1; }
-    else if (r === streakType) streak++;
-    else break;
-  }
-  const streakStr = streakType ? `${streakType === 'win' ? 'W' : 'L'}${streak}` : '—';
-
-  // Best pair
-  const pairWins = {};
-  wins.forEach(t => { pairWins[t.pair] = (pairWins[t.pair]||0)+1; });
-  const bestPair = Object.entries(pairWins).sort((a,b)=>b[1]-a[1])[0]?.[0] || '—';
-
-  const wrColor = wr >= 55 ? 'g' : wr >= 45 ? 'a' : 'r';
-  const pfColor = parseFloat(pf) >= 1.5 ? 'g' : parseFloat(pf) >= 1.0 ? 'a' : 'r';
-
-  document.getElementById('log-stats').innerHTML = `
-    <div class="log-stat-grid">
-      <div class="log-stat"><div class="log-stat-val">${n}</div><div class="log-stat-lbl">Trades</div></div>
-      <div class="log-stat"><div class="log-stat-val ${wrColor}">${wr}%</div><div class="log-stat-lbl">Win Rate</div></div>
-      <div class="log-stat"><div class="log-stat-val ${pfColor}">${pf}</div><div class="log-stat-lbl">Profit Factor</div></div>
-      <div class="log-stat"><div class="log-stat-val a">${streakStr}</div><div class="log-stat-lbl">Streak</div></div>
-    </div>
-    <div class="log-stat-row2">
-      <span class="log-stat2">Avg win <b>+${avgWin}R</b></span>
-      <span class="log-stat2">Avg loss <b>-${avgLoss}R</b></span>
-      <span class="log-stat2">Avg RR <b>1:${avgRR}</b></span>
-      <span class="log-stat2">Best pair <b>${bestPair}</b></span>
-    </div>`;
-}
-
-function _renderLogBody(trades) {
-  const open    = trades.filter(t => t.status === 'open');
-  const pending = trades.filter(t => t.status === 'pending');
-  const closed  = trades.filter(t => t.status === 'closed').slice().reverse();
-  const isJpy   = p => p.includes('JPY');
-  const fmt     = (p,v) => v != null ? parseFloat(v).toFixed(isJpy(p)?3:5) : '—';
-  let html = '';
-
-  if (open.length || pending.length) {
-    html += '<div class="log-section-lbl">Open & Pending</div>';
-    [...open, ...pending].forEach(t => {
-      const statusLabel = t.status === 'pending' ? 'PENDING' : 'OPEN';
-      html += `<div class="log-trade-row">
-        <span class="log-pair">${t.pair}</span>
-        <span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
-        <span class="log-prices">@ ${fmt(t.pair,t.entry)}<br>TP ${fmt(t.pair,t.tp)}  SL ${fmt(t.pair,t.sl)}  ${t.rr}</span>
-        <span class="log-result ${t.status==='pending'?'pending':'open'}">${statusLabel}</span>
-        <button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button>
-      </div>`;
-    });
-  }
-
-  if (closed.length) {
-    html += '<div class="log-section-lbl">History</div>';
-    closed.forEach(t => {
-      const resClass = t.result === 'win' ? 'win' : t.result === 'loss' ? 'loss' : 'open';
-      const resLabel = t.result === 'win' ? `+${t.r_actual}R` : t.result === 'loss' ? `-${t.r_actual}R` : 'Manual';
-      const dateStr  = t.closed ? new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}) : '—';
-      html += `<div class="log-trade-row">
-        <span class="log-pair">${t.pair}</span>
-        <span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
-        <span class="log-prices">@ ${fmt(t.pair,t.entry)} → ${fmt(t.pair,t.close_price)}<br>${dateStr}  ${t.rr}  ${t.notes?'📝':''}</span>
-        <span class="log-result ${resClass}">${resLabel}</span>
-        <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
-      </div>`;
-    });
-  }
-
-  if (!html) html = '<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
-  document.getElementById('log-body').innerHTML = html;
-}
-
-// ── CSV export ────────────────────────────────────────────────────────────────
-function exportTradeCSV() {
-  const trades = trLoad();
-  if (!trades.length) return;
-  const cols = ['id','pair','direction','entry','tp','sl','rr','status','result',
-                'close_price','r_actual','notes','d1_pill','h4_pill','h1_pill',
-                'cont','adx','cmp','csm_base','csm_quote','rank_score',
-                'regime','macro','session','created','closed'];
-  const rows = [cols.join(',')];
-  trades.forEach(t => {
-    rows.push(cols.map(c => {
-      const v = t[c] ?? '';
-      return String(v).includes(',') ? `"${v}"` : v;
-    }).join(','));
-  });
-  const blob = new Blob([rows.join('\n')], { type:'text/csv' });
-  const a    = document.createElement('a');
-  a.href     = URL.createObjectURL(blob);
-  a.download = `fsb_trades_${new Date().toISOString().slice(0,10)}.csv`;
-  a.click();
-}
-
-function clearAllTrades() {
-  if (!confirm('Delete all trade records? This cannot be undone.')) return;
-  localStorage.removeItem(FSB_TR_KEY);
-  renderTradeLog();
-}
-
-// ── Utility: get last close price for a pair ─────────────────────────────────
-function _trLastClose(pair) {
-  if (!D || !D.pairs) return null;
-  // FSB stores prev_close in pairs data — closest available price
-  return D.pairs[pair]?.prev_close || null;
-}
-
-// ── Hook into chart open/close to draw/clear trade lines ─────────────────────
-// Patch openChart and closeChart to also handle trade line rendering
-const _origOpenChart  = typeof openChart  === 'function' ? openChart  : null;
-const _origCloseChart = typeof closeChart === 'function' ? closeChart : null;
-
-// We use a MutationObserver on cht-overlay to detect open/close
-// (avoids patching the original functions which may not be defined yet)
-(function() {
-  const obs = new MutationObserver(() => {
-    const open = document.getElementById('cht-overlay')?.classList.contains('open');
-    if (open) {
-      setTimeout(trDrawChartLines, 200); // slight delay for chart to fully render
-    } else {
-      trWsStop();
-      _trPriceLines = {};
-    }
-  });
-  const el = document.getElementById('cht-overlay');
-  if (el) obs.observe(el, { attributes:true, attributeFilter:['class'] });
-})();
-
-// Also patch _chtRenderMarkers to include trade markers
-if (typeof _chtRenderMarkers === 'function') {
-  // Already defined above via _trRenderAllMarkers — not patching to avoid conflict
-}
-
-// Entry input: mark as user-set once touched
-document.addEventListener('DOMContentLoaded', () => {
-  const e = document.getElementById('tsh-entry');
-  if (e) e.addEventListener('input', () => { e.dataset.userSet = '1'; tshCalcRR(); });
-});
-</script>
 
 <!-- ── Chart JS ───────────────────────────────────────────────────────── -->
 <script>
@@ -3052,5 +2302,425 @@ function chtAttachLongPress() {
   obs.observe(grid, { childList:true });
 })();
 </script>
+<!-- ══ TRADE SYSTEM CSS + JS ══════════════════════════════════════════════ -->
+<style>
+/* ── Trade button ───────────────────────────────────────────────────────── */
+#cht-trade-btn{
+  width:100%;padding:14px;margin-top:6px;
+  border-radius:6px;border:1px solid rgba(0,220,55,.45);
+  background:rgba(0,220,55,.15);color:var(--buy);
+  font-size:11px;font-weight:800;letter-spacing:.06em;cursor:pointer;
+  transition:background .15s;
+}
+#cht-trade-btn:active{background:rgba(0,220,55,.28);}
+
+/* ── Trade entry sheet ──────────────────────────────────────────────────── */
+#trade-sheet{
+  position:absolute;bottom:0;left:0;right:0;z-index:50;
+  background:var(--surf);border-top:1px solid var(--bord);
+  border-radius:12px 12px 0 0;
+  touch-action:none;
+  transition:transform .22s ease-out;
+}
+#tsh-drag-handle{
+  width:36px;height:4px;border-radius:2px;
+  background:var(--bord);margin:8px auto 0;
+}
+#trade-sheet-inner{padding:8px 14px 18px;}
+#tsh-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+#tsh-pair-lbl{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text);flex:1;}
+#tsh-live-price{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text);}
+#tsh-dir-row{display:flex;gap:8px;margin-bottom:10px;}
+.tsh-dir-btn{flex:1;padding:7px;border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.05em;cursor:pointer;border:1px solid var(--bord);background:none;color:var(--muted);transition:all .15s;}
+#tsh-buy-btn.active{background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);color:var(--buy);}
+#tsh-sell-btn.active{background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.5);color:var(--sell);}
+.tsh-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.tsh-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:32px;}
+.tsh-inp{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:12px;font-variant-numeric:tabular-nums;padding:5px 8px;outline:none;}
+.tsh-hint{font-size:9px;color:var(--amber);font-weight:600;}
+#tsh-rr-row{display:flex;align-items:center;gap:8px;padding:5px 0 7px;border-top:1px solid var(--bord);margin-bottom:7px;}
+#tsh-rr-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+#tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:10px;font-family:inherit;line-height:1.5;}
+#tsh-submit-btn{width:100%;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;}
+#tsh-submit-btn:active{background:rgba(0,220,55,.28);}
+
+/* ── Log overlay ────────────────────────────────────────────────────────── */
+#log-overlay{position:fixed;inset:0;z-index:150;background:var(--bg);display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
+#log-overlay.open{display:flex;}
+#log-header{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
+#log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+#log-close-btn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
+#log-stats{flex-shrink:0;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
+.log-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.log-stat{text-align:center;}
+.log-stat-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+.log-stat-val.g{color:var(--buy);}.log-stat-val.r{color:var(--sell);}.log-stat-val.a{color:var(--amber);}
+.log-stat-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px;}
+.log-stat-row2{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid var(--bord);flex-wrap:wrap;}
+.log-stat2{font-size:9px;color:var(--muted);}
+.log-stat2 b{color:var(--text);font-weight:700;}
+#log-body{flex:1;overflow-y:auto;padding:10px 14px 4px;}
+.log-section-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 5px;opacity:.7;}
+.log-trade-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;}
+.log-trade-row:last-child{border-bottom:none;}
+.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);min-width:52px;}
+.log-dir{font-size:9px;font-weight:700;min-width:32px;}
+.log-dir.buy{color:var(--buy);}.log-dir.sell{color:var(--sell);}
+.log-prices{font-size:9px;color:var(--muted);flex:1;line-height:1.5;}
+.log-result{font-size:11px;font-weight:800;min-width:36px;text-align:right;}
+.log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
+.log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
+.log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
+.log-delete-btn:hover{opacity:1;color:var(--sell);}
+#log-footer{flex-shrink:0;display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--bord);background:var(--surf);}
+.log-action-btn{flex:1;padding:8px;border-radius:6px;border:1px solid var(--bord);background:none;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.04em;}
+.log-danger-btn{border-color:rgba(248,81,73,.3);color:var(--sell);}
+</style>
+
+<script>
+// ════════════════════════════════════════════════════════════════════════════
+//  FSB TRADE SYSTEM  — prefixed tr_ / tsh_ / fsb_tr to avoid collisions
+// ════════════════════════════════════════════════════════════════════════════
+
+const FSB_TR_KEY   = 'fsb_trades_v1';
+const FSB_TG_TOKEN = 'fsb_tg_token';
+const FSB_TG_CHAT  = 'fsb_tg_chatid';
+
+// ── Storage ───────────────────────────────────────────────────────────────────
+function trLoad()  { try { return JSON.parse(localStorage.getItem(FSB_TR_KEY) || '[]'); } catch { return []; } }
+function trSave(t) { localStorage.setItem(FSB_TR_KEY, JSON.stringify(t)); }
+
+// ── Telegram ──────────────────────────────────────────────────────────────────
+function tgSaveToken() {
+  const v = document.getElementById('tg-token-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(FSB_TG_TOKEN, v);
+  document.getElementById('tg-token-inp').value = '';
+  document.getElementById('tg-token-inp').placeholder = 'Token saved ✓';
+}
+function tgSaveChat() {
+  const v = document.getElementById('tg-chat-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(FSB_TG_CHAT, v);
+  document.getElementById('tg-chat-inp').value = '';
+  document.getElementById('tg-chat-inp').placeholder = 'Chat ID saved ✓';
+}
+function tgSend(msg) {
+  const token = localStorage.getItem(FSB_TG_TOKEN);
+  const chat  = localStorage.getItem(FSB_TG_CHAT);
+  if (!token || !chat) return;
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ chat_id:chat, text:msg, parse_mode:'HTML' }),
+  }).catch(() => {});
+}
+
+// ── WebSocket ─────────────────────────────────────────────────────────────────
+let _trWs = null, _trWsPair = null, _trWsPrice = null;
+const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
+
+function trWsStart(pair) {
+  trWsStop();
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  _trWsPair = pair;
+  try {
+    _trWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
+    _trWs.onopen    = () => _trWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
+    _trWs.onmessage = (e) => { try { const d=JSON.parse(e.data); if(d.event==='price'&&d.price){ _trWsPrice=parseFloat(d.price); trOnTick(_trWsPrice,pair); } } catch(err){} };
+    _trWs.onerror   = () => { _trWs=null; };
+    _trWs.onclose   = () => { _trWs=null; };
+  } catch(e) { _trWs=null; }
+}
+function trWsStop() {
+  if (_trWs) { try { _trWs.close(); } catch(e) {} _trWs=null; }
+  _trWsPair=null; _trWsPrice=null;
+}
+
+// ── Tick handler ──────────────────────────────────────────────────────────────
+function trOnTick(price, pair) {
+  // Update live price in entry sheet
+  const liveEl = document.getElementById('tsh-live-price');
+  if (liveEl && _tshPair === pair) {
+    const isJpy = pair.includes('JPY');
+    liveEl.textContent = price.toFixed(isJpy ? 3 : 5);
+    const entryEl = document.getElementById('tsh-entry');
+    if (entryEl && !entryEl.dataset.userSet) {
+      entryEl.value = price.toFixed(isJpy ? 3 : 5);
+      tshCalcRR();
+    }
+  }
+  // Check open/pending trades
+  const trades = trLoad();
+  let changed = false;
+  trades.forEach(t => {
+    if (t.pair !== pair || t.status === 'closed') return;
+    if (t.status === 'pending') {
+      const triggered = (t.direction==='BUY' && price<=t.entry) || (t.direction==='SELL' && price>=t.entry);
+      if (triggered) { t.status='open'; changed=true; tgSend(`🟡 <b>PENDING ACTIVATED</b>\n${t.pair} ${t.direction} @ ${t.entry}\nTP ${t.tp}  SL ${t.sl}  RR ${t.rr}`); trDrawChartLines(); }
+      return;
+    }
+    const isJpy   = pair.includes('JPY');
+    const pipSize = isJpy ? 0.01 : 0.0001;
+    const tpHit   = (t.direction==='BUY'  && price>=t.tp) || (t.direction==='SELL' && price<=t.tp);
+    const slHit   = (t.direction==='BUY'  && price<=t.sl) || (t.direction==='SELL' && price>=t.sl);
+    if (tpHit || slHit) {
+      const result   = tpHit ? 'win' : 'loss';
+      const pips     = Math.round(Math.abs(price - t.entry) / pipSize);
+      const slPips   = Math.round(Math.abs(t.sl  - t.entry) / pipSize);
+      const rActual  = slPips ? (pips/slPips).toFixed(2) : '—';
+      t.status='closed'; t.result=result; t.close_price=price; t.closed=new Date().toISOString(); t.r_actual=rActual;
+      changed=true;
+      const emoji = tpHit ? '✅' : '❌';
+      tgSend(`${emoji} <b>TRADE CLOSED — ${result.toUpperCase()}</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nRR planned ${t.rr}  Actual ${rActual}R`);
+      trDrawChartLines();
+    }
+  });
+  if (changed) trSave(trades);
+}
+
+// ── Signal snapshot ───────────────────────────────────────────────────────────
+function trSignalSnapshot(pair) {
+  if (!D) return {};
+  const pd=D.pairs?.[pair]||{}, pills=pd.pills||{}, mom=pd.mom||{}, csmd1=D.csm?.d1||{};
+  const base=pair.slice(0,3), quote=pair.slice(3);
+  const ranked=(D.ranked?.top||[]).find(r=>r.pair===pair);
+  const h=new Date().getUTCHours();
+  const session = h>=7&&h<8?'London open':h>=8&&h<12?'London session':h>=12&&h<16?'London/NY overlap':h>=16&&h<21?'NY session':'Asian session';
+  return { d1_pill:pills.d1||'—', h4_pill:pills.h4||'—', h1_pill:pills.h1||'—', cont:pd.cont||0, adx:pd.adx||0, cmp:mom.cmp||0, mom_d1:mom.d1||0, mom_dd1:mom.dd1||0, csm_base:csmd1[base]||50, csm_quote:csmd1[quote]||50, rank_score:ranked?.score||0, regime:D.regime_d1?.regime||'—', macro:D.macro?.label||'—', session };
+}
+
+// ── Chart price lines ─────────────────────────────────────────────────────────
+let _trPriceLines = {};
+
+function trDrawChartLines() {
+  if (!_chtCandles || !_chtPair) return;
+  Object.values(_trPriceLines).forEach(refs => {
+    ['entry','tp','sl'].forEach(k => { if(refs[k]) { try { _chtCandles.removePriceLine(refs[k]); } catch(e){} } });
+  });
+  _trPriceLines = {};
+  const trades = trLoad().filter(t => t.pair===_chtPair && t.status!=='closed');
+  trades.forEach(t => {
+    try {
+      _trPriceLines[t.id] = {
+        entry: _chtCandles.createPriceLine({ price:t.entry, color:'rgba(205,217,229,0.55)', lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:t.rr||'' }),
+        tp:    _chtCandles.createPriceLine({ price:t.tp,    color:'rgba(0,200,55,0.5)',     lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'TP' }),
+        sl:    _chtCandles.createPriceLine({ price:t.sl,    color:'rgba(248,81,73,0.5)',    lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'SL' }),
+      };
+    } catch(e) {}
+  });
+  _trRenderAllMarkers();
+}
+
+function _trRenderAllMarkers() {
+  if (!_chtCandles || !_chtPair || !_chtTf) return;
+  const userMarkers = mkLoad().filter(m=>m.pair===_chtPair&&m.tf===_chtTf&&m.active).map(m=>({ time:m.time, position:m.direction==='bull'?'belowBar':'aboveBar', color:m.direction==='bull'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:m.direction==='bull'?'arrowUp':'arrowDown', text:m.text||'', size:1.5, id:m.id }));
+  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair).map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,200,200,.85)':'rgba(227,179,65,.85)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:t.direction==='BUY'?`L ${t.entry}`:`S ${t.entry}`, size:1.2 }));
+  const all = [...userMarkers,...tradeMarkers].sort((a,b)=>a.time-b.time);
+  try { _chtCandles.setMarkers(all); } catch(e) {}
+}
+
+// ── Trade entry sheet ─────────────────────────────────────────────────────────
+let _tshPair=null, _tshDir='BUY';
+
+function openTradeSheet() {
+  if (!_chtPair) return;
+  _tshPair=_chtPair; _tshDir='BUY';
+  document.getElementById('tsh-pair-lbl').textContent = _tshPair;
+  document.getElementById('tsh-buy-btn').classList.add('active');
+  document.getElementById('tsh-sell-btn').classList.remove('active');
+  const isJpy = _tshPair.includes('JPY');
+  const lastClose = D?.pairs?.[_tshPair]?.prev_close || null;
+  const priceStr  = lastClose ? lastClose.toFixed(isJpy?3:5) : '';
+  document.getElementById('tsh-live-price').textContent = priceStr||'—';
+  const entryEl = document.getElementById('tsh-entry');
+  entryEl.value = priceStr; entryEl.dataset.userSet='';
+  document.getElementById('tsh-tp').value='';
+  document.getElementById('tsh-sl').value='';
+  document.getElementById('tsh-notes').value='';
+  document.getElementById('tsh-rr-val').textContent='—';
+  document.getElementById('tsh-pending-hint').textContent='';
+  const sheet = document.getElementById('trade-sheet');
+  sheet.style.transform='translateY(0)'; sheet.style.display='block';
+  trWsStart(_tshPair);
+}
+
+function closeTradeSheet() {
+  const sheet = document.getElementById('trade-sheet');
+  if (sheet) { sheet.style.transform='translateY(0)'; sheet.style.display='none'; }
+  _tshPair=null; trWsStop();
+}
+
+function tshSetDir(dir) {
+  _tshDir=dir;
+  document.getElementById('tsh-buy-btn').classList.toggle('active', dir==='BUY');
+  document.getElementById('tsh-sell-btn').classList.toggle('active', dir==='SELL');
+  tshCalcRR();
+}
+
+function tshCalcRR() {
+  const entry=parseFloat(document.getElementById('tsh-entry').value);
+  const tp   =parseFloat(document.getElementById('tsh-tp').value);
+  const sl   =parseFloat(document.getElementById('tsh-sl').value);
+  const livePrice = _trWsPrice || (D?.pairs?.[_tshPair]?.prev_close||null);
+  document.getElementById('tsh-pending-hint').textContent = (livePrice && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+  if (!entry||!tp||!sl) { document.getElementById('tsh-rr-val').textContent='—'; return; }
+  const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
+  if (!risk) { document.getElementById('tsh-rr-val').textContent='—'; return; }
+  document.getElementById('tsh-rr-val').textContent = `1 : ${(reward/risk).toFixed(2)}`;
+}
+
+function submitTrade() {
+  const entry=parseFloat(document.getElementById('tsh-entry').value);
+  const tp   =parseFloat(document.getElementById('tsh-tp').value);
+  const sl   =parseFloat(document.getElementById('tsh-sl').value);
+  const notes=document.getElementById('tsh-notes').value.trim();
+  if (!entry||!tp||!sl) { alert('Entry, TP and SL are required.'); return; }
+  const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
+  const rr = risk ? (reward/risk).toFixed(2) : null;
+  const livePrice = _trWsPrice || (D?.pairs?.[_tshPair]?.prev_close||null);
+  const isPending = livePrice && Math.abs(entry-livePrice)>0.000005;
+  const isJpy = _tshPair.includes('JPY');
+  const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
+  const trades=trLoad(); trades.push(t); trSave(trades);
+  tgSend(`🟠 <b>${isPending?'PENDING ORDER SET':'TRADE ENTERED'}</b>\n${t.pair} ${t.direction} @ ${entry.toFixed(isJpy?3:5)}\nTP ${tp.toFixed(isJpy?3:5)}  SL ${sl.toFixed(isJpy?3:5)}  RR 1:${rr}\n${notes?'📝 '+notes:''}`);
+  closeTradeSheet(); trDrawChartLines();
+}
+
+function trManualClose(id) {
+  const trades=trLoad(); const t=trades.find(t=>t.id===id);
+  if (!t||t.status==='closed') return;
+  const price=_trWsPrice||(D?.pairs?.[t.pair]?.prev_close||t.entry);
+  const isJpy=t.pair.includes('JPY'), pipSize=isJpy?0.01:0.0001;
+  const pips=Math.round(Math.abs(price-t.entry)/pipSize), slPips=Math.round(Math.abs(t.sl-t.entry)/pipSize);
+  t.status='closed'; t.result='manual'; t.close_price=price; t.closed=new Date().toISOString(); t.r_actual=slPips?(pips/slPips).toFixed(2):'—';
+  trSave(trades);
+  tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${t.r_actual}R`);
+  trDrawChartLines(); renderTradeLog();
+}
+
+function trDeleteTrade(id) {
+  if (!confirm('Delete this trade record?')) return;
+  trSave(trLoad().filter(t=>t.id!==id));
+  renderTradeLog();
+}
+
+// ── Log overlay ───────────────────────────────────────────────────────────────
+function openTradeLog()  { renderTradeLog(); document.getElementById('log-overlay').classList.add('open'); }
+function closeTradeLog() { document.getElementById('log-overlay').classList.remove('open'); }
+
+function renderTradeLog() { _renderLogStats(trLoad()); _renderLogBody(trLoad()); }
+
+function _renderLogStats(trades) {
+  const closed=trades.filter(t=>t.status==='closed');
+  const wins=closed.filter(t=>t.result==='win'), losses=closed.filter(t=>t.result==='loss');
+  const n=closed.length, wr=n?Math.round(wins.length/n*100):0;
+  const sumWin=wins.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
+  const sumLoss=losses.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
+  const pf=sumLoss?(sumWin/sumLoss).toFixed(2):wins.length?'∞':'—';
+  const avgRR=wins.length?(wins.map(t=>parseFloat(t.rr?.replace('1:',''))||0).reduce((s,v)=>s+v,0)/wins.length).toFixed(1):'—';
+  const avgWin=wins.length?(sumWin/wins.length).toFixed(1):'—';
+  const avgLoss=losses.length?(sumLoss/losses.length).toFixed(1):'—';
+  let streak=0,streakType='';
+  for (let i=closed.length-1;i>=0;i--) { const r=closed[i].result; if(r==='manual')continue; if(!streakType){streakType=r;streak=1;}else if(r===streakType)streak++;else break; }
+  const streakStr=streakType?(streakType==='win'?'W':'L')+streak:'—';
+  const pairWins={};wins.forEach(t=>{pairWins[t.pair]=(pairWins[t.pair]||0)+1;});
+  const bestPair=Object.entries(pairWins).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—';
+  const wrc=wr>=55?'g':wr>=45?'a':'r', pfc=parseFloat(pf)>=1.5?'g':parseFloat(pf)>=1.0?'a':'r';
+  document.getElementById('log-stats').innerHTML = `<div class="log-stat-grid"><div class="log-stat"><div class="log-stat-val">${n}</div><div class="log-stat-lbl">Trades</div></div><div class="log-stat"><div class="log-stat-val ${wrc}">${wr}%</div><div class="log-stat-lbl">Win Rate</div></div><div class="log-stat"><div class="log-stat-val ${pfc}">${pf}</div><div class="log-stat-lbl">Profit Factor</div></div><div class="log-stat"><div class="log-stat-val a">${streakStr}</div><div class="log-stat-lbl">Streak</div></div></div><div class="log-stat-row2"><span class="log-stat2">Avg win <b>+${avgWin}R</b></span><span class="log-stat2">Avg loss <b>-${avgLoss}R</b></span><span class="log-stat2">Avg RR <b>1:${avgRR}</b></span><span class="log-stat2">Best pair <b>${bestPair}</b></span></div>`;
+}
+
+function _renderLogBody(trades) {
+  const open=trades.filter(t=>t.status==='open'), pending=trades.filter(t=>t.status==='pending');
+  const closed=trades.filter(t=>t.status==='closed').slice().reverse();
+  const isJpy=p=>p.includes('JPY'), fmt=(p,v)=>v!=null?parseFloat(v).toFixed(isJpy(p)?3:5):'—';
+  let html='';
+  if (open.length||pending.length) {
+    html+='<div class="log-section-lbl">Open & Pending</div>';
+    [...open,...pending].forEach(t=>{
+      const sl=t.status==='pending'?'pending':'open';
+      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices">@ ${fmt(t.pair,t.entry)}<br>TP ${fmt(t.pair,t.tp)}  SL ${fmt(t.pair,t.sl)}  ${t.rr}</span><span class="log-result ${sl}">${sl.toUpperCase()}</span><button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button></div>`;
+    });
+  }
+  if (closed.length) {
+    html+='<div class="log-section-lbl">History</div>';
+    closed.forEach(t=>{
+      const rc=t.result==='win'?'win':t.result==='loss'?'loss':'open';
+      const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
+      const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
+      html+=`<div class="log-trade-row"><span class="log-pair">${t.pair}</span><span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span><span class="log-prices">@ ${fmt(t.pair,t.entry)} → ${fmt(t.pair,t.close_price)}<br>${ds}  ${t.rr}  ${t.notes?'📝':''}</span><span class="log-result ${rc}">${rl}</span><button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button></div>`;
+    });
+  }
+  if (!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
+  document.getElementById('log-body').innerHTML=html;
+}
+
+// ── CSV export ────────────────────────────────────────────────────────────────
+function exportTradeCSV() {
+  const trades=trLoad(); if(!trades.length) return;
+  const cols=['id','pair','direction','entry','tp','sl','rr','status','result','close_price','r_actual','notes','d1_pill','h4_pill','h1_pill','cont','adx','cmp','csm_base','csm_quote','rank_score','regime','macro','session','created','closed'];
+  const rows=[cols.join(',')];
+  trades.forEach(t=>rows.push(cols.map(c=>{const v=t[c]??'';return String(v).includes(',')?`"${v}"`:v;}).join(',')));
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([rows.join('\n')],{type:'text/csv'}));
+  a.download=`fsb_trades_${new Date().toISOString().slice(0,10)}.csv`; a.click();
+}
+
+function clearAllTrades() {
+  if(!confirm('Delete all trade records? This cannot be undone.')) return;
+  localStorage.removeItem(FSB_TR_KEY); renderTradeLog();
+}
+
+// ── Swipe-to-dismiss ──────────────────────────────────────────────────────────
+(function() {
+  let _sy=0,_cy=0,_drag=false;
+  function _start(e){ const t=e.touches?e.touches[0]:e; _sy=t.clientY; _cy=_sy; _drag=true; }
+  function _move(e) {
+    if(!_drag)return;
+    const t=e.touches?e.touches[0]:e; _cy=t.clientY;
+    const dy=Math.max(0,_cy-_sy);
+    const sh=document.getElementById('trade-sheet'); if(sh) sh.style.transform=`translateY(${dy}px)`;
+    if(e.cancelable) e.preventDefault();
+  }
+  function _end() {
+    if(!_drag)return; _drag=false;
+    const dy=_cy-_sy; const sh=document.getElementById('trade-sheet'); if(!sh)return;
+    if(dy>80){ sh.style.transform='translateY(100%)'; setTimeout(closeTradeSheet,220); }
+    else { sh.style.transform='translateY(0)'; }
+  }
+  window.addEventListener('load',()=>{
+    const handle=document.getElementById('tsh-drag-handle');
+    if(!handle) return;
+    handle.addEventListener('touchstart',_start,{passive:true});
+    handle.addEventListener('touchmove', _move, {passive:false});
+    handle.addEventListener('touchend',  _end);
+    handle.addEventListener('mousedown', _start);
+    window.addEventListener('mousemove', _move);
+    window.addEventListener('mouseup',   _end);
+  });
+})();
+
+// ── Wire into chart open/close via MutationObserver ───────────────────────────
+(function() {
+  window.addEventListener('load', () => {
+    const el = document.getElementById('cht-overlay');
+    if (!el) return;
+    new MutationObserver(() => {
+      if (el.classList.contains('open')) { setTimeout(trDrawChartLines, 250); }
+      else { trWsStop(); _trPriceLines={}; }
+    }).observe(el, { attributes:true, attributeFilter:['class'] });
+
+    // Wire input events for live RR calculation
+    ['tsh-entry','tsh-tp','tsh-sl'].forEach(id => {
+      const inp = document.getElementById(id);
+      if (inp) {
+        if (id==='tsh-entry') inp.addEventListener('input', ()=>{ inp.dataset.userSet='1'; tshCalcRR(); });
+        else inp.addEventListener('input', tshCalcRR);
+      }
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
