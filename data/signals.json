@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-23T22:39:48.877622+00:00",
+  "updated": "2026-05-24T01:51:16.840317+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76343.0,
-      "delta_pct": 1.1,
+      "value": 76788.0,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran nuclear deal hopes reducing oil shock risk, strengthening dollar. USDJPY LONG supported by hawkish Fed signals. No conflict with USDCAD LONG.",
-    "updated": "2026-05-23T22:39:48.877622+00:00"
+    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting dollar. UMich sentiment miss weakens growth outlook, supporting EUR short thesis.",
+    "updated": "2026-05-24T01:51:16.840317+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: Risk-Off regime confirms short bias, copper weakness validates.\n\nUSDCAD LONG: Risk-Off supports USD strength, commodity selloff reinforces.\n\nUSDJPY LONG: Risk-Off favors yen carry unwind, copper down confirms.",
+    "text": "EURUSD SHORT: Risk-Off regime confirms setup, USD strength driver dominates.\n\nUSDCAD LONG: Risk-Off regime confirms setup, safe-haven CAD demand drives.\n\nUSDJPY LONG: Risk-Off regime confirms setup, JPY carry unwind intensifies.",
     "top": [
       {
         "pair": "EURUSD",
@@ -602,11 +602,11 @@
         "score": 7.03
       }
     ],
-    "updated": "2026-05-23T22:39:48.877622+00:00"
+    "updated": "2026-05-24T01:51:16.840317+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-23T22:39:48.877622+00:00"
+    "updated": "2026-05-24T01:51:16.840317+00:00"
   },
   "last_alert": "2026-05-23T17:13:37.057750+00:00"
 }
