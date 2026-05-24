@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T21:57:16.153213+00:00",
+  "updated": "2026-05-24T22:43:05.803102+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -503,12 +503,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
@@ -532,19 +532,19 @@
     },
     "gold": {
       "value": 4523.2,
-      "delta_pct": -0.4,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.32,
-      "delta_pct": 0.1,
+      "value": 98.994,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
       "value": 6.379,
-      "delta_pct": 1.9,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -562,13 +562,13 @@
     },
     "wti": {
       "value": 96.6,
-      "delta_pct": 0.3,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76088.0,
-      "delta_pct": -0.8,
+      "value": 76625.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "Iran nuclear deal agreement reduces oil shock risk, undermining energy-driven CAD strength. Weakens USDCAD long setup.",
-    "updated": "2026-05-24T21:57:16.153213+00:00"
+    "text": "Iran nuclear deal hopes support risk-on sentiment, weakening USD and accelerating USDCAD downside. Conflicts with LONG setup.",
+    "updated": "2026-05-24T22:43:05.803102+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Risk-on low challenges strong momentum, copper strength undermines.",
+    "text": "USDCAD LONG: Risk-on low challenges strength, momentum divergence warns.",
     "top": [
       {
         "pair": "USDCAD",
@@ -592,15 +592,15 @@
         "score": 6.2
       }
     ],
-    "updated": "2026-05-24T21:57:16.153213+00:00"
+    "updated": "2026-05-24T22:43:05.803102+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T21:57:16.153213+00:00"
+    "updated": "2026-05-24T22:43:05.803102+00:00"
   },
   "last_alert": "2026-05-24T19:36:16.488253+00:00",
   "week_ahead": {
-    "text": "I'll search for current FX market previews for you. Based on the search results, here is your Week Ahead briefing: Global financial markets remain cautious as hawkish Federal Reserve expectations continue supporting the US Dollar across major FX pairs. Fed rate hike bets remain elevated ahead of key US PCE data. RBNZ decision and Australia CPI data to test steep implied rate paths. The US and Iran are close to signing a 60-day ceasefire extension that would reopen the Strait of Hormuz. This geopolitical uncertainty remains the biggest wildcard for directional moves, potentially shifting risk sentiment and commodity prices mid-week.",
-    "generated_at": "2026-05-24T21:57:16.153213+00:00"
+    "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
+    "generated_at": "2026-05-24T22:43:05.803102+00:00"
   }
 }
