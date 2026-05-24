@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T08:11:40.867284+00:00",
+  "updated": "2026-05-24T08:15:18.447060+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,7 +567,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76650.0,
+      "value": 76653.0,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by Iran deal hopes reducing oil shock fears and supporting risk appetite, weakening euro. USDJPY LONG supported by Fed hawkish signals. NZDUSD SHORT remains valid.",
-    "updated": "2026-05-24T08:11:40.867284+00:00"
+    "text": "EURUSD SHORT accelerated by energy shock weighing on EU economy and multiple headlines calling to sell the euro. USDJPY LONG supported by Fed signals. NZDUSD SHORT neutral.",
+    "updated": "2026-05-24T08:15:18.447060+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Macro confirms; risk-off environment supports safe-haven yen weakness reversal.\n\nEURUSD SHORT: Macro confirms; risk-off regime favors dollar strength over euro.\n\nNZDUSD SHORT: Macro challenges; copper strength signals risk-on contradicting risk-off short bias.",
+    "text": "USDJPY LONG: Risk-Off macro confirms setup, safe-haven yen demand strengthens.\n\nEURUSD SHORT: Risk-Off macro confirms setup, euro weakness outpaces dollar strength.\n\nNZDUSD SHORT: Risk-Off macro confirms setup, commodity currency underperforms risk-off environment.",
     "top": [
       {
         "pair": "USDJPY",
@@ -602,11 +602,11 @@
         "score": 6.3
       }
     ],
-    "updated": "2026-05-24T08:11:40.867284+00:00"
+    "updated": "2026-05-24T08:15:18.447060+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T08:11:40.867284+00:00"
+    "updated": "2026-05-24T08:15:18.447060+00:00"
   },
   "last_alert": "2026-05-24T07:52:36.381746+00:00"
 }
