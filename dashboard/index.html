@@ -2347,9 +2347,9 @@ function chtAttachLongPress() {
 #tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:6px;font-family:inherit;line-height:1.5;}
 #tsh-side-err{font-size:9px;color:var(--sell);font-weight:700;min-height:14px;margin-bottom:6px;}
 #tsh-action-row{display:flex;gap:8px;}
-#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;text-align:center;}
+#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;display:flex;align-items:center;justify-content:center;}
 #tsh-submit-btn:active{background:rgba(0,220,55,.28);}
-#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;text-align:center;}
+#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;display:flex;align-items:center;justify-content:center;}
 #tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
 /* ── Log overlay ────────────────────────────────────────────────────────── */
@@ -2462,6 +2462,10 @@ function trOnTick(price, pair) {
       tshCalcRR();
     }
   }
+  // Update chart price line
+  if (typeof chtUpdateLivePriceLine === 'function') chtUpdateLivePriceLine(pair, price);
+  // Restart chart WS if pair changed
+  if (_chtLiveWsPair && _chtLiveWsPair !== pair) chtLiveWsStart(pair);
   // Check open/pending trades
   const trades = trLoad();
   let changed = false;
@@ -2765,14 +2769,41 @@ function clearAllTrades() {
   });
 })();
 
-// ── Wire into chart open/close via MutationObserver ───────────────────────────
+// ── Chart live price WebSocket (independent of trade sheet) ──────────────────
+let _chtLiveWs = null, _chtLiveWsPair = null;
+
+function chtLiveWsStart(pair) {
+  if (_chtLiveWsPair === pair && _chtLiveWs) return; // already running for this pair
+  chtLiveWsStop();
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  _chtLiveWsPair = pair;
+  try {
+    _chtLiveWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
+    _chtLiveWs.onopen    = () => _chtLiveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
+    _chtLiveWs.onmessage = (e) => { try { const d=JSON.parse(e.data); if(d.event==='price'&&d.price&&typeof chtUpdateLivePriceLine==='function') chtUpdateLivePriceLine(pair, parseFloat(d.price)); } catch(er){} };
+    _chtLiveWs.onerror   = () => { _chtLiveWs=null; };
+    _chtLiveWs.onclose   = () => { _chtLiveWs=null; };
+  } catch(e) { _chtLiveWs=null; }
+}
+function chtLiveWsStop() {
+  if (_chtLiveWs) { try { _chtLiveWs.close(); } catch(e) {} _chtLiveWs=null; }
+  _chtLiveWsPair=null;
+}
+
+// ── Wire chart open/close to chart live WS ────────────────────────────────────
 (function() {
   window.addEventListener('load', () => {
     const el = document.getElementById('cht-overlay');
     if (!el) return;
     new MutationObserver(() => {
-      if (el.classList.contains('open')) { setTimeout(trDrawChartLines, 250); }
-      else { trWsStop(); _trPriceLines={}; }
+      if (el.classList.contains('open')) {
+        setTimeout(trDrawChartLines, 250);
+        if (_chtPair) chtLiveWsStart(_chtPair);
+      } else {
+        trWsStop(); chtLiveWsStop();
+        _trPriceLines={};
+      }
     }).observe(el, { attributes:true, attributeFilter:['class'] });
 
     // Wire input events for live RR calculation
