@@ -460,13 +460,9 @@ function renderDeepAnalysis(){
   const wrap = document.getElementById("da-wrap");
   if (!da.text || !da.generated_at) { wrap.style.display = "none"; return; }
 
-  const gen = new Date(da.generated_at);
-  const age = (new Date() - gen) / 3600000;
-  if (age > 26) { wrap.style.display = "none"; return; }
-
   wrap.style.display = "flex";
   document.getElementById("da-lbl").textContent =
-    "DEEP ANALYSIS · " + gen.toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"UTC"}) + " UTC";
+    "DEEP ANALYSIS · " + fmtTime(da.generated_at);
   const headlineEl = document.getElementById("da-headline");
   if (headlineEl) headlineEl.textContent = da.headline || "";
   document.getElementById("da-txt").textContent = da.text;
@@ -2464,14 +2460,21 @@ function trWsStop() {
 
 // ── Tick handler ──────────────────────────────────────────────────────────────
 function trOnTick(price, pair) {
-  // Update live price in entry sheet
+  const isJpy = pair.includes('JPY');
+  const priceStr = price.toFixed(isJpy ? 3 : 5);
+
+  // Update live price display and entry field in trade sheet
   const liveEl = document.getElementById('tsh-live-price');
   if (liveEl && _tshPair === pair) {
-    const isJpy = pair.includes('JPY');
-    liveEl.textContent = price.toFixed(isJpy ? 3 : 5);
+    liveEl.textContent = priceStr;
+    liveEl.style.opacity = '1';
     const entryEl = document.getElementById('tsh-entry');
     if (entryEl && !entryEl.dataset.userSet) {
-      entryEl.value = price.toFixed(isJpy ? 3 : 5);
+      // First tick: populate entry, restore placeholder, enable submit
+      entryEl.value = priceStr;
+      entryEl.placeholder = '0.00000';
+      const submitBtn = document.getElementById('tsh-submit-btn');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = '1'; }
       tshCalcRR();
     }
   }
@@ -2558,26 +2561,33 @@ function openTradeSheet() {
   document.getElementById('tsh-pair-lbl').textContent = _tshPair;
   document.getElementById('tsh-buy-btn').classList.add('active');
   document.getElementById('tsh-sell-btn').classList.remove('active');
-  const isJpy = _tshPair.includes('JPY');
-  const lastClose = D?.pairs?.[_tshPair]?.prev_close || null;
-  const priceStr  = lastClose ? lastClose.toFixed(isJpy?3:5) : '';
-  document.getElementById('tsh-live-price').textContent = priceStr||'—';
-  const entryEl = document.getElementById('tsh-entry');
-  entryEl.value = priceStr; entryEl.dataset.userSet='';
-  document.getElementById('tsh-tp').value='';
-  document.getElementById('tsh-sl').value='';
-  document.getElementById('tsh-notes').value='';
-  document.getElementById('tsh-rr-val').textContent='—';
-  document.getElementById('tsh-pending-hint').textContent='';
-  if (document.getElementById('tsh-side-err')) document.getElementById('tsh-side-err').textContent='';
 
-  // Show Close Trade button if there's an open/pending trade for this pair
+  // Leave entry BLANK — will be filled by first WebSocket tick
+  // Show live price as "Connecting…" until WS delivers
+  document.getElementById('tsh-live-price').textContent = 'Connecting…';
+  document.getElementById('tsh-live-price').style.opacity = '0.45';
+  const entryEl = document.getElementById('tsh-entry');
+  entryEl.value = ''; entryEl.dataset.userSet = '';
+  entryEl.placeholder = 'Waiting for live price…';
+  document.getElementById('tsh-tp').value = '';
+  document.getElementById('tsh-sl').value = '';
+  document.getElementById('tsh-notes').value = '';
+  document.getElementById('tsh-rr-val').textContent = '—';
+  document.getElementById('tsh-pending-hint').textContent = '';
+  if (document.getElementById('tsh-side-err')) document.getElementById('tsh-side-err').textContent = '';
+
+  // Disable submit until live price arrives
+  const submitBtn = document.getElementById('tsh-submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.4';
+
+  // Show Close Trade button if there's an active trade for this pair
   const activeTrade = trLoad().find(t => t.pair===_tshPair && (t.status==='open'||t.status==='pending'));
   const closeBtn = document.getElementById('tsh-close-trade-btn');
   if (closeBtn) closeBtn.style.display = activeTrade ? 'flex' : 'none';
 
   const sheet = document.getElementById('trade-sheet');
-  sheet.style.transform='translateY(0)'; sheet.style.display='block';
+  sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
   trWsStart(_tshPair);
 }
 
