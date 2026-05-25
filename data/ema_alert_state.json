@@ -41,7 +41,7 @@
     "ema200_side": "above",
     "ema50_side": "above",
     "ema50_fired": false,
-    "ema200_fired": false
+    "ema200_fired": true
   },
   "GBPJPY": {
     "ema200_side": "above",
