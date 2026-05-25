@@ -208,10 +208,13 @@
   <div class="app-name">FX Signal Board</div>
   <div class="scan-info">
     <div class="dot"></div><span id="scan-time">Loading…</span>
-    <button class="gear-btn" onclick="toggleInfo()" title="How it works">ⓘ</button>
-    <button class="gear-btn" onclick="openTradeLog()" title="Trade log" id="log-btn" style="font-size:11px;font-weight:700;letter-spacing:.04em;">LOG</button>
-    <button class="gear-btn" onclick="toggleKeyRow()" title="API keys">⚙</button>
+    <button class="gear-btn" id="gear-menu-btn" onclick="toggleGearMenu()">⚙</button>
   </div>
+</div>
+<div id="gear-menu" style="display:none;">
+  <button class="gear-menu-item" onclick="toggleKeyRow();toggleGearMenu()">⚙&nbsp; KEYS</button>
+  <button class="gear-menu-item" onclick="openTradeLog();toggleGearMenu()">▤&nbsp; LOG</button>
+  <button class="gear-menu-item" onclick="toggleInfo();toggleGearMenu()">ⓘ&nbsp; INFO</button>
 </div>
 <div class="td-key-row" id="td-key-row">
   <div style="display:flex;align-items:center;gap:6px;">
@@ -806,6 +809,11 @@ function toggleKeyRow(){
     chtUpdatePatPlaceholder();
   }
 }
+function toggleGearMenu(){
+  const m=document.getElementById('gear-menu');
+  if(!m) return;
+  m.style.display=(m.style.display==='block')?'none':'block';
+}
 function saveTdKey(){
   const inp = document.getElementById('td-key-inp');
   const val = inp.value.trim();
@@ -1251,6 +1259,34 @@ initInsightsState();
           <span class="tsh-lbl">RR</span>
           <span id="tsh-rr-val">—</span>
         </div>
+        <div class="tsh-demo-divider"></div>
+        <div class="tsh-demo-section">
+          <div class="tsh-demo-row">
+            <span class="tsh-demo-lbl">CAPITAL</span>
+            <span class="tsh-demo-val" id="tsh-capital-display">€ 10,000</span>
+          </div>
+          <div class="tsh-stepper-row">
+            <button class="tsh-step-btn" onclick="adjustCapital(-500)">−</button>
+            <input class="tsh-step-inp" id="tsh-capital-inp" type="number" value="10000" oninput="onCapitalInput()">
+            <button class="tsh-step-btn" onclick="adjustCapital(500)">+</button>
+          </div>
+        </div>
+        <div class="tsh-demo-section">
+          <div class="tsh-demo-row">
+            <span class="tsh-demo-lbl">LOT SIZE</span>
+            <span class="tsh-risk-pill" id="tsh-risk-pill">—</span>
+          </div>
+          <div class="tsh-stepper-row">
+            <button class="tsh-step-btn" onclick="adjustLot(-0.01)">−</button>
+            <input class="tsh-step-inp" id="tsh-lot-inp" type="number" step="0.01" value="0.10" oninput="onLotInput()">
+            <button class="tsh-step-btn" onclick="adjustLot(0.01)">+</button>
+          </div>
+        </div>
+        <div id="tsh-pnl-bar" style="display:none;">
+          <span class="tsh-demo-lbl">LIVE P&amp;L</span>
+          <span id="tsh-pnl-eur">—</span>
+          <span id="tsh-pnl-r">—</span>
+        </div>
         <textarea id="tsh-notes" placeholder="Notes (optional)…" rows="2"></textarea>
         <div id="tsh-side-err"></div>
         <div id="tsh-action-row">
@@ -1268,6 +1304,20 @@ initInsightsState();
   <div id="log-header">
     <span>TRADE LOG</span>
     <button id="log-close-btn" onclick="closeTradeLog()">✕</button>
+  </div>
+  <div id="log-balance-strip">
+    <div>
+      <div id="log-bal-val" class="log-bal-main">€ —</div>
+      <div class="log-bal-lbl">Account balance</div>
+    </div>
+    <div style="text-align:right;">
+      <div id="log-peak-val" class="log-bal-peak">Peak —</div>
+      <div id="log-dd-val" class="log-bal-dd">Max DD —</div>
+    </div>
+  </div>
+  <div id="log-equity-section">
+    <div class="log-eq-lbl">EQUITY CURVE</div>
+    <canvas id="log-equity-canvas" height="52" style="width:100%;display:block;"></canvas>
   </div>
   <div id="log-stats"></div>
   <div id="log-body"></div>
@@ -2398,7 +2448,36 @@ function chtAttachLongPress() {
 .log-delete-btn:hover{opacity:1;color:var(--sell);}
 #log-footer{flex-shrink:0;display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--bord);background:var(--surf);}
 .log-action-btn{flex:1;padding:8px;border-radius:6px;border:1px solid var(--bord);background:none;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.04em;}
-.log-danger-btn{border-color:rgba(248,81,73,.3);color:var(--sell);}
+/* ── Gear dropdown menu ─────────────────────────────────────────────────── */
+#gear-menu{background:var(--surf);border:1px solid var(--bord);border-radius:7px;margin:0 0 6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.35);}
+.gear-menu-item{display:block;width:100%;padding:9px 14px;background:none;border:none;border-bottom:1px solid var(--bord);color:var(--text);font-size:10px;font-weight:700;letter-spacing:.07em;text-align:left;cursor:pointer;transition:background .12s;}
+.gear-menu-item:last-child{border-bottom:none;}
+.gear-menu-item:hover,.gear-menu-item:active{background:var(--dim);}
+/* ── Trade sheet: demo account sections ─────────────────────────────────── */
+.tsh-demo-divider{height:1px;background:var(--bord);margin:4px 0 8px;}
+.tsh-demo-section{background:var(--dim);border:1px solid var(--bord);border-radius:6px;padding:7px 10px;margin-bottom:6px;}
+.tsh-demo-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;}
+.tsh-demo-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);}
+.tsh-demo-val{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+.tsh-stepper-row{display:flex;align-items:center;gap:6px;}
+.tsh-step-btn{width:26px;height:26px;flex-shrink:0;background:var(--surf);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:15px;font-weight:400;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background .12s;}
+.tsh-step-btn:active{background:var(--bord);}
+.tsh-step-inp{flex:1;background:var(--surf);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;padding:4px 8px;outline:none;text-align:center;}
+.tsh-risk-pill{font-size:9px;font-weight:700;border-radius:4px;padding:3px 8px;letter-spacing:.04em;border:1px solid transparent;}
+.tsh-risk-pill.safe{background:rgba(0,220,55,.12);border-color:rgba(0,220,55,.3);color:var(--buy);}
+.tsh-risk-pill.warn{background:rgba(227,179,65,.12);border-color:rgba(227,179,65,.35);color:var(--amber);}
+.tsh-risk-pill.danger{background:rgba(248,81,73,.1);border-color:rgba(248,81,73,.3);color:var(--sell);}
+#tsh-pnl-bar{display:flex;align-items:center;justify-content:space-between;background:rgba(0,220,55,.06);border:1px solid rgba(0,220,55,.2);border-radius:6px;padding:7px 10px;margin-bottom:6px;}
+#tsh-pnl-eur{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--buy);}
+#tsh-pnl-r{font-size:10px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--buy);}
+/* ── Log overlay: balance strip + equity curve ──────────────────────────── */
+#log-balance-strip{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
+.log-bal-main{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--buy);}
+.log-bal-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:2px;}
+.log-bal-peak{font-size:9px;font-weight:700;color:var(--muted);}
+.log-bal-dd{font-size:9px;font-weight:700;color:var(--sell);margin-top:2px;}
+#log-equity-section{flex-shrink:0;padding:8px 14px 10px;border-bottom:1px solid var(--bord);}
+.log-eq-lbl{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);opacity:.6;margin-bottom:5px;}
 </style>
 
 <script>
@@ -2409,6 +2488,8 @@ function chtAttachLongPress() {
 const FSB_TR_KEY   = 'fsb_trades_v1';
 const FSB_TG_TOKEN = 'fsb_tg_token';
 const FSB_TG_CHAT  = 'fsb_tg_chatid';
+const FSB_CAPITAL_KEY = 'fsb_capital_v1';
+const FSB_LOT_KEY     = 'fsb_lot_v1';
 
 // ── Storage ───────────────────────────────────────────────────────────────────
 function trLoad()  { try { return JSON.parse(localStorage.getItem(FSB_TR_KEY) || '[]'); } catch { return []; } }
@@ -2439,6 +2520,93 @@ function tgSend(msg) {
   }).catch(() => {});
 }
 
+// ── Demo account helpers ──────────────────────────────────────────────────────
+function _getCapital()  { return parseFloat(localStorage.getItem(FSB_CAPITAL_KEY)||'10000')||10000; }
+function _saveCapital(v){ localStorage.setItem(FSB_CAPITAL_KEY, String(v)); }
+function _getLotSize()  { return parseFloat(localStorage.getItem(FSB_LOT_KEY)||'0.10')||0.10; }
+function _saveLotSize(v){ localStorage.setItem(FSB_LOT_KEY, String(v)); }
+
+function adjustCapital(delta){
+  let v=Math.max(100, Math.round(_getCapital()+delta));
+  _saveCapital(v); _syncCapitalUI(); tshUpdateRiskPill();
+}
+function onCapitalInput(){
+  const v=parseFloat(document.getElementById('tsh-capital-inp').value);
+  if(!isNaN(v)&&v>=100){ _saveCapital(Math.round(v)); tshUpdateRiskPill(); }
+  _syncCapitalUI();
+}
+function _syncCapitalUI(){
+  const v=_getCapital();
+  const inp=document.getElementById('tsh-capital-inp');
+  if(inp) inp.value=v;
+  const disp=document.getElementById('tsh-capital-display');
+  if(disp) disp.textContent='€ '+v.toLocaleString('de-DE');
+}
+
+function adjustLot(delta){
+  let v=Math.round((_getLotSize()+delta)*100)/100;
+  v=Math.max(0.01,v);
+  _saveLotSize(v); _syncLotUI(); tshUpdateRiskPill();
+}
+function onLotInput(){
+  const v=parseFloat(document.getElementById('tsh-lot-inp').value);
+  if(!isNaN(v)&&v>=0.01){ _saveLotSize(Math.round(v*100)/100); tshUpdateRiskPill(); }
+}
+function _syncLotUI(){
+  const v=_getLotSize();
+  const inp=document.getElementById('tsh-lot-inp');
+  if(inp) inp.value=v.toFixed(2);
+}
+
+// ── Pip value in EUR ──────────────────────────────────────────────────────────
+function _pipValueEUR(pair, lotSize){
+  const eurusd=_livePrice['EURUSD']||1.10;
+  if(pair.includes('JPY')){
+    const usdjpy=_livePrice['USDJPY']||150;
+    return lotSize*(1000/usdjpy)/eurusd;
+  }
+  return lotSize*10/eurusd;
+}
+
+// ── Risk pill ─────────────────────────────────────────────────────────────────
+function tshUpdateRiskPill(){
+  const pill=document.getElementById('tsh-risk-pill');
+  if(!pill) return;
+  const entry=parseFloat(document.getElementById('tsh-entry')?.value);
+  const sl   =parseFloat(document.getElementById('tsh-sl')?.value);
+  const lot  =_getLotSize(), cap=_getCapital();
+  if(!entry||!sl||!lot||!cap||!_tshPair){ pill.textContent='—'; pill.className='tsh-risk-pill'; return; }
+  const isJpy=_tshPair.includes('JPY'), pipSize=isJpy?0.01:0.0001;
+  const slPips=Math.abs(entry-sl)/pipSize;
+  const riskEUR=slPips*_pipValueEUR(_tshPair,lot);
+  const pct=riskEUR/cap*100;
+  pill.textContent=pct.toFixed(1)+'% risk';
+  pill.className='tsh-risk-pill '+(pct<=2?'safe':pct<=5?'warn':'danger');
+}
+
+// ── Live P&L display ──────────────────────────────────────────────────────────
+function tshUpdateLivePnL(price){
+  const bar=document.getElementById('tsh-pnl-bar');
+  if(!bar||!_tshPair) return;
+  const activeTrade=trLoad().find(t=>t.pair===_tshPair&&t.status==='open');
+  if(!activeTrade||!activeTrade.lot_size){ bar.style.display='none'; return; }
+  const lot=activeTrade.lot_size, isJpy=_tshPair.includes('JPY');
+  const pipSize=isJpy?0.01:0.0001;
+  const dir=activeTrade.direction==='BUY'?1:-1;
+  const pips=dir*(price-activeTrade.entry)/pipSize;
+  const pnlEUR=pips*_pipValueEUR(_tshPair,lot);
+  const slPips=Math.abs(activeTrade.sl-activeTrade.entry)/pipSize;
+  const riskEUR=slPips*_pipValueEUR(_tshPair,lot);
+  const pnlR=riskEUR>0?pnlEUR/riskEUR:0;
+  const isPos=pnlEUR>=0;
+  const col=isPos?'var(--buy)':'var(--sell)';
+  const eurEl=document.getElementById('tsh-pnl-eur');
+  const rEl  =document.getElementById('tsh-pnl-r');
+  if(eurEl){ eurEl.textContent=(isPos?'+ ':'− ')+'€ '+Math.abs(pnlEUR).toFixed(2); eurEl.style.color=col; }
+  if(rEl)  { rEl.textContent=(isPos?'+ ':'− ')+Math.abs(pnlR).toFixed(2)+' R'; rEl.style.color=col; }
+  bar.style.display='flex';
+}
+
 // ── WebSocket constants (used by unified liveWsStart below) ──────────────────
 const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
 let _trWsPrice = null;   // last live price — used by tshCalcRR / submitTrade
@@ -2459,24 +2627,7 @@ async function fetchLiveQuote(pair) {
     if (!price) return;
     _livePrice[pair] = price;
     _trWsPrice = price;
-    // Apply to chart price line immediately
-    if (typeof chtUpdateLivePriceLine === 'function') chtUpdateLivePriceLine(pair, price);
-    // Populate trade sheet entry field if open and not yet user-set
-    const liveEl = document.getElementById('tsh-live-price');
-    if (liveEl && _tshPair === pair) {
-      const isJpy = pair.includes('JPY');
-      const priceStr = price.toFixed(isJpy ? 3 : 5);
-      liveEl.textContent = priceStr;
-      liveEl.style.opacity = '1';
-      const entryEl = document.getElementById('tsh-entry');
-      if (entryEl && !entryEl.dataset.userSet) {
-        entryEl.value = priceStr;
-        entryEl.placeholder = '0.00000';
-        const submitBtn = document.getElementById('tsh-submit-btn');
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = '1'; }
-        tshCalcRR();
-      }
-    }
+    onLiveTick(pair, price);
   } catch(e) {}
 }
 
@@ -2555,6 +2706,16 @@ function openTradeSheet() {
   const closeBtn = document.getElementById('tsh-close-trade-btn');
   if (closeBtn) closeBtn.style.display = activeTrade ? 'flex' : 'none';
 
+  // Sync demo account UI from localStorage
+  _syncCapitalUI(); _syncLotUI();
+  tshUpdateRiskPill();
+  // Show live P&L bar if active open trade exists
+  if (activeTrade && activeTrade.status==='open' && activeTrade.lot_size && _livePrice[_tshPair]) {
+    tshUpdateLivePnL(_livePrice[_tshPair]);
+  } else {
+    const bar=document.getElementById('tsh-pnl-bar'); if(bar) bar.style.display='none';
+  }
+
   const sheet = document.getElementById('trade-sheet');
   sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
   // Start WS (also fires immediate REST quote fetch)
@@ -2604,10 +2765,11 @@ function tshCalcRR() {
   }
   if (errEl) errEl.textContent='';
 
-  if (!entry||!tp||!sl) { document.getElementById('tsh-rr-val').textContent='—'; return; }
+  if (!entry||!tp||!sl) { document.getElementById('tsh-rr-val').textContent='—'; tshUpdateRiskPill(); return; }
   const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
-  if (!risk) { document.getElementById('tsh-rr-val').textContent='—'; return; }
+  if (!risk) { document.getElementById('tsh-rr-val').textContent='—'; tshUpdateRiskPill(); return; }
   document.getElementById('tsh-rr-val').textContent = `1 : ${(reward/risk).toFixed(2)}`;
+  tshUpdateRiskPill();
 }
 
 function submitTrade() {
@@ -2624,7 +2786,7 @@ function submitTrade() {
   const livePrice = _trWsPrice || null;
   const isPending = livePrice && Math.abs(entry-livePrice)>0.000005;
   const isJpy = _tshPair.includes('JPY');
-  const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
+  const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', lot_size:_getLotSize(), status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, pnl_eur:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
   const trades=trLoad(); trades.push(t); trSave(trades);
   tgSend(`🟠 <b>${isPending?'PENDING ORDER SET':'TRADE ENTERED'}</b>\n${t.pair} ${t.direction} @ ${entry.toFixed(isJpy?3:5)}\nTP ${tp.toFixed(isJpy?3:5)}  SL ${sl.toFixed(isJpy?3:5)}  RR 1:${rr}\n${notes?'📝 '+notes:''}`);
   closeTradeSheet(); trDrawChartLines();
@@ -2635,10 +2797,15 @@ function trManualClose(id) {
   if (!t||t.status==='closed') return;
   const price=_trWsPrice||(D?.pairs?.[t.pair]?.prev_close||t.entry);
   const isJpy=t.pair.includes('JPY'), pipSize=isJpy?0.01:0.0001;
+  const dir=t.direction==='BUY'?1:-1;
+  const signedPips=dir*(price-t.entry)/pipSize;
   const pips=Math.round(Math.abs(price-t.entry)/pipSize), slPips=Math.round(Math.abs(t.sl-t.entry)/pipSize);
-  t.status='closed'; t.result='manual'; t.close_price=price; t.closed=new Date().toISOString(); t.r_actual=slPips?(pips/slPips).toFixed(2):'—';
+  const pnlEUR=t.lot_size?parseFloat((signedPips*_pipValueEUR(t.pair,t.lot_size)).toFixed(2)):null;
+  t.status='closed'; t.result='manual'; t.close_price=price; t.closed=new Date().toISOString();
+  t.r_actual=slPips?(pips/slPips).toFixed(2):'—'; t.pnl_eur=pnlEUR;
   trSave(trades);
-  tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${t.r_actual}R`);
+  const pnlStr=pnlEUR!=null?(pnlEUR>=0?`+€${pnlEUR.toFixed(2)}`:`−€${Math.abs(pnlEUR).toFixed(2)}`):'';
+  tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${t.r_actual}R${pnlStr?' · '+pnlStr:''}`);
   trDrawChartLines(); renderTradeLog();
 }
 
@@ -2652,7 +2819,13 @@ function trDeleteTrade(id) {
 function openTradeLog()  { renderTradeLog(); document.getElementById('log-overlay').classList.add('open'); }
 function closeTradeLog() { document.getElementById('log-overlay').classList.remove('open'); }
 
-function renderTradeLog() { _renderLogStats(trLoad()); _renderLogBody(trLoad()); }
+function renderTradeLog() {
+  const trades = trLoad();
+  _renderLogStats(trades);
+  _renderLogBody(trades);
+  _renderLogBalance(trades);
+  _renderEquityCurve(trades);
+}
 
 function _renderLogStats(trades) {
   const closed=trades.filter(t=>t.status==='closed');
@@ -2731,6 +2904,52 @@ function exportTradeCSV() {
   a.download=`fsb_trades_${new Date().toISOString().slice(0,10)}.csv`; a.click();
 }
 
+function _renderLogBalance(trades) {
+  const closed = trades.filter(t=>t.status==='closed');
+  const capital = _getCapital();
+  let runBal=capital, peak=capital, maxDD=0;
+  closed.forEach(t => {
+    runBal += (t.pnl_eur||0);
+    if(runBal>peak) peak=runBal;
+    const dd=(peak-runBal)/peak*100;
+    if(dd>maxDD) maxDD=dd;
+  });
+  const balEl  = document.getElementById('log-bal-val');
+  const peakEl = document.getElementById('log-peak-val');
+  const ddEl   = document.getElementById('log-dd-val');
+  const isPos  = runBal >= capital;
+  if(balEl)  { balEl.textContent='€ '+runBal.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2}); balEl.style.color=isPos?'var(--buy)':'var(--sell)'; }
+  if(peakEl) peakEl.textContent='Peak € '+peak.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+  if(ddEl)   ddEl.textContent='Max DD −'+maxDD.toFixed(1)+'%';
+}
+
+function _renderEquityCurve(trades) {
+  const canvas = document.getElementById('log-equity-canvas');
+  if(!canvas) return;
+  const closed = trades.filter(t=>t.status==='closed');
+  const capital = _getCapital();
+  let bal=capital;
+  const points=[capital];
+  closed.forEach(t=>{ bal+=(t.pnl_eur||0); points.push(bal); });
+  const W=canvas.offsetWidth||300; canvas.width=W; const H=52;
+  const ctx=canvas.getContext('2d'); ctx.clearRect(0,0,W,H);
+  if(points.length<2){
+    ctx.fillStyle='rgba(0,180,50,0.08)'; ctx.fillRect(0,H*0.5,W,H*0.5); return;
+  }
+  const minV=Math.min(...points), maxV=Math.max(...points);
+  const range=maxV-minV||1;
+  const toX=i=>(i/(points.length-1))*W;
+  const toY=v=>H-4-((v-minV)/range)*(H-10);
+  ctx.beginPath();
+  points.forEach((v,i)=>i===0?ctx.moveTo(toX(i),toY(v)):ctx.lineTo(toX(i),toY(v)));
+  ctx.strokeStyle='rgba(0,220,55,0.6)'; ctx.lineWidth=1.5; ctx.lineJoin='round'; ctx.stroke();
+  const lastX=toX(points.length-1), lastY=toY(points[points.length-1]);
+  ctx.lineTo(lastX,H); ctx.lineTo(0,H); ctx.closePath();
+  ctx.fillStyle='rgba(0,220,55,0.08)'; ctx.fill();
+  ctx.beginPath(); ctx.arc(lastX,lastY,2.5,0,Math.PI*2);
+  ctx.fillStyle='#00dc37'; ctx.fill();
+}
+
 function clearAllTrades() {
   if(!confirm('Delete all trade records? This cannot be undone.')) return;
   localStorage.removeItem(FSB_TR_KEY); renderTradeLog();
@@ -2770,6 +2989,23 @@ function clearAllTrades() {
 // Twelvedata free tier = 1 concurrent WS connection.
 let _liveWs   = null;
 let _livePair = null;
+// ── onLiveTick — called by both WS and REST quote updates ────────────────────
+function onLiveTick(pair, price){
+  chtUpdateLivePriceLine(pair, price);
+  if(_tshPair!==pair) return;
+  const liveEl=document.getElementById('tsh-live-price');
+  if(liveEl){ const isJpy=pair.includes('JPY'); liveEl.textContent=price.toFixed(isJpy?3:5); liveEl.style.opacity='1'; }
+  const entryEl=document.getElementById('tsh-entry');
+  if(entryEl&&!entryEl.dataset.userSet){
+    const isJpy=pair.includes('JPY');
+    entryEl.value=price.toFixed(isJpy?3:5);
+    const submitBtn=document.getElementById('tsh-submit-btn');
+    if(submitBtn){ submitBtn.disabled=false; submitBtn.style.opacity='1'; }
+    tshCalcRR(); tshUpdateRiskPill();
+  }
+  tshUpdateLivePnL(price);
+}
+
 const _livePrice = {};   // pair → last known price, persists across chart renders
 
 function liveWsStart(pair) {
@@ -2828,6 +3064,15 @@ function chtLiveWsStop()    { /* no-op: chart WS and trade WS are now unified */
       if (inp) {
         if (id==='tsh-entry') inp.addEventListener('input', ()=>{ inp.dataset.userSet='1'; tshCalcRR(); });
         else inp.addEventListener('input', tshCalcRR);
+      }
+    });
+
+    // Close gear menu on outside click
+    document.addEventListener('click', e => {
+      const menu=document.getElementById('gear-menu');
+      const btn=document.getElementById('gear-menu-btn');
+      if(menu&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){
+        menu.style.display='none';
       }
     });
   });
