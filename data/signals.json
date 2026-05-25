@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T19:09:08.731297+00:00",
+  "updated": "2026-05-25T19:10:12.200491+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -515,7 +515,7 @@
     "signals": 0,
     "total": 0,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77413.0,
-      "delta_pct": 0.6,
+      "value": 77381.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG conflicted: Dollar selling on Iran deal hopes could weaken JPY carry demand.\n\nUSDJPY LONG at risk: Risk-on sentiment from Hormuz deal reduces safe-haven JPY demand.",
-    "updated": "2026-05-25T19:09:08.731297+00:00"
+    "text": "GBPJPY LONG and USDJPY LONG at risk. Dollar selling on Iran deal hopes conflicts with yen strength bid. Monitor closely.",
+    "updated": "2026-05-25T19:10:12.200491+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro confirms; Risk-On low supports carry unwind.\n\nUSDCAD LONG: Macro challenges; Risk-On low favors CAD weakness.\n\nUSDJPY LONG: Macro challenges; Risk-On low pressures yen safe-haven bid.",
+    "text": "GBPJPY LONG: Mixed neutral macro challenges strong momentum divergence setup.\n\nUSDCAD LONG: Mixed neutral macro challenges strong continuation pattern confirmation.\n\nUSDJPY LONG: Mixed neutral macro challenges weak momentum cross asset setup.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -602,7 +602,7 @@
         "score": 4.35
       }
     ],
-    "updated": "2026-05-25T19:09:08.731297+00:00"
+    "updated": "2026-05-25T19:10:12.200491+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
       }
     ],
-    "updated": "2026-05-25T19:09:08.731297+00:00"
+    "updated": "2026-05-25T19:10:12.200491+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
