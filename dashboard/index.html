@@ -1530,7 +1530,9 @@ function _chtDestroyCharts() {
   _chtAlertRefs  = [];
   _chtPriceLine  = null;
   _chtCandles    = null;
-  _chtStagingLine = null;  // priceLine ref invalidated; _chtStagingPrice kept for TF-switch restore
+  _chtStagingLine = null;
+  const zo = document.getElementById('cht-zone-overlay');
+  if (zo) zo.innerHTML = '';
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
@@ -1727,6 +1729,11 @@ function _chtRender(pair, tf, ohlcv) {
   candles.setData(ohlcv);
   _chtCandles = candles;
   _chtRenderMarkers();
+
+  // Redraw trade zones on scroll / zoom
+  chart.timeScale().subscribeVisibleTimeRangeChange(() => {
+    if (typeof _trDrawZones === 'function') _trDrawZones();
+  });
 
   const closes = ohlcv.map(d => d.close);
 
@@ -2595,23 +2602,142 @@ function trSignalSnapshot(pair) {
 // ── Chart price lines ─────────────────────────────────────────────────────────
 let _trPriceLines = {};
 
+// ── Trade zone overlay ────────────────────────────────────────────────────────
+function _trZoneEl() {
+  let el = document.getElementById('cht-zone-overlay');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'cht-zone-overlay';
+    el.style.cssText = 'position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:6;';
+    const p = document.getElementById('cht-price');
+    if (p) p.appendChild(el);
+  }
+  return el;
+}
+
 function trDrawChartLines() {
-  if (!_chtCandles || !_chtPair) return;
+  // Remove old price lines (backwards compat)
   Object.values(_trPriceLines).forEach(refs => {
     ['entry','tp','sl'].forEach(k => { if(refs[k]) { try { _chtCandles.removePriceLine(refs[k]); } catch(e){} } });
   });
   _trPriceLines = {};
-  const trades = trLoad().filter(t => t.pair===_chtPair && t.status!=='closed');
+  _trRenderAllMarkers();
+  _trDrawZones();
+}
+
+function _trDrawZones() {
+  const overlay = _trZoneEl();
+  overlay.innerHTML = '';
+  if (!_chtCandles || !_chtPair || !_chtInst) return;
+
+  const trades = trLoad().filter(t => t.pair === _chtPair && t.status !== 'closed');
+  if (!trades.length) return;
+
+  const priceEl = document.getElementById('cht-price');
+  const W = priceEl.clientWidth, H = priceEl.clientHeight;
+  if (!W || !H) return;
+
+  const tfSec = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+  const ts = _chtInst.timeScale();
+
   trades.forEach(t => {
     try {
-      _trPriceLines[t.id] = {
-        entry: _chtCandles.createPriceLine({ price:t.entry, color:'rgba(205,217,229,0.55)', lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:t.rr||'' }),
-        tp:    _chtCandles.createPriceLine({ price:t.tp,    color:'rgba(0,200,55,0.5)',     lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'TP' }),
-        sl:    _chtCandles.createPriceLine({ price:t.sl,    color:'rgba(248,81,73,0.5)',    lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'SL' }),
-      };
+      // Entry candle time (snap to TF boundary)
+      const entryT = Math.floor(new Date(t.created).getTime() / 1000);
+      const snapT  = Math.floor(entryT / tfSec) * tfSec;
+      const endT   = snapT + 10 * tfSec;
+
+      const x0 = ts.timeToCoordinate(snapT);
+      const x1 = ts.timeToCoordinate(endT);
+      if (x0 === null || x1 === null) return;
+
+      const yEntry = _chtCandles.priceToCoordinate(t.entry);
+      const yTp    = _chtCandles.priceToCoordinate(t.tp);
+      const ySl    = _chtCandles.priceToCoordinate(t.sl);
+      if (yEntry === null || yTp === null || ySl === null) return;
+
+      const left = Math.round(Math.max(0, x0));
+      const right = Math.round(Math.min(W, x1));
+      const w = right - left;
+      if (w < 2) return;
+
+      const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+      const tpPips = Math.round(Math.abs(t.tp    - t.entry) / ps);
+      const slPips = Math.round(Math.abs(t.sl    - t.entry) / ps);
+
+      // TP zone (entry → TP)
+      const tpTop = Math.round(Math.min(yTp, yEntry));
+      const tpH   = Math.max(2, Math.round(Math.abs(yTp - yEntry)));
+      const dTp = document.createElement('div');
+      dTp.style.cssText = `position:absolute;left:${left}px;top:${tpTop}px;width:${w}px;height:${tpH}px;background:rgba(0,220,55,0.09);border-top:1px solid rgba(0,220,55,0.5);box-sizing:border-box;`;
+      overlay.appendChild(dTp);
+
+      // SL zone (entry → SL)
+      const slTop = Math.round(Math.min(ySl, yEntry));
+      const slH   = Math.max(2, Math.round(Math.abs(ySl - yEntry)));
+      const dSl = document.createElement('div');
+      dSl.style.cssText = `position:absolute;left:${left}px;top:${slTop}px;width:${w}px;height:${slH}px;background:rgba(248,81,73,0.08);border-bottom:1px solid rgba(248,81,73,0.45);box-sizing:border-box;`;
+      overlay.appendChild(dSl);
+
+      // Entry line
+      const dE = document.createElement('div');
+      dE.style.cssText = `position:absolute;left:${left}px;top:${Math.round(yEntry)}px;width:${w}px;height:1px;background:rgba(205,217,229,0.4);`;
+      overlay.appendChild(dE);
+
+      // Pip labels (right edge of zone)
+      const tpLbl = document.createElement('div');
+      tpLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${tpTop+3}px;font-size:8px;font-weight:700;color:rgba(0,220,55,0.75);font-variant-numeric:tabular-nums;white-space:nowrap;`;
+      tpLbl.textContent = `+${tpPips}p`;
+      overlay.appendChild(tpLbl);
+
+      const slLbl = document.createElement('div');
+      slLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${slTop+slH-14}px;font-size:8px;font-weight:700;color:rgba(248,81,73,0.7);font-variant-numeric:tabular-nums;white-space:nowrap;`;
+      slLbl.textContent = `−${slPips}p`;
+      overlay.appendChild(slLbl);
+
+      // Floating P&L card (top-left of TP zone)
+      const lp  = _livePrice[t.pair];
+      const lot = t.lot_size;
+      const dirColor = t.direction === 'BUY' ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.9)';
+      const dirArrow = t.direction === 'BUY' ? '▲' : '▼';
+      let pnlHtml = '';
+      if (lp && lot) {
+        const dir = t.direction === 'BUY' ? 1 : -1;
+        const pnlEUR = dir * (lp - t.entry) / ps * _pipValueEUR(t.pair, lot);
+        const riskEUR = slPips * _pipValueEUR(t.pair, lot);
+        const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
+        const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+        pnlHtml = `<div id="czp-eur-${t.id}" style="font-size:11px;font-weight:800;color:${pc};font-variant-numeric:tabular-nums;margin-top:3px;">${pos?'+ ':'− '}€${Math.abs(pnlEUR).toFixed(2)}</div>`
+                + `<div id="czp-r-${t.id}"   style="font-size:8px; font-weight:700;color:${pc};font-variant-numeric:tabular-nums;">${pos?'+ ':'− '}${Math.abs(pnlR).toFixed(2)} R</div>`;
+      }
+      const card = document.createElement('div');
+      card.id = `czp-card-${t.id}`;
+      card.style.cssText = `position:absolute;left:${left+4}px;top:${tpTop+4}px;background:rgba(10,14,19,0.88);border:1px solid rgba(30,42,53,0.9);border-radius:5px;padding:4px 8px;`;
+      card.innerHTML = `<div style="font-size:9px;font-weight:800;color:${dirColor};letter-spacing:.04em;">${dirArrow} ${t.direction}${lot?' · '+lot:''}</div>${pnlHtml}`;
+      overlay.appendChild(card);
+
     } catch(e) {}
   });
-  _trRenderAllMarkers();
+}
+
+// Live P&L tick update — cheap text-only update, no DOM rebuild
+function _trUpdateZonePnL(pair, price) {
+  const trades = trLoad().filter(t => t.pair === pair && t.status === 'open');
+  trades.forEach(t => {
+    if (!t.lot_size) return;
+    const isJpy = pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+    const dir = t.direction === 'BUY' ? 1 : -1;
+    const pnlEUR = dir * (price - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
+    const slPips = Math.abs(t.sl - t.entry) / ps;
+    const riskEUR = slPips * _pipValueEUR(pair, t.lot_size);
+    const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
+    const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+    const eurEl = document.getElementById(`czp-eur-${t.id}`);
+    const rEl   = document.getElementById(`czp-r-${t.id}`);
+    if (eurEl) { eurEl.textContent = (pos?'+ ':'− ')+'€'+Math.abs(pnlEUR).toFixed(2); eurEl.style.color = pc; }
+    else { _trDrawZones(); return; }  // card not rendered yet — do a full draw
+    if (rEl)   { rEl.textContent   = (pos?'+ ':'− ')+Math.abs(pnlR).toFixed(2)+' R';  rEl.style.color = pc; }
+  });
 }
 
 function _trRenderAllMarkers() {
@@ -3015,6 +3141,7 @@ const _livePrice = {};   // pair → last known price, persists across chart ren
 
 function onLiveTick(pair, price) {
   chtUpdateLivePriceLine(pair, price);
+  if (pair === _chtPair && typeof _trUpdateZonePnL === 'function') _trUpdateZonePnL(pair, price);
   if (_tshPair !== pair) return;
   const liveEl = document.getElementById('tsh-live-price');
   if (liveEl) { const isJpy=pair.includes('JPY'); liveEl.textContent=price.toFixed(isJpy?3:5); liveEl.style.opacity='1'; }
