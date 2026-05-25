@@ -2443,6 +2443,43 @@ function tgSend(msg) {
 const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
 let _trWsPrice = null;   // last live price — used by tshCalcRR / submitTrade
 
+// Convert internal pair format EURUSD → EUR/USD for Twelvedata API
+function _tdSymbol(pair) { return pair.slice(0,3) + '/' + pair.slice(3); }
+
+// ── Immediate quote fetch (REST fallback — works on weekends / before WS tick) ─
+async function fetchLiveQuote(pair) {
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  try {
+    const sym = _tdSymbol(pair);
+    const url = `https://api.twelvedata.com/quote?symbol=${encodeURIComponent(sym)}&apikey=${key}`;
+    const res = await fetch(url);
+    const d   = await res.json();
+    const price = parseFloat(d.close || d.price || 0);
+    if (!price) return;
+    _livePrice[pair] = price;
+    _trWsPrice = price;
+    // Apply to chart price line immediately
+    if (typeof chtUpdateLivePriceLine === 'function') chtUpdateLivePriceLine(pair, price);
+    // Populate trade sheet entry field if open and not yet user-set
+    const liveEl = document.getElementById('tsh-live-price');
+    if (liveEl && _tshPair === pair) {
+      const isJpy = pair.includes('JPY');
+      const priceStr = price.toFixed(isJpy ? 3 : 5);
+      liveEl.textContent = priceStr;
+      liveEl.style.opacity = '1';
+      const entryEl = document.getElementById('tsh-entry');
+      if (entryEl && !entryEl.dataset.userSet) {
+        entryEl.value = priceStr;
+        entryEl.placeholder = '0.00000';
+        const submitBtn = document.getElementById('tsh-submit-btn');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = '1'; }
+        tshCalcRR();
+      }
+    }
+  } catch(e) {}
+}
+
 // ── Signal snapshot ───────────────────────────────────────────────────────────
 function trSignalSnapshot(pair) {
   if (!D) return {};
@@ -2520,7 +2557,10 @@ function openTradeSheet() {
 
   const sheet = document.getElementById('trade-sheet');
   sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
-  trWsStart(_tshPair);
+  // Start WS (also fires immediate REST quote fetch)
+  liveWsStart(_tshPair);
+  // If WS already running for this pair, still refresh quote immediately
+  if (_livePair === _tshPair && _liveWs) fetchLiveQuote(_tshPair);
 }
 
 function closeActiveTrade() {
@@ -2735,12 +2775,14 @@ const _livePrice = {};   // pair → last known price, persists across chart ren
 function liveWsStart(pair) {
   if (_livePair === pair && _liveWs && _liveWs.readyState === 1) return;
   liveWsStop();
+  // Immediately fetch last price via REST — instant, works on weekends too
+  fetchLiveQuote(pair);
   const key = localStorage.getItem(LS_KEY);
   if (!key) return;
   _livePair = pair;
   try {
     _liveWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
-    _liveWs.onopen    = () => _liveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
+    _liveWs.onopen    = () => _liveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:_tdSymbol(pair) } }));
     _liveWs.onmessage = (e) => {
       try {
         const d = JSON.parse(e.data);
@@ -2771,7 +2813,9 @@ function chtLiveWsStop()    { /* no-op: chart WS and trade WS are now unified */
     if (!el) return;
     new MutationObserver(() => {
       if (el.classList.contains('open')) {
-        if (_chtPair) liveWsStart(_chtPair);
+        if (_chtPair) {
+          liveWsStart(_chtPair);  // includes immediate REST quote fetch
+        }
       } else {
         liveWsStop();
         _trPriceLines={};
