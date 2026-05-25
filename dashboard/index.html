@@ -120,13 +120,13 @@
                     border:1px solid rgba(248,81,73,.3);}
 
   /* Calendar rows */
-  .cal-row{display:flex;align-items:baseline;gap:6px;padding:1px 0;}
-  .cal-time{font-size:9px;font-weight:700;color:var(--muted);white-space:nowrap;min-width:62px;}
-  .cal-curr{font-size:8px;font-weight:800;letter-spacing:.05em;
-            color:rgba(100,160,255,.85);min-width:26px;}
-  .cal-name{font-size:10px;color:var(--muted);}
-  .cal-meta{font-size:8px;color:var(--muted);opacity:.7;margin-left:auto;white-space:nowrap;}
-  .cal-note{font-size:10px;color:var(--muted);padding:1px 0 4px 0;font-style:italic;}
+  .cal-row{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+  .cal-row:last-child{border-bottom:none;}
+  .cal-day{font-size:9px;font-weight:800;color:var(--muted);white-space:nowrap;min-width:28px;text-transform:uppercase;}
+  .cal-time{font-size:9px;color:var(--muted);white-space:nowrap;min-width:50px;opacity:.7;}
+  .cal-curr{font-size:8px;font-weight:800;letter-spacing:.04em;color:rgba(100,160,255,.9);background:rgba(100,160,255,.1);border-radius:3px;padding:1px 4px;white-space:nowrap;flex-shrink:0;}
+  .cal-name{font-size:9px;color:var(--text);line-height:1.3;flex:1;}
+  .cal-meta{font-size:8px;color:var(--muted);opacity:.6;white-space:nowrap;margin-left:auto;flex-shrink:0;}
 
   /* CSM */
   .csm-wrap{
@@ -582,30 +582,37 @@ function renderNews(){
   const now    = Date.now();
   const in24h  = now + 24 * 3600 * 1000;
   const calUpdated = fmtTime(calendar.updated);
-  document.getElementById("calendar-lbl").textContent =
-    "CALENDAR · " + calUpdated;
-  document.getElementById("calendar-txt").innerHTML = events.length
-    ? events.map(e => {
-        const t      = e.iso ? new Date(e.iso).getTime() : 0;
-        const soon   = t >= now && t <= in24h;
-        const ccy    = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency;
-        const meta   = [e.forecast ? `fcst ${e.forecast}` : "",
-                        e.previous ? `prev ${e.previous}` : ""]
-                       .filter(Boolean).join("  ·  ");
-        const timeCol = soon
-          ? `<span class="cal-time" style="color:rgba(180,195,210,.9)">${e.day} ${e.time}</span>`
-          : `<span class="cal-time">${e.day} ${e.time}</span>`;
-        return (
-          `<div class="cal-row">` +
-            timeCol +
-            `<span class="cal-curr">${ccy}</span>` +
-            `<span class="cal-name">${e.name}</span>` +
-            (meta ? `<span class="cal-meta">${meta}</span>` : "") +
-          `</div>` +
-          (e.note ? `<div class="cal-note">${e.note}</div>` : "")
-        );
-      }).join("")
-    : `<span>No high-impact events found.</span>`;
+  document.getElementById("calendar-lbl").textContent = "CALENDAR · " + calUpdated;
+
+  if (!events.length) {
+    document.getElementById("calendar-txt").innerHTML = `<span>No high-impact events found.</span>`;
+  } else {
+    // Group events by day+time slot
+    const slots = {}, slotOrder = [];
+    events.forEach(e => {
+      const key = `${e.day}|${e.time}`;
+      if (!slots[key]) { slots[key] = { day:e.day, time:e.time, iso:e.iso, items:[] }; slotOrder.push(key); }
+      const ccy  = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency || '';
+      const meta = [e.forecast?`fcst ${e.forecast}`:'', e.previous?`prev ${e.previous}`:''].filter(Boolean).join(' · ');
+      slots[key].items.push({ ccy, name:e.name, meta });
+    });
+
+    document.getElementById("calendar-txt").innerHTML = slotOrder.map(key => {
+      const slot  = slots[key];
+      const t     = slot.iso ? new Date(slot.iso).getTime() : 0;
+      const soon  = t >= now && t <= in24h;
+      const dayEl  = `<span class="cal-day" style="${soon?'color:rgba(227,179,65,.9)':''}">${slot.day}</span>`;
+      const timeEl = `<span class="cal-time">${slot.time} UTC</span>`;
+      if (slot.items.length === 1) {
+        const it = slot.items[0];
+        return `<div class="cal-row">${dayEl}${timeEl}<span class="cal-curr">${it.ccy}</span><span class="cal-name">${it.name}</span>${it.meta?`<span class="cal-meta">${it.meta}</span>`:''}</div>`;
+      } else {
+        const ccys  = [...new Set(slot.items.map(i=>i.ccy).filter(Boolean))].map(c=>`<span class="cal-curr">${c}</span>`).join('');
+        const names = slot.items.map(i=>i.name).join(' · ');
+        return `<div class="cal-row">${dayEl}${timeEl}${ccys}<span class="cal-name">${names}</span></div>`;
+      }
+    }).join('');
+  }
 }
 
 const CSM_ORDER = ["USD","JPY","CHF","EUR","GBP","CAD","NZD","AUD"];
@@ -840,10 +847,8 @@ loadData();
 setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
 initInsightsState();
 
-// Top-sheet swipe-to-close
-_initSwipeClose('keys-handle', ()=>{ document.getElementById('td-key-row').classList.remove('open'); });
-_initSwipeClose('log-handle',  ()=>{ closeTradeLog(); });
-_initSwipeClose('info-handle', ()=>{ document.getElementById('info-overlay').classList.remove('open'); });
+// Top-sheet: X button closes, no swipe needed
+// _initSwipeClose kept as no-op for future use
 
 // Close gear menu on outside tap
 document.addEventListener('click', e => {
