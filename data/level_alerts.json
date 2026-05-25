@@ -586,5 +586,12 @@
     "price": 1.179840575584692,
     "direction": "above",
     "active": false
+  },
+  {
+    "id": 1779707617638,
+    "pair": "EURUSD",
+    "price": 1.1772997565414023,
+    "direction": "above",
+    "active": true
   }
 ]
