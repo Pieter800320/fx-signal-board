@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T15:56:13.142762+00:00",
+  "updated": "2026-05-25T17:26:24.360137+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -519,8 +519,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.67,
-      "delta_pct": -0.2,
+      "value": 16.59,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -537,7 +537,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.007,
+      "value": 98.975,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
@@ -567,7 +567,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77493.0,
+      "value": 77551.0,
       "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
@@ -580,33 +580,104 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY and GBPJPY longs at risk. Iran conflict headlines suggest oil shock and energy inflation could trigger risk-off, weakening yen carry trades.",
-    "updated": "2026-05-25T14:26:03.179449+00:00"
+    "text": "GBPJPY LONG and USDCAD LONG at risk. Japan energy bill support weakens JPY. Iran escalation drives oil shock, threatens CAD carry.",
+    "updated": "2026-05-25T17:26:24.360137+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Risk-Off regime confirms USD strength setup directly.\n\nGBPJPY LONG: Risk-Off regime supports JPY safe-haven bid challenge.\n\nEURJPY LONG: Risk-Off regime supports JPY strength contradicting long setup.",
+    "text": "GBPJPY LONG: Risk-on backdrop supports higher-yielding yen cross strength.\n\nUSDCAD LONG: Low risk appetite challenges commodity-linked loonie upside.\n\nGBPUSD LONG: Mixed regime contradicts weak momentum momentum confirmation needs.",
     "top": [
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.7
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.2
+        "score": 6.2
       },
       {
-        "pair": "EURJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 3.53
+        "score": 4.4
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 3.78
       }
     ],
-    "updated": "2026-05-25T14:26:03.179449+00:00"
+    "updated": "2026-05-25T17:26:24.360137+00:00"
   },
   "calendar": {
-    "events": [],
-    "updated": "2026-05-25T14:26:03.179449+00:00"
+    "events": [
+      {
+        "day": "Monday",
+        "time": "08:00 UTC",
+        "iso": "",
+        "currency": "EUR",
+        "name": "Germany Ifo Business Climate Index (May)",
+        "forecast": "None",
+        "previous": "None",
+        "note": "Tests whether April's six-year low can stabilize"
+      },
+      {
+        "day": "Tuesday",
+        "time": "14:00 UTC",
+        "iso": "",
+        "currency": "USD",
+        "name": "US CB Consumer Confidence (May)",
+        "forecast": "None",
+        "previous": "None",
+        "note": "First real US sentiment read since Iran war pushed gasoline prices higher in late April"
+      },
+      {
+        "day": "Wednesday",
+        "time": "01:30 UTC",
+        "iso": "",
+        "currency": "AUD",
+        "name": "Australia Monthly CPI Indicator (April, YoY)",
+        "forecast": "None",
+        "previous": "+4.6% YoY",
+        "note": "After March's hot +4.6% YoY print, another firm reading would force the RBA to pause easing cycle"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 UTC",
+        "iso": "",
+        "currency": "USD",
+        "name": "Core PCE (April)",
+        "forecast": "None",
+        "previous": "+3.2% YoY (March)",
+        "note": "Fed's preferred inflation gauge; densest US data drop of the quarter"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 UTC",
+        "iso": "",
+        "currency": "USD",
+        "name": "Q1 GDP Second Estimate",
+        "forecast": "None",
+        "previous": "+0.5% (Q4 2025)",
+        "note": "Released simultaneously with Core PCE and other major data"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 UTC",
+        "iso": "",
+        "currency": "USD",
+        "name": "Durable Goods Orders",
+        "forecast": "None",
+        "previous": "None",
+        "note": "Released simultaneously with Core PCE and Q1 GDP second estimate"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 UTC",
+        "iso": "",
+        "currency": "USD",
+        "name": "Initial Jobless Claims",
+        "forecast": "None",
+        "previous": "None",
+        "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
+      }
+    ],
+    "updated": "2026-05-25T17:26:24.360137+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
