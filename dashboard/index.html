@@ -602,7 +602,7 @@ function renderNews(){
       const slot  = slots[key];
       const t     = slot.iso ? new Date(slot.iso).getTime() : 0;
       const soon  = t >= now && t <= in24h;
-      const dayEl  = `<span class="cal-day" style="${soon?'color:rgba(227,179,65,.9)':''}">${slot.day}</span>`;
+      const dayEl  = `<span class="cal-day" style="${soon?'color:rgba(227,179,65,.9)':''}">${slot.day.slice(0,3)}</span>`;
       const timeEl = `<span class="cal-time">${slot.time.replace(/\s*UTC\s*$/i,'').trim()} UTC</span>`;
       if (slot.items.length === 1) {
         const it = slot.items[0];
@@ -2577,7 +2577,7 @@ async function fetchLiveQuote(pair) {
         tshCalcRR();
       }
       _updateLivePnL(price);
-    }}
+    }
   } catch(e) {}
 }
 
