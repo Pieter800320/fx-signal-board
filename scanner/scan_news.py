@@ -327,36 +327,47 @@ def call_calendar_search(now: datetime) -> list[dict]:
     week AND generate a brief interpretation note per event.
     Returns list of event dicts ready for signals.json calendar.events.
     """
-    week_str = now.strftime("%B %d, %Y")
-    prompt = (
-        f"Search for 'high impact forex economic calendar week of {week_str}' "
-        f"to find scheduled high-impact FX events this week. "
-        f"Return ONLY a JSON array (no markdown, no backticks, no explanation) of up to 8 events. "
-        f"Each event must have these exact keys: "
-        f'currency (3-letter code e.g. USD), name, day (Mon/Tue/Wed/Thu/Fri/Sun), '
-        f'time (HH:MM UTC), date (YYYY-MM-DD), forecast, previous, note. '
-        f'The note field: one phrase max 8 words — expected FX direction if forecast is met. '
-        f'Use empty string for unknown forecast/previous. '
-        f'Example: [{{"currency":"USD","name":"NFP","day":"Fri","time":"12:30",'
-        f'"date":"2026-05-30","forecast":"185K","previous":"177K",'
-        f'"note":"Beat expected, USD bullish"}}]'
-    )
-    raw = _haiku_search(prompt, max_tokens=700)
+    from datetime import timedelta
+    monday   = now - timedelta(days=now.weekday())
+    friday   = monday + timedelta(days=4)
+    date_range = f"{monday.strftime('%B %d')} to {friday.strftime('%B %d, %Y')}"
 
-    # Extract and parse JSON array from response
-    try:
-        start = raw.find('[')
-        end   = raw.rfind(']') + 1
-        if start < 0 or end <= start:
-            print(f"  ⚠ Calendar search: no JSON array found in response")
+    prompt = (
+        f"Search for the economic calendar for the week of {date_range}. "
+        f"Search for: 'forex economic calendar {monday.strftime('%B %d')} {friday.strftime('%B %d %Y')}' "
+        f"and also 'high impact economic events {monday.strftime('%B %Y')}'. "
+        f"Include: central bank decisions (Fed, ECB, BOJ, BOE, RBA, BOC, RBNZ, SNB), "
+        f"US NFP, CPI, PCE, GDP, PMI, retail sales, JOLTS, ADP, PPI, unemployment claims. "
+        f"Return ONLY a JSON array (no markdown, no backticks) of up to 10 events. "
+        f"Each item: currency (3-letter), name, day (Mon/Tue/Wed/Thu/Fri), "
+        f"time (HH:MM UTC), date (YYYY-MM-DD), forecast, previous, note (max 8 words, expected FX impact). "
+        f"Only include events between {monday.strftime('%Y-%m-%d')} and {friday.strftime('%Y-%m-%d')}."
+    )
+    raw = _haiku_search(prompt, max_tokens=900)
+
+    def _parse(text: str) -> list:
+        try:
+            start = text.find('[')
+            end   = text.rfind(']') + 1
+            if start < 0 or end <= start:
+                return []
+            return json.loads(text[start:end])
+        except Exception:
             return []
-        events_raw = json.loads(raw[start:end])
-    except Exception as e:
-        print(f"  ⚠ Calendar search parse error: {e}")
-        return []
+
+    events_raw = _parse(raw)
+
+    # Retry once with simpler query if first attempt returned nothing
+    if not events_raw:
+        print("  ⚠ Calendar: first search empty — retrying…")
+        retry = (
+            f"Search 'economic calendar {monday.strftime('%B %d-%d %Y')}' high impact forex events. "
+            f"Return JSON array: currency, name, day, time, date, forecast, previous, note. No markdown."
+        )
+        events_raw = _parse(_haiku_search(retry, max_tokens=900))
 
     out = []
-    for ev in events_raw[:8]:
+    for ev in events_raw[:10]:
         date_str = ev.get('date', '')
         time_str = ev.get('time', '00:00')
         try:
@@ -609,9 +620,8 @@ def build_deep_context(signals: dict, macro: dict) -> str:
 
 def call_deep_analysis(signals: dict, macro: dict) -> dict:
     """
-    Daily Sonnet call — 200-250 word interpretive macro narrative.
-    Connects quantitative data to economic mechanisms.
-    Returns {text, generated_at} for storage in signals.json deep_analysis key.
+    Daily Sonnet call — headline + 180-word interpretive macro narrative.
+    Returns {headline, text, generated_at} for storage in signals.json deep_analysis key.
     """
     context = build_deep_context(signals, macro)
 
@@ -621,27 +631,46 @@ def call_deep_analysis(signals: dict, macro: dict) -> dict:
         "When you see a number, explain what it means mechanically for markets — "
         "the transmission channel from instrument to currency pair. "
         "Be concrete about which pairs are most affected and why. "
-        "Never list data back at the reader; they can see it themselves."
+        "Never list data back at the reader; they can see it themselves. "
+        "Respond in valid JSON only — no markdown, no backticks, no explanation outside the JSON."
     )
 
     prompt = (
         f"{context}\n\n"
-        "Write a 200-250 word deep analysis of current market conditions. "
-        "Write in continuous prose — no headers, no bullets, no markdown.\n\n"
-        "Cover these three things in order:\n"
-        "1. The 2-3 most significant or anomalous signals right now. For each, explain "
-        "the economic mechanism: why this value matters, what it signals about underlying "
-        "conditions, and what historically follows from here.\n"
-        "2. Whether these signals are telling a coherent story or showing contradictions. "
-        "If contradictions exist, name them explicitly and explain the tension.\n"
-        "3. Which specific pairs from the top setups above are most reinforced or most "
-        "challenged by the current macro context, and the precise reason why.\n\n"
-        "Plain text only. No markdown. No asterisks. No bullets. No headers. "
-        "One or two flowing paragraphs. 200-250 words."
+        "Produce a JSON object with exactly two keys:\n"
+        "1. \"headline\": A single sentence (max 12 words) that captures the single most "
+        "important macro condition or tension right now. Make it specific and striking — "
+        "not generic. Example: \"Gold-dollar divergence signals fiscal credibility crisis, "
+        "not risk-off positioning.\"\n"
+        "2. \"text\": A 170-180 word deep analysis in continuous prose. "
+        "No headers, no bullets, no markdown. Cover in order:\n"
+        "   a) The 2-3 most anomalous signals and their economic mechanism — "
+        "why this value matters and what historically follows.\n"
+        "   b) Whether signals tell a coherent story or contradict — name tensions explicitly.\n"
+        "   c) Which specific pairs are most reinforced or challenged, and precisely why.\n"
+        "Plain text for the \"text\" value. Strict 170-180 word count.\n\n"
+        "Return only valid JSON. Example format: "
+        "{\"headline\": \"...\", \"text\": \"...\"}"
     )
 
-    text = _sonnet(system, prompt, max_tokens=450)
+    raw = _sonnet(system, prompt, max_tokens=500)
+
+    # Parse JSON response
+    try:
+        start = raw.find('{')
+        end   = raw.rfind('}') + 1
+        parsed = json.loads(raw[start:end])
+        headline = parsed.get('headline', '').strip()
+        text     = parsed.get('text', '').strip()
+        if not text:
+            raise ValueError("empty text")
+    except Exception:
+        # Fallback: treat entire response as text, no headline
+        headline = ''
+        text = raw.strip()
+
     return {
+        "headline":     headline,
         "text":         text,
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
@@ -681,8 +710,9 @@ def call_week_ahead(signals: dict, calendar_events: list[dict]) -> str:
     cal_block = "\n".join(cal_lines) if cal_lines else "No high-impact events found"
 
     prompt = (
-        f"Search for 'FX week ahead forex' to find current weekly FX market previews. "
-        f"Read what you find and write a Week Ahead briefing for the coming trading week.\n\n"
+        f"Search for 'FX week ahead forex' and 'forex market outlook this week' to find current weekly FX previews. "
+        f"Write the briefing directly — no preamble, do not start with 'Based on' or any introduction. "
+        f"Begin immediately with the dominant macro theme.\n\n"
         f"Current market state:\n"
         f"D1 Regime: {reg.get('regime','—')} {reg.get('confidence','')}\n"
         f"Macro: {mac.get('label','—')} {mac.get('confidence','')}\n"
@@ -768,14 +798,14 @@ def main():
     print("\n[3/6] Headlines + calendar…")
     headlines = fetch_headlines()
 
-    # Calendar: refresh only every 6 hours — events don't change that quickly
+    # Calendar: refresh every 4 hours — also force refresh if cache is empty
     prev_cal   = signals.get("calendar", {})
     prev_upd   = prev_cal.get("updated", "2000-01-01T00:00:00+00:00")
     try:
         cal_age_h = (now - datetime.fromisoformat(prev_upd)).total_seconds() / 3600
     except Exception:
         cal_age_h = 99
-    if cal_age_h >= 6:
+    if cal_age_h >= 4 or not prev_cal.get("events"):
         print(f"  Calendar cache {cal_age_h:.1f}h old — refreshing via web search…")
         events = call_calendar_search(now)
     else:
