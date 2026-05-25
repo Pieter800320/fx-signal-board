@@ -197,22 +197,24 @@
   .top-sheet{
     position:fixed;top:0;left:0;right:0;z-index:260;
     background:var(--bg);
-    transform:translateY(-100%);
+    transform:translateY(-110%);
     transition:transform .28s cubic-bezier(.32,0,.2,1);
     border-radius:0 0 16px 16px;
     border-bottom:1px solid var(--bord);
     will-change:transform;
+    overflow:hidden;
   }
   .top-sheet.open{transform:translateY(0);}
+  .top-sheet-header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 14px 8px;border-bottom:1px solid var(--bord);
+  }
+  .top-sheet-title{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .top-sheet-close{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;padding:0;}
   .top-sheet-handle{
     width:36px;height:4px;border-radius:2px;
-    background:var(--bord);margin:10px auto 0;cursor:ns-resize;
+    background:var(--bord);margin:8px auto 10px;cursor:ns-resize;display:block;
   }
-  /* Keys sheet specific */
-  .td-key-row{display:none;flex-direction:column;padding:8px 14px 4px;gap:0;}
-  .td-key-row.open{display:flex;}
-  .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
-  .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
   /* Loading */
   .loading{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
 </style>
@@ -232,30 +234,34 @@
     </div>
   </div>
 </div>
-<div class="top-sheet td-key-row" id="td-key-row">
-  <div style="padding:12px 14px 8px;display:flex;flex-direction:column;gap:0;">
-  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
-    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TD Key</span>
-    <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…">
-    <button onclick="saveTdKey()">Save</button>
-    <button onclick="clearTdKey()">Clear</button>
+<div class="top-sheet" id="td-key-row">
+  <div class="top-sheet-header">
+    <span class="top-sheet-title">⚙ Keys</span>
+    <button class="top-sheet-close" onclick="toggleKeyRow()">✕</button>
   </div>
-  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">GH PAT</span>
-    <input type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
-    <button onclick="chtSavePat()">Save</button>
-    <button onclick="chtClearPat()">Clear</button>
-  </div>
-  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TG Token</span>
-    <input type="password" id="tg-token-inp" placeholder="bot token…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
-    <button onclick="tgSaveToken()">Save</button>
-  </div>
-  <div style="display:flex;align-items:center;gap:6px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TG Chat</span>
-    <input type="text" id="tg-chat-inp" placeholder="chat ID…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
-    <button onclick="tgSaveChat()">Save</button>
-  </div>
+  <div style="padding:10px 14px;display:flex;flex-direction:column;gap:8px;">
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TD Key</span>
+      <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="saveTdKey()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Save</button>
+      <button onclick="clearTdKey()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Clear</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">GH PAT</span>
+      <input type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="chtSavePat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Save</button>
+      <button onclick="chtClearPat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Clear</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TG Token</span>
+      <input type="password" id="tg-token-inp" placeholder="bot token…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="tgSaveToken()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Save</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TG Chat</span>
+      <input type="text" id="tg-chat-inp" placeholder="chat ID…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="tgSaveChat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;">Save</button>
+    </div>
   </div>
   <div class="top-sheet-handle" id="keys-handle"></div>
 </div>
@@ -789,7 +795,8 @@ function toggleKeyRow(){
   row.classList.toggle('open');
   if(row.classList.contains('open')){
     const saved=localStorage.getItem(LS_KEY);
-    document.getElementById('td-key-inp').placeholder=saved?'Key saved ✓ (enter new to replace)':'paste Twelvedata key…';
+    const inp=document.getElementById('td-key-inp');
+    if(inp) inp.placeholder=saved?'Key saved ✓ (enter new to replace)':'paste Twelvedata key…';
     chtUpdatePatPlaceholder();
   }
 }
@@ -860,11 +867,11 @@ initInsightsState();
 
 <!-- ── Info overlay ───────────────────────────────────────────────────── -->
 <div class="top-sheet" id="info-overlay">
-  <div id="info-header">
-    <span>How It Works</span>
-    <button id="info-close" onclick="toggleInfo()">✕</button>
+  <div class="top-sheet-header">
+    <span class="top-sheet-title">ⓘ Info</span>
+    <button class="top-sheet-close" onclick="toggleInfo()">✕</button>
   </div>
-  <div id="info-body">
+  <div id="info-body" style="overflow-y:auto;max-height:70vh;">
 
     <div class="info-section">
       <h3>Workflow</h3>
@@ -980,9 +987,9 @@ initInsightsState();
 <style>
 /* ── Info overlay ────────────────────────────────────────────────────────── */
 #info-overlay{
-  height:100vh;display:flex;flex-direction:column;
+  display:flex;flex-direction:column;
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  overflow:hidden;
+  max-height:85vh;
 }
 #info-overlay.open{}
 #info-header{
@@ -1119,7 +1126,7 @@ initInsightsState();
   position:relative;
 }
 #cht-chart-area.draw-mode{cursor:crosshair;}
-#cht-price{flex-shrink:0;min-height:0;position:relative;}
+#cht-price{flex:1;min-height:0;position:relative;overflow:hidden;}
 #cht-divider{flex-shrink:0;height:1px;background:var(--bord);}
 #cht-macd{flex-shrink:0;min-height:0;position:relative;}
 
@@ -1320,9 +1327,9 @@ initInsightsState();
 
 <!-- ══ TRADE LOG OVERLAY ══════════════════════════════════════════════════ -->
 <div class="top-sheet" id="log-overlay">
-  <div id="log-header">
-    <span>TRADE LOG</span>
-    <button id="log-close-btn" onclick="closeTradeLog()">✕</button>
+  <div class="top-sheet-header">
+    <span class="top-sheet-title">▤ Trade Log</span>
+    <button class="top-sheet-close" onclick="closeTradeLog()">✕</button>
   </div>
   <div id="log-balance-strip">
     <div>
@@ -2439,7 +2446,7 @@ function chtAttachLongPress() {
 #tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
 /* ── Log overlay ────────────────────────────────────────────────────────── */
-#log-overlay{height:100vh;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
+#log-overlay{display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;max-height:90vh;}
 #log-overlay.open{}
 #trade-sheet{
   position:absolute;bottom:0;left:0;right:0;z-index:50;max-height:88vh;
@@ -2448,9 +2455,6 @@ function chtAttachLongPress() {
   touch-action:none;overflow:hidden;
   transition:transform .22s ease-out;display:flex;flex-direction:column;
 }
-#log-header{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
-#log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
-#log-close-btn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
 #log-stats{flex-shrink:0;padding:7px 12px;background:var(--surf);border-bottom:1px solid var(--bord);}
 .log-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
 .log-stat{background:var(--dim);border:1px solid var(--bord);border-radius:5px;padding:5px 8px;display:flex;align-items:center;justify-content:space-between;}
@@ -2461,7 +2465,7 @@ function chtAttachLongPress() {
 .log-mini-cell{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;padding:4px 5px;text-align:center;}
 .log-mini-val{font-size:9px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text);}
 .log-mini-lbl{font-size:7px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:1px;}
-#log-body{flex:1;overflow-y:auto;padding:8px 12px 4px;}
+#log-body{flex:1;overflow-y:auto;padding:8px 12px 4px;max-height:50vh;}
 .log-section-lbl{font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:6px 0 4px;opacity:.7;}
 .log-trade-row{background:var(--dim);border:1px solid var(--bord);border-radius:6px;padding:7px 9px;margin-bottom:4px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .log-t-left{display:flex;flex-direction:column;gap:3px;min-width:0;}
