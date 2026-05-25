@@ -822,7 +822,7 @@ def main():
     print(f"  Catalyst: {catalyst}")
 
     # ── Deep Analysis — generated once daily at 06:00 UTC ────────────────────
-    is_deep_run = True
+    is_deep_run = (now.hour == 6)
     if is_deep_run:
         print("\n[DA] Deep Analysis — daily Sonnet narrative…")
         deep = call_deep_analysis(signals, macro)
