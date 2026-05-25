@@ -593,7 +593,8 @@ function renderNews(){
       const key = `${e.day}|${e.time}`;
       if (!slots[key]) { slots[key] = { day:e.day, time:e.time, iso:e.iso, items:[] }; slotOrder.push(key); }
       const ccy  = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency || '';
-      const meta = [e.forecast?`fcst ${e.forecast}`:'', e.previous?`prev ${e.previous}`:''].filter(Boolean).join(' · ');
+      const isVal = v => v && v !== 'None' && v !== 'none' && v !== 'N/A';
+      const meta = [isVal(e.forecast)?`fcst ${e.forecast}`:'', isVal(e.previous)?`prev ${e.previous}`:''].filter(Boolean).join(' · ');
       slots[key].items.push({ ccy, name:e.name, meta });
     });
 
@@ -602,7 +603,7 @@ function renderNews(){
       const t     = slot.iso ? new Date(slot.iso).getTime() : 0;
       const soon  = t >= now && t <= in24h;
       const dayEl  = `<span class="cal-day" style="${soon?'color:rgba(227,179,65,.9)':''}">${slot.day}</span>`;
-      const timeEl = `<span class="cal-time">${slot.time} UTC</span>`;
+      const timeEl = `<span class="cal-time">${slot.time.replace(/\s*UTC\s*$/i,'').trim()} UTC</span>`;
       if (slot.items.length === 1) {
         const it = slot.items[0];
         return `<div class="cal-row">${dayEl}${timeEl}<span class="cal-curr">${it.ccy}</span><span class="cal-name">${it.name}</span>${it.meta?`<span class="cal-meta">${it.meta}</span>`:''}</div>`;
