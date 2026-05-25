@@ -25,10 +25,6 @@
        box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
   .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
-  .td-key-row{display:none;align-items:center;gap:6px;margin-bottom:6px;padding:6px 8px;background:var(--surf);border:1px solid var(--bord);border-radius:8px;font-size:10px;}
-  .td-key-row.open{display:flex;flex-direction:column;align-items:stretch;}
-  .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
-  .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
 
   /* MARKET STATE */
   .mstate{
@@ -197,6 +193,26 @@
   .csm-fill{position:absolute;height:100%;border-radius:1px;transition:width .3s;}
   .csm-quote{font-size:8px;font-weight:700;min-width:20px;text-align:right;}
 
+  /* ── Top sheets (keys, log, info) ──────────────────────────────────────── */
+  .top-sheet{
+    position:fixed;top:0;left:0;right:0;z-index:260;
+    background:var(--bg);
+    transform:translateY(-100%);
+    transition:transform .28s cubic-bezier(.32,0,.2,1);
+    border-radius:0 0 16px 16px;
+    border-bottom:1px solid var(--bord);
+    will-change:transform;
+  }
+  .top-sheet.open{transform:translateY(0);}
+  .top-sheet-handle{
+    width:36px;height:4px;border-radius:2px;
+    background:var(--bord);margin:10px auto 0;cursor:ns-resize;
+  }
+  /* Keys sheet specific */
+  .td-key-row{display:none;flex-direction:column;padding:8px 14px 4px;gap:0;}
+  .td-key-row.open{display:flex;}
+  .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
+  .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
   /* Loading */
   .loading{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
 </style>
@@ -216,46 +232,41 @@
     </div>
   </div>
 </div>
-<div class="td-key-row" id="td-key-row">
-  <div style="display:flex;align-items:center;gap:6px;">
-    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">TD Key</span>
+<div class="top-sheet td-key-row" id="td-key-row">
+  <div style="padding:12px 14px 8px;display:flex;flex-direction:column;gap:0;">
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;">
+    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TD Key</span>
     <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…">
     <button onclick="saveTdKey()">Save</button>
     <button onclick="clearTdKey()">Clear</button>
   </div>
-  <div style="display:flex;align-items:center;gap:6px;margin-top:5px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">GH PAT</span>
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;padding-top:5px;border-top:1px solid var(--bord);">
+    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">GH PAT</span>
     <input type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
     <button onclick="chtSavePat()">Save</button>
     <button onclick="chtClearPat()">Clear</button>
   </div>
-  <div style="display:flex;align-items:center;gap:6px;margin-top:5px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">TG Token</span>
+  <div style="display:flex;align-items:center;gap:6px;margin-bottom:5px;padding-top:5px;border-top:1px solid var(--bord);">
+    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TG Token</span>
     <input type="password" id="tg-token-inp" placeholder="bot token…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
     <button onclick="tgSaveToken()">Save</button>
   </div>
-  <div style="display:flex;align-items:center;gap:6px;margin-top:5px;padding-top:5px;border-top:1px solid var(--bord);">
-    <span style="color:var(--muted);white-space:nowrap;min-width:42px;">TG Chat</span>
+  <div style="display:flex;align-items:center;gap:6px;padding-top:5px;border-top:1px solid var(--bord);">
+    <span style="color:var(--muted);white-space:nowrap;min-width:52px;font-size:10px;font-weight:700;">TG Chat</span>
     <input type="text" id="tg-chat-inp" placeholder="chat ID…" style="flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
     <button onclick="tgSaveChat()">Save</button>
   </div>
+  </div>
+  <div class="top-sheet-handle" id="keys-handle"></div>
 </div>
 
-<div class="mstate" id="mstate">
+<div class="mstate" id="mstate" onclick="cycleCard()" style="cursor:pointer;user-select:none;">
   <div class="ms-lbl-row">
-    <div class="ms-lbl">Regime</div>
+    <div class="ms-lbl" id="card-lbl">Regime</div>
+    <div class="ms-lbl" style="opacity:.4;">○ ● ●</div>
   </div>
   <div class="ms-row" id="ms-row">
     <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
-  </div>
-</div>
-
-<div class="macro-card" id="macro-card" onclick="flipMacro()" style="cursor:pointer;user-select:none;">
-  <div class="ms-lbl-row">
-    <div class="ms-lbl" id="macro-lbl">Macro</div>
-  </div>
-  <div class="ms-row" id="macro-row">
-    <div class="ms-item"><div class="ms-val" style="color:var(--muted)">…</div></div>
   </div>
 </div>
 
@@ -497,87 +508,61 @@ function renderMarketState(){
   const h4  = D.regime_h4 || {};
   const h1  = D.regime_h1 || {};
   const mac = D.macro     || {};
+  const w1  = D.regime_w1 || {};
 
-  // Outer card border reflects H4 (primary trading TF)
-  const el = document.getElementById("mstate");
+  const el = document.getElementById('mstate');
+  // Border reflects H4 regime always
   el.className = mstateClass(h4.regime);
 
-  // 3-column regime row
-  const col = (lbl, r) => `
-    <div class="ms-item">
-      <div class="ms-key">${lbl}</div>
-      <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||"—"}</div>
-      <div class="ms-sub">${r.confidence||"—"} · ${r.stable?"Stable":"Shifting"}</div>
-    </div>`;
+  const lblEl  = document.getElementById('card-lbl');
+  const rowEl  = document.getElementById('ms-row');
+  const dotsEl = el.querySelector('.ms-lbl-row .ms-lbl:last-child');
 
-  document.getElementById("ms-row").innerHTML =
-    col("D1", d1) +
-    '<div class="ms-div"></div>' +
-    col("H4", h4) +
-    '<div class="ms-div"></div>' +
-    col("H1", h1);
+  const col = (lbl, r) =>
+    `<div class="ms-item">
+       <div class="ms-key">${lbl}</div>
+       <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||'—'}</div>
+       <div class="ms-sub">${r.confidence||'—'} · ${r.stable?'Stable':'Shifting'}</div>
+     </div>`;
 
-  // Macro card
-  const w1  = D.regime_w1 || {};
-  document.getElementById("macro-lbl").textContent =
-    macroFace === 0 ? "Macro" : "Cross-Asset";
+  if (_cardState === 0) {
+    // State 0: Regime — D1 / H4 / H1
+    if (lblEl)  lblEl.textContent = 'Regime';
+    if (dotsEl) dotsEl.textContent = '● ○ ○';
+    rowEl.className = 'ms-row';
+    rowEl.innerHTML = col('D1',d1)+'<div class="ms-div"></div>'+col('H4',h4)+'<div class="ms-div"></div>'+col('H1',h1);
 
-  if (macroFace === 0) {
-    document.getElementById("macro-row").className = "ms-row";
-    document.getElementById("macro-row").innerHTML =
+  } else if (_cardState === 1) {
+    // State 1: Macro — W1 + D1 macro label
+    if (lblEl)  lblEl.textContent = 'Macro';
+    if (dotsEl) dotsEl.textContent = '○ ● ○';
+    rowEl.className = 'ms-row';
+    rowEl.innerHTML =
+      col('W1', w1) +
+      '<div class="ms-div"></div>' +
       `<div class="ms-item">
-         <div class="ms-key">W1</div>
-         <div class="ms-val" style="color:${regimeColor(w1.regime)}">${w1.regime||"—"}</div>
-         <div class="ms-sub">${w1.confidence||"—"} · ${w1.stable?"Stable":"Shifting"}</div>
-       </div>
-       <div class="ms-div"></div>
-       <div class="ms-item">
          <div class="ms-key">D1</div>
-         <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||"—"}</div>
-         <div class="ms-sub">${mac.confidence||"—"} · ${mac.stable?"Stable":"Shifting"}</div>
+         <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||'—'}</div>
+         <div class="ms-sub">${mac.confidence||'—'} · ${mac.stable?'Stable':'Shifting'}</div>
        </div>`;
-  } else {
-    const ma = D.macro_assets || {};
-    const ASSETS = [
-      ["vix",    "VIX"],
-      ["us10y",  "US 10Y"],
-      ["us3m",   "US 3M"],
-      ["wti",    "WTI"],
-      ["gold",   "Gold"],
-      ["spx",    "SPX"],
-      ["copper", "Copper"],
-      ["dxy",    "DXY"],
-      ["btc",    "BTC"],
-      ["curve",  "10Y-3M"],
-    ];
-    const items = ASSETS.map(([key, lbl]) => {
-      const a   = ma[key] || {};
-      const val = a.value != null ? a.value : "—";
-      const dir = a.direction;
-      const col = dir === "up" ? "var(--buy)" : dir === "down" ? "var(--sell)" : "var(--muted)";
-      const arr = dir === "up" ? "↑" : dir === "down" ? "↓" : "·";
-      const dlt = a.delta_bp  != null ? `${a.delta_bp  > 0 ? "+" : ""}${a.delta_bp.toFixed(1)}bp`
-                : a.delta_pct != null ? `${a.delta_pct > 0 ? "+" : ""}${a.delta_pct.toFixed(1)}%`
-                : "—";
-      // Curve: value is already in bp, show sign
-      const dispVal = key === "curve" && a.value != null
-        ? `${a.value > 0 ? "+" : ""}${a.value}bp`
-        : val;
-      return `<div class="ma-item">
-        <div class="ma-key">${lbl}</div>
-        <div class="ma-val" style="color:${col}">${dispVal} ${arr}</div>
-        <div class="ma-dlt" style="color:${col}">${dlt}</div>
-      </div>`;
-    }).join("");
-    document.getElementById("macro-row").className = "";
-    document.getElementById("macro-row").innerHTML =
-      `<div class="ma-grid" style="width:100%">${items}</div>`;
-  }
-}
 
-function flipMacro() {
-  macroFace = macroFace === 0 ? 1 : 0;
-  renderMarketState();
+  } else {
+    // State 2: Cross-Asset
+    if (lblEl)  lblEl.textContent = 'Cross-Asset';
+    if (dotsEl) dotsEl.textContent = '○ ○ ●';
+    const ma = D.macro_assets || {};
+    const ASSETS = [['vix','VIX'],['us10y','US10Y'],['wti','WTI'],['gold','Gold'],['spx','SPX'],['copper','Copper'],['dxy','DXY'],['btc','BTC'],['curve','10Y-3M'],['us3m','US3M']];
+    const items = ASSETS.map(([key,lbl]) => {
+      const a=ma[key]||{}, val=a.value!=null?a.value:'—', dir=a.direction;
+      const c=dir==='up'?'var(--buy)':dir==='down'?'var(--sell)':'var(--muted)';
+      const arr=dir==='up'?'↑':dir==='down'?'↓':'·';
+      const dlt=a.delta_bp!=null?`${a.delta_bp>0?'+':''}${a.delta_bp.toFixed(1)}bp`:a.delta_pct!=null?`${a.delta_pct>0?'+':''}${a.delta_pct.toFixed(1)}%`:'—';
+      const dispVal=key==='curve'&&a.value!=null?`${a.value>0?'+':''}${a.value}bp`:val;
+      return `<div class="ma-item"><div class="ma-key">${lbl}</div><div class="ma-val" style="color:${c}">${dispVal} ${arr}</div><div class="ma-dlt" style="color:${c}">${dlt}</div></div>`;
+    }).join('');
+    rowEl.className = '';
+    rowEl.innerHTML = `<div class="ma-grid" style="width:100%">${items}</div>`;
+  }
 }
 
 function renderNews(){
@@ -795,20 +780,58 @@ function flipBlock(pair){
 const LS_KEY = 'fsb_td_key';
 
 function toggleInfo(){
-  const el = document.getElementById('info-overlay');
+  const el=document.getElementById('info-overlay');
   el.classList.toggle('open');
 }
 
 function toggleKeyRow(){
-  const row = document.getElementById('td-key-row');
+  const row=document.getElementById('td-key-row');
   row.classList.toggle('open');
   if(row.classList.contains('open')){
-    const saved = localStorage.getItem(LS_KEY);
-    document.getElementById('td-key-inp').placeholder =
-      saved ? 'Key saved ✓ (enter new to replace)' : 'paste Twelvedata key…';
+    const saved=localStorage.getItem(LS_KEY);
+    document.getElementById('td-key-inp').placeholder=saved?'Key saved ✓ (enter new to replace)':'paste Twelvedata key…';
     chtUpdatePatPlaceholder();
   }
 }
+
+// ── Top-sheet swipe-up-to-close ───────────────────────────────────────────────
+function _initTopSheetSwipe(handleId, closeFn) {
+  const handle = document.getElementById(handleId);
+  if (!handle) return;
+  const sheet = handle.closest('.top-sheet');
+  if (!sheet) return;
+  let sy=0, cy=0, drag=false;
+  const start = e => { const t=e.touches?.[0]||e; sy=cy=t.clientY; drag=true; };
+  const move  = e => {
+    if (!drag) return;
+    const t=e.touches?.[0]||e; cy=t.clientY;
+    const dy=Math.min(0,cy-sy);
+    sheet.style.transition='none';
+    sheet.style.transform=`translateY(${dy}px)`;
+    if(e.cancelable) e.preventDefault();
+  };
+  const end = () => {
+    if (!drag) return; drag=false;
+    sheet.style.transition='';
+    if (cy-sy < -80) { closeFn(); }
+    else { sheet.style.transform=''; }
+  };
+  handle.addEventListener('touchstart',start,{passive:true});
+  handle.addEventListener('touchmove',move,{passive:false});
+  handle.addEventListener('touchend',end);
+  handle.addEventListener('mousedown',start);
+  window.addEventListener('mousemove',move);
+  window.addEventListener('mouseup',end);
+}
+
+// ── 3-state cycling card: Regime → Macro → Cross-Asset ───────────────────────
+let _cardState = 0;
+const _cardDots = ['● ○ ○','○ ● ○','○ ○ ●'];
+function cycleCard() {
+  _cardState = (_cardState + 1) % 3;
+  renderMarketState();
+}
+function flipMacro() { cycleCard(); } // backwards compat
 function toggleGearMenu(){
   const m=document.getElementById('gear-menu');
   if(!m) return;
@@ -836,7 +859,7 @@ initInsightsState();
 
 
 <!-- ── Info overlay ───────────────────────────────────────────────────── -->
-<div id="info-overlay">
+<div class="top-sheet" id="info-overlay">
   <div id="info-header">
     <span>How It Works</span>
     <button id="info-close" onclick="toggleInfo()">✕</button>
@@ -951,21 +974,17 @@ initInsightsState();
     </div>
 
   </div>
+  <div class="top-sheet-handle" id="info-handle"></div>
 </div>
-
-<!-- ═══════════════════════════════════════════════════════════════════════
-     CHART OVERLAY — styles, HTML, JS
      ═══════════════════════════════════════════════════════════════════════ -->
 <style>
 /* ── Info overlay ────────────────────────────────────────────────────────── */
 #info-overlay{
-  position:fixed;inset:0;z-index:200;
-  background:rgba(10,14,19,.96);
-  display:none;flex-direction:column;
+  height:100vh;display:flex;flex-direction:column;
   font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-  overflow-y:auto;
+  overflow:hidden;
 }
-#info-overlay.open{display:flex;}
+#info-overlay.open{}
 #info-header{
   position:sticky;top:0;z-index:10;
   background:rgba(10,14,19,.98);
@@ -1300,7 +1319,7 @@ initInsightsState();
 </div><!-- end cht-overlay -->
 
 <!-- ══ TRADE LOG OVERLAY ══════════════════════════════════════════════════ -->
-<div id="log-overlay">
+<div class="top-sheet" id="log-overlay">
   <div id="log-header">
     <span>TRADE LOG</span>
     <button id="log-close-btn" onclick="closeTradeLog()">✕</button>
@@ -1325,6 +1344,7 @@ initInsightsState();
     <button class="log-action-btn" onclick="exportTradeCSV()">Export CSV</button>
     <button class="log-action-btn log-danger-btn" onclick="clearAllTrades()">Clear All</button>
   </div>
+  <div class="top-sheet-handle" id="log-handle"></div>
 </div>
 
 <!-- ── Chart JS ───────────────────────────────────────────────────────── -->
@@ -2396,7 +2416,7 @@ function chtAttachLongPress() {
   width:36px;height:4px;border-radius:2px;
   background:var(--bord);margin:8px auto 0;
 }
-#trade-sheet-inner{padding:8px 14px 18px;}
+#trade-sheet-inner{padding:8px 14px 18px;overflow-y:auto;flex:1;}
 #tsh-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
 #tsh-pair-lbl{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text);flex:1;}
 #tsh-live-price{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text);}
@@ -2419,8 +2439,15 @@ function chtAttachLongPress() {
 #tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
 /* ── Log overlay ────────────────────────────────────────────────────────── */
-#log-overlay{position:fixed;inset:0;z-index:150;background:var(--bg);display:none;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
-#log-overlay.open{display:flex;}
+#log-overlay{height:100vh;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
+#log-overlay.open{}
+#trade-sheet{
+  position:absolute;bottom:0;left:0;right:0;z-index:50;max-height:88vh;
+  background:var(--surf);border-top:1px solid var(--bord);
+  border-radius:12px 12px 0 0;
+  touch-action:none;overflow:hidden;
+  transition:transform .22s ease-out;display:flex;flex-direction:column;
+}
 #log-header{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
 #log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 #log-close-btn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
@@ -3224,6 +3251,11 @@ function chtLiveWsStop()    { /* no-op: chart WS and trade WS are now unified */
         menu.style.display='none';
       }
     });
+
+    // Init top-sheet swipe-up-to-close for all three panels
+    _initTopSheetSwipe('keys-handle',  ()=>{ document.getElementById('td-key-row').classList.remove('open'); });
+    _initTopSheetSwipe('log-handle',   ()=>{ closeTradeLog(); });
+    _initTopSheetSwipe('info-handle',  ()=>{ document.getElementById('info-overlay').classList.remove('open'); });
   });
 })();
 </script>
