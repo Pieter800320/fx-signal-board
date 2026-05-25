@@ -1377,7 +1377,8 @@ let _chtMacdInst  = null;
 let _chtCandles   = null;
 let _chtPriceLine = null;
 let _chtAlertRefs = [];
-let _chtOhlcvCache = {};
+let _chtOhlcvCache    = {};
+let _chtFilteredOhlcv = [];   // filtered OHLCV actually loaded into the chart (no weekends)
 let _chtTimerInt  = null;
 let _chtIndState  = null;
 
@@ -1531,6 +1532,7 @@ function _chtDestroyCharts() {
   _chtPriceLine  = null;
   _chtCandles    = null;
   _chtStagingLine = null;
+  _chtFilteredOhlcv = [];
   const zo = document.getElementById('cht-zone-overlay');
   if (zo) zo.innerHTML = '';
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
@@ -1692,6 +1694,7 @@ function _chtRender(pair, tf, ohlcv) {
   if (!ohlcv.length) return;
   ohlcv = _filterChartSpikes(ohlcv);
   ohlcv = _filterWeekendCandles(ohlcv);
+  _chtFilteredOhlcv = ohlcv;   // save for zone overlay coordinate lookup
 
   const priceEl = document.getElementById('cht-price');
   const macdEl  = document.getElementById('cht-macd');
@@ -2637,28 +2640,37 @@ function _trDrawZones() {
   const W = priceEl.clientWidth, H = priceEl.clientHeight;
   if (!W || !H) return;
 
+  // Use the filtered OHLCV actually loaded into the chart — weekend-free, real timestamps
+  const ohlcv = _chtFilteredOhlcv;
+  if (!ohlcv.length) return;
+
   const tfSec = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
   const ts = _chtInst.timeScale();
 
   trades.forEach(t => {
     try {
-      // Entry candle time (snap to TF boundary)
+      // Find the candle nearest to trade entry time in the filtered dataset
       const entryT = Math.floor(new Date(t.created).getTime() / 1000);
       const snapT  = Math.floor(entryT / tfSec) * tfSec;
-      const endT   = snapT + 10 * tfSec;
 
-      const x0 = ts.timeToCoordinate(snapT);
+      // Binary-search for closest candle >= snapT
+      let snapIdx = ohlcv.findIndex(c => c.time >= snapT);
+      if (snapIdx < 0) snapIdx = ohlcv.length - 1;  // trade is after last candle
+      const candleSnapT = ohlcv[snapIdx].time;
+
+      // x0 from real candle timestamp — always succeeds if candle is in the data
+      const x0 = ts.timeToCoordinate(candleSnapT);
       if (x0 === null) return;
 
-      // x1: try direct coordinate, fall back to projecting 10 bars from x0
-      let x1 = ts.timeToCoordinate(endT);
-      if (x1 === null) {
-        // Estimate bar width from the timeScale options
-        try {
-          const opts = ts.options();
-          const bw = opts.barSpacing || 6;
-          x1 = x0 + 10 * bw;
-        } catch(e) { x1 = x0 + 60; }
+      // x1: real candle 10 bars later, or project with bar spacing
+      const endIdx = snapIdx + 10;
+      let x1;
+      if (endIdx < ohlcv.length) {
+        x1 = ts.timeToCoordinate(ohlcv[endIdx].time);
+      }
+      if (x1 === null || x1 === undefined) {
+        try { const bw = ts.options().barSpacing || 6; x1 = x0 + 10 * bw; }
+        catch(e) { x1 = x0 + 60; }
       }
 
       const yEntry = _chtCandles.priceToCoordinate(t.entry);
@@ -2800,10 +2812,8 @@ function openTradeSheet() {
 
   const sheet = document.getElementById('trade-sheet');
   sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
-  // Start WS (also fires immediate REST quote fetch)
+  // Start WS — internally calls fetchLiveQuote on new/changed connection
   liveWsStart(_tshPair);
-  // If WS already running for this pair, still refresh quote immediately
-  if (_livePair === _tshPair && _liveWs) fetchLiveQuote(_tshPair);
 }
 
 function closeActiveTrade() {
