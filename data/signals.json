@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-24T23:05:56.623480+00:00",
+  "updated": "2026-05-25T01:57:30.223590+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -508,7 +508,7 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -537,7 +537,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.994,
+      "value": 98.998,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76625.0,
-      "delta_pct": -0.1,
+      "value": 76947.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,23 +580,23 @@
     }
   },
   "catalyst": {
-    "text": "Iran nuclear deal hopes support risk-on sentiment, weakening USD and accelerating USDCAD downside. Conflicts with LONG setup.",
-    "updated": "2026-05-24T22:43:05.803102+00:00"
+    "text": "GBPJPY LONG could face headwinds from energy shock weighing on Japan's growth and inflation concerns conflicting with BoJ easing bias.",
+    "updated": "2026-05-25T01:57:30.223590+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Risk-on low challenges strength, momentum divergence warns.",
+    "text": "GBPJPY LONG: Ranging regime confirms setup, but Risk-On Low challenges momentum conviction.",
     "top": [
       {
-        "pair": "USDCAD",
+        "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.2
+        "score": 4.23
       }
     ],
-    "updated": "2026-05-24T22:43:05.803102+00:00"
+    "updated": "2026-05-25T01:57:30.223590+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-24T22:43:05.803102+00:00"
+    "updated": "2026-05-25T01:57:30.223590+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
