@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T04:45:23.864697+00:00",
+  "updated": "2026-05-25T06:20:45.699294+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -537,7 +537,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.998,
+      "value": 99.02,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76947.0,
-      "delta_pct": 0.4,
+      "value": 77182.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG could face headwinds from energy shock weighing on Japan's growth and inflation concerns conflicting with BoJ easing bias.",
-    "updated": "2026-05-25T01:57:30.223590+00:00"
+    "text": "Sterling Today headline supports GBP strength and dollar weakness, accelerating GBPJPY long setup through yen carry dynamics.",
+    "updated": "2026-05-25T06:20:45.699294+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Ranging regime confirms setup, but Risk-On Low challenges momentum conviction.",
+    "text": "Ranging regime challenges GBPJPY long setup; weak momentum divergence dominates.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -592,15 +592,19 @@
         "score": 4.23
       }
     ],
-    "updated": "2026-05-25T01:57:30.223590+00:00"
+    "updated": "2026-05-25T06:20:45.699294+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-25T01:57:30.223590+00:00"
+    "updated": "2026-05-25T06:20:45.699294+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
-  "last_alert": "2026-05-24T19:36:16.488253+00:00"
+  "last_alert": "2026-05-24T19:36:16.488253+00:00",
+  "deep_analysis": {
+    "text": "The most striking anomaly is the extreme gold level at 4523 combined with a weakening dollar at 99.02, creating a rare dual-safe haven divergence that typically signals deep structural concerns about US fiscal sustainability or monetary credibility. This configuration historically precedes either major dollar debasement or forced Fed policy pivots, as markets price dollar alternatives while simultaneously rejecting dollar strength. Equally significant is the yield curve steepening to +97bp while copper surges 0.6%, mechanically signaling that markets expect aggressive Fed easing ahead despite current restrictive rates, with industrial metals front-running the growth recovery that typically follows monetary loosening.\n\nThese signals present a fundamental contradiction: risk assets like S&P at extreme levels and bitcoin rallying suggest confidence in growth and liquidity, yet gold's crisis-level pricing and the yield curve's steepening reflect deep uncertainty about monetary policy sustainability. The VIX remaining subdued at 16.70 despite these cross-currents suggests either complacency or that markets expect central bank intervention to resolve tensions smoothly. This creates a fragile equilibrium where any catalyst could trigger sharp repositioning.\n\nThe GBPJPY long setup faces significant headwinds from this macro context, as the JPY's relative weakness at 57 in the CSM ranking conflicts with gold's extreme safe-haven bid, which typically strengthens yen alongside. The CHF's dominance at 100 and USD's solid 89 ranking suggest flows are moving toward traditional safe havens, making yen-funded carry trades increasingly vulnerable to sudden unwinding if risk sentiment shifts.",
+    "generated_at": "2026-05-25T06:21:22.914229+00:00"
+  }
 }
