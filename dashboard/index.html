@@ -1699,6 +1699,9 @@ function _chtRender(pair, tf, ohlcv) {
       lineStyle:LightweightCharts.LineStyle.Dashed,
       axisLabelVisible:true, title:''
     });
+    // Immediately apply live price if already received before render completed
+    const _cachedLive = (typeof _livePrice !== 'undefined') && _livePrice[pair];
+    if (_cachedLive) _chtPriceLine.applyOptions({ price: _cachedLive });
   } catch(e) {}
 
   // ── MACD pane ────────────────────────────────────────────────────────────────
@@ -2436,80 +2439,9 @@ function tgSend(msg) {
   }).catch(() => {});
 }
 
-// ── WebSocket ─────────────────────────────────────────────────────────────────
-let _trWs = null, _trWsPair = null, _trWsPrice = null;
+// ── WebSocket constants (used by unified liveWsStart below) ──────────────────
 const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
-
-function trWsStart(pair) {
-  trWsStop();
-  const key = localStorage.getItem(LS_KEY);
-  if (!key) return;
-  _trWsPair = pair;
-  try {
-    _trWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
-    _trWs.onopen    = () => _trWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
-    _trWs.onmessage = (e) => { try { const d=JSON.parse(e.data); if(d.event==='price'&&d.price){ _trWsPrice=parseFloat(d.price); trOnTick(_trWsPrice,pair); } } catch(err){} };
-    _trWs.onerror   = () => { _trWs=null; };
-    _trWs.onclose   = () => { _trWs=null; };
-  } catch(e) { _trWs=null; }
-}
-function trWsStop() {
-  if (_trWs) { try { _trWs.close(); } catch(e) {} _trWs=null; }
-  _trWsPair=null; _trWsPrice=null;
-}
-
-// ── Tick handler ──────────────────────────────────────────────────────────────
-function trOnTick(price, pair) {
-  const isJpy = pair.includes('JPY');
-  const priceStr = price.toFixed(isJpy ? 3 : 5);
-
-  // Update live price display and entry field in trade sheet
-  const liveEl = document.getElementById('tsh-live-price');
-  if (liveEl && _tshPair === pair) {
-    liveEl.textContent = priceStr;
-    liveEl.style.opacity = '1';
-    const entryEl = document.getElementById('tsh-entry');
-    if (entryEl && !entryEl.dataset.userSet) {
-      // First tick: populate entry, restore placeholder, enable submit
-      entryEl.value = priceStr;
-      entryEl.placeholder = '0.00000';
-      const submitBtn = document.getElementById('tsh-submit-btn');
-      if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = '1'; }
-      tshCalcRR();
-    }
-  }
-  // Update chart price line
-  if (typeof chtUpdateLivePriceLine === 'function') chtUpdateLivePriceLine(pair, price);
-  // Restart chart WS if pair changed
-  if (_chtLiveWsPair && _chtLiveWsPair !== pair) chtLiveWsStart(pair);
-  // Check open/pending trades
-  const trades = trLoad();
-  let changed = false;
-  trades.forEach(t => {
-    if (t.pair !== pair || t.status === 'closed') return;
-    if (t.status === 'pending') {
-      const triggered = (t.direction==='BUY' && price<=t.entry) || (t.direction==='SELL' && price>=t.entry);
-      if (triggered) { t.status='open'; changed=true; tgSend(`🟡 <b>PENDING ACTIVATED</b>\n${t.pair} ${t.direction} @ ${t.entry}\nTP ${t.tp}  SL ${t.sl}  RR ${t.rr}`); trDrawChartLines(); }
-      return;
-    }
-    const isJpy   = pair.includes('JPY');
-    const pipSize = isJpy ? 0.01 : 0.0001;
-    const tpHit   = (t.direction==='BUY'  && price>=t.tp) || (t.direction==='SELL' && price<=t.tp);
-    const slHit   = (t.direction==='BUY'  && price<=t.sl) || (t.direction==='SELL' && price>=t.sl);
-    if (tpHit || slHit) {
-      const result   = tpHit ? 'win' : 'loss';
-      const pips     = Math.round(Math.abs(price - t.entry) / pipSize);
-      const slPips   = Math.round(Math.abs(t.sl  - t.entry) / pipSize);
-      const rActual  = slPips ? (pips/slPips).toFixed(2) : '—';
-      t.status='closed'; t.result=result; t.close_price=price; t.closed=new Date().toISOString(); t.r_actual=rActual;
-      changed=true;
-      const emoji = tpHit ? '✅' : '❌';
-      tgSend(`${emoji} <b>TRADE CLOSED — ${result.toUpperCase()}</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nRR planned ${t.rr}  Actual ${rActual}R`);
-      trDrawChartLines();
-    }
-  });
-  if (changed) trSave(trades);
-}
+let _trWsPrice = null;   // last live price — used by tshCalcRR / submitTrade
 
 // ── Signal snapshot ───────────────────────────────────────────────────────────
 function trSignalSnapshot(pair) {
@@ -2604,7 +2536,8 @@ function closeActiveTrade() {
 function closeTradeSheet() {
   const sheet = document.getElementById('trade-sheet');
   if (sheet) { sheet.style.transform='translateY(0)'; sheet.style.display='none'; }
-  _tshPair=null; trWsStop();
+  _tshPair=null;
+  // Don't stop liveWs — chart price line still needs it
 }
 
 function tshSetDir(dir) {
@@ -2792,27 +2725,44 @@ function clearAllTrades() {
   });
 })();
 
-// ── Chart live price WebSocket (independent of trade sheet) ──────────────────
-let _chtLiveWs = null, _chtLiveWsPair = null;
+// ── Unified live price WebSocket ──────────────────────────────────────────────
+// Single connection serves both chart price line and trade sheet.
+// Twelvedata free tier = 1 concurrent WS connection.
+let _liveWs   = null;
+let _livePair = null;
+const _livePrice = {};   // pair → last known price, persists across chart renders
 
-function chtLiveWsStart(pair) {
-  if (_chtLiveWsPair === pair && _chtLiveWs) return; // already running for this pair
-  chtLiveWsStop();
+function liveWsStart(pair) {
+  if (_livePair === pair && _liveWs && _liveWs.readyState === 1) return;
+  liveWsStop();
   const key = localStorage.getItem(LS_KEY);
   if (!key) return;
-  _chtLiveWsPair = pair;
+  _livePair = pair;
   try {
-    _chtLiveWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
-    _chtLiveWs.onopen    = () => _chtLiveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
-    _chtLiveWs.onmessage = (e) => { try { const d=JSON.parse(e.data); if(d.event==='price'&&d.price&&typeof chtUpdateLivePriceLine==='function') chtUpdateLivePriceLine(pair, parseFloat(d.price)); } catch(er){} };
-    _chtLiveWs.onerror   = () => { _chtLiveWs=null; };
-    _chtLiveWs.onclose   = () => { _chtLiveWs=null; };
-  } catch(e) { _chtLiveWs=null; }
+    _liveWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
+    _liveWs.onopen    = () => _liveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:pair.replace('/','') } }));
+    _liveWs.onmessage = (e) => {
+      try {
+        const d = JSON.parse(e.data);
+        if (d.event === 'price' && d.price) {
+          const price = parseFloat(d.price);
+          _livePrice[pair] = price;
+          _trWsPrice = price;
+          onLiveTick(pair, price);
+        }
+      } catch(er) {}
+    };
+    _liveWs.onerror = () => { _liveWs=null; };
+    _liveWs.onclose = () => { _liveWs=null; };
+  } catch(e) { _liveWs=null; }
 }
-function chtLiveWsStop() {
-  if (_chtLiveWs) { try { _chtLiveWs.close(); } catch(e) {} _chtLiveWs=null; }
-  _chtLiveWsPair=null;
+function liveWsStop() {
+  if (_liveWs) { try { _liveWs.close(); } catch(e) {} _liveWs=null; }
+  _livePair=null; _trWsPrice=null;
 }
+// Backwards-compat stubs
+function chtLiveWsStart(p)  { liveWsStart(p); }
+function chtLiveWsStop()    { /* no-op: chart WS and trade WS are now unified */ }
 
 // ── Wire chart open/close to chart live WS ────────────────────────────────────
 (function() {
@@ -2821,9 +2771,9 @@ function chtLiveWsStop() {
     if (!el) return;
     new MutationObserver(() => {
       if (el.classList.contains('open')) {
-        if (_chtPair) chtLiveWsStart(_chtPair);
+        if (_chtPair) liveWsStart(_chtPair);
       } else {
-        trWsStop(); chtLiveWsStop();
+        liveWsStop();
         _trPriceLines={};
       }
     }).observe(el, { attributes:true, attributeFilter:['class'] });
