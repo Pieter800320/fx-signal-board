@@ -1860,7 +1860,7 @@ function _chtRender(pair, tf, ohlcv) {
   _chtInitDrawListeners();
 
   // Restore trade lines and markers after every render (TF switch, indicator toggle)
-  setTimeout(() => { if (typeof trDrawChartLines === 'function') trDrawChartLines(); }, 50);
+  setTimeout(() => { if (typeof trDrawChartLines === 'function') trDrawChartLines(); }, 150);
 }
 
 // ── Jump to current ───────────────────────────────────────────────────────────
@@ -2435,10 +2435,10 @@ function chtAttachLongPress() {
 .tsh-dir-btn{flex:1;padding:7px;border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.05em;cursor:pointer;border:1px solid var(--bord);background:none;color:var(--muted);transition:all .15s;}
 #tsh-buy-btn.active{background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);color:var(--buy);}
 #tsh-sell-btn.active{background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.5);color:var(--sell);}
-.tsh-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;}
+.tsh-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;position:relative;}
 .tsh-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:32px;}
 .tsh-inp{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:12px;font-variant-numeric:tabular-nums;padding:5px 8px;outline:none;}
-.tsh-hint{font-size:9px;color:var(--amber);font-weight:600;}
+.tsh-hint{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:9px;color:var(--amber);font-weight:700;pointer-events:none;}
 #tsh-rr-row{display:flex;align-items:center;gap:8px;padding:5px 0 7px;border-top:1px solid var(--bord);margin-bottom:7px;}
 #tsh-rr-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
 #tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:6px;font-family:inherit;line-height:1.5;}
@@ -2648,8 +2648,18 @@ function _trDrawZones() {
       const endT   = snapT + 10 * tfSec;
 
       const x0 = ts.timeToCoordinate(snapT);
-      const x1 = ts.timeToCoordinate(endT);
-      if (x0 === null || x1 === null) return;
+      if (x0 === null) return;
+
+      // x1: try direct coordinate, fall back to projecting 10 bars from x0
+      let x1 = ts.timeToCoordinate(endT);
+      if (x1 === null) {
+        // Estimate bar width from the timeScale options
+        try {
+          const opts = ts.options();
+          const bw = opts.barSpacing || 6;
+          x1 = x0 + 10 * bw;
+        } catch(e) { x1 = x0 + 60; }
+      }
 
       const yEntry = _chtCandles.priceToCoordinate(t.entry);
       const yTp    = _chtCandles.priceToCoordinate(t.tp);
@@ -2825,7 +2835,8 @@ function tshCalcRR() {
   const tp   =parseFloat(document.getElementById('tsh-tp').value);
   const sl   =parseFloat(document.getElementById('tsh-sl').value);
   const livePrice = _trWsPrice || null;
-  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+  const entryManual = document.getElementById('tsh-entry').dataset.userSet === '1';
+  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && entryManual && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
 
   // Validate TP/SL sides
   const errEl = document.getElementById('tsh-side-err');
