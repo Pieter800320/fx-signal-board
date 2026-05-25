@@ -60,23 +60,22 @@
   .ma-val{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;}
   .ma-dlt{font-size:8px;font-weight:700;font-variant-numeric:tabular-nums;}
 
-  /* WEEK AHEAD card */
-  .wa-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
-           padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
-  .wa-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;
-           background:rgba(130,100,220,.8);}
-  .wa-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
-          letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
-  .wa-txt{font-size:10px;color:var(--muted);line-height:1.55;}
-
-  /* DEEP ANALYSIS card */
-  .da-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
-           padding:7px 12px;margin-bottom:7px;display:flex;align-items:flex-start;gap:8px;}
-  .da-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;
-           background:rgba(0,200,200,.7);}
-  .da-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
-          letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
-  .da-txt{font-size:10px;color:var(--muted);line-height:1.6;}
+  /* ── Insights card ─────────────────────────────────────────────────────── */
+  #insights-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;padding:8px 12px;margin-bottom:7px;}
+  #insights-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:8px;padding-bottom:4px;}
+  #insights-pills-row{flex:1;min-width:0;}
+  #insights-chevron{font-size:14px;color:var(--muted);transition:transform .2s;flex-shrink:0;line-height:1;}
+  #insights-chevron.collapsed{transform:rotate(-90deg);}
+  #insights-body{overflow:hidden;transition:max-height .25s ease-out;}
+  #insights-body.collapsed{max-height:0!important;overflow:hidden;}
+  .insights-sec{display:flex;align-items:flex-start;gap:8px;padding-top:8px;border-top:1px solid var(--bord);margin-top:4px;}
+  .ins-line{width:2px;min-width:2px;border-radius:2px;margin-top:2px;align-self:stretch;}
+  .da-line{background:rgba(0,200,200,.7);}
+  .wa-line{background:rgba(130,100,220,.8);}
+  .calendar-line{background:rgba(100,160,255,.7);}
+  .ins-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .ins-headline{font-size:11px;font-weight:700;color:rgba(220,230,240,.95);margin-bottom:5px;line-height:1.4;}
+  .ins-txt{font-size:10px;color:var(--muted);line-height:1.6;}
 
   /* CATALYST / SETUPS / CALENDAR */
   .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
@@ -257,47 +256,50 @@
   </div>
 </div>
 
-<div class="wa-card" id="wa-wrap" style="display:none;">
-  <div class="wa-line"></div>
-  <div style="flex:1;min-width:0;">
-    <div class="wa-lbl" id="wa-lbl">WEEK AHEAD · —</div>
-    <div class="wa-txt" id="wa-txt"></div>
-  </div>
-</div>
+<!-- ══ INSIGHTS CARD — collapsible ══════════════════════════════════════════ -->
+<div class="info-card" id="insights-card">
 
-<!-- ── DEEP ANALYSIS card — remove this entire block to disable the feature ── -->
-<div class="da-card" id="da-wrap" style="display:none;">
-  <div class="da-line"></div>
-  <div style="flex:1;min-width:0;">
-    <div class="da-lbl" id="da-lbl">DEEP ANALYSIS · —</div>
-    <div class="da-txt" id="da-txt"></div>
+  <!-- Header row: pills + chevron toggle -->
+  <div id="insights-header" onclick="toggleInsights()">
+    <div id="insights-pills-row">
+      <div class="ranked-pills" id="insights-pills"><span style="color:var(--muted);font-size:9px;">Loading…</span></div>
+    </div>
+    <span id="insights-chevron">▾</span>
   </div>
-</div>
-<!-- ── end DEEP ANALYSIS card ─────────────────────────────────────────────── -->
 
-<div class="info-card" id="news-wrap">
-  <div class="news-sec" id="setups-wrap">
-    <div class="info-line setups"></div>
-    <div style="flex:1;min-width:0;">
-      <div class="info-lbl" id="setups-lbl">SETUPS · —</div>
-      <div class="info-txt" id="setups-txt">Loading…</div>
+  <!-- Collapsible body -->
+  <div id="insights-body">
+
+    <!-- Deep Analysis -->
+    <div class="insights-sec" id="da-wrap" style="display:none;">
+      <div class="ins-line da-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="da-lbl">DEEP ANALYSIS · —</div>
+        <div class="ins-headline" id="da-headline"></div>
+        <div class="ins-txt" id="da-txt"></div>
+      </div>
     </div>
-  </div>
-  <div class="news-sec" id="catalyst-wrap">
-    <div class="info-line catalyst" id="catalyst-line"></div>
-    <div style="flex:1;min-width:0;">
-      <div class="info-lbl" id="catalyst-lbl">CATALYST · —</div>
-      <div class="info-txt" id="catalyst-txt">Loading…</div>
+
+    <!-- Week Ahead -->
+    <div class="insights-sec" id="wa-wrap" style="display:none;">
+      <div class="ins-line wa-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="wa-lbl">WEEK AHEAD · —</div>
+        <div class="ins-txt" id="wa-txt"></div>
+      </div>
     </div>
-  </div>
-  <div class="news-sec" id="calendar-wrap">
-    <div class="info-line calendar"></div>
-    <div style="flex:1;min-width:0;">
-      <div class="info-lbl" id="calendar-lbl">CALENDAR · —</div>
-      <div class="info-txt" id="calendar-txt">Loading…</div>
+
+    <!-- Calendar -->
+    <div class="insights-sec" id="calendar-wrap">
+      <div class="ins-line calendar-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="calendar-lbl">CALENDAR · —</div>
+        <div class="ins-txt" id="calendar-txt">Loading…</div>
+      </div>
     </div>
-  </div>
-</div>
+
+  </div><!-- end insights-body -->
+</div><!-- end insights-card -->
 
 <div class="csm-wrap" onclick="toggleCSM()">
   <div class="csm-head">
@@ -442,11 +444,10 @@ function renderWeekAhead(){
   const wrap = document.getElementById("wa-wrap");
   if (!wa.text || !wa.generated_at) { wrap.style.display = "none"; return; }
 
-  // Show only between Sunday 20:00 UTC and Monday 20:00 UTC (24h window)
-  const gen  = new Date(wa.generated_at);
-  const now  = new Date();
-  const age  = (now - gen) / 3600000;   // hours since generated
-  if (age > 24) { wrap.style.display = "none"; return; }
+  // Show for 5 days after generation (Mon-Fri relevant)
+  const gen = new Date(wa.generated_at);
+  const age = (new Date() - gen) / 3600000;
+  if (age > 120) { wrap.style.display = "none"; return; }
 
   wrap.style.display = "flex";
   document.getElementById("wa-lbl").textContent =
@@ -454,13 +455,11 @@ function renderWeekAhead(){
   document.getElementById("wa-txt").textContent = wa.text;
 }
 
-// ── DEEP ANALYSIS render — remove this function to disable the feature ────────
 function renderDeepAnalysis(){
   const da   = D.deep_analysis || {};
   const wrap = document.getElementById("da-wrap");
   if (!da.text || !da.generated_at) { wrap.style.display = "none"; return; }
 
-  // Show for up to 26h (covers daily refresh + buffer)
   const gen = new Date(da.generated_at);
   const age = (new Date() - gen) / 3600000;
   if (age > 26) { wrap.style.display = "none"; return; }
@@ -468,9 +467,31 @@ function renderDeepAnalysis(){
   wrap.style.display = "flex";
   document.getElementById("da-lbl").textContent =
     "DEEP ANALYSIS · " + gen.toLocaleTimeString("en-GB", {hour:"2-digit", minute:"2-digit", timeZone:"UTC"}) + " UTC";
+  const headlineEl = document.getElementById("da-headline");
+  if (headlineEl) headlineEl.textContent = da.headline || "";
   document.getElementById("da-txt").textContent = da.text;
 }
-// ── end DEEP ANALYSIS render ─────────────────────────────────────────────────
+function toggleInsights() {
+  const body = document.getElementById('insights-body');
+  const chev = document.getElementById('insights-chevron');
+  if (!body) return;
+  const collapsed = body.classList.toggle('collapsed');
+  if (chev) chev.classList.toggle('collapsed', collapsed);
+  // Store preference
+  try { localStorage.setItem('fsb_insights_collapsed', collapsed ? '1' : '0'); } catch(e){}
+}
+
+function initInsightsState() {
+  try {
+    if (localStorage.getItem('fsb_insights_collapsed') === '1') {
+      const body = document.getElementById('insights-body');
+      const chev = document.getElementById('insights-chevron');
+      if (body) body.classList.add('collapsed');
+      if (chev) chev.classList.add('collapsed');
+    }
+  } catch(e){}
+}
+
 
 function renderMarketState(){
   const d1  = D.regime_d1 || {};
@@ -561,38 +582,26 @@ function flipMacro() {
 }
 
 function renderNews(){
-  const catalyst = D.catalyst  || {};
   const ranked   = D.ranked    || {};
   const calendar = D.calendar  || {};
 
-  // ── CATALYST ──────────────────────────────────────────────────────────────
-  const catText = catalyst.text || "Awaiting scan…";
-  const isClean = catText.toLowerCase().includes("no breaking");
-  document.getElementById("catalyst-lbl").textContent =
-    "CATALYST · " + fmtTime(catalyst.updated);
-  document.getElementById("catalyst-txt").textContent = catText;
-  const catLine = document.getElementById("catalyst-line");
-  catLine.className = "info-line catalyst" + (isClean ? " ok" : "");
-
-  // ── SETUPS ────────────────────────────────────────────────────────────────
+  // ── PILLS (insights header) ───────────────────────────────────────────────
   const top = ranked.top || [];
   const pillsHtml = top.map(p => {
     const cls   = p.direction === "bull" ? "bull" : "bear";
     const arrow = p.direction === "bull" ? "▲" : "▼";
     return `<span class="ranked-pill ${cls}">${p.pair} ${arrow} ${p.score.toFixed(1)}</span>`;
   }).join("");
-  document.getElementById("setups-lbl").textContent =
-    "SETUPS · " + fmtTime(ranked.updated);
-  document.getElementById("setups-txt").innerHTML =
-    (pillsHtml ? `<div class="ranked-pills">${pillsHtml}</div>` : "") +
-    `<span>${ranked.text || "Awaiting scan\u2026"}</span>`;
+  const pillsEl = document.getElementById("insights-pills");
+  if (pillsEl) pillsEl.innerHTML = pillsHtml || '<span style="color:var(--muted);font-size:9px;">No setups</span>';
 
   // ── CALENDAR ──────────────────────────────────────────────────────────────
   const events = calendar.events || [];
   const now    = Date.now();
   const in24h  = now + 24 * 3600 * 1000;
+  const calUpdated = fmtTime(calendar.updated);
   document.getElementById("calendar-lbl").textContent =
-    "CALENDAR · " + fmtTime(calendar.updated);
+    "CALENDAR · " + calUpdated;
   document.getElementById("calendar-txt").innerHTML = events.length
     ? events.map(e => {
         const t      = e.iso ? new Date(e.iso).getTime() : 0;
@@ -818,6 +827,7 @@ function updatePairPcts(){} // no-op: pair % updates come from scan data only
 // ── INIT + REFRESH ────────────────────────────────────────────────────────────
 loadData();
 setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
+initInsightsState();
 </script>
 
 
