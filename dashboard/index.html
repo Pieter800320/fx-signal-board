@@ -3027,7 +3027,7 @@ function onLiveTick(pair, price) {
   _updateLivePnL(price);
 }
 
-
+function liveWsStart(pair) {
   if (_livePair === pair && _liveWs && _liveWs.readyState === 1) return;
   liveWsStop();
   // Immediately fetch last price via REST — instant, works on weekends too
