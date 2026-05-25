@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T08:49:19.694277+00:00",
+  "updated": "2026-05-25T09:46:19.644974+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -511,16 +511,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.73,
-      "delta_pct": 0.2,
+      "value": 16.68,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -537,7 +537,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.061,
+      "value": 98.984,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77209.0,
-      "delta_pct": 0.3,
+      "value": 77496.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -581,7 +581,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-25T08:15:25.736943+00:00"
+    "updated": "2026-05-25T09:46:19.644974+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -594,14 +594,14 @@
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 3.9
+        "score": 4.55
       }
     ],
-    "updated": "2026-05-25T08:15:25.736943+00:00"
+    "updated": "2026-05-25T09:46:19.644974+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-25T08:15:25.736943+00:00"
+    "updated": "2026-05-25T09:46:19.644974+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
