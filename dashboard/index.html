@@ -1774,6 +1774,9 @@ function _chtRender(pair, tf, ohlcv) {
   }
   // Attach drawing listeners (once only per page load)
   _chtInitDrawListeners();
+
+  // Restore trade lines and markers after every render (TF switch, indicator toggle)
+  setTimeout(() => { if (typeof trDrawChartLines === 'function') trDrawChartLines(); }, 50);
 }
 
 // ── Jump to current ───────────────────────────────────────────────────────────
@@ -2808,7 +2811,6 @@ function chtLiveWsStop() {
     if (!el) return;
     new MutationObserver(() => {
       if (el.classList.contains('open')) {
-        setTimeout(trDrawChartLines, 250);
         if (_chtPair) chtLiveWsStart(_chtPair);
       } else {
         trWsStop(); chtLiveWsStop();
