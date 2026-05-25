@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T19:03:41.315871+00:00",
+  "updated": "2026-05-25T19:09:08.731297+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -511,11 +511,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -537,8 +537,8 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.975,
-      "delta_pct": -0.3,
+      "value": 99.239,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
@@ -567,8 +567,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77551.0,
-      "delta_pct": 0.7,
+      "value": 77413.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,29 +580,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG and USDCAD LONG at risk. Japan energy bill support weakens JPY. Iran escalation drives oil shock, threatens CAD carry.",
-    "updated": "2026-05-25T17:26:24.360137+00:00"
+    "text": "GBPJPY LONG conflicted: Dollar selling on Iran deal hopes could weaken JPY carry demand.\n\nUSDJPY LONG at risk: Risk-on sentiment from Hormuz deal reduces safe-haven JPY demand.",
+    "updated": "2026-05-25T19:09:08.731297+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on backdrop supports higher-yielding yen cross strength.\n\nUSDCAD LONG: Low risk appetite challenges commodity-linked loonie upside.\n\nGBPUSD LONG: Mixed regime contradicts weak momentum momentum confirmation needs.",
+    "text": "GBPJPY LONG: Macro confirms; Risk-On low supports carry unwind.\n\nUSDCAD LONG: Macro challenges; Risk-On low favors CAD weakness.\n\nUSDJPY LONG: Macro challenges; Risk-On low pressures yen safe-haven bid.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.2
+        "score": 5.88
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.4
+        "score": 5.55
       },
       {
-        "pair": "GBPUSD",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 3.78
+        "score": 4.35
       }
     ],
-    "updated": "2026-05-25T17:26:24.360137+00:00"
+    "updated": "2026-05-25T19:09:08.731297+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
       }
     ],
-    "updated": "2026-05-25T17:26:24.360137+00:00"
+    "updated": "2026-05-25T19:09:08.731297+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
