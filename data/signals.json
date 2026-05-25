@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T20:56:09.740508+00:00",
+  "updated": "2026-05-25T22:47:38.136788+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -499,17 +499,17 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 0,
+    "total": 2,
     "confidence": "Neutral",
     "stable": true
   },
@@ -527,9 +527,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4523.2,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 4573.3,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
@@ -539,8 +539,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.379,
-      "delta_pct": 0.6,
+      "value": 6.463,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -557,14 +557,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 96.6,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 90.51,
+      "delta_pct": -6.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77265.0,
-      "delta_pct": 0.4,
+      "value": 77144.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -576,21 +576,21 @@
     }
   },
   "catalyst": {
-    "text": "Sterling Today headline supports GBPUSD LONG and GBPJPY LONG as dollar sells off. Iran deal hopes accelerate risk sentiment favoring these pairs. No conflicts detected.",
-    "updated": "2026-05-25T20:56:09.740508+00:00"
+    "text": "USDCAD LONG at risk. Oil price support from geopolitical tensions conflicts with diplomacy hopes lifting risk sentiment and weakening safe haven CAD.",
+    "updated": "2026-05-25T22:47:38.136788+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Mixed regime confirms momentum divergence strength and ADX trend.\n\nUSDCAD LONG: Neutral macro challenges positioning despite strong ADX confirmation signal.\n\nGBPUSD LONG: Mixed regime challenges weak CMP reading despite momentum divergence.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness pressures CAD significantly today.\n\nGBPJPY LONG: Macro neutral, no cross asset driver supporting momentum divergence.\n\nGBPUSD LONG: Macro challenges setup, weak momentum divergence conflicts mixed neutral regime.",
     "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.0
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
         "score": 5.88
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.4
       },
       {
         "pair": "GBPUSD",
@@ -598,7 +598,7 @@
         "score": 3.78
       }
     ],
-    "updated": "2026-05-25T20:56:09.740508+00:00"
+    "updated": "2026-05-25T22:47:38.136788+00:00"
   },
   "calendar": {
     "events": [
@@ -673,7 +673,7 @@
         "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
       }
     ],
-    "updated": "2026-05-25T20:56:09.740508+00:00"
+    "updated": "2026-05-25T22:47:38.136788+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
