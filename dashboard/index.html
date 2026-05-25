@@ -20,7 +20,7 @@
   /* TOP BAR */
   .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
   .app-name{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-  .scan-info{display:flex;align-items:center;gap:5px;font-size:9px;color:var(--muted);}
+  .scan-info{display:flex;align-items:center;gap:5px;font-size:9px;color:var(--muted);position:relative;}
   .dot{width:5px;height:5px;border-radius:50%;background:var(--buy);
        box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
   @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
@@ -209,12 +209,12 @@
   <div class="scan-info">
     <div class="dot"></div><span id="scan-time">Loading…</span>
     <button class="gear-btn" id="gear-menu-btn" onclick="toggleGearMenu()">⚙</button>
+    <div id="gear-menu" style="display:none;">
+      <button class="gear-menu-item" onclick="toggleKeyRow();toggleGearMenu()">⚙&nbsp; KEYS</button>
+      <button class="gear-menu-item" onclick="openTradeLog();toggleGearMenu()">▤&nbsp; LOG</button>
+      <button class="gear-menu-item" onclick="toggleInfo();toggleGearMenu()">ⓘ&nbsp; INFO</button>
+    </div>
   </div>
-</div>
-<div id="gear-menu" style="display:none;">
-  <button class="gear-menu-item" onclick="toggleKeyRow();toggleGearMenu()">⚙&nbsp; KEYS</button>
-  <button class="gear-menu-item" onclick="openTradeLog();toggleGearMenu()">▤&nbsp; LOG</button>
-  <button class="gear-menu-item" onclick="toggleInfo();toggleGearMenu()">ⓘ&nbsp; INFO</button>
 </div>
 <div class="td-key-row" id="td-key-row">
   <div style="display:flex;align-items:center;gap:6px;">
@@ -1502,7 +1502,9 @@ function _chtDestroyCharts() {
   _chtAlertRefs  = [];
   _chtPriceLine  = null;
   _chtCandles    = null;
-  _chtStagingLine = null;  // priceLine ref invalidated; _chtStagingPrice kept for TF-switch restore
+  _chtStagingLine = null;
+  const zo = document.getElementById('cht-zone-overlay');
+  if (zo) zo.innerHTML = '';
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
@@ -1698,6 +1700,8 @@ function _chtRender(pair, tf, ohlcv) {
   });
   candles.setData(ohlcv);
   _chtCandles = candles;
+
+  chart.timeScale().subscribeVisibleTimeRangeChange(() => { if (typeof trDrawChartZones==='function') trDrawChartZones(); });
   _chtRenderMarkers();
 
   const closes = ohlcv.map(d => d.close);
@@ -2420,36 +2424,42 @@ function chtAttachLongPress() {
 #log-header{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
 #log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
 #log-close-btn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
-#log-stats{flex-shrink:0;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
-.log-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
-.log-stat{text-align:center;}
-.log-stat-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+#log-stats{flex-shrink:0;padding:7px 12px;background:var(--surf);border-bottom:1px solid var(--bord);}
+.log-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:4px;}
+.log-stat{background:var(--dim);border:1px solid var(--bord);border-radius:5px;padding:5px 8px;display:flex;align-items:center;justify-content:space-between;}
+.log-stat-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);}
+.log-stat-val{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
 .log-stat-val.g{color:var(--buy);}.log-stat-val.r{color:var(--sell);}.log-stat-val.a{color:var(--amber);}
-.log-stat-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px;}
-.log-stat-row2{display:flex;gap:12px;margin-top:8px;padding-top:7px;border-top:1px solid var(--bord);flex-wrap:wrap;}
-.log-stat2{font-size:9px;color:var(--muted);}
-.log-stat2 b{color:var(--text);font-weight:700;}
-#log-body{flex:1;overflow-x:auto;overflow-y:auto;padding:10px 14px 4px;}
-.log-section-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 5px;opacity:.7;}
-.log-trade-row{display:flex;align-items:center;gap:0;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;min-width:max-content;}
-.log-trade-row:last-child{border-bottom:none;}
-.log-col{white-space:nowrap;padding-right:16px;}
-.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);min-width:56px;}
-.log-dir{font-size:9px;font-weight:700;min-width:36px;}
-.log-dir.buy{color:var(--buy);}.log-dir.sell{color:var(--sell);}
-.log-cell{font-size:9px;color:var(--muted);min-width:72px;}
-.log-cell.val{font-variant-numeric:tabular-nums;}
-.log-result{font-size:11px;font-weight:800;min-width:52px;text-align:right;}
-.log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
-.log-wl{font-size:9px;font-weight:800;letter-spacing:.06em;min-width:36px;}
-.log-notes{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;cursor:default;}
-.log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
-.log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
-.log-delete-btn:hover{opacity:1;color:var(--sell);}
+.log-mini-row{display:flex;gap:3px;margin-top:4px;}
+.log-mini-cell{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;padding:4px 5px;text-align:center;}
+.log-mini-val{font-size:9px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text);}
+.log-mini-lbl{font-size:7px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:1px;}
+#log-body{flex:1;overflow-y:auto;padding:8px 12px 4px;}
+.log-section-lbl{font-size:7px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:6px 0 4px;opacity:.7;}
+.log-trade-row{background:var(--dim);border:1px solid var(--bord);border-radius:6px;padding:7px 9px;margin-bottom:4px;display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.log-t-left{display:flex;flex-direction:column;gap:3px;min-width:0;}
+.log-t-right{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex-shrink:0;}
+.log-pair{font-size:11px;font-weight:800;letter-spacing:.05em;color:var(--text);}
+.log-dir{font-size:8px;font-weight:700;letter-spacing:.05em;padding:1px 5px;border-radius:3px;display:inline-block;}
+.log-dir.buy{background:rgba(0,220,55,.12);color:var(--buy);border:1px solid rgba(0,220,55,.25);}
+.log-dir.sell{background:rgba(248,81,73,.1);color:var(--sell);border:1px solid rgba(248,81,73,.25);}
+.log-meta{font-size:8px;color:var(--muted);font-variant-numeric:tabular-nums;}
+.log-pnl{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;}
+.log-pnl.pos{color:var(--buy);}.log-pnl.neg{color:var(--sell);}.log-pnl.neutral{color:var(--amber);}
+.log-eur{font-size:8px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--muted);}
+.log-eur.pos{color:var(--buy);opacity:.8;}.log-eur.neg{color:var(--sell);opacity:.8;}
+.log-wl{font-size:8px;font-weight:700;letter-spacing:.05em;padding:1px 5px;border-radius:3px;display:inline-block;}
+.log-wl.win{background:rgba(0,220,55,.1);color:var(--buy);border:1px solid rgba(0,220,55,.2);}
+.log-wl.loss{background:rgba(248,81,73,.08);color:var(--sell);border:1px solid rgba(248,81,73,.2);}
+.log-wl.manual{background:rgba(227,179,65,.08);color:var(--amber);border:1px solid rgba(227,179,65,.2);}
+.log-row-actions{display:flex;gap:5px;margin-top:3px;justify-content:flex-end;}
+.log-close-trade{background:none;border:1px solid rgba(248,81,73,.35);border-radius:4px;color:var(--sell);font-size:8px;font-weight:700;padding:2px 7px;cursor:pointer;}
+.log-delete-btn{background:none;border:1px solid var(--bord);border-radius:4px;color:var(--muted);font-size:8px;font-weight:700;padding:2px 6px;cursor:pointer;opacity:.6;}
+.log-delete-btn:hover{opacity:1;color:var(--sell);border-color:rgba(248,81,73,.35);}
 #log-footer{flex-shrink:0;display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--bord);background:var(--surf);}
 .log-action-btn{flex:1;padding:8px;border-radius:6px;border:1px solid var(--bord);background:none;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.04em;}
 /* ── Gear dropdown menu ─────────────────────────────────────────────────── */
-#gear-menu{background:var(--surf);border:1px solid var(--bord);border-radius:7px;margin:0 0 6px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.35);}
+#gear-menu{position:absolute;right:0;top:calc(100% + 6px);z-index:200;min-width:130px;background:var(--surf);border:1px solid var(--bord);border-radius:7px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4);}
 .gear-menu-item{display:block;width:100%;padding:9px 14px;background:none;border:none;border-bottom:1px solid var(--bord);color:var(--text);font-size:10px;font-weight:700;letter-spacing:.07em;text-align:left;cursor:pointer;transition:background .12s;}
 .gear-menu-item:last-child{border-bottom:none;}
 .gear-menu-item:hover,.gear-menu-item:active{background:var(--dim);}
@@ -2645,23 +2655,125 @@ function trSignalSnapshot(pair) {
 // ── Chart price lines ─────────────────────────────────────────────────────────
 let _trPriceLines = {};
 
+// ── Trade zone overlay ────────────────────────────────────────────────────────
+let _trPriceLines = {}; // kept for compat but unused
+
+function _trZoneOverlay() {
+  let el = document.getElementById('cht-zone-overlay');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'cht-zone-overlay';
+    el.style.cssText = 'position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:5;';
+    const p = document.getElementById('cht-price');
+    if (p) p.style.position = 'relative', p.appendChild(el);
+  }
+  return el;
+}
+
 function trDrawChartLines() {
-  if (!_chtCandles || !_chtPair) return;
-  Object.values(_trPriceLines).forEach(refs => {
-    ['entry','tp','sl'].forEach(k => { if(refs[k]) { try { _chtCandles.removePriceLine(refs[k]); } catch(e){} } });
-  });
-  _trPriceLines = {};
-  const trades = trLoad().filter(t => t.pair===_chtPair && t.status!=='closed');
+  _trRenderAllMarkers();
+  trDrawChartZones();
+}
+
+function trDrawChartZones() {
+  const overlay = _trZoneOverlay();
+  overlay.innerHTML = '';
+  if (!_chtCandles || !_chtPair || !_chtInst) return;
+  const trades = trLoad().filter(t => t.pair === _chtPair && t.status !== 'closed');
+  if (!trades.length) return;
+  const priceEl = document.getElementById('cht-price');
+  const W = priceEl?.clientWidth || 0, H = priceEl?.clientHeight || 0;
+  if (!W || !H) return;
+  const tfSec = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
   trades.forEach(t => {
     try {
-      _trPriceLines[t.id] = {
-        entry: _chtCandles.createPriceLine({ price:t.entry, color:'rgba(205,217,229,0.55)', lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:t.rr||'' }),
-        tp:    _chtCandles.createPriceLine({ price:t.tp,    color:'rgba(0,200,55,0.5)',     lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'TP' }),
-        sl:    _chtCandles.createPriceLine({ price:t.sl,    color:'rgba(248,81,73,0.5)',    lineWidth:1, lineStyle:LightweightCharts.LineStyle.Solid, axisLabelVisible:true, title:'SL' }),
-      };
+      const ts = _chtInst.timeScale();
+      const entryT = Math.floor(new Date(t.created).getTime() / 1000);
+      const snapT  = Math.floor(entryT / tfSec) * tfSec;
+      const endT   = snapT + 10 * tfSec;
+      const x0 = ts.timeToCoordinate(snapT);
+      const x1 = ts.timeToCoordinate(endT);
+      if (x0 === null || x1 === null) return;
+      const yEntry = _chtCandles.priceToCoordinate(t.entry);
+      const yTp    = _chtCandles.priceToCoordinate(t.tp);
+      const ySl    = _chtCandles.priceToCoordinate(t.sl);
+      if (yEntry === null || yTp === null || ySl === null) return;
+      const left  = Math.max(0, Math.round(x0));
+      const right = Math.min(W, Math.round(x1));
+      const w = right - left; if (w <= 2) return;
+      const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+      const tpPips = Math.round(Math.abs(t.tp    - t.entry) / ps);
+      const slPips = Math.round(Math.abs(t.sl    - t.entry) / ps);
+      // TP zone
+      const tpTop = Math.round(Math.min(yTp, yEntry)), tpH = Math.max(2, Math.round(Math.abs(yTp - yEntry)));
+      const dTp = document.createElement('div');
+      dTp.style.cssText = `position:absolute;left:${left}px;top:${tpTop}px;width:${w}px;height:${tpH}px;background:rgba(0,220,55,0.09);border-top:1px solid rgba(0,220,55,0.45);`;
+      overlay.appendChild(dTp);
+      // SL zone
+      const slTop = Math.round(Math.min(ySl, yEntry)), slH = Math.max(2, Math.round(Math.abs(ySl - yEntry)));
+      const dSl = document.createElement('div');
+      dSl.style.cssText = `position:absolute;left:${left}px;top:${slTop}px;width:${w}px;height:${slH}px;background:rgba(248,81,73,0.08);border-bottom:1px solid rgba(248,81,73,0.4);`;
+      overlay.appendChild(dSl);
+      // Entry divider
+      const dE = document.createElement('div');
+      dE.style.cssText = `position:absolute;left:${left}px;top:${Math.round(yEntry)}px;width:${w}px;height:1px;background:rgba(205,217,229,0.45);`;
+      overlay.appendChild(dE);
+      // Labels (right edge, inside zone)
+      const tpLbl = document.createElement('div');
+      tpLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${tpTop+3}px;font-size:8px;font-weight:700;color:rgba(0,220,55,0.75);white-space:nowrap;font-variant-numeric:tabular-nums;`;
+      tpLbl.textContent = `TP +${tpPips}p`;
+      overlay.appendChild(tpLbl);
+      const slLbl = document.createElement('div');
+      slLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${slTop+slH-14}px;font-size:8px;font-weight:700;color:rgba(248,81,73,0.7);white-space:nowrap;font-variant-numeric:tabular-nums;`;
+      slLbl.textContent = `SL −${slPips}p`;
+      overlay.appendChild(slLbl);
+      // Floating P&L card
+      const lp = _livePrice[t.pair] || null;
+      const lot = t.lot_size || 0;
+      const dirCol = t.direction === 'BUY' ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.9)';
+      const dirArrow = t.direction === 'BUY' ? '▲' : '▼';
+      let pnlHtml = '';
+      if (lp && lot) {
+        const dir = t.direction === 'BUY' ? 1 : -1;
+        const pips = dir * (lp - t.entry) / ps;
+        const pnlEUR = pips * _pipValueEUR(t.pair, lot);
+        const riskEUR = slPips * _pipValueEUR(t.pair, lot);
+        const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
+        const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+        pnlHtml = `<div id="cht-pnl-eur-${t.id}" style="font-size:10px;font-weight:800;color:${pc};font-variant-numeric:tabular-nums;margin-top:3px;">${pos?'+ ':'− '}€${Math.abs(pnlEUR).toFixed(2)}</div>`
+                + `<div id="cht-pnl-r-${t.id}" style="font-size:7px;font-weight:700;color:${pc};font-variant-numeric:tabular-nums;">${pos?'+ ':'− '}${Math.abs(pnlR).toFixed(2)} R</div>`;
+      }
+      const card = document.createElement('div');
+      card.id = `cht-zone-card-${t.id}`;
+      const cardTop = tpTop + 4;
+      card.style.cssText = `position:absolute;left:${left+4}px;top:${cardTop}px;background:rgba(10,14,19,0.9);border:1px solid rgba(30,42,53,0.9);border-radius:5px;padding:5px 8px;`;
+      card.innerHTML = `<div style="font-size:9px;font-weight:800;color:${dirCol};letter-spacing:.04em;">${dirArrow} ${t.direction}${lot?' · '+lot:''}</div>${pnlHtml}`;
+      overlay.appendChild(card);
     } catch(e) {}
   });
-  _trRenderAllMarkers();
+}
+
+// ── Live zone P&L update (cheap — text only, no DOM rebuild) ─────────────────
+function trUpdateZonePnL(pair, price) {
+  const trades = trLoad().filter(t => t.pair === pair && t.status === 'open');
+  trades.forEach(t => {
+    const lot = t.lot_size; if (!lot) return;
+    const isJpy = pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+    const slPips = Math.abs(t.sl - t.entry) / ps;
+    const dir = t.direction === 'BUY' ? 1 : -1;
+    const pips = dir * (price - t.entry) / ps;
+    const pnlEUR = pips * _pipValueEUR(pair, lot);
+    const riskEUR = slPips * _pipValueEUR(pair, lot);
+    const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
+    const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+    const eurEl = document.getElementById(`cht-pnl-eur-${t.id}`);
+    const rEl   = document.getElementById(`cht-pnl-r-${t.id}`);
+    if (eurEl) { eurEl.textContent = (pos?'+ ':'− ')+'€'+Math.abs(pnlEUR).toFixed(2); eurEl.style.color = pc; }
+    if (rEl)   { rEl.textContent   = (pos?'+ ':'− ')+Math.abs(pnlR).toFixed(2)+' R';  rEl.style.color = pc; }
+    // If card didn't exist yet (first tick after open), do full redraw
+    if (!eurEl && document.getElementById(`cht-zone-card-${t.id}`)) trDrawChartZones();
+    else if (!eurEl) trDrawChartZones();
+  });
 }
 
 function _trRenderAllMarkers() {
@@ -2753,7 +2865,8 @@ function tshCalcRR() {
   const tp   =parseFloat(document.getElementById('tsh-tp').value);
   const sl   =parseFloat(document.getElementById('tsh-sl').value);
   const livePrice = _trWsPrice || null;
-  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+  const entryManual = document.getElementById('tsh-entry')?.dataset.userSet === '1';
+  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && entryManual && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
 
   // Validate TP/SL sides
   const errEl = document.getElementById('tsh-side-err');
@@ -2784,7 +2897,7 @@ function submitTrade() {
   const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
   const rr = risk ? (reward/risk).toFixed(2) : null;
   const livePrice = _trWsPrice || null;
-  const isPending = livePrice && Math.abs(entry-livePrice)>0.000005;
+  const isPending = livePrice && document.getElementById('tsh-entry')?.dataset.userSet==='1' && Math.abs(entry-livePrice)>0.000005;
   const isJpy = _tshPair.includes('JPY');
   const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', lot_size:_getLotSize(), status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, pnl_eur:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
   const trades=trLoad(); trades.push(t); trSave(trades);
@@ -2843,7 +2956,20 @@ function _renderLogStats(trades) {
   const pairWins={};wins.forEach(t=>{pairWins[t.pair]=(pairWins[t.pair]||0)+1;});
   const bestPair=Object.entries(pairWins).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—';
   const wrc=wr>=55?'g':wr>=45?'a':'r', pfc=parseFloat(pf)>=1.5?'g':parseFloat(pf)>=1.0?'a':'r';
-  document.getElementById('log-stats').innerHTML = `<div class="log-stat-grid"><div class="log-stat"><div class="log-stat-val">${n}</div><div class="log-stat-lbl">Trades</div></div><div class="log-stat"><div class="log-stat-val ${wrc}">${wr}%</div><div class="log-stat-lbl">Win Rate</div></div><div class="log-stat"><div class="log-stat-val ${pfc}">${pf}</div><div class="log-stat-lbl">Profit Factor</div></div><div class="log-stat"><div class="log-stat-val a">${streakStr}</div><div class="log-stat-lbl">Streak</div></div></div><div class="log-stat-row2"><span class="log-stat2">Avg win <b>+${avgWin}R</b></span><span class="log-stat2">Avg loss <b>-${avgLoss}R</b></span><span class="log-stat2">Avg RR <b>1:${avgRR}</b></span><span class="log-stat2">Best pair <b>${bestPair}</b></span></div>`;
+  const sc=streak>0&&streakType==='win'?'g':streak>0&&streakType==='loss'?'r':'a';
+  document.getElementById('log-stats').innerHTML =
+    `<div class="log-stat-grid">
+      <div class="log-stat"><span class="log-stat-lbl">Trades</span><span class="log-stat-val">${n}</span></div>
+      <div class="log-stat"><span class="log-stat-lbl">Win rate</span><span class="log-stat-val ${wrc}">${wr}%</span></div>
+      <div class="log-stat"><span class="log-stat-lbl">Pft factor</span><span class="log-stat-val ${pfc}">${pf}</span></div>
+      <div class="log-stat"><span class="log-stat-lbl">Streak</span><span class="log-stat-val ${sc}">${streakStr}</span></div>
+    </div>
+    <div class="log-mini-row">
+      <div class="log-mini-cell"><div class="log-mini-val">+${avgWin}R</div><div class="log-mini-lbl">Avg win</div></div>
+      <div class="log-mini-cell"><div class="log-mini-val">−${avgLoss}R</div><div class="log-mini-lbl">Avg loss</div></div>
+      <div class="log-mini-cell"><div class="log-mini-val">1:${avgRR}</div><div class="log-mini-lbl">Avg RR</div></div>
+      <div class="log-mini-cell"><div class="log-mini-val">${bestPair}</div><div class="log-mini-lbl">Best pair</div></div>
+    </div>`;
 }
 
 function _renderLogBody(trades) {
@@ -2852,47 +2978,69 @@ function _renderLogBody(trades) {
   const isJpy=p=>p.includes('JPY'), fmt=(p,v)=>v!=null?parseFloat(v).toFixed(isJpy(p)?3:5):'—';
   let html='';
   if (open.length||pending.length) {
-    html+='<div class="log-section-lbl">Open & Pending</div>';
+    html+='<div class="log-section-lbl">Open &amp; Pending</div>';
     [...open,...pending].forEach(t=>{
-      const st=t.status==='pending'?'pending':'open';
+      const lp=_livePrice[t.pair];
+      let pnlHtml='<span class="log-pnl neutral">—</span>';
+      if(lp&&t.lot_size&&t.status==='open'){
+        const isJ=t.pair.includes('JPY'),ps=isJ?0.01:0.0001;
+        const pnl=(t.direction==='BUY'?1:-1)*(lp-t.entry)/ps*_pipValueEUR(t.pair,t.lot_size);
+        const pos=pnl>=0;
+        pnlHtml=`<span class="log-pnl ${pos?'pos':'neg'}">${pos?'+ ':'− '}€${Math.abs(pnl).toFixed(2)}</span>`;
+      }
+      const lotStr=t.lot_size?` · ${t.lot_size} lots`:'';
+      const st=t.status==='pending'?'PENDING':'OPEN';
       html+=`<div class="log-trade-row">
-        <span class="log-col log-pair">${t.pair}</span>
-        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
-        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
-        <span class="log-col log-cell val">TP ${fmt(t.pair,t.tp)}</span>
-        <span class="log-col log-cell val">SL ${fmt(t.pair,t.sl)}</span>
-        <span class="log-col log-cell">${t.rr}</span>
-        <span class="log-col log-result ${st}">${st.toUpperCase()}</span>
-        <button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button>
+        <div class="log-t-left">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span class="log-pair">${t.pair}</span>
+            <span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+          </div>
+          <span class="log-meta">@ ${fmt(t.pair,t.entry)}${lotStr}</span>
+          <div class="log-row-actions">
+            <button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button>
+          </div>
+        </div>
+        <div class="log-t-right">
+          ${pnlHtml}
+          <span class="log-wl ${t.status==='pending'?'manual':'win'}" style="opacity:.7;">${st}</span>
+        </div>
       </div>`;
     });
   }
   if (closed.length) {
     html+='<div class="log-section-lbl">History</div>';
     closed.forEach(t=>{
-      const rc=t.result==='win'?'win':t.result==='loss'?'loss':'open';
-      const wl=t.result==='win'?'WIN':t.result==='loss'?'LOSS':'—';
-      const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
+      const wl=t.result==='win'?'WIN':t.result==='loss'?'LOSS':'CLOSED';
+      const wlc=t.result==='win'?'win':t.result==='loss'?'loss':'manual';
+      const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`−${t.r_actual}R`:'Manual';
+      const rlc=t.result==='win'?'pos':t.result==='loss'?'neg':'neutral';
       const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
-      const note=t.notes?t.notes:'';
+      const eurStr=t.pnl_eur!=null?(t.pnl_eur>=0?`+€${t.pnl_eur.toFixed(2)}`:`−€${Math.abs(t.pnl_eur).toFixed(2)}`):'';
+      const eurCls=t.pnl_eur!=null?(t.pnl_eur>=0?'pos':'neg'):'';
+      const lotStr=t.lot_size?` · ${t.lot_size} lots`:'';
       html+=`<div class="log-trade-row">
-        <span class="log-col log-pair">${t.pair}</span>
-        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
-        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
-        <span class="log-col log-cell val">→ ${fmt(t.pair,t.close_price)}</span>
-        <span class="log-col log-cell">${ds}</span>
-        <span class="log-col log-cell">${t.rr}</span>
-        <span class="log-col log-cell log-notes" title="${note}">${note}</span>
-        <span class="log-col log-result ${rc} log-wl">${wl}</span>
-        <span class="log-col log-result ${rc}">${rl}</span>
-        <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
+        <div class="log-t-left">
+          <div style="display:flex;align-items:center;gap:5px;">
+            <span class="log-pair">${t.pair}</span>
+            <span class="log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+            <span class="log-wl ${wlc}">${wl}</span>
+          </div>
+          <span class="log-meta">${ds} · ${t.rr}${lotStr}</span>
+          <div class="log-row-actions">
+            <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕ delete</button>
+          </div>
+        </div>
+        <div class="log-t-right">
+          <span class="log-pnl ${rlc}">${rl}</span>
+          ${eurStr?`<span class="log-eur ${eurCls}">${eurStr}</span>`:''}
+        </div>
       </div>`;
     });
   }
-  if (!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
+  if(!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
   document.getElementById('log-body').innerHTML=html;
 }
-
 // ── CSV export ────────────────────────────────────────────────────────────────
 function exportTradeCSV() {
   const trades=trLoad(); if(!trades.length) return;
@@ -2992,6 +3140,7 @@ let _livePair = null;
 // ── onLiveTick — called by both WS and REST quote updates ────────────────────
 function onLiveTick(pair, price){
   chtUpdateLivePriceLine(pair, price);
+  if (typeof trUpdateZonePnL === 'function' && _chtPair === pair) trUpdateZonePnL(pair, price);
   if(_tshPair!==pair) return;
   const liveEl=document.getElementById('tsh-live-price');
   if(liveEl){ const isJpy=pair.includes('JPY'); liveEl.textContent=price.toFixed(isJpy?3:5); liveEl.style.opacity='1'; }
