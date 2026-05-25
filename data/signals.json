@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T07:51:53.713295+00:00",
+  "updated": "2026-05-25T08:15:25.736943+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -515,12 +515,12 @@
     "signals": 0,
     "total": 0,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.82,
-      "delta_pct": 0.7,
+      "value": 16.73,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -537,8 +537,8 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.078,
-      "delta_pct": -0.2,
+      "value": 99.061,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
     },
@@ -567,7 +567,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77183.0,
+      "value": 77209.0,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -580,27 +580,37 @@
     }
   },
   "catalyst": {
-    "text": "Pound jumps on dollar selloff supports GBPJPY long. Iran-Hormuz deal hopes could reduce oil volatility supporting risk appetite and yen weakness.",
-    "updated": "2026-05-25T07:37:14.370115+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-05-25T08:15:25.736943+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 5.3
+      },
+      {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 4.23
+        "score": 3.9
       }
     ],
-    "updated": "2026-05-25T07:37:14.370115+00:00"
+    "updated": "2026-05-25T08:15:25.736943+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-25T07:37:14.370115+00:00"
+    "updated": "2026-05-25T08:15:25.736943+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
-  "last_alert": "2026-05-24T19:36:16.488253+00:00"
+  "last_alert": "2026-05-24T19:36:16.488253+00:00",
+  "deep_analysis": {
+    "headline": "Gold at crisis levels while copper surges exposes central bank credibility fracture",
+    "text": "Gold at 4523 represents extreme safe haven demand typically reserved for financial crises, yet copper's surge to very strong levels signals robust industrial demand and growth optimism. This divergence reveals a credibility crisis where markets simultaneously price monetary debasement fears and economic expansion. The 97bp yield curve steepening supports the growth narrative, but 10Y yields at 4.56% remain in historically restrictive territory that preceded economic slowdowns. The VIX remaining subdued at 16.73 despite these extremes suggests complacency masking underlying structural tensions. The DXY weakness at 99.06 amplifies the credibility question - dollar decline should accompany risk-on conditions, yet gold's extreme levels contradict typical inverse correlation. This creates asymmetric opportunities in commodity currencies against safe havens. AUDJPY benefits most from this regime, capturing both copper strength and yen weakness as growth optimism battles monetary uncertainty. CHFJPY faces headwinds as Swiss franc strength contradicts the growth narrative copper implies. The machine's GBPJPY long setup captures this tension poorly, as sterling lacks clear directional catalyst amid these contradictory signals.",
+    "generated_at": "2026-05-25T08:16:06.759267+00:00"
+  }
 }
