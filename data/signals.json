@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T07:37:14.370115+00:00",
+  "updated": "2026-05-25T07:44:58.472049+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -9,45 +9,45 @@
   "regime_h4": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 9.5,
+    "score": 9.0,
     "stable": true
   },
   "regime_h1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 9.3,
     "stable": false
   },
   "csm": {
     "d1": {
-      "GBP": 45.2,
+      "GBP": 48.3,
       "EUR": 0.0,
-      "AUD": 65.3,
-      "NZD": 45.4,
-      "CAD": 15.6,
-      "JPY": 57.4,
+      "AUD": 59.4,
+      "NZD": 30.7,
+      "CAD": 16.6,
+      "JPY": 57.1,
       "CHF": 100.0,
-      "USD": 89.4
+      "USD": 96.1
     },
     "h4": {
-      "GBP": 61.1,
-      "EUR": 65.0,
-      "AUD": 84.3,
+      "GBP": 71.2,
+      "EUR": 72.2,
+      "AUD": 98.4,
       "NZD": 100.0,
-      "CAD": 46.5,
-      "JPY": 54.6,
-      "CHF": 77.3,
+      "CAD": 37.8,
+      "JPY": 60.7,
+      "CHF": 98.7,
       "USD": 0.0
     },
     "h1": {
-      "GBP": 25.4,
-      "EUR": 33.7,
-      "AUD": 100.0,
-      "NZD": 14.3,
+      "GBP": 52.0,
+      "EUR": 39.1,
+      "AUD": 43.9,
+      "NZD": 8.6,
       "CAD": 0.0,
-      "JPY": 40.9,
-      "CHF": 52.0,
-      "USD": 35.3
+      "JPY": 53.4,
+      "CHF": 73.2,
+      "USD": 100.0
     }
   },
   "correlations": {
@@ -74,7 +74,7 @@
         0.75,
         -0.59,
         0.86,
-        0.62,
+        0.61,
         0.42,
         0.56,
         0.69,
@@ -86,7 +86,7 @@
         -0.59,
         -0.8,
         0.72,
-        -0.63,
+        -0.62,
         0.79,
         0.55,
         0.74,
@@ -115,9 +115,9 @@
         1.0,
         -0.63,
         0.59,
-        -0.7,
+        -0.69,
         -0.56,
-        -0.54,
+        -0.53,
         -0.51,
         -0.58,
         0.11
@@ -131,21 +131,21 @@
         -0.47,
         0.89,
         0.33,
-        0.32,
+        0.33,
         0.91,
         0.76,
         -0.33
       ],
       [
         -0.59,
-        -0.63,
+        -0.62,
         0.43,
         0.59,
         -0.47,
         1.0,
         -0.51,
-        -0.38,
-        -0.41,
+        -0.36,
+        -0.4,
         -0.37,
         -0.41,
         -0.33
@@ -154,7 +154,7 @@
         0.86,
         0.79,
         -0.67,
-        -0.7,
+        -0.69,
         0.89,
         -0.51,
         1.0,
@@ -165,12 +165,12 @@
         -0.3
       ],
       [
-        0.62,
+        0.61,
         0.55,
         0.06,
         -0.56,
         0.33,
-        -0.38,
+        -0.36,
         0.5,
         1.0,
         0.73,
@@ -182,9 +182,9 @@
         0.42,
         0.74,
         0.11,
-        -0.54,
-        0.32,
-        -0.41,
+        -0.53,
+        0.33,
+        -0.4,
         0.41,
         0.73,
         1.0,
@@ -246,18 +246,18 @@
       "mom": {
         "d1": 22,
         "dd1": -17,
-        "h4": 53,
-        "dh4": 1,
-        "h1": 65,
-        "dh1": 37,
-        "cmp": 38
+        "h4": 57,
+        "dh4": 7,
+        "h1": 64,
+        "dh1": 29,
+        "cmp": 39
       },
-      "adx": 72.4,
-      "d1_pct": 0.33,
-      "d5_pct": 0.43,
+      "adx": 71.6,
+      "d1_pct": 0.3,
+      "d5_pct": 0.4,
       "prev_close": 1.16013,
       "prev5_close": 1.15905,
-      "cont": 24
+      "cont": 32
     },
     "GBPUSD": {
       "pills": {
@@ -268,15 +268,15 @@
       "mom": {
         "d1": 23,
         "dd1": -10,
-        "h4": 59,
-        "dh4": -16,
-        "h1": 69,
-        "dh1": 26,
-        "cmp": 42
+        "h4": 62,
+        "dh4": -13,
+        "h1": 73,
+        "dh1": 32,
+        "cmp": 43
       },
-      "adx": 36.5,
-      "d1_pct": 0.36,
-      "d5_pct": 0.66,
+      "adx": 41.1,
+      "d1_pct": 0.34,
+      "d5_pct": 0.64,
       "prev_close": 1.34331,
       "prev5_close": 1.33924,
       "cont": 0
@@ -285,23 +285,23 @@
       "pills": {
         "d1": "bull",
         "h4": "neutral",
-        "h1": "bear"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 86,
         "dd1": 23,
-        "h4": 53,
-        "dh4": -5,
+        "h4": 49,
+        "dh4": -10,
         "h1": 35,
-        "dh1": -10,
-        "cmp": 69
+        "dh1": -12,
+        "cmp": 68
       },
-      "adx": 43.0,
-      "d1_pct": -0.19,
-      "d5_pct": -0.13,
+      "adx": 44.2,
+      "d1_pct": -0.14,
+      "d5_pct": -0.07,
       "prev_close": 159.20246,
       "prev5_close": 159.09947,
-      "cont": 35
+      "cont": 42
     },
     "USDCHF": {
       "pills": {
@@ -312,15 +312,15 @@
       "mom": {
         "d1": 70,
         "dd1": 17,
-        "h4": 27,
-        "dh4": -22,
-        "h1": 33,
-        "dh1": -42,
-        "cmp": 50
+        "h4": 26,
+        "dh4": -27,
+        "h1": 25,
+        "dh1": -44,
+        "cmp": 47
       },
-      "adx": 49.6,
+      "adx": 54.2,
       "d1_pct": -0.34,
-      "d5_pct": -1.07,
+      "d5_pct": -1.08,
       "prev_close": 0.78476,
       "prev5_close": 0.79058,
       "cont": 0
@@ -328,21 +328,21 @@
     "AUDUSD": {
       "pills": {
         "d1": "neutral",
-        "h4": "bull_strong",
+        "h4": "bull",
         "h1": "bull"
       },
       "mom": {
         "d1": 31,
         "dd1": -18,
-        "h4": 51,
-        "dh4": 7,
-        "h1": 71,
-        "dh1": 34,
-        "cmp": 45
+        "h4": 54,
+        "dh4": 12,
+        "h1": 73,
+        "dh1": 32,
+        "cmp": 46
       },
-      "adx": 51.4,
-      "d1_pct": 0.53,
-      "d5_pct": 0.66,
+      "adx": 53.4,
+      "d1_pct": 0.43,
+      "d5_pct": 0.55,
       "prev_close": 0.71298,
       "prev5_close": 0.71211,
       "cont": 0
@@ -356,18 +356,18 @@
       "mom": {
         "d1": 83,
         "dd1": 8,
-        "h4": 72,
-        "dh4": 23,
-        "h1": 38,
-        "dh1": -4,
-        "cmp": 73
+        "h4": 67,
+        "dh4": 16,
+        "h1": 40,
+        "dh1": -6,
+        "cmp": 72
       },
-      "adx": 74.6,
-      "d1_pct": -0.08,
-      "d5_pct": 0.25,
+      "adx": 70.4,
+      "d1_pct": -0.02,
+      "d5_pct": 0.32,
       "prev_close": 1.38195,
       "prev5_close": 1.37732,
-      "cont": 41
+      "cont": 45
     },
     "NZDUSD": {
       "pills": {
@@ -378,15 +378,15 @@
       "mom": {
         "d1": 27,
         "dd1": -20,
-        "h4": 36,
-        "dh4": -21,
-        "h1": 71,
-        "dh1": 35,
-        "cmp": 38
+        "h4": 43,
+        "dh4": -12,
+        "h1": 72,
+        "dh1": 32,
+        "cmp": 40
       },
-      "adx": 53.9,
-      "d1_pct": 0.46,
-      "d5_pct": 0.62,
+      "adx": 56.6,
+      "d1_pct": 0.35,
+      "d5_pct": 0.51,
       "prev_close": 0.58489,
       "prev5_close": 0.58395,
       "cont": 0
@@ -395,20 +395,20 @@
       "pills": {
         "d1": "neutral",
         "h4": "bull",
-        "h1": "bull"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 55,
         "dd1": 5,
-        "h4": 55,
-        "dh4": -6,
-        "h1": 54,
-        "dh1": 27,
+        "h4": 57,
+        "dh4": -1,
+        "h1": 53,
+        "dh1": 22,
         "cmp": 55
       },
-      "adx": 30.1,
-      "d1_pct": 0.14,
-      "d5_pct": 0.3,
+      "adx": 31.7,
+      "d1_pct": 0.16,
+      "d5_pct": 0.31,
       "prev_close": 184.69203,
       "prev5_close": 184.40701,
       "cont": 0
@@ -417,23 +417,23 @@
       "pills": {
         "d1": "bull",
         "h4": "bull",
-        "h1": "bull"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 47,
         "dd1": 7,
-        "h4": 61,
-        "dh4": -23,
-        "h1": 54,
-        "dh1": 14,
-        "cmp": 53
+        "h4": 62,
+        "dh4": -21,
+        "h1": 59,
+        "dh1": 21,
+        "cmp": 54
       },
-      "adx": 67.5,
-      "d1_pct": 0.16,
-      "d5_pct": 0.54,
+      "adx": 65.7,
+      "d1_pct": 0.2,
+      "d5_pct": 0.57,
       "prev_close": 213.84944,
       "prev5_close": 213.05391,
-      "cont": 83
+      "cont": 76
     },
     "AUDJPY": {
       "pills": {
@@ -444,15 +444,15 @@
       "mom": {
         "d1": 52,
         "dd1": -4,
-        "h4": 52,
-        "dh4": 4,
-        "h1": 61,
-        "dh1": 28,
-        "cmp": 54
+        "h4": 54,
+        "dh4": 9,
+        "h1": 64,
+        "dh1": 26,
+        "cmp": 55
       },
-      "adx": 37.9,
-      "d1_pct": 0.34,
-      "d5_pct": 0.53,
+      "adx": 40.6,
+      "d1_pct": 0.29,
+      "d5_pct": 0.48,
       "prev_close": 113.50577,
       "prev5_close": 113.29243,
       "cont": 0
@@ -461,20 +461,20 @@
       "pills": {
         "d1": "neutral",
         "h4": "bull_strong",
-        "h1": "bull_strong"
+        "h1": "neutral"
       },
       "mom": {
         "d1": 47,
         "dd1": -7,
-        "h4": 38,
-        "dh4": -25,
-        "h1": 60,
-        "dh1": 27,
-        "cmp": 47
+        "h4": 42,
+        "dh4": -18,
+        "h1": 62,
+        "dh1": 24,
+        "cmp": 49
       },
-      "adx": 54.8,
-      "d1_pct": 0.27,
-      "d5_pct": 0.5,
+      "adx": 58.5,
+      "d1_pct": 0.2,
+      "d5_pct": 0.43,
       "prev_close": 93.11312,
       "prev5_close": 92.90268,
       "cont": 0
@@ -488,15 +488,15 @@
       "mom": {
         "d1": 62,
         "dd1": 23,
-        "h4": 32,
-        "dh4": -27,
-        "h1": 43,
-        "dh1": -8,
+        "h4": 33,
+        "dh4": -24,
+        "h1": 41,
+        "dh1": -9,
         "cmp": 49
       },
-      "adx": 78.6,
-      "d1_pct": -0.11,
-      "d5_pct": -0.38,
+      "adx": 79.3,
+      "d1_pct": -0.13,
+      "d5_pct": -0.39,
       "prev_close": 115.20273,
       "prev5_close": 115.51095,
       "cont": 0
@@ -602,9 +602,5 @@
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
-  "last_alert": "2026-05-24T19:36:16.488253+00:00",
-  "deep_analysis": {
-    "text": "The most striking anomaly is the extreme gold level at 4523 combined with a weakening dollar at 99.02, creating a rare dual-safe haven divergence that typically signals deep structural concerns about US fiscal sustainability or monetary credibility. This configuration historically precedes either major dollar debasement or forced Fed policy pivots, as markets price dollar alternatives while simultaneously rejecting dollar strength. Equally significant is the yield curve steepening to +97bp while copper surges 0.6%, mechanically signaling that markets expect aggressive Fed easing ahead despite current restrictive rates, with industrial metals front-running the growth recovery that typically follows monetary loosening.\n\nThese signals present a fundamental contradiction: risk assets like S&P at extreme levels and bitcoin rallying suggest confidence in growth and liquidity, yet gold's crisis-level pricing and the yield curve's steepening reflect deep uncertainty about monetary policy sustainability. The VIX remaining subdued at 16.70 despite these cross-currents suggests either complacency or that markets expect central bank intervention to resolve tensions smoothly. This creates a fragile equilibrium where any catalyst could trigger sharp repositioning.\n\nThe GBPJPY long setup faces significant headwinds from this macro context, as the JPY's relative weakness at 57 in the CSM ranking conflicts with gold's extreme safe-haven bid, which typically strengthens yen alongside. The CHF's dominance at 100 and USD's solid 89 ranking suggest flows are moving toward traditional safe havens, making yen-funded carry trades increasingly vulnerable to sudden unwinding if risk sentiment shifts.",
-    "generated_at": "2026-05-25T06:21:22.914229+00:00"
-  }
+  "last_alert": "2026-05-24T19:36:16.488253+00:00"
 }
