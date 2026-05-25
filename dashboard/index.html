@@ -1569,11 +1569,22 @@ async function _chtLoadAndRender() {
   const pair = _chtPair;
   const tf   = _chtTf;
 
+  // 1. In-memory cache (fastest — same session, no API call)
   if (_chtOhlcvCache[pair]?.[tf]) {
     _chtRender(pair, tf, _chtOhlcvCache[pair][tf]);
     return;
   }
 
+  // 2. localStorage cache (survives page reload — no API call if still fresh)
+  const lsCached = _ohlcvCacheGet(pair, tf);
+  if (lsCached) {
+    if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+    _chtOhlcvCache[pair][tf] = lsCached;
+    _chtRender(pair, tf, lsCached);
+    return;
+  }
+
+  // 3. Fetch from Twelvedata REST (only when cache is empty or expired)
   _chtDestroyCharts();
   document.getElementById('cht-price').innerHTML =
     '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">Fetching…</div>';
@@ -1611,6 +1622,7 @@ async function _chtLoadAndRender() {
       }));
       if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
       _chtOhlcvCache[pair][tf] = ohlcv;
+      _ohlcvCacheSet(pair, tf, ohlcv);   // persist — next open (even after reload) is instant
       if (_chtPair === pair && _chtTf === tf) _chtRender(pair, tf, ohlcv);
       return;  // success
     } catch(e) {
@@ -1621,7 +1633,6 @@ async function _chtLoadAndRender() {
     }
   }
 }
-
 // ── Indicator math ────────────────────────────────────────────────────────────
 function chtEMA(closes, period) {
   if (!closes.length) return [];
@@ -2600,6 +2611,23 @@ function trSignalSnapshot(pair) {
   const h=new Date().getUTCHours();
   const session = h>=7&&h<8?'London open':h>=8&&h<12?'London session':h>=12&&h<16?'London/NY overlap':h>=16&&h<21?'NY session':'Asian session';
   return { d1_pill:pills.d1||'—', h4_pill:pills.h4||'—', h1_pill:pills.h1||'—', cont:pd.cont||0, adx:pd.adx||0, cmp:mom.cmp||0, mom_d1:mom.d1||0, mom_dd1:mom.dd1||0, csm_base:csmd1[base]||50, csm_quote:csmd1[quote]||50, rank_score:ranked?.score||0, regime:D.regime_d1?.regime||'—', macro:D.macro?.label||'—', session };
+}
+
+// ── OHLCV localStorage cache (survives page reload — eliminates repeat API calls) ─
+const _OHLCV_TTL = { H1: 45*60*1000, H4: 4*60*60*1000, D1: 8*60*60*1000 };
+function _ohlcvKey(pair, tf) { return `fsb_ohlcv_v1_${pair}_${tf}`; }
+function _ohlcvCacheGet(pair, tf) {
+  try {
+    const raw = localStorage.getItem(_ohlcvKey(pair, tf));
+    if (!raw) return null;
+    const { at, bars } = JSON.parse(raw);
+    if (Date.now() - at > (_OHLCV_TTL[tf] || 3600000)) return null;  // expired
+    return bars;
+  } catch(e) { return null; }
+}
+function _ohlcvCacheSet(pair, tf, bars) {
+  try { localStorage.setItem(_ohlcvKey(pair, tf), JSON.stringify({ at: Date.now(), bars })); }
+  catch(e) {}  // quota exceeded — silent, in-memory cache still works
 }
 
 // ── Chart price lines ─────────────────────────────────────────────────────────
