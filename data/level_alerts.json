@@ -382,7 +382,7 @@
     "pair": "USDCHF",
     "price": 0.7839450373718777,
     "direction": "below",
-    "active": true
+    "active": false
   },
   {
     "id": 1779464771387,
@@ -599,6 +599,6 @@
     "pair": "EURJPY",
     "price": 186.93318627481776,
     "direction": "below",
-    "active": true
+    "active": false
   }
 ]
