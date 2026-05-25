@@ -382,7 +382,7 @@
     "pair": "USDCHF",
     "price": 0.7839450373718777,
     "direction": "below",
-    "active": false
+    "active": true
   },
   {
     "id": 1779464771387,
@@ -600,5 +600,19 @@
     "price": 186.93318627481776,
     "direction": "below",
     "active": false
+  },
+  {
+    "id": 1779714769516,
+    "pair": "EURJPY",
+    "price": 186.11660109379875,
+    "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1779737354453,
+    "pair": "NZDUSD",
+    "price": 0.5965885258875406,
+    "direction": "above",
+    "active": true
   }
 ]
