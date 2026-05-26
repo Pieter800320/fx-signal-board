@@ -269,6 +269,13 @@
   </div>
 </div>
 
+
+<!-- Breaking news segment -->
+<div id="breaking-wrap" style="background:rgba(248,81,73,0.12);border:1px solid rgba(248,81,73,0.4);border-radius:6px;padding:9px 12px;margin-bottom:10px;display:none;">
+  <div style="font-size:9px;font-weight:900;color:rgba(248,81,73,0.9);letter-spacing:.1em;margin-bottom:4px;text-transform:uppercase;">🔴 Breaking</div>
+  <div id="breaking-txt" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.4;"></div>
+</div>
+
 <!-- ══ INSIGHTS CARD — collapsible ══════════════════════════════════════════ -->
 <div class="info-card" id="insights-card">
 
@@ -445,11 +452,29 @@ function render(){
     "Scanned " + fmtTime(D.updated);
 
   renderMarketState();
+  renderBreaking();
   renderWeekAhead();
   renderDeepAnalysis();
   renderNews();
   renderCSM();
   renderGrid();
+}
+
+
+function renderBreaking(){
+  const breaking = D.breaking || {};
+  const wrap = document.getElementById("breaking-wrap");
+  if (!breaking.text || !breaking.updated) { wrap.style.display = "none"; return; }
+  
+  // Only show if < 2 hours old
+  try {
+    const age_m = (Date.now() - new Date(breaking.updated).getTime()) / 60000;
+    if (age_m > 120) { wrap.style.display = "none"; return; }
+  } catch(e) { wrap.style.display = "none"; return; }
+  
+  wrap.style.display = "block";
+  const txt = document.getElementById("breaking-txt");
+  if (txt) txt.textContent = breaking.text;
 }
 
 function renderWeekAhead(){
