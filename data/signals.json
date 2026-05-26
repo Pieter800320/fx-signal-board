@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T07:08:53.568659+00:00",
+  "updated": "2026-05-26T07:12:51.214929+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -531,20 +531,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4531.4,
-      "delta_pct": 0.2,
+      "value": 4533.9,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.069,
-      "delta_pct": -0.3,
+      "value": 99.086,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4075,
-      "delta_pct": 1.0,
+      "value": 6.4125,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.44,
-      "delta_pct": -5.3,
+      "value": 91.6,
+      "delta_pct": -5.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76790.0,
-      "delta_pct": -0.6,
+      "value": 76582.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,29 +580,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk if Iran-Hormuz deal reduces oil prices, weakening commodity-linked CAD. GBPJPY supports sterling strength from dollar weakness on deal hopes.",
-    "updated": "2026-05-26T07:03:38.387750+00:00"
+    "text": "USDCAD LONG: Iran-Hormuz deal hopes weaken USD broadly, conflicting with long bias. USDJPY and GBPJPY: Energy shock boosts inflation, supporting JPY strength against both pairs.",
+    "updated": "2026-05-26T07:12:51.214929+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI collapse weakens CAD fundamentals today.\n\nUSDJPY LONG: Macro challenges setup, risk-off medium conflicts with yen safe-haven demand.\n\nGBPJPY LONG: Macro challenges setup, weak momentum insufficient without macro risk-off catalyst support.",
+    "text": "USDCAD LONG: Macro confirms. WTI collapse structurally weakens Canadian dollar.\n\nUSDJPY LONG: Macro neutral. Risk-on low lacks yen safe-haven tailwind.\n\nGBPJPY LONG: Macro challenges. Ranging low environment undercuts carry trade momentum.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.7
+        "score": 6.4
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.03
+        "score": 6.15
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 3.0
+        "score": 3.3
       }
     ],
-    "updated": "2026-05-26T07:03:38.387750+00:00"
+    "updated": "2026-05-26T07:12:51.214929+00:00"
   },
   "calendar": {
     "events": [
@@ -697,15 +697,15 @@
         "note": "Yen weakness raising imported cost pressures"
       }
     ],
-    "updated": "2026-05-26T07:03:38.387750+00:00"
+    "updated": "2026-05-26T07:12:51.214929+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
   "breaking": {
-    "text": "Iran explosions reported near Strait of Hormuz; oil prices surge, EUR under pressure.",
-    "updated": "2026-05-26T07:03:38.387750+00:00"
+    "text": "Strait of Hormuz explosions reported; energy shock imminent, sell EUR/USD now",
+    "updated": "2026-05-26T07:12:51.214929+00:00"
   },
   "last_alert": "2026-05-26T06:36:45.709505+00:00"
 }
