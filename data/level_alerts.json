@@ -614,5 +614,12 @@
     "price": 0.5965885258875406,
     "direction": "above",
     "active": true
+  },
+  {
+    "id": 1779779674372,
+    "pair": "USDJPY",
+    "price": 159.84663442020153,
+    "direction": "above",
+    "active": true
   }
 ]
