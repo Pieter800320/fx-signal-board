@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T06:36:45.709505+00:00",
+  "updated": "2026-05-26T06:40:49.268078+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -503,11 +503,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
@@ -515,7 +515,7 @@
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -531,20 +531,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4530.9,
+      "value": 4531.7,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.239,
-      "delta_pct": -0.1,
+      "value": 99.069,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.397,
-      "delta_pct": 0.9,
+      "value": 6.406,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.0,
+      "value": 91.95,
       "delta_pct": -4.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76678.0,
-      "delta_pct": -0.4,
+      "value": 76923.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,108 +580,137 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk: Canada-India trade talks may weaken CAD if energy/agri deals favor India. Dollar strength uncertain given Iran-Hormuz diplomacy hopes hitting oil and risk appetite rising.",
-    "updated": "2026-05-26T01:49:55.577246+00:00"
+    "text": "USDCAD LONG faces risk if Iran-Hormuz deal reduces oil prices, pressuring CAD strength. USDJPY and GBPJPY benefit from risk-off sentiment amid geopolitical tensions.",
+    "updated": "2026-05-26T06:40:49.268078+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI weakness supports CAD strength thesis.\n\nGBPJPY LONG: Macro neutral, no cross asset drivers support or challenge.\n\nGBPUSD LONG: Macro challenges setup, momentum divergence weakens already marginal score confirmation.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI crude collapse weakens Canadian dollar.\n\nUSDJPY LONG: Macro confirms setup, risk-off environment strengthens safe-haven Japanese yen.\n\nGBPJPY LONG: Macro challenges setup, weak risk-off momentum insufficient for GBP strength.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.0
+        "score": 6.7
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 6.03
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.88
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 3.78
+        "score": 3.0
       }
     ],
-    "updated": "2026-05-26T01:49:55.577246+00:00"
+    "updated": "2026-05-26T06:40:49.268078+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Monday",
-        "time": "08:00 UTC",
-        "iso": "",
+        "day": "Mon",
+        "time": "08:00",
+        "iso": "2026-05-25T08:00:00+00:00",
         "currency": "EUR",
-        "name": "Germany Ifo Business Climate Index (May)",
-        "forecast": "None",
-        "previous": "None",
-        "note": "Tests whether April's six-year low can stabilize"
+        "name": "Germany Ifo Business Climate Index",
+        "forecast": "85.5",
+        "previous": "83.5",
+        "note": "German sentiment stabilizing test signal"
       },
       {
-        "day": "Tuesday",
-        "time": "14:00 UTC",
-        "iso": "",
+        "day": "Tue",
+        "time": "14:00",
+        "iso": "2026-05-26T14:00:00+00:00",
         "currency": "USD",
-        "name": "US CB Consumer Confidence (May)",
+        "name": "US CB Consumer Confidence",
         "forecast": "None",
         "previous": "None",
-        "note": "First real US sentiment read since Iran war pushed gasoline prices higher in late April"
+        "note": "First major US sentiment read post-oil shock"
       },
       {
-        "day": "Wednesday",
-        "time": "01:30 UTC",
-        "iso": "",
+        "day": "Wed",
+        "time": "01:30",
+        "iso": "2026-05-27T01:30:00+00:00",
         "currency": "AUD",
-        "name": "Australia Monthly CPI Indicator (April, YoY)",
-        "forecast": "None",
-        "previous": "+4.6% YoY",
-        "note": "After March's hot +4.6% YoY print, another firm reading would force the RBA to pause easing cycle"
+        "name": "Australia Monthly CPI Indicator",
+        "forecast": "4.6",
+        "previous": "4.6",
+        "note": "Hot reading could force RBA pause easing"
       },
       {
-        "day": "Thursday",
-        "time": "12:30 UTC",
-        "iso": "",
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
-        "name": "Core PCE (April)",
-        "forecast": "None",
-        "previous": "+3.2% YoY (March)",
-        "note": "Fed's preferred inflation gauge; densest US data drop of the quarter"
+        "name": "Core PCE Index",
+        "forecast": "3.2",
+        "previous": "3.2",
+        "note": "Fed preferred inflation gauge critical reading"
       },
       {
-        "day": "Thursday",
-        "time": "12:30 UTC",
-        "iso": "",
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Q1 GDP Second Estimate",
         "forecast": "None",
-        "previous": "+0.5% (Q4 2025)",
-        "note": "Released simultaneously with Core PCE and other major data"
+        "previous": "None",
+        "note": "Densest US data drop of quarter"
       },
       {
-        "day": "Thursday",
-        "time": "12:30 UTC",
-        "iso": "",
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Durable Goods Orders",
         "forecast": "None",
         "previous": "None",
-        "note": "Released simultaneously with Core PCE and Q1 GDP second estimate"
+        "note": "Manufacturing demand indicator"
       },
       {
-        "day": "Thursday",
-        "time": "12:30 UTC",
-        "iso": "",
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Initial Jobless Claims",
         "forecast": "None",
         "previous": "None",
-        "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
+        "note": "Labor market health employment signal"
+      },
+      {
+        "day": "Wed",
+        "time": "02:00",
+        "iso": "2026-05-27T02:00:00+00:00",
+        "currency": "NZD",
+        "name": "RBNZ Official Cash Rate Decision",
+        "forecast": "2.25",
+        "previous": "2.25",
+        "note": "Expected hold, focus on forward guidance tone"
+      },
+      {
+        "day": "Fri",
+        "time": "07:30",
+        "iso": "2026-05-29T07:30:00+00:00",
+        "currency": "JPY",
+        "name": "Bank of Japan Policy Decision",
+        "forecast": "None",
+        "previous": "None",
+        "note": "Yen weakness raising imported cost pressures"
       }
     ],
-    "updated": "2026-05-26T01:49:55.577246+00:00"
+    "updated": "2026-05-26T06:40:49.268078+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
-  "last_alert": "2026-05-26T06:36:45.709505+00:00"
+  "last_alert": "2026-05-26T06:36:45.709505+00:00",
+  "breaking": {
+    "text": "Strait of Hormuz explosions reported; energy shock threatens EUR weakness ahead.",
+    "updated": "2026-05-26T06:40:49.268078+00:00"
+  },
+  "deep_analysis": {
+    "headline": "",
+    "text": "{\"headline\": \"Hormuz tensions clash with steepening yield curve, creating CAD-USD divergence.\", \"text\": \"The yield curve steepening to +97bp signals growth optimism and risk-on positioning, yet VIX holding above 16 with gold at crisis levels reveals underlying fragility. This disconnect stems from geopolitical risk premium overwhelming fundamental growth signals. Historically, when curves steep while safe havens rally, markets are pricing tail risks that traditional indicators miss. The most striking anomaly is USD weakness despite maintaining CSM dominance\u2014typically USD strength accompanies geopolitical stress, but DXY at 99 suggests dollar funding stress or intervention concerns. Oil's 4.8% decline contradicts Hormuz escalation logic, indicating either strategic reserve releases or demand destruction fears outweighing supply risks. USDCAD long becomes the premier trade as Canadian energy exposure creates currency vulnerability during oil volatility, while USD's CSM superiority provides technical support. The 61-point CSM divergence favoring USD over CAD amplifies this setup. GBPJPY benefits from yen weakness amid BOJ policy uncertainty and sterling's relative CSM strength, though Hormuz developments could reverse risk appetite suddenly.\"",
+    "generated_at": "2026-05-26T06:41:33.256724+00:00"
+  }
 }
