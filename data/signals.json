@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T09:34:09.697908+00:00",
+  "updated": "2026-05-26T17:17:41.220423+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -503,93 +503,93 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 0,
+    "total": 2,
     "confidence": "Neutral",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.78,
-      "delta_pct": 1.1,
-      "direction": "flat",
+      "value": 17.09,
+      "delta_pct": 3.0,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7473.47,
-      "delta_pct": 0.4,
+      "value": 7508.15,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4521.7,
-      "delta_pct": 0.0,
+      "value": 4504.8,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.07,
-      "delta_pct": -0.3,
+      "value": 99.197,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.382,
-      "delta_pct": 0.6,
+      "value": 6.3975,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.558,
-      "delta_bp": -2.8,
-      "direction": "flat",
+      "value": 4.504,
+      "delta_bp": -5.4,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.585,
-      "delta_bp": 0.3,
+      "value": 3.582,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.16,
-      "delta_pct": -3.6,
+      "value": 93.88,
+      "delta_pct": -2.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76638.0,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 76287.0,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.3,
-      "delta_bp": -3.1,
+      "value": 92.2,
+      "delta_bp": -5.1,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Iran tensions could spike oil prices, strengthening JPY as safe haven and weakening commodity currencies like CAD. Monitor geopolitical escalation risk for CADJPY.",
-    "updated": "2026-05-26T09:34:09.697908+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-05-26T17:17:41.220423+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-off regime strongly confirms safe-haven JPY weakness setup.\n\nGBPJPY LONG: Mixed macro neutral stance challenges weak momentum continuation signal.\n\nCADJPY LONG: Oil decline challenges CAD long bias despite JPY strength.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.58
+        "score": 6.78
       },
       {
         "pair": "GBPJPY",
@@ -602,7 +602,7 @@
         "score": 3.33
       }
     ],
-    "updated": "2026-05-26T09:34:09.697908+00:00"
+    "updated": "2026-05-26T17:17:41.220423+00:00"
   },
   "calendar": {
     "events": [
@@ -612,19 +612,19 @@
         "iso": "2026-05-25T08:00:00+00:00",
         "currency": "EUR",
         "name": "Germany Ifo Business Climate Index",
-        "forecast": "85.5",
-        "previous": "83.5",
-        "note": "German sentiment stabilizing test signal"
+        "forecast": "84.2",
+        "previous": "84.5",
+        "note": "German business sentiment stabilizing slightly"
       },
       {
         "day": "Tue",
         "time": "14:00",
         "iso": "2026-05-26T14:00:00+00:00",
         "currency": "USD",
-        "name": "US CB Consumer Confidence",
-        "forecast": "None",
-        "previous": "None",
-        "note": "First major US sentiment read post-oil shock"
+        "name": "CB Consumer Confidence",
+        "forecast": "91.9",
+        "previous": "92.8",
+        "note": "Consumer sentiment edge lower amid inflation"
       },
       {
         "day": "Wed",
@@ -632,19 +632,29 @@
         "iso": "2026-05-27T01:30:00+00:00",
         "currency": "AUD",
         "name": "Australia Monthly CPI Indicator",
-        "forecast": "4.6",
+        "forecast": "4.4",
         "previous": "4.6",
-        "note": "Hot reading could force RBA pause easing"
+        "note": "April CPI expected to remain elevated yearly"
+      },
+      {
+        "day": "Thu",
+        "time": "02:00",
+        "iso": "2026-05-28T02:00:00+00:00",
+        "currency": "NZD",
+        "name": "RBNZ Official Cash Rate Decision",
+        "forecast": "2.25",
+        "previous": "2.25",
+        "note": "Expected to hold OCR steady third meeting"
       },
       {
         "day": "Thu",
         "time": "12:30",
         "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
-        "name": "Core PCE Index",
-        "forecast": "3.2",
+        "name": "Core PCE YoY",
+        "forecast": "3.8",
         "previous": "3.2",
-        "note": "Fed preferred inflation gauge critical reading"
+        "note": "Fed preferred gauge inflation spike risk"
       },
       {
         "day": "Thu",
@@ -652,9 +662,9 @@
         "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Q1 GDP Second Estimate",
-        "forecast": "None",
-        "previous": "None",
-        "note": "Densest US data drop of quarter"
+        "forecast": "2.0",
+        "previous": "2.0",
+        "note": "GDP second estimate release quarterly"
       },
       {
         "day": "Thu",
@@ -662,9 +672,9 @@
         "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Durable Goods Orders",
-        "forecast": "None",
-        "previous": "None",
-        "note": "Manufacturing demand indicator"
+        "forecast": "N/A",
+        "previous": "N/A",
+        "note": "Business investment orders data release"
       },
       {
         "day": "Thu",
@@ -672,40 +682,40 @@
         "iso": "2026-05-28T12:30:00+00:00",
         "currency": "USD",
         "name": "Initial Jobless Claims",
-        "forecast": "None",
-        "previous": "None",
-        "note": "Labor market health employment signal"
-      },
-      {
-        "day": "Wed",
-        "time": "02:00",
-        "iso": "2026-05-27T02:00:00+00:00",
-        "currency": "NZD",
-        "name": "RBNZ Official Cash Rate Decision",
-        "forecast": "2.25",
-        "previous": "2.25",
-        "note": "Expected hold, focus on forward guidance tone"
+        "forecast": "210",
+        "previous": "209",
+        "note": "Weekly jobless claims labor market measure"
       },
       {
         "day": "Fri",
-        "time": "07:30",
-        "iso": "2026-05-29T07:30:00+00:00",
+        "time": "23:30",
+        "iso": "2026-05-29T23:30:00+00:00",
         "currency": "JPY",
-        "name": "Bank of Japan Policy Decision",
-        "forecast": "None",
-        "previous": "None",
-        "note": "Yen weakness raising imported cost pressures"
+        "name": "Tokyo CPI",
+        "forecast": "N/A",
+        "previous": "N/A",
+        "note": "Japan inflation indicator forerunner data"
+      },
+      {
+        "day": "Fri",
+        "time": "01:30",
+        "iso": "2026-05-29T01:30:00+00:00",
+        "currency": "NZD",
+        "name": "Australia CPI April",
+        "forecast": "N/A",
+        "previous": "N/A",
+        "note": "Second Australia CPI on same week"
       }
     ],
-    "updated": "2026-05-26T09:34:09.697908+00:00"
+    "updated": "2026-05-26T17:17:41.220423+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
   "breaking": {
-    "text": "Energy shock from Iran conflict to weigh on Europe's growth, boost inflation.",
-    "updated": "2026-05-26T09:34:09.697908+00:00"
+    "text": "US 2-year treasury yield hits high; dollar strength likely to accelerate.",
+    "updated": "2026-05-26T17:17:41.220423+00:00"
   },
   "last_alert": "2026-05-26T06:36:45.709505+00:00"
 }
