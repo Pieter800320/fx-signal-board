@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T06:56:49.003208+00:00",
+  "updated": "2026-05-26T07:03:38.387750+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -508,7 +508,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -531,7 +531,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4531.7,
+      "value": 4531.4,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
@@ -543,7 +543,7 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.406,
+      "value": 6.4075,
       "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.95,
-      "delta_pct": -4.8,
+      "value": 91.44,
+      "delta_pct": -5.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76923.0,
-      "delta_pct": -0.1,
+      "value": 76790.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG faces risk if Iran-Hormuz deal reduces oil prices, pressuring CAD strength. USDJPY and GBPJPY benefit from risk-off sentiment amid geopolitical tensions.",
-    "updated": "2026-05-26T06:40:49.268078+00:00"
+    "text": "USDCAD LONG at risk if Iran-Hormuz deal reduces oil prices, weakening commodity-linked CAD. GBPJPY supports sterling strength from dollar weakness on deal hopes.",
+    "updated": "2026-05-26T07:03:38.387750+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI crude collapse weakens Canadian dollar.\n\nUSDJPY LONG: Macro confirms setup, risk-off environment strengthens safe-haven Japanese yen.\n\nGBPJPY LONG: Macro challenges setup, weak risk-off momentum insufficient for GBP strength.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI collapse weakens CAD fundamentals today.\n\nUSDJPY LONG: Macro challenges setup, risk-off medium conflicts with yen safe-haven demand.\n\nGBPJPY LONG: Macro challenges setup, weak momentum insufficient without macro risk-off catalyst support.",
     "top": [
       {
         "pair": "USDCAD",
@@ -602,7 +602,7 @@
         "score": 3.0
       }
     ],
-    "updated": "2026-05-26T06:40:49.268078+00:00"
+    "updated": "2026-05-26T07:03:38.387750+00:00"
   },
   "calendar": {
     "events": [
@@ -697,11 +697,15 @@
         "note": "Yen weakness raising imported cost pressures"
       }
     ],
-    "updated": "2026-05-26T06:40:49.268078+00:00"
+    "updated": "2026-05-26T07:03:38.387750+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
-  "last_alert": "2026-05-26T06:36:45.709505+00:00"
+  "last_alert": "2026-05-26T06:36:45.709505+00:00",
+  "breaking": {
+    "text": "Iran explosions reported near Strait of Hormuz; oil prices surge, EUR under pressure.",
+    "updated": "2026-05-26T07:03:38.387750+00:00"
+  }
 }
