@@ -1533,8 +1533,7 @@ function _chtDestroyCharts() {
   _chtCandles    = null;
   _chtStagingLine = null;
   _chtFilteredOhlcv = [];
-  const zo = document.getElementById('cht-zone-overlay');
-  if (zo) zo.innerHTML = '';
+  _trClearLines();
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
 }
@@ -1745,9 +1744,7 @@ function _chtRender(pair, tf, ohlcv) {
   _chtRenderMarkers();
 
   // Redraw trade zones on scroll / zoom
-  chart.timeScale().subscribeVisibleTimeRangeChange(() => {
-    if (typeof _trDrawZones === 'function') _trDrawZones();
-  });
+
 
   const closes = ohlcv.map(d => d.close);
 
@@ -1874,7 +1871,7 @@ function _chtRender(pair, tf, ohlcv) {
   _chtInitDrawListeners();
 
   // Restore trade lines and markers after every render (TF switch, indicator toggle)
-  setTimeout(() => { if (typeof trDrawChartLines === 'function') trDrawChartLines(); }, 150);
+  setTimeout(() => { if (_chtPair === pair && _chtTf === tf) _trDrawLines(); }, 150);
 }
 
 // ── Jump to current ───────────────────────────────────────────────────────────
@@ -2634,161 +2631,85 @@ function _ohlcvCacheSet(pair, tf, bars) {
 let _trPriceLines = {};
 
 // ── Trade zone overlay ────────────────────────────────────────────────────────
-function _trZoneEl() {
-  let el = document.getElementById('cht-zone-overlay');
-  if (!el) {
-    el = document.createElement('div');
-    el.id = 'cht-zone-overlay';
-    el.style.cssText = 'position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:6;';
-    const p = document.getElementById('cht-price');
-    if (p) p.appendChild(el);
-  }
-  return el;
-}
+// ── Trade line series (entry/TP/SL as bounded LineSeries) ───────────────────
+let _trLines = {};  // { tradeId: { tp, entry, sl, leftTime, tp_p, entry_p, sl_p } }
 
-function trDrawChartLines() {
-  // Remove old price lines (backwards compat)
-  Object.values(_trPriceLines).forEach(refs => {
-    ['entry','tp','sl'].forEach(k => { if(refs[k]) { try { _chtCandles.removePriceLine(refs[k]); } catch(e){} } });
+function _trClearLines() {
+  Object.values(_trLines).forEach(({ tp, entry, sl }) => {
+    [tp, entry, sl].forEach(s => { try { _chtInst.removeSeries(s); } catch(e){} });
   });
-  _trPriceLines = {};
-  _trRenderAllMarkers();
-  _trDrawZones();
+  _trLines = {};
 }
 
-function _trDrawZones() {
-  const overlay = _trZoneEl();
-  overlay.innerHTML = '';
+function _trDrawLines() {
+  _trClearLines();
+  _trRenderAllMarkers();
   if (!_chtCandles || !_chtPair || !_chtInst) return;
 
   const trades = trLoad().filter(t => t.pair === _chtPair && t.status !== 'closed');
   if (!trades.length) return;
 
-  const priceEl = document.getElementById('cht-price');
-  const W = priceEl.clientWidth, H = priceEl.clientHeight;
-  if (!W || !H) return;
-
-  // Use the filtered OHLCV actually loaded into the chart — weekend-free, real timestamps
   const ohlcv = _chtFilteredOhlcv;
   if (!ohlcv.length) return;
 
-  const tfSec = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
-  const ts = _chtInst.timeScale();
+  const tfSec    = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+  const rightNow = Math.floor(Date.now() / 1000);
 
   trades.forEach(t => {
     try {
-      // Find the candle nearest to trade entry time in the filtered dataset
-      const entryT = Math.floor(new Date(t.created).getTime() / 1000);
-      const snapT  = Math.floor(entryT / tfSec) * tfSec;
+      // Snap entry time to nearest real candle in filtered OHLCV
+      const entryT  = Math.floor(new Date(t.created).getTime() / 1000);
+      const snapT   = Math.floor(entryT / tfSec) * tfSec;
+      let   snapIdx = ohlcv.findIndex(c => c.time >= snapT);
+      if (snapIdx < 0) snapIdx = ohlcv.length - 1;
+      const leftTime = ohlcv[snapIdx].time;
 
-      // Binary-search for closest candle >= snapT
-      let snapIdx = ohlcv.findIndex(c => c.time >= snapT);
-      if (snapIdx < 0) snapIdx = ohlcv.length - 1;  // trade is after last candle
-      const candleSnapT = ohlcv[snapIdx].time;
+      // Right endpoint: current time (line extends to now)
+      const rightTime = Math.max(rightNow, ohlcv[ohlcv.length - 1].time + tfSec);
 
-      // x0 from real candle timestamp — always succeeds if candle is in the data
-      const x0 = ts.timeToCoordinate(candleSnapT);
-      if (x0 === null) return;
+      const makeLine = (price, color, width) => {
+        const s = _chtInst.addLineSeries({
+          color,
+          lineWidth:              width,
+          lineStyle:              0,      // solid
+          priceLineVisible:       false,
+          lastValueVisible:       false,
+          crosshairMarkerVisible: false,
+        });
+        s.setData([{ time: leftTime, value: price }, { time: rightTime, value: price }]);
+        return s;
+      };
 
-      // x1: real candle 10 bars later, or project with bar spacing
-      const endIdx = snapIdx + 10;
-      let x1;
-      if (endIdx < ohlcv.length) {
-        x1 = ts.timeToCoordinate(ohlcv[endIdx].time);
-      }
-      if (x1 === null || x1 === undefined) {
-        try { const bw = ts.options().barSpacing || 6; x1 = x0 + 10 * bw; }
-        catch(e) { x1 = x0 + 60; }
-      }
-
-      const yEntry = _chtCandles.priceToCoordinate(t.entry);
-      const yTp    = _chtCandles.priceToCoordinate(t.tp);
-      const ySl    = _chtCandles.priceToCoordinate(t.sl);
-      if (yEntry === null || yTp === null || ySl === null) return;
-
-      const left = Math.round(Math.max(0, x0));
-      const right = Math.round(Math.min(W, x1));
-      const w = right - left;
-      if (w < 2) return;
-
-      const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
-      const tpPips = Math.round(Math.abs(t.tp    - t.entry) / ps);
-      const slPips = Math.round(Math.abs(t.sl    - t.entry) / ps);
-
-      // TP zone (entry → TP)
-      const tpTop = Math.round(Math.min(yTp, yEntry));
-      const tpH   = Math.max(2, Math.round(Math.abs(yTp - yEntry)));
-      const dTp = document.createElement('div');
-      dTp.style.cssText = `position:absolute;left:${left}px;top:${tpTop}px;width:${w}px;height:${tpH}px;background:rgba(0,220,55,0.09);border-top:1px solid rgba(0,220,55,0.5);box-sizing:border-box;`;
-      overlay.appendChild(dTp);
-
-      // SL zone (entry → SL)
-      const slTop = Math.round(Math.min(ySl, yEntry));
-      const slH   = Math.max(2, Math.round(Math.abs(ySl - yEntry)));
-      const dSl = document.createElement('div');
-      dSl.style.cssText = `position:absolute;left:${left}px;top:${slTop}px;width:${w}px;height:${slH}px;background:rgba(248,81,73,0.08);border-bottom:1px solid rgba(248,81,73,0.45);box-sizing:border-box;`;
-      overlay.appendChild(dSl);
-
-      // Entry line
-      const dE = document.createElement('div');
-      dE.style.cssText = `position:absolute;left:${left}px;top:${Math.round(yEntry)}px;width:${w}px;height:1px;background:rgba(205,217,229,0.4);`;
-      overlay.appendChild(dE);
-
-      // Pip labels (right edge of zone)
-      const tpLbl = document.createElement('div');
-      tpLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${tpTop+3}px;font-size:8px;font-weight:700;color:rgba(0,220,55,0.75);font-variant-numeric:tabular-nums;white-space:nowrap;`;
-      tpLbl.textContent = `+${tpPips}p`;
-      overlay.appendChild(tpLbl);
-
-      const slLbl = document.createElement('div');
-      slLbl.style.cssText = `position:absolute;right:${W-right+4}px;top:${slTop+slH-14}px;font-size:8px;font-weight:700;color:rgba(248,81,73,0.7);font-variant-numeric:tabular-nums;white-space:nowrap;`;
-      slLbl.textContent = `−${slPips}p`;
-      overlay.appendChild(slLbl);
-
-      // Floating P&L card (top-left of TP zone)
-      const lp  = _livePrice[t.pair];
-      const lot = t.lot_size;
-      const dirColor = t.direction === 'BUY' ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.9)';
-      const dirArrow = t.direction === 'BUY' ? '▲' : '▼';
-      let pnlHtml = '';
-      if (lp && lot) {
-        const dir = t.direction === 'BUY' ? 1 : -1;
-        const pnlEUR = dir * (lp - t.entry) / ps * _pipValueEUR(t.pair, lot);
-        const riskEUR = slPips * _pipValueEUR(t.pair, lot);
-        const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
-        const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
-        pnlHtml = `<div id="czp-eur-${t.id}" style="font-size:11px;font-weight:800;color:${pc};font-variant-numeric:tabular-nums;margin-top:3px;">${pos?'+ ':'− '}€${Math.abs(pnlEUR).toFixed(2)}</div>`
-                + `<div id="czp-r-${t.id}"   style="font-size:8px; font-weight:700;color:${pc};font-variant-numeric:tabular-nums;">${pos?'+ ':'− '}${Math.abs(pnlR).toFixed(2)} R</div>`;
-      }
-      const card = document.createElement('div');
-      card.id = `czp-card-${t.id}`;
-      card.style.cssText = `position:absolute;left:${left+4}px;top:${tpTop+4}px;background:rgba(10,14,19,0.88);border:1px solid rgba(30,42,53,0.9);border-radius:5px;padding:4px 8px;`;
-      card.innerHTML = `<div style="font-size:9px;font-weight:800;color:${dirColor};letter-spacing:.04em;">${dirArrow} ${t.direction}${lot?' · '+lot:''}</div>${pnlHtml}`;
-      overlay.appendChild(card);
-
+      _trLines[t.id] = {
+        tp:      makeLine(t.tp,    'rgba(0,220,55,0.65)',    1),
+        entry:   makeLine(t.entry, 'rgba(205,217,229,0.55)', 1),
+        sl:      makeLine(t.sl,    'rgba(248,81,73,0.65)',   1),
+        leftTime,
+        tp_p:    t.tp,
+        entry_p: t.entry,
+        sl_p:    t.sl,
+      };
     } catch(e) {}
   });
 }
 
-// Live P&L tick update — cheap text-only update, no DOM rebuild
-function _trUpdateZonePnL(pair, price) {
-  const trades = trLoad().filter(t => t.pair === pair && t.status === 'open');
-  trades.forEach(t => {
-    if (!t.lot_size) return;
-    const isJpy = pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
-    const dir = t.direction === 'BUY' ? 1 : -1;
-    const pnlEUR = dir * (price - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
-    const slPips = Math.abs(t.sl - t.entry) / ps;
-    const riskEUR = slPips * _pipValueEUR(pair, t.lot_size);
-    const pnlR = riskEUR > 0 ? pnlEUR / riskEUR : 0;
-    const pos = pnlEUR >= 0, pc = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
-    const eurEl = document.getElementById(`czp-eur-${t.id}`);
-    const rEl   = document.getElementById(`czp-r-${t.id}`);
-    if (eurEl) { eurEl.textContent = (pos?'+ ':'− ')+'€'+Math.abs(pnlEUR).toFixed(2); eurEl.style.color = pc; }
-    else { _trDrawZones(); return; }  // card not rendered yet — do a full draw
-    if (rEl)   { rEl.textContent   = (pos?'+ ':'− ')+Math.abs(pnlR).toFixed(2)+' R';  rEl.style.color = pc; }
+function _trUpdateLines(pair) {
+  if (pair !== _chtPair || !Object.keys(_trLines).length) return;
+  const ohlcv     = _chtFilteredOhlcv;
+  const tfSec     = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+  const rightTime = Math.max(
+    Math.floor(Date.now() / 1000),
+    ohlcv.length ? ohlcv[ohlcv.length - 1].time + tfSec : 0
+  );
+  Object.values(_trLines).forEach(ln => {
+    if (rightTime <= ln.leftTime) return;
+    const pts = (p) => [{ time: ln.leftTime, value: p }, { time: rightTime, value: p }];
+    try { ln.tp.setData(pts(ln.tp_p));       } catch(e) {}
+    try { ln.entry.setData(pts(ln.entry_p)); } catch(e) {}
+    try { ln.sl.setData(pts(ln.sl_p));       } catch(e) {}
   });
 }
+
 
 function _trRenderAllMarkers() {
   if (!_chtCandles || !_chtPair || !_chtTf) return;
@@ -2910,7 +2831,7 @@ function submitTrade() {
   const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', lot_size:_getLot(), status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, pnl_eur:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
   const trades=trLoad(); trades.push(t); trSave(trades);
   tgSend(`🟠 <b>${isPending?'PENDING ORDER SET':'TRADE ENTERED'}</b>\n${t.pair} ${t.direction} @ ${entry.toFixed(isJpy?3:5)}\nTP ${tp.toFixed(isJpy?3:5)}  SL ${sl.toFixed(isJpy?3:5)}  RR 1:${rr}\n${notes?'📝 '+notes:''}`);
-  closeTradeSheet(); trDrawChartLines();
+  closeTradeSheet(); _trDrawLines();
 }
 
 function trManualClose(id) {
@@ -2927,7 +2848,7 @@ function trManualClose(id) {
   trSave(trades);
   const pnlStr=pnlEUR!=null?(pnlEUR>=0?`+€${pnlEUR.toFixed(2)}`:`−€${Math.abs(pnlEUR).toFixed(2)}`):'';
   tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${t.r_actual}R${pnlStr?' · '+pnlStr:''}`);
-  trDrawChartLines(); renderTradeLog();
+  _trDrawLines(); renderTradeLog();
 }
 
 function trDeleteTrade(id) {
@@ -3190,7 +3111,7 @@ const _livePrice = {};   // pair → last known price, persists across chart ren
 
 function onLiveTick(pair, price) {
   chtUpdateLivePriceLine(pair, price);
-  if (pair === _chtPair && typeof _trUpdateZonePnL === 'function') _trUpdateZonePnL(pair, price);
+  if (pair === _chtPair) _trUpdateLines(pair);
   if (_tshPair !== pair) return;
   const liveEl = document.getElementById('tsh-live-price');
   if (liveEl) { const isJpy=pair.includes('JPY'); liveEl.textContent=price.toFixed(isJpy?3:5); liveEl.style.opacity='1'; }
