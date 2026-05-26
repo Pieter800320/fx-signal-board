@@ -2729,7 +2729,7 @@ function _trRenderInfoCard(trades) {
 
   const card = document.createElement('div');
   card.id = 'cht-trade-info-card';
-  card.style.cssText = 'position:absolute;bottom:36px;right:10px;background:rgba(10,14,19,0.92);border:1px solid rgba(30,42,53,0.9);border-radius:6px;padding:7px 10px;z-index:8;min-width:108px;pointer-events:none;';
+  card.style.cssText = 'position:absolute;top:10px;left:10px;background:rgba(10,14,19,0.92);border:1px solid rgba(30,42,53,0.9);border-radius:6px;padding:7px 10px;z-index:8;min-width:100px;max-width:130px;word-break:break-word;white-space:normal;pointer-events:none;';
 
   const rows = trades.map((t, idx) => {
     const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
