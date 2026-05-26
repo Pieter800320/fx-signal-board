@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-25T22:47:38.136788+00:00",
+  "updated": "2026-05-26T01:49:55.577246+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -499,19 +499,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -527,9 +527,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4573.3,
-      "delta_pct": 1.2,
-      "direction": "up",
+      "value": 4530.9,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
@@ -539,8 +539,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.463,
-      "delta_pct": 1.9,
+      "value": 6.397,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -557,14 +557,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.51,
-      "delta_pct": -6.3,
+      "value": 92.0,
+      "delta_pct": -4.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77144.0,
-      "delta_pct": 0.2,
+      "value": 76678.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -576,11 +576,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk. Oil price support from geopolitical tensions conflicts with diplomacy hopes lifting risk sentiment and weakening safe haven CAD.",
-    "updated": "2026-05-25T22:47:38.136788+00:00"
+    "text": "USDCAD LONG at risk: Canada-India trade talks may weaken CAD if energy/agri deals favor India. Dollar strength uncertain given Iran-Hormuz diplomacy hopes hitting oil and risk appetite rising.",
+    "updated": "2026-05-26T01:49:55.577246+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI weakness pressures CAD significantly today.\n\nGBPJPY LONG: Macro neutral, no cross asset driver supporting momentum divergence.\n\nGBPUSD LONG: Macro challenges setup, weak momentum divergence conflicts mixed neutral regime.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness supports CAD strength thesis.\n\nGBPJPY LONG: Macro neutral, no cross asset drivers support or challenge.\n\nGBPUSD LONG: Macro challenges setup, momentum divergence weakens already marginal score confirmation.",
     "top": [
       {
         "pair": "USDCAD",
@@ -598,7 +598,7 @@
         "score": 3.78
       }
     ],
-    "updated": "2026-05-25T22:47:38.136788+00:00"
+    "updated": "2026-05-26T01:49:55.577246+00:00"
   },
   "calendar": {
     "events": [
@@ -673,7 +673,7 @@
         "note": "Released simultaneously with Core PCE, GDP, and Durable Goods Orders"
       }
     ],
-    "updated": "2026-05-25T22:47:38.136788+00:00"
+    "updated": "2026-05-26T01:49:55.577246+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
