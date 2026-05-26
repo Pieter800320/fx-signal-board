@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T19:50:19.750622+00:00",
+  "updated": "2026-05-26T21:24:06.997976+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -519,32 +519,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.0,
+      "value": 17.01,
       "delta_pct": 2.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7523.52,
-      "delta_pct": 0.7,
+      "value": 7519.12,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4503.8,
-      "delta_pct": -0.4,
+      "value": 4507.3,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.16,
+      "value": 99.161,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.417,
-      "delta_pct": 1.2,
+      "value": 6.4235,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.77,
-      "delta_pct": -2.9,
+      "value": 93.57,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75910.0,
-      "delta_pct": -1.8,
+      "value": 75929.0,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -580,11 +580,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG invalidated: Oil shock and energy crisis boost inflation, supporting ECB hawkishness and EUR strength versus JPY weakness.",
-    "updated": "2026-05-26T19:50:19.750622+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-05-26T21:24:06.997976+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro challenges setup, WTI weakness supports CAD strength here.\n\nUSDJPY LONG: Macro confirms setup, mixed neutral allows carry trade positioning.",
+    "text": "USDCAD LONG: Macro challenges setup, WTI weakness supports CAD strength instead.\n\nUSDJPY LONG: Macro mixed neutral confirms no contradictory cross asset headwinds present.",
     "top": [
       {
         "pair": "USDCAD",
@@ -597,7 +597,7 @@
         "score": 6.53
       }
     ],
-    "updated": "2026-05-26T19:50:19.750622+00:00"
+    "updated": "2026-05-26T21:24:06.997976+00:00"
   },
   "calendar": {
     "events": [
@@ -702,15 +702,15 @@
         "note": "Second Australia CPI on same week"
       }
     ],
-    "updated": "2026-05-26T19:50:19.750622+00:00"
+    "updated": "2026-05-26T21:24:06.997976+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
   "breaking": {
-    "text": "US treasury 2-year notes auction yields hit high; dollar strength likely continues.",
-    "updated": "2026-05-26T19:50:19.750622+00:00"
+    "text": "Dallas Fed Manufacturing Index surges to 0.40 from -2.30, signals economic",
+    "updated": "2026-05-26T21:24:06.997976+00:00"
   },
   "last_alert": "2026-05-26T06:36:45.709505+00:00"
 }
