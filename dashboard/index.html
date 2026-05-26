@@ -2639,6 +2639,7 @@ function _trClearLines() {
     [tp, entry, sl].forEach(s => { try { _chtInst.removeSeries(s); } catch(e){} });
   });
   _trLines = {};
+  _trRemoveInfoCard();
 }
 
 function _trDrawLines() {
@@ -2691,6 +2692,9 @@ function _trDrawLines() {
       };
     } catch(e) {}
   });
+
+  // Render info card after lines are placed
+  _trRenderInfoCard(trades);
 }
 
 function _trUpdateLines(pair) {
@@ -2708,15 +2712,80 @@ function _trUpdateLines(pair) {
     try { ln.entry.setData(pts(ln.entry_p)); } catch(e) {}
     try { ln.sl.setData(pts(ln.sl_p));       } catch(e) {}
   });
+  _trUpdateInfoCard(pair);
+}
+
+
+// ── Trade info card (bottom-right of chart) ───────────────────────────────────
+function _trRemoveInfoCard() {
+  const el = document.getElementById('cht-trade-info-card');
+  if (el) el.remove();
+}
+
+function _trRenderInfoCard(trades) {
+  _trRemoveInfoCard();
+  const priceEl = document.getElementById('cht-price');
+  if (!priceEl || !trades.length) return;
+
+  const card = document.createElement('div');
+  card.id = 'cht-trade-info-card';
+  card.style.cssText = 'position:absolute;bottom:36px;right:10px;background:rgba(10,14,19,0.92);border:1px solid rgba(30,42,53,0.9);border-radius:6px;padding:7px 10px;z-index:8;min-width:108px;pointer-events:none;';
+
+  const rows = trades.map((t, idx) => {
+    const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+    const dirCol  = t.direction === 'BUY' ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.9)';
+    const arrow   = t.direction === 'BUY' ? '▲' : '▼';
+    const lp      = _livePrice[t.pair];
+    let pnlHtml   = '';
+    if (lp && t.lot_size) {
+      const dir    = t.direction === 'BUY' ? 1 : -1;
+      const pnl    = dir * (lp - t.entry) / ps * _pipValueEUR(t.pair, t.lot_size);
+      const risk   = Math.abs(t.sl - t.entry) / ps * _pipValueEUR(t.pair, t.lot_size);
+      const pnlR   = risk > 0 ? pnl / risk : 0;
+      const pos    = pnl >= 0;
+      const pc     = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+      const sign   = pos ? '+' : '−';
+      pnlHtml = `<div id="ctc-eur-${t.id}" style="font-size:12px;font-weight:800;color:${pc};font-variant-numeric:tabular-nums;margin-top:3px;">${sign}€${Math.abs(pnl).toFixed(2)}</div>`
+               +`<div id="ctc-r-${t.id}"   style="font-size:9px;font-weight:700;color:${pc};font-variant-numeric:tabular-nums;">${sign}${Math.abs(pnlR).toFixed(2)} R</div>`;
+    }
+    const sep = idx > 0 ? '<div style="border-top:1px solid rgba(30,42,53,0.7);margin:5px 0;"></div>' : '';
+    return `${sep}
+      <div style="font-size:9px;font-weight:800;color:${dirCol};letter-spacing:.05em;">${arrow} ${t.direction}</div>
+      <div style="font-size:9px;color:rgba(120,130,140,0.9);margin-top:2px;">Entry <span style="color:rgba(205,217,229,0.85);font-variant-numeric:tabular-nums;">${t.entry}</span></div>
+      <div style="font-size:9px;color:rgba(120,130,140,0.9);">RR <span style="color:rgba(205,217,229,0.85);">${t.rr || '—'}</span></div>
+      ${pnlHtml}`;
+  });
+
+  card.innerHTML = rows.join('');
+  priceEl.appendChild(card);
+}
+
+function _trUpdateInfoCard(pair) {
+  const price = _livePrice[pair];
+  if (!price) return;
+  const trades = trLoad().filter(t => t.pair === pair && t.status !== 'closed');
+  const isJpy  = pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+  trades.forEach(t => {
+    const eurEl = document.getElementById(`ctc-eur-${t.id}`);
+    const rEl   = document.getElementById(`ctc-r-${t.id}`);
+    if (!eurEl) { _trDrawLines(); return; }   // card missing — full redraw
+    if (!t.lot_size) return;
+    const dir  = t.direction === 'BUY' ? 1 : -1;
+    const pnl  = dir * (price - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
+    const risk = Math.abs(t.sl - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
+    const pnlR = risk > 0 ? pnl / risk : 0;
+    const pos  = pnl >= 0, sign = pos ? '+' : '−';
+    const pc   = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+    eurEl.textContent = `${sign}€${Math.abs(pnl).toFixed(2)}`; eurEl.style.color = pc;
+    if (rEl) { rEl.textContent = `${sign}${Math.abs(pnlR).toFixed(2)} R`; rEl.style.color = pc; }
+  });
 }
 
 
 function _trRenderAllMarkers() {
   if (!_chtCandles || !_chtPair || !_chtTf) return;
   const userMarkers = mkLoad().filter(m=>m.pair===_chtPair&&m.tf===_chtTf&&m.active).map(m=>({ time:m.time, position:m.direction==='bull'?'belowBar':'aboveBar', color:m.direction==='bull'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:m.direction==='bull'?'arrowUp':'arrowDown', text:m.text||'', size:1.5, id:m.id }));
-  const tradeMarkers = trLoad().filter(t=>t.pair===_chtPair && t.status!=='closed').map(t=>({ time:Math.floor(new Date(t.created).getTime()/1000), position:t.direction==='BUY'?'belowBar':'aboveBar', color:t.direction==='BUY'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:t.direction==='BUY'?'arrowUp':'arrowDown', text:`${t.direction==='BUY'?'L':'S'} ${t.entry}${t.rr&&t.rr!=='—'?' '+t.rr:''}`, size:1.2 }));
-  const all = [...userMarkers,...tradeMarkers].sort((a,b)=>a.time-b.time);
-  try { _chtCandles.setMarkers(all); } catch(e) {}
+  try { _chtCandles.setMarkers(userMarkers); } catch(e) {}
 }
 
 // ── Trade entry sheet ─────────────────────────────────────────────────────────
@@ -2763,6 +2832,22 @@ function openTradeSheet() {
   sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
   // Start WS — internally calls fetchLiveQuote on new/changed connection
   liveWsStart(_tshPair);
+  // If WS was already running, _livePrice may already have the price — fill immediately
+  const _cachedLp = _livePrice[_tshPair];
+  if (_cachedLp) {
+    const _isJpy = _tshPair.includes('JPY');
+    const _ps    = _cachedLp.toFixed(_isJpy ? 3 : 5);
+    const _lel   = document.getElementById('tsh-live-price');
+    if (_lel) { _lel.textContent = _ps; _lel.style.opacity = '1'; }
+    const _eel = document.getElementById('tsh-entry');
+    if (_eel && !_eel.dataset.userSet) {
+      _eel.value = _ps; _eel.placeholder = _isJpy ? '0.000' : '0.00000';
+      const _sb = document.getElementById('tsh-submit-btn');
+      if (_sb) { _sb.disabled = false; _sb.style.opacity = '1'; }
+      tshCalcRR();
+    }
+    _updateLivePnL(_cachedLp);
+  }
 }
 
 function closeActiveTrade() {
