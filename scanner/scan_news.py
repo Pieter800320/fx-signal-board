@@ -618,12 +618,18 @@ def build_deep_context(signals: dict, macro: dict) -> str:
     return "\n".join(lines)
 
 
-def call_deep_analysis(signals: dict, macro: dict) -> dict:
+def call_deep_analysis(signals: dict, macro: dict, headlines: list = None) -> dict:
     """
     Daily Sonnet call — headline + 180-word interpretive macro narrative.
     Returns {headline, text, generated_at} for storage in signals.json deep_analysis key.
     """
     context = build_deep_context(signals, macro)
+    
+    # Add news context if available
+    if headlines:
+        context += "\n\nRECENT NEWS (last 2 hours):\n"
+        for h in headlines[:5]:
+            context += f"  • {h}\n"
 
     system = (
         "You are a senior macro FX analyst with 20 years experience. "
@@ -675,6 +681,22 @@ def call_deep_analysis(signals: dict, macro: dict) -> dict:
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
 
+
+
+
+def get_breaking_headline(headlines: list) -> str:
+    """Haiku identifies the single most important headline for FX traders (last 2h)."""
+    if not headlines or len(headlines) < 1:
+        return ""
+    prompt = f"""You are a senior FX market analyst. Given these headlines from the last 2 hours, 
+identify the SINGLE most important one for currency traders to know RIGHT NOW.
+Return ONLY the headline itself — no explanation, no "IMPORTANT:", no numbering.
+Maximum 12 words. Be specific and actionable.
+
+Headlines:
+{chr(10).join(f"• {h}" for h in headlines[:10])}"""
+    result = _haiku(prompt, max_tokens=20).strip()
+    return result if result and result.lower() != "no breaking news" else ""
 
 def call_week_ahead(signals: dict, calendar_events: list[dict]) -> str:
     """
@@ -797,6 +819,9 @@ def main():
 
     print("\n[3/6] Headlines + calendar…")
     headlines = fetch_headlines()
+    
+    print("\n[3a/6] Breaking headline…")
+    breaking = get_breaking_headline(headlines)
 
     # Calendar: refresh every 4 hours — also force refresh if cache is empty
     prev_cal   = signals.get("calendar", {})
@@ -825,7 +850,7 @@ def main():
     is_deep_run = (now.hour == 6)
     if is_deep_run:
         print("\n[DA] Deep Analysis — daily Sonnet narrative…")
-        deep = call_deep_analysis(signals, macro)
+        deep = call_deep_analysis(signals, macro, headlines)
         print(f"  Deep Analysis: {deep['text'][:80]}…")
     else:
         prev_deep = signals.get("deep_analysis", {})
@@ -839,9 +864,13 @@ def main():
         week_ahead = {"text": wa_text, "generated_at": now.isoformat()}
         print(f"  Week Ahead: {wa_text[:80]}…")
     else:
-        # Preserve existing week_ahead if still within display window (24h)
+        # Week Ahead persists for 24h only
         prev_wa = signals.get("week_ahead", {})
-        week_ahead = prev_wa if prev_wa.get("generated_at") else {}
+        try:
+            wa_age_h = (now - datetime.fromisoformat(prev_wa.get("generated_at", "2000-01-01T00:00:00+00:00"))).total_seconds() / 3600
+            week_ahead = prev_wa if wa_age_h < 24 and prev_wa.get("text") else {}
+        except Exception:
+            week_ahead = {}
 
     signals["regime_w1"]    = w1
     signals["macro"]        = mac
@@ -849,6 +878,8 @@ def main():
     signals["catalyst"]     = {"text": catalyst, "updated": now.isoformat()}
     signals["ranked"]       = {**ranked_out, "updated": now.isoformat()}
     signals["calendar"]     = {"events": events, "updated": now.isoformat()}
+    if breaking:
+        signals["breaking"] = {"text": breaking, "updated": now.isoformat()}
     if deep:
         signals["deep_analysis"] = deep
     if week_ahead:
