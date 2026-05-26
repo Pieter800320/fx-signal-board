@@ -2,7 +2,7 @@ name: Hourly Scan + Deploy
 
 on:
   schedule:
-    - cron: '5 * * * *'   # :05 past every hour
+    - cron: '5 */2 7-20 * 1-5'   # every 2 hours, 07:00–20:00 UTC, Mon–Fri only
   workflow_dispatch:
 
 permissions:
