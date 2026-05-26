@@ -297,7 +297,7 @@ def main():
         k: prev.get(k)
         for k in ("regime_w1", "macro", "macro_assets",
                   "catalyst", "ranked", "calendar", "week_ahead",
-                  "last_alert")
+                  "deep_analysis", "breaking", "last_alert")
         if prev.get(k)
     }
 
