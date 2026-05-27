@@ -1779,6 +1779,7 @@ function chtCMPSeries(ohlcv, tf) {
     if (cmps[i] === null) continue;
     out.push({
       time: ohlcv[i].time,
+      cmp: cmps[i],
       d4:  cmps[i - lbs[0]] !== null ? cmps[i] - cmps[i - lbs[0]] : null,
       d8:  cmps[i - lbs[1]] !== null ? cmps[i] - cmps[i - lbs[1]] : null,
       d12: cmps[i - lbs[2]] !== null ? cmps[i] - cmps[i - lbs[2]] : null,
@@ -1965,6 +1966,13 @@ function _chtRender(pair, tf, ohlcv) {
     cmpChart.addLineSeries({ color:'rgba(205,217,229,0.2)', lineWidth:1, lineStyle:3,
       priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
       .setData(zeroData);
+
+    // Raw CMP line — white, normalised to zero (cmp - 50) so 50-cross reads as zero-cross
+    const cmpLine = cmpData.filter(d => d.cmp !== null).map(d => ({ time:d.time, value:d.cmp - 50 }));
+    if (cmpLine.length)
+      cmpChart.addLineSeries({ color:'rgba(205,217,229,0.9)', lineWidth:2,
+        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+        .setData(cmpLine);
 
     // Fast delta (H4 / 1 H4 bar) — green
     const d4series = cmpData.filter(d => d.d4 !== null).map(d => ({ time:d.time, value:d.d4 }));
