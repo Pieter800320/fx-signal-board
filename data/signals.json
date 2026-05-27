@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T23:11:24.321355+00:00",
+  "updated": "2026-05-27T01:57:56.700914+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -531,19 +531,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4501.4,
-      "delta_pct": -0.4,
+      "value": 4506.7,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.141,
-      "delta_pct": -0.2,
+      "value": 99.139,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.422,
+      "value": 6.4265,
       "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.6,
-      "delta_pct": -3.1,
+      "value": 92.94,
+      "delta_pct": -3.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75621.0,
-      "delta_pct": -2.1,
+      "value": 75793.0,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -580,29 +580,29 @@
     }
   },
   "catalyst": {
-    "text": "Pound jumps as dollar sells off on Iran-Hormuz deal hopes conflicts with USDJPY LONG and USDCAD LONG. Dollar weakness invalidates setups.",
-    "updated": "2026-05-26T22:58:29.822188+00:00"
+    "text": "Sterling Today headline conflicts GBPJPY LONG. Pound strengthens on dollar selloff, reducing JPY strength relative to GBP. Weakens setup momentum.",
+    "updated": "2026-05-27T01:57:56.700914+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Falling US yields support yen strength challenge.\n\nUSDCAD LONG: Oil decline confirms CAD weakness setup.\n\nCADJPY LONG: Equity rally contradicts CAD strength setup.",
+    "text": "USDJPY LONG: Macro challenges setup, 10Y yield collapse weakens USD carry appeal.\n\nCADJPY LONG: Macro confirms setup, S&P 500 strength supports CAD bid momentum.\n\nGBPJPY LONG: Macro mixed, S&P 500 strength supports GBP but oil weakness uncertain.",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.08
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.08
+        "score": 5.8
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 4.55
+        "score": 4.7
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 3.1
       }
     ],
-    "updated": "2026-05-26T22:58:29.822188+00:00"
+    "updated": "2026-05-27T01:57:56.700914+00:00"
   },
   "calendar": {
     "events": [
@@ -707,15 +707,15 @@
         "note": "Second Australia CPI on same week"
       }
     ],
-    "updated": "2026-05-26T22:58:29.822188+00:00"
+    "updated": "2026-05-27T01:57:56.700914+00:00"
   },
   "week_ahead": {
     "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
     "generated_at": "2026-05-24T22:43:05.803102+00:00"
   },
   "breaking": {
-    "text": "US treasury auctions $69B of 2-year notes at high yield.",
-    "updated": "2026-05-26T22:58:29.822188+00:00"
+    "text": "Australian April CPI misses expectations at 4.2%, supporting RBA rate cut odds.",
+    "updated": "2026-05-27T01:57:56.700914+00:00"
   },
   "last_alert": "2026-05-26T06:36:45.709505+00:00"
 }
