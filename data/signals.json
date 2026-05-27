@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T10:59:28.890657+00:00",
+  "updated": "2026-05-27T11:25:21.789465+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -512,15 +512,15 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.97,
-      "delta_pct": -0.2,
+      "value": 16.87,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -531,20 +531,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4525.9,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 4482.5,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.09,
-      "delta_pct": -0.1,
+      "value": 99.11,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.389,
-      "delta_pct": 0.4,
+      "value": 6.363,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -561,14 +561,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.05,
-      "delta_pct": -4.1,
+      "value": 90.24,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75759.0,
-      "delta_pct": -0.1,
+      "value": 75882.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -581,7 +581,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-27T08:59:40.203048+00:00"
+    "updated": "2026-05-27T11:25:21.789465+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -589,24 +589,19 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.77
+        "score": 6.45
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.7
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 5.28
+        "score": 6.03
       }
     ],
-    "updated": "2026-05-27T08:59:40.203048+00:00"
+    "updated": "2026-05-27T11:25:21.789465+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-27T08:59:40.203048+00:00"
+    "updated": "2026-05-27T11:25:21.789465+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -615,7 +610,7 @@
   },
   "breaking": {
     "text": "Australian April CPI: Headline 4.2% (expected 4.4%, prior",
-    "updated": "2026-05-27T08:59:40.203048+00:00"
+    "updated": "2026-05-27T11:25:21.789465+00:00"
   },
   "last_alert": "2026-05-27T10:59:28.890657+00:00"
 }
