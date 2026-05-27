@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T05:37:31.386625+00:00",
+  "updated": "2026-05-27T06:14:59.958481+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -511,11 +511,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -531,20 +531,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4505.6,
-      "delta_pct": 0.1,
+      "value": 4494.2,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.077,
-      "delta_pct": -0.1,
+      "value": 99.118,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.439,
-      "delta_pct": 1.2,
+      "value": 6.402,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -561,13 +561,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.83,
-      "delta_pct": -2.2,
+      "value": 91.97,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75561.0,
+      "value": 75587.0,
       "delta_pct": -2.2,
       "direction": "down",
       "label": "Bitcoin"
@@ -581,10 +581,10 @@
   },
   "catalyst": {
     "text": "Pound jumps as dollar sells off on Iran-Hormuz deal hopes conflicts with USDJPY LONG and USDCAD LONG. Dollar weakness invalidates setups.",
-    "updated": "2026-05-27T05:27:48.684519+00:00"
+    "updated": "2026-05-27T06:14:59.958481+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Falling US yields support JPY safe haven bid, challenging long setup.\n\nUSDCAD LONG: Declining WTI directly confirms CAD weakness, supporting long setup thesis.\n\nCADJPY LONG: Rising equities bid CAD while yields fall, directly challenging setup.",
+    "text": "USDJPY LONG: Macro neutral confirms ranging, ADX strength validates mean reversion setup.\n\nUSDCAD LONG: Falling WTI directly confirms CAD weakness, supports long USD exposure.\n\nCADJPY LONG: Rising equities contradict setup by bidding CAD, weakens momentum thesis.",
     "top": [
       {
         "pair": "USDJPY",
@@ -602,7 +602,7 @@
         "score": 3.83
       }
     ],
-    "updated": "2026-05-27T05:27:48.684519+00:00"
+    "updated": "2026-05-27T06:14:59.958481+00:00"
   },
   "calendar": {
     "events": [
@@ -707,15 +707,16 @@
         "note": "Second Australia CPI on same week"
       }
     ],
-    "updated": "2026-05-27T05:27:48.684519+00:00"
-  },
-  "week_ahead": {
-    "text": "Based on the search results, here is your Week Ahead briefing: US Dollar strength dominates as hawkish Federal Reserve expectations continue supporting the greenback across major FX pairs , setting the dominant macro theme for the coming week. Fed rate hike bets remain elevated ahead of key US PCE data , making this the most important data release affecting the dollar this week. Watch USD/JPY closely as Fed pricing is the dominant driver for USD/JPY this week with markets now shifting from debating rate cuts to whether the Fed may need to tighten policy further . The biggest wildcard remains traders awaiting fresh developments surrounding the US-Iran conflict before taking stronger directional positions , adding geopolitical uncertainty that could quickly shift risk sentiment.",
-    "generated_at": "2026-05-24T22:43:05.803102+00:00"
+    "updated": "2026-05-27T06:14:59.958481+00:00"
   },
   "breaking": {
-    "text": "Australian April CPI softer than expected at 4.2%, supporting AUD weakness.",
-    "updated": "2026-05-27T05:27:48.684519+00:00"
+    "text": "Australian April CPI headline 4.2% misses expectations, signals disinflation trend",
+    "updated": "2026-05-27T06:14:59.958481+00:00"
   },
-  "last_alert": "2026-05-27T03:55:32.346606+00:00"
+  "last_alert": "2026-05-27T03:55:32.346606+00:00",
+  "deep_analysis": {
+    "headline": "USD strength amid falling yields signals flight-to-quality, not hawkish repricing",
+    "text": "The USD's dominance despite a 6.5bp Treasury selloff represents classic safe-haven positioning rather than rate expectations. Historically, this configuration emerges when geopolitical tensions override monetary policy considerations, with the dollar benefiting from reserve currency status while bonds rally on growth fears. The VIX's modest 2.5% rise understates underlying stress, as evidenced by gold's persistence near crisis levels despite dollar strength\u2014typically these assets move inversely. This suggests institutional flows are driving USD demand independent of yield differentials. The steepening curve supports risk-on narratives, yet equities' parabolic trajectory creates dangerous fragility. These signals paint a bipolar market: surface-level risk appetite masking deeper structural anxieties. USDJPY emerges as the primary beneficiary, with the yen's weakness compounding USD safe-haven flows and rate differential dynamics. The 61-point CSM divergence reinforces this technical momentum. USDCAD faces headwinds from oil's 2% decline despite the massive 79-point strength divergence, creating conflicting cross-currents. Australian CPI's downside surprise removes RBA hawkishness, further cementing USD dominance across commodity currencies where central bank divergence now favors American exceptionalism.",
+    "generated_at": "2026-05-27T06:15:35.848416+00:00"
+  }
 }
