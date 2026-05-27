@@ -2980,6 +2980,14 @@ const FSB_CAPITAL_KEY = 'fsb_capital_v1';
 const FSB_LOT_KEY     = 'fsb_lot_v1';
 
 function _getCapital()  { return Math.max(100, parseFloat(localStorage.getItem(FSB_CAPITAL_KEY)||'10000')||10000); }
+function _getCurrentBalance() {
+  try {
+    const capital = _getCapital();
+    const closed  = trLoad().filter(t => t.status === 'closed');
+    const bal     = closed.reduce((sum, t) => sum + (t.pnl_eur || 0), capital);
+    return Math.max(100, Math.round(bal));
+  } catch(e) { return _getCapital(); }
+}
 function _saveCapital(v){ localStorage.setItem(FSB_CAPITAL_KEY, String(v)); }
 function _getLot()      { return Math.max(0.01, parseFloat(localStorage.getItem(FSB_LOT_KEY)||'0.10')||0.10); }
 function _saveLot(v)    { localStorage.setItem(FSB_LOT_KEY, String(v)); }
@@ -3160,13 +3168,13 @@ function _renderLogBody(trades) {
       html+=`<div class="log-trade-row">
         <span class="log-col log-pair">${t.pair}</span>
         <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+        <span class="log-col log-result ${rc} log-wl">${wl}</span>
         <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
         <span class="log-col log-cell val">→ ${fmt(t.pair,t.close_price)}</span>
         <span class="log-col log-cell">${ds}</span>
         <span class="log-col log-cell">${t.rr}</span>
-        <span class="log-col log-cell log-notes" title="${note}">${note}</span>
-        <span class="log-col log-result ${rc} log-wl">${wl}</span>
         <span class="log-col log-result ${rc}">${rl}</span>
+        <span class="log-col log-cell log-notes" title="${note}">${note}</span>
         <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
       </div>`;
     });
