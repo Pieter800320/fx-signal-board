@@ -2034,13 +2034,14 @@ function _chtRender(pair, tf, ohlcv) {
     });
     _chtCmpInst = cmpChart;
 
-    // Scale anchor — invisible series pinning 0–100 range
+    // Scale anchor — invisible, autoscaleInfoProvider locks y-axis to 0–100 permanently
     cmpChart.addLineSeries({ color:'rgba(0,0,0,0)', lineWidth:1,
-      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-      .setData([
-        { time: cmpData[0].time,                    value: 0   },
-        { time: cmpData[cmpData.length - 1].time,   value: 100 },
-      ]);
+      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false,
+      autoscaleInfoProvider: () => ({ priceRange: { minValue:0, maxValue:100 } }),
+    }).setData([
+      { time: cmpData[0].time,                  value: 0   },
+      { time: cmpData[cmpData.length-1].time,   value: 100 },
+    ]);
 
     // Reference lines: 60 (dim green), 50 (dim white midline), 40 (dim red)
     [{ v:60, c:'rgba(0,220,55,0.18)' }, { v:50, c:'rgba(205,217,229,0.22)' }, { v:40, c:'rgba(248,81,73,0.18)' }]
@@ -2051,7 +2052,7 @@ function _chtRender(pair, tf, ohlcv) {
       });
 
     // CMP line — green above 60, amber 40–60, red below 40
-    cmpChart.addLineSeries({ color:'rgba(255,170,0,0.9)', lineWidth:2,
+    cmpChart.addLineSeries({ color:'rgba(255,170,0,0.9)', lineWidth:1,
       priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
       .setData(cmpData.map(d => ({
         time:  d.time,
