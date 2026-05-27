@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T21:05:55.724794+00:00",
+  "updated": "2026-05-27T21:30:50.212283+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,42 +551,42 @@
     "signals": 0,
     "total": 0,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.67,
-      "delta_pct": -2.0,
-      "direction": "flat",
+      "value": 16.29,
+      "delta_pct": -4.2,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7516.66,
-      "delta_pct": -0.0,
+      "value": 7520.36,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4480.9,
-      "delta_pct": -0.4,
+      "value": 4488.5,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.24,
-      "delta_pct": 0.1,
+      "value": 99.209,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.32,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.3375,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.485,
-      "delta_bp": -0.8,
+      "value": 4.481,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,52 +597,47 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.42,
+      "value": 89.41,
       "delta_pct": -4.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74576.0,
-      "delta_pct": -1.6,
+      "value": 74958.0,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.0,
-      "delta_bp": -1.1,
+      "value": 89.6,
+      "delta_bp": -1.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-27T18:15:40.791756+00:00"
+    "text": "USDCAD LONG invalidated: Iran deal hopes spark risk-on, dollar sells off, weakening carry trades. USDJPY LONG accelerated: Energy shock and hawkish Fed support yen safe haven demand.",
+    "updated": "2026-05-27T21:30:50.212283+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDCAD LONG: Macro confirms setup. Falling WTI directly weakens CAD fundamentals.\n\nUSDJPY LONG: Macro mixed neutral challenges setup. Risk sentiment shift unclear today.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.92
+        "score": 6.8
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.8
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 3.88
+        "score": 6.53
       }
     ],
-    "updated": "2026-05-27T18:15:40.791756+00:00"
+    "updated": "2026-05-27T21:30:50.212283+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-27T18:15:40.791756+00:00"
+    "updated": "2026-05-27T21:30:50.212283+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -650,8 +645,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "US Richmond Fed May composite index +13 vs +3 prior, signals strength.",
-    "updated": "2026-05-27T18:15:40.791756+00:00"
+    "text": "Energy shock from Iran conflict threatens Euro; sell EUR on inflation concerns.",
+    "updated": "2026-05-27T21:30:50.212283+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
