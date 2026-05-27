@@ -884,6 +884,8 @@ def main():
         signals["deep_analysis"] = deep
     if week_ahead:
         signals["week_ahead"] = week_ahead
+    else:
+        signals.pop("week_ahead", None)   # explicitly clear expired week_ahead
     signals["updated"]      = now.isoformat()
 
     with open(sig_path, "w") as f:
