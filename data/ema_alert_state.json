@@ -28,14 +28,14 @@
   "AUDUSD": {
     "ema200_side": "below",
     "ema50_side": "below",
-    "ema200_fired": true,
-    "ema50_fired": true
+    "ema200_fired": false,
+    "ema50_fired": false
   },
   "NZDUSD": {
-    "ema200_side": "below",
+    "ema200_side": "above",
     "ema50_side": "above",
     "ema50_fired": false,
-    "ema200_fired": false
+    "ema200_fired": true
   },
   "EURJPY": {
     "ema200_side": "above",
@@ -51,9 +51,9 @@
   },
   "AUDJPY": {
     "ema200_side": "above",
-    "ema50_side": "above",
+    "ema50_side": "below",
     "ema200_fired": false,
-    "ema50_fired": false
+    "ema50_fired": true
   },
   "NZDJPY": {
     "ema200_side": "above",
@@ -63,8 +63,8 @@
   },
   "CADJPY": {
     "ema200_side": "below",
-    "ema50_side": "above",
-    "ema50_fired": false,
+    "ema50_side": "below",
+    "ema50_fired": true,
     "ema200_fired": false
   }
 }
