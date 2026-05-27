@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T13:12:40.942461+00:00",
+  "updated": "2026-05-27T13:17:18.710840+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -515,12 +515,12 @@
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.8,
-      "delta_pct": -1.2,
+      "value": 16.82,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -531,26 +531,26 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4462.0,
-      "delta_pct": -0.9,
+      "value": 4446.2,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.074,
+      "value": 99.083,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3715,
-      "delta_pct": 0.2,
+      "value": 6.382,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.469,
-      "delta_bp": -2.4,
+      "value": 4.477,
+      "delta_bp": -1.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -561,52 +561,52 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.13,
-      "delta_pct": -5.1,
+      "value": 89.52,
+      "delta_pct": -4.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75374.0,
-      "delta_pct": -0.6,
+      "value": 75285.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.4,
-      "delta_bp": -2.7,
-      "direction": "down",
+      "value": 89.2,
+      "delta_bp": -1.9,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-27T13:11:18.796724+00:00"
+    "text": "Iran deal hopes weakening USD supports USDCAD and USDJPY longs. Weak ADP supports JPY strength, conflicting with USDJPY long. Energy shock threatens EU growth, supporting JPY crosses.",
+    "updated": "2026-05-27T13:17:18.710840+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDCAD LONG: Macro confirms via WTI weakness bidding USD strength today.\n\nUSDJPY LONG: Macro confirms via gold decline supporting safe haven bid.\n\nGBPJPY LONG: Macro challenges low risk-on environment offering weak GBP support.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.6
+        "score": 7.38
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
+        "score": 5.68
       },
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 6.33
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 2.7
       }
     ],
-    "updated": "2026-05-27T13:11:18.796724+00:00"
+    "updated": "2026-05-27T13:17:18.710840+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-27T13:11:18.796724+00:00"
+    "updated": "2026-05-27T13:17:18.710840+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -614,8 +614,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "US ADP employment 35.75K misses forecast; weakens dollar ahead of NFP",
-    "updated": "2026-05-27T13:11:18.796724+00:00"
+    "text": "US ADP employment 35.75K vs 42.25K prior; USD weakness expected",
+    "updated": "2026-05-27T13:17:18.710840+00:00"
   },
   "last_alert": "2026-05-27T13:12:40.942461+00:00"
 }
