@@ -2544,7 +2544,7 @@ function chtAttachLongPress() {
 .log-cell{font-size:9px;color:var(--muted);min-width:72px;}
 .log-cell.val{font-variant-numeric:tabular-nums;}
 .log-result{font-size:11px;font-weight:800;min-width:52px;text-align:right;}
-.log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.open{color:var(--amber);}.log-result.pending{color:var(--muted);}
+.log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.exit{color:var(--amber);}.log-result.open{color:var(--muted);}.log-result.pending{color:var(--muted);}
 .log-wl{font-size:9px;font-weight:800;letter-spacing:.06em;min-width:36px;}
 .log-notes{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;cursor:default;}
 .log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
@@ -2985,7 +2985,7 @@ function _getLot()      { return Math.max(0.01, parseFloat(localStorage.getItem(
 function _saveLot(v)    { localStorage.setItem(FSB_LOT_KEY, String(v)); }
 
 function _syncCapitalUI(){
-  const v = _getCapital();
+  const v = _getCurrentBalance();
   const inp  = document.getElementById('tsh-capital-inp');  if(inp)  inp.value = v;
   const disp = document.getElementById('tsh-capital-disp'); if(disp) disp.textContent = '€ '+v.toLocaleString('de-DE');
 }
@@ -3026,7 +3026,7 @@ function _updateRiskPill(){
   const pill  = document.getElementById('tsh-risk-pill'); if(!pill) return;
   const entry = parseFloat(document.getElementById('tsh-entry')?.value);
   const sl    = parseFloat(document.getElementById('tsh-sl')?.value);
-  const lot   = _getLot(), cap = _getCapital();
+  const lot   = _getLot(), cap = _getCurrentBalance();
   if(!entry||!sl||!_tshPair){ pill.textContent='—'; pill.className='tsh-risk-pill'; return; }
   const isJpy   = _tshPair.includes('JPY');
   const pipSize = isJpy ? 0.01 : 0.0001;
@@ -3111,7 +3111,7 @@ function renderTradeLog() {
 
 function _renderLogStats(trades) {
   const closed=trades.filter(t=>t.status==='closed');
-  const wins=closed.filter(t=>t.result==='win'), losses=closed.filter(t=>t.result==='loss');
+  const wins=closed.filter(t=>t.result==='win'), losses=closed.filter(t=>t.result==='loss'), exits=closed.filter(t=>t.result==='manual');
   const n=closed.length, wr=n?Math.round(wins.length/n*100):0;
   const sumWin=wins.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
   const sumLoss=losses.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
