@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T21:30:50.212283+00:00",
+  "updated": "2026-05-27T23:06:06.497322+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4488.5,
+      "value": 4487.5,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.209,
+      "value": 99.219,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3375,
+      "value": 6.3345,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.41,
-      "delta_pct": -4.8,
+      "value": 89.63,
+      "delta_pct": -4.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74958.0,
-      "delta_pct": -1.1,
+      "value": 74284.0,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG invalidated: Iran deal hopes spark risk-on, dollar sells off, weakening carry trades. USDJPY LONG accelerated: Energy shock and hawkish Fed support yen safe haven demand.",
-    "updated": "2026-05-27T21:30:50.212283+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats invalidates USDCAD LONG and USDJPY LONG. Risk-off environment favors JPY weakness thesis reversal and CAD strength.",
+    "updated": "2026-05-27T23:06:06.497322+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup. Falling WTI directly weakens CAD fundamentals.\n\nUSDJPY LONG: Macro mixed neutral challenges setup. Risk sentiment shift unclear today.",
+    "text": "USDCAD LONG: Falling WTI confirms CAD weakness, supports long setup.\n\nUSDJPY LONG: Mixed neutral macro challenges momentum divergence confirmation signal.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,11 +633,11 @@
         "score": 6.53
       }
     ],
-    "updated": "2026-05-27T21:30:50.212283+00:00"
+    "updated": "2026-05-27T23:06:06.497322+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-27T21:30:50.212283+00:00"
+    "updated": "2026-05-27T23:06:06.497322+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -645,8 +645,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Energy shock from Iran conflict threatens Euro; sell EUR on inflation concerns.",
-    "updated": "2026-05-27T21:30:50.212283+00:00"
+    "text": "Markets whipsaw on conflicting peace deal news; Iran negotiations uncertain",
+    "updated": "2026-05-27T23:06:06.497322+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
