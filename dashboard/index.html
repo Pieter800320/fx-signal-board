@@ -158,6 +158,9 @@
   /* Top row: pair + changes */
   .b-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;}
   .b-pair{font-size:12px;font-weight:700;letter-spacing:.02em;padding-top:1px;}
+  .b-trade-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-left:5px;margin-bottom:1px;vertical-align:middle;background:rgba(0,220,55,0.9);box-shadow:0 0 5px 2px rgba(0,220,55,0.6),0 0 10px 3px rgba(0,220,55,0.3);animation:tradeDotPulse 2s ease-in-out infinite;}
+  .b-trade-dot.pending{background:rgba(227,179,65,0.9);box-shadow:0 0 5px 2px rgba(227,179,65,0.6),0 0 10px 3px rgba(227,179,65,0.3);}
+  @keyframes tradeDotPulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
   .b-chgs{display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
   .b-d1{font-size:11px;font-weight:700;}
   .b-d5{font-size:8px;color:var(--muted);font-weight:600;}
@@ -779,7 +782,7 @@ function blockHTML(pair){
 
   return `<div class="block ${cls}" onclick="flipBlock('${pair}')">
     <div class="b-top">
-      <span class="b-pair">${pair}</span>
+      <span class="b-pair">${pair}</span>${(()=>{const ts=trLoad().filter(t=>t.pair===pair&&t.status!=='closed');if(!ts.length)return '';const isPending=ts.every(t=>t.status==='pending');return `<span class="b-trade-dot${isPending?' pending':''}"></span>`;})()}
       <div class="b-chgs">
         <span id="d1-${pair}" class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
         <span id="d5-${pair}" class="b-d5" style="color:${d5p!=null?(d5p>=0?"var(--buy)":"var(--sell)"):"var(--muted)"}">${fmtPct(d5p)}</span>
