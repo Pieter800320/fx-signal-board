@@ -1160,6 +1160,8 @@ document.addEventListener('click', e => {
 #cht-price{flex-shrink:0;min-height:0;position:relative;}
 #cht-divider{flex-shrink:0;height:1px;background:var(--bord);}
 #cht-macd{flex-shrink:0;min-height:0;position:relative;}
+#cht-divider2{height:1px;background:#1e2b3a;flex-shrink:0;}
+#cht-cmp{flex-shrink:0;min-height:0;position:relative;}
 
 /* Jump-to-current button (absolute inside #cht-chart-area) */
 #cht-jump-btn{
@@ -1262,6 +1264,8 @@ document.addEventListener('click', e => {
     <div id="cht-price"></div>
     <div id="cht-divider"></div>
     <div id="cht-macd"></div>
+    <div id="cht-divider2" style="display:none;"></div>
+    <div id="cht-cmp" style="display:none;"></div>
     <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
     <button id="cht-float-del" onclick="chtDeleteSelected()">✕</button>
     <div id="cht-dir-panel">
@@ -1282,6 +1286,7 @@ document.addEventListener('click', e => {
       <button class="cht-ind-chip on" id="cht-ind-ema50"  onclick="chtToggleInd('ema50')">EMA 50</button>
       <button class="cht-ind-chip on" id="cht-ind-bb"     onclick="chtToggleInd('bb')">BB</button>
       <button class="cht-ind-chip on" id="cht-ind-macd"   onclick="chtToggleInd('macd')">MACD</button>
+      <button class="cht-ind-chip"    id="cht-ind-cmp"    onclick="chtToggleInd('cmp')">CMP&thinsp;&Delta;</button>
       <button class="cht-ind-chip" id="cht-copy-btn" onclick="chtCopyPrompt()" title="Copy analysis prompt for Claude">⧉</button>
     </div>
     <button id="cht-trade-btn" onclick="openTradeSheet()">+ Trade</button>
@@ -1399,13 +1404,14 @@ const CHT_IND_KEY     = 'fsb_ind_v1';
 const CHT_MARKERS_KEY = 'fsb_markers_v1';
 const CHT_LA_PATH     = 'data/level_alerts.json';
 
-const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true };
+const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true, cmp:false };
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let _chtPair      = null;
 let _chtTf        = 'H4';
 let _chtInst      = null;
 let _chtMacdInst  = null;
+let _chtCmpInst   = null;
 let _chtCandles   = null;
 let _chtPriceLine = null;
 let _chtAlertRefs = [];
@@ -1441,7 +1447,7 @@ function chtLoadIndState() {
 function chtSaveIndState() { localStorage.setItem(CHT_IND_KEY, JSON.stringify(_chtIndState)); }
 
 function chtUpdateIndChips() {
-  ['ema200','ema50','bb','macd'].forEach(k => {
+  ['ema200','ema50','bb','macd','cmp'].forEach(k => {
     const btn = document.getElementById('cht-ind-' + k);
     if (btn) btn.classList.toggle('on', !!_chtIndState[k]);
   });
@@ -1512,19 +1518,44 @@ function chtSetPaneSizes() {
   const h      = document.getElementById('cht-chart-area').clientHeight;
   if (!h) return;
   const showM  = _chtIndState.macd;
-  const priceEl = document.getElementById('cht-price');
-  const macdEl  = document.getElementById('cht-macd');
-  const divEl   = document.getElementById('cht-divider');
-  if (showM) {
+  const showC  = _chtIndState.cmp;
+  const priceEl  = document.getElementById('cht-price');
+  const macdEl   = document.getElementById('cht-macd');
+  const cmpEl    = document.getElementById('cht-cmp');
+  const divEl    = document.getElementById('cht-divider');
+  const div2El   = document.getElementById('cht-divider2');
+  if (showM && showC) {
+    priceEl.style.height = Math.floor(h * 0.50) + 'px';
+    macdEl.style.height  = Math.floor(h * 0.25) + 'px';
+    cmpEl.style.height   = Math.floor(h * 0.25) + 'px';
+    macdEl.style.display = '';
+    cmpEl.style.display  = '';
+    if (divEl)  divEl.style.display  = '';
+    if (div2El) div2El.style.display = '';
+  } else if (showM) {
     priceEl.style.height = Math.floor(h * 0.65) + 'px';
     macdEl.style.height  = Math.floor(h * 0.35) + 'px';
+    cmpEl.style.height   = '0';
     macdEl.style.display = '';
-    if (divEl) divEl.style.display = '';
+    cmpEl.style.display  = 'none';
+    if (divEl)  divEl.style.display  = '';
+    if (div2El) div2El.style.display = 'none';
+  } else if (showC) {
+    priceEl.style.height = Math.floor(h * 0.65) + 'px';
+    macdEl.style.height  = '0';
+    cmpEl.style.height   = Math.floor(h * 0.35) + 'px';
+    macdEl.style.display = 'none';
+    cmpEl.style.display  = '';
+    if (divEl)  divEl.style.display  = 'none';
+    if (div2El) div2El.style.display = '';
   } else {
     priceEl.style.height = h + 'px';
     macdEl.style.height  = '0';
+    cmpEl.style.height   = '0';
     macdEl.style.display = 'none';
-    if (divEl) divEl.style.display = 'none';
+    cmpEl.style.display  = 'none';
+    if (divEl)  divEl.style.display  = 'none';
+    if (div2El) div2El.style.display = 'none';
   }
 }
 
@@ -1568,6 +1599,7 @@ function _chtDestroyCharts() {
   _trClearLines();
   if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
   if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
+  if (_chtCmpInst)  { try { _chtCmpInst.remove();  } catch(e){} _chtCmpInst  = null; }
 }
 
 function setChtTf(tf) {
@@ -1701,6 +1733,60 @@ function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
 }
 
 // ── MACD offset helper: find bar index of MACD's first timestamp in ohlcv ────
+// ── CMP Delta series computation ─────────────────────────────────────────────
+function chtNorm1212(m) {
+  const x = Math.min(Math.max(5.6 * m, -50), 50);
+  const e = Math.exp(x);
+  return 50 + 50 * (e - 1) / (e + 1);
+}
+
+function chtCMPSeries(ohlcv, tf) {
+  // Compute rolling pseudo-CMP from single-TF OHLCV, then 3 delta lines.
+  // Same formula as mom1212.py: norm1212(momentum1212) — single TF approximation.
+  // Delta lookbacks in bars of this TF (H1:[4,8,12], H4:[1,2,3], D1:[3,5,10])
+  if (!ohlcv || ohlcv.length < 30) return [];
+  const lbs = { D1:[3,5,10], H4:[1,2,3], H1:[4,8,12] }[tf] || [4,8,12];
+
+  // Rolling CMP — needs 25 prior bars (12 smaNow + 12 smaPast + 1 ATR ref)
+  const cmps = new Array(ohlcv.length).fill(null);
+  for (let i = 25; i < ohlcv.length; i++) {
+    // SMA12 now: closes[i-11 .. i]
+    let smaNow = 0;
+    for (let k = i - 11; k <= i; k++) smaNow += ohlcv[k].close;
+    smaNow /= 12;
+    // SMA12 past: closes[i-23 .. i-12]
+    let smaPast = 0;
+    for (let k = i - 23; k <= i - 12; k++) smaPast += ohlcv[k].close;
+    smaPast /= 12;
+    // ATR14: bars [i-13 .. i], each TR uses prev bar close
+    let atr = 0;
+    for (let k = i - 13; k <= i; k++) {
+      atr += Math.max(
+        ohlcv[k].high - ohlcv[k].low,
+        Math.abs(ohlcv[k].high - ohlcv[k-1].close),
+        Math.abs(ohlcv[k].low  - ohlcv[k-1].close)
+      );
+    }
+    atr /= 14;
+    const m = atr > 0 ? (smaNow - smaPast) / (12 * atr) : 0;
+    cmps[i] = chtNorm1212(m);
+  }
+
+  // Build delta series starting when all 3 lookbacks are available
+  const startI = 25 + lbs[2];
+  const out = [];
+  for (let i = startI; i < ohlcv.length; i++) {
+    if (cmps[i] === null) continue;
+    out.push({
+      time: ohlcv[i].time,
+      d4:  cmps[i - lbs[0]] !== null ? cmps[i] - cmps[i - lbs[0]] : null,
+      d8:  cmps[i - lbs[1]] !== null ? cmps[i] - cmps[i - lbs[1]] : null,
+      d12: cmps[i - lbs[2]] !== null ? cmps[i] - cmps[i - lbs[2]] : null,
+    });
+  }
+  return out;
+}
+
 function _computeSubOffset(macdData, ohlcv) {
   if (!macdData.length || !ohlcv.length) return 0;
   const firstTs = macdData[0].time;
@@ -1857,23 +1943,82 @@ function _chtRender(pair, tf, ohlcv) {
     }).observe(macdEl);
   }
 
-  // ── Time-scale sync: price → MACD via logical range offset ──────────────────
-  const _subOffset = macdData.length ? _computeSubOffset(macdData, ohlcv) : 0;
+  // ── CMP Delta pane ───────────────────────────────────────────────────────────
+  const cmpEl   = document.getElementById('cht-cmp');
+  const cmpData = (ind.cmp && cmpEl) ? chtCMPSeries(ohlcv, tf) : [];
+
+  if (ind.cmp && cmpData.length && cmpEl) {
+    const cmpH = cmpEl.clientHeight || 120;
+    cmpEl.innerHTML = '';
+    const cmpChart = LightweightCharts.createChart(cmpEl, {
+      ...chartOpts(cmpEl, cmpH, false),
+      crosshair:       { mode: LightweightCharts.CrosshairMode.Hidden },
+      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.15, bottom:0.15 } },
+      timeScale:       { visible:false },
+      handleScroll:    false,
+      handleScale:     false,
+    });
+    _chtCmpInst = cmpChart;
+
+    // Zero baseline — thin dotted white
+    const zeroData = cmpData.map(d => ({ time:d.time, value:0 }));
+    cmpChart.addLineSeries({ color:'rgba(205,217,229,0.2)', lineWidth:1, lineStyle:3,
+      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(zeroData);
+
+    // Fast delta (H4 / 1 H4 bar) — green
+    const d4series = cmpData.filter(d => d.d4 !== null).map(d => ({ time:d.time, value:d.d4 }));
+    if (d4series.length)
+      cmpChart.addLineSeries({ color:'rgba(0,220,55,0.85)', lineWidth:1,
+        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+        .setData(d4series);
+
+    // Mid delta (H8 / 2 H4 bars) — amber
+    const d8series = cmpData.filter(d => d.d8 !== null).map(d => ({ time:d.time, value:d.d8 }));
+    if (d8series.length)
+      cmpChart.addLineSeries({ color:'rgba(255,170,0,0.85)', lineWidth:1,
+        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+        .setData(d8series);
+
+    // Slow delta (H12 / 3 H4 bars) — blue
+    const d12series = cmpData.filter(d => d.d12 !== null).map(d => ({ time:d.time, value:d.d12 }));
+    if (d12series.length)
+      cmpChart.addLineSeries({ color:'rgba(88,166,255,0.85)', lineWidth:1,
+        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+        .setData(d12series);
+
+    new ResizeObserver(() => {
+      if (_chtCmpInst) _chtCmpInst.applyOptions({ width:cmpEl.clientWidth, height:cmpEl.clientHeight });
+    }).observe(cmpEl);
+  }
+
+  // ── Time-scale sync: price → MACD + CMP via logical range offset ─────────────
+  const _subOffset    = macdData.length ? _computeSubOffset(macdData, ohlcv) : 0;
+  const _cmpSubOffset = cmpData.length  ? _computeSubOffset(cmpData,  ohlcv) : 0;
   let _syncRaf = null;
   chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
     // Jump button: show when scrolled back more than 5 bars from the right edge
     const jb = document.getElementById('cht-jump-btn');
     if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? 'block' : 'none';
 
-    if (!_chtMacdInst || !range) return;
     if (_syncRaf) cancelAnimationFrame(_syncRaf);
     _syncRaf = requestAnimationFrame(() => {
-      try {
-        _chtMacdInst.timeScale().setVisibleLogicalRange({
-          from: range.from - _subOffset,
-          to:   range.to   - _subOffset
-        });
-      } catch(e) {}
+      if (_chtMacdInst && range) {
+        try {
+          _chtMacdInst.timeScale().setVisibleLogicalRange({
+            from: range.from - _subOffset,
+            to:   range.to   - _subOffset
+          });
+        } catch(e) {}
+      }
+      if (_chtCmpInst && range) {
+        try {
+          _chtCmpInst.timeScale().setVisibleLogicalRange({
+            from: range.from - _cmpSubOffset,
+            to:   range.to   - _cmpSubOffset
+          });
+        } catch(e) {}
+      }
     });
   });
 
@@ -1885,13 +2030,16 @@ function _chtRender(pair, tf, ohlcv) {
   const visN = Math.min(150, ohlcv.length);
   chart.timeScale().setVisibleLogicalRange({ from:ohlcv.length - visN, to:ohlcv.length + 2 });
 
-  // Initial MACD sync after layout settles
+  // Initial MACD + CMP sync after layout settles
   setTimeout(() => {
-    if (_chtMacdInst) {
-      try {
-        const r = chart.timeScale().getVisibleLogicalRange();
-        if (r) _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset, to:r.to - _subOffset });
-      } catch(e) {}
+    const r = chart.timeScale().getVisibleLogicalRange();
+    if (r) {
+      if (_chtMacdInst) {
+        try { _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset,    to:r.to - _subOffset    }); } catch(e) {}
+      }
+      if (_chtCmpInst) {
+        try { _chtCmpInst.timeScale().setVisibleLogicalRange({  from:r.from - _cmpSubOffset, to:r.to - _cmpSubOffset }); } catch(e) {}
+      }
     }
   }, 120);
 
