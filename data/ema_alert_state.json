@@ -10,7 +10,7 @@
   },
   "GBPUSD": {
     "ema200_side": "below",
-    "ema50_side": "below",
+    "ema50_side": "above",
     "ema50_fired": true,
     "ema200_fired": false
   },
@@ -22,7 +22,7 @@
   "USDCHF": {
     "ema200_side": "above",
     "ema50_side": "above",
-    "ema50_fired": false,
+    "ema50_fired": true,
     "ema200_fired": false
   },
   "AUDUSD": {
@@ -63,7 +63,7 @@
   },
   "CADJPY": {
     "ema200_side": "below",
-    "ema50_side": "below",
+    "ema50_side": "above",
     "ema50_fired": true,
     "ema200_fired": false
   }
