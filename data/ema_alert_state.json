@@ -26,7 +26,7 @@
     "ema200_fired": false
   },
   "AUDUSD": {
-    "ema200_side": "above",
+    "ema200_side": "below",
     "ema50_side": "above",
     "ema200_fired": true,
     "ema50_fired": false
