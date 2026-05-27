@@ -832,7 +832,13 @@ def main():
         cal_age_h = 99
     if cal_age_h >= 4 or not prev_cal.get("events"):
         print(f"  Calendar cache {cal_age_h:.1f}h old — refreshing via web search…")
-        events = call_calendar_search(now)
+        fresh = call_calendar_search(now)
+        if fresh:
+            events = fresh
+        else:
+            # Refresh failed (rate limit etc.) — keep existing cache rather than wipe
+            print(f"  ⚠ Calendar refresh failed — keeping existing cache ({len(prev_cal.get('events', []))} events)")
+            events = prev_cal.get("events", [])
     else:
         print(f"  Calendar cache {cal_age_h:.1f}h old — using cached events")
         events = prev_cal.get("events", [])
