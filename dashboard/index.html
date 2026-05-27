@@ -1761,19 +1761,12 @@ function _chtRollingMom(bars) {
   return m;
 }
 
-// True multi-TF CMP — mirrors _cmp_raw_at_offset() in mom1212.py exactly.
-// Fixed H1-equivalent offsets: 4h/8h/12h → D1:0,0,0 | H4:1,2,3 | H1:4,8,12
+// True multi-TF CMP — mirrors mom1212.py exactly. Returns [{time, cmp}].
 function _chtCmpMultiTf(chartBars, d1, h4, h1) {
-  const OFFSETS = [
-    { d1:0, h4:1, h1:4  },   // 4h
-    { d1:0, h4:2, h1:8  },   // 8h
-    { d1:0, h4:3, h1:12 },   // 12h
-  ];
   const d1Mom = _chtRollingMom(d1);
   const h4Mom = _chtRollingMom(h4);
   const h1Mom = _chtRollingMom(h1);
 
-  // Sorted timestamp arrays for binary search (time-alignment across TFs)
   const d1T = d1.map(b => b.time);
   const h4T = h4.map(b => b.time);
   const h1T = h1.map(b => b.time);
@@ -1796,17 +1789,9 @@ function _chtCmpMultiTf(chartBars, d1, h4, h1) {
 
   const out = [];
   for (let i = 0; i < chartBars.length; i++) {
-    const t   = chartBars[i].time;
-    const di  = lastIdx(d1T, t);
-    const h4i = lastIdx(h4T, t);
-    const h1i = lastIdx(h1T, t);
-    const cmpNow = cmpAt(di, h4i, h1i);
-    if (cmpNow === null) continue;
-    const deltas = OFFSETS.map(o => {
-      const past = cmpAt(di - o.d1, h4i - o.h4, h1i - o.h1);
-      return past !== null ? cmpNow - past : null;
-    });
-    out.push({ time:t, cmp:cmpNow, d4:deltas[0], d8:deltas[1], d12:deltas[2] });
+    const t      = chartBars[i].time;
+    const cmpNow = cmpAt(lastIdx(d1T,t), lastIdx(h4T,t), lastIdx(h1T,t));
+    if (cmpNow !== null) out.push({ time:t, cmp:cmpNow });
   }
   return out;
 }
@@ -1818,21 +1803,12 @@ function chtCMPSeries(ohlcv, tf, byTf) {
   if (d1?.length >= 30 && h4?.length >= 30 && h1?.length >= 30)
     return _chtCmpMultiTf(ohlcv, d1, h4, h1);
 
-  // Single-TF fallback (same formula, one TF only — label changes by TF)
-  const lbs = { D1:[3,5,10], H4:[1,2,3], H1:[4,8,12] }[tf] || [4,8,12];
-  const cmps = new Array(ohlcv.length).fill(null);
-  const mom  = _chtRollingMom(ohlcv);
-  for (let i = 25; i < ohlcv.length; i++) cmps[i] = chtNorm1212(mom[i] ?? 0);
-  const startI = 25 + lbs[2];
+  // Single-TF fallback — same formula, one TF only
+  const mom = _chtRollingMom(ohlcv);
   const out = [];
-  for (let i = startI; i < ohlcv.length; i++) {
-    if (cmps[i] === null) continue;
-    out.push({
-      time: ohlcv[i].time, cmp: cmps[i],
-      d4:  cmps[i-lbs[0]] !== null ? cmps[i]-cmps[i-lbs[0]] : null,
-      d8:  cmps[i-lbs[1]] !== null ? cmps[i]-cmps[i-lbs[1]] : null,
-      d12: cmps[i-lbs[2]] !== null ? cmps[i]-cmps[i-lbs[2]] : null,
-    });
+  for (let i = 25; i < ohlcv.length; i++) {
+    if (mom[i] === null) continue;
+    out.push({ time: ohlcv[i].time, cmp: chtNorm1212(mom[i]) });
   }
   return out;
 }
@@ -2051,46 +2027,37 @@ function _chtRender(pair, tf, ohlcv) {
     const cmpChart = LightweightCharts.createChart(cmpEl, {
       ...chartOpts(cmpEl, cmpH, false),
       crosshair:       { mode: LightweightCharts.CrosshairMode.Hidden },
-      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.15, bottom:0.15 } },
+      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.05, bottom:0.05 } },
       timeScale:       { visible:false },
       handleScroll:    false,
       handleScale:     false,
     });
     _chtCmpInst = cmpChart;
 
-    // Zero baseline — thin dotted white
-    const zeroData = cmpData.map(d => ({ time:d.time, value:0 }));
-    cmpChart.addLineSeries({ color:'rgba(205,217,229,0.2)', lineWidth:1, lineStyle:3,
+    // Scale anchor — invisible series pinning 0–100 range
+    cmpChart.addLineSeries({ color:'rgba(0,0,0,0)', lineWidth:1,
       priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-      .setData(zeroData);
+      .setData([
+        { time: cmpData[0].time,                    value: 0   },
+        { time: cmpData[cmpData.length - 1].time,   value: 100 },
+      ]);
 
-    // Raw CMP line — white, normalised to zero (cmp - 50) so 50-cross reads as zero-cross
-    const cmpLine = cmpData.filter(d => d.cmp !== null).map(d => ({ time:d.time, value:d.cmp - 50 }));
-    if (cmpLine.length)
-      cmpChart.addLineSeries({ color:'rgba(205,217,229,0.9)', lineWidth:2,
-        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-        .setData(cmpLine);
+    // Reference lines: 60 (dim green), 50 (dim white midline), 40 (dim red)
+    [{ v:60, c:'rgba(0,220,55,0.18)' }, { v:50, c:'rgba(205,217,229,0.22)' }, { v:40, c:'rgba(248,81,73,0.18)' }]
+      .forEach(({ v, c }) => {
+        cmpChart.addLineSeries({ color:c, lineWidth:1, lineStyle:3,
+          priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+          .setData(cmpData.map(d => ({ time:d.time, value:v })));
+      });
 
-    // Fast delta (H4 / 1 H4 bar) — green
-    const d4series = cmpData.filter(d => d.d4 !== null).map(d => ({ time:d.time, value:d.d4 }));
-    if (d4series.length)
-      cmpChart.addLineSeries({ color:'rgba(0,220,55,0.85)', lineWidth:1,
-        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-        .setData(d4series);
-
-    // Mid delta (H8 / 2 H4 bars) — amber
-    const d8series = cmpData.filter(d => d.d8 !== null).map(d => ({ time:d.time, value:d.d8 }));
-    if (d8series.length)
-      cmpChart.addLineSeries({ color:'rgba(255,170,0,0.85)', lineWidth:1,
-        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-        .setData(d8series);
-
-    // Slow delta (H12 / 3 H4 bars) — blue
-    const d12series = cmpData.filter(d => d.d12 !== null).map(d => ({ time:d.time, value:d.d12 }));
-    if (d12series.length)
-      cmpChart.addLineSeries({ color:'rgba(88,166,255,0.85)', lineWidth:1,
-        priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
-        .setData(d12series);
+    // CMP line — green above 60, amber 40–60, red below 40
+    cmpChart.addLineSeries({ color:'rgba(255,170,0,0.9)', lineWidth:2,
+      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(cmpData.map(d => ({
+        time:  d.time,
+        value: d.cmp,
+        color: d.cmp > 60 ? 'rgba(0,220,55,0.9)' : d.cmp < 40 ? 'rgba(248,81,73,0.9)' : 'rgba(255,170,0,0.9)',
+      })));
 
     new ResizeObserver(() => {
       if (_chtCmpInst) _chtCmpInst.applyOptions({ width:cmpEl.clientWidth, height:cmpEl.clientHeight });
