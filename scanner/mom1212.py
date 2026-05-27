@@ -75,6 +75,27 @@ def _mom_at_offset(df: pd.DataFrame, offset: int) -> float:
     sub = df.iloc[:len(df) - offset] if offset > 0 else df
     return _momentum1212(sub)
 
+def _cmp_raw_at_offset(ohlcv: dict, h1_offset: int):
+    """
+    Compute CMP at h1_offset H1-equivalent bars back.
+    Converts H1 offset to per-TF bar offsets then recomputes weighted CMP.
+    Returns int (0-100) or None if insufficient data.
+    """
+    offsets = {
+        "d1": max(0, round(h1_offset / 24)),
+        "h4": max(0, h1_offset // 4),
+        "h1": h1_offset,
+    }
+    raw_m = {}
+    for tf, offset in offsets.items():
+        df = ohlcv.get(tf)
+        if df is None or len(df) < 26 + offset:
+            return None
+        sub = df.iloc[:len(df) - offset] if offset > 0 else df
+        raw_m[tf] = _momentum1212(sub)
+    cmp_raw = sum(CMP_W[tf] * raw_m[tf] for tf in CMP_W)
+    return _norm1212(cmp_raw)
+
 
 def compute_mom(df: pd.DataFrame, tf: str) -> tuple:
     """
@@ -133,5 +154,14 @@ def compute_all(ohlcv: dict) -> dict:
                 v_sum += v * wt
                 w_sum += wt
         result["cmp"] = round(v_sum / w_sum) if w_sum > 0 else None
+
+    # CMP deltas at H4/H8/H12 lookbacks (expressed as H1-bar offsets 4/8/12)
+    cmp_now = result.get("cmp")
+    for key, h1_bars in [("dcmp4", 4), ("dcmp8", 8), ("dcmp12", 12)]:
+        cmp_past = _cmp_raw_at_offset(ohlcv, h1_bars)
+        if cmp_now is not None and cmp_past is not None:
+            result[key] = cmp_now - cmp_past
+        else:
+            result[key] = None
 
     return result
