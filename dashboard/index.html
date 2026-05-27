@@ -1733,59 +1733,149 @@ function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
 }
 
 // ── MACD offset helper: find bar index of MACD's first timestamp in ohlcv ────
-// ── CMP Delta series computation ─────────────────────────────────────────────
+// ── CMP Delta series computation — true multi-TF ─────────────────────────────
 function chtNorm1212(m) {
   const x = Math.min(Math.max(5.6 * m, -50), 50);
   const e = Math.exp(x);
   return 50 + 50 * (e - 1) / (e + 1);
 }
 
-function chtCMPSeries(ohlcv, tf) {
-  // Compute rolling pseudo-CMP from single-TF OHLCV, then 3 delta lines.
-  // Same formula as mom1212.py: norm1212(momentum1212) — single TF approximation.
-  // Delta lookbacks in bars of this TF (H1:[4,8,12], H4:[1,2,3], D1:[3,5,10])
-  if (!ohlcv || ohlcv.length < 30) return [];
-  const lbs = { D1:[3,5,10], H4:[1,2,3], H1:[4,8,12] }[tf] || [4,8,12];
-
-  // Rolling CMP — needs 25 prior bars (12 smaNow + 12 smaPast + 1 ATR ref)
-  const cmps = new Array(ohlcv.length).fill(null);
-  for (let i = 25; i < ohlcv.length; i++) {
-    // SMA12 now: closes[i-11 .. i]
-    let smaNow = 0;
-    for (let k = i - 11; k <= i; k++) smaNow += ohlcv[k].close;
-    smaNow /= 12;
-    // SMA12 past: closes[i-23 .. i-12]
-    let smaPast = 0;
-    for (let k = i - 23; k <= i - 12; k++) smaPast += ohlcv[k].close;
-    smaPast /= 12;
-    // ATR14: bars [i-13 .. i], each TR uses prev bar close
-    let atr = 0;
+// Rolling raw momentum array for a bar set (matches mom1212.py exactly)
+function _chtRollingMom(bars) {
+  const m = new Array(bars.length).fill(null);
+  for (let i = 25; i < bars.length; i++) {
+    let smaNow = 0, smaPast = 0, atr = 0;
+    for (let k = i - 11; k <= i;       k++) smaNow  += bars[k].close;
+    for (let k = i - 23; k <= i - 12;  k++) smaPast += bars[k].close;
+    smaNow /= 12; smaPast /= 12;
     for (let k = i - 13; k <= i; k++) {
       atr += Math.max(
-        ohlcv[k].high - ohlcv[k].low,
-        Math.abs(ohlcv[k].high - ohlcv[k-1].close),
-        Math.abs(ohlcv[k].low  - ohlcv[k-1].close)
+        bars[k].high - bars[k].low,
+        Math.abs(bars[k].high - bars[k-1].close),
+        Math.abs(bars[k].low  - bars[k-1].close)
       );
     }
     atr /= 14;
-    const m = atr > 0 ? (smaNow - smaPast) / (12 * atr) : 0;
-    cmps[i] = chtNorm1212(m);
+    m[i] = atr > 0 ? (smaNow - smaPast) / (12 * atr) : 0;
+  }
+  return m;
+}
+
+// True multi-TF CMP — mirrors _cmp_raw_at_offset() in mom1212.py exactly.
+// Fixed H1-equivalent offsets: 4h/8h/12h → D1:0,0,0 | H4:1,2,3 | H1:4,8,12
+function _chtCmpMultiTf(chartBars, d1, h4, h1) {
+  const OFFSETS = [
+    { d1:0, h4:1, h1:4  },   // 4h
+    { d1:0, h4:2, h1:8  },   // 8h
+    { d1:0, h4:3, h1:12 },   // 12h
+  ];
+  const d1Mom = _chtRollingMom(d1);
+  const h4Mom = _chtRollingMom(h4);
+  const h1Mom = _chtRollingMom(h1);
+
+  // Sorted timestamp arrays for binary search (time-alignment across TFs)
+  const d1T = d1.map(b => b.time);
+  const h4T = h4.map(b => b.time);
+  const h1T = h1.map(b => b.time);
+
+  function lastIdx(times, t) {
+    let lo = 0, hi = times.length - 1, res = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (times[mid] <= t) { res = mid; lo = mid + 1; } else hi = mid - 1;
+    }
+    return res;
   }
 
-  // Build delta series starting when all 3 lookbacks are available
+  function cmpAt(di, h4i, h1i) {
+    if (di < 0 || h4i < 0 || h1i < 0) return null;
+    const md = d1Mom[di], mh = h4Mom[h4i], m1 = h1Mom[h1i];
+    if (md === null || mh === null || m1 === null) return null;
+    return chtNorm1212(0.5 * md + 0.3 * mh + 0.2 * m1);
+  }
+
+  const out = [];
+  for (let i = 0; i < chartBars.length; i++) {
+    const t   = chartBars[i].time;
+    const di  = lastIdx(d1T, t);
+    const h4i = lastIdx(h4T, t);
+    const h1i = lastIdx(h1T, t);
+    const cmpNow = cmpAt(di, h4i, h1i);
+    if (cmpNow === null) continue;
+    const deltas = OFFSETS.map(o => {
+      const past = cmpAt(di - o.d1, h4i - o.h4, h1i - o.h1);
+      return past !== null ? cmpNow - past : null;
+    });
+    out.push({ time:t, cmp:cmpNow, d4:deltas[0], d8:deltas[1], d12:deltas[2] });
+  }
+  return out;
+}
+
+// Dispatcher — uses multi-TF if all 3 TFs available, single-TF fallback otherwise
+function chtCMPSeries(ohlcv, tf, byTf) {
+  if (!ohlcv || ohlcv.length < 30) return [];
+  const d1 = byTf?.D1, h4 = byTf?.H4, h1 = byTf?.H1;
+  if (d1?.length >= 30 && h4?.length >= 30 && h1?.length >= 30)
+    return _chtCmpMultiTf(ohlcv, d1, h4, h1);
+
+  // Single-TF fallback (same formula, one TF only — label changes by TF)
+  const lbs = { D1:[3,5,10], H4:[1,2,3], H1:[4,8,12] }[tf] || [4,8,12];
+  const cmps = new Array(ohlcv.length).fill(null);
+  const mom  = _chtRollingMom(ohlcv);
+  for (let i = 25; i < ohlcv.length; i++) cmps[i] = chtNorm1212(mom[i] ?? 0);
   const startI = 25 + lbs[2];
   const out = [];
   for (let i = startI; i < ohlcv.length; i++) {
     if (cmps[i] === null) continue;
     out.push({
-      time: ohlcv[i].time,
-      cmp: cmps[i],
-      d4:  cmps[i - lbs[0]] !== null ? cmps[i] - cmps[i - lbs[0]] : null,
-      d8:  cmps[i - lbs[1]] !== null ? cmps[i] - cmps[i - lbs[1]] : null,
-      d12: cmps[i - lbs[2]] !== null ? cmps[i] - cmps[i - lbs[2]] : null,
+      time: ohlcv[i].time, cmp: cmps[i],
+      d4:  cmps[i-lbs[0]] !== null ? cmps[i]-cmps[i-lbs[0]] : null,
+      d8:  cmps[i-lbs[1]] !== null ? cmps[i]-cmps[i-lbs[1]] : null,
+      d12: cmps[i-lbs[2]] !== null ? cmps[i]-cmps[i-lbs[2]] : null,
     });
   }
   return out;
+}
+
+// Background-fetch missing TFs so multi-TF CMP becomes accurate after first open
+async function _chtEnsureCmpTfs(pair, currentTf) {
+  const missing = ['D1','H4','H1'].filter(t => !_chtOhlcvCache[pair]?.[t]);
+  if (!missing.length) return;
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  let fetched = false;
+  for (const missingTf of missing) {
+    // Check localStorage cache first (free)
+    const cached = _ohlcvCacheGet(pair, missingTf);
+    if (cached) {
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][missingTf] = cached;
+      fetched = true;
+      continue;
+    }
+    // Live fetch
+    const sym      = pair.slice(0,3) + '/' + pair.slice(3);
+    const interval = { D1:'1day', H4:'4h', H1:'1h' }[missingTf];
+    const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(sym)}&interval=${interval}&outputsize=5000&order=ASC&type=price&apikey=${key}`;
+    try {
+      const r    = await fetch(url);
+      const json = await r.json();
+      if (!json.values?.length) continue;
+      const bars = json.values.map(v => ({
+        time:  Math.floor(new Date(v.datetime + (v.datetime.length===10?'T00:00:00Z':'Z')).getTime()/1000),
+        open:+v.open, high:+v.high, low:+v.low, close:+v.close
+      }));
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][missingTf] = bars;
+      _ohlcvCacheSet(pair, missingTf, bars);
+      fetched = true;
+    } catch(e) { console.warn('CMP TF fetch failed:', missingTf, e); }
+  }
+  // Re-render CMP pane only — if still on same pair + CMP still on
+  if (fetched && _chtPair === pair && _chtIndState?.cmp && _chtInst) {
+    const cur = _chtOhlcvCache[pair]?.[currentTf];
+    if (cur) _chtRender(pair, currentTf, cur);
+  }
 }
 
 function _computeSubOffset(macdData, ohlcv) {
@@ -1946,7 +2036,14 @@ function _chtRender(pair, tf, ohlcv) {
 
   // ── CMP Delta pane ───────────────────────────────────────────────────────────
   const cmpEl   = document.getElementById('cht-cmp');
-  const cmpData = (ind.cmp && cmpEl) ? chtCMPSeries(ohlcv, tf) : [];
+  // Collect all cached TF data for true multi-TF CMP computation
+  const _cmpByTf = {};
+  ['D1','H4','H1'].forEach(t => {
+    let d = _chtOhlcvCache[pair]?.[t];
+    if (!d) { const ls = _ohlcvCacheGet(pair, t); if (ls) { if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair]={}; _chtOhlcvCache[pair][t]=ls; d=ls; } }
+    if (d) _cmpByTf[t] = _filterWeekendCandles(d);
+  });
+  const cmpData = (ind.cmp && cmpEl) ? chtCMPSeries(ohlcv, tf, _cmpByTf) : [];
 
   if (ind.cmp && cmpData.length && cmpEl) {
     const cmpH = cmpEl.clientHeight || 120;
@@ -2060,6 +2157,9 @@ function _chtRender(pair, tf, ohlcv) {
 
   // Restore trade lines and markers after every render (TF switch, indicator toggle)
   setTimeout(() => { if (_chtPair === pair && _chtTf === tf) _trDrawLines(); }, 150);
+
+  // If CMP pane is on and some TFs aren't cached yet, fetch them in background
+  if (ind.cmp) _chtEnsureCmpTfs(pair, tf);
 }
 
 // ── Jump to current ───────────────────────────────────────────────────────────
