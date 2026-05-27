@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T06:19:53.366909+00:00",
+  "updated": "2026-05-27T06:24:17.535184+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -501,5 +501,120 @@
       "prev5_close": 115.31499,
       "cont": 70
     }
+  },
+  "macro_assets": {
+    "vix": {
+      "value": 17.01,
+      "delta_pct": 2.5,
+      "direction": "flat",
+      "label": "VIX"
+    },
+    "spx": {
+      "value": 7519.12,
+      "delta_pct": 0.6,
+      "direction": "up",
+      "label": "S&P 500"
+    },
+    "gold": {
+      "value": 4495.0,
+      "delta_pct": -0.1,
+      "direction": "flat",
+      "label": "Gold"
+    },
+    "dxy": {
+      "value": 99.105,
+      "delta_pct": -0.0,
+      "direction": "flat",
+      "label": "DXY"
+    },
+    "copper": {
+      "value": 6.404,
+      "delta_pct": 0.7,
+      "direction": "up",
+      "label": "Copper"
+    },
+    "us10y": {
+      "value": 4.493,
+      "delta_bp": -6.5,
+      "direction": "down",
+      "label": "US 10Y"
+    },
+    "us3m": {
+      "value": 3.582,
+      "delta_bp": -0.3,
+      "direction": "flat",
+      "label": "US 3M"
+    },
+    "wti": {
+      "value": 91.85,
+      "delta_pct": -2.2,
+      "direction": "down",
+      "label": "WTI Oil"
+    },
+    "btc": {
+      "value": 75602.0,
+      "delta_pct": -2.2,
+      "direction": "down",
+      "label": "Bitcoin"
+    },
+    "curve": {
+      "value": 91.1,
+      "delta_bp": -6.2,
+      "direction": "down",
+      "label": "10Y-3M"
+    }
+  },
+  "regime_w1": {
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
+  },
+  "catalyst": {
+    "text": "USDJPY LONG accelerated by hawkish Fed signal and energy shock boosting safe haven demand for yen.",
+    "updated": "2026-05-27T06:24:17.535184+00:00"
+  },
+  "ranked": {
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness pressures CAD fundamentals today.\n\nUSDJPY LONG: Macro neutral, no cross asset driver supporting yen weakness.\n\nCADJPY LONG: Macro challenges setup, equity bid contradicts CAD depreciation thesis.",
+    "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.77
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 6.7
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 5.28
+      }
+    ],
+    "updated": "2026-05-27T06:24:17.535184+00:00"
+  },
+  "calendar": {
+    "events": [],
+    "updated": "2026-05-27T06:24:17.535184+00:00"
+  },
+  "breaking": {
+    "text": "Australian April CPI: Headline 4.2% beats 4.4% forecast,",
+    "updated": "2026-05-27T06:24:17.535184+00:00"
+  },
+  "deep_analysis": {
+    "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
+    "text": "Gold at crisis-level extremes while DXY languishes near 99 signals markets pricing fiscal dominance over monetary policy credibility. Gold's surge above $2,400 typically requires either severe dollar debasement or geopolitical crisis; current positioning suggests the former. The 10Y-3M curve steepening to +91bp reflects growth optimism, yet this contradicts VIX's moderate elevation and gold's safe-haven positioning. This creates a dangerous contradiction: risk assets rallying on growth expectations while precious metals price monetary instability. The steepening curve should strengthen USD through carry appeal, yet DXY remains weak, indicating structural dollar skepticism. EURUSD faces upward pressure as dollar weakness overwhelms eurozone fundamentals, with the pair likely testing 1.10 resistance. USDJPY becomes vulnerable despite yield differentials favoring USD, as fiscal concerns trump rate advantages. Australian CPI's downside surprise to 4.2% reinforces AUDUSD weakness against an already-strong USD ranking, creating double pressure. The regime suggests currency moves driven by fiscal rather than monetary dynamics, making traditional correlations unreliable.",
+    "generated_at": "2026-05-27T06:25:11.358748+00:00"
   }
 }
