@@ -333,9 +333,8 @@ def call_calendar_search(now: datetime) -> list[dict]:
     date_range = f"{monday.strftime('%B %d')} to {friday.strftime('%B %d, %Y')}"
 
     prompt = (
-        f"Search for the economic calendar for the week of {date_range}. "
-        f"Search for: 'forex economic calendar {monday.strftime('%B %d')} {friday.strftime('%B %d %Y')}' "
-        f"and also 'high impact economic events {monday.strftime('%B %Y')}'. "
+        f"Search for 'forex factory economic calendar this week' and 'high impact forex events this week'. "
+        f"I need high-impact FX events for the current week ({date_range}). "
         f"Include: central bank decisions (Fed, ECB, BOJ, BOE, RBA, BOC, RBNZ, SNB), "
         f"US NFP, CPI, PCE, GDP, PMI, retail sales, JOLTS, ADP, PPI, unemployment claims. "
         f"Return ONLY a JSON array (no markdown, no backticks) of up to 10 events. "
@@ -361,8 +360,8 @@ def call_calendar_search(now: datetime) -> list[dict]:
     if not events_raw:
         print("  ⚠ Calendar: first search empty — retrying…")
         retry = (
-            f"Search 'economic calendar {monday.strftime('%B %d-%d %Y')}' high impact forex events. "
-            f"Return JSON array: currency, name, day, time, date, forecast, previous, note. No markdown."
+            f"Search 'investing.com economic calendar' or 'dailyfx calendar' for high impact events this week. "
+            f"Return JSON array only: currency, name, day, time, date (YYYY-MM-DD), forecast, previous, note. No markdown."
         )
         events_raw = _parse(_haiku_search(retry, max_tokens=900))
 
