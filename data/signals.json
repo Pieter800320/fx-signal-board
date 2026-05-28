@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T09:43:51.952264+00:00",
+  "updated": "2026-05-28T09:49:11.135234+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.7,
-      "delta_pct": 2.5,
+      "value": 16.71,
+      "delta_pct": 2.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4422.1,
-      "delta_pct": -0.6,
+      "value": 4423.7,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.328,
+      "value": 99.326,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.335,
+      "value": 6.338,
       "delta_pct": 0.5,
-      "direction": "flat",
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.65,
-      "delta_pct": 2.2,
+      "value": 90.76,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73340.0,
-      "delta_pct": -1.4,
+      "value": 73421.0,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-28T09:43:51.952264+00:00"
+    "updated": "2026-05-28T09:49:11.135234+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -638,11 +638,11 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-05-28T09:43:51.952264+00:00"
+    "updated": "2026-05-28T09:49:11.135234+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-28T09:43:51.952264+00:00"
+    "updated": "2026-05-28T09:49:11.135234+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -651,7 +651,7 @@
   },
   "breaking": {
     "text": "Dollar Falls as Crude Oil Retreats",
-    "updated": "2026-05-28T09:43:51.952264+00:00"
+    "updated": "2026-05-28T09:49:11.135234+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
