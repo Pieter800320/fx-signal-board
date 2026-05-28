@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T20:00:11.384177+00:00",
+  "updated": "2026-05-28T21:55:05.489319+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.66,
-      "delta_pct": -3.9,
+      "value": 15.74,
+      "delta_pct": -3.4,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7563.78,
+      "value": 7563.63,
       "delta_pct": 0.6,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4530.3,
-      "delta_pct": 1.9,
+      "value": 4527.3,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.993,
+      "value": 98.995,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.42,
-      "delta_pct": 1.8,
+      "value": 6.4245,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.28,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 88.53,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73329.0,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 73746.0,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,33 +616,33 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG at risk. Oil prices falling per Bessent, weakening commodity-linked CAD while JPY strengthens on risk-off sentiment.\n\nUSDCHF SHORT supported. Dollar weakness from oil retreat and Iran ceasefire hopes aligns with short bias",
-    "updated": "2026-05-28T20:00:11.384177+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-05-28T21:55:05.489319+00:00"
   },
   "ranked": {
-    "text": "CADJPY LONG: VIX decline and oil strength firmly confirm bullish CAD bias.\n\nNZDUSD LONG: Mixed macro neutral stance challenges weak momentum setup slightly overall.\n\nUSDCHF SHORT: Gold appreciation supports CHF strength, confirming short USD bias setup.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 6.25
-      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
         "score": 6.02
       },
       {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 5.85
+      },
+      {
         "pair": "USDCHF",
         "direction": "bear",
-        "score": 5.17
+        "score": 4.97
       }
     ],
-    "updated": "2026-05-28T20:00:11.384177+00:00"
+    "updated": "2026-05-28T21:55:05.489319+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-28T20:00:11.384177+00:00"
+    "updated": "2026-05-28T21:55:05.489319+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -650,8 +650,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "US Treasury 7-year notes sold at 4.290% yield, highest recent level.",
-    "updated": "2026-05-28T20:00:11.384177+00:00"
+    "text": "Softer PCE pressures dollar and yields lower today",
+    "updated": "2026-05-28T21:55:05.489319+00:00"
   },
   "last_alert": "2026-05-28T19:40:10.681858+00:00"
 }
