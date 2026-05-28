@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T08:50:14.776570+00:00",
+  "updated": "2026-05-28T09:43:51.952264+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -544,7 +544,7 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -555,9 +555,9 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.29,
-      "delta_pct": -4.2,
-      "direction": "down",
+      "value": 16.7,
+      "delta_pct": 2.5,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4421.7,
+      "value": 4422.1,
       "delta_pct": -0.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.418,
-      "delta_pct": 0.2,
+      "value": 99.328,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2995,
-      "delta_pct": -0.1,
+      "value": 6.335,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.65,
-      "delta_pct": 3.3,
+      "value": 90.65,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72898.0,
-      "delta_pct": -3.9,
+      "value": 73340.0,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,12 +616,17 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDJPY LONG and USDCAD LONG. Risk-off sentiment from Iran tensions may reverse dollar strength.",
-    "updated": "2026-05-28T05:57:16.244396+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-05-28T09:43:51.952264+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Gold falling confirms USD strength bias today.\n\nUSDCAD LONG: Risk-on low challenges commodity-linked CAD weakness thesis.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
+      {
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 7.0
+      },
       {
         "pair": "USDJPY",
         "direction": "bull",
@@ -633,11 +638,11 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-05-28T05:57:16.244396+00:00"
+    "updated": "2026-05-28T09:43:51.952264+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-28T05:57:16.244396+00:00"
+    "updated": "2026-05-28T09:43:51.952264+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -645,8 +650,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-    "updated": "2026-05-28T05:57:16.244396+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats",
+    "updated": "2026-05-28T09:43:51.952264+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
