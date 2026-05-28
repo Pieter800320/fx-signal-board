@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-27T23:06:06.497322+00:00",
+  "updated": "2026-05-28T01:29:29.222108+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4487.5,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4463.1,
+      "delta_pct": -0.8,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.219,
-      "delta_pct": 0.0,
+      "value": 99.288,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3345,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.329,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.63,
-      "delta_pct": -4.5,
+      "value": 90.07,
+      "delta_pct": -4.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74284.0,
-      "delta_pct": -2.0,
+      "value": 74186.0,
+      "delta_pct": -2.2,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,28 +616,28 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats invalidates USDCAD LONG and USDJPY LONG. Risk-off environment favors JPY weakness thesis reversal and CAD strength.",
-    "updated": "2026-05-27T23:06:06.497322+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-05-28T01:29:29.222108+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Falling WTI confirms CAD weakness, supports long setup.\n\nUSDJPY LONG: Mixed neutral macro challenges momentum divergence confirmation signal.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.8
+        "score": 7.0
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.53
+        "score": 6.73
       }
     ],
-    "updated": "2026-05-27T23:06:06.497322+00:00"
+    "updated": "2026-05-28T01:29:29.222108+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-27T23:06:06.497322+00:00"
+    "updated": "2026-05-28T01:29:29.222108+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -645,8 +645,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Markets whipsaw on conflicting peace deal news; Iran negotiations uncertain",
-    "updated": "2026-05-27T23:06:06.497322+00:00"
+    "text": "Trump says Iran would not get sanctions relief for uranium enrichment halt.",
+    "updated": "2026-05-28T01:29:29.222108+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
