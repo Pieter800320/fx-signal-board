@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T21:55:05.489319+00:00",
+  "updated": "2026-05-28T23:04:21.605184+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4527.3,
-      "delta_pct": 1.8,
+      "value": 4525.0,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.995,
+      "value": 98.993,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4245,
-      "delta_pct": 1.9,
+      "value": 6.4185,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.53,
-      "delta_pct": -0.2,
+      "value": 88.58,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73746.0,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 73440.0,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,8 +616,8 @@
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-28T21:55:05.489319+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats undermines USDCHF SHORT. Softer PCE pressures dollar supports NZDUSD LONG and CADJPY LONG.",
+    "updated": "2026-05-28T23:04:21.605184+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -635,14 +635,85 @@
       {
         "pair": "USDCHF",
         "direction": "bear",
-        "score": 4.97
+        "score": 5.17
       }
     ],
-    "updated": "2026-05-28T21:55:05.489319+00:00"
+    "updated": "2026-05-28T23:04:21.605184+00:00"
   },
   "calendar": {
-    "events": [],
-    "updated": "2026-05-28T21:55:05.489319+00:00"
+    "events": [
+      {
+        "day": "Thursday",
+        "time": "14:30 (8:30 ET)",
+        "iso": "",
+        "currency": "USD",
+        "name": "GDP (Second Estimate) Q1 2026",
+        "forecast": "2.0%",
+        "previous": "2.0%",
+        "note": "Advance estimate; may revise based on more complete source data"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:30 (8:30 ET)",
+        "iso": "",
+        "currency": "USD",
+        "name": "PCE Price Index YoY (April)",
+        "forecast": "3.8%",
+        "previous": "3.5%",
+        "note": "Headline PCE; Federal Reserve's preferred inflation gauge"
+      },
+      {
+        "day": "Thursday",
+        "time": "14:30 (8:30 ET)",
+        "iso": "",
+        "currency": "USD",
+        "name": "Core PCE Price Index YoY (April)",
+        "forecast": "3.3%",
+        "previous": "3.2%",
+        "note": "Excludes food and energy; closely watched by Fed"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 (ET)",
+        "iso": "",
+        "currency": "USD",
+        "name": "Initial Jobless Claims",
+        "forecast": "203K",
+        "previous": "209K",
+        "note": "Weekly labor market indicator"
+      },
+      {
+        "day": "Thursday",
+        "time": "12:30 (ET)",
+        "iso": "",
+        "currency": "USD",
+        "name": "Continuing Jobless Claims",
+        "forecast": "1.764M",
+        "previous": "1.782M",
+        "note": "Four-week moving average of claims"
+      },
+      {
+        "day": "Friday",
+        "time": "TBD",
+        "iso": "",
+        "currency": "CAD",
+        "name": "Budget Balance (Fiscal Year)",
+        "forecast": "-$14.937B",
+        "previous": "-$25.549B",
+        "note": "Canadian fiscal position"
+      },
+      {
+        "day": "Thu",
+        "time": "01:00",
+        "iso": "2026-05-28T01:00:00+00:00",
+        "currency": "NZD",
+        "name": "ANZ Business Confidence",
+        "forecast": "-29.9",
+        "previous": "-10.6",
+        "note": "New Zealand business sentiment"
+      }
+    ],
+    "updated": "2026-05-28T23:04:21.605184+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -650,8 +721,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Softer PCE pressures dollar and yields lower today",
-    "updated": "2026-05-28T21:55:05.489319+00:00"
+    "text": "Softer PCE pressures dollar and yields lower",
+    "updated": "2026-05-28T23:04:21.605184+00:00"
   },
   "last_alert": "2026-05-28T19:40:10.681858+00:00"
 }
