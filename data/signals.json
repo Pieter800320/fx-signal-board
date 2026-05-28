@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T01:29:29.222108+00:00",
+  "updated": "2026-05-28T05:57:16.244396+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,19 +539,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4463.1,
-      "delta_pct": -0.8,
+      "value": 4421.7,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.288,
-      "delta_pct": 0.1,
+      "value": 99.418,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.329,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 6.2995,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.07,
-      "delta_pct": -4.1,
-      "direction": "down",
+      "value": 91.65,
+      "delta_pct": 3.3,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74186.0,
-      "delta_pct": -2.2,
+      "value": 72898.0,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,28 +616,28 @@
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-05-28T01:29:29.222108+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDJPY LONG and USDCAD LONG. Risk-off sentiment from Iran tensions may reverse dollar strength.",
+    "updated": "2026-05-28T05:57:16.244396+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDJPY LONG: Gold falling confirms USD strength bias today.\n\nUSDCAD LONG: Risk-on low challenges commodity-linked CAD weakness thesis.",
     "top": [
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 7.0
-      },
       {
         "pair": "USDJPY",
         "direction": "bull",
         "score": 6.73
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.4
       }
     ],
-    "updated": "2026-05-28T01:29:29.222108+00:00"
+    "updated": "2026-05-28T05:57:16.244396+00:00"
   },
   "calendar": {
     "events": [],
-    "updated": "2026-05-28T01:29:29.222108+00:00"
+    "updated": "2026-05-28T05:57:16.244396+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -645,8 +645,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Trump says Iran would not get sanctions relief for uranium enrichment halt.",
-    "updated": "2026-05-28T01:29:29.222108+00:00"
+    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+    "updated": "2026-05-28T05:57:16.244396+00:00"
   },
   "last_alert": "2026-05-27T20:18:54.428515+00:00"
 }
