@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T01:51:10.567271+00:00",
+  "updated": "2026-05-29T06:00:43.969290+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4537.3,
-      "delta_pct": 2.0,
+      "value": 4536.0,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.997,
-      "delta_pct": -0.0,
+      "value": 99.065,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.431,
-      "delta_pct": 2.0,
-      "direction": "up",
+      "value": 6.4105,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.37,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 87.99,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73405.0,
-      "delta_pct": -1.3,
+      "value": 73582.0,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD LONG: NZ business confidence bounce and consumer confidence lift support setup. CADJPY LONG: Japan retail sales and manufacturing beat expectations support setup. USDCHF SHORT: Dollar falls on softer PCE supports short setup. No breaking catalysts.",
-    "updated": "2026-05-29T01:51:10.567271+00:00"
+    "text": "USDCHF SHORT at risk. \"Dollar Falls as Crude Oil Retreats\" undermines safe haven demand for CHF strength.",
+    "updated": "2026-05-29T06:00:43.969290+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup via risk-on sentiment and commodity strength.\n\nCADJPY LONG: Macro confirms setup via risk-on and falling volatility environment.\n\nUSDCHF SHORT: Macro challenges setup because risk-on sentiment supports USD bid.",
+    "text": "CADJPY LONG: VIX decline and equity strength jointly confirm CAD bid thesis.\n\nNZDUSD LONG: Rising equities support NZD, but weak momentum divergence challenges conviction.\n\nUSDCHF SHORT: Gold strength confirms CHF bid, but equity rally contradicts safe haven demand.",
     "top": [
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 6.02
-      },
       {
         "pair": "CADJPY",
         "direction": "bull",
         "score": 5.85
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 5.82
       },
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.17
       }
     ],
-    "updated": "2026-05-29T01:51:10.567271+00:00"
+    "updated": "2026-05-29T06:00:43.969290+00:00"
   },
   "calendar": {
     "events": [
@@ -713,16 +713,16 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T01:51:10.567271+00:00"
+    "updated": "2026-05-29T06:00:43.969290+00:00"
   },
   "deep_analysis": {
-    "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
-    "text": "Gold at crisis-level extremes while DXY languishes near 99 signals markets pricing fiscal dominance over monetary policy credibility. Gold's surge above $2,400 typically requires either severe dollar debasement or geopolitical crisis; current positioning suggests the former. The 10Y-3M curve steepening to +91bp reflects growth optimism, yet this contradicts VIX's moderate elevation and gold's safe-haven positioning. This creates a dangerous contradiction: risk assets rallying on growth expectations while precious metals price monetary instability. The steepening curve should strengthen USD through carry appeal, yet DXY remains weak, indicating structural dollar skepticism. EURUSD faces upward pressure as dollar weakness overwhelms eurozone fundamentals, with the pair likely testing 1.10 resistance. USDJPY becomes vulnerable despite yield differentials favoring USD, as fiscal concerns trump rate advantages. Australian CPI's downside surprise to 4.2% reinforces AUDUSD weakness against an already-strong USD ranking, creating double pressure. The regime suggests currency moves driven by fiscal rather than monetary dynamics, making traditional correlations unreliable.",
-    "generated_at": "2026-05-27T06:25:11.358748+00:00"
+    "headline": "",
+    "text": "{\"headline\": \"Gold-dollar divergence exposes fiscal credibility crisis beneath equity euphoria.\", \"text\": \"Gold at crisis levels while DXY languishes below parity reveals markets pricing fiscal deterioration over cyclical strength. Historically, gold above $4500 with weak dollar signals credibility collapse, not risk-off flows. The 86bp yield curve steepening amplifies this tension\u2014markets expect growth but distrust dollar durability. This creates mechanical selling pressure on USD crosses while supporting commodity currencies through dual channels: fiscal debasement fears and genuine growth optimism reflected in copper's industrial surge. The S&P's parabolic trajectory contradicts VIX complacency, suggesting positioning-driven momentum rather than fundamental conviction. Japan's manufacturing acceleration provides yen support through improved terms of trade, while NZ confidence recovery reinforces RBNZ hawkish bias. NZDUSD benefits from perfect storm: NZD strength from domestic resilience plus USD weakness from fiscal concerns. CADJPY captures oil strength against yen vulnerability, though oil's retreat warns of momentum fading. USDCHF faces dual headwinds from Swiss safe-haven inflows and dollar credibility erosion. The regime signals growth optimism funding fiscal skepticism\u2014unsustainable but potentially persistent through year-end positioning.\"",
+    "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Softer PCE pressures dollar and yields, weakening USD across major pairs.",
-    "updated": "2026-05-29T01:51:10.567271+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats",
+    "updated": "2026-05-29T06:00:43.969290+00:00"
   },
   "last_alert": "2026-05-28T19:40:10.681858+00:00"
 }
