@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T23:04:21.605184+00:00",
+  "updated": "2026-05-29T01:51:10.567271+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4525.0,
-      "delta_pct": 1.7,
+      "value": 4537.3,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.993,
-      "delta_pct": -0.2,
+      "value": 98.997,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4185,
-      "delta_pct": 1.8,
+      "value": 6.431,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.58,
-      "delta_pct": -0.1,
+      "value": 88.37,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73440.0,
-      "delta_pct": -1.2,
+      "value": 73405.0,
+      "delta_pct": -1.3,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats undermines USDCHF SHORT. Softer PCE pressures dollar supports NZDUSD LONG and CADJPY LONG.",
-    "updated": "2026-05-28T23:04:21.605184+00:00"
+    "text": "NZDUSD LONG: NZ business confidence bounce and consumer confidence lift support setup. CADJPY LONG: Japan retail sales and manufacturing beat expectations support setup. USDCHF SHORT: Dollar falls on softer PCE supports short setup. No breaking catalysts.",
+    "updated": "2026-05-29T01:51:10.567271+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "NZDUSD LONG: Macro confirms setup via risk-on sentiment and commodity strength.\n\nCADJPY LONG: Macro confirms setup via risk-on and falling volatility environment.\n\nUSDCHF SHORT: Macro challenges setup because risk-on sentiment supports USD bid.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.17
       }
     ],
-    "updated": "2026-05-28T23:04:21.605184+00:00"
+    "updated": "2026-05-29T01:51:10.567271+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-28T23:04:21.605184+00:00"
+    "updated": "2026-05-29T01:51:10.567271+00:00"
   },
   "deep_analysis": {
     "headline": "Extreme gold strength amid weak dollar reveals fiscal dominance fears",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-27T06:25:11.358748+00:00"
   },
   "breaking": {
-    "text": "Softer PCE pressures dollar and yields lower",
-    "updated": "2026-05-28T23:04:21.605184+00:00"
+    "text": "Softer PCE pressures dollar and yields, weakening USD across major pairs.",
+    "updated": "2026-05-29T01:51:10.567271+00:00"
   },
   "last_alert": "2026-05-28T19:40:10.681858+00:00"
 }
