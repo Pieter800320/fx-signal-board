@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T16:50:51.267199+00:00",
+  "updated": "2026-05-29T18:24:53.835529+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.63,
-      "delta_pct": -0.7,
+      "value": 15.39,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7583.66,
-      "delta_pct": 0.3,
+      "value": 7579.26,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4568.4,
-      "delta_pct": 1.5,
+      "value": 4587.4,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.055,
-      "delta_pct": 0.0,
+      "value": 98.912,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3795,
-      "delta_pct": -0.3,
+      "value": 6.386,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -0.4,
+      "value": 4.445,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.09,
-      "delta_pct": -0.9,
+      "value": 87.28,
+      "delta_pct": -1.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72525.0,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 73733.0,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.6,
-      "delta_bp": 0.1,
+      "value": 86.0,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDCAD LONG and USDJPY LONG. Weaker dollar thesis undermines USD strength setups.",
-    "updated": "2026-05-29T14:31:18.937924+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats undermines NZDUSD and GBPUSD longs if crude weakness persists. Iran deal hopes support these setups. Energy shock headlines support JPY strength, conflicting with NZDJPY long.",
+    "updated": "2026-05-29T18:24:53.835529+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro context confirms setup, risk-off supports commodity currency demand.\n\nUSDCAD LONG: Macro context challenges setup, falling oil undermines Canadian dollar strength.\n\nUSDJPY LONG: Macro context neutral to setup, risk-off typically supports yen safe haven.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, oil weakness supports NZD carry strength.\n\nNZDJPY LONG: Risk-On regime confirms setup, yen weakness amplifies carry trade positioning.\n\nGBPUSD LONG: Weak momentum contradicts Risk-On; gold strength challenges GBP upside conviction.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.7
+        "score": 8.15
       },
       {
-        "pair": "USDCAD",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 5.05
+        "score": 7.92
       },
       {
-        "pair": "USDJPY",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 3.55
+        "score": 5.18
       }
     ],
-    "updated": "2026-05-29T14:31:18.937924+00:00"
+    "updated": "2026-05-29T18:24:53.835529+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T14:31:18.937924+00:00"
+    "updated": "2026-05-29T18:24:53.835529+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Canada Q1 GDP -0.1% vs +1.5% expected, signals recession",
-    "updated": "2026-05-29T14:31:18.937924+00:00"
+    "text": "Trump announces US naval blockade lift; Iran denies agreement finalized.",
+    "updated": "2026-05-29T18:24:53.835529+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
