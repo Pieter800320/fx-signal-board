@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T08:48:11.312688+00:00",
+  "updated": "2026-05-29T09:33:29.526274+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,13 +551,13 @@
     "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.74,
-      "delta_pct": -3.4,
-      "direction": "down",
+      "value": 15.8,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4536.0,
-      "delta_pct": 0.8,
+      "value": 4553.8,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.065,
-      "delta_pct": 0.0,
+      "value": 99.128,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4105,
-      "delta_pct": 0.2,
+      "value": 6.4055,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.99,
-      "delta_pct": -1.0,
+      "value": 87.32,
+      "delta_pct": -1.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73582.0,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 73741.0,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF SHORT at risk. \"Dollar Falls as Crude Oil Retreats\" undermines safe haven demand for CHF strength.",
-    "updated": "2026-05-29T06:00:43.969290+00:00"
+    "text": "Japan chief cabinet secretary extremely concerned about speculative FX moves directly conflicts with CADJPY LONG and USDCHF SHORT setups by signaling potential BOJ intervention to weaken yen.",
+    "updated": "2026-05-29T09:33:29.526274+00:00"
   },
   "ranked": {
-    "text": "CADJPY LONG: VIX decline and equity strength jointly confirm CAD bid thesis.\n\nNZDUSD LONG: Rising equities support NZD, but weak momentum divergence challenges conviction.\n\nUSDCHF SHORT: Gold strength confirms CHF bid, but equity rally contradicts safe haven demand.",
+    "text": "NZDUSD LONG: S&P 500 strength confirms NZD bid setup favorably.\n\nCADJPY LONG: Risk-off macro challenges CAD bid despite equity rise.\n\nUSDCHF SHORT: Gold strength and risk-off both support CHF bid.",
     "top": [
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 5.85
-      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.82
+        "score": 7.05
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 4.33
       },
       {
         "pair": "USDCHF",
         "direction": "bear",
-        "score": 5.17
+        "score": 3.88
       }
     ],
-    "updated": "2026-05-29T06:00:43.969290+00:00"
+    "updated": "2026-05-29T09:33:29.526274+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T06:00:43.969290+00:00"
+    "updated": "2026-05-29T09:33:29.526274+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Dollar Falls as Crude Oil Retreats",
-    "updated": "2026-05-29T06:00:43.969290+00:00"
+    "text": "Japan chief cabinet secretary says extremely concerned about speculative FX moves.",
+    "updated": "2026-05-29T09:33:29.526274+00:00"
   },
   "last_alert": "2026-05-29T08:48:11.312688+00:00"
 }
