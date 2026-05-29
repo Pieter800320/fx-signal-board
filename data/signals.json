@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T12:23:06.755640+00:00",
+  "updated": "2026-05-29T14:31:18.937924+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,12 +539,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.84,
-      "delta_pct": 0.6,
+      "value": 15.63,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7563.63,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 7583.66,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4568.7,
+      "value": 4568.4,
       "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.084,
-      "delta_pct": 0.1,
+      "value": 99.055,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.398,
-      "delta_pct": 0.0,
+      "value": 6.3795,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.455,
-      "delta_bp": -2.6,
+      "value": 4.451,
+      "delta_bp": -0.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.59,
-      "delta_bp": 0.5,
+      "value": 3.585,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.96,
-      "delta_pct": -2.2,
+      "value": 88.09,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73492.0,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 72525.0,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.5,
-      "delta_bp": -3.1,
-      "direction": "down",
+      "value": 86.6,
+      "delta_bp": 0.1,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Japan chief cabinet secretary concerned about speculative FX moves conflicts with CADJPY LONG and USDCHF SHORT setups.",
-    "updated": "2026-05-29T11:00:15.832028+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDCAD LONG and USDJPY LONG. Weaker dollar thesis undermines USD strength setups.",
+    "updated": "2026-05-29T14:31:18.937924+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 rising confirms NZD bid setup today.\n\nCADJPY LONG: Oil falling challenges CAD bid despite equity support.\n\nUSDCHF SHORT: Gold rising confirms CHF bid but oil decline mixed.",
+    "text": "NZDUSD LONG: Macro context confirms setup, risk-off supports commodity currency demand.\n\nUSDCAD LONG: Macro context challenges setup, falling oil undermines Canadian dollar strength.\n\nUSDJPY LONG: Macro context neutral to setup, risk-off typically supports yen safe haven.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.05
+        "score": 7.7
       },
       {
-        "pair": "CADJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.33
+        "score": 5.05
       },
       {
-        "pair": "USDCHF",
-        "direction": "bear",
-        "score": 3.88
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 3.55
       }
     ],
-    "updated": "2026-05-29T11:00:15.832028+00:00"
+    "updated": "2026-05-29T14:31:18.937924+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T11:00:15.832028+00:00"
+    "updated": "2026-05-29T14:31:18.937924+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Japan chief cabinet secretary extremely concerned about speculative FX moves yen",
-    "updated": "2026-05-29T11:00:15.832028+00:00"
+    "text": "Canada Q1 GDP -0.1% vs +1.5% expected, signals recession",
+    "updated": "2026-05-29T14:31:18.937924+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
