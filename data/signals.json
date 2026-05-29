@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T21:30:25.121337+00:00",
+  "updated": "2026-05-29T23:01:05.271054+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73386.0,
-      "delta_pct": -0.2,
+      "value": 73327.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by pound strength from dollar selloff on Iran deal hopes. NZDUSD LONG and NZDJPY LONG supported by dollar weakness and crude oil retreat.",
-    "updated": "2026-05-29T21:30:25.121337+00:00"
+    "text": "GBPUSD LONG accelerated by Sterling Today headline showing pound strength on dollar weakness from Iran-Hormuz deal hopes.",
+    "updated": "2026-05-29T23:01:05.271054+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-On regime confirms setup; NZD commodity sensitivity supports weakness.\n\nNZDJPY LONG: Risk-On supports trade; yen weakness from macro divergence reinforces.\n\nGBPUSD LONG: Weak CMP conflicts; gold strength challenges GBP carry appeal.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup; NZD benefit from growth appetite.\n\nNZDJPY LONG: Risk-On regime confirms; carry trade unwind risk from macro uncertainty.\n\nGBPUSD LONG: Weak score challenged by macro risk-off; gold strength signals caution.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-29T21:30:25.121337+00:00"
+    "updated": "2026-05-29T23:01:05.271054+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T21:30:25.121337+00:00"
+    "updated": "2026-05-29T23:01:05.271054+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Trump announces Iran naval blockade lift; crude retreats sharply, dollar weakens.",
-    "updated": "2026-05-29T21:30:25.121337+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats",
+    "updated": "2026-05-29T23:01:05.271054+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
