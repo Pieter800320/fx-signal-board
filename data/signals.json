@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T09:33:29.526274+00:00",
+  "updated": "2026-05-29T11:00:15.832028+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.8,
-      "delta_pct": 0.4,
+      "value": 15.84,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4553.8,
-      "delta_pct": 1.2,
+      "value": 4568.7,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.128,
+      "value": 99.084,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4055,
-      "delta_pct": 0.1,
+      "value": 6.398,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.32,
-      "delta_pct": -1.8,
+      "value": 86.96,
+      "delta_pct": -2.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73741.0,
-      "delta_pct": 0.3,
+      "value": 73492.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan chief cabinet secretary extremely concerned about speculative FX moves directly conflicts with CADJPY LONG and USDCHF SHORT setups by signaling potential BOJ intervention to weaken yen.",
-    "updated": "2026-05-29T09:33:29.526274+00:00"
+    "text": "Japan chief cabinet secretary concerned about speculative FX moves conflicts with CADJPY LONG and USDCHF SHORT setups.",
+    "updated": "2026-05-29T11:00:15.832028+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 strength confirms NZD bid setup favorably.\n\nCADJPY LONG: Risk-off macro challenges CAD bid despite equity rise.\n\nUSDCHF SHORT: Gold strength and risk-off both support CHF bid.",
+    "text": "NZDUSD LONG: S&P 500 rising confirms NZD bid setup today.\n\nCADJPY LONG: Oil falling challenges CAD bid despite equity support.\n\nUSDCHF SHORT: Gold rising confirms CHF bid but oil decline mixed.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 3.88
       }
     ],
-    "updated": "2026-05-29T09:33:29.526274+00:00"
+    "updated": "2026-05-29T11:00:15.832028+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T09:33:29.526274+00:00"
+    "updated": "2026-05-29T11:00:15.832028+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Japan chief cabinet secretary says extremely concerned about speculative FX moves.",
-    "updated": "2026-05-29T09:33:29.526274+00:00"
+    "text": "Japan chief cabinet secretary extremely concerned about speculative FX moves yen",
+    "updated": "2026-05-29T11:00:15.832028+00:00"
   },
   "last_alert": "2026-05-29T08:48:11.312688+00:00"
 }
