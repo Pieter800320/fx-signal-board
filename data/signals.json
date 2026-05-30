@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T08:11:46.316360+00:00",
+  "updated": "2026-05-30T08:15:18.225584+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73441.0,
+      "value": 73443.0,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Sterling pound jumps accelerates GBPUSD LONG. Energy shock weighs on EU, supporting GBPUSD LONG.",
-    "updated": "2026-05-30T08:11:46.316360+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats accelerates NZDUSD LONG and GBPUSD LONG. Sterling pound jumps accelerates GBPUSD LONG. Energy shock weighing on EU could pressure GBPUSD LONG.",
+    "updated": "2026-05-30T08:15:18.225584+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms Risk-On regime supports NZD commodity currency strength.\n\nNZDJPY LONG: Macro confirms Risk-On supports carry trade unwinding JPY weakness.\n\nGBPUSD LONG: Macro challenges weak setup, Risk-Off headwinds conflict GBP upside.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, Oil weakness supports commodity currency.\n\nNZDJPY LONG: Risk-On regime confirms setup, Oil decline supports risk appetite.\n\nGBPUSD LONG: Risk-On regime confirms but Gold strength challenges momentum signal.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-30T08:11:46.316360+00:00"
+    "updated": "2026-05-30T08:15:18.225584+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-30T08:11:46.316360+00:00"
+    "updated": "2026-05-30T08:15:18.225584+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Trump signals Iran blockade lift; crude oil retreats, dollar weakens.",
-    "updated": "2026-05-30T08:11:46.316360+00:00"
+    "text": "Trump blockade lift announcement suggests Iran deal progress; dollar weakens on oil retreat.",
+    "updated": "2026-05-30T08:15:18.225584+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
