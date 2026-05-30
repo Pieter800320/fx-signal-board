@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T23:01:05.271054+00:00",
+  "updated": "2026-05-30T01:46:56.518193+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73327.0,
-      "delta_pct": -0.3,
+      "value": 73531.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by Sterling Today headline showing pound strength on dollar weakness from Iran-Hormuz deal hopes.",
-    "updated": "2026-05-29T23:01:05.271054+00:00"
+    "text": "GBPUSD LONG accelerated by Sterling Today headline showing pound strength on dollar weakness from Iran deal hopes. Dollar Falls headline supports this setup.",
+    "updated": "2026-05-30T01:46:56.518193+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-On regime confirms setup; NZD benefit from growth appetite.\n\nNZDJPY LONG: Risk-On regime confirms; carry trade unwind risk from macro uncertainty.\n\nGBPUSD LONG: Weak score challenged by macro risk-off; gold strength signals caution.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, NZD commodity sensitivity supports.\n\nNZDJPY LONG: Risk-On regime confirms, but Gold strength challenges carry.\n\nGBPUSD LONG: Risk-On confirms but weak CMP score limits conviction.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-29T23:01:05.271054+00:00"
+    "updated": "2026-05-30T01:46:56.518193+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-29T23:01:05.271054+00:00"
+    "updated": "2026-05-30T01:46:56.518193+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -722,7 +722,7 @@
   },
   "breaking": {
     "text": "Dollar Falls as Crude Oil Retreats",
-    "updated": "2026-05-29T23:01:05.271054+00:00"
+    "updated": "2026-05-30T01:46:56.518193+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
