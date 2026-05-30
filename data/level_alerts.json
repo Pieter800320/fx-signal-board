@@ -621,5 +621,12 @@
     "price": 159.84663442020153,
     "direction": "above",
     "active": false
+  },
+  {
+    "id": 1780167740665,
+    "pair": "NZDUSD",
+    "price": 0.5964617465013519,
+    "direction": "below",
+    "active": true
   }
 ]
