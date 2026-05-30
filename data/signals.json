@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T18:53:50.185168+00:00",
+  "updated": "2026-05-30T20:41:42.255852+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73903.0,
-      "delta_pct": 0.7,
+      "value": 73815.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats accelerates NZDUSD LONG and GBPUSD LONG. Sterling pound jumps supports GBPUSD LONG. Energy shock weakens Euro, supports NZDJPY LONG indirectly.",
-    "updated": "2026-05-30T18:53:50.185168+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Dollar weakness reduces upside. Sterling Today shows pound strength supporting GBPUSD LONG.",
+    "updated": "2026-05-30T20:41:42.255852+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-On regime confirms setup, WTI weakness supports NZD commodity strength.\n\nNZDJPY LONG: Risk-On regime confirms setup, carry trade alignment supports JPY weakness.\n\nGBPUSD LONG: Risk-Off macro challenges weak score, gold bid pressures GBP upside.",
+    "text": "NZDUSD LONG: Macro confirms setup, risk-on regime supports NZD strength today.\n\nNZDJPY LONG: Macro confirms setup, risk-on favors higher-yielding NZD over JPY.\n\nGBPUSD LONG: Macro challenges setup, weak momentum divergence conflicts risk-on signal.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-30T18:53:50.185168+00:00"
+    "updated": "2026-05-30T20:41:42.255852+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-30T18:53:50.185168+00:00"
+    "updated": "2026-05-30T20:41:42.255852+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Trump blockade lift signals potential US-Iran deal progress; dollar weakens on oil retreat.",
-    "updated": "2026-05-30T18:53:50.185168+00:00"
+    "text": "Trump naval blockade lift announcement signals potential US-Iran deal progress",
+    "updated": "2026-05-30T20:41:42.255852+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
