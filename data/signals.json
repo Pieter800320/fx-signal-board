@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T11:08:42.620317+00:00",
+  "updated": "2026-05-30T12:55:28.892304+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73518.0,
+      "value": 73544.0,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by \"Sterling Today: Pound jumps as dollar sells off on Iran-Hormuz deal hopes\". NZDUSD LONG and NZDJPY LONG accelerated by dollar weakness from Iran blockade news.",
-    "updated": "2026-05-30T11:08:42.620317+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Sterling Today headline supports GBPUSD LONG. Iran blockade lift reduces safe haven demand, pressuring JPY in NZDJPY LONG",
+    "updated": "2026-05-30T12:55:28.892304+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-On regime confirms setup, NZD commodity sensitivity supports.\n\nNZDJPY LONG: Risk-On regime confirms setup, yen carry unwind supports.\n\nGBPUSD LONG: Risk-Off macro challenges weak signal, oil weakness pressures.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, Oil weakness supports commodity currency.\n\nNZDJPY LONG: Risk-On regime confirms setup, JPY carry weakness supports long.\n\nGBPUSD LONG: Risk-On macro confirms but Gold strength challenges GBP relative strength.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-30T11:08:42.620317+00:00"
+    "updated": "2026-05-30T12:55:28.892304+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-30T11:08:42.620317+00:00"
+    "updated": "2026-05-30T12:55:28.892304+00:00"
   },
   "deep_analysis": {
     "headline": "",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-29T06:01:33.274109+00:00"
   },
   "breaking": {
-    "text": "Trump blockade lift announcement seen as first step toward broader US-Iran agreement.",
-    "updated": "2026-05-30T11:08:42.620317+00:00"
+    "text": "Trump naval blockade lift announcement signals potential US-Iran deal progress",
+    "updated": "2026-05-30T12:55:28.892304+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
