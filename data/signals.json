@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T01:58:34.352161+00:00",
+  "updated": "2026-05-31T06:14:14.612556+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,12 +539,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4560.5,
-      "delta_pct": 1.4,
+      "value": 4593.0,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,9 +579,9 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3595,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.389,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73945.0,
-      "delta_pct": 0.8,
+      "value": 73898.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Pound jumps as dollar sells off accelerates GBPUSD LONG. Iran blockade lift reduces safe haven demand, supporting risk currencies.",
-    "updated": "2026-05-31T01:58:34.352161+00:00"
+    "text": "GBPUSD LONG accelerated by Sterling Today headline showing pound strength on dollar weakness from Iran deal hopes. NZDUSD LONG and NZDJPY LONG supported by dollar weakness catalyst.",
+    "updated": "2026-05-31T06:14:14.612556+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms Risk-On regime supports commodity currency strength.\n\nNZDJPY LONG: Macro confirms Risk-On supports NZD carry trade unwind.\n\nGBPUSD LONG: Macro challenges weak CMP signal despite Risk-On backdrop.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup; NZD commodity strength supports.\n\nNZDJPY LONG: Risk-On regime confirms; yen weakness aids carry trade.\n\nGBPUSD LONG: Weak CMP challenges; mixed macro lacks conviction here.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-31T01:58:34.352161+00:00"
+    "updated": "2026-05-31T06:14:14.612556+00:00"
   },
   "calendar": {
     "events": [
@@ -713,16 +713,16 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-31T01:58:34.352161+00:00"
+    "updated": "2026-05-31T06:14:14.612556+00:00"
   },
   "deep_analysis": {
-    "headline": "",
-    "text": "{\"headline\": \"Gold-dollar divergence exposes fiscal credibility crisis beneath equity euphoria.\", \"text\": \"Gold at crisis levels while DXY languishes below parity reveals markets pricing fiscal deterioration over cyclical strength. Historically, gold above $4500 with weak dollar signals credibility collapse, not risk-off flows. The 86bp yield curve steepening amplifies this tension\u2014markets expect growth but distrust dollar durability. This creates mechanical selling pressure on USD crosses while supporting commodity currencies through dual channels: fiscal debasement fears and genuine growth optimism reflected in copper's industrial surge. The S&P's parabolic trajectory contradicts VIX complacency, suggesting positioning-driven momentum rather than fundamental conviction. Japan's manufacturing acceleration provides yen support through improved terms of trade, while NZ confidence recovery reinforces RBNZ hawkish bias. NZDUSD benefits from perfect storm: NZD strength from domestic resilience plus USD weakness from fiscal concerns. CADJPY captures oil strength against yen vulnerability, though oil's retreat warns of momentum fading. USDCHF faces dual headwinds from Swiss safe-haven inflows and dollar credibility erosion. The regime signals growth optimism funding fiscal skepticism\u2014unsustainable but potentially persistent through year-end positioning.\"",
-    "generated_at": "2026-05-29T06:01:33.274109+00:00"
+    "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
+    "text": "Gold's 2.1% surge to crisis-level 4593 while the dollar remains weak at 98.91 signals markets pricing stagflation risk rather than standard safe-haven flows. Historically, gold rallying with steepening yield curves indicates inflation expectations overwhelming real rate dynamics\u2014the 86.5bp curve steepness suggests growth optimism, yet gold's extreme positioning contradicts this narrative. Oil's 1.7% decline despite strong copper creates energy-metals divergence, typically preceding either demand destruction or supply normalization. The VIX dropping 2.7% while gold surges represents the most anomalous signal\u2014markets pricing growth optimism in equities but monetary debasement in precious metals simultaneously. This creates cross-asset tension that historically resolves through dollar weakness or equity correction. NZDUSD emerges strongest with 8.2/10 setup as NZD's 100-rated CSM strength exploits dollar vulnerability through carry trade revival\u2014New Zealand's commodity linkage benefits from copper strength while avoiding oil exposure. NZDJPY similarly capitalizes on yen weakness from steepening curves pressuring Bank of Japan intervention thresholds. The Iran blockade uncertainty adds geopolitical premium supporting gold while weakening systematic risk positioning across G10 currencies.",
+    "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "Trump announces Iran naval blockade lift; crude oil retreats, dollar weakens",
-    "updated": "2026-05-31T01:58:34.352161+00:00"
+    "text": "Trump blockade lift signals potential US-Iran deal progress, oil retreats sharply.",
+    "updated": "2026-05-31T06:14:14.612556+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
