@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T15:07:54.059601+00:00",
+  "updated": "2026-05-31T16:51:55.858179+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73544.0,
-      "delta_pct": -0.3,
+      "value": 73409.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by Sterling Today headline showing pound jumps as dollar sells off. NZDUSD LONG accelerated by Dollar Falls as Crude Oil Retreats headline.",
-    "updated": "2026-05-31T15:07:54.059601+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Pound jumps as dollar sells off accelerates GBPUSD LONG. Energy shock headlines support JPY strength, conflicting with NZDJ",
+    "updated": "2026-05-31T16:51:55.858179+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, risk-on regime supports NZD strength.\n\nNZDJPY LONG: Macro confirms setup, risk-on favors carry trade unwind.\n\nGBPUSD LONG: Macro challenges setup, weak sterling momentum contradicts risk-on.",
+    "text": "NZDUSD LONG: Macro confirms Risk-On regime supports commodity currency strength.\n\nNZDJPY LONG: Macro confirms Risk-On supports NZD carry unwind pressure.\n\nGBPUSD LONG: Macro challenges weak setup; Risk-Off headwinds conflict positioning.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-31T15:07:54.059601+00:00"
+    "updated": "2026-05-31T16:51:55.858179+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-31T15:07:54.059601+00:00"
+    "updated": "2026-05-31T16:51:55.858179+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,7 +722,7 @@
   },
   "breaking": {
     "text": "Dollar Falls as Crude Oil Retreats",
-    "updated": "2026-05-31T15:07:54.059601+00:00"
+    "updated": "2026-05-31T16:51:55.858179+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
