@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T22:00:02.930504+00:00",
+  "updated": "2026-05-31T22:44:16.012273+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,19 +539,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
-  },
-  "macro": {
-    "label": "Risk-Off",
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
     "signals": 1,
     "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "stable": false
+  },
+  "macro": {
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4593.0,
-      "delta_pct": 2.1,
-      "direction": "up",
+      "value": 4565.8,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.91,
-      "delta_pct": -0.1,
+      "value": 99.007,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.389,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 6.3975,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.36,
-      "delta_pct": -1.7,
-      "direction": "down",
+      "value": 89.47,
+      "delta_pct": 2.4,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73851.0,
-      "delta_pct": 0.1,
+      "value": 73786.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats accelerates NZDUSD LONG and GBPUSD LONG. Sterling jumps on Iran deal hopes accelerates GBPUSD LONG. Energy shock weighing on EU growth conflicts with GBPUSD LONG",
-    "updated": "2026-05-31T22:00:02.930504+00:00"
+    "text": "GBPUSD LONG at risk. Dollar selling on Iran deal hopes could reverse if geopolitical tensions escalate unexpectedly, undermining pound strength narrative.",
+    "updated": "2026-05-31T22:44:16.012273+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-On regime confirms setup, NZD carry appeal intact.\n\nNZDJPY LONG: Risk-On regime confirms, but gold strength challenges yen weakness.\n\nGBPUSD LONG: Weak CMP contradicts risk-on confirmation, needs stronger momentum confirmation.",
+    "text": "NZDUSD LONG: Macro confirms setup, copper strength validates NZD bid thesis.\n\nNZDJPY LONG: Macro confirms setup, risk-on regime supports NZD outperformance versus JPY.\n\nGBPUSD LONG: Macro challenges setup, risk-off macro contradicts weak momentum confirmation signal.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.15
+        "score": 8.35
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.92
+        "score": 8.12
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-31T22:00:02.930504+00:00"
+    "updated": "2026-05-31T22:44:16.012273+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-31T22:00:02.930504+00:00"
+    "updated": "2026-05-31T22:44:16.012273+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "text": "China manufacturing PMI falls to 50 in May as export orders contract",
-    "updated": "2026-05-31T22:00:02.930504+00:00"
+    "updated": "2026-05-31T22:44:16.012273+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00",
   "week_ahead": {
-    "text": "The US dollar will be the key driver this week, with traders tracking its movement after inflation data as it will influence most major forex pairs and overall market direction. US inflation and central bank decisions are the most market-moving releases this week, with Thursday's PCE and jobless claims data directly affecting USD strength. GBP/USD is a critical pair to monitor, having gathered pace to fresh three-day tops past 1.3480 as cable's recovery follows the sell-off in the greenback on the back of further improvement on the geopolitical landscape. The biggest risk to watch is another Trump war deadline due Thursday and the prospect of renewed military clashes between the USA and Iran, which could abruptly reverse the current risk-on bias.",
-    "generated_at": "2026-05-31T22:00:02.930504+00:00"
+    "text": "The US dollar remains the key driver this week with markets tracking its movement after inflation data that will influence most major forex pairs. Thursday's US PCE and Core PCE inflation readings will dominate the USD reaction. Watch USD/JPY closely as the pair remains sensitive to US rate expectations and Japanese intervention risks. The biggest wildcard is whether elevated oil prices from geopolitical tensions can sustain given improved US-Iran deal prospects, which could trigger sharp reversals across risk assets and commodity-linked currencies.",
+    "generated_at": "2026-05-31T22:44:16.012273+00:00"
   }
 }
