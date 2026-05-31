@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T20:44:56.858463+00:00",
+  "updated": "2026-05-31T22:00:02.930504+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73587.0,
-      "delta_pct": -0.2,
+      "value": 73851.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats invalidates NZDUSD LONG and GBPUSD LONG. Pound jumps as dollar sells off accelerates GBPUSD LONG. Energy shock boosts inflation, pressures NZDJPY LONG",
-    "updated": "2026-05-31T20:44:56.858463+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats accelerates NZDUSD LONG and GBPUSD LONG. Sterling jumps on Iran deal hopes accelerates GBPUSD LONG. Energy shock weighing on EU growth conflicts with GBPUSD LONG",
+    "updated": "2026-05-31T22:00:02.930504+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms Risk-On regime supports NZD strength bias.\n\nNZDJPY LONG: Macro confirms Risk-On outweighs safe-haven JPY positioning today.\n\nGBPUSD LONG: Macro challenges weak CMP signal despite Risk-On backdrop.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, NZD carry appeal intact.\n\nNZDJPY LONG: Risk-On regime confirms, but gold strength challenges yen weakness.\n\nGBPUSD LONG: Weak CMP contradicts risk-on confirmation, needs stronger momentum confirmation.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-31T20:44:56.858463+00:00"
+    "updated": "2026-05-31T22:00:02.930504+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-31T20:44:56.858463+00:00"
+    "updated": "2026-05-31T22:00:02.930504+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,7 +722,11 @@
   },
   "breaking": {
     "text": "China manufacturing PMI falls to 50 in May as export orders contract",
-    "updated": "2026-05-31T20:44:56.858463+00:00"
+    "updated": "2026-05-31T22:00:02.930504+00:00"
   },
-  "last_alert": "2026-05-29T12:23:06.755640+00:00"
+  "last_alert": "2026-05-29T12:23:06.755640+00:00",
+  "week_ahead": {
+    "text": "The US dollar will be the key driver this week, with traders tracking its movement after inflation data as it will influence most major forex pairs and overall market direction. US inflation and central bank decisions are the most market-moving releases this week, with Thursday's PCE and jobless claims data directly affecting USD strength. GBP/USD is a critical pair to monitor, having gathered pace to fresh three-day tops past 1.3480 as cable's recovery follows the sell-off in the greenback on the back of further improvement on the geopolitical landscape. The biggest risk to watch is another Trump war deadline due Thursday and the prospect of renewed military clashes between the USA and Iran, which could abruptly reverse the current risk-on bias.",
+    "generated_at": "2026-05-31T22:00:02.930504+00:00"
+  }
 }
