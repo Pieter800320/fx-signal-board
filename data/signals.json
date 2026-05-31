@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T08:33:18.211870+00:00",
+  "updated": "2026-05-31T10:04:09.324124+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73806.0,
-      "delta_pct": 0.1,
+      "value": 73715.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats invalidates NZDUSD LONG and GBPUSD LONG. Dollar strength typically supports these pairs.",
-    "updated": "2026-05-31T08:33:18.211870+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats weakens NZDUSD LONG and GBPUSD LONG. Dollar strength typically supports these pairs. Crude retreat reduces safe haven demand.",
+    "updated": "2026-05-31T10:04:09.324124+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms Risk-On regime supports NZD strength thesis.\n\nNZDJPY LONG: Macro confirms Risk-On regime favors carry trade unwind.\n\nGBPUSD LONG: Macro challenges weak CMP signal despite Risk-On backdrop.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, NZD commodity sensitivity supports signal.\n\nNZDJPY LONG: Risk-On regime confirms, but Gold strength challenges carry unwind risk.\n\nGBPUSD LONG: Risk-On confirms weak signal, Oil decline reduces GBP energy hedge value.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.18
       }
     ],
-    "updated": "2026-05-31T08:33:18.211870+00:00"
+    "updated": "2026-05-31T10:04:09.324124+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-05-31T08:33:18.211870+00:00"
+    "updated": "2026-05-31T10:04:09.324124+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -721,8 +721,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "Trump blockade lift announcement seen as first step toward US-Iran agreement",
-    "updated": "2026-05-31T08:33:18.211870+00:00"
+    "text": "Trump blockade lift announcement suggests US-Iran deal progress, crude oil retreats.",
+    "updated": "2026-05-31T10:04:09.324124+00:00"
   },
   "last_alert": "2026-05-29T12:23:06.755640+00:00"
 }
