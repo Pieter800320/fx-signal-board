@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T16:44:38.588079+00:00",
+  "updated": "2026-06-01T20:07:38.610175+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -549,96 +549,86 @@
   "macro": {
     "label": "Risk-On",
     "signals": -2,
-    "total": 4,
+    "total": 2,
     "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.04,
-      "delta_pct": 4.7,
+      "value": 16.01,
+      "delta_pct": 4.5,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7590.41,
-      "delta_pct": 0.1,
+      "value": 7599.96,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4507.6,
-      "delta_pct": -1.2,
+      "value": 4509.7,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.218,
+      "value": 99.197,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5535,
-      "delta_pct": 3.1,
+      "value": 6.5655,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.505,
-      "delta_bp": 5.2,
-      "direction": "up",
+      "value": 4.475,
+      "delta_bp": 2.2,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.605,
-      "delta_bp": 1.7,
-      "direction": "flat",
+      "value": 3.62,
+      "delta_bp": 3.2,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.05,
-      "delta_pct": 6.5,
+      "value": 92.59,
+      "delta_pct": 6.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 71145.0,
-      "delta_pct": -3.3,
+      "value": 71440.0,
+      "delta_pct": -2.9,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.0,
-      "delta_bp": 3.5,
-      "direction": "up",
+      "value": 85.5,
+      "delta_bp": -1.0,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD and USDCAD longs at risk. Dollar weakness from Iran de-escalation reduces USD upside. EUR selling pressure supports GBP but undermines CAD relative strength assumptions.",
-    "updated": "2026-06-01T15:45:03.562978+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-01T20:07:38.610175+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness driver strongly.\n\nUSDCAD LONG: VIX spike and US 10Y confirm USD bid.\n\nGBPUSD LONG: Risk-on regime supports but lacks cross-asset confirmation.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.4
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.43
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 4.05
+        "score": 6.28
       }
     ],
-    "updated": "2026-06-01T15:45:03.562978+00:00"
+    "updated": "2026-06-01T20:07:38.610175+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +703,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-01T15:45:03.562978+00:00"
+    "updated": "2026-06-01T20:07:38.610175+00:00"
   },
   "week_ahead": {
     "text": "The US dollar remains the key driver this week with markets tracking its movement after inflation data that will influence most major forex pairs. Thursday's US PCE and Core PCE inflation readings will dominate the USD reaction. Watch USD/JPY closely as the pair remains sensitive to US rate expectations and Japanese intervention risks. The biggest wildcard is whether elevated oil prices from geopolitical tensions can sustain given improved US-Iran deal prospects, which could trigger sharp reversals across risk assets and commodity-linked currencies.",
@@ -725,8 +715,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "ISM manufacturing rises to highest since 2022",
-    "updated": "2026-06-01T15:45:03.562978+00:00"
+    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+    "updated": "2026-06-01T20:07:38.610175+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00"
 }
