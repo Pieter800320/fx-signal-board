@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T21:00:02.587497+00:00",
+  "updated": "2026-06-01T23:19:52.289506+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.01,
-      "delta_pct": 4.5,
+      "value": 16.05,
+      "delta_pct": 4.8,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4509.7,
-      "delta_pct": -1.1,
+      "value": 4515.0,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.197,
+      "value": 99.181,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5655,
+      "value": 6.566,
       "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.59,
-      "delta_pct": 6.0,
+      "value": 92.33,
+      "delta_pct": 5.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 71440.0,
-      "delta_pct": -2.9,
+      "value": 71327.0,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-01T20:07:38.610175+00:00"
+    "text": "GBPJPY long invalidated. Dollar weakness from Iran de-escalation and crude retreat undermines JPY safe haven bid supporting the pair's upside.",
+    "updated": "2026-06-01T23:19:52.289506+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "GBPJPY LONG: Risk-on medium supports GBP strength, challenges yen safety bid.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.28
+        "score": 5.88
       }
     ],
-    "updated": "2026-06-01T20:07:38.610175+00:00"
+    "updated": "2026-06-01T23:19:52.289506+00:00"
   },
   "calendar": {
     "events": [
@@ -703,11 +703,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-01T20:07:38.610175+00:00"
-  },
-  "week_ahead": {
-    "text": "The US dollar remains the key driver this week with markets tracking its movement after inflation data that will influence most major forex pairs. Thursday's US PCE and Core PCE inflation readings will dominate the USD reaction. Watch USD/JPY closely as the pair remains sensitive to US rate expectations and Japanese intervention risks. The biggest wildcard is whether elevated oil prices from geopolitical tensions can sustain given improved US-Iran deal prospects, which could trigger sharp reversals across risk assets and commodity-linked currencies.",
-    "generated_at": "2026-05-31T22:44:16.012273+00:00"
+    "updated": "2026-06-01T23:19:52.289506+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -715,8 +711,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-    "updated": "2026-06-01T20:07:38.610175+00:00"
+    "text": "ISM manufacturing rises to highest level since 2022, supporting US dollar strength.",
+    "updated": "2026-06-01T23:19:52.289506+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00"
 }
