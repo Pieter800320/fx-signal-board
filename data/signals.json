@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T10:28:04.746374+00:00",
+  "updated": "2026-06-01T11:07:56.431311+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -555,9 +555,9 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.91,
-      "delta_pct": 3.9,
-      "direction": "up",
+      "value": 15.76,
+      "delta_pct": 2.9,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4525.2,
-      "delta_pct": -0.8,
+      "value": 4534.0,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.998,
+      "value": 99.053,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5075,
-      "delta_pct": 2.3,
+      "value": 6.5495,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.95,
-      "delta_pct": 4.1,
+      "value": 90.64,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72878.0,
-      "delta_pct": -1.0,
-      "direction": "flat",
+      "value": 72578.0,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats accelerates NZDUSD LONG and GBPUSD LONG via USD weakness. Energy shock from Iran war threatens GBPUSD LONG via EUR strength relative to GBP.",
-    "updated": "2026-06-01T09:07:23.339676+00:00"
+    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDCAD LONG and GBPUSD LONG. Weakening dollar undermines these long positions. Energy shock weighs on EUR, supporting GBP strength.",
+    "updated": "2026-06-01T11:07:56.431311+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, copper strength supports NZD bid thesis.\n\nNZDJPY LONG: Macro confirms setup, risk on environment favors commodity currency.\n\nGBPUSD LONG: Macro challenges setup, risk on low contradicts weak momentum.",
+    "text": "GBPJPY LONG: Risk-on regime and strong momentum confirm setup perfectly.\n\nUSDCAD LONG: Gold weakness confirms USD bid macro thesis.\n\nGBPUSD LONG: Risk-on supports but weak technicals challenge conviction.",
     "top": [
       {
-        "pair": "NZDUSD",
+        "pair": "GBPJPY",
         "direction": "bull",
-        "score": 8.35
+        "score": 7.0
       },
       {
-        "pair": "NZDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 8.12
+        "score": 5.83
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 5.18
+        "score": 4.05
       }
     ],
-    "updated": "2026-06-01T09:07:23.339676+00:00"
+    "updated": "2026-06-01T11:07:56.431311+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-01T09:07:23.339676+00:00"
+    "updated": "2026-06-01T11:07:56.431311+00:00"
   },
   "week_ahead": {
     "text": "The US dollar remains the key driver this week with markets tracking its movement after inflation data that will influence most major forex pairs. Thursday's US PCE and Core PCE inflation readings will dominate the USD reaction. Watch USD/JPY closely as the pair remains sensitive to US rate expectations and Japanese intervention risks. The biggest wildcard is whether elevated oil prices from geopolitical tensions can sustain given improved US-Iran deal prospects, which could trigger sharp reversals across risk assets and commodity-linked currencies.",
@@ -725,8 +725,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "Euro area manufacturing activity loses steam as stockpiling surge fades May.",
-    "updated": "2026-06-01T09:07:23.339676+00:00"
+    "text": "Euro area manufacturing PMI weakens; energy shock threatens European growth outlook.",
+    "updated": "2026-06-01T11:07:56.431311+00:00"
   },
   "last_alert": "2026-06-01T10:28:04.746374+00:00"
 }
