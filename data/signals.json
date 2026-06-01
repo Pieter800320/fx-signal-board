@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T11:07:56.431311+00:00",
+  "updated": "2026-06-01T15:45:03.562978+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -549,88 +549,88 @@
   "macro": {
     "label": "Risk-On",
     "signals": -2,
-    "total": 2,
+    "total": 4,
     "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.76,
-      "delta_pct": 2.9,
-      "direction": "flat",
+      "value": 16.04,
+      "delta_pct": 4.7,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7580.06,
-      "delta_pct": 0.2,
+      "value": 7590.41,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4534.0,
-      "delta_pct": -0.6,
+      "value": 4507.6,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.053,
-      "delta_pct": 0.1,
+      "value": 99.218,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5495,
-      "delta_pct": 3.0,
+      "value": 6.5535,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.453,
-      "delta_bp": -0.2,
-      "direction": "flat",
+      "value": 4.505,
+      "delta_bp": 5.2,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.588,
-      "delta_bp": -0.2,
+      "value": 3.605,
+      "delta_bp": 1.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.64,
-      "delta_pct": 3.8,
+      "value": 93.05,
+      "delta_pct": 6.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72578.0,
-      "delta_pct": -1.4,
+      "value": 71145.0,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.5,
-      "delta_bp": 0.0,
-      "direction": "flat",
+      "value": 90.0,
+      "delta_bp": 3.5,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Falls as Crude Oil Retreats conflicts with USDCAD LONG and GBPUSD LONG. Weakening dollar undermines these long positions. Energy shock weighs on EUR, supporting GBP strength.",
-    "updated": "2026-06-01T11:07:56.431311+00:00"
+    "text": "GBPUSD and USDCAD longs at risk. Dollar weakness from Iran de-escalation reduces USD upside. EUR selling pressure supports GBP but undermines CAD relative strength assumptions.",
+    "updated": "2026-06-01T15:45:03.562978+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on regime and strong momentum confirm setup perfectly.\n\nUSDCAD LONG: Gold weakness confirms USD bid macro thesis.\n\nGBPUSD LONG: Risk-on supports but weak technicals challenge conviction.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness driver strongly.\n\nUSDCAD LONG: VIX spike and US 10Y confirm USD bid.\n\nGBPUSD LONG: Risk-on regime supports but lacks cross-asset confirmation.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.0
+        "score": 7.4
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.83
+        "score": 6.43
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 4.05
       }
     ],
-    "updated": "2026-06-01T11:07:56.431311+00:00"
+    "updated": "2026-06-01T15:45:03.562978+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-01T11:07:56.431311+00:00"
+    "updated": "2026-06-01T15:45:03.562978+00:00"
   },
   "week_ahead": {
     "text": "The US dollar remains the key driver this week with markets tracking its movement after inflation data that will influence most major forex pairs. Thursday's US PCE and Core PCE inflation readings will dominate the USD reaction. Watch USD/JPY closely as the pair remains sensitive to US rate expectations and Japanese intervention risks. The biggest wildcard is whether elevated oil prices from geopolitical tensions can sustain given improved US-Iran deal prospects, which could trigger sharp reversals across risk assets and commodity-linked currencies.",
@@ -725,8 +725,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "Euro area manufacturing PMI weakens; energy shock threatens European growth outlook.",
-    "updated": "2026-06-01T11:07:56.431311+00:00"
+    "text": "ISM manufacturing rises to highest since 2022",
+    "updated": "2026-06-01T15:45:03.562978+00:00"
   },
   "last_alert": "2026-06-01T10:28:04.746374+00:00"
 }
