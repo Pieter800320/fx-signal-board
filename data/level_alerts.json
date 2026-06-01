@@ -641,13 +641,27 @@
     "pair": "NZDUSD",
     "price": 0.596520985801211,
     "direction": "below",
-    "active": false
+    "active": true
   },
   {
     "id": 1780305155236,
     "pair": "GBPUSD",
     "price": 1.3510628963135634,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1780305167052,
+    "pair": "GBPUSD",
+    "price": 1.3378733872248836,
+    "direction": "below",
     "active": true
+  },
+  {
+    "id": 1780305196286,
+    "pair": "GBPUSD",
+    "price": 1.3539827698729392,
+    "direction": "above",
+    "active": false
   }
 ]
