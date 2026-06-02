@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T09:16:02.564574+00:00",
+  "updated": "2026-06-02T10:01:43.436269+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.19,
-      "delta_pct": 0.9,
+      "value": 16.15,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4566.4,
-      "delta_pct": 2.0,
+      "value": 4559.2,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.056,
+      "value": 99.124,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6415,
-      "delta_pct": 1.8,
+      "value": 6.6205,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.75,
-      "delta_pct": -1.5,
+      "value": 90.87,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 69834.0,
-      "delta_pct": -2.1,
-      "direction": "flat",
+      "value": 69300.0,
+      "delta_pct": -2.8,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG accelerated by dollar weakness and BoJ taper debate supporting yen strength differential. GBPUSD LONG supported by pound strength on dollar selloff. USDCAD LONG conflicted by crude oil retreat weakening Canadian demand.",
-    "updated": "2026-06-02T08:17:41.886071+00:00"
+    "text": "GBPJPY LONG: BoJ taper debate heats up as rising yields complicate exit strategy. Higher JPY yields could strengthen JPY, pressuring the pair.\n\nUSDCAD LONG: Dollar Falls as Crude Oil Retreats. We",
+    "updated": "2026-06-02T10:01:43.436269+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime strongly confirms setup, ADX validates trend continuation signal.\n\nGBPUSD LONG: Risk-On supports trade but weak CMP reading challenges conviction slightly.\n\nUSDCAD LONG: Falling WTI directly challenges long bias, weakens CAD offered argument today.",
+    "text": "GBPJPY LONG: Risk-on regime confirms setup, momentum divergence challenges conviction slightly.\n\nUSDCAD LONG: Falling WTI directly challenges setup, CAD strength undermines long thesis.\n\nGBPUSD LONG: Risk-on regime confirms setup, weak CMP reading signals caution.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.75
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 5.7
+        "score": 7.0
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.85
+        "score": 5.45
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 5.12
       }
     ],
-    "updated": "2026-06-02T08:17:41.886071+00:00"
+    "updated": "2026-06-02T10:01:43.436269+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T08:17:41.886071+00:00"
+    "updated": "2026-06-02T10:01:43.436269+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "headlines": [
+      "Euro area inflation continues to pick up in May, core prices nudge up",
       "BoJ taper debate heats up as rising yields complicate exit strategy",
-      "European Parliament removes import duties on US goods, trade deal compliance",
-      "Dollar falls as crude oil retreats, Iran-Hormuz deal hopes rise"
+      "Pound jumps as dollar sells off on Iran-Hormuz deal hopes"
     ],
-    "updated": "2026-06-02T08:17:41.886071+00:00"
+    "updated": "2026-06-02T10:01:43.436269+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00",
   "gold_signal": {
