@@ -92,31 +92,59 @@ def build_macro_assets(macro: dict) -> dict:
         prev  = d["prev_close"]
         label = d.get("label", key.upper())
 
-        if key in ("us10y", "us3m"):
-            # Yields in %, delta in basis points
+        if key in ("us10y",):
             bp = (close - prev) * 100
-            direction = "up" if bp > 3.0 else "down" if bp < -3.0 else "flat"
+            direction = "up" if bp > 4.0 else "down" if bp < -4.0 else "flat"
+            out[key] = {"value": round(close, 3), "delta_bp": round(bp, 1),
+                        "direction": direction, "label": label}
+
+        elif key in ("us3m",):
+            bp = (close - prev) * 100
+            direction = "up" if bp > 2.0 else "down" if bp < -2.0 else "flat"
             out[key] = {"value": round(close, 3), "delta_bp": round(bp, 1),
                         "direction": direction, "label": label}
 
         elif key == "vix":
             pct = (close / prev - 1) * 100
-            if close > 20 or pct > 3.0:
-                direction = "up"
-            elif close < 15 or pct < -3.0:
-                direction = "down"
-            else:
-                direction = "flat"
+            direction = "up" if pct > 5.0 else "down" if pct < -5.0 else "flat"
             out[key] = {"value": round(close, 2), "delta_pct": round(pct, 1),
                         "direction": direction, "label": label}
 
         elif key == "btc":
             pct = (close / prev - 1) * 100
-            direction = "up" if pct > 1.0 else "down" if pct < -1.0 else "flat"
+            direction = "up" if pct > 2.5 else "down" if pct < -2.5 else "flat"
             out[key] = {"value": round(close, 0), "delta_pct": round(pct, 1),
                         "direction": direction, "label": label}
 
+        elif key == "wti":
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 1.0 else "down" if pct < -1.0 else "flat"
+            dec = 2 if close > 100 else 4
+            out[key] = {"value": round(close, dec), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
+        elif key == "dxy":
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 0.25 else "down" if pct < -0.25 else "flat"
+            dec = 2 if close > 100 else 4
+            out[key] = {"value": round(close, dec), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
+        elif key == "spx":
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 0.4 else "down" if pct < -0.4 else "flat"
+            out[key] = {"value": round(close, 2), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
+        elif key == "copper":
+            pct = (close / prev - 1) * 100
+            direction = "up" if pct > 0.6 else "down" if pct < -0.6 else "flat"
+            dec = 2 if close > 100 else 4
+            out[key] = {"value": round(close, dec), "delta_pct": round(pct, 1),
+                        "direction": direction, "label": label}
+
         else:
+            # gold and any remaining assets
             pct = (close / prev - 1) * 100
             direction = "up" if pct > 0.5 else "down" if pct < -0.5 else "flat"
             dec = 2 if close > 100 else 4
@@ -131,7 +159,7 @@ def build_macro_assets(macro: dict) -> dict:
         prev_sp    = round(((y10.get("prev_close", y10["close"]) -
                              y2.get("prev_close",  y2["close"])) * 100), 1)
         delta_bp   = round(spread - prev_sp, 1)
-        direction  = "up" if delta_bp > 2.0 else "down" if delta_bp < -2.0 else "flat"
+        direction  = "up" if delta_bp > 3.0 else "down" if delta_bp < -3.0 else "flat"
         out["curve"] = {"value": spread, "delta_bp": delta_bp,
                         "direction": direction, "label": "10Y-3M"}
 
@@ -617,65 +645,111 @@ def build_deep_context(signals: dict, macro: dict) -> str:
     return "\n".join(lines)
 
 
-def call_deep_analysis(signals: dict, macro: dict, headlines: list = None) -> dict:
+def call_daily_brief(signals: dict, headlines: list) -> dict:
     """
-    Daily Sonnet call — headline + 180-word interpretive macro narrative.
-    Returns {headline, text, generated_at} for storage in signals.json deep_analysis key.
+    Daily Sonnet call — 50-100 word unified brief.
+    Synthesises gold_signal + cross-asset + headlines + calendar.
+    Returns {text, generated_at} for storage in signals.json deep_analysis key.
     """
-    context = build_deep_context(signals, macro)
-    
-    # Add news context if available
-    if headlines:
-        context += "\n\nRECENT NEWS (last 2 hours):\n"
-        for h in headlines[:5]:
-            context += f"  • {h}\n"
+    ma       = signals.get("macro_assets", {})
+    reg_h4   = signals.get("regime_h4", {})
+    reg_h1   = signals.get("regime_h1", {})
+    gs       = signals.get("gold_signal", {})
+    ranked   = signals.get("ranked", {})
+    events   = signals.get("calendar", {}).get("events", [])
+
+    # Gold signal line
+    gs_dir   = gs.get("direction", "neutral").upper()
+    gs_conf  = gs.get("h4_confidence", "")
+    gs_h4    = gs.get("h4_confirmed", False)
+    if gs_dir != "NEUTRAL" and gs_h4:
+        gs_line = f"GOLD SIGNAL: {gs_dir} (H4 {reg_h4.get('regime','—')} confirmed, {gs_conf} confidence)"
+    else:
+        gs_line = "GOLD SIGNAL: NEUTRAL"
+
+    # Regime line
+    reg_line = f"H4 REGIME: {reg_h4.get('regime','—')} | H1 REGIME: {reg_h1.get('regime','—')}"
+
+    # Cross-asset line
+    def _fmt(key, label):
+        d = ma.get(key, {})
+        pct = d.get("delta_pct")
+        bp  = d.get("delta_bp")
+        if pct is not None: return f"{label}: {pct:+.1f}%"
+        if bp  is not None: return f"{label}: {bp:+.1f}bp"
+        return None
+    asset_parts = list(filter(None, [
+        _fmt("gold",  "Gold"),
+        _fmt("vix",   "VIX"),
+        _fmt("dxy",   "DXY"),
+        _fmt("btc",   "BTC"),
+        _fmt("spx",   "SPX"),
+        _fmt("us10y", "US10Y"),
+        _fmt("wti",   "WTI"),
+        _fmt("copper","Copper"),
+    ]))
+    asset_line = " | ".join(asset_parts) if asset_parts else "—"
+
+    # Top setups
+    top = ranked.get("top", [])[:3]
+    setups_line = " | ".join(
+        f"{r['pair']} {'▲' if r['direction']=='bull' else '▼'} {r['score']:.1f}"
+        for r in top
+    ) if top else "—"
+
+    # Headlines
+    hl_block = "\n".join(f"- {h}" for h in headlines[:5]) if headlines else "—"
+
+    # Calendar next 24h high-impact only
+    now_ts = datetime.now(timezone.utc)
+    cal_lines = []
+    for e in events[:8]:
+        try:
+            et = datetime.fromisoformat(e.get("iso","")).replace(tzinfo=timezone.utc) if e.get("iso") else None
+            if et and (et - now_ts).total_seconds() < 0: continue
+        except Exception: pass
+        fore = f"fcst {e['forecast']}" if e.get("forecast") and e["forecast"] not in ("None","N/A") else ""
+        prev = f"prev {e['previous']}" if e.get("previous") and e["previous"] not in ("None","N/A") else ""
+        meta = "  ".join(filter(None,[fore,prev]))
+        cal_lines.append(f"- {e.get('time','')} UTC | {e.get('currency','')} {e.get('name','')} {meta}".strip())
+    cal_block = "\n".join(cal_lines) if cal_lines else "No high-impact events in next 24h"
 
     system = (
-        "You are a senior macro FX analyst with 20 years experience. "
-        "Your role is economic interpretation, not data description. "
-        "When you see a number, explain what it means mechanically for markets — "
-        "the transmission channel from instrument to currency pair. "
-        "Be concrete about which pairs are most affected and why. "
-        "Never list data back at the reader; they can see it themselves. "
-        "Respond in valid JSON only — no markdown, no backticks, no explanation outside the JSON."
+        "You are an FX market analyst writing a daily brief for a professional swing trader. "
+        "You receive pre-computed signals plus supporting context. Your job is synthesis, not analysis.\n\n"
+        "INTERPRETATION RULES:\n"
+        "Gold down + VIX up + BTC down = risk-off, USD bid, AUD/NZD/GBP weak\n"
+        "Gold up + VIX down + BTC up = risk-on, AUD/NZD/GBP bid, USD weak\n"
+        "DXY confirms or contradicts the Gold read\n"
+        "US10Y up = USD supportive | WTI up = CAD supportive\n"
+        "Headlines and calendar add theme, not direction\n\n"
+        "DECISION RULES:\n"
+        "If GOLD SIGNAL is BULL or BEAR: build the brief around that direction. "
+        "Use TOP SETUPS to name specific pairs. Confirm with cross-asset data. "
+        "Mention calendar only if high-impact USD event fires within 4 hours.\n"
+        "If GOLD SIGNAL is NEUTRAL: write exactly 'Mixed signals — no directional bias.' "
+        "Add the next high-impact event and time if one exists within 24 hours. Then stop.\n\n"
+        "OUTPUT RULES:\n"
+        "One paragraph. 50-100 words. Plain English.\n"
+        "No bullet points. No headers. No markdown.\n"
+        "Never use: could, might, may, potentially, however, on the other hand, it is worth noting.\n"
+        "Name only the 2-3 clearest pair setups from TOP SETUPS.\n"
+        "Count your words. If over 100, cut. If under 50, expand."
     )
 
     prompt = (
-        f"{context}\n\n"
-        "Produce a JSON object with exactly two keys:\n"
-        "1. \"headline\": A single sentence (max 12 words) that captures the single most "
-        "important macro condition or tension right now. Make it specific and striking — "
-        "not generic. Example: \"Gold-dollar divergence signals fiscal credibility crisis, "
-        "not risk-off positioning.\"\n"
-        "2. \"text\": A 170-180 word deep analysis in continuous prose. "
-        "No headers, no bullets, no markdown. Cover in order:\n"
-        "   a) The 2-3 most anomalous signals and their economic mechanism — "
-        "why this value matters and what historically follows.\n"
-        "   b) Whether signals tell a coherent story or contradict — name tensions explicitly.\n"
-        "   c) Which specific pairs are most reinforced or challenged, and precisely why.\n"
-        "Plain text for the \"text\" value. Strict 170-180 word count.\n\n"
-        "Return only valid JSON. Example format: "
-        "{\"headline\": \"...\", \"text\": \"...\"}"
+        f"{gs_line}\n"
+        f"{reg_line}\n\n"
+        f"CROSS-ASSET\n{asset_line}\n\n"
+        f"TOP SETUPS\n{setups_line}\n\n"
+        f"HEADLINES\n{hl_block}\n\n"
+        f"CALENDAR (high impact only)\n{cal_block}\n\n"
+        "Write the brief."
     )
 
-    raw = _sonnet(system, prompt, max_tokens=500)
-
-    # Parse JSON response
-    try:
-        start = raw.find('{')
-        end   = raw.rfind('}') + 1
-        parsed = json.loads(raw[start:end])
-        headline = parsed.get('headline', '').strip()
-        text     = parsed.get('text', '').strip()
-        if not text:
-            raise ValueError("empty text")
-    except Exception:
-        # Fallback: treat entire response as text, no headline
-        headline = ''
-        text = raw.strip()
+    text = _sonnet(system, prompt, max_tokens=200).strip()
 
     return {
-        "headline":     headline,
         "text":         text,
         "generated_at": datetime.now(timezone.utc).isoformat(),
     }
@@ -683,19 +757,29 @@ def call_deep_analysis(signals: dict, macro: dict, headlines: list = None) -> di
 
 
 
-def get_breaking_headline(headlines: list) -> str:
-    """Haiku identifies the single most important headline for FX traders (last 2h)."""
+def get_breaking_headlines(headlines: list) -> list[str]:
+    """Haiku picks the 3 most FX-relevant headlines from the last 2h. Returns list of strings."""
     if not headlines or len(headlines) < 1:
-        return ""
-    prompt = f"""You are a senior FX market analyst. Given these headlines from the last 2 hours, 
-identify the SINGLE most important one for currency traders to know RIGHT NOW.
-Return ONLY the headline itself — no explanation, no "IMPORTANT:", no numbering.
-Maximum 12 words. Be specific and actionable.
+        return []
+    prompt = f"""You are a senior FX market analyst. Given these headlines from the last 2 hours,
+identify the TOP 3 most important ones for currency traders RIGHT NOW.
+Return ONLY a JSON array of exactly 3 headline strings — no explanation, no numbering.
+Each headline max 14 words. Be specific. If fewer than 3 headlines matter, shorten or paraphrase.
+Example: ["Fed holds rates, signals data-dependence", "China PMI disappoints, AUD under pressure", "ISM services beats expectations"]
 
 Headlines:
-{chr(10).join(f"• {h}" for h in headlines[:10])}"""
-    result = _haiku(prompt, max_tokens=20).strip()
-    return result if result and result.lower() != "no breaking news" else ""
+{chr(10).join(f"• {h}" for h in headlines[:15])}
+
+Return only valid JSON array."""
+    raw = _haiku(prompt, max_tokens=120).strip()
+    try:
+        start = raw.find('[')
+        end   = raw.rfind(']') + 1
+        result = json.loads(raw[start:end])
+        return [str(h).strip() for h in result if str(h).strip()][:3]
+    except Exception:
+        # Fallback: return first headline only
+        return [headlines[0]] if headlines else []
 
 def call_week_ahead(signals: dict, calendar_events: list[dict]) -> str:
     """
@@ -819,8 +903,9 @@ def main():
     print("\n[3/6] Headlines + calendar…")
     headlines = fetch_headlines()
     
-    print("\n[3a/6] Breaking headline…")
-    breaking = get_breaking_headline(headlines)
+    print("\n[3a/6] Breaking headlines (top 3)…")
+    breaking_list = get_breaking_headlines(headlines)
+    print(f"  Headlines: {breaking_list}")
 
     # Calendar: refresh every 4 hours — also force refresh if cache is empty
     prev_cal   = signals.get("calendar", {})
@@ -851,12 +936,12 @@ def main():
     catalyst = call_catalyst(headlines, ranked_out.get("top", []))
     print(f"  Catalyst: {catalyst}")
 
-    # ── Deep Analysis — generated once daily at 06:00 UTC ────────────────────
-    is_deep_run = (now.hour == 6)
-    if is_deep_run:
-        print("\n[DA] Deep Analysis — daily Sonnet narrative…")
-        deep = call_deep_analysis(signals, macro, headlines)
-        print(f"  Deep Analysis: {deep['text'][:80]}…")
+    # ── Daily Brief — generated once daily at 06:00 UTC ─────────────────────
+    is_daily_run = (now.hour == 6)
+    if is_daily_run:
+        print("\n[DB] Daily Brief — Sonnet unified brief…")
+        deep = call_daily_brief(signals, headlines)
+        print(f"  Daily Brief: {deep['text'][:80]}…")
     else:
         prev_deep = signals.get("deep_analysis", {})
         deep = prev_deep if prev_deep.get("generated_at") else {}
@@ -883,8 +968,8 @@ def main():
     signals["catalyst"]     = {"text": catalyst, "updated": now.isoformat()}
     signals["ranked"]       = {**ranked_out, "updated": now.isoformat()}
     signals["calendar"]     = {"events": events, "updated": now.isoformat()}
-    if breaking:
-        signals["breaking"] = {"text": breaking, "updated": now.isoformat()}
+    if breaking_list:
+        signals["breaking"] = {"headlines": breaking_list, "updated": now.isoformat()}
     if deep:
         signals["deep_analysis"] = deep
     if week_ahead:
