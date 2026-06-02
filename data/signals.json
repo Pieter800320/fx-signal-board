@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T21:54:58.875496+00:00",
+  "updated": "2026-06-02T23:24:44.893252+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4519.1,
-      "delta_pct": 1.0,
+      "value": 4505.7,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.211,
+      "value": 99.224,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.673,
-      "delta_pct": 2.3,
+      "value": 6.659,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.51,
-      "delta_pct": 1.5,
+      "value": 94.85,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 67157.0,
-      "delta_pct": -5.8,
+      "value": 66362.0,
+      "delta_pct": -7.0,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG at risk. Energy shock from Iran war to weigh on Europe's growth, boost inflation pressures sterling depreciation versus dollar.",
-    "updated": "2026-06-02T20:37:51.239612+00:00"
+    "text": "AUDJPY LONG at risk. Australia services PMI 48.7 contraction signals economic weakness, undermines AUD strength thesis for long setup.",
+    "updated": "2026-06-02T23:24:44.893252+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold and copper strength directly confirm AUD bid thesis.\n\nGBPJPY LONG: Risk-on regime supports carry but lacks commodity tailwind confirmation.\n\nGBPUSD LONG: Risk-on supports GBP but mixed macro creates resistance headwind.",
+    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bullish bias today.\n\nGBPUSD LONG: Mixed macro neutral backdrop challenges weak momentum confirmation here.\n\nGBPJPY LONG: Risk-on regime confirms yen weakness but lacks cross asset driver.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.35
+        "score": 7.4
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.15
+        "score": 6.78
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 5.98
+        "score": 5.42
       }
     ],
-    "updated": "2026-06-02T20:37:51.239612+00:00"
+    "updated": "2026-06-02T23:24:44.893252+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T20:37:51.239612+00:00"
+    "updated": "2026-06-02T23:24:44.893252+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "headlines": [
-      "US April JOLTS job openings 7.618m vs 6.88m expected",
-      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-      "Australia GDP, China services PMI economic data Wednesday"
+      "Australia services PMI slips to 48.7, Middle East war hammers demand",
+      "Canada trade talks with US unfrozen, more meetings ahead scheduled",
+      "Energy shock from Iran war to weigh on Europe's growth"
     ],
-    "updated": "2026-06-02T20:37:51.239612+00:00"
+    "updated": "2026-06-02T23:24:44.893252+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
