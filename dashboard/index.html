@@ -1,434 +1,3552 @@
-"""
-FX Signal Board — hourly master scanner
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>FX Signal Board</title>
+<style>
+  :root {
+    --bg:#0a0e13; --surf:#111820; --bord:#1e2b3a;
+    --text:#cdd9e5; --muted:#576a7d; --dim:#1e2d3d;
+    --buy:#00dc37; --sell:#f85149; --amber:#e3b341;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+    padding:10px;max-width:430px;margin:0 auto;
+  }
 
-Replaces scan_full.py + scan_hourly.py.
+  /* TOP BAR */
+  .topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+  .app-name{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+  .scan-info{display:flex;align-items:center;gap:5px;font-size:9px;color:var(--muted);position:relative;}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--buy);
+       box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .gear-btn{background:none;border:none;color:var(--muted);font-size:13px;cursor:pointer;padding:0 2px;line-height:1;}
+  .gear-menu-item{display:block;width:100%;padding:9px 14px;background:none;border:none;border-bottom:1px solid var(--bord);color:var(--text);font-size:10px;font-weight:700;letter-spacing:.07em;text-align:left;cursor:pointer;}
+  .gear-menu-item:last-child{border-bottom:none;}
+  .gear-menu-item:active{background:var(--bord);}
+  /* ── Top sheets ─────────────────────────────────────────────────────────── */
+  .top-sheet{position:fixed;top:0;left:0;right:0;z-index:250;background:var(--bg);transform:translateY(-110%);transition:transform .28s cubic-bezier(.32,0,.2,1);border-radius:0 0 14px 14px;border-bottom:1px solid var(--bord);overflow:hidden;}
+  .top-sheet.open{transform:translateY(0);}
+  .top-sheet-hdr{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-bottom:1px solid var(--bord);}
+  .top-sheet-title{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+  .top-sheet-close{background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer;line-height:1;padding:0 2px;}
+  .top-sheet-handle{width:36px;height:4px;border-radius:2px;background:var(--bord);margin:8px auto 10px;display:block;}
+  /* keys panel */
+  .td-key-row{display:none;}
+  .td-key-row.open{display:flex;flex-direction:column;align-items:stretch;}
+  .td-key-row input{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;}
+  .td-key-row button{background:var(--bord);border:none;border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;white-space:nowrap;}
 
-Flow:
-  1. Fetch H1 OHLCV for 12 main pairs + 6 CSM cross pairs  (18 API calls)
-  2. Aggregate H1 -> H4 + D1 via aggregator.py
-  3. Pills (full Forex1212 formula) via pills.py / score.py
-  4. MOM1212 (D1/H4/H1 + deltas + CMP) via mom1212.py
-  5. CSM (D1 + H4 blend, 16-pair set) via csm.py
-  6. ADX (H4)
-  7. Correlation matrix via correlate.py
-  8. H4 Regime via regime.py
-  9. Cont. score (computeQAI port) via cont_score.py
- 10. D1% / D5% / prev_close / prev5_close
- 11. Preserve news/macro/analysis from previous signals.json
- 12. Write signals.json
- 13. Gold signal computation (gold_signal key)
- 14. Telegram: Gold + H4 + H1 confirmed
-"""
+  /* MARKET STATE */
+  .mstate{
+    border-radius:10px;padding:9px 13px;margin-bottom:7px;
+    background:var(--surf);border:1.5px solid var(--bord);
+    transition:border-color .4s,box-shadow .4s;
+  }
+  .mstate.ro {border-color:rgba(248,81,73,.5);box-shadow:0 0 14px rgba(248,81,73,.08);}
+  .mstate.ron{border-color:rgba(0,220,55,.5); box-shadow:0 0 14px rgba(0,220,55,.08);}
+  .mstate.mix{border-color:rgba(227,179,65,.35);}
+  .ms-lbl{font-size:8px;font-weight:700;letter-spacing:.08em;
+           text-transform:uppercase;color:var(--muted);}
+  .ms-lbl-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
+  .ms-row{display:flex;align-items:center;justify-content:space-between;}
+  .ms-item{display:flex;flex-direction:column;gap:2px;align-items:center;flex:1;}
+  .ms-key{font-size:8px;color:var(--muted);font-weight:700;letter-spacing:.05em;text-transform:uppercase;}
+  .ms-val{font-size:12px;font-weight:800;text-align:center;}
+  .ms-sub{font-size:8px;color:var(--muted);text-align:center;}
+  .ms-div{width:1px;height:30px;background:var(--bord);flex-shrink:0;}
+  /* Macro card */
+  .macro-card{
+    border-radius:10px;padding:8px 13px;margin-bottom:7px;
+    background:var(--surf);border:1px solid var(--bord);
+  }
+  .ma-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:4px 6px;}
+  .ma-item{display:flex;flex-direction:column;align-items:center;padding:3px 0;}
+  .ma-key{font-size:7px;font-weight:700;text-transform:uppercase;
+          letter-spacing:.05em;color:var(--muted);margin-bottom:2px;}
+  .ma-val{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .ma-dlt{font-size:8px;font-weight:700;font-variant-numeric:tabular-nums;}
 
-import json
-import os
-import sys
-import time
-import urllib.request
-import urllib.parse
-import urllib.error
-from datetime import datetime, timezone
-from pathlib import Path
+  /* ── Insights card ─────────────────────────────────────────────────────── */
+  #insights-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;padding:8px 12px;margin-bottom:7px;}
+  #insights-header{display:flex;align-items:center;justify-content:space-between;cursor:pointer;gap:8px;padding-bottom:4px;}
+  #insights-pills-row{flex:1;min-width:0;}
+  #insights-chevron{font-size:14px;color:var(--muted);transition:transform .2s;flex-shrink:0;line-height:1;}
+  #insights-chevron.collapsed{transform:rotate(-90deg);}
+  #insights-body{overflow:hidden;transition:max-height .25s ease-out;}
+  #insights-body.collapsed{max-height:0!important;overflow:hidden;}
+  .insights-sec{display:flex;align-items:flex-start;gap:8px;padding-top:8px;border-top:1px solid var(--bord);margin-top:4px;}
+  .ins-line{width:2px;min-width:2px;border-radius:2px;margin-top:2px;align-self:stretch;}
+  .da-line{background:rgba(0,200,200,.7);}
+  .wa-line{background:rgba(130,100,220,.8);}
+  .calendar-line{background:rgba(100,160,255,.7);}
+  .ins-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .ins-headline{font-size:11px;font-weight:700;color:rgba(220,230,240,.95);margin-bottom:5px;line-height:1.4;}
+  .ins-txt{font-size:10px;color:var(--muted);line-height:1.6;}
 
-import numpy as np
+  /* CATALYST / SETUPS / CALENDAR */
+  .info-card{background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+             padding:7px 12px;margin-bottom:7px;}
+  .news-sec{display:flex;align-items:flex-start;gap:8px;padding-bottom:7px;}
+  .news-sec:last-child{padding-bottom:0;}
+  .news-sec+.news-sec{
+    padding-top:7px;
+    margin-left:-12px;
+    margin-right:-12px;
+    padding-left:12px;
+    padding-right:12px;
+    border-top:1px solid var(--bord);
+  }
+  .info-line{width:2px;min-width:2px;border-radius:2px;margin-top:1px;transition:background .4s;}
+  .info-line.catalyst{background:var(--sell);}
+  .info-line.catalyst.ok{background:var(--muted);}
+  .info-line.setups{background:var(--amber);}
+  .info-line.calendar{background:rgba(100,160,255,.7);}
+  .info-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.07em;color:var(--muted);margin-bottom:3px;opacity:.6;}
+  .info-txt{font-size:10px;color:var(--muted);line-height:1.4;}
 
-ROOT = Path(__file__).parent.parent
-sys.path.insert(0, str(ROOT))
+  /* Ranked setup pills */
+  .ranked-pills{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:6px;}
+  .ranked-pill{font-size:8px;font-weight:800;letter-spacing:.05em;padding:2px 7px;
+               border-radius:3px;white-space:nowrap;}
+  .ranked-pill.bull{background:rgba(0,220,55,.13);color:var(--buy);
+                    border:1px solid rgba(0,220,55,.3);}
+  .ranked-pill.bear{background:rgba(248,81,73,.13);color:var(--sell);
+                    border:1px solid rgba(248,81,73,.3);}
 
-from scanner.config     import PAIRS, TF_INTERVAL, TF_BARS
-from scanner.fetch      import fetch_ohlcv
-from scanner.aggregator import build_tfs
-from scanner.pills      import classify_full
-from scanner.mom1212    import compute_all as compute_mom
-from scanner.csm        import compute_csm, STRENGTH_PAIRS
-from scanner.regime     import classify_regime
-from scanner.cont_score import compute_cont
-from scanner.correlate  import compute_correlation
-from scanner.score              import compute_reset_score, atr_percentile
-from scanner.level_ema_alerts   import check_levels, check_ema_touches
+  /* Calendar rows */
+  .cal-row{display:flex;align-items:center;gap:6px;padding:3px 0;border-bottom:1px solid rgba(255,255,255,.04);}
+  .cal-row:last-child{border-bottom:none;}
+  .cal-day{font-size:9px;font-weight:800;color:var(--muted);white-space:nowrap;min-width:28px;text-transform:uppercase;}
+  .cal-time{font-size:9px;color:var(--muted);white-space:nowrap;min-width:50px;opacity:.7;}
+  .cal-curr{font-size:8px;font-weight:800;letter-spacing:.04em;color:rgba(100,160,255,.9);background:rgba(100,160,255,.1);border-radius:3px;padding:1px 4px;white-space:nowrap;flex-shrink:0;}
+  .cal-name{font-size:9px;color:var(--text);line-height:1.3;flex:1;}
+  .cal-meta{font-size:8px;color:var(--muted);opacity:.6;white-space:nowrap;margin-left:auto;flex-shrink:0;}
 
-# Extra pairs needed for CSM 16-pair set (not in main PAIRS list)
-CSM_EXTRA = ["EUR/GBP", "EUR/CHF", "GBP/CHF", "AUD/NZD", "AUD/CAD", "GBP/AUD"]
+  /* CSM */
+  .csm-wrap{
+    background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+    padding:9px 12px;margin-bottom:10px;cursor:pointer;user-select:none;
+  }
+  .csm-wrap:active{opacity:.8;}
+  .csm-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;}
+  .csm-ttl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.07em;color:var(--muted);}
+  .csm-tf{color:var(--text);font-weight:700;}
+  .csm-bars{display:flex;gap:3px;align-items:flex-end;height:78px;}
+  .csm-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;}
+  .csm-b{width:100%;border-radius:2px;min-height:2px;transition:height .35s,background .35s;}
+  .csm-l{font-size:7px;font-weight:700;text-transform:uppercase;}
 
-SCAN_TF = "h1"  # primary fetch timeframe
+  /* GRID */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+
+  /* PAIR BLOCK */
+  .block{
+    background:var(--surf);border:1px solid var(--bord);border-radius:10px;
+    padding:8px 10px;cursor:pointer;user-select:none;
+    transition:border-color .15s,box-shadow .15s;
+  }
+  .block.event{border-color:rgba(180,195,210,.65);
+    box-shadow:0 0 10px rgba(180,195,210,.12);}
+
+  /* Top row: pair + changes */
+  .b-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:6px;}
+  .b-pair{font-size:12px;font-weight:700;letter-spacing:.02em;padding-top:1px;}
+  .b-trade-dot{width:5px;height:5px;border-radius:50%;background:var(--buy);box-shadow:0 0 5px rgba(0,220,55,.6);animation:pulse 2s infinite;flex-shrink:0;}
+  .b-trade-dot.pending{background:rgba(227,179,65,0.9);box-shadow:0 0 5px rgba(227,179,65,.6);}
+  .b-chgs{display:flex;flex-direction:column;align-items:flex-end;gap:1px;}
+  .b-d1{font-size:11px;font-weight:700;}
+  .b-d5{font-size:8px;color:var(--muted);font-weight:600;}
+
+  /* Flip face area */
+  .b-face{margin-bottom:7px;}
+
+  /* PILLS face */
+  .pills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px;}
+  .tf-lbl{text-align:center;font-size:7px;font-weight:700;
+           color:var(--muted);letter-spacing:.04em;text-transform:uppercase;}
+  .pill{height:22px;border-radius:4px;display:flex;align-items:center;
+        justify-content:center;font-size:13px;font-weight:700;}
+  .pill.bull_strong{background:rgba(0,220,55,.22); color:var(--buy);}
+  .pill.bull       {background:rgba(0,220,55,.13); color:var(--buy);}
+  .pill.neutral    {background:rgba(46,58,72,.5);  color:#3a4d5e;}
+  .pill.bear       {background:rgba(248,81,73,.13);color:var(--sell);}
+  .pill.bear_strong{background:rgba(248,81,73,.22);color:var(--sell);}
+
+  /* CONT row */
+  .cont-row{display:flex;align-items:baseline;justify-content:space-between;
+             margin-top:5px;padding-top:5px;border-top:1px solid var(--dim);}
+  .cont-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+             letter-spacing:.06em;color:var(--muted);}
+  .cont-val{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;}
+
+  /* Correlates */
+  .b-corr{display:flex;gap:5px;margin-top:5px;flex-wrap:wrap;}
+  .corr-tag{font-size:8px;font-weight:700;letter-spacing:.01em;}
+
+  /* MOM face */
+  .mom-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:3px;}
+  .mom-val{text-align:center;font-size:14px;font-weight:700;
+           font-variant-numeric:tabular-nums;line-height:1.1;}
+  .mom-dlt{text-align:center;font-size:9px;font-weight:700;
+           font-variant-numeric:tabular-nums;}
+  .mom-sep{height:1px;background:var(--dim);margin:5px 0 4px;}
+  .mom-bot{display:flex;align-items:baseline;justify-content:space-between;}
+  .mom-lbl{font-size:8px;font-weight:700;text-transform:uppercase;
+            letter-spacing:.06em;color:var(--muted);}
+  .mom-big{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;}
+  .adx-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;}
+
+  /* CSM pair bar */
+  .b-csm{display:flex;align-items:center;gap:4px;padding-top:6px;border-top:1px solid var(--dim);}
+  .csm-base{font-size:8px;font-weight:700;min-width:20px;}
+  .csm-track{flex:1;height:2px;background:var(--dim);border-radius:1px;overflow:hidden;position:relative;}
+  .csm-fill{position:absolute;height:100%;border-radius:1px;transition:width .3s;}
+  .csm-quote{font-size:8px;font-weight:700;min-width:20px;text-align:right;}
+
+  /* Loading */
+  .loading{text-align:center;padding:40px;color:var(--muted);font-size:13px;}
+</style>
+<script src="https://unpkg.com/lightweight-charts@4.2.0/dist/lightweight-charts.standalone.production.js"></script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="app-name">FX Signal Board</div>
+  <div class="scan-info">
+    <div class="dot"></div><span id="scan-time">Loading…</span>
+    <button class="gear-btn" id="gear-menu-btn" onclick="toggleGearMenu()">⚙</button>
+    <div id="gear-menu" style="display:none;position:absolute;right:0;top:calc(100% + 6px);z-index:260;min-width:130px;background:var(--surf);border:1px solid var(--bord);border-radius:7px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.4);">
+      <button class="gear-menu-item" onclick="toggleKeyRow();toggleGearMenu()">⚙  KEYS</button>
+      <button class="gear-menu-item" onclick="openTradeLog();toggleGearMenu()">▤  LOG</button>
+      <button class="gear-menu-item" onclick="toggleInfo();toggleGearMenu()">ⓘ  INFO</button>
+    </div>
+  </div>
+</div>
+<div class="top-sheet" id="td-key-row">
+  <div class="top-sheet-hdr">
+    <span class="top-sheet-title">⚙ Keys</span>
+    <button class="top-sheet-close" onclick="toggleKeyRow()">✕</button>
+  </div>
+  <div style="padding:10px 14px;display:flex;flex-direction:column;gap:7px;">
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TD Key</span>
+      <input type="password" id="td-key-inp" placeholder="paste Twelvedata key…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="saveTdKey()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Save</button>
+      <button onclick="clearTdKey()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Clear</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">GH PAT</span>
+      <input type="password" id="cht-pat-inp" placeholder="paste GitHub PAT…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="chtSavePat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Save</button>
+      <button onclick="chtClearPat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Clear</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TG Token</span>
+      <input type="password" id="tg-token-inp" placeholder="bot token…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="tgSaveToken()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Save</button>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="color:var(--muted);white-space:nowrap;min-width:58px;font-size:10px;font-weight:700;">TG Chat</span>
+      <input type="text" id="tg-chat-inp" placeholder="chat ID…" style="flex:1;min-width:0;background:var(--dim);border:1px solid var(--bord);border-radius:4px;padding:4px 6px;color:var(--text);font-size:10px;outline:none;">
+      <button onclick="tgSaveChat()" style="background:var(--dim);border:1px solid var(--bord);border-radius:4px;color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;">Save</button>
+    </div>
+  </div>
+  <div class="top-sheet-handle" id="keys-handle"></div>
+</div>
+
+<div class="mstate" id="mstate" onclick="cycleCard()" style="cursor:pointer;user-select:none;">
+  <div class="ms-lbl-row">
+    <div class="ms-lbl" id="card-lbl">Regime</div>
+    <div class="ms-lbl" id="card-dots" style="opacity:.5;letter-spacing:2px;">● ○ ○</div>
+  </div>
+  <div class="ms-row" id="ms-row">
+    <div class="ms-item"><div class="ms-key">—</div><div class="ms-val">…</div></div>
+  </div>
+</div>
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+<!-- Breaking news segment -->
+<div class="info-card" id="breaking-wrap" style="display:none;">
+  <div class="insights-sec" style="border-top:none;margin-top:0;padding-top:0;">
+    <div class="ins-line" style="background:rgba(248,81,73,0.7);"></div>
+    <div style="flex:1;min-width:0;">
+      <div class="ins-lbl">BREAKING</div>
+      <div id="breaking-txt" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.6;"></div>
+    </div>
+  </div>
+</div>
 
-def load_signals():
-    path = ROOT / "data" / "signals.json"
-    if path.exists():
-        try:
-            with open(path) as f:
-                return json.load(f)
-        except Exception:
-            pass
-    return {}
+<!-- ══ INSIGHTS CARD — collapsible ══════════════════════════════════════════ -->
+<div class="info-card" id="insights-card">
+
+  <!-- Header row: pills + chevron toggle -->
+  <div id="insights-header" onclick="toggleInsights()">
+    <div id="insights-pills-row">
+      <div class="ranked-pills" id="insights-pills"><span style="color:var(--muted);font-size:9px;">Loading…</span></div>
+    </div>
+    <span id="insights-chevron">▾</span>
+  </div>
+
+  <!-- Collapsible body -->
+  <div id="insights-body">
+
+    <!-- Daily Brief -->
+    <div class="insights-sec" id="da-wrap" style="display:none;">
+      <div class="ins-line da-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="da-lbl">DAILY BRIEF · —</div>
+        <div class="ins-txt" id="da-txt"></div>
+      </div>
+    </div>
+
+    <!-- Week Ahead -->
+    <div class="insights-sec" id="wa-wrap" style="display:none;">
+      <div class="ins-line wa-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="wa-lbl">WEEK AHEAD · —</div>
+        <div class="ins-txt" id="wa-txt"></div>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="insights-sec" id="calendar-wrap">
+      <div class="ins-line calendar-line"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="ins-lbl" id="calendar-lbl">CALENDAR · —</div>
+        <div class="ins-txt" id="calendar-txt">Loading…</div>
+      </div>
+    </div>
+
+  </div><!-- end insights-body -->
+</div><!-- end insights-card -->
+
+<div class="csm-wrap" onclick="toggleCSM()">
+  <div class="csm-head">
+    <div class="csm-ttl">Currency Strength · <span class="csm-tf" id="csm-tf">D1</span></div>
+  </div>
+  <div class="csm-bars" id="csm-bars"><div class="loading">—</div></div>
+</div>
+
+<div class="grid" id="pair-grid"><div class="loading" style="grid-column:1/-1">Loading…</div></div>
+
+<script>
+// ── CONFIG ───────────────────────────────────────────────────────────────────
+const REPO     = "Pieter800320/fx-signal-board";
+const API_BASE = `https://api.github.com/repos/${REPO}/contents/data/signals.json`;
+
+const PAIRS_ORDER = [
+  "EURUSD","GBPUSD","USDJPY","USDCHF",
+  "AUDUSD","USDCAD","NZDUSD",
+  "EURJPY","GBPJPY","AUDJPY","NZDJPY","CADJPY"
+];
+
+// Country code → currency for calendar event border matching
+const COUNTRY_CCY = {
+  US:"USD", EU:"EUR", DE:"EUR", FR:"EUR", IT:"EUR",
+  GB:"GBP", JP:"JPY", AU:"AUD", NZ:"NZD", CA:"CAD", CH:"CHF"
+};
+
+function getCorrelates(pair){
+  const corr = D && D.correlations;
+  if(!corr) return [];
+  const idx = corr.pairs.indexOf(pair);
+  if(idx < 0) return [];
+  const result = [];
+  corr.pairs.forEach((cp, j) => {
+    if(j === idx) return;
+    const v = corr.matrix[idx][j];
+    if(v === null || Math.abs(v) < 0.70) return;
+    result.push({cp, same: v > 0, strength: Math.abs(v)});
+  });
+  result.sort((a, b) => b.strength - a.strength);
+  return result.slice(0, 3);
+}
+
+// ── STATE ────────────────────────────────────────────────────────────────────
+let D        = null;   // signals.json
+let csmTf    = "d1";
+let _cardState = 0;  // 0=Regime 1=Macro 2=Cross-Asset
+const face   = {};
+PAIRS_ORDER.forEach(p => face[p] = 0);
+
+// ── FETCH ────────────────────────────────────────────────────────────────────
+async function loadData(){
+  try {
+    const res = await fetch(API_BASE, {
+      headers: {"Accept": "application/vnd.github.v3.raw"},
+      cache:   "no-store",
+    });
+    if (!res.ok) throw new Error(res.status);
+    D = await res.json();
+    render();
+  } catch(e) {
+    document.getElementById("scan-time").textContent = "Error loading data";
+    console.error(e);
+  }
+}
+
+// ── HELPERS ──────────────────────────────────────────────────────────────────
+function fmtTime(iso){
+  if (!iso) return "—";
+  const d = new Date(iso);
+  return d.getUTCHours().toString().padStart(2,"0") + ":" +
+         d.getUTCMinutes().toString().padStart(2,"0") + " UTC";
+}
+
+function regimeColor(r){
+  if (r === "Risk-Off") return "var(--sell)";
+  if (r === "Risk-On")  return "var(--buy)";
+  if (r === "Mixed")    return "var(--amber)";
+  return "var(--muted)";
+}
+
+function mstateClass(r){
+  if (r === "Risk-Off") return "mstate ro";
+  if (r === "Risk-On")  return "mstate ron";
+  if (r === "Mixed")    return "mstate mix";
+  return "mstate";
+}
+
+function pillArrow(p){
+  if (p === "bull_strong" || p === "bull") return "↑";
+  if (p === "bear_strong" || p === "bear") return "↓";
+  return "·";
+}
+
+function momColor(v){
+  if (v === null || v === undefined) return "var(--muted)";
+  return v >= 60 ? "var(--buy)" : v > 40 ? "var(--amber)" : "var(--sell)";
+}
+
+function deltaColor(d){
+  if (d === null || d === undefined) return "var(--muted)";
+  return d > 0 ? "var(--buy)" : d < 0 ? "var(--sell)" : "var(--muted)";
+}
+
+function deltaStr(d){
+  if (d === null || d === undefined) return "—";
+  return (d > 0 ? "+" : "") + d;
+}
+
+function adxColor(v){
+  if (!v) return "var(--muted)";
+  return v >= 55 ? "var(--amber)" : v >= 25 ? "var(--buy)" : v >= 20 ? "var(--amber)" : "var(--muted)";
+}
+
+function contColor(v){
+  return v >= 70 ? "var(--buy)" : v >= 50 ? "var(--amber)" : v >= 35 ? "rgba(248,140,0,.8)" : "var(--sell)";
+}
+
+function fmtPct(v){
+  if (v === null || v === undefined) return "—";
+  return (v >= 0 ? "+" : "") + v.toFixed(2) + "%";
+}
+
+// ── RENDER ───────────────────────────────────────────────────────────────────
+function render(){
+  if (!D) return;
+
+  // Scan time
+  document.getElementById("scan-time").textContent =
+    "Scanned " + fmtTime(D.updated);
+
+  renderMarketState();
+  renderBreaking();
+  renderWeekAhead();
+  renderDeepAnalysis();
+  renderNews();
+  renderCSM();
+  renderGrid();
+}
 
 
-def save_signals(data: dict):
-    path = ROOT / "data" / "signals.json"
-    path.parent.mkdir(exist_ok=True)
-    with open(path, "w") as f:
-        json.dump(data, f, indent=2)
+function renderBreaking(){
+  const breaking = D.breaking || {};
+  const wrap = document.getElementById("breaking-wrap");
+  if (!breaking.updated) { wrap.style.display = "none"; return; }
+
+  // Only show if < 2 hours old
+  try {
+    const age_m = (Date.now() - new Date(breaking.updated).getTime()) / 60000;
+    if (age_m > 120) { wrap.style.display = "none"; return; }
+  } catch(e) { wrap.style.display = "none"; return; }
+
+  // Support both old {text} and new {headlines:[...]} formats
+  const lines = breaking.headlines
+    ? breaking.headlines.filter(Boolean)
+    : (breaking.text ? [breaking.text] : []);
+  if (!lines.length) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "block";
+  const txt = document.getElementById("breaking-txt");
+  if (txt) txt.innerHTML = lines.map((h,i) =>
+    `<div style="padding:${i?'4px 0 0':0} 0;${i?'border-top:1px solid rgba(205,217,229,0.08);':''}">
+      ${h.replace(/</g,'&lt;')}
+    </div>`
+  ).join('');
+}
+
+function renderWeekAhead(){
+  const wa   = D.week_ahead || {};
+  const wrap = document.getElementById("wa-wrap");
+  if (!wa.text || !wa.generated_at) { wrap.style.display = "none"; return; }
+
+  // Show for 5 days after generation (Mon-Fri relevant)
+  const gen = new Date(wa.generated_at);
+  const age = (new Date() - gen) / 3600000;
+  if (age > 120) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "flex";
+  document.getElementById("wa-lbl").textContent =
+    "WEEK AHEAD · " + gen.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short", timeZone:"UTC"});
+  document.getElementById("wa-txt").textContent = wa.text;
+}
+
+function renderDeepAnalysis(){
+  const da   = D.deep_analysis || {};
+  const wrap = document.getElementById("da-wrap");
+  if (!da.text || !da.generated_at) { wrap.style.display = "none"; return; }
+
+  wrap.style.display = "flex";
+  document.getElementById("da-lbl").textContent =
+    "DAILY BRIEF · " + fmtTime(da.generated_at);
+  document.getElementById("da-txt").textContent = da.text;
+}
+function toggleInsights() {
+  const body = document.getElementById('insights-body');
+  const chev = document.getElementById('insights-chevron');
+  if (!body) return;
+  const collapsed = body.classList.toggle('collapsed');
+  if (chev) chev.classList.toggle('collapsed', collapsed);
+  // Store preference
+  try { localStorage.setItem('fsb_insights_collapsed', collapsed ? '1' : '0'); } catch(e){}
+}
+
+function initInsightsState() {
+  try {
+    if (localStorage.getItem('fsb_insights_collapsed') === '1') {
+      const body = document.getElementById('insights-body');
+      const chev = document.getElementById('insights-chevron');
+      if (body) body.classList.add('collapsed');
+      if (chev) chev.classList.add('collapsed');
+    }
+  } catch(e){}
+}
 
 
-def send_telegram(msg: str):
-    token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-    chat  = os.environ.get("TELEGRAM_CHAT_ID",   "").strip()
-    if not token or not chat:
-        print("  Telegram: BOT_TOKEN or CHAT_ID not set in secrets")
-        return
-    print(f"  Telegram: sending to chat_id={chat!r} (token length={len(token)})")
-    url     = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = json.dumps({
-        "chat_id":    chat,
-        "text":       msg,
-        "parse_mode": "HTML",
-    }).encode("utf-8")
-    req = urllib.request.Request(
-        url, data=payload,
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=10) as r:
-            body = r.read().decode()
-            print(f"  Telegram: {r.status} — {body[:200]}")
-    except urllib.error.HTTPError as e:
-        body = e.read().decode()
-        print(f"  Telegram error {e.code}: {body}")
-    except Exception as e:
-        print(f"  Telegram error: {e}")
+function cycleCard(){ _cardState = (_cardState + 1) % 3; renderMarketState(); }
+function flipMacro(){ cycleCard(); }  // compat
+
+function renderMarketState(){
+  const d1  = D.regime_d1 || {};
+  const h4  = D.regime_h4 || {};
+  const h1  = D.regime_h1 || {};
+  const w1  = D.regime_w1 || {};
+  const mac = D.macro     || {};
+
+  const el = document.getElementById('mstate');
+  el.className = mstateClass(h4.regime);
+
+  const lblEl  = document.getElementById('card-lbl');
+  const dotsEl = document.getElementById('card-dots');
+  const rowEl  = document.getElementById('ms-row');
+
+  const col = (lbl, r) =>
+    `<div class="ms-item">
+       <div class="ms-key">${lbl}</div>
+       <div class="ms-val" style="color:${regimeColor(r.regime)}">${r.regime||'—'}</div>
+       <div class="ms-sub">${r.confidence||'—'} · ${r.stable?'Stable':'Shifting'}</div>
+     </div>`;
+
+  if (_cardState === 0) {
+    lblEl.textContent  = 'Regime';
+    dotsEl.textContent = '● ○ ○';
+    rowEl.className    = 'ms-row';
+    rowEl.innerHTML    = col('D1',d1)+'<div class="ms-div"></div>'+col('H4',h4)+'<div class="ms-div"></div>'+col('H1',h1);
+
+  } else if (_cardState === 1) {
+    lblEl.textContent  = 'Macro';
+    dotsEl.textContent = '○ ● ○';
+    rowEl.className    = 'ms-row';
+    rowEl.innerHTML    = col('W1',w1)+'<div class="ms-div"></div>'+
+      `<div class="ms-item">
+         <div class="ms-key">D1</div>
+         <div class="ms-val" style="color:${regimeColor(mac.label)}">${mac.label||'—'}</div>
+         <div class="ms-sub">${mac.confidence||'—'} · ${mac.stable?'Stable':'Shifting'}</div>
+       </div>`;
+
+  } else {
+    lblEl.textContent  = 'Cross-Asset';
+    dotsEl.textContent = '○ ○ ●';
+    const ma = D.macro_assets || {};
+    const ASSETS = [['vix','VIX'],['us10y','US10Y'],['us3m','US3M'],['wti','WTI'],['gold','Gold'],['spx','SPX'],['copper','Copper'],['dxy','DXY'],['btc','BTC'],['curve','10Y-3M']];
+    const items = ASSETS.map(([key,lbl]) => {
+      const a = ma[key]||{}, val = a.value!=null?a.value:'—', dir = a.direction;
+      const c = dir==='up'?'var(--buy)':dir==='down'?'var(--sell)':'var(--muted)';
+      const arr = dir==='up'?'↑':dir==='down'?'↓':'·';
+      const dlt = a.delta_bp!=null?`${a.delta_bp>0?'+':''}${a.delta_bp.toFixed(1)}bp`
+                : a.delta_pct!=null?`${a.delta_pct>0?'+':''}${a.delta_pct.toFixed(1)}%`:'—';
+      const dispVal = key==='curve'&&a.value!=null?`${a.value>0?'+':''}${a.value}bp`:val;
+      return `<div class="ma-item"><div class="ma-key">${lbl}</div><div class="ma-val" style="color:${c}">${dispVal} ${arr}</div><div class="ma-dlt" style="color:${c}">${dlt}</div></div>`;
+    }).join('');
+    rowEl.className = '';
+    rowEl.innerHTML = `<div class="ma-grid" style="width:100%">${items}</div>`;
+  }
+}
 
 
-def regime_emoji(regime: str) -> str:
-    return {"Risk-Off": "🔴", "Risk-On": "🟢", "Mixed": "🟡", "Ranging": "⚪"}.get(regime, "")
+function renderNews(){
+  const ranked   = D.ranked    || {};
+  const calendar = D.calendar  || {};
+
+  // ── PILLS (insights header) ───────────────────────────────────────────────
+  const top = ranked.top || [];
+  const pillsHtml = top.map(p => {
+    const cls   = p.direction === "bull" ? "bull" : "bear";
+    const arrow = p.direction === "bull" ? "▲" : "▼";
+    return `<span class="ranked-pill ${cls}">${p.pair} ${arrow} ${p.score.toFixed(1)}</span>`;
+  }).join("");
+  const pillsEl = document.getElementById("insights-pills");
+  if (pillsEl) pillsEl.innerHTML = pillsHtml || '<span style="color:var(--muted);font-size:9px;">No setups</span>';
+
+  // ── CALENDAR ──────────────────────────────────────────────────────────────
+  const events = calendar.events || [];
+  const now    = Date.now();
+  const in24h  = now + 24 * 3600 * 1000;
+  const calUpdated = fmtTime(calendar.updated);
+  document.getElementById("calendar-lbl").textContent = "CALENDAR · " + calUpdated;
+
+  if (!events.length) {
+    document.getElementById("calendar-txt").innerHTML = `<span>No high-impact events found.</span>`;
+  } else {
+    // Group events by day+time slot
+    const slots = {}, slotOrder = [];
+    events.forEach(e => {
+      const key = `${e.day}|${e.time}`;
+      if (!slots[key]) { slots[key] = { day:e.day, time:e.time, iso:e.iso, items:[] }; slotOrder.push(key); }
+      const ccy  = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency || '';
+      const isVal = v => v && v !== 'None' && v !== 'none' && v !== 'N/A';
+      const meta = [isVal(e.forecast)?`fcst ${e.forecast}`:'', isVal(e.previous)?`prev ${e.previous}`:''].filter(Boolean).join(' · ');
+      slots[key].items.push({ ccy, name:e.name, meta });
+    });
+
+    // Uniform layout: Day | Time | CCY | Event | Forecast | Actual
+    // Every row has the same columns — "—" for missing values
+    const isVal = v => v && v !== 'None' && v !== 'none' && v !== 'N/A' && v !== '';
+    document.getElementById("calendar-txt").innerHTML = events
+      .map(e => {
+        const ccy      = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency || '—';
+        const timeStr  = (e.time||'—').replace(/\s*UTC\s*$/i,'').trim() + ' UTC';
+        const dayStr   = (e.day||'—').slice(0,3);
+        const forecast = isVal(e.forecast) ? e.forecast : '—';
+        const actual   = isVal(e.actual)   ? e.actual   : '—';
+        const actColor = isVal(e.actual) ? 'var(--text)' : 'var(--muted)';
+        return `<div class="cal-row" style="display:grid;grid-template-columns:28px 62px 30px 1fr 54px 54px;gap:4px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(205,217,229,0.06);">
+          <span class="cal-day" style="font-size:9px;color:var(--muted);">${dayStr}</span>
+          <span class="cal-time" style="font-size:9px;color:var(--muted);">${timeStr}</span>
+          <span class="cal-curr" style="font-size:9px;color:var(--buy);font-weight:600;">${ccy}</span>
+          <span class="cal-name" style="font-size:10px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.name||'—'}</span>
+          <span style="font-size:9px;color:var(--muted);text-align:right;">fcst ${forecast}</span>
+          <span style="font-size:9px;color:${actColor};text-align:right;font-weight:${isVal(e.actual)?'600':'400'};">act ${actual}</span>
+        </div>`;
+      }).join('');
+  }
+}
+
+const CSM_ORDER = ["USD","JPY","CHF","EUR","GBP","CAD","NZD","AUD"];
+
+function renderCSM(){
+  const data = D.csm?.[csmTf] || {};
+  document.getElementById("csm-tf").textContent = csmTf.toUpperCase();
+
+  document.getElementById("csm-bars").innerHTML = CSM_ORDER.map(cur => {
+    const val = data[cur] ?? null;
+    const h   = val !== null ? Math.round(3 + val * 0.74) + "px" : "3px";
+    const col = val === null ? "var(--muted)"
+              : val >= 60   ? "var(--buy)"
+              : val <= 40   ? "var(--sell)"
+              : "#576a7d";
+    const lbl = val !== null ? Math.round(val) : "—";
+    return `<div class="csm-col">
+      <div class="csm-b" style="height:${h};background:${col}"></div>
+      <div class="csm-l" style="color:${col}">${cur} ${lbl}</div>
+    </div>`;
+  }).join("");
+}
+
+function toggleCSM(){
+  csmTf = csmTf === "d1" ? "h4" : csmTf === "h4" ? "h1" : "d1";
+  renderCSM();
+  renderGrid();
+}
+
+// ── BLOCK RENDERING ──────────────────────────────────────────────────────────
+const TFS = ["d1","h4","h1"];
+
+function pillsFace(pair, p){
+  const pills  = p.pills || {};
+  const labels = TFS.map(t => `<div class="tf-lbl">${t.toUpperCase()}</div>`).join("");
+  const pillH  = TFS.map(t => {
+    const v = pills[t] || "neutral";
+    return `<div class="pill ${v}">${pillArrow(v)}</div>`;
+  }).join("");
+
+  const cont    = p.cont ?? 0;
+  const contCol = contColor(cont);
+
+  // Correlation display: computed from D.correlations
+  const d1p = pills.d1 || "neutral";
+  const corrHtml = getCorrelates(pair).map(({ cp, same }) => {
+    const dir = same
+      ? (d1p.includes("bull") ? "↑" : d1p.includes("bear") ? "↓" : "·")
+      : (d1p.includes("bull") ? "↓" : d1p.includes("bear") ? "↑" : "·");
+    const col = dir === "↑" ? "var(--buy)" : dir === "↓" ? "var(--sell)" : "var(--muted)";
+    return `<span class="corr-tag" style="color:${col}">${cp} ${dir}</span>`;
+  }).join("");
+
+  return `<div class="b-face">
+    <div class="pills-grid">${labels}</div>
+    <div class="pills-grid">${pillH}</div>
+    <div class="cont-row">
+      <span class="cont-lbl">Cont.</span>
+      <span class="cont-val" style="color:${contCol}">${cont}%</span>
+    </div>
+    ${corrHtml ? `<div class="b-corr">${corrHtml}</div>` : ""}
+  </div>`;
+}
+
+function momFace(p){
+  const mom = p.mom || {};
+  const labels = TFS.map(t => `<div class="tf-lbl">${t.toUpperCase()}</div>`).join("");
+  const vals   = TFS.map(t => {
+    const v = mom[t];
+    return `<div class="mom-val" style="color:${momColor(v)}">${v ?? "—"}</div>`;
+  }).join("");
+  const dlts   = TFS.map(t => {
+    const d = mom["d" + t];
+    return `<div class="mom-dlt" style="color:${deltaColor(d)}">${deltaStr(d)}</div>`;
+  }).join("");
+
+  const cmp = mom.cmp;
+  const adx = p.adx;
+
+  return `<div class="b-face">
+    <div class="mom-grid">${labels}</div>
+    <div class="mom-grid">${vals}</div>
+    <div class="mom-grid">${dlts}</div>
+    <div class="mom-sep"></div>
+    <div class="mom-bot">
+      <span class="mom-lbl">CMP</span>
+      <span class="mom-big" style="color:${momColor(cmp)}">${cmp ?? "—"}</span>
+      <span style="color:var(--muted);font-size:11px;padding:0 6px">·</span>
+      <span class="mom-lbl">ADX</span>
+      <span class="adx-val" style="color:${adxColor(adx)}">${adx ?? "—"}</span>
+    </div>
+  </div>`;
+}
+
+function pairCSMBar(pair){
+  const data = D.csm?.[csmTf] || {};
+  const base  = pair.slice(0, 3);
+  const quote = pair.slice(3);
+  const bv    = data[base]  ?? 50;
+  const qv    = data[quote] ?? 50;
+  const tot   = bv + qv || 1;
+  const bPct  = Math.round(bv / tot * 100);
+  const bCol  = bv > qv ? "var(--buy)" : "var(--sell)";
+  const qCol  = qv > bv ? "var(--buy)" : "var(--sell)";
+  return `<div class="b-csm">
+    <span class="csm-base"  style="color:${bCol}">${base} ${bv}</span>
+    <div class="csm-track">
+      <div class="csm-fill" style="width:${bPct}%;background:${bCol}"></div>
+    </div>
+    <span class="csm-quote" style="color:${qCol}">${quote} ${qv}</span>
+  </div>`;
+}
+
+function blockHTML(pair){
+  const p   = (D.pairs || {})[pair] || {};
+  const d1p = p.d1_pct;
+  const d5p = p.d5_pct;
+  const d1Pos = d1p !== null && d1p !== undefined && d1p >= 0;
+
+  // Event border — check if base or quote has a high-impact event in next 24h
+  const base  = pair.slice(0, 3);
+  const quote = pair.slice(3);
+  const now   = Date.now();
+  const in24h = now + 24 * 3600 * 1000;
+  const hasEvent = (D.calendar?.events || []).some(e => {
+    if (!e.iso) return false;
+    const t = new Date(e.iso).getTime();
+    if (t < now || t > in24h) return false;
+    const ccy = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency;
+    return ccy === base || ccy === quote;
+  });
+  const cls = hasEvent ? "event" : "";
+
+  return `<div class="block ${cls}" onclick="flipBlock('${pair}')">
+    <div class="b-top">
+      <div style="display:flex;align-items:center;gap:5px;"><span class="b-pair">${pair}</span>${(()=>{const ts=trLoad().filter(t=>t.pair===pair&&t.status!=='closed');if(!ts.length)return '';const isPending=ts.every(t=>t.status==='pending');return `<span class="b-trade-dot${isPending?' pending':''}"></span>`;})()}</div>
+      <div class="b-chgs">
+        <span id="d1-${pair}" class="b-d1" style="color:${d1Pos?"var(--buy)":"var(--sell)"}">${fmtPct(d1p)}</span>
+        <span id="d5-${pair}" class="b-d5" style="color:${d5p!=null?(d5p>=0?"var(--buy)":"var(--sell)"):"var(--muted)"}">${fmtPct(d5p)}</span>
+      </div>
+    </div>
+    ${face[pair] === 0 ? pillsFace(pair, p) : momFace(p)}
+    ${pairCSMBar(pair)}
+  </div>`;
+}
+
+function renderGrid(){
+  // Sort by rank score when available, fall back to cont for unranked pairs
+  const rankedOrder = (D.ranked?.top || []).map(r => r.pair);
+  const sorted = [...PAIRS_ORDER].sort((a, b) => {
+    const ri = rankedOrder.indexOf(a);
+    const rj = rankedOrder.indexOf(b);
+    if (ri !== -1 && rj !== -1) return ri - rj;          // both ranked — use rank order
+    if (ri !== -1) return -1;                              // a ranked, b not — a first
+    if (rj !== -1) return 1;                               // b ranked, a not — b first
+    return (D.pairs?.[b]?.cont ?? 0) - (D.pairs?.[a]?.cont ?? 0);  // neither ranked — cont
+  });
+  document.getElementById("pair-grid").innerHTML =
+    sorted.map(p => D.pairs?.[p] ? blockHTML(p) :
+      `<div class="block"><div class="b-pair">${p}</div><div style="color:var(--muted);font-size:9px;margin-top:4px">No data</div></div>`
+    ).join("");
+}
+
+function flipBlock(pair){
+  face[pair] = face[pair] === 0 ? 1 : 0;
+  renderGrid();
+}
+
+// ── TD KEY (used for OHLCV chart fetches only) ───────────────────────────────
+const LS_KEY = 'fsb_td_key';
+
+function toggleInfo(){
+  document.getElementById('info-overlay').classList.toggle('open');
+}
+
+function toggleKeyRow(){
+  const row = document.getElementById('td-key-row');
+  row.classList.toggle('open');
+  if(row.classList.contains('open')){
+    const saved = localStorage.getItem(LS_KEY);
+    document.getElementById('td-key-inp').placeholder =
+      saved ? 'Key saved ✓ (enter new to replace)' : 'paste Twelvedata key…';
+    chtUpdatePatPlaceholder();
+  }
+}
+
+function toggleGearMenu(){
+  const m = document.getElementById('gear-menu');
+  if (!m) return;
+  m.style.display = m.style.display === 'block' ? 'none' : 'block';
+}
+
+function _initSwipeClose(handleId, closeFn){
+  const handle = document.getElementById(handleId);
+  if (!handle) return;
+  const sheet = handle.closest('.top-sheet');
+  if (!sheet) return;
+  let sy = 0, cy = 0, dragging = false;
+  handle.addEventListener('touchstart', e => { sy = cy = e.touches[0].clientY; dragging = true; }, {passive:true});
+  handle.addEventListener('touchmove', e => {
+    if (!dragging) return;
+    cy = e.touches[0].clientY;
+    const dy = Math.min(0, cy - sy);
+    sheet.style.transition = 'none';
+    sheet.style.transform = `translateY(${dy}px)`;
+    if (e.cancelable) e.preventDefault();
+  }, {passive:false});
+  handle.addEventListener('touchend', () => {
+    if (!dragging) return; dragging = false;
+    sheet.style.transition = '';
+    sheet.style.transform = '';
+    if (cy - sy < -60) closeFn();
+  });
+}
+
+function saveTdKey(){
+  const inp = document.getElementById('td-key-inp');
+  const val = inp.value.trim();
+  if(!val) return;
+  localStorage.setItem(LS_KEY, val);
+  inp.value = ''; inp.placeholder = 'Key saved ✓';
+}
+function clearTdKey(){
+  localStorage.removeItem(LS_KEY);
+  document.getElementById('td-key-inp').placeholder = 'paste Twelvedata key…';
+}
+
+function updatePairPcts(){} // no-op: pair % updates come from scan data only
+
+// ── INIT + REFRESH ────────────────────────────────────────────────────────────
+loadData();
+setInterval(loadData, 5 * 60 * 1000);  // refresh every 5 minutes
+initInsightsState();
+
+// Top-sheet: X button closes, no swipe needed
+// _initSwipeClose kept as no-op for future use
+
+// Close gear menu on outside tap
+document.addEventListener('click', e => {
+  const m = document.getElementById('gear-menu');
+  const b = document.getElementById('gear-menu-btn');
+  if (m && b && !m.contains(e.target) && !b.contains(e.target)) m.style.display = 'none';
+});
+</script>
 
 
-def d_pct(df, bars_back: int):
-    """Return % change over bars_back bars on D1 aggregated data."""
-    if df is None or len(df) < bars_back + 1:
-        return None
-    prev  = float(df["close"].iloc[-(bars_back + 1)])
-    close = float(df["close"].iloc[-1])
-    if prev == 0:
-        return None
-    return round((close / prev - 1) * 100, 2)
+<!-- ── Info overlay ───────────────────────────────────────────────────── -->
+<div class="top-sheet" id="info-overlay">
+  <div class="top-sheet-hdr">
+    <span class="top-sheet-title">ⓘ Info</span>
+    <button class="top-sheet-close" onclick="toggleInfo()">✕</button>
+  </div>
+  <div id="info-header" style="display:none;">
+    <button id="info-close" onclick="toggleInfo()">✕</button>
+  </div>
+  <div id="info-body">
+
+    <div class="info-section">
+      <h3>Workflow</h3>
+      <p>This is the intended sequence for finding a trade:</p>
+      <p><strong>1.</strong> A Telegram alert fires when price touches the EMA200 or EMA50 — this means price is at a fair-value zone, not overextended.</p>
+      <p><strong>2.</strong> Open the dashboard. Find the pair in the grid. The grid is sorted by setup rank — the best setups appear top-left.</p>
+      <p><strong>3.</strong> Check the pair block: are pills aligned? Is continuation above 60%? Is CMP confirming direction? Is ADX showing a trend?</p>
+      <p><strong>4.</strong> Check SETUPS — is this pair in the top 3 ranked setups?</p>
+      <p><strong>5.</strong> Check CALENDAR — grey border on the block means an event is coming in the next 24 hours. Read the calendar section first.</p>
+      <p><strong>6.</strong> Long-press the pair block to open the chart. Confirm price action at the EMA level. Draw a level if the trade looks good.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Regime Card</h3>
+      <p>Shows the overall market environment for three timeframes: <strong>D1</strong> (daily), <strong>H4</strong> (4-hour), and <strong>H1</strong> (1-hour). Each timeframe independently votes between Risk-On, Risk-Off, Ranging, or Mixed.</p>
+      <p>Each timeframe vote is based on three signals: (1) how much stronger safe-haven currencies (USD, JPY, CHF) are vs risk-on currencies (AUD, NZD, GBP, EUR, CAD), (2) whether USD is dominant across all pairs, and (3) whether most pair pills are pointing bearishly or bullishly. If fewer than 40% of pairs show a clear direction, the regime is Ranging regardless of the other signals.</p>
+      <p><strong>Confidence</strong> is High when all 3 signals agree, Medium when 2 agree, Low when only 1 agrees or signals conflict.</p>
+      <p><strong>Stable</strong> means the regime hasn't changed since the last scan. <strong>Shifting</strong> means it just changed — treat with caution.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Macro Card</h3>
+      <p>Tap to flip between the regime summary and a live 10-asset cross-asset grid.</p>
+      <p><strong>W1</strong> is the weekly macro backdrop — uses weekly percentage changes with higher thresholds so only significant moves register. <strong>D1 macro</strong> uses daily changes.</p>
+      <p>The cross-asset grid shows 10 markets and what they're doing today. Each shows value, daily change, and a direction arrow: <span class="info-tag g">↑ green</span> = rising/bullish signal for risk-on, <span class="info-tag r">↓ red</span> = falling/risk-off signal, <span class="info-tag">· grey</span> = flat.</p>
+      <p><strong>10Y-3M spread</strong> is the yield curve — the gap between the 10-year Treasury yield and the 3-month T-bill rate. Negative means the curve is inverted, which historically precedes a recession and USD safe-haven demand. It's shown in basis points (100bp = 1%).</p>
+      <p><strong>Bitcoin</strong> acts as a risk-appetite velocity indicator — it often moves before equities and amplifies moves in AUD, NZD, and CAD.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Catalyst</h3>
+      <p>Updated every 2 hours. Reads the last 6 hours of FX headlines and asks one specific adversarial question: does any breaking news directly conflict with, accelerate, or invalidate the current top setups?</p>
+      <p>Maximum 25 words. If nothing material is found, it says <em>"No breaking catalysts."</em> The left accent bar turns grey when clean, red when something actionable is flagged.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Setups</h3>
+      <p>The system scores every pair on 6 factors and ranks them. Pairs must have a clear daily direction and a continuation score of at least 45% to qualify. The pill badges show the top 3 pairs with direction (<span class="info-tag g">▲ long</span> or <span class="info-tag r">▼ short</span>) and their score out of 10.</p>
+      <p>The text below gives a one-sentence macro/fundamental reason why each setup is ranked where it is. See the RANK SCORE section below for how the score is calculated.</p>
+      <p>Updated every 2 hours. The pair grid is sorted to match the setup ranking — the top-ranked pair appears top-left.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Calendar</h3>
+      <p>High-impact FX events for the coming week, found via web search and refreshed every 6 hours. Shows forecast vs previous values so you can judge expected market impact. The note below each event is a brief interpretation: what direction does the market expect if the forecast is met?</p>
+      <p>Pair blocks get a <strong>bright grey border</strong> when their base or quote currency has a high-impact event within the next 24 hours — a warning to check here before opening a trade.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Week Ahead</h3>
+      <p>Appears Sunday evening and stays until Monday evening. Claude searches the web for current weekly FX market previews and synthesises a 4-sentence strategic briefing: dominant macro theme carrying into the week, the most important scheduled event, one specific pair or currency to watch, and the biggest risk or wildcard.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Currency Strength (CSM)</h3>
+      <p>The bar chart ranks 8 major currencies from weakest (left) to strongest (right) on a 0–100 scale. A score of 100 means that currency is outperforming every other currency across all pairs. A score of 0 means it's the weakest.</p>
+      <p>Tap the chart to cycle between <strong>D1</strong> (daily), <strong>H4</strong> (4-hour), and <strong>H1</strong> (1-hour) views. The bar at the bottom of each pair block shows base vs quote strength on whichever timeframe is currently selected — green side winning means that side is stronger.</p>
+      <p>A large gap between base and quote (e.g. USD at 95, EUR at 20) is a strong signal that the pair has fundamental currency flow support behind the technical setup.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Pair Blocks — Pills Face (default)</h3>
+      <p>Three arrows for D1, H4, H1 timeframes:</p>
+      <p><span class="info-tag g">↑</span> bullish — price is above key EMAs, momentum is rising<br>
+         <span class="info-tag r">↓</span> bearish — price is below key EMAs, momentum is falling<br>
+         <span class="info-tag">·</span> neutral — no clear directional signal</p>
+      <p>A strong pill has a brighter background. <span class="info-tag g">↑↑</span> = strongly bullish (price well above EMAs with strong MACD).</p>
+      <p>The <strong>continuation score</strong> (bottom number, 0–100%) measures how well all timeframes align. It combines five things: TF alignment (35%), entry position and pullback quality (23%), currency strength divergence between base and quote (16%), whether the macro regime supports the direction (13%), and trend strength via ADX (13%).</p>
+      <p><span class="info-tag g">70%+</span> strong setup <span class="info-tag a">50–70%</span> moderate <span class="info-tag r">below 35%</span> weak/conflicted</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Pair Blocks — MOM Face (tap to flip)</h3>
+      <p>The three numbers (D1 / H4 / H1) are MOM1212 scores — a proprietary momentum oscillator on a 0–100 scale for each timeframe. The small numbers below each are the <strong>delta</strong> — how much the score changed since the last scan.</p>
+      <p><span class="info-tag g">60+</span> bullish momentum <span class="info-tag">40–60</span> neutral zone <span class="info-tag r">below 40</span> bearish momentum</p>
+      <p><strong>CMP</strong> (bottom left) — Composite Momentum Position. A single 0–100 number that combines all three timeframes. This is the single most important momentum reading. Above 60 = bullish, below 40 = bearish, 40–60 = no clear momentum edge.</p>
+      <p><strong>ADX</strong> (bottom right) — Average Directional Index. Measures trend strength regardless of direction. <span class="info-tag g">25+</span> trending <span class="info-tag g">50+</span> strong trend <span class="info-tag r">below 20</span> ranging/no trend. High ADX multiplies the weight of directional signals.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Setup Rank Score (0–10)</h3>
+      <p>How the SETUPS ranking is calculated. Each pair gets a score from six components:</p>
+      <p><strong>Continuation score (25%)</strong> — technical alignment quality, scaled from 45–100% → 0–10.</p>
+      <p><strong>CMP (20%)</strong> — is momentum confirming the direction? CMP ≥ 60 for a bull setup scores 10. CMP in the 40–60 neutral zone scores 0.</p>
+      <p><strong>D1 MOM delta (15%)</strong> — is momentum accelerating or fading? A large positive delta on a bull setup scores 10. Momentum fading against direction scores 0.</p>
+      <p><strong>CSM divergence (20%)</strong> — how large is the strength gap between base and quote currency on D1? A gap of 50+ points scores 10. Negative gap (setup direction contradicts CSM) scores near 0.</p>
+      <p><strong>Regime fit (10%)</strong> — does the D1 regime support the direction? Risk-Off regime supporting a USD long scores 10 × confidence multiplier.</p>
+      <p><strong>Cross-asset (10%)</strong> — how many global markets are pushing in the same direction? e.g. WTI falling + VIX rising both support a USDCAD long simultaneously.</p>
+      <p>Hard gate: D1 pill must be directional AND continuation ≥ 45% to qualify at all.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Chart Overlay</h3>
+      <p>Long-press any pair block to open the full-screen chart. Tap D1 / H4 / H1 to switch timeframes. The countdown timer shows how long until the current candle closes.</p>
+      <p><strong>EMA 200</strong> (white line) — long-term trend direction. Price above = bullish bias, below = bearish bias. EMA touches generate Telegram alerts.<br>
+         <strong>EMA 50</strong> (blue line) — medium-term trend. Combined with EMA200 it shows the current trend structure.<br>
+         <strong>BB</strong> (grey bands) — Bollinger Bands. Wide bands = high volatility. Price at the outer band = potentially overextended.<br>
+         <strong>MACD</strong> (bottom panel) — momentum. Green histogram = bullish momentum, red = bearish. Blue line crossing grey line = momentum shift.</p>
+      <p>Tap <strong>Level</strong> to draw a price level line. After drawing, tap <strong>Above</strong> or <strong>Below</strong> to set the alert direction. You'll receive a Telegram notification when price crosses that level. Tap <strong>Clear</strong> to remove all levels for this pair.</p>
+      <p>The <strong>⧉</strong> button copies a detailed analysis prompt to your clipboard — paste it into Claude for a fundamental macro assessment of the pair.</p>
+    </div>
+
+    <div class="info-section">
+      <h3>Data & Refresh</h3>
+      <p>The dashboard auto-refreshes every 5 minutes. Technical data (pills, MOM, cont scores, CSM, regime) updates <strong>every hour</strong>. AI analysis, macro cross-assets, catalyst, setups, and calendar update <strong>every 2 hours</strong>. The calendar itself refreshes every 6 hours (events don't change that quickly). The Week Ahead is generated once on Sunday evening.</p>
+      <p>The Twelvedata API key (⚙ button) is stored only in your browser's local storage and is used solely for fetching chart OHLCV data. It never goes to GitHub Actions. The GitHub PAT is optional — only needed if you want price level alerts to sync across devices.</p>
+    </div>
+
+  </div>
+  <div class="top-sheet-handle" id="info-handle"></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════
+     CHART OVERLAY — styles, HTML, JS
+     ═══════════════════════════════════════════════════════════════════════ -->
+<style>
+/* ── Info overlay ────────────────────────────────────────────────────────── */
+#info-overlay{max-height:85vh;overflow-y:auto;font-family:-apple-system,BlinkMacSystemFont,sans-serif;}
+#info-overlay.open{}
+#info-header{display:none;}
+#info-close{display:none;}
+#info-header{
+  position:sticky;top:0;z-index:10;
+  background:rgba(10,14,19,.98);
+  border-bottom:1px solid var(--bord);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 14px;flex-shrink:0;
+}
+#info-header span{font-size:11px;font-weight:800;letter-spacing:.1em;
+                  text-transform:uppercase;color:var(--muted);}
+#info-close{background:none;border:none;color:var(--muted);
+            font-size:18px;cursor:pointer;line-height:1;padding:0 2px;}
+#info-body{padding:12px 14px 40px;display:flex;flex-direction:column;gap:16px;}
+.info-section{border-bottom:1px solid var(--bord);padding-bottom:14px;}
+.info-section:last-child{border-bottom:none;}
+.info-section h3{font-size:9px;font-weight:800;letter-spacing:.1em;
+                  text-transform:uppercase;color:var(--buy);margin-bottom:7px;}
+.info-section p{font-size:11px;color:var(--muted);line-height:1.6;margin-bottom:5px;}
+.info-section p:last-child{margin-bottom:0;}
+.info-section strong{color:var(--text);font-weight:700;}
+.info-tag{display:inline-block;font-size:9px;font-weight:700;
+          padding:1px 6px;border-radius:3px;margin:1px 2px;
+          background:var(--dim);color:var(--muted);}
+.info-tag.g{background:rgba(0,220,55,.12);color:var(--buy);}
+.info-tag.r{background:rgba(248,81,73,.12);color:var(--sell);}
+.info-tag.a{background:rgba(227,179,65,.12);color:var(--amber);}
+
+/* ── Overlay shell ──────────────────────────────────────────────────────── */
+#cht-overlay{
+  position:fixed;inset:0;z-index:100;
+  background:var(--bg);
+  display:none;flex-direction:column;
+  font-family:-apple-system,BlinkMacSystemFont,sans-serif;
+}
+#cht-overlay.open{display:flex;}
+
+/* ── Top bar ────────────────────────────────────────────────────────────── */
+#cht-topbar{
+  flex-shrink:0;
+  display:flex;flex-direction:column;
+  border-bottom:1px solid var(--bord);
+  background:var(--surf);
+}
+#cht-topbar-r1{
+  display:flex;align-items:center;
+  padding:7px 10px 3px;
+}
+#cht-topbar-r2{
+  display:flex;align-items:center;gap:6px;
+  padding:3px 10px 7px;
+}
+#cht-pair-lbl{
+  font-size:13px;font-weight:800;letter-spacing:.08em;
+  color:var(--text);text-transform:uppercase;flex:1;
+}
+.cht-tf{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 7px;cursor:pointer;letter-spacing:.04em;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.cht-tf.active{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
+  color:var(--buy);
+}
+#cht-timer{
+  font-size:9px;color:var(--muted);font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+/* Right-side action buttons */
+#cht-topbar-r3{
+  display:flex;align-items:center;gap:5px;
+  padding:0 10px 7px;
+  border-top:1px solid var(--dim);
+  padding-top:6px;
+}
+/* Unified toolbox button */
+.cht-tool-btn{
+  background:none;border:1px solid var(--bord);border-radius:4px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:3px 8px;cursor:pointer;
+  transition:background .15s,color .15s,border-color .15s;
+  white-space:nowrap;
+}
+.cht-tool-btn.active{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);
+  color:var(--buy);
+}
+#cht-above-btn:not(.dim){
+  border-color:rgba(0,220,55,.5);color:var(--buy);
+}
+#cht-below-btn:not(.dim){
+  border-color:rgba(248,81,73,.5);color:var(--sell);
+}
+.cht-tool-btn.dim{
+  opacity:.35;cursor:default;
+}
+#cht-dir-panel{ display:none !important; }  /* replaced by toolbox Above/Below */
+
+/* Marker panel */
+#cht-marker-panel{
+  display:none;position:absolute;z-index:25;
+  align-items:center;gap:4px;
+  background:rgba(10,14,19,.92);
+  border:1px solid rgba(88,166,255,.55);
+  border-radius:6px;padding:4px 6px;
+}
+#cht-marker-panel input{
+  background:var(--dim);border:1px solid var(--bord);border-radius:4px;
+  color:var(--text);font-size:10px;padding:3px 6px;outline:none;
+  width:90px;
+}
+#cht-marker-panel button{
+  background:none;border:1px solid rgba(88,166,255,.4);border-radius:4px;
+  color:#58a6ff;font-size:11px;font-weight:700;
+  padding:3px 8px;cursor:pointer;white-space:nowrap;
+  transition:background .12s;
+}
+#cht-marker-panel button:last-child{
+  border-color:rgba(248,81,73,.4);color:var(--sell);
+}
+#cht-close-btn{
+  background:none;border:none;color:var(--muted);
+  font-size:18px;line-height:1;cursor:pointer;padding:0 2px;
+}
+
+/* ── Chart area ─────────────────────────────────────────────────────────── */
+#cht-chart-area{
+  flex:1;min-height:0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  cursor:default;
+  position:relative;
+}
+#cht-chart-area.draw-mode{cursor:crosshair;}
+#cht-price{flex-shrink:0;min-height:0;position:relative;}
+#cht-divider{flex-shrink:0;height:1px;background:var(--bord);}
+#cht-macd{flex-shrink:0;min-height:0;position:relative;}
+#cht-divider2{height:1px;background:#1e2b3a;flex-shrink:0;}
+#cht-cmp{flex-shrink:0;min-height:0;position:relative;}
+
+/* Jump-to-current button (absolute inside #cht-chart-area) */
+#cht-jump-btn{
+  display:none;position:absolute;bottom:8px;right:52px;z-index:20;
+  background:rgba(14,22,35,.88);border:1px solid var(--bord);border-radius:5px;
+  color:var(--muted);font-size:10px;font-weight:700;
+  padding:4px 9px;cursor:pointer;white-space:nowrap;
+  letter-spacing:.04em;
+}
+
+/* Float-delete button (absolute inside #cht-chart-area) */
+#cht-float-del{
+  display:none;position:absolute;z-index:30;
+  background:rgba(248,81,73,.9);border:none;border-radius:50%;
+  color:#fff;font-size:14px;font-weight:700;
+  width:28px;height:28px;line-height:28px;text-align:center;
+  cursor:pointer;
+}
+
+/* Direction panel — appears beside staging line */
+#cht-dir-panel{
+  display:none;position:absolute;z-index:25;
+  align-items:center;gap:4px;
+  background:rgba(10,14,19,.92);
+  border:1px solid rgba(227,179,65,.55);
+  border-radius:6px;padding:4px 6px;
+}
+#cht-dir-panel button{
+  background:none;border:1px solid rgba(227,179,65,.4);border-radius:4px;
+  color:var(--amber);font-size:10px;font-weight:700;
+  padding:4px 10px;cursor:pointer;white-space:nowrap;
+  letter-spacing:.03em;transition:background .12s,border-color .12s;
+}
+#cht-dir-panel button:hover,#cht-dir-panel button:active{
+  background:rgba(227,179,65,.18);border-color:rgba(227,179,65,.75);
+}
+
+/* ── Bottom strip ───────────────────────────────────────────────────────── */
+#cht-bottom{
+  flex-shrink:0;
+  border-top:1px solid var(--bord);
+  background:var(--surf);
+  padding:8px 10px;
+  display:flex;flex-direction:column;gap:6px;
+}
+#cht-ind-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+#cht-copy-btn{margin-left:auto;font-size:13px;padding:3px 7px;}
+.cht-ind-chip{
+  border-radius:4px;border:1px solid var(--bord);
+  font-size:9px;font-weight:700;letter-spacing:.04em;
+  padding:3px 9px;cursor:pointer;background:none;color:var(--muted);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.cht-ind-chip.on{
+  background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.45);
+  color:var(--buy);
+}
+#cht-gh-status{
+  font-size:8px;color:var(--muted);font-weight:400;
+  min-height:10px;display:block;
+}
+
+/* ── PAT row (inside gear) ──────────────────────────────────────────────── */
+.cht-settings-inp{
+  flex:1;min-width:120px;background:var(--dim);
+  border:1px solid var(--bord);border-radius:4px;
+  color:var(--text);font-size:9px;padding:4px 6px;outline:none;
+}
+.cht-settings-btn{
+  background:var(--bord);border:none;border-radius:4px;
+  color:var(--text);font-size:9px;padding:4px 8px;cursor:pointer;
+  white-space:nowrap;
+}
+</style>
+
+<!-- ── Chart overlay HTML ──────────────────────────────────────────────── -->
+<div id="cht-overlay">
+
+  <div id="cht-topbar">
+    <div id="cht-topbar-r1">
+      <span id="cht-pair-lbl">—</span>
+      <button id="cht-close-btn" onclick="closeChart()">✕</button>
+    </div>
+    <div id="cht-topbar-r2">
+      <button class="cht-tf active" id="cht-tf-D1" onclick="setChtTf('D1')">D1</button>
+      <button class="cht-tf"        id="cht-tf-H4" onclick="setChtTf('H4')">H4</button>
+      <button class="cht-tf"        id="cht-tf-H1" onclick="setChtTf('H1')">H1</button>
+      <span id="cht-timer"></span>
+    </div>
+    <div id="cht-topbar-r3">
+      <button class="cht-tool-btn" id="cht-draw-btn"  onclick="chtToggleDrawMode()">Level</button>
+      <button class="cht-tool-btn dim" id="cht-above-btn" onclick="chtCommitStaging('above')">↑ Above</button>
+      <button class="cht-tool-btn dim" id="cht-below-btn" onclick="chtCommitStaging('below')">↓ Below</button>
+      <button class="cht-tool-btn" id="cht-mark-btn"  onclick="chtToggleMarkMode()">Mark</button>
+      <button class="cht-tool-btn" id="cht-clear-btn" onclick="chtClearAll()" style="margin-left:auto;">Clear</button>
+    </div>
+  </div>
+
+  <div id="cht-chart-area">
+    <div id="cht-price"></div>
+    <div id="cht-divider"></div>
+    <div id="cht-macd"></div>
+    <div id="cht-divider2" style="display:none;"></div>
+    <div id="cht-cmp" style="display:none;"></div>
+    <button id="cht-jump-btn" onclick="chtJumpToCurrent()">▶▶ Now</button>
+    <button id="cht-float-del" onclick="chtDeleteSelected()">✕</button>
+    <div id="cht-dir-panel">
+      <button onclick="chtCommitStaging('above')">↑ Above</button>
+      <button onclick="chtCommitStaging('below')">↓ Below</button>
+    </div>
+    <div id="cht-marker-panel">
+      <input type="text" id="cht-marker-text" placeholder="Label…" maxlength="20">
+      <button onclick="chtCommitMarker('bull')">↑</button>
+      <button onclick="chtCommitMarker('bear')">↓</button>
+      <button onclick="chtCancelMarker()">✕</button>
+    </div>
+  </div>
+
+  <div id="cht-bottom">
+    <div id="cht-ind-row">
+      <button class="cht-ind-chip on" id="cht-ind-ema200" onclick="chtToggleInd('ema200')">EMA 200</button>
+      <button class="cht-ind-chip on" id="cht-ind-ema50"  onclick="chtToggleInd('ema50')">EMA 50</button>
+      <button class="cht-ind-chip on" id="cht-ind-bb"     onclick="chtToggleInd('bb')">BB</button>
+      <button class="cht-ind-chip on" id="cht-ind-macd"   onclick="chtToggleInd('macd')">MACD</button>
+      <button class="cht-ind-chip"    id="cht-ind-cmp"    onclick="chtToggleInd('cmp')">CMP&thinsp;&Delta;</button>
+      <button class="cht-ind-chip" id="cht-copy-btn" onclick="chtCopyPrompt()" title="Copy analysis prompt for Claude">⧉</button>
+    </div>
+    <button id="cht-trade-btn" onclick="openTradeSheet()">+ Trade</button>
+    <span id="cht-gh-status"></span>
+
+    <!-- ── Trade Entry Sheet (swipe down to dismiss) ──────────────────── -->
+    <div id="trade-sheet" style="display:none;">
+      <div id="tsh-drag-handle"></div>
+      <div id="trade-sheet-inner">
+        <div id="tsh-header">
+          <span id="tsh-pair-lbl">EURUSD</span>
+          <span id="tsh-live-price">—</span>
+        </div>
+        <div id="tsh-dir-row">
+          <button class="tsh-dir-btn active" id="tsh-buy-btn"  onclick="tshSetDir('BUY')">▲ BUY</button>
+          <button class="tsh-dir-btn"        id="tsh-sell-btn" onclick="tshSetDir('SELL')">▼ SELL</button>
+        </div>
+        <div class="tsh-row">
+          <span class="tsh-lbl">Entry</span>
+          <input class="tsh-inp" id="tsh-entry" type="number" step="0.00001" placeholder="0.00000">
+          <span class="tsh-hint" id="tsh-pending-hint"></span>
+        </div>
+        <div class="tsh-row">
+          <span class="tsh-lbl">TP</span>
+          <input class="tsh-inp" id="tsh-tp" type="number" step="0.00001" placeholder="0.00000">
+        </div>
+        <div class="tsh-row">
+          <span class="tsh-lbl">SL</span>
+          <input class="tsh-inp" id="tsh-sl" type="number" step="0.00001" placeholder="0.00000">
+        </div>
+        <div id="tsh-rr-row">
+          <span class="tsh-lbl">RR</span>
+          <span id="tsh-rr-val">—</span>
+        </div>
+        <!-- ── Demo account ── -->
+        <div class="tsh-demo-divider"></div>
+        <div class="tsh-demo-sec">
+          <div class="tsh-demo-row">
+            <span class="tsh-demo-lbl">Capital</span>
+            <span class="tsh-demo-val" id="tsh-capital-disp">€ 10,000</span>
+          </div>
+          <div class="tsh-stepper">
+            <button class="tsh-step-btn" onclick="adjustCapital(-500)">−</button>
+            <input class="tsh-step-inp" id="tsh-capital-inp" type="number" value="10000" oninput="onCapitalInput()">
+            <button class="tsh-step-btn" onclick="adjustCapital(500)">+</button>
+          </div>
+        </div>
+        <div class="tsh-demo-sec">
+          <div class="tsh-demo-row">
+            <span class="tsh-demo-lbl">Lot size</span>
+            <span class="tsh-risk-pill" id="tsh-risk-pill">—</span>
+          </div>
+          <div class="tsh-stepper">
+            <button class="tsh-step-btn" onclick="adjustLot(-0.01)">−</button>
+            <input class="tsh-step-inp" id="tsh-lot-inp" type="number" step="0.01" value="0.10" oninput="onLotInput()">
+            <button class="tsh-step-btn" onclick="adjustLot(0.01)">+</button>
+          </div>
+        </div>
+        <div id="tsh-pnl-bar" style="display:none;">
+          <span class="tsh-demo-lbl">Live P&amp;L</span>
+          <span id="tsh-pnl-eur">—</span>
+          <span id="tsh-pnl-r">—</span>
+        </div>
+        <!-- ── End demo account ── -->
+        <textarea id="tsh-notes" placeholder="Notes (optional)…" rows="2"></textarea>
+        <div id="tsh-side-err"></div>
+        <div id="tsh-action-row">
+          <button id="tsh-submit-btn" onclick="submitTrade()">Enter Trade</button>
+          <button id="tsh-close-trade-btn" onclick="closeActiveTrade()" style="display:none;">Close Trade</button>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end cht-bottom -->
+</div><!-- end cht-overlay -->
+
+<!-- ══ TRADE LOG OVERLAY ══════════════════════════════════════════════════ -->
+<div class="top-sheet" id="log-overlay">
+  <div class="top-sheet-hdr">
+    <span class="top-sheet-title">▤ Trade Log</span>
+    <button class="top-sheet-close" onclick="closeTradeLog()">✕</button>
+  </div>
+  <div id="log-balance-strip">
+    <div>
+      <div class="log-bal-main" id="log-bal-val">€ —</div>
+      <div class="log-bal-lbl">Balance</div>
+    </div>
+    <div>
+      <div class="log-bal-peak" id="log-bal-peak">Peak —</div>
+      <div class="log-bal-dd"   id="log-bal-dd">Max DD —</div>
+    </div>
+  </div>
+  <div id="log-equity-section">
+    <div class="log-eq-lbl">Equity curve</div>
+    <canvas id="log-equity-canvas" height="44" style="width:100%;display:block;"></canvas>
+  </div>
+  <div id="log-stats"></div>
+  <div id="log-body" style="overflow-y:auto;flex:1;"></div>
+  <div id="log-footer">
+    <button class="log-action-btn" onclick="exportTradeCSV()">Export CSV</button>
+    <button class="log-action-btn log-danger-btn" onclick="clearAllTrades()">Clear All</button>
+  </div>
+  <div class="top-sheet-handle" id="log-handle"></div>
+</div>
+
+<!-- ── Chart JS ───────────────────────────────────────────────────────── -->
+<script>
+// ════════════════════════════════════════════════════════════════════════
+//  FSB Chart overlay  — all identifiers prefixed cht_ to avoid collisions
+// ════════════════════════════════════════════════════════════════════════
+
+const CHT_LA_KEY      = 'fsb_la_v1';
+const CHT_PAT_KEY     = 'fsb_gh_pat';
+const CHT_IND_KEY     = 'fsb_ind_v1';
+const CHT_MARKERS_KEY = 'fsb_markers_v1';
+const CHT_LA_PATH     = 'data/level_alerts.json';
+
+const CHT_IND_DEFAULTS = { ema200:true, ema50:true, bb:true, macd:true, cmp:false };
+
+// ── State ─────────────────────────────────────────────────────────────────────
+let _chtPair      = null;
+let _chtTf        = 'H4';
+let _chtInst      = null;
+let _chtMacdInst  = null;
+let _chtCmpInst   = null;
+let _chtCandles   = null;
+let _chtPriceLine = null;
+let _chtAlertRefs = [];
+let _chtOhlcvCache    = {};
+let _chtFilteredOhlcv = [];   // filtered OHLCV actually loaded into the chart (no weekends)
+let _chtTimerInt  = null;
+let _chtIndState  = null;
+
+// Drawing state
+let _chtDrawMode    = false;
+let _chtMarkMode    = false;
+let _chtMarkTime    = null;   // timestamp of candle tapped in mark mode
+let _chtStagingLine = null;
+let _chtStagingPrice= null;
+let _chtSelectedId  = null;
+let _chtSelectedType= null;   // 'level' or 'marker'
+let _chtDragging    = false;
+let _chtMouseDown   = false;
+let _chtLongTimer   = null;
+let _chtDrawInited  = false;
+
+// ── localStorage helpers ──────────────────────────────────────────────────────
+const laLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_LA_KEY)      || '[]'); } catch { return []; } };
+const laSave  = a  => localStorage.setItem(CHT_LA_KEY,      JSON.stringify(a));
+const mkLoad  = () => { try { return JSON.parse(localStorage.getItem(CHT_MARKERS_KEY) || '[]'); } catch { return []; } };
+const mkSave  = a  => localStorage.setItem(CHT_MARKERS_KEY, JSON.stringify(a));
+
+// ── Indicator state ───────────────────────────────────────────────────────────
+function chtLoadIndState() {
+  try { _chtIndState = { ...CHT_IND_DEFAULTS, ...JSON.parse(localStorage.getItem(CHT_IND_KEY) || '{}') }; }
+  catch { _chtIndState = { ...CHT_IND_DEFAULTS }; }
+}
+function chtSaveIndState() { localStorage.setItem(CHT_IND_KEY, JSON.stringify(_chtIndState)); }
+
+function chtUpdateIndChips() {
+  ['ema200','ema50','bb','macd','cmp'].forEach(k => {
+    const btn = document.getElementById('cht-ind-' + k);
+    if (btn) btn.classList.toggle('on', !!_chtIndState[k]);
+  });
+}
+
+function chtToggleInd(key) {
+  if (!_chtIndState) return;
+  _chtIndState[key] = !_chtIndState[key];
+  chtSaveIndState();
+  chtUpdateIndChips();
+  chtSetPaneSizes();
+  _chtLoadAndRender();
+}
+
+// ── GitHub PAT ────────────────────────────────────────────────────────────────
+function chtSavePat() {
+  const v = document.getElementById('cht-pat-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(CHT_PAT_KEY, v);
+  document.getElementById('cht-pat-inp').value = '';
+  document.getElementById('cht-pat-inp').placeholder = 'PAT saved ✓';
+  chtSetGhStatus('PAT saved');
+}
+function chtClearPat() {
+  localStorage.removeItem(CHT_PAT_KEY);
+  document.getElementById('cht-pat-inp').placeholder = 'paste GitHub PAT…';
+  chtSetGhStatus('PAT cleared');
+}
+function chtSetGhStatus(msg) {
+  const el = document.getElementById('cht-gh-status');
+  if (!el) return;
+  el.textContent = msg;
+  setTimeout(() => { el.textContent = ''; }, 3000);
+}
+function chtUpdatePatPlaceholder() {
+  const inp = document.getElementById('cht-pat-inp');
+  if (!inp) return;
+  inp.placeholder = localStorage.getItem(CHT_PAT_KEY) ? 'PAT saved ✓ (enter new to replace)' : 'paste GitHub PAT…';
+}
+
+// ── GitHub push ───────────────────────────────────────────────────────────────
+async function chtPushToGitHub(ghPath, data) {
+  const pat = localStorage.getItem(CHT_PAT_KEY);
+  if (!pat) { chtSetGhStatus('No PAT — saved locally only'); return; }
+  const apiUrl = `https://api.github.com/repos/${REPO}/contents/${ghPath}`;
+  let sha = null;
+  try {
+    const r = await fetch(apiUrl, { headers: { 'Authorization': `token ${pat}`, 'Accept': 'application/vnd.github.v3+json' } });
+    if (r.ok) { const j = await r.json(); sha = j.sha; }
+  } catch(e) {}
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2) + '\n')));
+  const body = { message: `fsb: update ${ghPath} ${new Date().toISOString()}`, content };
+  if (sha) body.sha = sha;
+  try {
+    const r = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: { 'Authorization': `token ${pat}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github.v3+json' },
+      body: JSON.stringify(body)
+    });
+    if (r.ok) { chtSetGhStatus('Synced ✓'); }
+    else { const j = await r.json(); console.warn('GitHub push failed:', j); chtSetGhStatus('Push failed'); }
+  } catch(e) { console.warn('GitHub push error:', e); chtSetGhStatus('Push error'); }
+}
+
+// ── Pane sizing ───────────────────────────────────────────────────────────────
+function chtSetPaneSizes() {
+  if (!_chtIndState) return;
+  const h      = document.getElementById('cht-chart-area').clientHeight;
+  if (!h) return;
+  const showM  = _chtIndState.macd;
+  const showC  = _chtIndState.cmp;
+  const priceEl  = document.getElementById('cht-price');
+  const macdEl   = document.getElementById('cht-macd');
+  const cmpEl    = document.getElementById('cht-cmp');
+  const divEl    = document.getElementById('cht-divider');
+  const div2El   = document.getElementById('cht-divider2');
+  if (showM && showC) {
+    priceEl.style.height = Math.floor(h * 0.50) + 'px';
+    macdEl.style.height  = Math.floor(h * 0.25) + 'px';
+    cmpEl.style.height   = Math.floor(h * 0.25) + 'px';
+    macdEl.style.display = '';
+    cmpEl.style.display  = '';
+    if (divEl)  divEl.style.display  = '';
+    if (div2El) div2El.style.display = '';
+  } else if (showM) {
+    priceEl.style.height = Math.floor(h * 0.65) + 'px';
+    macdEl.style.height  = Math.floor(h * 0.35) + 'px';
+    cmpEl.style.height   = '0';
+    macdEl.style.display = '';
+    cmpEl.style.display  = 'none';
+    if (divEl)  divEl.style.display  = '';
+    if (div2El) div2El.style.display = 'none';
+  } else if (showC) {
+    priceEl.style.height = Math.floor(h * 0.65) + 'px';
+    macdEl.style.height  = '0';
+    cmpEl.style.height   = Math.floor(h * 0.35) + 'px';
+    macdEl.style.display = 'none';
+    cmpEl.style.display  = '';
+    if (divEl)  divEl.style.display  = 'none';
+    if (div2El) div2El.style.display = '';
+  } else {
+    priceEl.style.height = h + 'px';
+    macdEl.style.height  = '0';
+    cmpEl.style.height   = '0';
+    macdEl.style.display = 'none';
+    cmpEl.style.display  = 'none';
+    if (divEl)  divEl.style.display  = 'none';
+    if (div2El) div2El.style.display = 'none';
+  }
+}
+
+// ── Open / close ──────────────────────────────────────────────────────────────
+function openChart(pair) {
+  _chtPair = pair;
+  _chtTf   = 'H4';
+  chtLoadIndState();
+  document.getElementById('cht-pair-lbl').textContent = pair;
+  document.getElementById('cht-overlay').classList.add('open');
+  ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === _chtTf));
+  chtUpdateIndChips();
+  chtUpdatePatPlaceholder();
+  chtStartTimer();
+  requestAnimationFrame(() => {
+    chtSetPaneSizes();
+    _chtLoadAndRender();
+  });
+}
+
+function closeChart() {
+  _chtRemoveStaging();
+  _chtHideFloatDel();
+  document.getElementById('cht-overlay').classList.remove('open');
+  _chtDrawMode = false;
+  _chtMarkMode = false;
+  document.getElementById('cht-draw-btn').classList.remove('active');
+  document.getElementById('cht-mark-btn').classList.remove('active');
+  chtCancelMarker();
+  _chtDestroyCharts();
+  _chtPair = null;
+  if (_chtTimerInt) { clearInterval(_chtTimerInt); _chtTimerInt = null; }
+}
+
+function _chtDestroyCharts() {
+  _chtAlertRefs  = [];
+  _chtPriceLine  = null;
+  _chtCandles    = null;
+  _chtStagingLine = null;
+  _chtFilteredOhlcv = [];
+  _trClearLines();
+  if (_chtInst)     { try { _chtInst.remove();     } catch(e){} _chtInst     = null; }
+  if (_chtMacdInst) { try { _chtMacdInst.remove(); } catch(e){} _chtMacdInst = null; }
+  if (_chtCmpInst)  { try { _chtCmpInst.remove();  } catch(e){} _chtCmpInst  = null; }
+}
+
+function setChtTf(tf) {
+  _chtTf = tf;
+  ['D1','H4','H1'].forEach(t => document.getElementById('cht-tf-'+t).classList.toggle('active', t === tf));
+  _chtLoadAndRender();
+  chtStartTimer();
+}
+
+// ── Candle countdown timer ────────────────────────────────────────────────────
+function chtStartTimer() {
+  if (_chtTimerInt) clearInterval(_chtTimerInt);
+  function tick() {
+    const el = document.getElementById('cht-timer');
+    if (!el) return;
+    const secs = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+    const left = secs - (Math.floor(Date.now() / 1000) % secs);
+    const h = Math.floor(left / 3600), m = Math.floor((left % 3600) / 60), s = left % 60;
+    const p = n => String(n).padStart(2,'0');
+    el.textContent = h > 0 ? `${h}:${p(m)}:${p(s)}` : `${p(m)}:${p(s)}`;
+    el.style.color = left <= 60 ? 'var(--sell)' : 'var(--muted)';
+  }
+  tick();
+  _chtTimerInt = setInterval(tick, 1000);
+}
+
+// ── OHLCV fetch ───────────────────────────────────────────────────────────────
+async function _chtLoadAndRender() {
+  if (!_chtPair) return;
+  const pair = _chtPair;
+  const tf   = _chtTf;
+
+  // 1. In-memory cache (fastest — same session, no API call)
+  if (_chtOhlcvCache[pair]?.[tf]) {
+    _chtRender(pair, tf, _chtOhlcvCache[pair][tf]);
+    return;
+  }
+
+  // 2. localStorage cache (survives page reload — no API call if still fresh)
+  const lsCached = _ohlcvCacheGet(pair, tf);
+  if (lsCached) {
+    if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+    _chtOhlcvCache[pair][tf] = lsCached;
+    _chtRender(pair, tf, lsCached);
+    return;
+  }
+
+  // 3. Fetch from Twelvedata REST (only when cache is empty or expired)
+  _chtDestroyCharts();
+  document.getElementById('cht-price').innerHTML =
+    '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">Fetching…</div>';
+
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) {
+    document.getElementById('cht-price').innerHTML =
+      '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">No TD key — tap ⚙ on main dashboard</div>';
+    return;
+  }
+
+  const sym      = pair.slice(0,3) + '/' + pair.slice(3);
+  const interval = { D1:'1day', H4:'4h', H1:'1h' }[tf];
+  const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(sym)}&interval=${interval}&outputsize=5000&order=ASC&type=price&apikey=${key}`;
+
+  const showStatus = msg =>
+    document.getElementById('cht-price').innerHTML =
+      `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--muted);font-size:10px;">${msg}</div>`;
+
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const r    = await fetch(url);
+      const json = await r.json();
+      // Twelvedata rate limit returns code:429 in the JSON body
+      if (json.code === 429) {
+        const wait = 15 * attempt;
+        showStatus(`Rate limit — retrying in ${wait}s… (${attempt}/3)`);
+        await new Promise(res => setTimeout(res, wait * 1000));
+        continue;
+      }
+      if (!json.values || !json.values.length) throw new Error(json.message || 'no data');
+      const ohlcv = json.values.map(v => ({
+        time:  Math.floor(new Date(v.datetime + (v.datetime.length === 10 ? 'T00:00:00Z' : 'Z')).getTime() / 1000),
+        open:  +v.open, high: +v.high, low: +v.low, close: +v.close
+      }));
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][tf] = ohlcv;
+      _ohlcvCacheSet(pair, tf, ohlcv);   // persist — next open (even after reload) is instant
+      if (_chtPair === pair && _chtTf === tf) _chtRender(pair, tf, ohlcv);
+      return;  // success
+    } catch(e) {
+      if (attempt === 3) {
+        document.getElementById('cht-price').innerHTML =
+          `<div style="display:flex;align-items:center;justify-content:center;height:100%;color:var(--sell);font-size:10px;">Fetch error: ${e.message}</div>`;
+      }
+    }
+  }
+}
+// ── Indicator math ────────────────────────────────────────────────────────────
+function chtEMA(closes, period) {
+  if (!closes.length) return [];
+  const k = 2 / (period + 1);
+  const out = new Array(closes.length);
+  out[0] = closes[0];
+  for (let i = 1; i < closes.length; i++) out[i] = closes[i] * k + out[i-1] * (1-k);
+  return out;
+}
+
+function chtBB(ohlcv, period=20, mult=2) {
+  const closes = ohlcv.map(d => d.close);
+  const out = [];
+  for (let i = period-1; i < closes.length; i++) {
+    const sl   = closes.slice(i-period+1, i+1);
+    const mean = sl.reduce((a,b)=>a+b,0) / period;
+    const std  = Math.sqrt(sl.reduce((a,b)=>a+(b-mean)**2, 0) / period);
+    out.push({ time:ohlcv[i].time, upper:mean+mult*std, middle:mean, lower:mean-mult*std });
+  }
+  return out;
+}
+
+function chtMACD(ohlcv, fast=12, slow=26, sig=9) {
+  if (ohlcv.length < slow + sig) return [];
+  const closes = ohlcv.map(d => d.close);
+  const ema12  = chtEMA(closes, fast);
+  const ema26  = chtEMA(closes, slow);
+  const macdLn = closes.map((_, i) => ema12[i] - ema26[i]);
+  const signal = chtEMA(macdLn, sig);
+  const start  = slow + sig - 2;
+  return ohlcv.slice(start).map((bar, i) => {
+    const idx = start + i;
+    return { time:bar.time, macd:macdLn[idx], signal:signal[idx], histogram:macdLn[idx]-signal[idx] };
+  });
+}
+
+// ── MACD offset helper: find bar index of MACD's first timestamp in ohlcv ────
+// ── CMP Delta series computation — true multi-TF ─────────────────────────────
+function chtNorm1212(m) {
+  const x = Math.min(Math.max(5.6 * m, -50), 50);
+  const e = Math.exp(x);
+  return 50 + 50 * (e - 1) / (e + 1);
+}
+
+// Rolling raw momentum array for a bar set (matches mom1212.py exactly)
+function _chtRollingMom(bars) {
+  const m = new Array(bars.length).fill(null);
+  for (let i = 25; i < bars.length; i++) {
+    let smaNow = 0, smaPast = 0, atr = 0;
+    for (let k = i - 11; k <= i;       k++) smaNow  += bars[k].close;
+    for (let k = i - 23; k <= i - 12;  k++) smaPast += bars[k].close;
+    smaNow /= 12; smaPast /= 12;
+    for (let k = i - 13; k <= i; k++) {
+      atr += Math.max(
+        bars[k].high - bars[k].low,
+        Math.abs(bars[k].high - bars[k-1].close),
+        Math.abs(bars[k].low  - bars[k-1].close)
+      );
+    }
+    atr /= 14;
+    m[i] = atr > 0 ? (smaNow - smaPast) / (12 * atr) : 0;
+  }
+  return m;
+}
+
+// True multi-TF CMP — mirrors mom1212.py exactly. Returns [{time, cmp}].
+function _chtCmpMultiTf(chartBars, d1, h4, h1) {
+  const d1Mom = _chtRollingMom(d1);
+  const h4Mom = _chtRollingMom(h4);
+  const h1Mom = _chtRollingMom(h1);
+
+  const d1T = d1.map(b => b.time);
+  const h4T = h4.map(b => b.time);
+  const h1T = h1.map(b => b.time);
+
+  function lastIdx(times, t) {
+    let lo = 0, hi = times.length - 1, res = -1;
+    while (lo <= hi) {
+      const mid = (lo + hi) >> 1;
+      if (times[mid] <= t) { res = mid; lo = mid + 1; } else hi = mid - 1;
+    }
+    return res;
+  }
+
+  function cmpAt(di, h4i, h1i) {
+    if (di < 0 || h4i < 0 || h1i < 0) return null;
+    const md = d1Mom[di], mh = h4Mom[h4i], m1 = h1Mom[h1i];
+    if (md === null || mh === null || m1 === null) return null;
+    return chtNorm1212(0.5 * md + 0.3 * mh + 0.2 * m1);
+  }
+
+  const out = [];
+  for (let i = 0; i < chartBars.length; i++) {
+    const t      = chartBars[i].time;
+    const cmpNow = cmpAt(lastIdx(d1T,t), lastIdx(h4T,t), lastIdx(h1T,t));
+    if (cmpNow !== null) out.push({ time:t, cmp:cmpNow });
+  }
+  return out;
+}
+
+// Dispatcher — uses multi-TF if all 3 TFs available, single-TF fallback otherwise
+function chtCMPSeries(ohlcv, tf, byTf) {
+  if (!ohlcv || ohlcv.length < 30) return [];
+  const d1 = byTf?.D1, h4 = byTf?.H4, h1 = byTf?.H1;
+  if (d1?.length >= 30 && h4?.length >= 30 && h1?.length >= 30)
+    return _chtCmpMultiTf(ohlcv, d1, h4, h1);
+
+  // Single-TF fallback — same formula, one TF only
+  const mom = _chtRollingMom(ohlcv);
+  const out = [];
+  for (let i = 25; i < ohlcv.length; i++) {
+    if (mom[i] === null) continue;
+    out.push({ time: ohlcv[i].time, cmp: chtNorm1212(mom[i]) });
+  }
+  return out;
+}
+
+// Background-fetch missing TFs so multi-TF CMP becomes accurate after first open
+async function _chtEnsureCmpTfs(pair, currentTf) {
+  const missing = ['D1','H4','H1'].filter(t => !_chtOhlcvCache[pair]?.[t]);
+  if (!missing.length) return;
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  let fetched = false;
+  for (const missingTf of missing) {
+    // Check localStorage cache first (free)
+    const cached = _ohlcvCacheGet(pair, missingTf);
+    if (cached) {
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][missingTf] = cached;
+      fetched = true;
+      continue;
+    }
+    // Live fetch
+    const sym      = pair.slice(0,3) + '/' + pair.slice(3);
+    const interval = { D1:'1day', H4:'4h', H1:'1h' }[missingTf];
+    const url = `https://api.twelvedata.com/time_series?symbol=${encodeURIComponent(sym)}&interval=${interval}&outputsize=5000&order=ASC&type=price&apikey=${key}`;
+    try {
+      const r    = await fetch(url);
+      const json = await r.json();
+      if (!json.values?.length) continue;
+      const bars = json.values.map(v => ({
+        time:  Math.floor(new Date(v.datetime + (v.datetime.length===10?'T00:00:00Z':'Z')).getTime()/1000),
+        open:+v.open, high:+v.high, low:+v.low, close:+v.close
+      }));
+      if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair] = {};
+      _chtOhlcvCache[pair][missingTf] = bars;
+      _ohlcvCacheSet(pair, missingTf, bars);
+      fetched = true;
+    } catch(e) { console.warn('CMP TF fetch failed:', missingTf, e); }
+  }
+  // Re-render CMP pane only — if still on same pair + CMP still on
+  if (fetched && _chtPair === pair && _chtIndState?.cmp && _chtInst) {
+    const cur = _chtOhlcvCache[pair]?.[currentTf];
+    if (cur) _chtRender(pair, currentTf, cur);
+  }
+}
+
+function _computeSubOffset(macdData, ohlcv) {
+  if (!macdData.length || !ohlcv.length) return 0;
+  const firstTs = macdData[0].time;
+  const idx = ohlcv.findIndex(b => b.time === firstTs);
+  return idx >= 0 ? idx : 0;
+}
+
+// ── Weekend filter — strip Saturday + Sunday-before-21:00 UTC candles ─────────
+function _filterWeekendCandles(bars) {
+  return bars.filter(b => {
+    const d = new Date(b.time * 1000);
+    const day = d.getUTCDay();           // 0=Sun, 6=Sat
+    if (day === 6) return false;         // whole Saturday gone
+    if (day === 0 && d.getUTCHours() < 21) return false;  // Sun before 21:00 UTC
+    return true;
+  });
+}
+
+// ── Spike filter — clamp wicks that exceed 3% of open (bad tick protection) ──
+function _filterChartSpikes(bars, pct = 0.03) {
+  return bars.map(b => {
+    const o = b.open; if (!o) return b;
+    const thr = o * pct;
+    const h = Math.abs(b.high  - o) > thr ? Math.max(o, b.close) : b.high;
+    const l = Math.abs(b.low   - o) > thr ? Math.min(o, b.close) : b.low;
+    return (h !== b.high || l !== b.low) ? { ...b, high: h, low: l } : b;
+  });
+}
+
+// ── Chart render ──────────────────────────────────────────────────────────────
+function _chtRender(pair, tf, ohlcv) {
+  _chtDestroyCharts();
+  if (!ohlcv.length) return;
+  ohlcv = _filterChartSpikes(ohlcv);
+  ohlcv = _filterWeekendCandles(ohlcv);
+  _chtFilteredOhlcv = ohlcv;   // save for zone overlay coordinate lookup
+
+  const priceEl = document.getElementById('cht-price');
+  const macdEl  = document.getElementById('cht-macd');
+  // Force layout flush — ensures chtSetPaneSizes heights are resolved
+  const priceH  = priceEl.clientHeight || 300;
+  const macdH   = macdEl.clientHeight  || 140;
+  priceEl.innerHTML = '';
+  macdEl.innerHTML  = '';
+
+  const isJpy    = pair.includes('JPY');
+  const dec      = isJpy ? 3 : 5;
+  const priceFmt = { type:'price', precision:dec, minMove:isJpy?0.001:0.00001 };
+  const ind      = _chtIndState || CHT_IND_DEFAULTS;
+
+  const chartOpts = (el, height, showTime) => ({
+    width:  el.clientWidth || window.innerWidth,
+    height: el.clientHeight || height,
+    layout: { background:{ color:'transparent' }, textColor:'#576a7d' },
+    grid:   { vertLines:{ color:'#1e2b3a' }, horzLines:{ color:'#1e2b3a' } },
+    rightPriceScale: { borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.08, bottom:0.08 } },
+    timeScale: { borderColor:'#1e2b3a', timeVisible:showTime, secondsVisible:false },
+    crosshair: { mode: LightweightCharts.CrosshairMode.Normal },
+    handleScroll: true, handleScale: true,
+  });
+
+  const chart = LightweightCharts.createChart(priceEl, chartOpts(priceEl, priceH, true));
+  _chtInst = chart;
+
+  const candles = chart.addCandlestickSeries({
+    upColor:'rgba(0,220,55,.15)', downColor:'rgba(248,81,73,.15)',
+    borderUpColor:'rgba(0,220,55,.8)', borderDownColor:'rgba(248,81,73,.8)',
+    wickUpColor:'rgba(0,220,55,.5)',   wickDownColor:'rgba(248,81,73,.5)',
+    priceLineVisible:false, lastValueVisible:false, priceFormat:priceFmt,
+  });
+  candles.setData(ohlcv);
+  _chtCandles = candles;
+  _chtRenderMarkers();
+
+  // Redraw trade zones on scroll / zoom
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+  const closes = ohlcv.map(d => d.close);
 
-def main():
-    print("=== FX Signal Board — Hourly Scan ===")
-    now = datetime.now(timezone.utc)
+  // EMA 200 — dim white
+  if (ind.ema200) {
+    const e200 = chtEMA(closes, 200);
+    chart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(ohlcv.map((d,i) => ({ time:d.time, value:e200[i] })));
+  }
 
-    prev             = load_signals()
-    prev_d1_regime   = prev.get("regime_d1")
-    prev_h4_regime   = prev.get("regime_h4")
-    prev_h1_regime   = prev.get("regime_h1")
-    prev_regime_name = (prev_h4_regime or {}).get("regime", "Unknown")
+  // EMA 50 — blue
+  if (ind.ema50) {
+    const e50 = chtEMA(closes, 50);
+    chart.addLineSeries({ color:'#58a6ff', lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(ohlcv.map((d,i) => ({ time:d.time, value:e50[i] })));
+  }
 
-    # ── 1. Fetch H1 OHLCV ────────────────────────────────────────────────────
-    all_pairs  = PAIRS + [p for p in CSM_EXTRA if p not in PAIRS]
-    total_fetches = len(all_pairs)
-    print(f"\n[1/9] Fetching H1 OHLCV for {total_fetches} pairs "
-          f"({TF_BARS['h1']} bars each)…")
+  // Bollinger Bands
+  if (ind.bb) {
+    const bb = chtBB(ohlcv);
+    const bbC = 'rgba(87,106,125,.55)';
+    chart.addLineSeries({ color:bbC, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.upper})));
+    chart.addLineSeries({ color:bbC, lineWidth:1, lineStyle:2, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.middle})));
+    chart.addLineSeries({ color:bbC, lineWidth:1, priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false }).setData(bb.map(d=>({time:d.time,value:d.lower})));
+  }
 
-    raw_ohlcv = {}   # { "EURUSD": h1_df }
-    for i, pair in enumerate(all_pairs):
-        key = pair.replace("/", "")
-        print(f"  [{i+1}/{total_fetches}] {key} H1")
-        try:
-            df = fetch_ohlcv(pair, TF_INTERVAL["h1"], TF_BARS["h1"])
-            if df is not None:
-                raw_ohlcv[key] = df
-        except RuntimeError as e:
-            # Daily credit limit — abort fetch loop immediately
-            print(f"  ✗ {e}")
-            print(f"  Aborting fetch — {len(raw_ohlcv)}/{total_fetches} pairs retrieved.")
-            break
-        except Exception as e:
-            print(f"  ⚠ {key} skipped: {e}")
-        # No manual sleep — fetch.py _rate_wait() handles spacing dynamically
+  // Committed level lines (grey dotted)
+  _chtAlertRefs = [];
+  laLoad().filter(a => a.pair === pair && a.active).forEach(a => {
+    const lineCol = a.direction === 'above' ? 'rgba(0,220,55,0.7)'
+                  : a.direction === 'below' ? 'rgba(248,81,73,0.7)'
+                  : 'rgba(139,148,158,0.65)';
+    try {
+      const pl = candles.createPriceLine({
+        price:a.price, color:lineCol, lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title:''
+      });
+      _chtAlertRefs.push({ id:a.id, priceLine:pl, price:a.price });
+    } catch(e) {}
+  });
 
-    # Guard: fewer than half the main pairs = don't overwrite good data
-    main_fetched = sum(1 for p in PAIRS if p.replace("/", "") in raw_ohlcv)
-    if main_fetched < len(PAIRS) // 2:
-        print(f"\n✗ Only {main_fetched}/{len(PAIRS)} main pairs fetched — "
-              f"keeping existing signals.json to avoid overwriting good data.")
-        return
+  // Price line — always shows last completed candle close for this TF
+  const initPrice = ohlcv[ohlcv.length - 1].close;
+  try {
+    _chtPriceLine = candles.createPriceLine({
+      price:initPrice, color:'rgba(205,217,229,0.75)', lineWidth:1,
+      lineStyle:LightweightCharts.LineStyle.Dashed,
+      axisLabelVisible:true, title:''
+    });
+    // Immediately apply live price if already received before render completed
+    const _cachedLive = (typeof _livePrice !== 'undefined') && _livePrice[pair];
+    if (_cachedLive) _chtPriceLine.applyOptions({ price: _cachedLive });
+  } catch(e) {}
 
-    # ── 2. Aggregate H1 -> H4 + D1 ────────────────────────────────────────────
-    print("\n[2/9] Aggregating H1 -> H4 + D1…")
-    ohlcv = {}   # { "EURUSD": {"h1": df, "h4": df, "d1": df} }
-    for key, h1_df in raw_ohlcv.items():
-        tfs = build_tfs(h1_df)
-        ohlcv[key] = tfs
-        print(f"  {key}: H1={len(tfs['h1'])} H4={len(tfs['h4'])} D1={len(tfs['d1'])}")
+  // ── MACD pane ────────────────────────────────────────────────────────────────
+  const macdData = chtMACD(ohlcv);
 
-    # ── 3. Pills (full Forex1212 formula) ─────────────────────────────────────
-    print("\n[3/9] Computing pills (EMA200/50 + MACD + DMI + ADX weight)…")
-    pair_pills  = {}   # { "EURUSD": {"d1": "bear", ...} }
-    pair_scores = {}   # { "EURUSD": {"d1": result, "h4": result, "h1": result} }
+  if (ind.macd && macdData.length) {
+    const macdChart = LightweightCharts.createChart(macdEl, {
+      ...chartOpts(macdEl, macdH, false),
+      crosshair: { mode: LightweightCharts.CrosshairMode.Hidden },
+      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.1, bottom:0.1 } },
+      timeScale: { visible:false },
+      handleScroll: false, handleScale: false,
+    });
+    _chtMacdInst = macdChart;
 
-    for key in ohlcv:
-        tfs    = {tf: ohlcv[key][tf] for tf in ("d1", "h4", "h1")}
-        result = classify_full(tfs)
-        pair_pills[key]  = result["pills"]
-        pair_scores[key] = result["scores"]
-        print(f"  {key}: {result['pills']}")
+    macdChart.addHistogramSeries({ priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.histogram, color: d.histogram >= 0 ? 'rgba(0,220,55,.55)' : 'rgba(248,81,73,.55)' })));
+    macdChart.addLineSeries({ color:'#58a6ff', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.macd })));
+    macdChart.addLineSeries({ color:'#cdd9e5', lineWidth:1, priceLineVisible:false, lastValueVisible:false })
+      .setData(macdData.map(d => ({ time:d.time, value:d.signal })));
 
-    # ── 4. MOM1212 ────────────────────────────────────────────────────────────
-    print("\n[4/9] Computing MOM1212 (D1/H4/H1 + deltas + CMP)…")
-    pair_mom = {}
-    for key in [p.replace("/", "") for p in PAIRS]:
-        tfs = {tf: ohlcv.get(key, {}).get(tf) for tf in ("d1", "h4", "h1")}
-        pair_mom[key] = compute_mom(tfs)
-        print(f"  {key}: CMP={pair_mom[key].get('cmp')}")
+    new ResizeObserver(() => {
+      if (_chtMacdInst) _chtMacdInst.applyOptions({ width:macdEl.clientWidth, height:macdEl.clientHeight });
+    }).observe(macdEl);
+  }
 
-    # ── 5. CSM ────────────────────────────────────────────────────────────────
-    print("\n[5/9] Computing CSM (16-pair D1+H4 blend)…")
-    csm = compute_csm(ohlcv)
-    print(f"  D1: {dict(sorted(csm['d1'].items(), key=lambda x: -x[1]))}")
-    print(f"  H4: {dict(sorted(csm['h4'].items(), key=lambda x: -x[1]))}")
-    print(f"  H1: {dict(sorted(csm['h1'].items(), key=lambda x: -x[1]))}")
+  // ── CMP Delta pane ───────────────────────────────────────────────────────────
+  const cmpEl   = document.getElementById('cht-cmp');
+  // Collect all cached TF data for true multi-TF CMP computation
+  const _cmpByTf = {};
+  ['D1','H4','H1'].forEach(t => {
+    let d = _chtOhlcvCache[pair]?.[t];
+    if (!d) { const ls = _ohlcvCacheGet(pair, t); if (ls) { if (!_chtOhlcvCache[pair]) _chtOhlcvCache[pair]={}; _chtOhlcvCache[pair][t]=ls; d=ls; } }
+    if (d) _cmpByTf[t] = _filterWeekendCandles(d);
+  });
+  const cmpData = (ind.cmp && cmpEl) ? chtCMPSeries(ohlcv, tf, _cmpByTf) : [];
 
-    # ── 6. ADX + per-pair entry metrics ───────────────────────────────────────
-    print("\n[6/9] Extracting ADX, reset_score, atr_percentile…")
-    pair_adx        = {}
-    pair_reset      = {}
-    pair_atr_pct    = {}
+  if (ind.cmp && cmpData.length && cmpEl) {
+    const cmpH = cmpEl.clientHeight || 120;
+    cmpEl.innerHTML = '';
+    const cmpChart = LightweightCharts.createChart(cmpEl, {
+      ...chartOpts(cmpEl, cmpH, false),
+      crosshair:       { mode: LightweightCharts.CrosshairMode.Hidden },
+      rightPriceScale: { visible:true, borderColor:'#1e2b3a', autoScale:true, scaleMargins:{ top:0.05, bottom:0.05 } },
+      timeScale:       { visible:false },
+      handleScroll:    false,
+      handleScale:     false,
+    });
+    _chtCmpInst = cmpChart;
 
-    for key in [p.replace("/", "") for p in PAIRS]:
-        sc = pair_scores.get(key, {})
+    // Scale anchor — invisible, autoscaleInfoProvider locks y-axis to 0–100 permanently
+    cmpChart.addLineSeries({ color:'rgba(0,0,0,0)', lineWidth:1,
+      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false,
+      autoscaleInfoProvider: () => ({ priceRange: { minValue:0, maxValue:100 } }),
+    }).setData([
+      { time: cmpData[0].time,                  value: 0   },
+      { time: cmpData[cmpData.length-1].time,   value: 100 },
+    ]);
 
-        # ADX: from H4 score raw indicators (already computed in score_pair)
-        h4_score = sc.get("h4")
-        adx_val  = (h4_score["raw"]["adx"] if h4_score and h4_score.get("raw") else None)
-        pair_adx[key] = adx_val
+    // Reference lines: 60 (dim green), 50 (dim white midline), 40 (dim red)
+    [{ v:60, c:'rgba(0,220,55,0.18)' }, { v:50, c:'rgba(205,217,229,0.22)' }, { v:40, c:'rgba(248,81,73,0.18)' }]
+      .forEach(({ v, c }) => {
+        cmpChart.addLineSeries({ color:c, lineWidth:1, lineStyle:3,
+          priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+          .setData(cmpData.map(d => ({ time:d.time, value:v })));
+      });
 
-        # Reset score: computed from H4 closes, direction from D1 pill
-        d1_dir   = pair_pills.get(key, {}).get("d1", "neutral")
-        h4_df    = ohlcv.get(key, {}).get("h4")
-        if h4_df is not None and len(h4_df) >= 34:
-            pair_reset[key] = compute_reset_score(
-                h4_df["close"].values, direction=d1_dir
-            )
-        else:
-            pair_reset[key] = None
+    // CMP line — green above 60, amber 40–60, red below 40
+    cmpChart.addLineSeries({ color:'rgba(255,170,0,0.9)', lineWidth:1,
+      priceLineVisible:false, lastValueVisible:false, crosshairMarkerVisible:false })
+      .setData(cmpData.map(d => ({
+        time:  d.time,
+        value: d.cmp,
+        color: d.cmp > 60 ? 'rgba(0,220,55,0.9)' : d.cmp < 40 ? 'rgba(248,81,73,0.9)' : 'rgba(255,170,0,0.9)',
+      })));
 
-        # ATR percentile: from D1 (or H4 as proxy if D1 is short)
-        d1_df = ohlcv.get(key, {}).get("d1")
-        h4_df = ohlcv.get(key, {}).get("h4")
-        ap = atr_percentile(d1_df) if d1_df is not None and len(d1_df) >= 52 else None
-        if ap is None and h4_df is not None and len(h4_df) >= 52:
-            ap = atr_percentile(h4_df)
-        pair_atr_pct[key] = ap
+    new ResizeObserver(() => {
+      if (_chtCmpInst) _chtCmpInst.applyOptions({ width:cmpEl.clientWidth, height:cmpEl.clientHeight });
+    }).observe(cmpEl);
+  }
 
-        print(f"  {key}: ADX={adx_val} reset={pair_reset[key]} atr_pct={ap}")
+  // ── Time-scale sync: price → MACD + CMP via logical range offset ─────────────
+  const _subOffset    = macdData.length ? _computeSubOffset(macdData, ohlcv) : 0;
+  const _cmpSubOffset = cmpData.length  ? _computeSubOffset(cmpData,  ohlcv) : 0;
+  let _syncRaf = null;
+  chart.timeScale().subscribeVisibleLogicalRangeChange(range => {
+    // Jump button: show when scrolled back more than 5 bars from the right edge
+    const jb = document.getElementById('cht-jump-btn');
+    if (jb) jb.style.display = (range && range.to < ohlcv.length - 5) ? 'block' : 'none';
 
-    # ── 7. Correlation matrix ─────────────────────────────────────────────────
-    print("\n[7/9] Computing correlation matrix…")
-    correlations = compute_correlation(ohlcv)
+    if (_syncRaf) cancelAnimationFrame(_syncRaf);
+    _syncRaf = requestAnimationFrame(() => {
+      if (_chtMacdInst && range) {
+        try {
+          _chtMacdInst.timeScale().setVisibleLogicalRange({
+            from: range.from - _subOffset,
+            to:   range.to   - _subOffset
+          });
+        } catch(e) {}
+      }
+      if (_chtCmpInst && range) {
+        try {
+          _chtCmpInst.timeScale().setVisibleLogicalRange({
+            from: range.from - _cmpSubOffset,
+            to:   range.to   - _cmpSubOffset
+          });
+        } catch(e) {}
+      }
+    });
+  });
 
-    # ── 8. D1 / H4 / H1 Regime ───────────────────────────────────────────────
-    print("\n[8/9] Computing D1 / H4 / H1 regimes…")
-    regime_d1 = classify_regime(csm["d1"], pair_pills, prev_d1_regime, tf="d1")
-    regime_h4 = classify_regime(csm["h4"], pair_pills, prev_h4_regime, tf="h4")
-    regime_h1 = classify_regime(csm["h1"], pair_pills, prev_h1_regime, tf="h1")
-    new_regime_name = regime_h4["regime"]
+  new ResizeObserver(() => {
+    if (_chtInst) _chtInst.applyOptions({ width:priceEl.clientWidth, height:priceEl.clientHeight });
+  }).observe(priceEl);
 
-    # Confluence: all three agree on the same non-Mixed/non-Ranging regime
-    aligned_regime = None
-    if (regime_d1["regime"] == regime_h4["regime"] == regime_h1["regime"]
-            and regime_h4["regime"] not in ("Mixed", "Ranging")):
-        aligned_regime = regime_h4["regime"]
+  // Set initial visible range (last 150 bars)
+  const visN = Math.min(150, ohlcv.length);
+  chart.timeScale().setVisibleLogicalRange({ from:ohlcv.length - visN, to:ohlcv.length + 2 });
 
-    print(f"  D1: {regime_d1['regime']} {regime_d1['confidence']}")
-    print(f"  H4: {regime_h4['regime']} {regime_h4['confidence']} "
-          f"(was: {prev_regime_name})")
-    print(f"  H1: {regime_h1['regime']} {regime_h1['confidence']}")
-    if aligned_regime:
-        print(f"  ⚡ CONFLUENCE: all 3 TFs → {aligned_regime}")
+  // Initial MACD + CMP sync after layout settles
+  setTimeout(() => {
+    const r = chart.timeScale().getVisibleLogicalRange();
+    if (r) {
+      if (_chtMacdInst) {
+        try { _chtMacdInst.timeScale().setVisibleLogicalRange({ from:r.from - _subOffset,    to:r.to - _subOffset    }); } catch(e) {}
+      }
+      if (_chtCmpInst) {
+        try { _chtCmpInst.timeScale().setVisibleLogicalRange({  from:r.from - _cmpSubOffset, to:r.to - _cmpSubOffset }); } catch(e) {}
+      }
+    }
+  }, 120);
 
-    # ── 9. Cont. score + assemble pairs ───────────────────────────────────────
-    print("\n[9/9] Computing cont. scores + assembling pairs…")
-    pairs_out = {}
+  // Restore staging line if one was active before TF switch
+  if (_chtStagingPrice !== null) {
+    _chtSetStaging(_chtStagingPrice);
+  }
+  // Attach drawing listeners (once only per page load)
+  _chtInitDrawListeners();
 
-    for pair in PAIRS:
-        key   = pair.replace("/", "")
-        pills = pair_pills.get(key, {})
-        mom   = pair_mom.get(key, {})
-        adx   = pair_adx.get(key)
+  // Restore trade lines and markers after every render (TF switch, indicator toggle)
+  setTimeout(() => { if (_chtPair === pair && _chtTf === tf) _trDrawLines(); }, 150);
 
-        cont = compute_cont(
-            pair        = key,
-            pills       = pills,
-            adx         = adx,
-            csm_h4      = csm["h4"],
-            regime_h4   = regime_h4,
-            reset_score = pair_reset.get(key),
-            atr_pct     = pair_atr_pct.get(key),
-        )
+  // If CMP pane is on and some TFs aren't cached yet, fetch them in background
+  if (ind.cmp) _chtEnsureCmpTfs(pair, tf);
+}
 
-        d1_df       = ohlcv.get(key, {}).get("d1")
-        d1p         = d_pct(d1_df, 1)
-        d5p         = d_pct(d1_df, 5)
-        prev_close  = (round(float(d1_df["close"].iloc[-2]), 6)
-                       if d1_df is not None and len(d1_df) >= 2 else None)
-        prev5_close = (round(float(d1_df["close"].iloc[-6]), 6)
-                       if d1_df is not None and len(d1_df) >= 6 else None)
+// ── Jump to current ───────────────────────────────────────────────────────────
+function chtJumpToCurrent() {
+  if (!_chtInst || !_chtPair || !_chtTf) return;
+  const ohlcv = _chtOhlcvCache[_chtPair]?.[_chtTf];
+  if (!ohlcv) return;
+  const visN = Math.min(150, ohlcv.length);
+  _chtInst.timeScale().setVisibleLogicalRange({ from:ohlcv.length - visN, to:ohlcv.length + 2 });
+}
 
-        pairs_out[key] = {
-            "pills":       pills,
-            "mom":         mom,
-            "adx":         adx,
-            "d1_pct":      d1p,
-            "d5_pct":      d5p,
-            "prev_close":  prev_close,
-            "prev5_close": prev5_close,
-            "cont":        cont,
+// ── Drawing system ────────────────────────────────────────────────────────────
+function chtToggleDrawMode() {
+  _chtDrawMode = !_chtDrawMode;
+  document.getElementById('cht-draw-btn').classList.toggle('active', _chtDrawMode);
+  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtDrawMode);
+  if (!_chtDrawMode) _chtRemoveStaging();
+}
+
+function _chtSetStaging(price) {
+  if (!_chtCandles || price == null) return;
+  _chtStagingPrice = price;
+  if (_chtStagingLine) {
+    try { _chtStagingLine.applyOptions({ price, title:'' }); }
+    catch(e) { _chtStagingLine = null; }
+  }
+  if (!_chtStagingLine) {
+    try {
+      _chtStagingLine = _chtCandles.createPriceLine({
+        price, color:'rgba(227,179,65,0.85)', lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title:''
+      });
+    } catch(e) {}
+  }
+  _chtPositionDirPanel();
+}
+
+function _chtPositionDirPanel() {
+  // Activate Above/Below toolbox buttons when a staging line is set
+  ['cht-above-btn','cht-below-btn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.remove('dim');
+  });
+}
+
+function _chtRemoveStaging() {
+  if (_chtStagingLine && _chtCandles) {
+    try { _chtCandles.removePriceLine(_chtStagingLine); } catch(e) {}
+  }
+  _chtStagingLine  = null;
+  _chtStagingPrice = null;
+  // Dim Above/Below buttons — no staging line pending
+  ['cht-above-btn','cht-below-btn'].forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.classList.add('dim');
+  });
+}
+
+function chtCommitStaging(direction) {
+  if (_chtStagingPrice == null || !_chtPair) return;
+  const price = _chtStagingPrice;
+  const id    = Date.now();
+  const alerts = laLoad();
+  alerts.push({ id, pair:_chtPair, price, direction, active:true });
+  laSave(alerts);
+  _chtRemoveStaging();
+  if (_chtCandles) {
+    const lineCol = direction === 'above' ? 'rgba(0,220,55,0.7)'
+                  : direction === 'below' ? 'rgba(248,81,73,0.7)'
+                  : 'rgba(139,148,158,0.65)';
+    try {
+      const pl = _chtCandles.createPriceLine({
+        price, color:lineCol, lineWidth:1,
+        lineStyle:LightweightCharts.LineStyle.Dotted,
+        axisLabelVisible:true, title:''
+      });
+      _chtAlertRefs.push({ id, priceLine:pl, price });
+    } catch(e) {}
+  }
+  _chtDrawMode = false;
+  document.getElementById('cht-draw-btn').classList.remove('active');
+  document.getElementById('cht-chart-area').classList.remove('draw-mode');
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtClearLevels() {
+  if (!_chtPair) return;
+  _chtRemoveStaging();
+  _chtHideFloatDel();
+  const alerts = laLoad().map(a => a.pair === _chtPair ? { ...a, active:false } : a);
+  laSave(alerts);
+  _chtAlertRefs.forEach(({ priceLine }) => {
+    if (_chtCandles) try { _chtCandles.removePriceLine(priceLine); } catch(e) {}
+  });
+  _chtAlertRefs = [];
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtClearMarkers() {
+  if (!_chtPair || !_chtTf) return;
+  const markers = mkLoad().map(m =>
+    m.pair === _chtPair && m.tf === _chtTf ? { ...m, active:false } : m
+  );
+  mkSave(markers);
+  if (_chtCandles) try { _chtCandles.setMarkers([]); } catch(e) {}
+}
+
+function chtClearAll() {
+  chtClearLevels();
+  chtClearMarkers();
+}
+
+function chtDeleteSelectedLevel() {
+  const id     = _chtSelectedId;
+  const alerts = laLoad().map(a => a.id === id ? { ...a, active:false } : a);
+  laSave(alerts);
+  const ref = _chtAlertRefs.find(r => r.id === id);
+  if (ref && _chtCandles) try { _chtCandles.removePriceLine(ref.priceLine); } catch(e) {}
+  _chtAlertRefs = _chtAlertRefs.filter(r => r.id !== id);
+  chtPushToGitHub(CHT_LA_PATH, alerts);
+}
+
+function chtDeleteSelectedMarker() {
+  const id      = _chtSelectedId;
+  const markers = mkLoad().map(m => m.id === id ? { ...m, active:false } : m);
+  mkSave(markers);
+  _chtRenderMarkers();
+}
+
+function chtDeleteSelected() {
+  if (_chtSelectedType === 'marker') chtDeleteSelectedMarker();
+  else chtDeleteSelectedLevel();
+  _chtHideFloatDel();
+}
+
+// ── Mark mode ─────────────────────────────────────────────────────────────────
+function chtToggleMarkMode() {
+  _chtMarkMode = !_chtMarkMode;
+  if (_chtMarkMode) {
+    _chtDrawMode = false;
+    document.getElementById('cht-draw-btn').classList.remove('active');
+    document.getElementById('cht-chart-area').classList.remove('draw-mode');
+    _chtRemoveStaging();
+  }
+  document.getElementById('cht-mark-btn').classList.toggle('active', _chtMarkMode);
+  document.getElementById('cht-chart-area').classList.toggle('draw-mode', _chtMarkMode);
+}
+
+function _chtShowMarkerPanel(time, clientX, clientY) {
+  _chtMarkTime = time;
+  const panel = document.getElementById('cht-marker-panel');
+  const area  = document.getElementById('cht-chart-area');
+  if (!panel || !area) return;
+  const ar    = area.getBoundingClientRect();
+  const x     = Math.max(4, Math.min(ar.width  - 220, clientX - ar.left - 50));
+  const y     = Math.max(4, Math.min(ar.height -  40, clientY - ar.top  - 20));
+  panel.style.left    = x + 'px';
+  panel.style.top     = y + 'px';
+  panel.style.display = 'flex';
+  document.getElementById('cht-marker-text').value = '';
+  document.getElementById('cht-marker-text').focus();
+}
+
+function chtCommitMarker(direction) {
+  if (_chtMarkTime == null || !_chtPair || !_chtTf) return;
+  const text = document.getElementById('cht-marker-text').value.trim();
+  const id   = Date.now();
+  const markers = mkLoad();
+  markers.push({ id, pair:_chtPair, tf:_chtTf, time:_chtMarkTime,
+                 direction, text, active:true });
+  mkSave(markers);
+  chtCancelMarker();
+  _chtRenderMarkers();
+}
+
+function chtCancelMarker() {
+  _chtMarkTime = null;
+  const panel = document.getElementById('cht-marker-panel');
+  if (panel) panel.style.display = 'none';
+  _chtMarkMode = false;
+  document.getElementById('cht-mark-btn').classList.remove('active');
+  document.getElementById('cht-chart-area').classList.remove('draw-mode');
+}
+
+function _chtRenderMarkers() {
+  if (!_chtCandles || !_chtPair || !_chtTf) return;
+  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
+  const mapped = active
+    .sort((a, b) => a.time - b.time)
+    .map(m => ({
+      time:     m.time,
+      position: m.direction === 'bull' ? 'belowBar' : 'aboveBar',
+      color:    m.direction === 'bull' ? 'rgba(0,220,55,.9)' : 'rgba(248,81,73,.9)',
+      shape:    m.direction === 'bull' ? 'arrowUp'  : 'arrowDown',
+      text:     m.text || '',
+      size:     1.5,
+      id:       m.id,
+    }));
+  try { _chtCandles.setMarkers(mapped); } catch(e) {}
+}
+
+function _chtNearMarker(time) {
+  const active = mkLoad().filter(m => m.pair === _chtPair && m.tf === _chtTf && m.active);
+  return active.find(m => m.time === time) || null;
+}
+
+// ── Float-del helpers ─────────────────────────────────────────────────────────
+function _chtShowFloatDel(id, clientX, clientY) {
+  _chtSelectedId = id;
+  const el = document.getElementById('cht-float-del');
+  const ca = document.getElementById('cht-chart-area');
+  if (!el || !ca) return;
+  const ar = ca.getBoundingClientRect();
+  const x  = Math.max(4, Math.min(ar.width  - 32, clientX - ar.left - 14));
+  const y  = Math.max(4, Math.min(ar.height - 32, clientY - ar.top  - 14));
+  el.style.left    = x + 'px';
+  el.style.top     = y + 'px';
+  el.style.display = 'flex';
+  el.style.alignItems = 'center';
+  el.style.justifyContent = 'center';
+}
+function _chtHideFloatDel() {
+  _chtSelectedId   = null;
+  _chtSelectedType = null;
+  const el = document.getElementById('cht-float-del');
+  if (el) el.style.display = 'none';
+}
+
+// ── Coord helpers ─────────────────────────────────────────────────────────────
+function _chtBounds() {
+  const el = document.getElementById('cht-price');
+  return el ? el.getBoundingClientRect() : null;
+}
+function _chtToPrice(clientY) {
+  const r = _chtBounds();
+  if (!r || !_chtCandles) return null;
+  try { return _chtCandles.coordinateToPrice(clientY - r.top); } catch(e) { return null; }
+}
+function _chtPriceToY(price) {
+  const r = _chtBounds();
+  if (!r || !_chtCandles) return null;
+  try { const c = _chtCandles.priceToCoordinate(price); return c != null ? c + r.top : null; } catch(e) { return null; }
+}
+function _chtNearCommitted(clientY) {
+  for (const ref of _chtAlertRefs) {
+    const ly = _chtPriceToY(ref.price);
+    if (ly != null && Math.abs(clientY - ly) < 20) return ref;
+  }
+  return null;
+}
+function _chtNearStaging(clientY) {
+  if (_chtStagingPrice == null) return false;
+  const ly = _chtPriceToY(_chtStagingPrice);
+  return ly != null && Math.abs(clientY - ly) < 22;
+}
+
+// ── Input listeners (attached once) ──────────────────────────────────────────
+function _chtInitDrawListeners() {
+  if (_chtDrawInited) return;
+  _chtDrawInited = true;
+
+  let _ts = { x:0, y:0, t:0 };
+
+  // ── Touch ──────────────────────────────────────────────────────────────────
+  document.addEventListener('touchstart', function(e) {
+    if (!_chtInst) return;
+    const t = e.touches[0];
+    _ts = { x:t.clientX, y:t.clientY, t:Date.now() };
+    if (_chtDrawMode) return;
+    // Long-press on staging line → drag
+    if (_chtNearStaging(t.clientY)) {
+      e.preventDefault();
+      _chtLongTimer = setTimeout(() => {
+        _chtLongTimer = null;
+        if (navigator.vibrate) navigator.vibrate(30);
+        _chtDragging = true;
+      }, 300);
+    }
+  }, true);
+
+  document.addEventListener('touchmove', function(e) {
+    if (_chtLongTimer && (Math.abs(e.touches[0].clientX - _ts.x) > 8 || Math.abs(e.touches[0].clientY - _ts.y) > 8)) {
+      clearTimeout(_chtLongTimer); _chtLongTimer = null;
+    }
+    if (_chtDragging) {
+      const p = _chtToPrice(e.touches[0].clientY);
+      if (p != null) _chtSetStaging(p);
+      e.preventDefault();
+    }
+  }, { passive:false, capture:true });
+
+  document.addEventListener('touchend', function(e) {
+    if (_chtLongTimer) { clearTimeout(_chtLongTimer); _chtLongTimer = null; }
+    if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
+    if (_chtDragging) { _chtDragging = false; return; }
+    _chtHideFloatDel();
+    const t  = e.changedTouches[0];
+    const dx = Math.abs(t.clientX - _ts.x), dy = Math.abs(t.clientY - _ts.y);
+    const isTap = dx < 12 && dy < 12 && (Date.now() - _ts.t) < 500;
+    if (!isTap) return;
+    const r = _chtBounds();
+    if (!r) return;
+    const inChart = t.clientX >= r.left && t.clientX <= r.right && t.clientY >= r.top && t.clientY <= r.bottom;
+
+    // Mark mode — show marker panel at tapped candle
+    if (_chtMarkMode && inChart && _chtInst) {
+      const lr = _chtInst.timeScale().getVisibleLogicalRange();
+      const clickedBar = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
+      if (clickedBar != null) _chtShowMarkerPanel(clickedBar, t.clientX, t.clientY);
+      return;
+    }
+
+    if (_chtDrawMode && inChart) {
+      const p = _chtToPrice(t.clientY);
+      if (p != null) _chtSetStaging(p);
+      _chtDrawMode = false;
+      document.getElementById('cht-draw-btn').classList.remove('active');
+      document.getElementById('cht-chart-area').classList.remove('draw-mode');
+      return;
+    }
+    if (!inChart) return;
+
+    // Check marker hit first (by timestamp proximity), then level
+    if (_chtInst) {
+      const clickedTime = _chtInst.timeScale().coordinateToTime(t.clientX - r.left);
+      if (clickedTime != null) {
+        const mk = _chtNearMarker(clickedTime);
+        if (mk) {
+          _chtSelectedId   = mk.id;
+          _chtSelectedType = 'marker';
+          _chtShowFloatDel(mk.id, t.clientX, t.clientY);
+          return;
         }
-        print(f"  {key}: cont={cont}%")
+      }
+    }
+    const ref = _chtNearCommitted(t.clientY);
+    if (ref) {
+      _chtSelectedId   = ref.id;
+      _chtSelectedType = 'level';
+      _chtShowFloatDel(ref.id, t.clientX, t.clientY);
+    }
+  }, true);
 
-    # ── Assemble signals.json ─────────────────────────────────────────────────
-    # Preserve keys written by scan_news.py — not touched by hourly scan
-    preserved = {
-        k: prev.get(k)
-        for k in ("regime_w1", "macro", "macro_assets",
-                  "catalyst", "ranked", "calendar", "week_ahead",
-                  "deep_analysis", "breaking", "last_alert", "gold_signal")
-        if prev.get(k)
+  // ── Mouse ──────────────────────────────────────────────────────────────────
+  document.addEventListener('mousedown', function(e) {
+    if (!_chtInst || _chtDrawMode || _chtMarkMode) return;
+    if (_chtNearStaging(e.clientY)) _chtMouseDown = true;
+  }, true);
+  document.addEventListener('mousemove', function(e) {
+    if (!_chtMouseDown) return;
+    const p = _chtToPrice(e.clientY);
+    if (p != null) _chtSetStaging(p);
+    e.preventDefault();
+  }, { passive:false, capture:true });
+  document.addEventListener('mouseup', function() { _chtMouseDown = false; }, true);
+
+  document.addEventListener('click', function(e) {
+    if (e.target && e.target.closest && e.target.closest('#cht-float-del')) return;
+    if (e.target && e.target.closest && e.target.closest('#cht-marker-panel')) return;
+    _chtHideFloatDel();
+
+    const r = _chtBounds();
+    if (!r) return;
+    const inChart = e.clientX >= r.left && e.clientX <= r.right &&
+                    e.clientY >= r.top  && e.clientY <= r.bottom;
+
+    // Mark mode
+    if (_chtMarkMode && _chtInst && inChart) {
+      const clickedTime = _chtInst.timeScale().coordinateToTime(e.clientX - r.left);
+      if (clickedTime != null) _chtShowMarkerPanel(clickedTime, e.clientX, e.clientY);
+      return;
     }
 
-    out = {
-        "updated":      now.isoformat(),
-        "regime_d1":    regime_d1,
-        "regime_h4":    regime_h4,
-        "regime_h1":    regime_h1,
-        "csm":          csm,
-        "correlations": correlations,
-        "pairs":        pairs_out,
-        **preserved,
+    if (!_chtDrawMode || !_chtInst) return;
+    if (!inChart) return;
+    const p = _chtToPrice(e.clientY);
+    if (p != null) _chtSetStaging(p);
+    _chtDrawMode = false;
+    document.getElementById('cht-draw-btn').classList.remove('active');
+    document.getElementById('cht-chart-area').classList.remove('draw-mode');
+  }, true);
+}
+
+// ── Live price line update via WS (no-op stub kept for future use) ────────────
+function chtUpdateLivePriceLine(pair, price) {
+  if (_chtPair !== pair || !_chtCandles) return;
+  try {
+    if (_chtPriceLine) _chtPriceLine.applyOptions({ price });
+  } catch(e) {}
+}
+
+// ── Copy analysis prompt for Claude FSI plugin ───────────────────────────────
+function chtCopyPrompt() {
+  if (!_chtPair || !D) return;
+  const pair = _chtPair;
+  const p    = (D.pairs || {})[pair] || {};
+  const pills = p.pills || {};
+  const mom   = p.mom   || {};
+  const d1r   = D.regime_d1 || {};
+  const h4r   = D.regime_h4 || {};
+  const h1r   = D.regime_h1 || {};
+  const w1r   = D.regime_w1 || {};
+  const mac   = D.macro     || {};
+  const csmd1 = D.csm?.d1   || {};
+  const csmh4 = D.csm?.h4   || {};
+  const news  = D.news       || {};
+  const anal  = D.analysis   || {};
+  const base  = pair.slice(0,3);
+  const quote = pair.slice(3);
+
+  // Translate pill values to plain language
+  const pillTxt = v => ({
+    bull_strong: 'strongly bullish', bull: 'bullish',
+    bear_strong: 'strongly bearish', bear: 'bearish',
+    neutral: 'neutral'
+  })[v] || v || '—';
+
+  // Translate momentum score to plain language
+  const momTxt = v => {
+    if (v == null) return '—';
+    const bias = v >= 65 ? 'bullish bias' : v >= 35 ? 'neutral' : 'bearish bias';
+    return `${v}/100 (${bias})`;
+  };
+
+  // Translate delta to plain language
+  const dltTxt = (k) => {
+    const d = mom['d'+k];
+    if (d == null) return '';
+    return d > 0 ? `, improving (+${d} since last scan)` :
+           d < 0 ? `, weakening (${d} since last scan)` : ', unchanged';
+  };
+
+  // Translate ADX to plain language
+  const adxTxt = v => {
+    if (v == null) return '—';
+    const str = v >= 50 ? 'strong trend' : v >= 25 ? 'trending' :
+                v >= 20 ? 'weak trend' : 'ranging/no trend';
+    return `${v} (${str})`;
+  };
+
+  // Translate cont score to plain language
+  const contTxt = v => {
+    if (v == null) return '—';
+    const str = v >= 70 ? 'strong alignment' : v >= 50 ? 'moderate alignment' :
+                v >= 35 ? 'weak alignment' : 'low/conflicting';
+    return `${v}% (${str})`;
+  };
+
+  // Translate regime to plain language
+  const regStr = (r, lbl) =>
+    `${lbl}: ${r.regime||'—'} (confidence: ${r.confidence||'—'}, ${r.stable?'stable':'shifting'})`;
+
+  // CSM ranking — translate scores to descriptive tiers
+  const csmRank = (csm) =>
+    Object.entries(csm).sort((a,b)=>b[1]-a[1])
+      .map(([c,v]) => {
+        const tier = v >= 70 ? 'strong' : v >= 55 ? 'mild' : v >= 45 ? 'neutral' : v >= 30 ? 'mild weak' : 'weak';
+        return `${c} (${tier})`;
+      }).join(', ');
+
+  const prompt =
+`I am analysing ${pair} for a potential H4 trade. I have not yet determined direction — please give me an unbiased macro and fundamental assessment.
+
+MARKET REGIME (proprietary multi-timeframe system)
+Weekly:  ${regStr(w1r,'W1 cross-asset macro')}
+Daily:   ${regStr(d1r,'D1 regime')}
+4-Hour:  ${regStr(h4r,'H4 regime')} ← primary trading timeframe
+1-Hour:  ${regStr(h1r,'H1 regime')} ← short-term momentum
+
+CROSS-ASSET MACRO
+Daily macro reading: ${mac.label||'—'} (confidence: ${mac.confidence||'—'}, ${mac.stable?'stable':'shifting'})
+
+${pair} TECHNICAL PICTURE
+Direction signals by timeframe:
+  Daily (D1):  ${pillTxt(pills.d1)}
+  4-Hour (H4): ${pillTxt(pills.h4)}
+  1-Hour (H1): ${pillTxt(pills.h1)}
+3-timeframe technical alignment: ${contTxt(p.cont)}
+Composite momentum score: ${momTxt(mom.cmp)}
+Trend strength: ADX ${adxTxt(p.adx)}
+Momentum by timeframe:
+  D1: ${momTxt(mom.d1)}${dltTxt('d1')}
+  H4: ${momTxt(mom.h4)}${dltTxt('h4')}
+  H1: ${momTxt(mom.h1)}${dltTxt('h1')}
+
+CURRENCY STRENGTH (relative ranking across 8 major currencies)
+Daily strength, strongest to weakest:   ${csmRank(csmd1)}
+4-Hour strength, strongest to weakest:  ${csmRank(csmh4)}
+
+CURRENT NEWS & AI ANALYSIS
+News themes: ${news.themes||'—'}
+Key event:   ${news.event||'—'}
+Automated analysis: ${anal.text||'—'}
+
+QUESTIONS
+1. What is the fundamental macro bias for ${pair} right now — bullish ${base} or bullish ${quote}, and why?
+2. What do carry rates and the ${base}/${quote} yield differential currently suggest — do they favour longs or shorts?
+3. Does the broader risk environment (VIX, equities, safe-haven flows) confirm or contradict the ${d1r.regime||'current'} daily regime reading?
+4. Are there macro risk events in the next 48 hours relevant to ${base} or ${quote} I should be aware of?`;
+
+  navigator.clipboard.writeText(prompt).then(() => {
+    const btn = document.getElementById('cht-copy-btn');
+    if (btn) {
+      btn.textContent = '✓';
+      btn.style.color = 'var(--buy)';
+      setTimeout(() => { btn.textContent = '⧉'; btn.style.color = ''; }, 1800);
     }
+  }).catch(() => {
+    chtSetGhStatus('Clipboard unavailable');
+  });
+}
+function chtAttachLongPress() {
+  document.querySelectorAll('#pair-grid .block').forEach(el => {
+    if (el.dataset.chtLp) return;
+    el.dataset.chtLp = '1';
+    let _lpTimer = null, _lpMoved = false;
+    el.addEventListener('pointerdown', e => {
+      _lpMoved = false;
+      _lpTimer = setTimeout(() => {
+        if (_lpMoved) return;
+        const pairEl = el.querySelector('.b-pair');
+        if (!pairEl) return;
+        const pair = pairEl.textContent.trim();
+        if (PAIRS_ORDER.includes(pair)) { e.preventDefault(); openChart(pair); }
+      }, 500);
+    });
+    const cancel = () => { if (_lpTimer) { clearTimeout(_lpTimer); _lpTimer = null; } };
+    el.addEventListener('pointermove',   () => { _lpMoved = true; cancel(); });
+    el.addEventListener('pointerup',     cancel);
+    el.addEventListener('pointercancel', cancel);
+  });
+}
 
-    save_signals(out)
-    print(f"\n✓ signals.json saved")
+(function() {
+  const grid = document.getElementById('pair-grid');
+  if (!grid) return;
+  const obs = new MutationObserver(chtAttachLongPress);
+  obs.observe(grid, { childList:true });
+})();
+</script>
+<!-- ══ TRADE SYSTEM CSS + JS ══════════════════════════════════════════════ -->
+<style>
+/* ── Trade button ───────────────────────────────────────────────────────── */
+#cht-trade-btn{
+  width:100%;padding:7px;margin-top:6px;
+  border-radius:6px;border:1px solid rgba(0,220,55,.45);
+  background:rgba(0,220,55,.15);color:var(--buy);
+  font-size:11px;font-weight:800;letter-spacing:.06em;cursor:pointer;
+  transition:background .15s;
+}
+#cht-trade-btn:active{background:rgba(0,220,55,.28);}
 
-    # ── Level alerts + EMA touch alerts ───────────────────────────────────────
-    print("\n[Alerts] Checking level alerts + EMA touches…")
+/* ── Trade entry sheet ──────────────────────────────────────────────────── */
+#trade-sheet{
+  position:absolute;bottom:0;left:0;right:0;z-index:50;
+  background:var(--surf);border-top:1px solid var(--bord);
+  border-radius:12px 12px 0 0;
+  touch-action:none;
+  transition:transform .22s ease-out;
+}
+#tsh-drag-handle{
+  width:36px;height:4px;border-radius:2px;
+  background:var(--bord);margin:8px auto 0;
+}
+#trade-sheet-inner{padding:8px 14px 18px;}
+#tsh-header{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+#tsh-pair-lbl{font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--text);flex:1;}
+#tsh-live-price{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--text);}
+#tsh-dir-row{display:flex;gap:8px;margin-bottom:10px;}
+.tsh-dir-btn{flex:1;padding:7px;border-radius:6px;font-size:11px;font-weight:800;letter-spacing:.05em;cursor:pointer;border:1px solid var(--bord);background:none;color:var(--muted);transition:all .15s;}
+#tsh-buy-btn.active{background:rgba(0,220,55,.15);border-color:rgba(0,220,55,.5);color:var(--buy);}
+#tsh-sell-btn.active{background:rgba(248,81,73,.15);border-color:rgba(248,81,73,.5);color:var(--sell);}
+.tsh-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;position:relative;}
+.tsh-lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:32px;}
+.tsh-inp{flex:1;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:12px;font-variant-numeric:tabular-nums;padding:5px 8px;outline:none;}
+.tsh-hint{position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:9px;color:var(--amber);font-weight:700;pointer-events:none;}
+#tsh-rr-row{display:flex;align-items:center;gap:8px;padding:5px 0 7px;border-top:1px solid var(--bord);margin-bottom:7px;}
+#tsh-rr-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+#tsh-notes{width:100%;background:var(--dim);border:1px solid var(--bord);border-radius:5px;color:var(--muted);font-size:10px;padding:6px 8px;outline:none;resize:none;margin-bottom:6px;font-family:inherit;line-height:1.5;}
+#tsh-side-err{font-size:9px;color:var(--sell);font-weight:700;min-height:14px;margin-bottom:6px;}
+#tsh-action-row{display:flex;gap:8px;}
+#tsh-submit-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(0,220,55,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(0,220,55,.15);color:var(--buy);transition:background .15s;display:flex;align-items:center;justify-content:center;}
+#tsh-submit-btn:active{background:rgba(0,220,55,.28);}
+#tsh-close-trade-btn{flex:1;padding:10px;border-radius:7px;border:1px solid rgba(248,81,73,.45);cursor:pointer;font-size:12px;font-weight:800;letter-spacing:.06em;background:rgba(248,81,73,.15);color:var(--sell);transition:background .15s;display:flex;align-items:center;justify-content:center;}
+#tsh-close-trade-btn:active{background:rgba(248,81,73,.28);}
 
-    # Build per-pair H4 last bar (high/low/close) and H4 EMA values
-    _pair_prices = {}
-    _pair_emas   = {}
-    for pair in PAIRS:
-        key  = pair.replace("/", "")
-        sc   = pair_scores.get(key, {})
-        h4r  = (sc.get("h4") or {}).get("raw") or {}
-        h4df = ohlcv.get(key, {}).get("h4")
+/* ── Demo account ────────────────────────────────────────────────────────── */
+.tsh-demo-divider{height:1px;background:var(--bord);margin:6px 0 8px;}
+.tsh-demo-sec{background:var(--dim);border:1px solid var(--bord);border-radius:6px;padding:6px 10px;margin-bottom:6px;}
+.tsh-demo-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;}
+.tsh-demo-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);}
+.tsh-demo-val{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+.tsh-stepper{display:flex;align-items:center;gap:5px;}
+.tsh-step-btn{width:26px;height:26px;flex-shrink:0;background:var(--surf);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:16px;font-weight:300;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;}
+.tsh-step-inp{flex:1;background:var(--surf);border:1px solid var(--bord);border-radius:5px;color:var(--text);font-size:12px;font-weight:700;font-variant-numeric:tabular-nums;padding:4px 6px;text-align:center;outline:none;}
+.tsh-risk-pill{font-size:9px;font-weight:700;border-radius:4px;padding:2px 7px;border:1px solid transparent;}
+.tsh-risk-pill.safe  {background:rgba(0,220,55,.1); border-color:rgba(0,220,55,.3); color:var(--buy);}
+.tsh-risk-pill.warn  {background:rgba(227,179,65,.1);border-color:rgba(227,179,65,.3);color:var(--amber);}
+.tsh-risk-pill.danger{background:rgba(248,81,73,.1); border-color:rgba(248,81,73,.3); color:var(--sell);}
+#tsh-pnl-bar{display:flex;align-items:center;justify-content:space-between;background:rgba(0,220,55,.05);border:1px solid rgba(0,220,55,.18);border-radius:6px;padding:6px 10px;margin-bottom:6px;}
+#tsh-pnl-eur{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--buy);}
+#tsh-pnl-r  {font-size:10px;font-weight:700;font-variant-numeric:tabular-nums;color:var(--buy);}
 
-        # Use H4 last bar high/low/close for wick-accurate EMA touch detection
-        if h4df is not None and len(h4df) >= 1:
-            _pair_prices[key] = {
-                "high":  float(h4df["high"].iloc[-1]),
-                "low":   float(h4df["low"].iloc[-1]),
-                "close": float(h4df["close"].iloc[-1]),
-            }
+/* ── Log balance + equity ────────────────────────────────────────────────── */
+#log-balance-strip{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--bord);}
+.log-bal-main{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--buy);}
+.log-bal-lbl {font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px;}
+.log-bal-peak{font-size:9px;font-weight:700;color:var(--muted);text-align:right;}
+.log-bal-dd  {font-size:9px;font-weight:700;color:var(--sell);text-align:right;margin-top:2px;}
+#log-equity-section{flex-shrink:0;padding:6px 14px 8px;border-bottom:1px solid var(--bord);}
+.log-eq-lbl{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);opacity:.6;margin-bottom:4px;}
 
-        if h4r.get("ema200"):
-            _pair_emas[key] = {
-                "ema200": h4r["ema200"],
-                "ema50":  h4r.get("ema50"),
-            }
+/* ── Log overlay ────────────────────────────────────────────────────────── */
+#log-overlay{max-height:88vh;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,sans-serif;overflow:hidden;}
+#log-overlay.open{display:flex;}
+#log-header{display:none;}
+#log-header span{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+#log-close-btn{background:none;border:none;color:var(--muted);font-size:18px;cursor:pointer;line-height:1;}
+#log-stats{flex-shrink:0;padding:10px 14px;background:var(--surf);border-bottom:1px solid var(--bord);}
+.log-stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;}
+.log-stat{text-align:center;}
+.log-stat-val{font-size:14px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text);}
+.log-stat-val.g{color:var(--buy);}.log-stat-val.r{color:var(--sell);}.log-stat-val.a{color:var(--amber);}
+.log-stat-lbl{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-top:2px;}
+.log-stat-row2{display:flex;justify-content:space-evenly;align-items:center;margin-top:8px;padding-top:7px;border-top:1px solid var(--bord);flex-wrap:wrap;}
+.log-stat2{font-size:9px;color:var(--muted);}
+.log-stat2 b{color:var(--text);font-weight:700;}
+#log-body{flex:1;overflow-x:auto;overflow-y:auto;padding:10px 14px 4px;}
+.log-section-lbl{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:8px 0 5px;opacity:.7;}
+.log-trade-row{display:flex;align-items:center;gap:0;padding:7px 0;border-bottom:1px solid var(--bord);font-size:10px;min-width:max-content;}
+.log-trade-row:last-child{border-bottom:none;}
+.log-col{white-space:nowrap;padding-right:16px;}
+.log-pair{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--text);min-width:56px;}
+.log-dir{font-size:9px;font-weight:700;min-width:36px;}
+.log-dir.buy{color:var(--buy);}.log-dir.sell{color:var(--sell);}
+.log-cell{font-size:9px;color:var(--muted);min-width:72px;}
+.log-cell.val{font-variant-numeric:tabular-nums;}
+.log-result{font-size:11px;font-weight:800;min-width:52px;text-align:right;}
+.log-result.win{color:var(--buy);}.log-result.loss{color:var(--sell);}.log-result.exit{color:var(--amber);}.log-result.open{color:var(--muted);}.log-result.pending{color:var(--muted);}
+.log-wl{font-size:9px;font-weight:800;letter-spacing:.06em;min-width:36px;}
+.log-notes{max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted);font-size:9px;cursor:default;}
+.log-close-trade{background:none;border:1px solid rgba(248,81,73,.4);border-radius:4px;color:var(--sell);font-size:9px;font-weight:700;padding:2px 7px;cursor:pointer;white-space:nowrap;}
+.log-delete-btn{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 5px;opacity:.5;transition:opacity .15s;}
+.log-delete-btn:hover{opacity:1;color:var(--sell);}
+#log-footer{flex-shrink:0;display:flex;gap:8px;padding:10px 14px;border-top:1px solid var(--bord);background:var(--surf);}
+.log-action-btn{flex:1;padding:8px;border-radius:6px;border:1px solid var(--bord);background:none;color:var(--muted);font-size:10px;font-weight:700;cursor:pointer;letter-spacing:.04em;}
+.log-danger-btn{border-color:rgba(248,81,73,.3);color:var(--sell);}
+</style>
 
-    # ── Gold signal computation ───────────────────────────────────────────────
-    ma          = out.get("macro_assets", {})
-    gold_data   = ma.get("gold", {})
-    gold_pct    = gold_data.get("delta_pct")
-    gold_dir    = gold_data.get("direction", "flat")   # up/down/flat
+<script>
+// ════════════════════════════════════════════════════════════════════════════
+//  FSB TRADE SYSTEM  — prefixed tr_ / tsh_ / fsb_tr to avoid collisions
+// ════════════════════════════════════════════════════════════════════════════
 
-    h4_regime   = regime_h4.get("regime", "")
-    h4_conf     = regime_h4.get("confidence", "Low")
-    h1_regime   = regime_h1.get("regime", "")
+const FSB_TR_KEY   = 'fsb_trades_v1';
+const FSB_TG_TOKEN = 'fsb_tg_token';
+const FSB_TG_CHAT  = 'fsb_tg_chatid';
 
-    # Determine gold signal direction
-    RISK_OFF_REGIMES = ("Risk-Off",)
-    RISK_ON_REGIMES  = ("Risk-On",)
+// ── Storage ───────────────────────────────────────────────────────────────────
+function trLoad()  { try { return JSON.parse(localStorage.getItem(FSB_TR_KEY) || '[]'); } catch { return []; } }
+function trSave(t) { localStorage.setItem(FSB_TR_KEY, JSON.stringify(t)); }
 
-    if gold_dir == "down" and h4_regime in RISK_OFF_REGIMES:
-        gs_direction = "bear"
-        h4_confirmed = True
-    elif gold_dir == "up" and h4_regime in RISK_ON_REGIMES:
-        gs_direction = "bull"
-        h4_confirmed = True
-    else:
-        gs_direction = "neutral"
-        h4_confirmed = False
+// ── Telegram ──────────────────────────────────────────────────────────────────
+function tgSaveToken() {
+  const v = document.getElementById('tg-token-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(FSB_TG_TOKEN, v);
+  document.getElementById('tg-token-inp').value = '';
+  document.getElementById('tg-token-inp').placeholder = 'Token saved ✓';
+}
+function tgSaveChat() {
+  const v = document.getElementById('tg-chat-inp').value.trim();
+  if (!v) return;
+  localStorage.setItem(FSB_TG_CHAT, v);
+  document.getElementById('tg-chat-inp').value = '';
+  document.getElementById('tg-chat-inp').placeholder = 'Chat ID saved ✓';
+}
+function tgSend(msg) {
+  const token = localStorage.getItem(FSB_TG_TOKEN);
+  const chat  = localStorage.getItem(FSB_TG_CHAT);
+  if (!token || !chat) return;
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ chat_id:chat, text:msg, parse_mode:'HTML' }),
+  }).catch(() => {});
+}
 
-    h1_confirmed = (
-        (gs_direction == "bear" and h1_regime in RISK_OFF_REGIMES) or
-        (gs_direction == "bull" and h1_regime in RISK_ON_REGIMES)
-    )
+// ── WebSocket constants (used by unified liveWsStart below) ──────────────────
+const TR_WS_URL = 'wss://ws.twelvedata.com/v1/quotes/price';
+let _trWsPrice = null;   // last live price — used by tshCalcRR / submitTrade
 
-    gold_signal = {
-        "direction":      gs_direction,
-        "gold_pct":       round(gold_pct, 2) if gold_pct is not None else None,
-        "h4_confirmed":   h4_confirmed,
-        "h4_confidence":  h4_conf,
-        "h1_confirmed":   h1_confirmed,
-        "updated":        now.isoformat(),
+// Convert internal pair format EURUSD → EUR/USD for Twelvedata API
+function _tdSymbol(pair) { return pair.slice(0,3) + '/' + pair.slice(3); }
+
+// ── Immediate quote fetch (REST fallback — works on weekends / before WS tick) ─
+async function fetchLiveQuote(pair) {
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  try {
+    const sym = _tdSymbol(pair);
+    const url = `https://api.twelvedata.com/quote?symbol=${encodeURIComponent(sym)}&apikey=${key}`;
+    const res = await fetch(url);
+    const d   = await res.json();
+    const price = parseFloat(d.close || d.price || 0);
+    if (!price) return;
+    _livePrice[pair] = price;
+    _trWsPrice = price;
+    if (typeof chtUpdateLivePriceLine === 'function') chtUpdateLivePriceLine(pair, price);
+    if (_tshPair === pair) {
+      const isJpy = pair.includes('JPY');
+      const priceStr = price.toFixed(isJpy ? 3 : 5);
+      const liveEl = document.getElementById('tsh-live-price');
+      if (liveEl) { liveEl.textContent = priceStr; liveEl.style.opacity = '1'; }
+      const entryEl = document.getElementById('tsh-entry');
+      if (entryEl && !entryEl.dataset.userSet) {
+        entryEl.value = priceStr;
+        const submitBtn = document.getElementById('tsh-submit-btn');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.style.opacity = '1'; }
+        tshCalcRR();
+      }
+      _updateLivePnL(price);
     }
-    out["gold_signal"] = gold_signal
-    print(f"\n🟡 Gold signal: {gs_direction.upper()} | H4: {h4_confirmed} ({h4_conf}) | H1: {h1_confirmed}")
+  } catch(e) {}
+}
 
-    save_signals(out)
+// ── Signal snapshot ───────────────────────────────────────────────────────────
+function trSignalSnapshot(pair) {
+  if (!D) return {};
+  const pd=D.pairs?.[pair]||{}, pills=pd.pills||{}, mom=pd.mom||{}, csmd1=D.csm?.d1||{};
+  const base=pair.slice(0,3), quote=pair.slice(3);
+  const ranked=(D.ranked?.top||[]).find(r=>r.pair===pair);
+  const h=new Date().getUTCHours();
+  const session = h>=7&&h<8?'London open':h>=8&&h<12?'London session':h>=12&&h<16?'London/NY overlap':h>=16&&h<21?'NY session':'Asian session';
+  return { d1_pill:pills.d1||'—', h4_pill:pills.h4||'—', h1_pill:pills.h1||'—', cont:pd.cont||0, adx:pd.adx||0, cmp:mom.cmp||0, mom_d1:mom.d1||0, mom_dd1:mom.dd1||0, csm_base:csmd1[base]||50, csm_quote:csmd1[quote]||50, rank_score:ranked?.score||0, regime:D.regime_d1?.regime||'—', macro:D.macro?.label||'—', session };
+}
 
-    # ── Telegram: Gold + H4 (Medium/High) + H1 confirmed ─────────────────────
-    _pair_closes = {k: v["close"] for k, v in _pair_prices.items()}
-    check_levels(_pair_closes, send_telegram)
-    # EMA touch alerts removed — Gold signal is the only proactive alert
+// ── OHLCV localStorage cache (survives page reload — eliminates repeat API calls) ─
+const _OHLCV_TTL = { H1: 45*60*1000, H4: 4*60*60*1000, D1: 8*60*60*1000 };
+function _ohlcvKey(pair, tf) { return `fsb_ohlcv_v1_${pair}_${tf}`; }
+function _ohlcvCacheGet(pair, tf) {
+  try {
+    const raw = localStorage.getItem(_ohlcvKey(pair, tf));
+    if (!raw) return null;
+    const { at, bars } = JSON.parse(raw);
+    if (Date.now() - at > (_OHLCV_TTL[tf] || 3600000)) return null;  // expired
+    return bars;
+  } catch(e) { return null; }
+}
+function _ohlcvCacheSet(pair, tf, bars) {
+  try { localStorage.setItem(_ohlcvKey(pair, tf), JSON.stringify({ at: Date.now(), bars })); }
+  catch(e) {}  // quota exceeded — silent, in-memory cache still works
+}
 
-    if (
-        gs_direction != "neutral"
-        and h4_confirmed
-        and h1_confirmed
-        and h4_conf in ("Medium", "High")
-    ):
-        # Build pair list from ranked top setups
-        ranked_top = out.get("ranked", {}).get("top", [])[:3]
-        pairs_line = " | ".join(
-            f"{r['pair']} {'▲' if r['direction']=='bull' else '▼'}"
-            for r in ranked_top
-        ) if ranked_top else "—"
+// ── Chart price lines ─────────────────────────────────────────────────────────
+let _trPriceLines = {};
 
-        emoji   = "🔴" if gs_direction == "bear" else "🟢"
-        dir_lbl = "BEAR — USD bid" if gs_direction == "bear" else "BULL — Risk-On"
-        gp_str  = f"{gold_pct:+.1f}%" if gold_pct is not None else ""
+// ── Trade zone overlay ────────────────────────────────────────────────────────
+// ── Trade line series (entry/TP/SL as bounded LineSeries) ───────────────────
+let _trLines = {};  // { tradeId: { tp, entry, sl, leftTime, tp_p, entry_p, sl_p } }
 
-        msg = (
-            f"{emoji} <b>Gold Signal: {dir_lbl}</b>\n"
-            f"Gold {gp_str} | H4 {h4_regime} ({h4_conf}) | H1 {h1_regime}\n"
-            f"Setups: {pairs_line}\n"
-            f"{now.strftime('%H:%M')} UTC"
-        )
-        print(f"\n🚨 Gold signal Telegram → {gs_direction.upper()}")
-        send_telegram(msg)
-        out["last_alert"] = now.isoformat()
-        save_signals(out)
-    else:
-        print(f"\nNo Telegram: direction={gs_direction} h4={h4_confirmed} h1={h1_confirmed} conf={h4_conf}")
+function _trClearLines() {
+  Object.values(_trLines).forEach(({ tp, entry, sl }) => {
+    [tp, entry, sl].forEach(s => { try { _chtInst.removeSeries(s); } catch(e){} });
+  });
+  _trLines = {};
+  _trRemoveInfoCard();
+}
 
-    print("=== Hourly Scan complete ===")
+function _trDrawLines() {
+  _trClearLines();
+  _trRenderAllMarkers();
+  if (!_chtCandles || !_chtPair || !_chtInst) return;
+
+  const trades = trLoad().filter(t => t.pair === _chtPair && t.status !== 'closed');
+  if (!trades.length) return;
+
+  const ohlcv = _chtFilteredOhlcv;
+  if (!ohlcv.length) return;
+
+  const tfSec    = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+  const rightNow = Math.floor(Date.now() / 1000);
+
+  trades.forEach(t => {
+    try {
+      // Snap entry time to nearest real candle in filtered OHLCV
+      const entryT  = Math.floor(new Date(t.created).getTime() / 1000);
+      const snapT   = Math.floor(entryT / tfSec) * tfSec;
+      let   snapIdx = ohlcv.findIndex(c => c.time >= snapT);
+      if (snapIdx < 0) snapIdx = ohlcv.length - 1;
+      const leftTime = ohlcv[snapIdx].time;
+
+      // Right endpoint: current time (line extends to now)
+      const rightTime = Math.max(rightNow, ohlcv[ohlcv.length - 1].time + tfSec);
+
+      const makeLine = (price, color, width) => {
+        const s = _chtInst.addLineSeries({
+          color,
+          lineWidth:              width,
+          lineStyle:              0,      // solid
+          priceLineVisible:       false,
+          lastValueVisible:       false,
+          crosshairMarkerVisible: false,
+        });
+        s.setData([{ time: leftTime, value: price }, { time: rightTime, value: price }]);
+        return s;
+      };
+
+      _trLines[t.id] = {
+        tp:      makeLine(t.tp,    'rgba(0,220,55,0.65)',    1),
+        entry:   makeLine(t.entry, 'rgba(205,217,229,0.55)', 1),
+        sl:      makeLine(t.sl,    'rgba(248,81,73,0.65)',   1),
+        leftTime,
+        tp_p:    t.tp,
+        entry_p: t.entry,
+        sl_p:    t.sl,
+      };
+    } catch(e) {}
+  });
+
+  // Render info card after lines are placed
+  _trRenderInfoCard(trades);
+}
+
+function _trUpdateLines(pair) {
+  if (pair !== _chtPair || !Object.keys(_trLines).length) return;
+  const ohlcv     = _chtFilteredOhlcv;
+  const tfSec     = { D1:86400, H4:14400, H1:3600 }[_chtTf] || 3600;
+  const rightTime = Math.max(
+    Math.floor(Date.now() / 1000),
+    ohlcv.length ? ohlcv[ohlcv.length - 1].time + tfSec : 0
+  );
+  Object.values(_trLines).forEach(ln => {
+    if (rightTime <= ln.leftTime) return;
+    const pts = (p) => [{ time: ln.leftTime, value: p }, { time: rightTime, value: p }];
+    try { ln.tp.setData(pts(ln.tp_p));       } catch(e) {}
+    try { ln.entry.setData(pts(ln.entry_p)); } catch(e) {}
+    try { ln.sl.setData(pts(ln.sl_p));       } catch(e) {}
+  });
+  _trUpdateInfoCard(pair);
+}
 
 
-if __name__ == "__main__":
-    import sys
-    if "--test-telegram" in sys.argv:
-        print("Sending Telegram test message…")
-        send_telegram(
-            "\U0001f916 <b>FX Signal Board</b> — Telegram test OK\n"
-            "If you see this, bot token + chat ID are correct."
-        )
-    else:
-        main()
+// ── Trade info card (bottom-right of chart) ───────────────────────────────────
+function _trRemoveInfoCard() {
+  const el = document.getElementById('cht-trade-info-card');
+  if (el) el.remove();
+}
+
+function _trRenderInfoCard(trades) {
+  _trRemoveInfoCard();
+  const priceEl = document.getElementById('cht-price');
+  if (!priceEl || !trades.length) return;
+
+  const card = document.createElement('div');
+  card.id = 'cht-trade-info-card';
+  card.style.cssText = 'position:absolute;top:10px;left:10px;background:rgba(10,14,19,0.92);border:1px solid rgba(30,42,53,0.9);border-radius:6px;padding:7px 10px;z-index:8;min-width:100px;max-width:130px;word-break:break-word;white-space:normal;pointer-events:none;';
+
+  const rows = trades.map((t, idx) => {
+    const isJpy = t.pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+    const dirCol  = t.direction === 'BUY' ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.9)';
+    const arrow   = t.direction === 'BUY' ? '▲' : '▼';
+    const lp      = _livePrice[t.pair];
+    let pnlHtml   = '';
+    if (lp && t.lot_size) {
+      const dir    = t.direction === 'BUY' ? 1 : -1;
+      const pnl    = dir * (lp - t.entry) / ps * _pipValueEUR(t.pair, t.lot_size);
+      const risk   = Math.abs(t.sl - t.entry) / ps * _pipValueEUR(t.pair, t.lot_size);
+      const pnlR   = risk > 0 ? pnl / risk : 0;
+      const pos    = pnl >= 0;
+      const pc     = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+      const sign   = pos ? '+' : '−';
+      pnlHtml = `<div id="ctc-eur-${t.id}" style="font-size:12px;font-weight:800;color:${pc};font-variant-numeric:tabular-nums;margin-top:3px;">${sign}€${Math.abs(pnl).toFixed(2)}</div>`
+               +`<div id="ctc-r-${t.id}"   style="font-size:9px;font-weight:700;color:${pc};font-variant-numeric:tabular-nums;">${sign}${Math.abs(pnlR).toFixed(2)} R</div>`;
+    }
+    const sep = idx > 0 ? '<div style="border-top:1px solid rgba(30,42,53,0.7);margin:5px 0;"></div>' : '';
+    return `${sep}
+      <div style="font-size:9px;font-weight:800;color:${dirCol};letter-spacing:.05em;">${arrow} ${t.direction}</div>
+      <div style="font-size:9px;color:rgba(120,130,140,0.9);margin-top:2px;">Entry <span style="color:rgba(205,217,229,0.85);font-variant-numeric:tabular-nums;">${t.entry}</span></div>
+      <div style="font-size:9px;color:rgba(120,130,140,0.9);">RR <span style="color:rgba(205,217,229,0.85);">${t.rr || '—'}</span></div>
+      ${pnlHtml}`;
+  });
+
+  card.innerHTML = rows.join('');
+  priceEl.appendChild(card);
+}
+
+function _trUpdateInfoCard(pair) {
+  const price = _livePrice[pair];
+  if (!price) return;
+  const trades = trLoad().filter(t => t.pair === pair && t.status !== 'closed');
+  const isJpy  = pair.includes('JPY'), ps = isJpy ? 0.01 : 0.0001;
+  trades.forEach(t => {
+    const eurEl = document.getElementById(`ctc-eur-${t.id}`);
+    const rEl   = document.getElementById(`ctc-r-${t.id}`);
+    if (!eurEl) { _trDrawLines(); return; }   // card missing — full redraw
+    if (!t.lot_size) return;
+    const dir  = t.direction === 'BUY' ? 1 : -1;
+    const pnl  = dir * (price - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
+    const risk = Math.abs(t.sl - t.entry) / ps * _pipValueEUR(pair, t.lot_size);
+    const pnlR = risk > 0 ? pnl / risk : 0;
+    const pos  = pnl >= 0, sign = pos ? '+' : '−';
+    const pc   = pos ? 'rgba(0,220,55,0.9)' : 'rgba(248,81,73,0.85)';
+    eurEl.textContent = `${sign}€${Math.abs(pnl).toFixed(2)}`; eurEl.style.color = pc;
+    if (rEl) { rEl.textContent = `${sign}${Math.abs(pnlR).toFixed(2)} R`; rEl.style.color = pc; }
+  });
+}
+
+
+function _trRenderAllMarkers() {
+  if (!_chtCandles || !_chtPair || !_chtTf) return;
+  const userMarkers = mkLoad().filter(m=>m.pair===_chtPair&&m.tf===_chtTf&&m.active).map(m=>({ time:m.time, position:m.direction==='bull'?'belowBar':'aboveBar', color:m.direction==='bull'?'rgba(0,220,55,.9)':'rgba(248,81,73,.9)', shape:m.direction==='bull'?'arrowUp':'arrowDown', text:m.text||'', size:1.5, id:m.id }));
+  try { _chtCandles.setMarkers(userMarkers); } catch(e) {}
+}
+
+// ── Trade entry sheet ─────────────────────────────────────────────────────────
+let _tshPair=null, _tshDir='BUY';
+
+function openTradeSheet() {
+  if (!_chtPair) return;
+  _tshPair=_chtPair; _tshDir='BUY';
+  document.getElementById('tsh-pair-lbl').textContent = _tshPair;
+  document.getElementById('tsh-buy-btn').classList.add('active');
+  document.getElementById('tsh-sell-btn').classList.remove('active');
+
+  // Leave entry BLANK — will be filled by first WebSocket tick
+  // Show live price as "Connecting…" until WS delivers
+  document.getElementById('tsh-live-price').textContent = 'Connecting…';
+  document.getElementById('tsh-live-price').style.opacity = '0.45';
+  const entryEl = document.getElementById('tsh-entry');
+  entryEl.value = ''; entryEl.dataset.userSet = '';
+  entryEl.placeholder = 'Waiting for live price…';
+  document.getElementById('tsh-tp').value = '';
+  document.getElementById('tsh-sl').value = '';
+  document.getElementById('tsh-notes').value = '';
+  document.getElementById('tsh-rr-val').textContent = '—';
+  document.getElementById('tsh-pending-hint').textContent = '';
+  if (document.getElementById('tsh-side-err')) document.getElementById('tsh-side-err').textContent = '';
+
+  // Disable submit until live price arrives
+  const submitBtn = document.getElementById('tsh-submit-btn');
+  submitBtn.disabled = true;
+  submitBtn.style.opacity = '0.4';
+
+  // Show Close Trade button if there's an active trade for this pair
+  const activeTrade = trLoad().find(t => t.pair===_tshPair && (t.status==='open'||t.status==='pending'));
+  const closeBtn = document.getElementById('tsh-close-trade-btn');
+  if (closeBtn) closeBtn.style.display = activeTrade ? 'flex' : 'none';
+
+  // Sync demo account UI from localStorage
+  _syncCapitalUI(); _syncLotUI(); _updateRiskPill();
+  const lp=_livePrice[_tshPair];
+  if(activeTrade&&activeTrade.status==='open'&&lp) _updateLivePnL(lp);
+  else { const bar=document.getElementById('tsh-pnl-bar'); if(bar) bar.style.display='none'; }
+
+  const sheet = document.getElementById('trade-sheet');
+  sheet.style.transform = 'translateY(0)'; sheet.style.display = 'block';
+  // Start WS — internally calls fetchLiveQuote on new/changed connection
+  liveWsStart(_tshPair);
+  // If WS was already running, _livePrice may already have the price — fill immediately
+  const _cachedLp = _livePrice[_tshPair];
+  if (_cachedLp) {
+    const _isJpy = _tshPair.includes('JPY');
+    const _ps    = _cachedLp.toFixed(_isJpy ? 3 : 5);
+    const _lel   = document.getElementById('tsh-live-price');
+    if (_lel) { _lel.textContent = _ps; _lel.style.opacity = '1'; }
+    const _eel = document.getElementById('tsh-entry');
+    if (_eel && !_eel.dataset.userSet) {
+      _eel.value = _ps; _eel.placeholder = _isJpy ? '0.000' : '0.00000';
+      const _sb = document.getElementById('tsh-submit-btn');
+      if (_sb) { _sb.disabled = false; _sb.style.opacity = '1'; }
+      tshCalcRR();
+    }
+    _updateLivePnL(_cachedLp);
+  }
+}
+
+function closeActiveTrade() {
+  if (!_tshPair) return;
+  const activeTrade = trLoad().find(t => t.pair===_tshPair && (t.status==='open'||t.status==='pending'));
+  if (!activeTrade) return;
+  trManualClose(activeTrade.id);
+  // Update button visibility
+  const closeBtn = document.getElementById('tsh-close-trade-btn');
+  if (closeBtn) closeBtn.style.display = 'none';
+}
+
+function closeTradeSheet() {
+  const sheet = document.getElementById('trade-sheet');
+  if (sheet) { sheet.style.transform='translateY(0)'; sheet.style.display='none'; }
+  _tshPair=null;
+  // Don't stop liveWs — chart price line still needs it
+}
+
+function tshSetDir(dir) {
+  _tshDir=dir;
+  document.getElementById('tsh-buy-btn').classList.toggle('active', dir==='BUY');
+  document.getElementById('tsh-sell-btn').classList.toggle('active', dir==='SELL');
+  tshCalcRR();
+}
+
+function tshCalcRR() {
+  const entry=parseFloat(document.getElementById('tsh-entry').value);
+  const tp   =parseFloat(document.getElementById('tsh-tp').value);
+  const sl   =parseFloat(document.getElementById('tsh-sl').value);
+  const livePrice = _trWsPrice || null;
+  const entryManual = document.getElementById('tsh-entry').dataset.userSet === '1';
+  document.getElementById('tsh-pending-hint').textContent = (livePrice && entry && entryManual && Math.abs(entry-livePrice)>0.000005) ? 'PENDING':'';
+
+  // Validate TP/SL sides
+  const errEl = document.getElementById('tsh-side-err');
+  if (entry && tp && sl) {
+    if (_tshDir==='BUY'  && tp<entry) { errEl.textContent='⚠ TP must be above entry for a BUY'; return; }
+    if (_tshDir==='BUY'  && sl>entry) { errEl.textContent='⚠ SL must be below entry for a BUY'; return; }
+    if (_tshDir==='SELL' && tp>entry) { errEl.textContent='⚠ TP must be below entry for a SELL'; return; }
+    if (_tshDir==='SELL' && sl<entry) { errEl.textContent='⚠ SL must be above entry for a SELL'; return; }
+  }
+  if (errEl) errEl.textContent='';
+
+  if (!entry||!tp||!sl) { document.getElementById('tsh-rr-val').textContent='—'; _updateRiskPill(); return; }
+  const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
+  if (!risk) { document.getElementById('tsh-rr-val').textContent='—'; _updateRiskPill(); return; }
+  document.getElementById('tsh-rr-val').textContent = `1 : ${(reward/risk).toFixed(2)}`;
+  _updateRiskPill();
+}
+
+function submitTrade() {
+  // Block if side validation error is showing
+  const errEl = document.getElementById('tsh-side-err');
+  if (errEl && errEl.textContent) { errEl.style.color='var(--sell)'; return; }
+  const entry=parseFloat(document.getElementById('tsh-entry').value);
+  const tp   =parseFloat(document.getElementById('tsh-tp').value);
+  const sl   =parseFloat(document.getElementById('tsh-sl').value);
+  const notes=document.getElementById('tsh-notes').value.trim();
+  if (!entry||!tp||!sl) { alert('Entry, TP and SL are required.'); return; }
+  const risk=Math.abs(entry-sl), reward=Math.abs(tp-entry);
+  const rr = risk ? (reward/risk).toFixed(2) : null;
+  const livePrice = _trWsPrice || null;
+  const entryManual = document.getElementById('tsh-entry').dataset.userSet === '1';
+  const isPending = entryManual && livePrice && Math.abs(entry-livePrice)>0.000005;
+  const isJpy = _tshPair.includes('JPY');
+  const t = { id:Date.now(), pair:_tshPair, direction:_tshDir, entry, tp, sl, rr:rr?`1:${rr}`:'—', lot_size:_getLot(), status:isPending?'pending':'open', result:null, close_price:null, r_actual:null, pnl_eur:null, notes, created:new Date().toISOString(), closed:null, ...trSignalSnapshot(_tshPair) };
+  const trades=trLoad(); trades.push(t); trSave(trades);
+  tgSend(`🟠 <b>${isPending?'PENDING ORDER SET':'TRADE ENTERED'}</b>\n${t.pair} ${t.direction} @ ${entry.toFixed(isJpy?3:5)}\nTP ${tp.toFixed(isJpy?3:5)}  SL ${sl.toFixed(isJpy?3:5)}  RR 1:${rr}\n${notes?'📝 '+notes:''}`);
+  closeTradeSheet(); _trDrawLines();
+}
+
+function trManualClose(id) {
+  const trades=trLoad(); const t=trades.find(t=>t.id===id);
+  if (!t||t.status==='closed') return;
+  const price=_trWsPrice||(D?.pairs?.[t.pair]?.prev_close||t.entry);
+  const isJpy=t.pair.includes('JPY'), pipSize=isJpy?0.01:0.0001;
+  const dir=t.direction==='BUY'?1:-1;
+  const pips=Math.round(Math.abs(price-t.entry)/pipSize), slPips=Math.round(Math.abs(t.sl-t.entry)/pipSize);
+  const signedPips=dir*(price-t.entry)/pipSize;
+  const pnlEUR=t.lot_size?parseFloat((signedPips*_pipValueEUR(t.pair,t.lot_size)).toFixed(2)):null;
+  t.status='closed'; t.result='manual'; t.close_price=price; t.closed=new Date().toISOString();
+  t.r_actual=slPips?(pips/slPips).toFixed(2):'—'; t.pnl_eur=pnlEUR;
+  trSave(trades);
+  const pnlStr=pnlEUR!=null?(pnlEUR>=0?`+€${pnlEUR.toFixed(2)}`:`−€${Math.abs(pnlEUR).toFixed(2)}`):'';
+  tgSend(`🔵 <b>TRADE CLOSED — MANUAL</b>\n${t.pair} ${t.direction}\nEntry ${t.entry}  Exit ${price.toFixed(isJpy?3:5)}\nActual ${t.r_actual}R${pnlStr?' · '+pnlStr:''}`);
+  _trDrawLines(); renderTradeLog();
+}
+
+function trDeleteTrade(id) {
+  if (!confirm('Delete this trade record?')) return;
+  trSave(trLoad().filter(t=>t.id!==id));
+  renderTradeLog();
+}
+
+// ── Demo account ─────────────────────────────────────────────────────────────
+const FSB_CAPITAL_KEY = 'fsb_capital_v1';
+const FSB_LOT_KEY     = 'fsb_lot_v1';
+
+function _getCapital()  { return Math.max(100, parseFloat(localStorage.getItem(FSB_CAPITAL_KEY)||'10000')||10000); }
+function _getCurrentBalance() {
+  try {
+    const capital = _getCapital();
+    const closed  = trLoad().filter(t => t.status === 'closed');
+    const bal     = closed.reduce((sum, t) => sum + (t.pnl_eur || 0), capital);
+    return Math.max(100, Math.round(bal));
+  } catch(e) { return _getCapital(); }
+}
+function _saveCapital(v){ localStorage.setItem(FSB_CAPITAL_KEY, String(v)); }
+function _getLot()      { return Math.max(0.01, parseFloat(localStorage.getItem(FSB_LOT_KEY)||'0.10')||0.10); }
+function _saveLot(v)    { localStorage.setItem(FSB_LOT_KEY, String(v)); }
+
+function _syncCapitalUI(){
+  const v = _getCurrentBalance();
+  const inp  = document.getElementById('tsh-capital-inp');  if(inp)  inp.value = v;
+  const disp = document.getElementById('tsh-capital-disp'); if(disp) disp.textContent = '€ '+v.toLocaleString('de-DE');
+}
+function _syncLotUI(){
+  const v = _getLot();
+  const inp = document.getElementById('tsh-lot-inp'); if(inp) inp.value = v.toFixed(2);
+}
+function adjustCapital(delta){
+  _saveCapital(Math.max(100, Math.round(_getCapital()+delta)));
+  _syncCapitalUI(); _updateRiskPill();
+}
+function onCapitalInput(){
+  const v = parseFloat(document.getElementById('tsh-capital-inp').value);
+  if(!isNaN(v)&&v>=100) _saveCapital(Math.round(v));
+  _syncCapitalUI(); _updateRiskPill();
+}
+function adjustLot(delta){
+  _saveLot(Math.max(0.01, Math.round((_getLot()+delta)*100)/100));
+  _syncLotUI(); _updateRiskPill();
+}
+function onLotInput(){
+  const v = parseFloat(document.getElementById('tsh-lot-inp').value);
+  if(!isNaN(v)&&v>=0.01) _saveLot(Math.round(v*100)/100);
+  _updateRiskPill();
+}
+
+// Pip value in EUR (approximate — uses live EUR/USD cross if available)
+function _pipValueEUR(pair, lot){
+  const eurusd = _livePrice['EURUSD'] || 1.10;
+  if(pair.includes('JPY')){
+    const usdjpy = _livePrice['USDJPY'] || 150;
+    return lot * (1000 / usdjpy) / eurusd;
+  }
+  return lot * 10 / eurusd;
+}
+
+function _updateRiskPill(){
+  const pill  = document.getElementById('tsh-risk-pill'); if(!pill) return;
+  const entry = parseFloat(document.getElementById('tsh-entry')?.value);
+  const sl    = parseFloat(document.getElementById('tsh-sl')?.value);
+  const lot   = _getLot(), cap = _getCurrentBalance();
+  if(!entry||!sl||!_tshPair){ pill.textContent='—'; pill.className='tsh-risk-pill'; return; }
+  const isJpy   = _tshPair.includes('JPY');
+  const pipSize = isJpy ? 0.01 : 0.0001;
+  const slPips  = Math.abs(entry-sl)/pipSize;
+  const riskEUR = slPips * _pipValueEUR(_tshPair, lot);
+  const pct     = riskEUR / cap * 100;
+  pill.textContent = pct.toFixed(1)+'% risk';
+  pill.className   = 'tsh-risk-pill '+(pct<=2?'safe':pct<=5?'warn':'danger');
+}
+
+function _updateLivePnL(price){
+  const bar = document.getElementById('tsh-pnl-bar'); if(!bar||!_tshPair) return;
+  const active = trLoad().find(t=>t.pair===_tshPair&&t.status==='open');
+  if(!active||!active.lot_size){ bar.style.display='none'; return; }
+  const lot=active.lot_size, isJpy=_tshPair.includes('JPY'), pipSize=isJpy?0.01:0.0001;
+  const dir=active.direction==='BUY'?1:-1;
+  const pips=dir*(price-active.entry)/pipSize;
+  const pnlEUR=pips*_pipValueEUR(_tshPair,lot);
+  const slPips=Math.abs(active.sl-active.entry)/pipSize;
+  const riskEUR=slPips*_pipValueEUR(_tshPair,lot);
+  const pnlR=riskEUR>0?pnlEUR/riskEUR:0;
+  const pos=pnlEUR>=0, col=pos?'var(--buy)':'var(--sell)';
+  const eurEl=document.getElementById('tsh-pnl-eur'), rEl=document.getElementById('tsh-pnl-r');
+  if(eurEl){ eurEl.textContent=(pos?'+ ':'− ')+'€ '+Math.abs(pnlEUR).toFixed(2); eurEl.style.color=col; }
+  if(rEl)  { rEl.textContent  =(pos?'+ ':'− ')+Math.abs(pnlR).toFixed(2)+' R';  rEl.style.color=col; }
+  bar.style.display='flex';
+}
+
+// ── Log balance strip + equity curve ─────────────────────────────────────────
+function _renderBalance(trades){
+  const capital = _getCapital();
+  const closed  = trades.filter(t=>t.status==='closed');
+  let bal=capital, peak=capital, maxDD=0;
+  closed.forEach(t=>{
+    bal+=(t.pnl_eur||0);
+    if(bal>peak) peak=bal;
+    const dd=(peak-bal)/peak*100;
+    if(dd>maxDD) maxDD=dd;
+  });
+  const pos=bal>=capital;
+  const fmt=v=>v.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const bEl=document.getElementById('log-bal-val');
+  const pEl=document.getElementById('log-bal-peak');
+  const dEl=document.getElementById('log-bal-dd');
+  if(bEl){ bEl.textContent='€ '+fmt(bal); bEl.style.color=pos?'var(--buy)':'var(--sell)'; }
+  if(pEl) pEl.textContent='Peak € '+fmt(peak);
+  if(dEl) dEl.textContent='Max DD −'+maxDD.toFixed(1)+'%';
+}
+
+function _renderEquityCurve(trades){
+  const canvas=document.getElementById('log-equity-canvas'); if(!canvas) return;
+  const closed=trades.filter(t=>t.status==='closed');
+  const capital=_getCapital();
+  let bal=capital;
+  const pts=[capital];
+  closed.forEach(t=>{ bal+=(t.pnl_eur||0); pts.push(bal); });
+  const W=canvas.offsetWidth||300; canvas.width=W; const H=44;
+  const ctx=canvas.getContext('2d'); ctx.clearRect(0,0,W,H);
+  if(pts.length<2){ ctx.fillStyle='rgba(0,180,50,.07)'; ctx.fillRect(0,H*.6,W,H*.4); return; }
+  const minV=Math.min(...pts), maxV=Math.max(...pts), range=maxV-minV||1;
+  const tx=i=>(i/(pts.length-1))*W, ty=v=>H-4-((v-minV)/range)*(H-10);
+  ctx.beginPath();
+  pts.forEach((v,i)=>i===0?ctx.moveTo(tx(i),ty(v)):ctx.lineTo(tx(i),ty(v)));
+  ctx.strokeStyle='rgba(0,220,55,.6)'; ctx.lineWidth=1.5; ctx.lineJoin='round'; ctx.stroke();
+  ctx.lineTo(tx(pts.length-1),H); ctx.lineTo(0,H); ctx.closePath();
+  ctx.fillStyle='rgba(0,220,55,.07)'; ctx.fill();
+  ctx.beginPath(); ctx.arc(tx(pts.length-1),ty(pts[pts.length-1]),2.5,0,Math.PI*2);
+  ctx.fillStyle='#00dc37'; ctx.fill();
+}
+
+// ── Log overlay ───────────────────────────────────────────────────────────────
+function openTradeLog()  { renderTradeLog(); document.getElementById('log-overlay').classList.add('open'); }
+function closeTradeLog() { document.getElementById('log-overlay').classList.remove('open'); }
+
+function renderTradeLog() {
+  const trades=trLoad();
+  _renderLogStats(trades);
+  _renderLogBody(trades);
+  _renderBalance(trades);
+  _renderEquityCurve(trades);
+}
+
+function _renderLogStats(trades) {
+  const closed=trades.filter(t=>t.status==='closed');
+  const wins=closed.filter(t=>t.result==='win'), losses=closed.filter(t=>t.result==='loss'), exits=closed.filter(t=>t.result==='manual');
+  const n=closed.length, wr=n?Math.round(wins.length/n*100):0;
+  const sumWin=wins.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
+  const sumLoss=losses.reduce((s,t)=>s+(parseFloat(t.r_actual)||0),0);
+  const pf=sumLoss?(sumWin/sumLoss).toFixed(2):wins.length?'∞':'—';
+  const avgRR=wins.length?(wins.map(t=>parseFloat(t.rr?.replace('1:',''))||0).reduce((s,v)=>s+v,0)/wins.length).toFixed(1):'—';
+  const avgWin=wins.length?(sumWin/wins.length).toFixed(1):'—';
+  const avgLoss=losses.length?(sumLoss/losses.length).toFixed(1):'—';
+  let streak=0,streakType='';
+  for (let i=closed.length-1;i>=0;i--) { const r=closed[i].result; if(r==='manual')continue; if(!streakType){streakType=r;streak=1;}else if(r===streakType)streak++;else break; }
+  const streakStr=streakType?(streakType==='win'?'W':'L')+streak:'—';
+  const pairWins={};wins.forEach(t=>{pairWins[t.pair]=(pairWins[t.pair]||0)+1;});
+  const bestPair=Object.entries(pairWins).sort((a,b)=>b[1]-a[1])[0]?.[0]||'—';
+  const wrc=wr>=55?'g':wr>=45?'a':'r', pfc=parseFloat(pf)>=1.5?'g':parseFloat(pf)>=1.0?'a':'r';
+  document.getElementById('log-stats').innerHTML = `<div class="log-stat-grid"><div class="log-stat"><div class="log-stat-val">${n}</div><div class="log-stat-lbl">Trades</div></div><div class="log-stat"><div class="log-stat-val ${wrc}">${wr}%</div><div class="log-stat-lbl">Win Rate</div></div><div class="log-stat"><div class="log-stat-val ${pfc}">${pf}</div><div class="log-stat-lbl">Profit Factor</div></div><div class="log-stat"><div class="log-stat-val a">${streakStr}</div><div class="log-stat-lbl">Streak</div></div></div><div class="log-stat-row2"><span class="log-stat2">Avg win <b>+${avgWin}R</b></span><span class="log-stat2">Avg loss <b>-${avgLoss}R</b></span><span class="log-stat2">Avg RR <b>1:${avgRR}</b></span><span class="log-stat2">Best pair <b>${bestPair}</b></span></div>`;
+}
+
+function _renderLogBody(trades) {
+  const open=trades.filter(t=>t.status==='open'), pending=trades.filter(t=>t.status==='pending');
+  const closed=trades.filter(t=>t.status==='closed').slice().reverse();
+  const isJpy=p=>p.includes('JPY'), fmt=(p,v)=>v!=null?parseFloat(v).toFixed(isJpy(p)?3:5):'—';
+  let html='';
+  if (open.length||pending.length) {
+    html+='<div class="log-section-lbl">Open & Pending</div>';
+    [...open,...pending].forEach(t=>{
+      const st=t.status==='pending'?'pending':'open';
+      html+=`<div class="log-trade-row">
+        <span class="log-col log-pair">${t.pair}</span>
+        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+        <span class="log-col log-result ${st}">${st.toUpperCase()}</span>
+        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
+        <span class="log-col log-cell val">TP ${fmt(t.pair,t.tp)}</span>
+        <span class="log-col log-cell val">SL ${fmt(t.pair,t.sl)}</span>
+        <span class="log-col log-cell">${t.rr}</span>
+        <button class="log-close-trade" onclick="trManualClose(${t.id})">Close</button>
+      </div>`;
+    });
+  }
+  if (closed.length) {
+    html+='<div class="log-section-lbl">History</div>';
+    closed.forEach(t=>{
+      const rc=t.result==='win'?'win':t.result==='loss'?'loss':(t.result==='manual'||t.result==='exit')?'exit':'open';
+      const wl=t.result==='win'?'WIN':t.result==='loss'?'LOSS':(t.result==='manual'||t.result==='exit')?'EXIT':'—';
+      const rl=t.result==='win'?`+${t.r_actual}R`:t.result==='loss'?`-${t.r_actual}R`:'Manual';
+      const ds=t.closed?new Date(t.closed).toLocaleDateString('en-GB',{day:'numeric',month:'short'}):'—';
+      const note=t.notes?t.notes:'';
+      html+=`<div class="log-trade-row">
+        <span class="log-col log-pair">${t.pair}</span>
+        <span class="log-col log-dir ${t.direction==='BUY'?'buy':'sell'}">${t.direction}</span>
+        <span class="log-col log-result ${rc} log-wl">${wl}</span>
+        <span class="log-col log-cell val">@ ${fmt(t.pair,t.entry)}</span>
+        <span class="log-col log-cell val">→ ${fmt(t.pair,t.close_price)}</span>
+        <span class="log-col log-cell">${ds}</span>
+        <span class="log-col log-cell">${t.rr}</span>
+        <span class="log-col log-result ${rc}">${rl}</span>
+        <span class="log-col log-cell log-notes" title="${note}">${note}</span>
+        <button class="log-delete-btn" onclick="trDeleteTrade(${t.id})" title="Delete">✕</button>
+      </div>`;
+    });
+  }
+  if (!html) html='<div style="color:var(--muted);font-size:11px;text-align:center;padding:30px 0;">No trades yet.</div>';
+  document.getElementById('log-body').innerHTML=html;
+}
+
+// ── CSV export ────────────────────────────────────────────────────────────────
+function exportTradeCSV() {
+  const trades=trLoad(); if(!trades.length) return;
+  const cols=['id','pair','direction','entry','tp','sl','rr','status','result','close_price','r_actual','notes','d1_pill','h4_pill','h1_pill','cont','adx','cmp','csm_base','csm_quote','rank_score','regime','macro','session','created','closed'];
+  const rows=[cols.join(',')];
+  trades.forEach(t=>rows.push(cols.map(c=>{const v=t[c]??'';return String(v).includes(',')?`"${v}"`:v;}).join(',')));
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([rows.join('\n')],{type:'text/csv'}));
+  a.download=`fsb_trades_${new Date().toISOString().slice(0,10)}.csv`; a.click();
+}
+
+function clearAllTrades() {
+  if(!confirm('Delete all trade records? This cannot be undone.')) return;
+  localStorage.removeItem(FSB_TR_KEY); renderTradeLog();
+}
+
+// ── Swipe-to-dismiss ──────────────────────────────────────────────────────────
+(function() {
+  let _sy=0,_cy=0,_drag=false;
+  function _start(e){ const t=e.touches?e.touches[0]:e; _sy=t.clientY; _cy=_sy; _drag=true; }
+  function _move(e) {
+    if(!_drag)return;
+    const t=e.touches?e.touches[0]:e; _cy=t.clientY;
+    const dy=Math.max(0,_cy-_sy);
+    const sh=document.getElementById('trade-sheet'); if(sh) sh.style.transform=`translateY(${dy}px)`;
+    if(e.cancelable) e.preventDefault();
+  }
+  function _end() {
+    if(!_drag)return; _drag=false;
+    const dy=_cy-_sy; const sh=document.getElementById('trade-sheet'); if(!sh)return;
+    if(dy>80){ sh.style.transform='translateY(100%)'; setTimeout(closeTradeSheet,220); }
+    else { sh.style.transform='translateY(0)'; }
+  }
+  window.addEventListener('load',()=>{
+    const handle=document.getElementById('tsh-drag-handle');
+    if(!handle) return;
+    handle.addEventListener('touchstart',_start,{passive:true});
+    handle.addEventListener('touchmove', _move, {passive:false});
+    handle.addEventListener('touchend',  _end);
+    handle.addEventListener('mousedown', _start);
+    window.addEventListener('mousemove', _move);
+    window.addEventListener('mouseup',   _end);
+  });
+})();
+
+// ── Unified live price WebSocket ──────────────────────────────────────────────
+// Single connection serves both chart price line and trade sheet.
+// Twelvedata free tier = 1 concurrent WS connection.
+let _liveWs   = null;
+let _livePair = null;
+const _livePrice = {};   // pair → last known price, persists across chart renders
+
+function onLiveTick(pair, price) {
+  chtUpdateLivePriceLine(pair, price);
+  if (pair === _chtPair) _trUpdateLines(pair);
+  if (_tshPair !== pair) return;
+  const liveEl = document.getElementById('tsh-live-price');
+  if (liveEl) { const isJpy=pair.includes('JPY'); liveEl.textContent=price.toFixed(isJpy?3:5); liveEl.style.opacity='1'; }
+  const entryEl = document.getElementById('tsh-entry');
+  if (entryEl && !entryEl.dataset.userSet) {
+    const isJpy=pair.includes('JPY'); entryEl.value=price.toFixed(isJpy?3:5);
+    const sb=document.getElementById('tsh-submit-btn'); if(sb){sb.disabled=false;sb.style.opacity='1';}
+    tshCalcRR();
+  }
+  _updateLivePnL(price);
+}
+
+function liveWsStart(pair) {
+  if (_livePair === pair && _liveWs && _liveWs.readyState === 1) return;
+  liveWsStop();
+  // Immediately fetch last price via REST — instant, works on weekends too
+  fetchLiveQuote(pair);
+  const key = localStorage.getItem(LS_KEY);
+  if (!key) return;
+  _livePair = pair;
+  try {
+    _liveWs = new WebSocket(`${TR_WS_URL}?apikey=${key}`);
+    _liveWs.onopen    = () => _liveWs.send(JSON.stringify({ action:'subscribe', params:{ symbols:_tdSymbol(pair) } }));
+    _liveWs.onmessage = (e) => {
+      try {
+        const d = JSON.parse(e.data);
+        if (d.event === 'price' && d.price) {
+          const price = parseFloat(d.price);
+          _livePrice[pair] = price;
+          _trWsPrice = price;
+          onLiveTick(pair, price);
+        }
+      } catch(er) {}
+    };
+    _liveWs.onerror = () => { _liveWs=null; };
+    _liveWs.onclose = () => { _liveWs=null; };
+  } catch(e) { _liveWs=null; }
+}
+function liveWsStop() {
+  if (_liveWs) { try { _liveWs.close(); } catch(e) {} _liveWs=null; }
+  _livePair=null; _trWsPrice=null;
+}
+// Backwards-compat stubs
+function chtLiveWsStart(p)  { liveWsStart(p); }
+function chtLiveWsStop()    { /* no-op: chart WS and trade WS are now unified */ }
+
+// ── Wire chart open/close to chart live WS ────────────────────────────────────
+(function() {
+  window.addEventListener('load', () => {
+    const el = document.getElementById('cht-overlay');
+    if (!el) return;
+    new MutationObserver(() => {
+      if (el.classList.contains('open')) {
+        if (_chtPair) {
+          liveWsStart(_chtPair);  // includes immediate REST quote fetch
+        }
+      } else {
+        liveWsStop();
+        _trPriceLines={};
+      }
+    }).observe(el, { attributes:true, attributeFilter:['class'] });
+
+    // Wire input events for live RR calculation
+    ['tsh-entry','tsh-tp','tsh-sl'].forEach(id => {
+      const inp = document.getElementById(id);
+      if (inp) {
+        if (id==='tsh-entry') inp.addEventListener('input', ()=>{ inp.dataset.userSet='1'; tshCalcRR(); });
+        else inp.addEventListener('input', tshCalcRR);
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
