@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T23:19:52.289506+00:00",
+  "updated": "2026-06-02T02:08:08.633602+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4515.0,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 4506.4,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.181,
-      "delta_pct": 0.3,
+      "value": 99.205,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.566,
-      "delta_pct": 3.2,
-      "direction": "up",
+      "value": 6.5465,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.33,
-      "delta_pct": 5.7,
-      "direction": "up",
+      "value": 91.72,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 71327.0,
-      "delta_pct": -3.1,
+      "value": 70207.0,
+      "delta_pct": -4.6,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY long invalidated. Dollar weakness from Iran de-escalation and crude retreat undermines JPY safe haven bid supporting the pair's upside.",
-    "updated": "2026-06-01T23:19:52.289506+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-06-02T02:08:08.633602+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on medium supports GBP strength, challenges yen safety bid.",
+    "text": "GBPJPY LONG: Risk-on medium supports long, VIX surge challenges conviction.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,7 +628,7 @@
         "score": 5.88
       }
     ],
-    "updated": "2026-06-01T23:19:52.289506+00:00"
+    "updated": "2026-06-02T02:08:08.633602+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-01T23:19:52.289506+00:00"
+    "updated": "2026-06-02T02:08:08.633602+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -711,8 +711,8 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "ISM manufacturing rises to highest level since 2022, supporting US dollar strength.",
-    "updated": "2026-06-01T23:19:52.289506+00:00"
+    "text": "White House trims tariffs on farm and industrial gear, tweaks metals regime",
+    "updated": "2026-06-02T02:08:08.633602+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00"
 }
