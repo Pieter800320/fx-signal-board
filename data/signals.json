@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T07:47:48.892953+00:00",
+  "updated": "2026-06-02T08:17:41.886071+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.25,
-      "delta_pct": 1.2,
+      "value": 16.19,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4564.0,
+      "value": 4566.4,
       "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.081,
+      "value": 99.056,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.627,
-      "delta_pct": 1.6,
+      "value": 6.6415,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.33,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 90.75,
+      "delta_pct": -1.5,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 69986.0,
-      "delta_pct": -1.9,
+      "value": 69834.0,
+      "delta_pct": -2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by dollar weakness on Iran deal hopes and crude oil retreat. Energy shock headlines may pressure EUR but support GBP relative strength.",
-    "updated": "2026-06-02T07:47:48.892953+00:00"
+    "text": "GBPJPY LONG accelerated by dollar weakness and BoJ taper debate supporting yen strength differential. GBPUSD LONG supported by pound strength on dollar selloff. USDCAD LONG conflicted by crude oil retreat weakening Canadian demand.",
+    "updated": "2026-06-02T08:17:41.886071+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms strong momentum and ADX confluence perfectly.\n\nGBPUSD LONG: Weak CMP challenges setup despite Risk-On macro tailwind confirmation.\n\nNZDJPY LONG: Copper strength supports NZD but ADX extreme suggests caution.",
+    "text": "GBPJPY LONG: Risk-On regime strongly confirms setup, ADX validates trend continuation signal.\n\nGBPUSD LONG: Risk-On supports trade but weak CMP reading challenges conviction slightly.\n\nUSDCAD LONG: Falling WTI directly challenges long bias, weakens CAD offered argument today.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -633,12 +633,12 @@
         "score": 5.7
       },
       {
-        "pair": "NZDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.55
+        "score": 4.85
       }
     ],
-    "updated": "2026-06-02T07:47:48.892953+00:00"
+    "updated": "2026-06-02T08:17:41.886071+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T07:47:48.892953+00:00"
+    "updated": "2026-06-02T08:17:41.886071+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar Falls as Crude Oil Retreats",
-      "Sterling pound jumps as dollar sells off on Iran deal hopes",
-      "Australia's current account deficit widening, inventory draw weighs GDP"
+      "BoJ taper debate heats up as rising yields complicate exit strategy",
+      "European Parliament removes import duties on US goods, trade deal compliance",
+      "Dollar falls as crude oil retreats, Iran-Hormuz deal hopes rise"
     ],
-    "updated": "2026-06-02T07:47:48.892953+00:00"
+    "updated": "2026-06-02T08:17:41.886071+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00",
   "gold_signal": {
