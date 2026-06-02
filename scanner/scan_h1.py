@@ -16,7 +16,8 @@ Flow:
  10. D1% / D5% / prev_close / prev5_close
  11. Preserve news/macro/analysis from previous signals.json
  12. Write signals.json
- 13. Telegram on H4 regime transition
+ 13. Gold signal computation (gold_signal key)
+ 14. Telegram: Gold + H4 + H1 confirmed
 """
 
 import json
@@ -297,7 +298,7 @@ def main():
         k: prev.get(k)
         for k in ("regime_w1", "macro", "macro_assets",
                   "catalyst", "ranked", "calendar", "week_ahead",
-                  "deep_analysis", "breaking", "last_alert")
+                  "deep_analysis", "breaking", "last_alert", "gold_signal")
         if prev.get(k)
     }
 
@@ -341,31 +342,82 @@ def main():
                 "ema50":  h4r.get("ema50"),
             }
 
+    # ── Gold signal computation ───────────────────────────────────────────────
+    ma          = out.get("macro_assets", {})
+    gold_data   = ma.get("gold", {})
+    gold_pct    = gold_data.get("delta_pct")
+    gold_dir    = gold_data.get("direction", "flat")   # up/down/flat
+
+    h4_regime   = regime_h4.get("regime", "")
+    h4_conf     = regime_h4.get("confidence", "Low")
+    h1_regime   = regime_h1.get("regime", "")
+
+    # Determine gold signal direction
+    RISK_OFF_REGIMES = ("Risk-Off",)
+    RISK_ON_REGIMES  = ("Risk-On",)
+
+    if gold_dir == "down" and h4_regime in RISK_OFF_REGIMES:
+        gs_direction = "bear"
+        h4_confirmed = True
+    elif gold_dir == "up" and h4_regime in RISK_ON_REGIMES:
+        gs_direction = "bull"
+        h4_confirmed = True
+    else:
+        gs_direction = "neutral"
+        h4_confirmed = False
+
+    h1_confirmed = (
+        (gs_direction == "bear" and h1_regime in RISK_OFF_REGIMES) or
+        (gs_direction == "bull" and h1_regime in RISK_ON_REGIMES)
+    )
+
+    gold_signal = {
+        "direction":      gs_direction,
+        "gold_pct":       round(gold_pct, 2) if gold_pct is not None else None,
+        "h4_confirmed":   h4_confirmed,
+        "h4_confidence":  h4_conf,
+        "h1_confirmed":   h1_confirmed,
+        "updated":        now.isoformat(),
+    }
+    out["gold_signal"] = gold_signal
+    print(f"\n🟡 Gold signal: {gs_direction.upper()} | H4: {h4_confirmed} ({h4_conf}) | H1: {h1_confirmed}")
+
+    save_signals(out)
+
+    # ── Telegram: Gold + H4 (Medium/High) + H1 confirmed ─────────────────────
     _pair_closes = {k: v["close"] for k, v in _pair_prices.items()}
     check_levels(_pair_closes, send_telegram)
     check_ema_touches(_pair_prices, _pair_emas, send_telegram)
 
-    # ── Telegram on H4 regime transition ─────────────────────────────────────
-    if new_regime_name != prev_regime_name and prev_regime_name != "Unknown":
-        conf = regime_h4["confidence"]
-        confluence_line = (
-            f"\n⚡ <b>3-TF Confluence: {aligned_regime}</b>" if aligned_regime else
-            f"\nD1: {regime_d1['regime']} · H1: {regime_h1['regime']}"
-        )
-        msg  = (
-            f"{regime_emoji(new_regime_name)} <b>H4 Regime: {new_regime_name}</b> "
-            f"({conf})\n"
-            f"← was {prev_regime_name}"
-            f"{confluence_line}\n"
-            f"Score: {regime_h4['score']}/10 · "
+    if (
+        gs_direction != "neutral"
+        and h4_confirmed
+        and h1_confirmed
+        and h4_conf in ("Medium", "High")
+    ):
+        # Build pair list from ranked top setups
+        ranked_top = out.get("ranked", {}).get("top", [])[:3]
+        pairs_line = " | ".join(
+            f"{r['pair']} {'▲' if r['direction']=='bull' else '▼'}"
+            for r in ranked_top
+        ) if ranked_top else "—"
+
+        emoji   = "🔴" if gs_direction == "bear" else "🟢"
+        dir_lbl = "BEAR — USD bid" if gs_direction == "bear" else "BULL — Risk-On"
+        gp_str  = f"{gold_pct:+.1f}%" if gold_pct is not None else ""
+
+        msg = (
+            f"{emoji} <b>Gold Signal: {dir_lbl}</b>\n"
+            f"Gold {gp_str} | H4 {h4_regime} ({h4_conf}) | H1 {h1_regime}\n"
+            f"Setups: {pairs_line}\n"
             f"{now.strftime('%H:%M')} UTC"
         )
-        print(f"\n⚡ Regime transition → sending Telegram alert")
+        print(f"\n🚨 Gold signal Telegram → {gs_direction.upper()}")
         send_telegram(msg)
         out["last_alert"] = now.isoformat()
         save_signals(out)
     else:
-        print("\nNo regime transition.")
+        print(f"\nNo Telegram: direction={gs_direction} h4={h4_confirmed} h1={h1_confirmed} conf={h4_conf}")
 
     print("=== Hourly Scan complete ===")
 
