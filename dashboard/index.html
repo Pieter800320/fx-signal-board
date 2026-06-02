@@ -650,7 +650,7 @@ function renderNews(){
         const actColor = isVal(e.actual) ? 'var(--text)' : 'var(--muted)';
         return `<div class="cal-row" style="display:grid;grid-template-columns:28px 62px 30px 1fr 54px 54px;gap:4px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(205,217,229,0.06);">
           <span class="cal-day" style="font-size:9px;color:var(--muted);">${dayStr}</span>
-          <span class="cal-time" style="font-size:9px;color:var(--muted);">${timeStr}</span>
+          <span class="cal-time" style="font-size:9px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${(e.time||'—').replace(/\s*\(.*?\)/g,'').replace(/\s*UTC\s*$/i,'').trim()} UTC</span>
           <span class="cal-curr" style="font-size:9px;color:var(--buy);font-weight:600;">${ccy}</span>
           <span class="cal-name" style="font-size:10px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.name||'—'}</span>
           <span style="font-size:9px;color:var(--muted);text-align:right;">fcst ${forecast}</span>
