@@ -278,7 +278,7 @@
     <div class="ins-line" style="background:rgba(248,81,73,0.7);"></div>
     <div style="flex:1;min-width:0;">
       <div class="ins-lbl">BREAKING</div>
-      <div id="breaking-txt" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.4;"></div>
+      <div id="breaking-txt" style="font-size:11px;font-weight:600;color:var(--text);line-height:1.6;"></div>
     </div>
   </div>
 </div>
@@ -297,12 +297,11 @@
   <!-- Collapsible body -->
   <div id="insights-body">
 
-    <!-- Deep Analysis -->
+    <!-- Daily Brief -->
     <div class="insights-sec" id="da-wrap" style="display:none;">
       <div class="ins-line da-line"></div>
       <div style="flex:1;min-width:0;">
-        <div class="ins-lbl" id="da-lbl">DEEP ANALYSIS · —</div>
-        <div class="ins-headline" id="da-headline"></div>
+        <div class="ins-lbl" id="da-lbl">DAILY BRIEF · —</div>
         <div class="ins-txt" id="da-txt"></div>
       </div>
     </div>
@@ -471,17 +470,27 @@ function render(){
 function renderBreaking(){
   const breaking = D.breaking || {};
   const wrap = document.getElementById("breaking-wrap");
-  if (!breaking.text || !breaking.updated) { wrap.style.display = "none"; return; }
-  
+  if (!breaking.updated) { wrap.style.display = "none"; return; }
+
   // Only show if < 2 hours old
   try {
     const age_m = (Date.now() - new Date(breaking.updated).getTime()) / 60000;
     if (age_m > 120) { wrap.style.display = "none"; return; }
   } catch(e) { wrap.style.display = "none"; return; }
-  
+
+  // Support both old {text} and new {headlines:[...]} formats
+  const lines = breaking.headlines
+    ? breaking.headlines.filter(Boolean)
+    : (breaking.text ? [breaking.text] : []);
+  if (!lines.length) { wrap.style.display = "none"; return; }
+
   wrap.style.display = "block";
   const txt = document.getElementById("breaking-txt");
-  if (txt) txt.textContent = breaking.text;
+  if (txt) txt.innerHTML = lines.map((h,i) =>
+    `<div style="padding:${i?'4px 0 0':0} 0;${i?'border-top:1px solid rgba(205,217,229,0.08);':''}">
+      ${h.replace(/</g,'&lt;')}
+    </div>`
+  ).join('');
 }
 
 function renderWeekAhead(){
@@ -507,9 +516,7 @@ function renderDeepAnalysis(){
 
   wrap.style.display = "flex";
   document.getElementById("da-lbl").textContent =
-    "DEEP ANALYSIS · " + fmtTime(da.generated_at);
-  const headlineEl = document.getElementById("da-headline");
-  if (headlineEl) headlineEl.textContent = da.headline || "";
+    "DAILY BRIEF · " + fmtTime(da.generated_at);
   document.getElementById("da-txt").textContent = da.text;
 }
 function toggleInsights() {
@@ -630,21 +637,32 @@ function renderNews(){
       slots[key].items.push({ ccy, name:e.name, meta });
     });
 
-    document.getElementById("calendar-txt").innerHTML = slotOrder.map(key => {
-      const slot  = slots[key];
-      const t     = slot.iso ? new Date(slot.iso).getTime() : 0;
-      const soon  = t >= now && t <= in24h;
-      const dayEl  = `<span class="cal-day">${slot.day.slice(0,3)}</span>`;
-      const timeEl = `<span class="cal-time">${slot.time.replace(/\s*UTC\s*$/i,'').trim()} UTC</span>`;
-      if (slot.items.length === 1) {
-        const it = slot.items[0];
-        return `<div class="cal-row">${dayEl}${timeEl}<span class="cal-curr">${it.ccy}</span><span class="cal-name">${it.name}</span>${it.meta?`<span class="cal-meta">${it.meta}</span>`:''}</div>`;
-      } else {
-        const ccys  = [...new Set(slot.items.map(i=>i.ccy).filter(Boolean))].map(c=>`<span class="cal-curr">${c}</span>`).join('');
-        const names = slot.items.map(i=>i.name).join(' · ');
-        return `<div class="cal-row">${dayEl}${timeEl}${ccys}<span class="cal-name">${names}</span></div>`;
-      }
-    }).join('');
+    // Uniform layout: Day | Time | CCY | Event | Forecast | Actual
+    // Every row has the same columns — "—" for missing values
+    const isVal = v => v && v !== 'None' && v !== 'none' && v !== 'N/A' && v !== '';
+    document.getElementById("calendar-txt").innerHTML = events
+      .filter(e => {
+        try {
+          const t = e.iso ? new Date(e.iso).getTime() : 0;
+          return t >= now && t <= now + 48*3600*1000;
+        } catch(x){ return true; }
+      })
+      .map(e => {
+        const ccy      = COUNTRY_CCY[e.currency?.toUpperCase()] || e.currency || '—';
+        const timeStr  = (e.time||'—').replace(/\s*UTC\s*$/i,'').trim() + ' UTC';
+        const dayStr   = (e.day||'—').slice(0,3);
+        const forecast = isVal(e.forecast) ? e.forecast : '—';
+        const actual   = isVal(e.actual)   ? e.actual   : '—';
+        const actColor = isVal(e.actual) ? 'var(--text)' : 'var(--muted)';
+        return `<div class="cal-row" style="display:grid;grid-template-columns:28px 62px 30px 1fr 54px 54px;gap:4px;align-items:center;padding:3px 0;border-bottom:1px solid rgba(205,217,229,0.06);">
+          <span class="cal-day" style="font-size:9px;color:var(--muted);">${dayStr}</span>
+          <span class="cal-time" style="font-size:9px;color:var(--muted);">${timeStr}</span>
+          <span class="cal-curr" style="font-size:9px;color:var(--buy);font-weight:600;">${ccy}</span>
+          <span class="cal-name" style="font-size:10px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.name||'—'}</span>
+          <span style="font-size:9px;color:var(--muted);text-align:right;">fcst ${forecast}</span>
+          <span style="font-size:9px;color:${actColor};text-align:right;font-weight:${isVal(e.actual)?'600':'400'};">act ${actual}</span>
+        </div>`;
+      }).join('');
   }
 }
 
