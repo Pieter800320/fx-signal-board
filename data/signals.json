@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T10:01:43.436269+00:00",
+  "updated": "2026-06-02T13:44:32.150258+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,72 +555,72 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.15,
-      "delta_pct": 0.6,
+      "value": 16.18,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7599.96,
-      "delta_pct": 0.3,
+      "value": 7588.31,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4559.2,
-      "delta_pct": 1.9,
+      "value": 4538.1,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.124,
+      "value": 99.104,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6205,
-      "delta_pct": 1.5,
+      "value": 6.6635,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.475,
-      "delta_bp": 2.2,
+      "value": 4.441,
+      "delta_bp": -3.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
       "value": 3.62,
-      "delta_bp": 3.2,
-      "direction": "up",
+      "delta_bp": 0.0,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.87,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 92.37,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 69300.0,
-      "delta_pct": -2.8,
+      "value": 68768.0,
+      "delta_pct": -3.6,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.5,
-      "delta_bp": -1.0,
-      "direction": "flat",
+      "value": 82.1,
+      "delta_bp": -3.4,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG: BoJ taper debate heats up as rising yields complicate exit strategy. Higher JPY yields could strengthen JPY, pressuring the pair.\n\nUSDCAD LONG: Dollar Falls as Crude Oil Retreats. We",
-    "updated": "2026-06-02T10:01:43.436269+00:00"
+    "text": "BoJ taper debate heats up as rising yields complicate exit strategy conflicts with GBPJPY long. Rising yields may strengthen JPY. Energy shock from Iran war to weigh on Europe's growth conflicts with GBPUSD long.",
+    "updated": "2026-06-02T13:44:32.150258+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on regime confirms setup, momentum divergence challenges conviction slightly.\n\nUSDCAD LONG: Falling WTI directly challenges setup, CAD strength undermines long thesis.\n\nGBPUSD LONG: Risk-on regime confirms setup, weak CMP reading signals caution.",
+    "text": "GBPJPY LONG: Risk-On regime confirms strong setup, commodity strength supports.\n\nGBPUSD LONG: Mixed macro challenges weak momentum, conflicting directional signals.\n\nUSDCAD LONG: Risk-On supports setup despite falling momentum divergence concerns.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,17 +628,17 @@
         "score": 7.0
       },
       {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.45
-      },
-      {
         "pair": "GBPUSD",
         "direction": "bull",
         "score": 5.12
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 4.85
       }
     ],
-    "updated": "2026-06-02T10:01:43.436269+00:00"
+    "updated": "2026-06-02T13:44:32.150258+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T10:01:43.436269+00:00"
+    "updated": "2026-06-02T13:44:32.150258+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area inflation continues to pick up in May, core prices nudge up",
+      "Euro area inflation picks up in May, core prices nudge higher",
       "BoJ taper debate heats up as rising yields complicate exit strategy",
       "Pound jumps as dollar sells off on Iran-Hormuz deal hopes"
     ],
-    "updated": "2026-06-02T10:01:43.436269+00:00"
+    "updated": "2026-06-02T13:44:32.150258+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00",
   "gold_signal": {
