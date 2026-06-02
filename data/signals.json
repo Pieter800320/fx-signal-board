@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T14:59:48.410864+00:00",
+  "updated": "2026-06-02T17:57:20.675154+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.18,
-      "delta_pct": 0.8,
+      "value": 16.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7588.31,
-      "delta_pct": -0.2,
+      "value": 7605.67,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4538.1,
-      "delta_pct": 1.4,
+      "value": 4514.9,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.104,
-      "delta_pct": -0.1,
+      "value": 99.272,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6635,
-      "delta_pct": 2.1,
+      "value": 6.6555,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.441,
-      "delta_bp": -3.4,
+      "value": 4.455,
+      "delta_bp": -2.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.62,
-      "delta_bp": 0.0,
+      "value": 3.618,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.37,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 93.61,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 68768.0,
-      "delta_pct": -3.6,
+      "value": 67350.0,
+      "delta_pct": -5.6,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 82.1,
-      "delta_bp": -3.4,
-      "direction": "down",
+      "value": 83.7,
+      "delta_bp": -1.8,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "BoJ taper debate heats up as rising yields complicate exit strategy conflicts with GBPJPY long. Rising yields may strengthen JPY. Energy shock from Iran war to weigh on Europe's growth conflicts with GBPUSD long.",
-    "updated": "2026-06-02T13:44:32.150258+00:00"
+    "text": "GBPUSD and GBPJPY at risk. Energy shock from Iran conflict boosts inflation, weighs EU growth, strengthens BoE relative to peers.",
+    "updated": "2026-06-02T17:57:20.675154+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms strong setup, commodity strength supports.\n\nGBPUSD LONG: Mixed macro challenges weak momentum, conflicting directional signals.\n\nUSDCAD LONG: Risk-On supports setup despite falling momentum divergence concerns.",
+    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bid thesis today.\n\nGBPUSD LONG: Mixed neutral macro challenges momentum divergence without commodity tailwind.\n\nGBPJPY LONG: Risk-on regime confirms carry trade but lacks cross-asset support.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.62
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.0
+        "score": 7.38
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 5.12
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 4.85
+        "score": 7.25
       }
     ],
-    "updated": "2026-06-02T13:44:32.150258+00:00"
+    "updated": "2026-06-02T17:57:20.675154+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T13:44:32.150258+00:00"
+    "updated": "2026-06-02T17:57:20.675154+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +722,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area inflation picks up in May, core prices nudge higher",
-      "BoJ taper debate heats up as rising yields complicate exit strategy",
-      "Pound jumps as dollar sells off on Iran-Hormuz deal hopes"
+      "US April JOLTS job openings 7.618m vs 6.88m expected",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+      "Dollar Falls as Crude Oil Retreats"
     ],
-    "updated": "2026-06-02T13:44:32.150258+00:00"
+    "updated": "2026-06-02T17:57:20.675154+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
