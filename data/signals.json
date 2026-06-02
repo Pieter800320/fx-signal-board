@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T07:43:54.291349+00:00",
+  "updated": "2026-06-02T07:47:48.892953+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.05,
-      "delta_pct": 4.8,
-      "direction": "up",
+      "value": 16.25,
+      "delta_pct": 1.2,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4506.4,
-      "delta_pct": 0.7,
+      "value": 4564.0,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.205,
-      "delta_pct": 0.0,
+      "value": 99.081,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5465,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 6.627,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.72,
-      "delta_pct": -0.5,
+      "value": 91.33,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 70207.0,
-      "delta_pct": -4.6,
-      "direction": "down",
+      "value": 69986.0,
+      "delta_pct": -1.9,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-06-02T02:08:08.633602+00:00"
+    "text": "GBPUSD LONG accelerated by dollar weakness on Iran deal hopes and crude oil retreat. Energy shock headlines may pressure EUR but support GBP relative strength.",
+    "updated": "2026-06-02T07:47:48.892953+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on medium supports long, VIX surge challenges conviction.",
+    "text": "GBPJPY LONG: Risk-On regime confirms strong momentum and ADX confluence perfectly.\n\nGBPUSD LONG: Weak CMP challenges setup despite Risk-On macro tailwind confirmation.\n\nNZDJPY LONG: Copper strength supports NZD but ADX extreme suggests caution.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.88
+        "score": 6.75
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 5.7
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 4.55
       }
     ],
-    "updated": "2026-06-02T02:08:08.633602+00:00"
+    "updated": "2026-06-02T07:47:48.892953+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-02T02:08:08.633602+00:00"
+    "updated": "2026-06-02T07:47:48.892953+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -711,8 +721,12 @@
     "generated_at": "2026-05-31T06:15:03.338327+00:00"
   },
   "breaking": {
-    "text": "White House trims tariffs on farm and industrial gear, tweaks metals regime",
-    "updated": "2026-06-02T02:08:08.633602+00:00"
+    "headlines": [
+      "Dollar Falls as Crude Oil Retreats",
+      "Sterling pound jumps as dollar sells off on Iran deal hopes",
+      "Australia's current account deficit widening, inventory draw weighs GDP"
+    ],
+    "updated": "2026-06-02T07:47:48.892953+00:00"
   },
   "last_alert": "2026-06-01T16:44:38.588079+00:00",
   "gold_signal": {
