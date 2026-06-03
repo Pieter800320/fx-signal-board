@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T10:41:42.046635+00:00",
+  "updated": "2026-06-03T14:19:04.888426+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,88 +539,88 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.06,
-      "delta_pct": 1.8,
+      "value": 16.24,
+      "delta_pct": 3.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7609.78,
-      "delta_pct": 0.1,
+      "value": 7583.67,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4490.0,
-      "delta_pct": 0.0,
+      "value": 4477.7,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.337,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 99.47,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.613,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 6.5305,
+      "delta_pct": -1.8,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.455,
-      "delta_bp": -2.0,
+      "value": 4.485,
+      "delta_bp": 3.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.618,
-      "delta_bp": -0.2,
+      "value": 3.623,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 96.2,
-      "delta_pct": 2.6,
-      "direction": "up",
+      "value": 94.6,
+      "delta_pct": 0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 67163.0,
-      "delta_pct": 0.7,
+      "value": 66624.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 83.7,
-      "delta_bp": -1.8,
+      "value": 86.2,
+      "delta_bp": 2.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Sterling jumps on Iran deal hopes and dollar selloff, accelerating GBPJPY long as yen weakens against strengthening pound.",
-    "updated": "2026-06-03T10:41:42.046635+00:00"
+    "text": "US-Iran tensions could strengthen safe-haven yen demand, pressuring GBPJPY long setup. Monitor geopolitical escalation closely.",
+    "updated": "2026-06-03T14:19:04.888426+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-off pressures challenge setup despite strong technicals today.",
+    "text": "GBPJPY LONG: Mixed macro challenges ranging setup, copper weakness signals risk-off headwind.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,7 +628,7 @@
         "score": 5.58
       }
     ],
-    "updated": "2026-06-03T10:41:42.046635+00:00"
+    "updated": "2026-06-03T14:19:04.888426+00:00"
   },
   "calendar": {
     "events": [
@@ -703,20 +703,19 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-03T10:41:42.046635+00:00"
+    "updated": "2026-06-03T14:19:04.888426+00:00"
   },
   "deep_analysis": {
-    "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
-    "text": "Gold's 2.1% surge to crisis-level 4593 while the dollar remains weak at 98.91 signals markets pricing stagflation risk rather than standard safe-haven flows. Historically, gold rallying with steepening yield curves indicates inflation expectations overwhelming real rate dynamics\u2014the 86.5bp curve steepness suggests growth optimism, yet gold's extreme positioning contradicts this narrative. Oil's 1.7% decline despite strong copper creates energy-metals divergence, typically preceding either demand destruction or supply normalization. The VIX dropping 2.7% while gold surges represents the most anomalous signal\u2014markets pricing growth optimism in equities but monetary debasement in precious metals simultaneously. This creates cross-asset tension that historically resolves through dollar weakness or equity correction. NZDUSD emerges strongest with 8.2/10 setup as NZD's 100-rated CSM strength exploits dollar vulnerability through carry trade revival\u2014New Zealand's commodity linkage benefits from copper strength while avoiding oil exposure. NZDJPY similarly capitalizes on yen weakness from steepening curves pressuring Bank of Japan intervention thresholds. The Iran blockade uncertainty adds geopolitical premium supporting gold while weakening systematic risk positioning across G10 currencies.",
-    "generated_at": "2026-05-31T06:15:03.338327+00:00"
+    "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today.",
+    "generated_at": "2026-06-03T14:19:31.897919+00:00"
   },
   "breaking": {
     "headlines": [
-      "UK May final services PMI 49.3 vs 47.9 prelim, GBP impact",
-      "Eurozone business activity struggles in May amid surging price pressures",
-      "Energy shock from Iran war to weigh on Europe's growth"
+      "May ISM services index 54.5 vs 53.8 expected, USD strength",
+      "US-Iran tensions escalate, yen volatility in focus for traders",
+      "Energy shock from Iran war to weigh on Europe growth"
     ],
-    "updated": "2026-06-03T10:41:42.046635+00:00"
+    "updated": "2026-06-03T14:19:04.888426+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
