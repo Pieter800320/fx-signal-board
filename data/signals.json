@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T10:00:34.187509+00:00",
+  "updated": "2026-06-03T10:41:42.046635+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.09,
-      "delta_pct": 2.0,
+      "value": 16.06,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4485.0,
-      "delta_pct": -0.1,
+      "value": 4490.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.347,
+      "value": 99.337,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5935,
-      "delta_pct": -0.8,
-      "direction": "down",
+      "value": 6.613,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 96.01,
-      "delta_pct": 2.4,
+      "value": 96.2,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66994.0,
-      "delta_pct": 0.4,
+      "value": 67163.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY at risk. UK services PMI beat expectations but Eurozone weakness and dollar selloff on Iran-Hormuz deal hopes may limit upside.",
-    "updated": "2026-06-03T08:44:40.595790+00:00"
+    "text": "Sterling jumps on Iran deal hopes and dollar selloff, accelerating GBPJPY long as yen weakens against strengthening pound.",
+    "updated": "2026-06-03T10:41:42.046635+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Risk-On regime confirms JPY weakness and AUD strength tailwind.\n\nGBPJPY LONG: Risk-On regime supports carry trade with mixed macro neutral backdrop.\n\nGBPUSD LONG: Mixed macro neutral challenges weak CMP reading despite momentum divergence.",
+    "text": "GBPJPY LONG: Risk-off pressures challenge setup despite strong technicals today.",
     "top": [
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 6.8
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.78
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 5.42
+        "score": 5.58
       }
     ],
-    "updated": "2026-06-03T08:44:40.595790+00:00"
+    "updated": "2026-06-03T10:41:42.046635+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +703,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-03T08:44:40.595790+00:00"
+    "updated": "2026-06-03T10:41:42.046635+00:00"
   },
   "deep_analysis": {
     "headline": "Gold's extreme surge against weak dollar exposes stagflation fears.",
@@ -722,11 +712,11 @@
   },
   "breaking": {
     "headlines": [
-      "French service economy contracts sharpest pace since late-2020 in May",
-      "Energy shock from Iran war to weigh on Europe's growth, inflation",
-      "Sterling jumps as dollar sells off on Iran-Hormuz deal hopes"
+      "UK May final services PMI 49.3 vs 47.9 prelim, GBP impact",
+      "Eurozone business activity struggles in May amid surging price pressures",
+      "Energy shock from Iran war to weigh on Europe's growth"
     ],
-    "updated": "2026-06-03T08:44:40.595790+00:00"
+    "updated": "2026-06-03T10:41:42.046635+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
