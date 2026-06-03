@@ -387,7 +387,7 @@ def main():
     # ── Telegram: Gold + H4 (Medium/High) + H1 confirmed ─────────────────────
     _pair_closes = {k: v["close"] for k, v in _pair_prices.items()}
     check_levels(_pair_closes, send_telegram)
-    check_ema_touches(_pair_prices, _pair_emas, send_telegram)
+    # EMA touch alerts removed — Gold signal is the only proactive alert
 
     if (
         gs_direction != "neutral"
