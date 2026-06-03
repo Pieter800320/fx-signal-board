@@ -936,15 +936,22 @@ def main():
     catalyst = call_catalyst(headlines, ranked_out.get("top", []))
     print(f"  Catalyst: {catalyst}")
 
-    # ── Daily Brief — generated once daily at 06:00 UTC ─────────────────────
-    is_daily_run = (now.hour == 6)
+    # ── Daily Brief — regenerate when existing brief is 12+ hours old ───────
+    prev_deep = signals.get("deep_analysis", {})
+    try:
+        brief_age_h = (now - datetime.fromisoformat(
+            prev_deep.get("generated_at", "2000-01-01T00:00:00+00:00")
+        )).total_seconds() / 3600
+    except Exception:
+        brief_age_h = 99
+    is_daily_run = brief_age_h >= 12
     if is_daily_run:
-        print("\n[DB] Daily Brief — Sonnet unified brief…")
+        print(f"\n[DB] Daily Brief — {brief_age_h:.1f}h since last brief, regenerating…")
         deep = call_daily_brief(signals, headlines)
         print(f"  Daily Brief: {deep['text'][:80]}…")
     else:
-        prev_deep = signals.get("deep_analysis", {})
-        deep = prev_deep if prev_deep.get("generated_at") else {}
+        print(f"\n[DB] Daily Brief — {brief_age_h:.1f}h old, keeping existing")
+        deep = prev_deep
 
     # ── Week Ahead — generated once on Sunday ~20:00 UTC ──────────────────────
     is_sunday_evening = (now.weekday() == 6 and 21 <= now.hour <= 22)
