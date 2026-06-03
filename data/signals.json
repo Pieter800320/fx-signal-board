@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T15:50:58.945576+00:00",
+  "updated": "2026-06-03T19:39:01.723592+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -544,49 +544,49 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": false
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.24,
-      "delta_pct": 3.0,
+      "value": 16.15,
+      "delta_pct": 2.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7583.67,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 7568.82,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4477.7,
+      "value": 4474.7,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.47,
+      "value": 99.533,
       "delta_pct": 0.3,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5305,
-      "delta_pct": -1.8,
+      "value": 6.495,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.485,
-      "delta_bp": 3.0,
+      "value": 4.491,
+      "delta_bp": 3.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,38 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.6,
-      "delta_pct": 0.9,
-      "direction": "flat",
+      "value": 96.12,
+      "delta_pct": 2.5,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66624.0,
-      "delta_pct": -0.1,
+      "value": 65681.0,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.2,
-      "delta_bp": 2.5,
-      "direction": "flat",
+      "value": 86.8,
+      "delta_bp": 3.1,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US-Iran tensions could strengthen safe-haven yen demand, pressuring GBPJPY long setup. Monitor geopolitical escalation closely.",
-    "updated": "2026-06-03T14:19:04.888426+00:00"
+    "text": "Iran geopolitical tensions and crude oil surge up 2.41 percent could weaken JPY carry trades by reducing risk appetite for long yen pairs.",
+    "updated": "2026-06-03T19:39:01.723592+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Mixed macro challenges ranging setup, copper weakness signals risk-off headwind.",
+    "text": "USDJPY LONG: Risk-off environment confirms USD safe-haven bid strongly.\n\nGBPJPY LONG: Risk-off challenges carry trade, but DXY strength supports.\n\nEURJPY LONG: Weak momentum conflicts with risk-off macro backdrop entirely.",
     "top": [
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 5.62
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
         "score": 5.58
+      },
+      {
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 3.08
       }
     ],
-    "updated": "2026-06-03T14:19:04.888426+00:00"
+    "updated": "2026-06-03T19:39:01.723592+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-03T14:19:04.888426+00:00"
+    "updated": "2026-06-03T19:39:01.723592+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today.",
@@ -711,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "May ISM services index 54.5 vs 53.8 expected, USD strength",
-      "US-Iran tensions escalate, yen volatility in focus for traders",
-      "Energy shock from Iran war to weigh on Europe growth"
+      "US EIA crude inventories -7974K vs -4007K expected, oil +2.41%",
+      "Energy shock from Iran war to weigh on Europe growth inflation",
+      "Euro stages accidental coup against almighty dollar amid US policy uncertainty"
     ],
-    "updated": "2026-06-03T14:19:04.888426+00:00"
+    "updated": "2026-06-03T19:39:01.723592+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
