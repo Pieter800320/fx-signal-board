@@ -677,5 +677,12 @@
     "price": 214.30776941179818,
     "direction": "below",
     "active": true
+  },
+  {
+    "id": 1780553437280,
+    "pair": "GBPJPY",
+    "price": 215.3465180816258,
+    "direction": "above",
+    "active": false
   }
 ]
