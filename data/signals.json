@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T21:19:58.206845+00:00",
+  "updated": "2026-06-04T22:58:33.470127+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4502.4,
+      "value": 4501.7,
       "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.416,
+      "value": 99.432,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5295,
+      "value": 6.527,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.91,
-      "delta_pct": -3.2,
+      "value": 92.84,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63626.0,
-      "delta_pct": -0.6,
+      "value": 63690.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG threatened by dollar weakness headlines. GBPUSD SHORT supported by dollar weakness and risk-on sentiment from peace talks.",
-    "updated": "2026-06-04T21:19:58.206845+00:00"
+    "text": "USDJPY LONG conflicted by dollar weakness headlines. GBPUSD SHORT supported by dollar strength narratives. Peace talks reduce safe haven demand for yen.",
+    "updated": "2026-06-04T22:58:33.470127+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-on weakness challenges setup despite strong technicals.\n\nGBPUSD SHORT: Mixed regime with gold strength challenges bearish conviction.",
+    "text": "USDJPY LONG: Risk-off supports JPY strength, challenging setup.\n\nGBPUSD SHORT: Risk-off headwinds limit downside, challenging setup.",
     "top": [
       {
         "pair": "USDJPY",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-06-04T21:19:58.206845+00:00"
+    "updated": "2026-06-04T22:58:33.470127+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T21:19:58.206845+00:00"
+    "updated": "2026-06-04T22:58:33.470127+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold rises while VIX falls and DXY stays flat, creating conflicting risk sentiment reads that neutralize any clear direction. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by Core PCE at 14:30 ET.",
@@ -716,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Initial jobless claims 225K vs 213K estimate; NFP impact pending",
-      "Putin signals willingness to make peaceful deal with Ukraine",
+      "US Initial jobless claims 225K vs 213K estimate, continuing claims miss",
+      "Putin ready for peaceful deal with Ukraine, reducing geopolitical risk premium",
       "Energy shock from Iran war to weigh on Europe's growth, boost inflation"
     ],
-    "updated": "2026-06-04T21:19:58.206845+00:00"
+    "updated": "2026-06-04T22:58:33.470127+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
