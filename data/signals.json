@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T19:51:21.914363+00:00",
+  "updated": "2026-06-04T21:19:58.206845+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,40 +547,40 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.25,
-      "delta_pct": -5.0,
-      "direction": "down",
+      "value": 15.4,
+      "delta_pct": -4.1,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7589.51,
-      "delta_pct": 0.5,
+      "value": 7584.31,
+      "delta_pct": 0.4,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4507.8,
-      "delta_pct": 1.6,
+      "value": 4502.4,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.435,
+      "value": 99.416,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5415,
-      "delta_pct": 0.9,
+      "value": 6.5295,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.12,
-      "delta_pct": -3.0,
+      "value": 92.91,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63673.0,
-      "delta_pct": -0.5,
+      "value": 63626.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Ukraine peace talks could weaken JPY safe-haven demand, pressuring USDJPY long. Energy shock threatens Euro stability, supporting GBPUSD short thesis.",
-    "updated": "2026-06-04T19:51:21.914363+00:00"
+    "text": "USDJPY LONG threatened by dollar weakness headlines. GBPUSD SHORT supported by dollar weakness and risk-on sentiment from peace talks.",
+    "updated": "2026-06-04T21:19:58.206845+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Mixed neutral macro challenges setup, risk-off VIX decline supports yen weakness.\n\nGBPUSD SHORT: Mixed neutral macro challenges setup, modest equity strength supports pound resilience.",
+    "text": "USDJPY LONG: Risk-on weakness challenges setup despite strong technicals.\n\nGBPUSD SHORT: Mixed regime with gold strength challenges bearish conviction.",
     "top": [
       {
         "pair": "USDJPY",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-06-04T19:51:21.914363+00:00"
+    "updated": "2026-06-04T21:19:58.206845+00:00"
   },
   "calendar": {
     "events": [
@@ -708,19 +708,19 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T19:51:21.914363+00:00"
+    "updated": "2026-06-04T21:19:58.206845+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. The next high-impact event is USD Initial Jobless Claims at 12:30 ET, followed by GDP and PCE data at 14:30 ET.",
-    "generated_at": "2026-06-04T08:10:52.004981+00:00"
+    "text": "Mixed signals \u2014 no directional bias. Gold rises while VIX falls and DXY stays flat, creating conflicting risk sentiment reads that neutralize any clear direction. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by Core PCE at 14:30 ET.",
+    "generated_at": "2026-06-04T21:20:26.772347+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Initial jobless claims 225K vs 213K estimate; labor softening",
-      "Energy shock from Iran war to weigh on Europe's growth, inflation",
-      "Euro stages accidental coup against almighty dollar amid policy uncertainty"
+      "US Initial jobless claims 225K vs 213K estimate; NFP impact pending",
+      "Putin signals willingness to make peaceful deal with Ukraine",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation"
     ],
-    "updated": "2026-06-04T19:51:21.914363+00:00"
+    "updated": "2026-06-04T21:19:58.206845+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
