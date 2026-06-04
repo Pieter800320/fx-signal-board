@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T02:13:38.369271+00:00",
+  "updated": "2026-06-04T08:10:06.987754+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.06,
-      "delta_pct": 1.8,
+      "value": 16.31,
+      "delta_pct": 1.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4492.3,
-      "delta_pct": 1.3,
+      "value": 4488.8,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.449,
-      "delta_pct": -0.1,
+      "value": 99.489,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.454,
-      "delta_pct": -0.4,
+      "value": 6.4695,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.95,
-      "delta_pct": -1.1,
-      "direction": "down",
+      "value": 95.53,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62356.0,
-      "delta_pct": -6.5,
-      "direction": "down",
+      "value": 63492.0,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation conflicts with GBPJPY LONG. Risk-off sentiment favors JPY safe haven, weakening GBP.",
-    "updated": "2026-06-04T02:13:38.369271+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-04T08:10:06.987754+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-off headwinds challenge carry trade unwind thesis today.\n\nUSDJPY LONG: Gold strength contradicts safe-haven JPY appreciation setup confirmation.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "GBPJPY",
@@ -633,7 +633,7 @@
         "score": 4.83
       }
     ],
-    "updated": "2026-06-04T02:13:38.369271+00:00"
+    "updated": "2026-06-04T08:10:06.987754+00:00"
   },
   "calendar": {
     "events": [
@@ -708,19 +708,19 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T02:13:38.369271+00:00"
+    "updated": "2026-06-04T08:10:06.987754+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today.",
-    "generated_at": "2026-06-03T14:19:31.897919+00:00"
+    "text": "Mixed signals \u2014 no directional bias. The next high-impact event is USD Initial Jobless Claims at 12:30 ET, followed by GDP and PCE data at 14:30 ET.",
+    "generated_at": "2026-06-04T08:10:52.004981+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australian April Exports leap higher at +7.2% m/m, AUD strength expected",
-      "Dollar firms as war angst creeps in, risk-off sentiment dominates",
-      "Energy shock from Iran war to weigh on Europe's growth, inflation"
+      "German construction decline deepens, EUR weakness signals eurozone economic slowdown",
+      "Energy shock from Iran tensions weighs Europe growth, boosts inflation",
+      "Indian Rupee erases gains amid US-Iran tensions, higher oil prices"
     ],
-    "updated": "2026-06-04T02:13:38.369271+00:00"
+    "updated": "2026-06-04T08:10:06.987754+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
