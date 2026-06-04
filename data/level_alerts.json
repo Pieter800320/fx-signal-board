@@ -641,7 +641,7 @@
     "pair": "NZDUSD",
     "price": 0.596520985801211,
     "direction": "below",
-    "active": true
+    "active": false
   },
   {
     "id": 1780305155236,
@@ -676,7 +676,7 @@
     "pair": "GBPJPY",
     "price": 214.30776941179818,
     "direction": "below",
-    "active": true
+    "active": false
   },
   {
     "id": 1780553437280,
