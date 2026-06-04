@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T16:25:36.725023+00:00",
+  "updated": "2026-06-04T16:40:31.155495+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,101 +544,91 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.6,
-      "delta_pct": 3.4,
+      "value": 15.53,
+      "delta_pct": -3.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7553.68,
-      "delta_pct": -0.7,
-      "direction": "down",
+      "value": 7580.64,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4525.5,
-      "delta_pct": 2.0,
+      "value": 4511.1,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.225,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.318,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.527,
-      "delta_pct": 0.7,
+      "value": 6.5335,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.491,
-      "delta_bp": 3.6,
+      "value": 4.465,
+      "delta_bp": -2.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.623,
-      "delta_bp": 0.5,
+      "value": 3.62,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.9,
-      "delta_pct": -3.2,
+      "value": 93.03,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63452.0,
-      "delta_pct": -0.9,
+      "value": 63673.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.8,
-      "delta_bp": 3.1,
-      "direction": "up",
+      "value": 84.5,
+      "delta_bp": -2.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk. Energy shock from Iran war to weigh on Europe's growth, boost inflation pressures euro weakness against yen.",
-    "updated": "2026-06-04T12:34:37.253804+00:00"
+    "text": "US Initial jobless claims beat expectations at 225K vs 213K estimate, suggesting stronger labor market. This supports USD strength and validates USDJPY long setup. No breaking catalysts.",
+    "updated": "2026-06-04T16:40:31.155495+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup. Falling WTI directly weakens Canadian dollar fundamentals.\n\nGBPJPY LONG: Macro context neutral. Risk-off supports yen but lacks macro conviction.\n\nEURJPY LONG: Macro challenges setup. Risk-off environment favors yen safe haven over euro.",
+    "text": "USDJPY LONG: Mixed macro neutrality challenges ranging regime confirmation attempt.",
     "top": [
       {
-        "pair": "USDCAD",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.52
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 5.25
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 4.75
+        "score": 4.83
       }
     ],
-    "updated": "2026-06-04T12:34:37.253804+00:00"
+    "updated": "2026-06-04T16:40:31.155495+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +703,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T12:34:37.253804+00:00"
+    "updated": "2026-06-04T16:40:31.155495+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The next high-impact event is USD Initial Jobless Claims at 12:30 ET, followed by GDP and PCE data at 14:30 ET.",
@@ -721,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US jobless claims rise to 225K, continuing claims stable at 1.777M",
-      "Energy shock from Iran war weighs on Europe growth, boosts inflation",
-      "Euro area retail sales fall in April, challenging outlook ahead"
+      "US Initial jobless claims 225K vs 213K estimate, labor market cooling",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+      "Euro area retail sales fall in April, challenging economic outlook ahead"
     ],
-    "updated": "2026-06-04T12:34:37.253804+00:00"
+    "updated": "2026-06-04T16:40:31.155495+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
