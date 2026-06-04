@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T19:27:39.488383+00:00",
+  "updated": "2026-06-04T19:51:21.914363+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,46 +547,46 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.53,
-      "delta_pct": -3.3,
-      "direction": "flat",
+      "value": 15.25,
+      "delta_pct": -5.0,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7580.64,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 7589.51,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4511.1,
-      "delta_pct": 1.7,
+      "value": 4507.8,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.318,
-      "delta_pct": -0.2,
+      "value": 99.435,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5335,
-      "delta_pct": 0.8,
+      "value": 6.5415,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.465,
-      "delta_bp": -2.6,
+      "value": 4.477,
+      "delta_bp": -1.4,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.03,
-      "delta_pct": -3.1,
+      "value": 93.12,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
@@ -609,26 +609,31 @@
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.5,
-      "delta_bp": -2.3,
+      "value": 85.7,
+      "delta_bp": -1.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Initial jobless claims beat expectations at 225K vs 213K estimate, suggesting stronger labor market. This supports USD strength and validates USDJPY long setup. No breaking catalysts.",
-    "updated": "2026-06-04T16:40:31.155495+00:00"
+    "text": "Ukraine peace talks could weaken JPY safe-haven demand, pressuring USDJPY long. Energy shock threatens Euro stability, supporting GBPUSD short thesis.",
+    "updated": "2026-06-04T19:51:21.914363+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Mixed macro neutrality challenges ranging regime confirmation attempt.",
+    "text": "USDJPY LONG: Mixed neutral macro challenges setup, risk-off VIX decline supports yen weakness.\n\nGBPUSD SHORT: Mixed neutral macro challenges setup, modest equity strength supports pound resilience.",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 4.83
+        "score": 5.23
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 3.7
       }
     ],
-    "updated": "2026-06-04T16:40:31.155495+00:00"
+    "updated": "2026-06-04T19:51:21.914363+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T16:40:31.155495+00:00"
+    "updated": "2026-06-04T19:51:21.914363+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The next high-impact event is USD Initial Jobless Claims at 12:30 ET, followed by GDP and PCE data at 14:30 ET.",
@@ -711,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Initial jobless claims 225K vs 213K estimate, labor market cooling",
-      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-      "Euro area retail sales fall in April, challenging economic outlook ahead"
+      "US Initial jobless claims 225K vs 213K estimate; labor softening",
+      "Energy shock from Iran war to weigh on Europe's growth, inflation",
+      "Euro stages accidental coup against almighty dollar amid policy uncertainty"
     ],
-    "updated": "2026-06-04T16:40:31.155495+00:00"
+    "updated": "2026-06-04T19:51:21.914363+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
