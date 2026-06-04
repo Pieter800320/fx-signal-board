@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-03T22:19:31.290114+00:00",
+  "updated": "2026-06-04T02:13:38.369271+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,17 +539,17 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 3,
+    "total": 1,
     "confidence": "Low",
     "stable": true
   },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4462.1,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4492.3,
+      "delta_pct": 1.3,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.55,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 99.449,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4775,
-      "delta_pct": -2.6,
-      "direction": "down",
+      "value": 6.454,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 95.72,
-      "delta_pct": 2.1,
-      "direction": "up",
+      "value": 94.95,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65131.0,
-      "delta_pct": -2.4,
-      "direction": "flat",
+      "value": 62356.0,
+      "delta_pct": -6.5,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG conflicted by Euro coup against dollar and gold replacing treasuries as reserve asset. Both weaken yen carry appeal.",
-    "updated": "2026-06-03T22:19:31.290114+00:00"
+    "text": "Energy shock from Iran war to weigh on Europe's growth, boost inflation conflicts with GBPJPY LONG. Risk-off sentiment favors JPY safe haven, weakening GBP.",
+    "updated": "2026-06-04T02:13:38.369271+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Gold falling confirms USD bid thesis strongly today.\n\nGBPJPY LONG: Risk-off medium challenges carry trade without offsetting macro support.",
+    "text": "GBPJPY LONG: Risk-off headwinds challenge carry trade unwind thesis today.\n\nUSDJPY LONG: Gold strength contradicts safe-haven JPY appreciation setup confirmation.",
     "top": [
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 5.42
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
         "score": 4.9
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 4.83
       }
     ],
-    "updated": "2026-06-03T22:19:31.290114+00:00"
+    "updated": "2026-06-04T02:13:38.369271+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-03T22:19:31.290114+00:00"
+    "updated": "2026-06-04T02:13:38.369271+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today.",
@@ -716,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar firms as geopolitical tensions escalate in Middle East",
-      "Crude oil futures surge 2.41% amid Iran-US military tensions",
-      "Energy shock from Iran conflict to boost European inflation"
+      "Australian April Exports leap higher at +7.2% m/m, AUD strength expected",
+      "Dollar firms as war angst creeps in, risk-off sentiment dominates",
+      "Energy shock from Iran war to weigh on Europe's growth, inflation"
     ],
-    "updated": "2026-06-03T22:19:31.290114+00:00"
+    "updated": "2026-06-04T02:13:38.369271+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
