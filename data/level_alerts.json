@@ -11,6 +11,20 @@
     "pair": "USDCHF",
     "price": 0.7977427569444536,
     "direction": "above",
+    "active": false
+  },
+  {
+    "id": 1780669742083,
+    "pair": "USDCHF",
+    "price": 0.7912773115413155,
+    "direction": "below",
+    "active": false
+  },
+  {
+    "id": 1780669769308,
+    "pair": "USDCHF",
+    "price": 0.7988708005051067,
+    "direction": "above",
     "active": true
   }
 ]
