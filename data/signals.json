@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T08:49:07.844710+00:00",
+  "updated": "2026-06-05T11:01:07.578630+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,85 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.06,
-      "delta_pct": 1.8,
+      "value": 15.63,
+      "delta_pct": 1.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7553.68,
-      "delta_pct": -0.7,
-      "direction": "down",
+      "value": 7584.31,
+      "delta_pct": 0.4,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4466.4,
-      "delta_pct": -0.2,
+      "value": 4494.6,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.422,
-      "delta_pct": -0.1,
+      "value": 99.202,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.423,
-      "delta_pct": -1.4,
+      "value": 6.4415,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.491,
-      "delta_bp": 3.6,
+      "value": 4.477,
+      "delta_bp": -1.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.623,
-      "delta_bp": 0.5,
+      "value": 3.62,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.02,
-      "delta_pct": -0.0,
+      "value": 92.98,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61956.0,
-      "delta_pct": -3.2,
-      "direction": "down",
+      "value": 62374.0,
+      "delta_pct": -2.2,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.8,
-      "delta_bp": 3.1,
-      "direction": "up",
+      "value": 85.7,
+      "delta_bp": -1.1,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Some Losses for the Dollar Ahead of the NFP could weaken USDJPY LONG. Energy shock headline may pressure GBP, supporting GBPUSD SHORT.",
-    "updated": "2026-06-05T06:18:10.405949+00:00"
+    "text": "USDCAD LONG and USDJPY LONG at risk. \"Some Losses for the Dollar Ahead of the NFP\" directly conflicts with bullish USD setups before jobs data.",
+    "updated": "2026-06-05T11:01:07.578630+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-off macro confirms safe-haven yen strength setup.\n\nGBPUSD SHORT: Risk-off challenges weak momentum divergence short thesis.",
+    "text": "USDCAD LONG: Risk-off supports USD strength directly today.\n\nUSDJPY LONG: Risk-off bid supports JPY safe-haven demand conflicting.\n\nGBPJPY LONG: S&P strength contradicts GBP bid macro thesis today.",
     "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 5.15
+      },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.23
+        "score": 4.25
       },
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 3.7
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 4.1
       }
     ],
-    "updated": "2026-06-05T06:18:10.405949+00:00"
+    "updated": "2026-06-05T11:01:07.578630+00:00"
   },
   "calendar": {
     "events": [
@@ -708,19 +713,19 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-05T06:18:10.405949+00:00"
+    "updated": "2026-06-05T11:01:07.578630+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. Gold rises while VIX falls and DXY stays flat, creating conflicting risk sentiment reads that neutralize any clear direction. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by Core PCE at 14:30 ET.",
-    "generated_at": "2026-06-04T21:20:26.772347+00:00"
+    "text": "Mixed signals \u2014 no directional bias. Gold's modest gain contrasts with Bitcoin's decline and elevated VIX, while the DXY pullback muddles the dollar picture. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by multiple inflation and growth data points at 14:30 ET.",
+    "generated_at": "2026-06-05T11:01:47.446091+00:00"
   },
   "breaking": {
     "headlines": [
-      "Dollar weakens ahead of NFP; market positioning shifts",
-      "Energy shock from Iran war to weigh on Europe's growth",
-      "Euro stages accidental coup against almighty dollar globally"
+      "Euro area economic growth revised down to contraction in Q1 2026",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+      "Some losses for the dollar ahead of the NFP"
     ],
-    "updated": "2026-06-05T06:18:10.405949+00:00"
+    "updated": "2026-06-05T11:01:07.578630+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
