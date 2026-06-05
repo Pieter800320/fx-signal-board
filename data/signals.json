@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T20:51:17.920684+00:00",
+  "updated": "2026-06-05T21:13:38.381100+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 20.16,
-      "delta_pct": 30.9,
+      "value": 21.51,
+      "delta_pct": 39.7,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7386.57,
+      "value": 7383.74,
       "delta_pct": -2.6,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4339.9,
-      "delta_pct": -3.0,
+      "value": 4353.9,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.09,
+      "value": 100.07,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.257,
-      "delta_pct": -3.9,
+      "value": 6.2755,
+      "delta_pct": -3.6,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.26,
+      "value": 90.25,
       "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59545.0,
-      "delta_pct": -6.7,
+      "value": 61756.0,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT at risk. \"Euro Stages Accidental Coup Against Dollar\" contradicts bearish setup. Energy shock may support Euro despite inflation concerns.",
-    "updated": "2026-06-05T19:25:35.154178+00:00"
+    "text": "Trump wants lower rates conflicts with USDJPY long. Rate cut expectations weaken yen. Energy shock from Iran conflict supports USD strength, accelerating USDJPY long and EURUSD short.",
+    "updated": "2026-06-05T21:13:38.381100+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: VIX surge and Treasury yield rise strongly confirm USD strength bias.\n\nUSDJPY LONG: Rising US yields support JPY safety bid but contradict carry unwind.\n\nEURUSD SHORT: Risk-off environment confirms USD bid though weak momentum divergence challenges signal.",
+    "text": "NZDUSD SHORT: Macro confirms, USD bid from rising VIX intensity.\n\nEURUSD SHORT: Macro confirms, USD bid from concurrent yield and VIX.\n\nUSDJPY LONG: Macro confirms, USD bid from rising yields supporting yen.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,17 +628,17 @@
         "score": 7.62
       },
       {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 7.55
+      },
+      {
         "pair": "USDJPY",
         "direction": "bull",
         "score": 6.62
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.55
       }
     ],
-    "updated": "2026-06-05T19:25:35.154178+00:00"
+    "updated": "2026-06-05T21:13:38.381100+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-05T19:25:35.154178+00:00"
+    "updated": "2026-06-05T21:13:38.381100+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold's modest gain contrasts with Bitcoin's decline and elevated VIX, while the DXY pullback muddles the dollar picture. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by multiple inflation and growth data points at 14:30 ET.",
@@ -722,10 +722,10 @@
   "breaking": {
     "headlines": [
       "Trump signals desire for lower interest rates, pressuring USD",
-      "Energy shock from Iran conflict to boost Europe inflation",
-      "Bond yields rising, stocks sliding send dollar warning signals"
+      "Energy shock from Iran conflict to boost European inflation",
+      "Bond yields rising, stocks sliding send warning signals"
     ],
-    "updated": "2026-06-05T19:25:35.154178+00:00"
+    "updated": "2026-06-05T21:13:38.381100+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
