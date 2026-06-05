@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T12:16:30.180451+00:00",
+  "updated": "2026-06-05T14:14:59.027025+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -2,
+    "total": 2,
     "stable": false
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 1,
+    "total": 5,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.63,
-      "delta_pct": 1.5,
-      "direction": "flat",
+      "value": 16.69,
+      "delta_pct": 8.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7584.31,
-      "delta_pct": 0.4,
-      "direction": "up",
+      "value": 7513.86,
+      "delta_pct": -0.9,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4494.6,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4395.8,
+      "delta_pct": -1.8,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.202,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 99.688,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4415,
-      "delta_pct": -1.1,
+      "value": 6.3385,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.477,
-      "delta_bp": -1.4,
-      "direction": "flat",
+      "value": 4.544,
+      "delta_bp": 6.7,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.62,
-      "delta_bp": -0.3,
+      "value": 3.628,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.98,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 90.83,
+      "delta_pct": -2.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62374.0,
-      "delta_pct": -2.2,
-      "direction": "flat",
+      "value": 60847.0,
+      "delta_pct": -4.6,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.7,
-      "delta_bp": -1.1,
-      "direction": "flat",
+      "value": 91.6,
+      "delta_bp": 5.9,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG and USDJPY LONG at risk. \"Some Losses for the Dollar Ahead of the NFP\" directly conflicts with bullish USD setups before jobs data.",
-    "updated": "2026-06-05T11:01:07.578630+00:00"
+    "text": "USDJPY LONG invalidated by US May non-farm payrolls beat at 172K vs 85K expected, strengthening USD fundamentals supporting the pair.",
+    "updated": "2026-06-05T14:14:59.027025+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Risk-off supports USD strength directly today.\n\nUSDJPY LONG: Risk-off bid supports JPY safe-haven demand conflicting.\n\nGBPJPY LONG: S&P strength contradicts GBP bid macro thesis today.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness thesis strongly today.\n\nUSDCAD LONG: VIX and 10Y rise confirm USD bid thesis.\n\nUSDJPY LONG: Rising 10Y confirms USD bid but Gold fall contradicts.",
     "top": [
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 6.43
+      },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.15
+        "score": 5.95
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 4.25
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 4.1
+        "score": 4.15
       }
     ],
-    "updated": "2026-06-05T11:01:07.578630+00:00"
+    "updated": "2026-06-05T14:14:59.027025+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-05T11:01:07.578630+00:00"
+    "updated": "2026-06-05T14:14:59.027025+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold's modest gain contrasts with Bitcoin's decline and elevated VIX, while the DXY pullback muddles the dollar picture. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by multiple inflation and growth data points at 14:30 ET.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area economic growth revised down to contraction in Q1 2026",
-      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-      "Some losses for the dollar ahead of the NFP"
+      "US May non-farm payrolls +172K vs +85K expected",
+      "Canada employment change 87.8K vs 10.0K estimate, unemployment falls",
+      "Euro area economic growth revised down, Q1 2026 contraction"
     ],
-    "updated": "2026-06-05T11:01:07.578630+00:00"
+    "updated": "2026-06-05T14:14:59.027025+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
