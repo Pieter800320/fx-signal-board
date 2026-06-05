@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T19:01:32.016124+00:00",
+  "updated": "2026-06-05T19:25:35.154178+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.43,
-      "delta_pct": 19.7,
+      "value": 20.16,
+      "delta_pct": 30.9,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7452.73,
-      "delta_pct": -1.7,
+      "value": 7386.57,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4367.3,
-      "delta_pct": -2.4,
+      "value": 4339.9,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.05,
-      "delta_pct": 0.6,
+      "value": 100.09,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2835,
-      "delta_pct": -3.5,
+      "value": 6.257,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.54,
-      "delta_bp": 6.3,
+      "value": 4.536,
+      "delta_bp": 5.9,
       "direction": "up",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.09,
-      "delta_pct": -3.2,
+      "value": 90.26,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60897.0,
-      "delta_pct": -4.6,
+      "value": 59545.0,
+      "delta_pct": -6.7,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 91.5,
-      "delta_bp": 5.8,
+      "value": 91.1,
+      "delta_bp": 5.4,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT at risk. \"Euro Stages Accidental Coup Against Dollar\" and \"Euro's global role stays flat\" suggest euro strength, conflicting downside bias.",
-    "updated": "2026-06-05T17:43:19.592006+00:00"
+    "text": "EURUSD SHORT at risk. \"Euro Stages Accidental Coup Against Dollar\" contradicts bearish setup. Energy shock may support Euro despite inflation concerns.",
+    "updated": "2026-06-05T19:25:35.154178+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms via USD bid from rising yields and VIX.\n\nEURUSD SHORT: Macro confirms via USD bid from rising yields and VIX.\n\nUSDJPY LONG: Macro confirms via USD bid from rising yields and VIX.",
+    "text": "NZDUSD SHORT: VIX surge and Treasury yield rise strongly confirm USD strength bias.\n\nUSDJPY LONG: Rising US yields support JPY safety bid but contradict carry unwind.\n\nEURUSD SHORT: Risk-off environment confirms USD bid though weak momentum divergence challenges signal.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.92
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.85
+        "score": 7.62
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.72
+        "score": 6.62
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.55
       }
     ],
-    "updated": "2026-06-05T17:43:19.592006+00:00"
+    "updated": "2026-06-05T19:25:35.154178+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-05T17:43:19.592006+00:00"
+    "updated": "2026-06-05T19:25:35.154178+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold's modest gain contrasts with Bitcoin's decline and elevated VIX, while the DXY pullback muddles the dollar picture. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by multiple inflation and growth data points at 14:30 ET.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canada employment beats estimate at 87.8K, unemployment falls to 6.6%",
-      "Energy shock from Iran war to weigh on Europe's growth, inflation",
-      "Trump cheers jobs report as bond yields rise, stocks slide"
+      "Trump signals desire for lower interest rates, pressuring USD",
+      "Energy shock from Iran conflict to boost Europe inflation",
+      "Bond yields rising, stocks sliding send dollar warning signals"
     ],
-    "updated": "2026-06-05T17:43:19.592006+00:00"
+    "updated": "2026-06-05T19:25:35.154178+00:00"
   },
   "last_alert": "2026-06-05T19:01:32.016124+00:00",
   "gold_signal": {
