@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T21:13:38.381100+00:00",
+  "updated": "2026-06-05T22:53:14.037858+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61756.0,
-      "delta_pct": -3.2,
+      "value": 61862.0,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Trump wants lower rates conflicts with USDJPY long. Rate cut expectations weaken yen. Energy shock from Iran conflict supports USD strength, accelerating USDJPY long and EURUSD short.",
-    "updated": "2026-06-05T21:13:38.381100+00:00"
+    "text": "USDJPY LONG conflicted by Trump wanting lower rates, which weakens USD. Strong jobs report supports the long though.",
+    "updated": "2026-06-05T22:53:14.037858+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms, USD bid from rising VIX intensity.\n\nEURUSD SHORT: Macro confirms, USD bid from concurrent yield and VIX.\n\nUSDJPY LONG: Macro confirms, USD bid from rising yields supporting yen.",
+    "text": "NZDUSD SHORT: Macro confirms setup, USD bid from rising VIX intensity.\n\nEURUSD SHORT: Macro confirms setup, multiple USD tailwinds converging simultaneously today.\n\nUSDJPY LONG: Macro confirms setup, US 10Y strength supports yen divergence.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-05T21:13:38.381100+00:00"
+    "updated": "2026-06-05T22:53:14.037858+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-05T21:13:38.381100+00:00"
+    "updated": "2026-06-05T22:53:14.037858+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold's modest gain contrasts with Bitcoin's decline and elevated VIX, while the DXY pullback muddles the dollar picture. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by multiple inflation and growth data points at 14:30 ET.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump signals desire for lower interest rates, pressuring USD",
-      "Energy shock from Iran conflict to boost European inflation",
-      "Bond yields rising, stocks sliding send warning signals"
+      "Strong US jobs report sends bonds and stocks lower",
+      "Energy shock from Iran war weighs on Europe growth",
+      "Gold surpasses US Treasurys as top central bank asset"
     ],
-    "updated": "2026-06-05T21:13:38.381100+00:00"
+    "updated": "2026-06-05T22:53:14.037858+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
