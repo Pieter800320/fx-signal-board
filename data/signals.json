@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T22:58:33.470127+00:00",
+  "updated": "2026-06-05T01:58:14.882050+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,12 +539,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4501.7,
-      "delta_pct": 1.5,
-      "direction": "up",
+      "value": 4474.7,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.432,
+      "value": 99.424,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.527,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 6.4405,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.84,
-      "delta_pct": -3.3,
-      "direction": "down",
+      "value": 93.1,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63690.0,
-      "delta_pct": -0.5,
+      "value": 63288.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG conflicted by dollar weakness headlines. GBPUSD SHORT supported by dollar strength narratives. Peace talks reduce safe haven demand for yen.",
-    "updated": "2026-06-04T22:58:33.470127+00:00"
+    "text": "USDJPY LONG conflicted by dollar weakness headlines and gold replacing treasuries as reserve asset, signaling yen strength.",
+    "updated": "2026-06-05T01:58:14.882050+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Risk-off supports JPY strength, challenging setup.\n\nGBPUSD SHORT: Risk-off headwinds limit downside, challenging setup.",
+    "text": "USDJPY LONG: Risk-off environment confirms safe-haven yen demand setup.\n\nGBPUSD SHORT: Mixed regime with positive momentum challenges bearish thesis.",
     "top": [
       {
         "pair": "USDJPY",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-06-04T22:58:33.470127+00:00"
+    "updated": "2026-06-05T01:58:14.882050+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-04T22:58:33.470127+00:00"
+    "updated": "2026-06-05T01:58:14.882050+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Gold rises while VIX falls and DXY stays flat, creating conflicting risk sentiment reads that neutralize any clear direction. The next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by Core PCE at 14:30 ET.",
@@ -716,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Initial jobless claims 225K vs 213K estimate, continuing claims miss",
-      "Putin ready for peaceful deal with Ukraine, reducing geopolitical risk premium",
-      "Energy shock from Iran war to weigh on Europe's growth, boost inflation"
+      "US Initial jobless claims 225K vs 213K estimate; NFP implications",
+      "Putin signals willingness for peaceful Ukraine deal; risk sentiment shifts",
+      "Energy shock from Iran war to weigh on Europe's growth"
     ],
-    "updated": "2026-06-04T22:58:33.470127+00:00"
+    "updated": "2026-06-05T01:58:14.882050+00:00"
   },
   "last_alert": "2026-06-02T14:59:48.410864+00:00",
   "gold_signal": {
