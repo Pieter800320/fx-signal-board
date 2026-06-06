@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T01:49:45.143822+00:00",
+  "updated": "2026-06-06T05:43:47.411589+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4353.9,
-      "delta_pct": -2.7,
+      "value": 4337.1,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2755,
-      "delta_pct": -3.6,
+      "value": 6.2635,
+      "delta_pct": -3.8,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.25,
-      "delta_pct": -3.0,
+      "value": 90.54,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61055.0,
-      "delta_pct": -4.3,
+      "value": 60731.0,
+      "delta_pct": -4.8,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Strong US jobs report supports USDJPY LONG through rate expectations. Energy shock from Iran conflict could weigh on NZD and EUR, supporting both SHORT setups.",
-    "updated": "2026-06-06T01:49:45.143822+00:00"
+    "text": "USDJPY LONG conflicted by Trump wanting lower rates, which weakens USD yield advantage. EURUSD SHORT challenged by euro staging gains against dollar despite uncertainty.",
+    "updated": "2026-06-06T05:43:47.411589+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: VIX surge and Treasury yield rise confirm USD strength bias strongly.\n\nEURUSD SHORT: Rising yields and risk-off environment confirm structural USD bid setup.\n\nUSDJPY LONG: Higher US yields support carry unwind despite yen safe-haven flows conflicting.",
+    "text": "NZDUSD SHORT: VIX surge and USD bid strongly confirm the short setup.\n\nEURUSD SHORT: Rising US yields and risk off environment confirm EUR weakness.\n\nUSDJPY LONG: USD strength confirmed but JPY bid from risk off challenges.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-06T01:49:45.143822+00:00"
+    "updated": "2026-06-06T05:43:47.411589+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-06T01:49:45.143822+00:00"
+    "updated": "2026-06-06T05:43:47.411589+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off momentum accelerates as gold crashes 2.7% while VIX surges nearly 40%, confirming the bearish signal. Cross-asset selloff shows BTC down 4.3%, stocks down 2.6%, and commodities broadly weaker, all supporting USD strength with DXY up 0.7%. Rising 10-year yields add further USD support. NZDUSD and EURUSD present the clearest short setups as commodity currencies and risk assets face continued pressure. The flight-to-safety theme dominates with USD benefiting from global risk aversion across all major asset classes.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Strong US jobs report sends bonds/stocks lower, pressures dollar",
-      "Energy shock from Iran conflict to boost European inflation",
-      "Gold surpasses US Treasurys as top central bank reserve"
+      "Strong US jobs report sends bonds and stocks lower",
+      "Energy shock from Iran conflict to boost Europe inflation",
+      "Gold surpasses US Treasurys as top central bank asset"
     ],
-    "updated": "2026-06-06T01:49:45.143822+00:00"
+    "updated": "2026-06-06T05:43:47.411589+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
