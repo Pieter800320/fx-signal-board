@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T15:03:10.110449+00:00",
+  "updated": "2026-06-06T16:55:00.166147+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60663.0,
-      "delta_pct": -0.4,
+      "value": 60735.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG conflicted by Trump wanting lower rates, which weakens USD. EURUSD SHORT accelerated by energy shock boosting European inflation concerns.",
-    "updated": "2026-06-06T15:03:10.110449+00:00"
+    "text": "USDJPY LONG at risk from strong US jobs report sending bonds lower, reducing yield advantage. EURUSD SHORT pressured by euro staging coup against dollar narrative.",
+    "updated": "2026-06-06T16:55:00.166147+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms setup via USD bid from rising VIX.\n\nEURUSD SHORT: Macro confirms setup via USD bid from rising yields.\n\nUSDJPY LONG: Macro confirms setup via USD bid from falling gold.",
+    "text": "NZDUSD SHORT: Macro confirms setup, USD bid from rising VIX.\n\nEURUSD SHORT: Macro confirms setup, USD bid from rising yields.\n\nUSDJPY LONG: Macro confirms setup, USD bid from VIX spike.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-06T15:03:10.110449+00:00"
+    "updated": "2026-06-06T16:55:00.166147+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-06T15:03:10.110449+00:00"
+    "updated": "2026-06-06T16:55:00.166147+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold plunges 3.1% while VIX spikes nearly 40%, confirming broad flight to safety following strong US jobs data that crushed bond and equity markets. The dollar strengthens across the board with DXY up 0.7%, creating clear selling opportunities in risk currencies. NZDUSD and EURUSD both flash strong bearish setups as commodity currencies get hammered alongside the 3.8% copper decline. USDJPY benefits from the dual tailwinds of dollar strength and rising yields, with US10Y climbing 6 basis points. The risk-off theme should persist through today's PCE data at 14:30 UTC.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Strong US jobs report sends bonds and stocks lower",
-      "Energy shock from Iran conflict to boost European inflation",
-      "Gold surpasses US Treasurys as top central bank asset"
+      "Strong US jobs report sends bonds/stocks lower, pressures dollar",
+      "Energy shock from Iran war weighs Europe growth, boosts inflation",
+      "Trump calls for lower interest rates, signals policy shift"
     ],
-    "updated": "2026-06-06T15:03:10.110449+00:00"
+    "updated": "2026-06-06T16:55:00.166147+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
