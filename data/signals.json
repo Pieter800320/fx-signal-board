@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T20:56:55.453754+00:00",
+  "updated": "2026-06-07T22:04:43.005134+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61842.0,
-      "delta_pct": 1.6,
+      "value": 61782.0,
+      "delta_pct": 1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Strong US jobs report supports USDJPY LONG. Energy shock from Iran conflict weighs on Euro, supporting EURUSD SHORT. No direct conflicts identified.",
-    "updated": "2026-06-07T20:56:55.453754+00:00"
+    "text": "Strong US jobs report supports USDJPY LONG. Energy shock from Iran war could weigh on Euro, supporting EURUSD SHORT. No direct conflicts detected.",
+    "updated": "2026-06-07T22:04:43.005134+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: VIX spike and Treasury yields confirm strong USD bid setup.\n\nEURUSD SHORT: Risk-off environment with rising rates strongly reinforces USD strength signal.\n\nUSDJPY LONG: Rising yields support yen carry unwind, confirming long USD positioning.",
+    "text": "NZDUSD SHORT: VIX surge and Treasury yields confirm USD strength bias strongly.\n\nEURUSD SHORT: Rising rates and risk-off environment support continued euro weakness setup.\n\nUSDJPY LONG: US Treasury yields rising supports yen weakness versus dollar thesis.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-07T20:56:55.453754+00:00"
+    "updated": "2026-06-07T22:04:43.005134+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-07T20:56:55.453754+00:00"
+    "updated": "2026-06-07T22:04:43.005134+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold plunges 2.5% while VIX spikes nearly 40%, confirming the H4 bear signal. Cross-asset moves align perfectly with USD strength as the dollar index gains 0.7% amid a 5.9bp jump in 10-year yields and broad equity weakness. NZDUSD and EURUSD present the clearest short setups as commodity currencies and the euro face dual pressure from risk aversion and dollar demand. USDJPY extends higher as yen weakness persists despite global market stress. Strong US jobs data earlier this week continues supporting dollar momentum, while geopolitical uncertainty around Iran adds to safe-haven flows.",
@@ -722,10 +722,10 @@
   "breaking": {
     "headlines": [
       "Strong US jobs report sends bonds and stocks lower",
-      "Trump wants lower interest rates, pressuring dollar strength",
-      "Energy shock from Iran war to boost inflation, weigh growth"
+      "Trump says Iran close to deal, avoiding escalation",
+      "Energy shock from Iran war to weigh on Europe"
     ],
-    "updated": "2026-06-07T20:56:55.453754+00:00"
+    "updated": "2026-06-07T22:04:43.005134+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
@@ -735,5 +735,9 @@
     "h4_confidence": "Medium",
     "h1_confirmed": true,
     "updated": "2026-06-05T20:51:17.920684+00:00"
+  },
+  "week_ahead": {
+    "text": "Stagflation fears dominate this week as a dual shock of rising oil prices and climbing Treasury yields reshapes market dynamics . The ECB rate hike on June 11 is priced in as a 25bp move, with recent communication pre-committing markets to this outcome , making it the pivotal event affecting EUR positioning through the week. USD/JPY near 160 represents the critical pair to watch as escalating geopolitical tensions and intervention risk collide with dollar strength from sticky inflation data on Thursday. The biggest wildcard remains Middle East escalation\u2014peace negotiations still fragile, any breakdown could trigger sharp oil and rate repricing that overwhelms the macro data calendar entirely.",
+    "generated_at": "2026-06-07T22:04:43.005134+00:00"
   }
 }
