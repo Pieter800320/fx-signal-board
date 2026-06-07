@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T22:04:43.005134+00:00",
+  "updated": "2026-06-07T22:51:42.295152+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
+    "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
+    "score": 6.7,
+    "signals": 1,
     "total": 3,
-    "stable": true
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 6,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4365.3,
-      "delta_pct": -2.5,
-      "direction": "down",
+      "value": 4349.6,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.07,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 100.13,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2845,
-      "delta_pct": -3.5,
-      "direction": "down",
+      "value": 6.2595,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.54,
-      "delta_pct": -2.7,
-      "direction": "down",
+      "value": 92.9,
+      "delta_pct": 2.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61782.0,
-      "delta_pct": 1.5,
-      "direction": "flat",
+      "value": 63110.0,
+      "delta_pct": 3.7,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "Strong US jobs report supports USDJPY LONG. Energy shock from Iran war could weigh on Euro, supporting EURUSD SHORT. No direct conflicts detected.",
-    "updated": "2026-06-07T22:04:43.005134+00:00"
+    "text": "EURUSD SHORT at risk. Energy shock from Iran war to weigh on Europe's growth, boost inflation supports EUR strength.",
+    "updated": "2026-06-07T22:51:42.295152+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: VIX surge and Treasury yields confirm USD strength bias strongly.\n\nEURUSD SHORT: Rising rates and risk-off environment support continued euro weakness setup.\n\nUSDJPY LONG: US Treasury yields rising supports yen weakness versus dollar thesis.",
+    "text": "NZDUSD SHORT: Macro confirms via USD bid from rising VIX strength.\n\nEURUSD SHORT: Macro confirms via concurrent USD bids from VIX and yields.\n\nUSDJPY LONG: Macro confirms via USD bid from VIX risk off dynamics.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.62
+        "score": 7.42
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.55
+        "score": 7.35
       },
       {
         "pair": "USDJPY",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-07T22:04:43.005134+00:00"
+    "updated": "2026-06-07T22:51:42.295152+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-07T22:04:43.005134+00:00"
+    "updated": "2026-06-07T22:51:42.295152+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold plunges 2.5% while VIX spikes nearly 40%, confirming the H4 bear signal. Cross-asset moves align perfectly with USD strength as the dollar index gains 0.7% amid a 5.9bp jump in 10-year yields and broad equity weakness. NZDUSD and EURUSD present the clearest short setups as commodity currencies and the euro face dual pressure from risk aversion and dollar demand. USDJPY extends higher as yen weakness persists despite global market stress. Strong US jobs data earlier this week continues supporting dollar momentum, while geopolitical uncertainty around Iran adds to safe-haven flows.",
@@ -722,10 +722,10 @@
   "breaking": {
     "headlines": [
       "Strong US jobs report sends bonds and stocks lower",
-      "Trump says Iran close to deal, avoiding escalation",
-      "Energy shock from Iran war to weigh on Europe"
+      "Energy shock from Iran war to weigh on Europe's growth",
+      "Trump says Iran close to deal, doesn't want to blow up"
     ],
-    "updated": "2026-06-07T22:04:43.005134+00:00"
+    "updated": "2026-06-07T22:51:42.295152+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
@@ -737,7 +737,7 @@
     "updated": "2026-06-05T20:51:17.920684+00:00"
   },
   "week_ahead": {
-    "text": "Stagflation fears dominate this week as a dual shock of rising oil prices and climbing Treasury yields reshapes market dynamics . The ECB rate hike on June 11 is priced in as a 25bp move, with recent communication pre-committing markets to this outcome , making it the pivotal event affecting EUR positioning through the week. USD/JPY near 160 represents the critical pair to watch as escalating geopolitical tensions and intervention risk collide with dollar strength from sticky inflation data on Thursday. The biggest wildcard remains Middle East escalation\u2014peace negotiations still fragile, any breakdown could trigger sharp oil and rate repricing that overwhelms the macro data calendar entirely.",
-    "generated_at": "2026-06-07T22:04:43.005134+00:00"
+    "text": "The market repriced U.S. monetary policy expectations sharply higher after stronger-than-expected economic data, with the Federal Reserve's next move now viewed as potentially a rate hike rather than a cut. Thursday's PCE inflation data and jobless claims represent extremely high-impact releases that will drive volatility, with geopolitical developments also a potential catalyst. USD/JPY continues to rise steadily supported by strong U.S. labour market data, with quotes at 159.93 approaching levels of previous interventions. The biggest wildcard remains potential dramatic developments between the USA and Iran which could override data flows and trigger sharp repricing across FX and commodities.",
+    "generated_at": "2026-06-07T22:51:42.295152+00:00"
   }
 }
