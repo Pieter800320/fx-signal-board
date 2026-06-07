@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T13:12:24.596411+00:00",
+  "updated": "2026-06-07T15:15:30.663392+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61669.0,
-      "delta_pct": 1.3,
+      "value": 61808.0,
+      "delta_pct": 1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Strong US jobs report supports USDJPY LONG. Energy shock from Iran conflict could pressure EURUSD SHORT if inflation concerns ease growth fears.",
-    "updated": "2026-06-07T13:12:24.596411+00:00"
+    "text": "USDJPY LONG at risk: Strong US jobs report sends bonds lower, reducing rate differentials that support yen weakness.",
+    "updated": "2026-06-07T15:15:30.663392+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms setup, USD bid from rising VIX intensifies.\n\nEURUSD SHORT: Macro confirms setup, US Treasury yields rising support USD strength.\n\nUSDJPY LONG: Macro confirms setup, risk off flight to safety favors JPY carry unwind.",
+    "text": "NZDUSD SHORT: VIX surge and Treasury yields confirm strong USD bid thesis.\n\nEURUSD SHORT: Rising yields and risk-off confirm USD strength, support short.\n\nUSDJPY LONG: Yield differential widening confirms carry unwind headwinds, challenges setup.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-07T13:12:24.596411+00:00"
+    "updated": "2026-06-07T15:15:30.663392+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-07T13:12:24.596411+00:00"
+    "updated": "2026-06-07T15:15:30.663392+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off dominance drives USD strength as gold collapses 3.1% while VIX surges nearly 40%, confirming the H4 bear signal. Strong US jobs data sent bonds and stocks tumbling, with the SPX down 2.6% and 10-year yields climbing 6bp, reinforcing dollar demand. Cross-asset selloff in copper and oil reflects broad risk aversion, though Bitcoin's resilience creates some noise. NZDUSD and EURUSD present the clearest short setups as risk-sensitive currencies face dollar strength, while USDJPY benefits from safe-haven flows into the greenback.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Strong US jobs report sends bonds and stocks lower",
-      "Energy shock from Iran war weighs on Europe growth",
-      "Trump calls for lower interest rates"
+      "Strong US jobs report sends bonds/stocks lower, impacts dollar",
+      "Energy shock from Iran conflict weighs Europe growth, boosts inflation",
+      "Trump calls for lower rates amid strong economic data"
     ],
-    "updated": "2026-06-07T13:12:24.596411+00:00"
+    "updated": "2026-06-07T15:15:30.663392+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
