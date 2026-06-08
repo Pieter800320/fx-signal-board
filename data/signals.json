@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T18:05:25.747960+00:00",
+  "updated": "2026-06-08T19:55:30.626186+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -548,45 +548,45 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.43,
-      "delta_pct": -14.3,
+      "value": 18.88,
+      "delta_pct": -12.2,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7428.13,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 7405.64,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4368.4,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 4349.5,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.941,
-      "delta_pct": -0.1,
+      "value": 100.03,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.355,
-      "delta_pct": 1.5,
+      "value": 6.3295,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.556,
-      "delta_bp": 2.0,
+      "value": 4.552,
+      "delta_bp": 1.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,35 +597,35 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.19,
-      "delta_pct": 0.7,
+      "value": 91.41,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63412.0,
+      "value": 63421.0,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 92.8,
-      "delta_bp": 1.7,
+      "value": 92.4,
+      "delta_bp": 1.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with USDCHF LONG and USDCAD LONG. Weakening dollar momentum threatens both setups.",
-    "updated": "2026-06-08T17:00:53.246106+00:00"
+    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with USDCHF and USDCAD longs. Dollar weakness would invalidate both setups.",
+    "updated": "2026-06-08T19:55:30.626186+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, safe-haven demand supports risk-off regime.\n\nUSDCAD LONG: Macro challenges setup, commodity strength undermines Canadian weakness thesis.",
+    "text": "USDCHF LONG: Risk-Off regime confirms setup, VIX decline strengthens safe-haven demand thesis.\n\nUSDCAD LONG: Risk-Off regime supports but copper strength challenges commodity-linked CAD weakness narrative.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.98
+        "score": 6.48
       },
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.0
       }
     ],
-    "updated": "2026-06-08T17:00:53.246106+00:00"
+    "updated": "2026-06-08T19:55:30.626186+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-08T17:00:53.246106+00:00"
+    "updated": "2026-06-08T19:55:30.626186+00:00"
   },
   "week_ahead": {
     "text": "The market repriced U.S. monetary policy expectations sharply higher after stronger-than-expected economic data, with the Federal Reserve's next move now viewed as potentially a rate hike rather than a cut. Thursday's PCE inflation data and jobless claims represent extremely high-impact releases that will drive volatility, with geopolitical developments also a potential catalyst. USD/JPY continues to rise steadily supported by strong U.S. labour market data, with quotes at 159.93 approaching levels of previous interventions. The biggest wildcard remains potential dramatic developments between the USA and Iran which could override data flows and trigger sharp repricing across FX and commodities.",
@@ -720,11 +720,11 @@
   },
   "breaking": {
     "headlines": [
-      "US employment trends weaken; May 107.01 vs 107.88 revised",
+      "US employment trends weak at 107.01 versus 107.88 revised",
       "Energy shock from Iran war to weigh on Europe's growth",
-      "Some losses for the Dollar ahead of the NFP"
+      "Some losses for dollar ahead of NFP"
     ],
-    "updated": "2026-06-08T17:00:53.246106+00:00"
+    "updated": "2026-06-08T19:55:30.626186+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
