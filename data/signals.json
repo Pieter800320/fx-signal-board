@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-07T22:51:42.295152+00:00",
+  "updated": "2026-06-08T02:08:12.719092+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,7 +544,7 @@
     "score": 6.7,
     "signals": 1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4349.6,
+      "value": 4348.3,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.13,
-      "delta_pct": 0.1,
+      "value": 100.08,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2595,
-      "delta_pct": -0.1,
+      "value": 6.285,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.9,
-      "delta_pct": 2.6,
+      "value": 93.34,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63110.0,
-      "delta_pct": 3.7,
+      "value": 63057.0,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT at risk. Energy shock from Iran war to weigh on Europe's growth, boost inflation supports EUR strength.",
-    "updated": "2026-06-07T22:51:42.295152+00:00"
+    "text": "USDJPY LONG at risk. Japan Q1 GDP beat 1.8% vs 1.3% expected strengthens yen, weakens dollar positioning.",
+    "updated": "2026-06-08T02:08:12.719092+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms via USD bid from rising VIX strength.\n\nEURUSD SHORT: Macro confirms via concurrent USD bids from VIX and yields.\n\nUSDJPY LONG: Macro confirms via USD bid from VIX risk off dynamics.",
+    "text": "NZDUSD SHORT: Macro confirms setup via USD bid from rising VIX.\n\nEURUSD SHORT: Macro confirms setup via dual USD strength from VIX.\n\nUSDJPY LONG: Macro confirms setup but JPY strength challenges USD dominance.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-07T22:51:42.295152+00:00"
+    "updated": "2026-06-08T02:08:12.719092+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-07T22:51:42.295152+00:00"
+    "updated": "2026-06-08T02:08:12.719092+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold plunges 2.5% while VIX spikes nearly 40%, confirming the H4 bear signal. Cross-asset moves align perfectly with USD strength as the dollar index gains 0.7% amid a 5.9bp jump in 10-year yields and broad equity weakness. NZDUSD and EURUSD present the clearest short setups as commodity currencies and the euro face dual pressure from risk aversion and dollar demand. USDJPY extends higher as yen weakness persists despite global market stress. Strong US jobs data earlier this week continues supporting dollar momentum, while geopolitical uncertainty around Iran adds to safe-haven flows.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Strong US jobs report sends bonds and stocks lower",
-      "Energy shock from Iran war to weigh on Europe's growth",
-      "Trump says Iran close to deal, doesn't want to blow up"
+      "Japan Q1 GDP 1.8% q/q annualized beats 1.3% forecast expectations",
+      "Energy shock from Iran conflict to weigh Europe growth boost inflation",
+      "Dollar weakens ahead of NFP amid geopolitical uncertainty and hedging shifts"
     ],
-    "updated": "2026-06-07T22:51:42.295152+00:00"
+    "updated": "2026-06-08T02:08:12.719092+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
