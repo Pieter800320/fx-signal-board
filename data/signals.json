@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T09:52:32.677302+00:00",
+  "updated": "2026-06-08T13:56:32.923116+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -543,102 +543,102 @@
     "confidence": "Low",
     "score": 5.0,
     "signals": 0,
-    "total": 4,
-    "stable": false
+    "total": 2,
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
-    "stable": false
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 19.88,
-      "delta_pct": -7.6,
+      "value": 19.03,
+      "delta_pct": -11.5,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7383.74,
-      "delta_pct": -2.6,
-      "direction": "down",
+      "value": 7438.02,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4312.6,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4361.8,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.09,
-      "delta_pct": 0.0,
+      "value": 99.887,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.31,
-      "delta_pct": 0.7,
+      "value": 6.3725,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.536,
-      "delta_bp": 5.9,
-      "direction": "up",
+      "value": 4.52,
+      "delta_bp": -1.6,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.625,
-      "delta_bp": 0.5,
+      "value": 3.623,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.32,
-      "delta_pct": 4.2,
-      "direction": "up",
+      "value": 90.94,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63106.0,
-      "delta_pct": -0.2,
+      "value": 63750.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 91.1,
-      "delta_bp": 5.4,
-      "direction": "up",
+      "value": 89.7,
+      "delta_bp": -1.4,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT at risk. Energy shock from Iran conflict could boost eurozone inflation, supporting euro. Geopolitical premium may accelerate upward pressure.",
-    "updated": "2026-06-08T08:41:48.827952+00:00"
+    "text": "GBPUSD SHORT and EURUSD SHORT at risk. De-escalation headlines reduce geopolitical premium, weaken safe haven demand supporting these pairs.",
+    "updated": "2026-06-08T13:56:32.923116+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: US 10Y rise confirms USD strength bias decisively.\n\nEURUSD SHORT: Rising US yields support short EUR positioning strongly.\n\nUSDJPY LONG: US 10Y bid supports yen carry unwind.",
+    "text": "GBPUSD SHORT: Risk-on medium challenges short bias, weakens conviction.\n\nEURUSD SHORT: Risk-on medium and ranging regime challenge short setup.\n\nUSDCAD LONG: Risk-on medium contradicts long USD bias here.",
     "top": [
       {
-        "pair": "NZDUSD",
+        "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.42
+        "score": 5.92
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.35
+        "score": 5.6
       },
       {
-        "pair": "USDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.62
+        "score": 4.7
       }
     ],
-    "updated": "2026-06-08T08:41:48.827952+00:00"
+    "updated": "2026-06-08T13:56:32.923116+00:00"
   },
   "calendar": {
     "events": [
@@ -713,23 +713,23 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-08T08:41:48.827952+00:00"
+    "updated": "2026-06-08T13:56:32.923116+00:00"
   },
   "week_ahead": {
     "text": "The market repriced U.S. monetary policy expectations sharply higher after stronger-than-expected economic data, with the Federal Reserve's next move now viewed as potentially a rate hike rather than a cut. Thursday's PCE inflation data and jobless claims represent extremely high-impact releases that will drive volatility, with geopolitical developments also a potential catalyst. USD/JPY continues to rise steadily supported by strong U.S. labour market data, with quotes at 159.93 approaching levels of previous interventions. The biggest wildcard remains potential dramatic developments between the USA and Iran which could override data flows and trigger sharp repricing across FX and commodities.",
     "generated_at": "2026-06-07T22:51:42.295152+00:00"
   },
   "deep_analysis": {
-    "text": "Risk-off sentiment dominates as gold plunges 2.5% while VIX spikes nearly 40%, confirming the H4 bear signal. Cross-asset moves align perfectly with USD strength as the dollar index gains 0.7% amid a 5.9bp jump in 10-year yields and broad equity weakness. NZDUSD and EURUSD present the clearest short setups as commodity currencies and the euro face dual pressure from risk aversion and dollar demand. USDJPY extends higher as yen weakness persists despite global market stress. Strong US jobs data earlier this week continues supporting dollar momentum, while geopolitical uncertainty around Iran adds to safe-haven flows.",
-    "generated_at": "2026-06-07T20:57:25.482143+00:00"
+    "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by GDP and Core PCE data at 14:30 ET.",
+    "generated_at": "2026-06-08T13:57:11.735301+00:00"
   },
   "breaking": {
     "headlines": [
-      "Eurozone Sentix investor confidence -13.4 vs -14.6 expected, better than forecast",
       "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
-      "Some losses for the Dollar ahead of the NFP"
+      "Iran's armed forces announce end of military operations against Israel",
+      "Some losses for the dollar ahead of the NFP"
     ],
-    "updated": "2026-06-08T08:41:48.827952+00:00"
+    "updated": "2026-06-08T13:56:32.923116+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
