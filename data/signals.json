@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T02:08:12.719092+00:00",
+  "updated": "2026-06-08T08:41:48.827952+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 21.51,
-      "delta_pct": 39.7,
-      "direction": "up",
+      "value": 19.88,
+      "delta_pct": -7.6,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4348.3,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4312.6,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.08,
+      "value": 100.09,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.285,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 6.31,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.34,
-      "delta_pct": 3.1,
+      "value": 94.32,
+      "delta_pct": 4.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63057.0,
-      "delta_pct": 3.6,
-      "direction": "up",
+      "value": 63106.0,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG at risk. Japan Q1 GDP beat 1.8% vs 1.3% expected strengthens yen, weakens dollar positioning.",
-    "updated": "2026-06-08T02:08:12.719092+00:00"
+    "text": "EURUSD SHORT at risk. Energy shock from Iran conflict could boost eurozone inflation, supporting euro. Geopolitical premium may accelerate upward pressure.",
+    "updated": "2026-06-08T08:41:48.827952+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro confirms setup via USD bid from rising VIX.\n\nEURUSD SHORT: Macro confirms setup via dual USD strength from VIX.\n\nUSDJPY LONG: Macro confirms setup but JPY strength challenges USD dominance.",
+    "text": "NZDUSD SHORT: US 10Y rise confirms USD strength bias decisively.\n\nEURUSD SHORT: Rising US yields support short EUR positioning strongly.\n\nUSDJPY LONG: US 10Y bid supports yen carry unwind.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.62
       }
     ],
-    "updated": "2026-06-08T02:08:12.719092+00:00"
+    "updated": "2026-06-08T08:41:48.827952+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-08T02:08:12.719092+00:00"
+    "updated": "2026-06-08T08:41:48.827952+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold plunges 2.5% while VIX spikes nearly 40%, confirming the H4 bear signal. Cross-asset moves align perfectly with USD strength as the dollar index gains 0.7% amid a 5.9bp jump in 10-year yields and broad equity weakness. NZDUSD and EURUSD present the clearest short setups as commodity currencies and the euro face dual pressure from risk aversion and dollar demand. USDJPY extends higher as yen weakness persists despite global market stress. Strong US jobs data earlier this week continues supporting dollar momentum, while geopolitical uncertainty around Iran adds to safe-haven flows.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan Q1 GDP 1.8% q/q annualized beats 1.3% forecast expectations",
-      "Energy shock from Iran conflict to weigh Europe growth boost inflation",
-      "Dollar weakens ahead of NFP amid geopolitical uncertainty and hedging shifts"
+      "Eurozone Sentix investor confidence -13.4 vs -14.6 expected, better than forecast",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+      "Some losses for the Dollar ahead of the NFP"
     ],
-    "updated": "2026-06-08T02:08:12.719092+00:00"
+    "updated": "2026-06-08T08:41:48.827952+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
