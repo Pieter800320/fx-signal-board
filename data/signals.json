@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T21:12:53.170862+00:00",
+  "updated": "2026-06-08T21:30:45.992916+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,31 +555,31 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.88,
-      "delta_pct": -12.2,
+      "value": 18.92,
+      "delta_pct": -12.0,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7405.64,
+      "value": 7405.73,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4349.5,
-      "delta_pct": 0.3,
+      "value": 4353.8,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.03,
-      "delta_pct": -0.0,
+      "value": 99.99,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3295,
+      "value": 6.3345,
       "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.41,
-      "delta_pct": 1.0,
+      "value": 91.28,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63421.0,
-      "delta_pct": 0.3,
+      "value": 63650.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with USDCHF and USDCAD longs. Dollar weakness would invalidate both setups.",
-    "updated": "2026-06-08T19:55:30.626186+00:00"
+    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with USDCHF and USDCAD longs. NFP could trigger dollar weakness.",
+    "updated": "2026-06-08T21:30:45.992916+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-Off regime confirms setup, VIX decline strengthens safe-haven demand thesis.\n\nUSDCAD LONG: Risk-Off regime supports but copper strength challenges commodity-linked CAD weakness narrative.",
+    "text": "USDCHF LONG: Macro risk-off confirms safe-haven USD strength today.\n\nUSDCAD LONG: Risk-off supports, but copper strength challenges commodity-sensitive loonie.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.48
+        "score": 6.95
       },
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.0
       }
     ],
-    "updated": "2026-06-08T19:55:30.626186+00:00"
+    "updated": "2026-06-08T21:30:45.992916+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-08T19:55:30.626186+00:00"
+    "updated": "2026-06-08T21:30:45.992916+00:00"
   },
   "week_ahead": {
     "text": "The market repriced U.S. monetary policy expectations sharply higher after stronger-than-expected economic data, with the Federal Reserve's next move now viewed as potentially a rate hike rather than a cut. Thursday's PCE inflation data and jobless claims represent extremely high-impact releases that will drive volatility, with geopolitical developments also a potential catalyst. USD/JPY continues to rise steadily supported by strong U.S. labour market data, with quotes at 159.93 approaching levels of previous interventions. The biggest wildcard remains potential dramatic developments between the USA and Iran which could override data flows and trigger sharp repricing across FX and commodities.",
@@ -720,11 +720,11 @@
   },
   "breaking": {
     "headlines": [
-      "US employment trends weak at 107.01 versus 107.88 revised",
-      "Energy shock from Iran war to weigh on Europe's growth",
-      "Some losses for dollar ahead of NFP"
+      "Dollar mixed as yields rise and US stocks split divergently",
+      "Some losses for dollar ahead of NFP employment data release",
+      "Energy shock from Iran war to weigh on Europe's growth"
     ],
-    "updated": "2026-06-08T19:55:30.626186+00:00"
+    "updated": "2026-06-08T21:30:45.992916+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
