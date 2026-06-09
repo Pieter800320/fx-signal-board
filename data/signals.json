@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T16:09:36.324390+00:00",
+  "updated": "2026-06-09T16:23:44.273089+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 6.0,
+    "signals": 1,
+    "total": 5,
     "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.12,
-      "delta_pct": -4.2,
-      "direction": "flat",
+      "value": 21.21,
+      "delta_pct": 12.1,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7405.73,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 7276.82,
+      "delta_pct": -1.7,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4366.5,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 4284.3,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.719,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.928,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4325,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 6.344,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.552,
-      "delta_bp": 1.6,
+      "value": 4.528,
+      "delta_bp": -2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.628,
-      "delta_bp": 0.3,
+      "value": 3.635,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.48,
-      "delta_pct": -2.0,
+      "value": 86.12,
+      "delta_pct": -5.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62615.0,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 61170.0,
+      "delta_pct": -3.0,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 92.4,
-      "delta_bp": 1.3,
-      "direction": "flat",
+      "value": 89.3,
+      "delta_bp": -3.1,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPJPY and USDCHF face headwinds from energy shock weighing on Europe's growth and boosting inflation, potentially reversing safe haven flows.",
-    "updated": "2026-06-09T12:28:09.850243+00:00"
+    "text": "USDCAD LONG at risk: Canada trade balance beat suggests CAD strength. USDCHF LONG vulnerable: dollar weakness headlines and upcoming NFP uncertainty. GBPJPY LONG challenged by energy shock from Iran war pressuring growth.",
+    "updated": "2026-06-09T16:23:44.273089+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms NZD bid thesis during risk-on.\n\nGBPJPY LONG: Risk-on low challenges carry trade without macro tailwind.\n\nUSDCHF LONG: Risk-on low challenges safe-haven USD strength setup.",
+    "text": "USDCAD LONG: Macro confirms setup, VIX rising and WTI falling both support.\n\nUSDCHF LONG: Macro confirms setup, VIX rising provides strong USD bid tailwind.\n\nGBPJPY LONG: Macro challenges setup, risk-off regime disfavors high-yielding carry trades.",
     "top": [
       {
-        "pair": "NZDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.93
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 4.92
+        "score": 7.17
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
+        "score": 6.2
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
         "score": 4.8
       }
     ],
-    "updated": "2026-06-09T12:28:09.850243+00:00"
+    "updated": "2026-06-09T16:23:44.273089+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-09T12:28:09.850243+00:00"
+    "updated": "2026-06-09T16:23:44.273089+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Core PCE Price Index prints at 14:30 UTC, the Fed's preferred inflation gauge with consensus at 3.3% year-over-year versus 3.2% prior.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "US May NFIB small business optimism index misses at 95.3 vs 96.0",
-      "Energy shock from Iran war to weigh on Europe growth, inflation",
-      "Markets consolidate ahead of US CPI data release today"
+      "US May existing home sales beat, 4.17m vs 4.07m expected",
+      "US May NFIB small business optimism misses, 95.3 vs 96.0",
+      "Energy shock from Iran war to weigh on Europe growth"
     ],
-    "updated": "2026-06-09T12:28:09.850243+00:00"
+    "updated": "2026-06-09T16:23:44.273089+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
