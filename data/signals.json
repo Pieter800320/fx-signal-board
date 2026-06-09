@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T19:50:58.794546+00:00",
+  "updated": "2026-06-09T21:26:14.892045+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,48 +539,48 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.0,
-    "signals": 1,
-    "total": 5,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 20.03,
-      "delta_pct": 5.9,
+      "value": 19.87,
+      "delta_pct": 5.0,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7365.44,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 7386.65,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4275.9,
-      "delta_pct": -1.4,
+      "value": 4284.8,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.968,
+      "value": 99.944,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3345,
-      "delta_pct": 0.1,
+      "value": 6.3525,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.16,
-      "delta_pct": -3.4,
+      "value": 88.7,
+      "delta_pct": -2.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61940.0,
-      "delta_pct": -1.8,
+      "value": 61813.0,
+      "delta_pct": -2.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG at risk. Energy shock from Iran conflict boosts inflation, weighs Europe growth, pressures BOE policy divergence against BOJ.",
-    "updated": "2026-06-09T19:50:58.794546+00:00"
+    "text": "Iran tensions and potential military response could accelerate USD strength, supporting USDCHF long. Energy shock threatens risk sentiment, pressuring NZDUSD short conviction. GBPJPY long faces volatility risk from geopolitical uncertainty.",
+    "updated": "2026-06-09T21:26:14.892045+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, VIX rising strengthens USD safe haven demand.\n\nNZDUSD SHORT: Macro confirms setup, risk off environment weakens commodity linked currencies.\n\nGBPJPY LONG: Macro challenges setup, risk off typically pressures GBP risk sentiment.",
+    "text": "USDCHF LONG: VIX surge and gold weakness strongly confirm USD safe haven bid.\n\nNZDUSD SHORT: Risk off supports USD strength but commodity weakness aids NZD.\n\nGBPJPY LONG: Risk off environment challenges carry trade despite positive momentum setup.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.28
       }
     ],
-    "updated": "2026-06-09T19:50:58.794546+00:00"
+    "updated": "2026-06-09T21:26:14.892045+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-09T19:50:58.794546+00:00"
+    "updated": "2026-06-09T21:26:14.892045+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold tumbles 1.4% while VIX surges nearly 6%, signaling broad flight to safety amid geopolitical tensions in Tehran and Trump's military response threats. The dollar catches a bid despite slight DXY weakness as Treasury yields fall and commodities crater across the board. Bitcoin's 1.8% drop confirms the risk-averse tone. USDCAD and USDCHF present the strongest bullish setups as safe-haven flows favor the greenback against commodity and European currencies. With US CPI data firing at 12:30 UTC potentially adding volatility, defensive positioning remains the priority theme.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $58B 3-year notes at 4.192% yield",
-      "Energy shock from Iran war to weigh on Europe's growth",
-      "Trump: Iran responsible, must respond militarily to helicopter incident"
+      "US treasury sells $58B 3-year notes at 4.192% yield, impacts USD",
+      "Energy shock from Iran conflict to boost inflation, weigh Europe growth",
+      "Some losses for dollar ahead of NFP; USD/JPY remains on watch"
     ],
-    "updated": "2026-06-09T19:50:58.794546+00:00"
+    "updated": "2026-06-09T21:26:14.892045+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
