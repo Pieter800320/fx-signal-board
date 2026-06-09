@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T19:23:15.085116+00:00",
+  "updated": "2026-06-09T19:50:58.794546+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,43 +544,43 @@
     "score": 6.0,
     "signals": 1,
     "total": 5,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 21.21,
-      "delta_pct": 12.1,
+      "value": 20.03,
+      "delta_pct": 5.9,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7276.82,
-      "delta_pct": -1.7,
+      "value": 7365.44,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4284.3,
-      "delta_pct": -1.2,
+      "value": 4275.9,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.928,
+      "value": 99.968,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.344,
-      "delta_pct": 0.2,
+      "value": 6.3345,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.12,
-      "delta_pct": -5.7,
+      "value": 88.16,
+      "delta_pct": -3.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61170.0,
-      "delta_pct": -3.0,
-      "direction": "down",
+      "value": 61940.0,
+      "delta_pct": -1.8,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk: Canada trade balance beat suggests CAD strength. USDCHF LONG vulnerable: dollar weakness headlines and upcoming NFP uncertainty. GBPJPY LONG challenged by energy shock from Iran war pressuring growth.",
-    "updated": "2026-06-09T16:23:44.273089+00:00"
+    "text": "GBPJPY LONG at risk. Energy shock from Iran conflict boosts inflation, weighs Europe growth, pressures BOE policy divergence against BOJ.",
+    "updated": "2026-06-09T19:50:58.794546+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, VIX rising and WTI falling both support.\n\nUSDCHF LONG: Macro confirms setup, VIX rising provides strong USD bid tailwind.\n\nGBPJPY LONG: Macro challenges setup, risk-off regime disfavors high-yielding carry trades.",
+    "text": "USDCHF LONG: Macro confirms setup, VIX rising strengthens USD safe haven demand.\n\nNZDUSD SHORT: Macro confirms setup, risk off environment weakens commodity linked currencies.\n\nGBPJPY LONG: Macro challenges setup, risk off typically pressures GBP risk sentiment.",
     "top": [
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 7.17
-      },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.2
+        "score": 6.38
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 4.57
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 4.8
+        "score": 4.28
       }
     ],
-    "updated": "2026-06-09T16:23:44.273089+00:00"
+    "updated": "2026-06-09T19:50:58.794546+00:00"
   },
   "calendar": {
     "events": [
@@ -713,19 +713,19 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-09T16:23:44.273089+00:00"
+    "updated": "2026-06-09T19:50:58.794546+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. Core PCE Price Index prints at 14:30 UTC, the Fed's preferred inflation gauge with consensus at 3.3% year-over-year versus 3.2% prior.",
-    "generated_at": "2026-06-09T05:56:50.189282+00:00"
+    "text": "Risk-off sentiment dominates as gold tumbles 1.4% while VIX surges nearly 6%, signaling broad flight to safety amid geopolitical tensions in Tehran and Trump's military response threats. The dollar catches a bid despite slight DXY weakness as Treasury yields fall and commodities crater across the board. Bitcoin's 1.8% drop confirms the risk-averse tone. USDCAD and USDCHF present the strongest bullish setups as safe-haven flows favor the greenback against commodity and European currencies. With US CPI data firing at 12:30 UTC potentially adding volatility, defensive positioning remains the priority theme.",
+    "generated_at": "2026-06-09T19:51:31.048824+00:00"
   },
   "breaking": {
     "headlines": [
-      "US May existing home sales beat, 4.17m vs 4.07m expected",
-      "US May NFIB small business optimism misses, 95.3 vs 96.0",
-      "Energy shock from Iran war to weigh on Europe growth"
+      "US treasury sells $58B 3-year notes at 4.192% yield",
+      "Energy shock from Iran war to weigh on Europe's growth",
+      "Trump: Iran responsible, must respond militarily to helicopter incident"
     ],
-    "updated": "2026-06-09T16:23:44.273089+00:00"
+    "updated": "2026-06-09T19:50:58.794546+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
