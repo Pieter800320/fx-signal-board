@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-08T23:04:58.173230+00:00",
+  "updated": "2026-06-09T01:46:15.844570+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
+    "label": "Mixed",
+    "signals": 0,
     "total": 2,
-    "confidence": "Medium",
-    "stable": true
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4352.1,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4361.4,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.0,
+      "value": 99.979,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.333,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 6.334,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.34,
-      "delta_pct": 0.9,
+      "value": 90.87,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63418.0,
-      "delta_pct": 0.3,
+      "value": 62719.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with USDCHF LONG and USDCAD LONG. NFP data could accelerate dollar weakness.",
-    "updated": "2026-06-08T23:04:58.173230+00:00"
+    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with both USDCHF and USDCAD long setups. NFP data could weaken dollar strength.",
+    "updated": "2026-06-09T01:46:15.844570+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, VIX decline strengthens safe haven demand.\n\nUSDCAD LONG: Macro challenges setup, copper strength weakens commodity currency tailwind.",
+    "text": "USDCHF LONG: Macro confirms setup, risk-off regime supports CHF safe-haven demand today.\n\nUSDCAD LONG: Macro challenges setup, risk-on macro contradicts risk-off CAD weakness signal.",
     "top": [
       {
         "pair": "USDCHF",
@@ -633,7 +633,7 @@
         "score": 5.0
       }
     ],
-    "updated": "2026-06-08T23:04:58.173230+00:00"
+    "updated": "2026-06-09T01:46:15.844570+00:00"
   },
   "calendar": {
     "events": [
@@ -708,7 +708,7 @@
         "note": "New Zealand business sentiment"
       }
     ],
-    "updated": "2026-06-08T23:04:58.173230+00:00"
+    "updated": "2026-06-09T01:46:15.844570+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by GDP and Core PCE data at 14:30 ET.",
@@ -716,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar mixed as yields rise and stocks split",
-      "Some losses for dollar ahead of NFP",
-      "Energy shock from Iran war weighs on Europe growth"
+      "UK retail sales surge in May with biggest annual rise since April 2025",
+      "Some losses for the Dollar ahead of the NFP",
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation"
     ],
-    "updated": "2026-06-08T23:04:58.173230+00:00"
+    "updated": "2026-06-09T01:46:15.844570+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
