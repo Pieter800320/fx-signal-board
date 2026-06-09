@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T01:46:15.844570+00:00",
+  "updated": "2026-06-09T05:56:07.988345+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4361.4,
-      "delta_pct": 0.6,
+      "value": 4369.0,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.979,
+      "value": 99.901,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.334,
-      "delta_pct": 0.1,
+      "value": 6.361,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.87,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 89.99,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62719.0,
-      "delta_pct": -0.8,
+      "value": 63276.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Some Losses for the Dollar Ahead of the NFP conflicts with both USDCHF and USDCAD long setups. NFP data could weaken dollar strength.",
-    "updated": "2026-06-09T01:46:15.844570+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-09T05:56:07.988345+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, risk-off regime supports CHF safe-haven demand today.\n\nUSDCAD LONG: Macro challenges setup, risk-on macro contradicts risk-off CAD weakness signal.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDCHF",
@@ -630,97 +630,97 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.0
+        "score": 5.6
       }
     ],
-    "updated": "2026-06-09T01:46:15.844570+00:00"
+    "updated": "2026-06-09T05:56:07.988345+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Thursday",
-        "time": "14:30 (8:30 ET)",
-        "iso": "",
-        "currency": "USD",
-        "name": "GDP (Second Estimate) Q1 2026",
-        "forecast": "2.0%",
-        "previous": "2.0%",
-        "note": "Advance estimate; may revise based on more complete source data"
+        "day": "Wed",
+        "time": "10:00",
+        "iso": "2026-06-10T10:00:00+00:00",
+        "currency": "CNY",
+        "name": "Consumer Price Index YoY",
+        "forecast": "1.2%",
+        "previous": "1.0%",
+        "note": "May inflation, input to monetary policy"
       },
       {
-        "day": "Thursday",
-        "time": "14:30 (8:30 ET)",
-        "iso": "",
+        "day": "Wed",
+        "time": "12:30",
+        "iso": "2026-06-10T12:30:00+00:00",
         "currency": "USD",
-        "name": "PCE Price Index YoY (April)",
-        "forecast": "3.8%",
-        "previous": "3.5%",
-        "note": "Headline PCE; Federal Reserve's preferred inflation gauge"
+        "name": "Consumer Price Index YoY",
+        "forecast": "4.2%",
+        "previous": "3.8%",
+        "note": "May CPI, major Fed policy driver"
       },
       {
-        "day": "Thursday",
-        "time": "14:30 (8:30 ET)",
-        "iso": "",
-        "currency": "USD",
-        "name": "Core PCE Price Index YoY (April)",
-        "forecast": "3.3%",
-        "previous": "3.2%",
-        "note": "Excludes food and energy; closely watched by Fed"
-      },
-      {
-        "day": "Thursday",
-        "time": "12:30 (ET)",
-        "iso": "",
-        "currency": "USD",
-        "name": "Initial Jobless Claims",
-        "forecast": "203K",
-        "previous": "209K",
-        "note": "Weekly labor market indicator"
-      },
-      {
-        "day": "Thursday",
-        "time": "12:30 (ET)",
-        "iso": "",
-        "currency": "USD",
-        "name": "Continuing Jobless Claims",
-        "forecast": "1.764M",
-        "previous": "1.782M",
-        "note": "Four-week moving average of claims"
-      },
-      {
-        "day": "Friday",
-        "time": "TBD",
-        "iso": "",
+        "day": "Wed",
+        "time": "13:45",
+        "iso": "2026-06-10T13:45:00+00:00",
         "currency": "CAD",
-        "name": "Budget Balance (Fiscal Year)",
-        "forecast": "-$14.937B",
-        "previous": "-$25.549B",
-        "note": "Canadian fiscal position"
+        "name": "Bank of Canada Interest Rate Decision",
+        "forecast": "2.25%",
+        "previous": "2.25%",
+        "note": "BoC holds rates, high market impact"
       },
       {
         "day": "Thu",
-        "time": "01:00",
-        "iso": "2026-05-28T01:00:00+00:00",
-        "currency": "NZD",
-        "name": "ANZ Business Confidence",
-        "forecast": "-29.9",
-        "previous": "-10.6",
-        "note": "New Zealand business sentiment"
+        "time": "12:15",
+        "iso": "2026-06-11T12:15:00+00:00",
+        "currency": "EUR",
+        "name": "European Central Bank Interest Rate Decision",
+        "forecast": "2.25%",
+        "previous": "2.15%",
+        "note": "ECB 25bp hike, major policy announcement"
+      },
+      {
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-06-11T12:30:00+00:00",
+        "currency": "USD",
+        "name": "Producer Price Index YoY",
+        "forecast": "6.2%",
+        "previous": "6.0%",
+        "note": "May PPI, wholesale inflation pressure"
+      },
+      {
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-06-11T12:30:00+00:00",
+        "currency": "USD",
+        "name": "Initial Jobless Claims",
+        "forecast": "215000",
+        "previous": "225000",
+        "note": "Weekly labor market conditions"
+      },
+      {
+        "day": "Wed",
+        "time": "10:00",
+        "iso": "2026-06-10T10:00:00+00:00",
+        "currency": "CNY",
+        "name": "Producer Price Index YoY",
+        "forecast": "3.7%",
+        "previous": "2.8%",
+        "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-09T01:46:15.844570+00:00"
+    "updated": "2026-06-09T05:56:07.988345+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. Next high-impact event is USD Initial Jobless Claims at 12:30 ET today, followed by GDP and Core PCE data at 14:30 ET.",
-    "generated_at": "2026-06-08T13:57:11.735301+00:00"
+    "text": "Mixed signals \u2014 no directional bias. Core PCE Price Index prints at 14:30 UTC, the Fed's preferred inflation gauge with consensus at 3.3% year-over-year versus 3.2% prior.",
+    "generated_at": "2026-06-09T05:56:50.189282+00:00"
   },
   "breaking": {
     "headlines": [
-      "UK retail sales surge in May with biggest annual rise since April 2025",
-      "Some losses for the Dollar ahead of the NFP",
-      "Energy shock from Iran war to weigh on Europe's growth, boost inflation"
+      "US president Trump may have Iran deal idea within days",
+      "China's May trade balance, exports and imports all beat expectations",
+      "Energy shock from Iran war to weigh on Europe's growth"
     ],
-    "updated": "2026-06-09T01:46:15.844570+00:00"
+    "updated": "2026-06-09T05:56:07.988345+00:00"
   },
   "last_alert": "2026-06-05T20:51:17.920684+00:00",
   "gold_signal": {
