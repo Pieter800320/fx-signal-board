@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T16:41:12.586198+00:00",
+  "updated": "2026-06-10T18:21:50.084635+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,54 +539,54 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 4,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 6.0,
+    "signals": 1,
+    "total": 5,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 20.37,
-      "delta_pct": 2.5,
-      "direction": "flat",
+      "value": 21.03,
+      "delta_pct": 5.8,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7377.44,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 7310.86,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4182.2,
-      "delta_pct": -1.8,
+      "value": 4139.3,
+      "delta_pct": -2.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.839,
-      "delta_pct": -0.1,
+      "value": 99.882,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3055,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 6.2565,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.524,
-      "delta_bp": -0.4,
+      "value": 4.538,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,43 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.08,
-      "delta_pct": 2.1,
+      "value": 90.45,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61968.0,
-      "delta_pct": 0.5,
+      "value": 61829.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.9,
-      "delta_bp": -0.4,
+      "value": 90.3,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG at risk. Energy shock from Iran tensions boosts inflation, supporting CHF safe haven demand and limiting USD strength.",
-    "updated": "2026-06-10T14:43:54.526717+00:00"
+    "text": "GBPJPY LONG at risk. Energy shock from Iran war would boost UK inflation, potentially forcing BOE to hold rates higher longer, pressuring carry trade unwind and yen strength.",
+    "updated": "2026-06-10T18:21:50.084635+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Gold falling confirms USD strength bias today.\n\nGBPJPY LONG: Risk-Off regime challenges carry trade positioning inherently.\n\nNZDUSD SHORT: Gold falling confirms USD bid against commodity.",
+    "text": "USDCHF LONG: Macro confirms setup via VIX surge and gold weakness.\n\nGBPJPY LONG: Macro challenges setup, momentum divergence conflicts risk off environment.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.05
+        "score": 6.25
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.03
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 4.03
+        "score": 4.43
       }
     ],
-    "updated": "2026-06-10T14:43:54.526717+00:00"
+    "updated": "2026-06-10T18:21:50.084635+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +708,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-10T14:43:54.526717+00:00"
+    "updated": "2026-06-10T18:21:50.084635+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. US CPI data at 12:30 UTC today could provide the next clear direction for markets.",
@@ -721,11 +716,11 @@
   },
   "breaking": {
     "headlines": [
-      "US May CPI +4.2% matches expectations, inflation data eases",
-      "Trump threatens Iranian power plants strikes, geopolitical risk escalates",
-      "Energy shock from Iran conflict to boost European inflation"
+      "U.S. Treasury auctions $39 billion 10-year notes at 4.538% yield",
+      "Energy shock from Iran conflict to boost inflation, weigh growth",
+      "CPI matches estimates but details remain tricky for market"
     ],
-    "updated": "2026-06-10T14:43:54.526717+00:00"
+    "updated": "2026-06-10T18:21:50.084635+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
