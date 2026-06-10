@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T08:56:40.218989+00:00",
+  "updated": "2026-06-10T11:28:19.112525+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
     "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.92,
-      "delta_pct": -12.0,
-      "direction": "down",
+      "value": 21.59,
+      "delta_pct": 14.1,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4232.5,
-      "delta_pct": -0.6,
+      "value": 4190.3,
+      "delta_pct": -1.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.875,
-      "delta_pct": -0.2,
+      "value": 99.922,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.312,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.24,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.98,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 89.25,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61332.0,
-      "delta_pct": -2.8,
-      "direction": "down",
+      "value": 60894.0,
+      "delta_pct": -1.2,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-10T06:15:00.887895+00:00"
+    "updated": "2026-06-10T11:28:19.112525+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.18
+        "score": 6.25
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 4.38
+        "score": 4.4
       },
       {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 4.28
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 4.0
       }
     ],
-    "updated": "2026-06-10T06:15:00.887895+00:00"
+    "updated": "2026-06-10T11:28:19.112525+00:00"
   },
   "calendar": {
     "events": [
@@ -713,19 +713,19 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-10T06:15:00.887895+00:00"
+    "updated": "2026-06-10T11:28:19.112525+00:00"
   },
   "deep_analysis": {
-    "text": "Risk-off sentiment dominates as gold tumbles 1.4% while VIX surges nearly 6%, signaling broad flight to safety amid geopolitical tensions in Tehran and Trump's military response threats. The dollar catches a bid despite slight DXY weakness as Treasury yields fall and commodities crater across the board. Bitcoin's 1.8% drop confirms the risk-averse tone. USDCAD and USDCHF present the strongest bullish setups as safe-haven flows favor the greenback against commodity and European currencies. With US CPI data firing at 12:30 UTC potentially adding volatility, defensive positioning remains the priority theme.",
-    "generated_at": "2026-06-09T19:51:31.048824+00:00"
+    "text": "Mixed signals \u2014 no directional bias. US CPI data at 12:30 UTC today could provide the next clear direction for markets.",
+    "generated_at": "2026-06-10T11:29:01.748965+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan May PPI 6.3% y/y beats 5.5%, JPY strengthens",
-      "China May CPI misses at 1.2% y/y, CNY weakens",
-      "Energy shock Iran war weighs Europe growth, boosts inflation"
+      "Energy shock from Iran war to weigh on Europe's growth, boost inflation",
+      "Some losses for the dollar ahead of the NFP",
+      "Trump on Iran: They will have to pay the price"
     ],
-    "updated": "2026-06-10T06:15:00.887895+00:00"
+    "updated": "2026-06-10T11:28:19.112525+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
