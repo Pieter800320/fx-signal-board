@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-09T23:06:43.421409+00:00",
+  "updated": "2026-06-10T01:56:45.281394+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4259.4,
-      "delta_pct": -1.8,
+      "value": 4209.2,
+      "delta_pct": -2.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.995,
+      "value": 99.993,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3345,
+      "value": 6.3335,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.13,
-      "delta_pct": -2.4,
+      "value": 89.04,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61683.0,
+      "value": 61706.0,
       "delta_pct": -2.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG at risk. Iran military escalation and US response could trigger risk-off, strengthening JPY as safe haven.\n\nUSDCHF LONG vulnerable. Energy shock from Iran conflict may weaken USD and boost CHF safe haven demand.",
-    "updated": "2026-06-09T23:06:43.421409+00:00"
+    "text": "Japan PPI beat 6.3% vs 5.5% expected accelerates GBPJPY long via JPY weakness. Iran tensions could support safe haven JPY, conflicting with setup.",
+    "updated": "2026-06-10T01:56:45.281394+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and gold weakness strongly confirm USD safe-haven bid.\n\nNZDUSD SHORT: Risk-off environment supports USD strength despite weak momentum divergence signal.\n\nGBPJPY LONG: Risk-off regime challenges long positioning in risk asset GBP fundamentally.",
+    "text": "USDCHF LONG: VIX surge and gold weakness strongly confirm USD bid setup.\n\nNZDUSD SHORT: Risk-off environment supports USD strength, confirms directional bias cleanly.\n\nGBPJPY LONG: Risk-off regime challenges carry trade, lacks cross asset confirmation.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.28
       }
     ],
-    "updated": "2026-06-09T23:06:43.421409+00:00"
+    "updated": "2026-06-10T01:56:45.281394+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-09T23:06:43.421409+00:00"
+    "updated": "2026-06-10T01:56:45.281394+00:00"
   },
   "deep_analysis": {
     "text": "Risk-off sentiment dominates as gold tumbles 1.4% while VIX surges nearly 6%, signaling broad flight to safety amid geopolitical tensions in Tehran and Trump's military response threats. The dollar catches a bid despite slight DXY weakness as Treasury yields fall and commodities crater across the board. Bitcoin's 1.8% drop confirms the risk-averse tone. USDCAD and USDCHF present the strongest bullish setups as safe-haven flows favor the greenback against commodity and European currencies. With US CPI data firing at 12:30 UTC potentially adding volatility, defensive positioning remains the priority theme.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $58B 3-year notes at 4.192% yield, impacts USD",
-      "Energy shock from Iran war weighs Europe growth, boosts inflation",
-      "Trump: Iran responsible for Apache downing, must respond militarily"
+      "Japan May PPI 6.3% y/y beats expectations, USD/JPY rises",
+      "China May CPI 1.2% y/y misses forecast, deflation concerns",
+      "Iran tensions spark energy shock, European inflation pressure builds"
     ],
-    "updated": "2026-06-09T23:06:43.421409+00:00"
+    "updated": "2026-06-10T01:56:45.281394+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
