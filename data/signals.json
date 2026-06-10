@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T21:48:43.248439+00:00",
+  "updated": "2026-06-10T23:16:26.506454+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4094.1,
-      "delta_pct": -3.9,
+      "value": 4070.3,
+      "delta_pct": -4.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.03,
-      "delta_pct": 0.1,
+      "value": 99.91,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1995,
-      "delta_pct": -1.6,
+      "value": 6.1855,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.85,
-      "delta_pct": 4.1,
+      "value": 93.18,
+      "delta_pct": 5.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61621.0,
-      "delta_pct": -0.0,
+      "value": 61103.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG at risk. Iran war headline escalates geopolitical risk, typically strengthens JPY as safe haven, pressuring long positioning.",
-    "updated": "2026-06-10T21:48:43.248439+00:00"
+    "text": "GBPJPY LONG at risk: ECB rate hike could strengthen EUR, potentially weakening GBP relative to safe haven JPY flows.",
+    "updated": "2026-06-10T23:16:26.506454+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and gold weakness both confirm USD strength bias.\n\nNZDUSD SHORT: Risk-off environment supports USD bid, confirming directional setup strength.\n\nGBPJPY LONG: Risk-off regime challenges carry trade, lacks cross-asset macro confirmation.",
+    "text": "USDCHF LONG: VIX surge and gold weakness strongly confirm USD strength bias.\n\nNZDUSD SHORT: Risk-off environment supports USD bid against commodity-linked currencies.\n\nGBPJPY LONG: Risk-off regime challenges carry trade setup lacking commodity tailwind.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.13
       }
     ],
-    "updated": "2026-06-10T21:48:43.248439+00:00"
+    "updated": "2026-06-10T23:16:26.506454+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-10T21:48:43.248439+00:00"
+    "updated": "2026-06-10T23:16:26.506454+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. US CPI data at 12:30 UTC today could provide the next clear direction for markets.",
@@ -722,10 +722,10 @@
   "breaking": {
     "headlines": [
       "US Treasury auctions $39B 10-year notes at 4.538% yield",
-      "Energy shock from Iran war to weigh on Europe growth",
-      "Dollar losses ahead of NFP, low FX volatility opportunity"
+      "ECB set to raise rates as inflation risks persist",
+      "Dollar losses ahead of NFP employment data release"
     ],
-    "updated": "2026-06-10T21:48:43.248439+00:00"
+    "updated": "2026-06-10T23:16:26.506454+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
