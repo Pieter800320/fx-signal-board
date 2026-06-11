@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T18:25:28.873109+00:00",
+  "updated": "2026-06-11T20:04:04.673228+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.0,
-    "signals": 1,
-    "total": 5,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 5,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 21.54,
-      "delta_pct": -3.1,
-      "direction": "flat",
+      "value": 19.63,
+      "delta_pct": -11.7,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7336.96,
-      "delta_pct": 1.0,
+      "value": 7394.29,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4099.1,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 4234.1,
+      "delta_pct": 3.1,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.3,
-      "delta_pct": 0.4,
-      "direction": "up",
+      "value": 99.668,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.267,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 6.395,
+      "delta_pct": 2.3,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.53,
-      "delta_bp": -1.2,
-      "direction": "flat",
+      "value": 4.463,
+      "delta_bp": -7.9,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.63,
-      "delta_bp": -0.5,
+      "value": 3.623,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.27,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 86.5,
+      "delta_pct": -3.9,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62948.0,
-      "delta_pct": 2.4,
-      "direction": "flat",
+      "value": 63571.0,
+      "delta_pct": 3.5,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.0,
-      "delta_bp": -0.7,
-      "direction": "flat",
+      "value": 84.0,
+      "delta_bp": -6.7,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT conflicted by ECB rate hike signals strengthening euro. GBPUSD SHORT and NZDUSD SHORT supported by dollar weakness headlines.",
-    "updated": "2026-06-11T17:29:58.827413+00:00"
+    "text": "USDCAD LONG conflicted by Canada building permits miss at -7.6% versus -3.5% estimate, weakening CAD support thesis.",
+    "updated": "2026-06-11T20:04:04.673228+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Risk-off regime and rising DXY strongly confirm setup.\n\nEURUSD SHORT: Risk-off supports shorts but weak momentum divergence challenges conviction.\n\nGBPUSD SHORT: Rising DXY confirms but weak price action challenges momentum.",
+    "text": "NZDUSD SHORT: Risk-off regime confirms setup via NZD weakness driver.\n\nUSDCHF LONG: Risk-off macro confirms CHF safe haven bid driver.\n\nUSDCAD LONG: Falling WTI directly challenges setup via CAD support driver.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 8.72
+        "score": 6.78
       },
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.25
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 5.85
       },
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 6.25
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 5.6
       }
     ],
-    "updated": "2026-06-11T17:29:58.827413+00:00"
+    "updated": "2026-06-11T20:04:04.673228+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-11T17:29:58.827413+00:00"
+    "updated": "2026-06-11T20:04:04.673228+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Initial jobless claims 229K vs 219K estimate, continuing claims miss",
-      "ECB set to raise rates as inflation risks support further tightening",
-      "Canada building permits -7.6% versus -3.5% estimate, CAD pressure"
+      "U.S. Treasury auctions $22 billion 30-year bonds top of hour",
+      "ECB set to raise rates, inflation risks keep door open",
+      "Canada building permits miss estimates at -7.6% versus -3.5%"
     ],
-    "updated": "2026-06-11T17:29:58.827413+00:00"
+    "updated": "2026-06-11T20:04:04.673228+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
