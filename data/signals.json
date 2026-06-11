@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T14:47:39.508344+00:00",
+  "updated": "2026-06-11T17:29:58.827413+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,101 +544,101 @@
     "score": 6.0,
     "signals": 1,
     "total": 5,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 1,
+    "total": 3,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 21.48,
-      "delta_pct": -3.3,
+      "value": 21.54,
+      "delta_pct": -3.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7305.28,
-      "delta_pct": 0.5,
+      "value": 7336.96,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4101.9,
+      "value": 4099.1,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.11,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 100.3,
+      "delta_pct": 0.4,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.254,
-      "delta_pct": 0.1,
+      "value": 6.267,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.525,
-      "delta_bp": -1.7,
+      "value": 4.53,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.628,
-      "delta_bp": -0.7,
+      "value": 3.63,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.67,
-      "delta_pct": -0.4,
+      "value": 90.27,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62999.0,
-      "delta_pct": 2.5,
-      "direction": "up",
+      "value": 62948.0,
+      "delta_pct": 2.4,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.7,
-      "delta_bp": -1.0,
+      "value": 90.0,
+      "delta_bp": -0.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "ECB rate hike support strengthens EUR, conflicting with EURUSD SHORT setup. US jobless claims miss weakens USD, supporting EURUSD SHORT but conflicting with USDCHF LONG.",
-    "updated": "2026-06-11T13:47:32.083736+00:00"
+    "text": "EURUSD SHORT conflicted by ECB rate hike signals strengthening euro. GBPUSD SHORT and NZDUSD SHORT supported by dollar weakness headlines.",
+    "updated": "2026-06-11T17:29:58.827413+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Risk-Off regime confirms weakness, NZD carry unwind pressures intensify.\n\nEURUSD SHORT: Risk-Off macro aligns with short bias, safe-haven USD bid.\n\nUSDCHF LONG: Risk-Off supports CHF strength but contradicts USD strength setup.",
+    "text": "NZDUSD SHORT: Risk-off regime and rising DXY strongly confirm setup.\n\nEURUSD SHORT: Risk-off supports shorts but weak momentum divergence challenges conviction.\n\nGBPUSD SHORT: Rising DXY confirms but weak price action challenges momentum.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.67
+        "score": 8.72
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 5.95
+        "score": 6.25
       },
       {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 5.85
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 6.25
       }
     ],
-    "updated": "2026-06-11T13:47:32.083736+00:00"
+    "updated": "2026-06-11T17:29:58.827413+00:00"
   },
   "calendar": {
     "events": [
@@ -713,19 +713,19 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-11T13:47:32.083736+00:00"
+    "updated": "2026-06-11T17:29:58.827413+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. The ECB rate decision at 12:15 UTC and US PPI data at 12:30 UTC represent the next high-impact events within 24 hours.",
-    "generated_at": "2026-06-11T02:08:44.458693+00:00"
+    "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
+    "generated_at": "2026-06-11T17:30:37.594775+00:00"
   },
   "breaking": {
     "headlines": [
-      "US PPI inflation +6.5% y/y exceeds expectations, supports dollar strength",
-      "ECB set to raise rates as inflation risks persist",
-      "US jobless claims 229K beat estimate, continuing claims rise slightly"
+      "US Initial jobless claims 229K vs 219K estimate, continuing claims miss",
+      "ECB set to raise rates as inflation risks support further tightening",
+      "Canada building permits -7.6% versus -3.5% estimate, CAD pressure"
     ],
-    "updated": "2026-06-11T13:47:32.083736+00:00"
+    "updated": "2026-06-11T17:29:58.827413+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
