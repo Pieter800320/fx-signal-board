@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T02:08:17.165495+00:00",
+  "updated": "2026-06-11T08:25:30.058651+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,98 +539,98 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.0,
-    "signals": 1,
-    "total": 5,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 22.22,
-      "delta_pct": 11.8,
-      "direction": "up",
+      "value": 20.63,
+      "delta_pct": 3.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7266.99,
-      "delta_pct": -1.6,
-      "direction": "down",
+      "value": 7386.65,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4119.7,
-      "delta_pct": -3.3,
-      "direction": "down",
+      "value": 4127.8,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.908,
-      "delta_pct": -0.0,
+      "value": 100.02,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.246,
-      "delta_pct": -0.9,
-      "direction": "down",
+      "value": 6.24,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.542,
-      "delta_bp": 1.4,
+      "value": 4.528,
+      "delta_bp": -2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
       "value": 3.635,
-      "delta_bp": -0.0,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.69,
-      "delta_pct": 4.0,
-      "direction": "up",
+      "value": 89.41,
+      "delta_pct": -0.7,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62117.0,
-      "delta_pct": 0.8,
+      "value": 62821.0,
+      "delta_pct": 2.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.7,
-      "delta_bp": 1.4,
-      "direction": "flat",
+      "value": 89.3,
+      "delta_bp": -3.1,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG conflict: ECB rate hike expectations weaken USD relative to CHF safe haven flows.\n\nGBPJPY LONG conflict: Dollar weakness headline suggests risk-off sentiment may pressure carry trades like GBPJPY.",
-    "updated": "2026-06-11T02:08:17.165495+00:00"
+    "text": "ECB rate hike bullish for EUR strengthens dollar headwinds on USDCHF long. Dollar weakness headline conflicts with setup momentum.",
+    "updated": "2026-06-11T08:25:30.058651+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and gold weakness both confirm USD strength bias.\n\nNZDUSD SHORT: Rising VIX supports USD bid, challenging risk currency weakness.\n\nGBPJPY LONG: Risk-off regime challenges carry trade without supporting cross-asset drivers.",
+    "text": "USDCHF LONG: Macro confirms setup; CHF safe-haven demand supports strength.\n\nNZDUSD SHORT: Macro challenges setup; risk-off typically supports NZD underperformance weakly.\n\nGBPJPY LONG: Macro challenges setup; risk-off favors JPY over GBP carry.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.25
+        "score": 5.85
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 5.03
+        "score": 4.62
       },
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 4.13
       }
     ],
-    "updated": "2026-06-11T02:08:17.165495+00:00"
+    "updated": "2026-06-11T08:25:30.058651+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +713,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-11T02:08:17.165495+00:00"
+    "updated": "2026-06-11T08:25:30.058651+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The ECB rate decision at 12:15 UTC and US PPI data at 12:30 UTC represent the next high-impact events within 24 hours.",
@@ -721,11 +721,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Treasury auctions $39 billion 10-year notes at 4.538% yield",
-      "ECB set to raise rates as inflation risks prompt further tightening",
-      "Some losses for dollar ahead of NFP"
+      "ECB Set to Raise Rates as Inflation Risks Keep Door Open to Further Tightening",
+      "Some Losses for the Dollar Ahead of the NFP",
+      "Gold surpasses US Treasurys as top central bank reserve asset"
     ],
-    "updated": "2026-06-11T02:08:17.165495+00:00"
+    "updated": "2026-06-11T08:25:30.058651+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
