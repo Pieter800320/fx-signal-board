@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T21:27:10.391876+00:00",
+  "updated": "2026-06-11T23:12:34.976878+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,38 +544,38 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 5,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.63,
-      "delta_pct": -11.7,
-      "direction": "down",
+      "value": 22.22,
+      "delta_pct": 11.8,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7394.29,
+      "value": 7394.3,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4234.1,
-      "delta_pct": 3.1,
+      "value": 4256.8,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.668,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.95,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.5,
-      "delta_pct": -3.9,
+      "value": 85.73,
+      "delta_pct": -4.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63571.0,
-      "delta_pct": 3.5,
+      "value": 63355.0,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG conflicted by Canada building permits miss at -7.6% versus -3.5% estimate, weakening CAD support thesis.",
-    "updated": "2026-06-11T20:04:04.673228+00:00"
+    "text": "Trump Iran deal and US Treasury auction could strengthen USD, supporting USDCAD long. ECB rate hike risks Euro strength against USD, conflicting with setup momentum.",
+    "updated": "2026-06-11T23:12:34.976878+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Risk-off regime confirms setup via NZD weakness driver.\n\nUSDCHF LONG: Risk-off macro confirms CHF safe haven bid driver.\n\nUSDCAD LONG: Falling WTI directly challenges setup via CAD support driver.",
+    "text": "VIX rising and oil falling strongly confirm USD bid pressure.",
     "top": [
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.78
-      },
-      {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 5.85
-      },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.6
+        "score": 5.8
       }
     ],
-    "updated": "2026-06-11T20:04:04.673228+00:00"
+    "updated": "2026-06-11T23:12:34.976878+00:00"
   },
   "calendar": {
     "events": [
@@ -713,7 +703,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-11T20:04:04.673228+00:00"
+    "updated": "2026-06-11T23:12:34.976878+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -721,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Treasury auctions $22 billion 30-year bonds top of hour",
-      "ECB set to raise rates, inflation risks keep door open",
-      "Canada building permits miss estimates at -7.6% versus -3.5%"
+      "Markets surge as Trump announces deal with Iran",
+      "U.S. Treasury to auction $22 billion 30-year bonds top hour",
+      "Euro falls after ECB decision on rate hike"
     ],
-    "updated": "2026-06-11T20:04:04.673228+00:00"
+    "updated": "2026-06-11T23:12:34.976878+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
