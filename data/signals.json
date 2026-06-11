@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-10T23:16:26.506454+00:00",
+  "updated": "2026-06-11T02:08:17.165495+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4070.3,
-      "delta_pct": -4.5,
+      "value": 4119.7,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.91,
-      "delta_pct": -0.1,
+      "value": 99.908,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1855,
-      "delta_pct": -1.9,
+      "value": 6.246,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.18,
-      "delta_pct": 5.6,
+      "value": 91.69,
+      "delta_pct": 4.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61103.0,
-      "delta_pct": -0.9,
+      "value": 62117.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG at risk: ECB rate hike could strengthen EUR, potentially weakening GBP relative to safe haven JPY flows.",
-    "updated": "2026-06-10T23:16:26.506454+00:00"
+    "text": "USDCHF LONG conflict: ECB rate hike expectations weaken USD relative to CHF safe haven flows.\n\nGBPJPY LONG conflict: Dollar weakness headline suggests risk-off sentiment may pressure carry trades like GBPJPY.",
+    "updated": "2026-06-11T02:08:17.165495+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and gold weakness strongly confirm USD strength bias.\n\nNZDUSD SHORT: Risk-off environment supports USD bid against commodity-linked currencies.\n\nGBPJPY LONG: Risk-off regime challenges carry trade setup lacking commodity tailwind.",
+    "text": "USDCHF LONG: VIX surge and gold weakness both confirm USD strength bias.\n\nNZDUSD SHORT: Rising VIX supports USD bid, challenging risk currency weakness.\n\nGBPJPY LONG: Risk-off regime challenges carry trade without supporting cross-asset drivers.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.13
       }
     ],
-    "updated": "2026-06-10T23:16:26.506454+00:00"
+    "updated": "2026-06-11T02:08:17.165495+00:00"
   },
   "calendar": {
     "events": [
@@ -713,19 +713,19 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-10T23:16:26.506454+00:00"
+    "updated": "2026-06-11T02:08:17.165495+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. US CPI data at 12:30 UTC today could provide the next clear direction for markets.",
-    "generated_at": "2026-06-10T11:29:01.748965+00:00"
+    "text": "Mixed signals \u2014 no directional bias. The ECB rate decision at 12:15 UTC and US PPI data at 12:30 UTC represent the next high-impact events within 24 hours.",
+    "generated_at": "2026-06-11T02:08:44.458693+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Treasury auctions $39B 10-year notes at 4.538% yield",
-      "ECB set to raise rates as inflation risks persist",
-      "Dollar losses ahead of NFP employment data release"
+      "U.S. Treasury auctions $39 billion 10-year notes at 4.538% yield",
+      "ECB set to raise rates as inflation risks prompt further tightening",
+      "Some losses for dollar ahead of NFP"
     ],
-    "updated": "2026-06-10T23:16:26.506454+00:00"
+    "updated": "2026-06-11T02:08:17.165495+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
