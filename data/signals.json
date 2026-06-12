@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T17:40:22.391653+00:00",
+  "updated": "2026-06-12T19:47:52.328907+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,101 +544,101 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.05,
-      "delta_pct": -2.0,
-      "direction": "flat",
+      "value": 18.3,
+      "delta_pct": -5.9,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7417.98,
+      "value": 7418.28,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4241.0,
-      "delta_pct": 3.7,
+      "value": 4226.9,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.746,
+      "value": 99.753,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.443,
-      "delta_pct": 2.9,
+      "value": 6.48,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.479,
-      "delta_bp": 1.6,
+      "value": 4.487,
+      "delta_bp": 2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.62,
-      "delta_bp": -0.3,
+      "value": 3.618,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.69,
-      "delta_pct": -3.4,
+      "value": 84.49,
+      "delta_pct": -3.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63800.0,
-      "delta_pct": 0.4,
+      "value": 63578.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.9,
-      "delta_bp": 1.9,
+      "value": 86.9,
+      "delta_bp": 2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Euro Falls After ECB Decision conflicts with USDCHF LONG. ECB rate hike reduces CHF upside relative to USD strength expectations.",
-    "updated": "2026-06-12T16:36:22.877377+00:00"
+    "text": "USDCAD LONG at risk. Iran deal progress reduces geopolitical premium supporting CAD safe haven flows potentially weakening setup momentum.",
+    "updated": "2026-06-12T19:47:52.328907+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI crude collapse pressures Canadian dollar.\n\nUSDCHF LONG: Macro challenges setup, risk-off favors CHF safe haven strength.\n\nNZDUSD SHORT: Macro confirms setup, risk-off environment weakens risk-sensitive NZD currency.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI oil weakness pressures Canadian dollar.\n\nNZDUSD SHORT: Macro neutral, risk-off supports but lacks specific commodity driver.\n\nUSDCHF LONG: Macro confirms setup, risk-off flight-to-safety benefits Swiss franc demand.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.75
+        "score": 7.2
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.62
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
         "score": 5.85
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 5.5
       }
     ],
-    "updated": "2026-06-12T16:36:22.877377+00:00"
+    "updated": "2026-06-12T19:47:52.328907+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-12T16:36:22.877377+00:00"
+    "updated": "2026-06-12T19:47:52.328907+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "June US prelim Michigan consumer sentiment 48.9 vs 46.0 expected",
       "Euro Falls After ECB Decision",
-      "Some Losses for the Dollar Ahead of the NFP"
+      "Some Losses for the Dollar Ahead of the NFP",
+      "Gold surpasses US Treasurys as top central bank reserve asset"
     ],
-    "updated": "2026-06-12T16:36:22.877377+00:00"
+    "updated": "2026-06-12T19:47:52.328907+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
