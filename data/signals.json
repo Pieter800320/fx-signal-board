@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T21:22:13.175698+00:00",
+  "updated": "2026-06-12T23:05:09.114851+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 3.3,
     "signals": -1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63544.0,
-      "delta_pct": -0.0,
+      "value": 63442.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD and USDCHF both face headwinds. ECB rate decision supports EUR strength, weakening USD. Iran deal progress reduces geopolitical premium supporting CAD and CHF.",
-    "updated": "2026-06-12T21:22:13.175698+00:00"
+    "text": "USDCAD LONG: Iran deal progress reduces geopolitical risk premium, weakening safe haven demand for USD.\n\nUSDCHF LONG: ECB rate hike signals tightening, supporting EUR strength against CHF safe haven flows.",
+    "updated": "2026-06-12T23:05:09.114851+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI weakness supports CAD underperformance thesis.\n\nUSDCHF LONG: Macro challenges setup, risk-on low contradicts typical CHF safe-haven demand.",
+    "text": "USDCAD LONG: Macro confirms setup via WTI oil weakness pressuring CAD fundamentals.\n\nUSDCHF LONG: Macro challenges setup as risk-on equities reduce CHF safe-haven demand.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-12T21:22:13.175698+00:00"
+    "updated": "2026-06-12T23:05:09.114851+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-12T21:22:13.175698+00:00"
+    "updated": "2026-06-12T23:05:09.114851+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open to further tightening",
-      "Some losses for the dollar ahead of the NFP",
-      "At least $10 billion for Iran to be unlocked in Iran deal"
+      "ECB set to raise rates as inflation risks keep door open",
+      "Some losses for dollar ahead of NFP",
+      "At least $10 billion for Iran to be unlocked in deal"
     ],
-    "updated": "2026-06-12T21:22:13.175698+00:00"
+    "updated": "2026-06-12T23:05:09.114851+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
