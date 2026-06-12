@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T21:04:06.741002+00:00",
+  "updated": "2026-06-12T21:22:13.175698+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,48 +539,48 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 3.3,
+    "signals": -1,
+    "total": 3,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.3,
-      "delta_pct": -5.9,
+      "value": 17.68,
+      "delta_pct": -9.1,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7418.28,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 7431.46,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4226.9,
-      "delta_pct": 3.3,
+      "value": 4239.9,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.753,
+      "value": 99.807,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.48,
-      "delta_pct": 3.5,
+      "value": 6.474,
+      "delta_pct": 3.4,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.49,
-      "delta_pct": -3.7,
+      "value": 84.29,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63578.0,
-      "delta_pct": 0.0,
+      "value": 63544.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk. Iran deal progress reduces geopolitical premium supporting CAD safe haven flows potentially weakening setup momentum.",
-    "updated": "2026-06-12T19:47:52.328907+00:00"
+    "text": "USDCAD and USDCHF both face headwinds. ECB rate decision supports EUR strength, weakening USD. Iran deal progress reduces geopolitical premium supporting CAD and CHF.",
+    "updated": "2026-06-12T21:22:13.175698+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI oil weakness pressures Canadian dollar.\n\nNZDUSD SHORT: Macro neutral, risk-off supports but lacks specific commodity driver.\n\nUSDCHF LONG: Macro confirms setup, risk-off flight-to-safety benefits Swiss franc demand.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness supports CAD underperformance thesis.\n\nUSDCHF LONG: Macro challenges setup, risk-on low contradicts typical CHF safe-haven demand.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.2
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.62
+        "score": 6.82
       },
       {
         "pair": "USDCHF",
@@ -638,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-12T19:47:52.328907+00:00"
+    "updated": "2026-06-12T21:22:13.175698+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +698,19 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-12T19:47:52.328907+00:00"
+    "updated": "2026-06-12T21:22:13.175698+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
-    "generated_at": "2026-06-12T08:14:24.692233+00:00"
+    "generated_at": "2026-06-12T21:22:39.505155+00:00"
   },
   "breaking": {
     "headlines": [
-      "Euro Falls After ECB Decision",
-      "Some Losses for the Dollar Ahead of the NFP",
-      "Gold surpasses US Treasurys as top central bank reserve asset"
+      "ECB set to raise rates as inflation risks keep door open to further tightening",
+      "Some losses for the dollar ahead of the NFP",
+      "At least $10 billion for Iran to be unlocked in Iran deal"
     ],
-    "updated": "2026-06-12T19:47:52.328907+00:00"
+    "updated": "2026-06-12T21:22:13.175698+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
