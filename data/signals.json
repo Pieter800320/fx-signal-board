@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T09:05:54.167938+00:00",
+  "updated": "2026-06-12T12:45:58.246838+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,24 +539,24 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.08,
-      "delta_pct": -1.9,
+      "value": 19.17,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,90 +567,85 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4220.0,
-      "delta_pct": 3.2,
+      "value": 4218.2,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.813,
+      "value": 99.85,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.385,
-      "delta_pct": 2.0,
+      "value": 6.375,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.463,
-      "delta_bp": -7.9,
-      "direction": "down",
+      "value": 4.477,
+      "delta_bp": 1.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.623,
-      "delta_bp": -1.2,
+      "value": 3.62,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.84,
-      "delta_pct": -3.3,
+      "value": 85.44,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63229.0,
-      "delta_pct": -0.5,
+      "value": 63373.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.0,
-      "delta_bp": -6.7,
-      "direction": "down",
+      "value": 85.7,
+      "delta_bp": 1.7,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-12T08:13:40.048216+00:00"
+    "text": "USDCAD LONG at risk. Oil prices plunge after Iran deal confirmation reduces safe haven demand for Canadian dollar strength.",
+    "updated": "2026-06-12T12:45:58.246838+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDCAD LONG: WTI collapse confirms CAD weakness thesis perfectly today.\n\nGBPJPY LONG: S&P strength supports GBP bid but contradicts risk-off.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.6
+        "score": 6.3
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 4.73
       }
     ],
-    "updated": "2026-06-12T08:13:40.048216+00:00"
+    "updated": "2026-06-12T12:45:58.246838+00:00"
   },
   "calendar": {
     "events": [
       {
         "day": "Wed",
-        "time": "10:00",
-        "iso": "2026-06-10T10:00:00+00:00",
-        "currency": "CNY",
-        "name": "Consumer Price Index YoY",
-        "forecast": "1.2%",
-        "previous": "1.0%",
-        "note": "May inflation, input to monetary policy"
-      },
-      {
-        "day": "Wed",
         "time": "12:30",
         "iso": "2026-06-10T12:30:00+00:00",
         "currency": "USD",
-        "name": "Consumer Price Index YoY",
-        "forecast": "4.2%",
-        "previous": "3.8%",
-        "note": "May CPI, major Fed policy driver"
+        "name": "Consumer Price Index (CPI)",
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Inflation driver for Fed policy decisions"
       },
       {
         "day": "Wed",
@@ -658,29 +653,29 @@
         "iso": "2026-06-10T13:45:00+00:00",
         "currency": "CAD",
         "name": "Bank of Canada Interest Rate Decision",
-        "forecast": "2.25%",
-        "previous": "2.25%",
-        "note": "BoC holds rates, high market impact"
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Key monetary policy announcement"
       },
       {
         "day": "Thu",
         "time": "12:15",
         "iso": "2026-06-11T12:15:00+00:00",
         "currency": "EUR",
-        "name": "European Central Bank Interest Rate Decision",
-        "forecast": "2.25%",
-        "previous": "2.15%",
-        "note": "ECB 25bp hike, major policy announcement"
+        "name": "ECB Interest Rate Decision & Press Conference",
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Lagarde's guidance shapes euro trend"
       },
       {
         "day": "Thu",
         "time": "12:30",
         "iso": "2026-06-11T12:30:00+00:00",
         "currency": "USD",
-        "name": "Producer Price Index YoY",
-        "forecast": "6.2%",
-        "previous": "6.0%",
-        "note": "May PPI, wholesale inflation pressure"
+        "name": "Producer Price Index (PPI)",
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Wholesale inflation, leading indicator"
       },
       {
         "day": "Thu",
@@ -688,22 +683,22 @@
         "iso": "2026-06-11T12:30:00+00:00",
         "currency": "USD",
         "name": "Initial Jobless Claims",
-        "forecast": "215000",
-        "previous": "225000",
-        "note": "Weekly labor market conditions"
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Labor market health indicator"
       },
       {
-        "day": "Wed",
-        "time": "10:00",
-        "iso": "2026-06-10T10:00:00+00:00",
-        "currency": "CNY",
-        "name": "Producer Price Index YoY",
-        "forecast": "3.7%",
-        "previous": "2.8%",
-        "note": "May PPI, industrial price pressure"
+        "day": "Fri",
+        "time": "06:00",
+        "iso": "2026-06-12T06:00:00+00:00",
+        "currency": "GBP",
+        "name": "Gross Domestic Product (GDP)",
+        "forecast": "Not provided",
+        "previous": "Not provided",
+        "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-12T08:13:40.048216+00:00"
+    "updated": "2026-06-12T12:45:58.246838+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -711,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates, inflation risks keep tightening door open",
-      "Spanish and French inflation accelerate in May, core prices nudge higher",
-      "UK economy contracts in April as services sector cools"
+      "Oil prices plunge after Iran confirms details of the deal with US",
+      "Euro falls after ECB decision on rate hike signals",
+      "Dollar losses ahead of NFP data release expected"
     ],
-    "updated": "2026-06-12T08:13:40.048216+00:00"
+    "updated": "2026-06-12T12:45:58.246838+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
