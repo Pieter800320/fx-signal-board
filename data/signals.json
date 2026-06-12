@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T14:12:24.259176+00:00",
+  "updated": "2026-06-12T16:36:22.877377+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,54 +539,54 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.17,
-      "delta_pct": -1.4,
+      "value": 19.05,
+      "delta_pct": -2.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7394.3,
-      "delta_pct": 1.8,
-      "direction": "up",
+      "value": 7417.98,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4218.2,
-      "delta_pct": 3.1,
+      "value": 4241.0,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.85,
-      "delta_pct": -0.0,
+      "value": 99.746,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.375,
-      "delta_pct": 1.9,
+      "value": 6.443,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.477,
-      "delta_bp": 1.4,
+      "value": 4.479,
+      "delta_bp": 1.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,43 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.44,
-      "delta_pct": -2.6,
+      "value": 84.69,
+      "delta_pct": -3.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63373.0,
-      "delta_pct": -0.3,
+      "value": 63800.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.7,
-      "delta_bp": 1.7,
+      "value": 85.9,
+      "delta_bp": 1.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk. Oil prices plunge after Iran deal confirmation reduces safe haven demand for Canadian dollar strength.",
-    "updated": "2026-06-12T12:45:58.246838+00:00"
+    "text": "Euro Falls After ECB Decision conflicts with USDCHF LONG. ECB rate hike reduces CHF upside relative to USD strength expectations.",
+    "updated": "2026-06-12T16:36:22.877377+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: WTI collapse confirms CAD weakness thesis perfectly today.\n\nGBPJPY LONG: S&P strength supports GBP bid but contradicts risk-off.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI crude collapse pressures Canadian dollar.\n\nUSDCHF LONG: Macro challenges setup, risk-off favors CHF safe haven strength.\n\nNZDUSD SHORT: Macro confirms setup, risk-off environment weakens risk-sensitive NZD currency.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.3
+        "score": 6.75
       },
       {
-        "pair": "GBPJPY",
+        "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.73
+        "score": 5.85
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 5.5
       }
     ],
-    "updated": "2026-06-12T12:45:58.246838+00:00"
+    "updated": "2026-06-12T16:36:22.877377+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +703,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-12T12:45:58.246838+00:00"
+    "updated": "2026-06-12T16:36:22.877377+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Oil prices plunge after Iran confirms details of the deal with US",
-      "Euro falls after ECB decision on rate hike signals",
-      "Dollar losses ahead of NFP data release expected"
+      "June US prelim Michigan consumer sentiment 48.9 vs 46.0 expected",
+      "Euro Falls After ECB Decision",
+      "Some Losses for the Dollar Ahead of the NFP"
     ],
-    "updated": "2026-06-12T12:45:58.246838+00:00"
+    "updated": "2026-06-12T16:36:22.877377+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
