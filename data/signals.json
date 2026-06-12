@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-11T23:12:34.976878+00:00",
+  "updated": "2026-06-12T02:04:01.620512+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
+    "label": "Risk-On",
+    "signals": -1,
     "total": 5,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 22.22,
-      "delta_pct": 11.8,
-      "direction": "up",
+      "value": 19.44,
+      "delta_pct": -12.5,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4256.8,
-      "delta_pct": 3.6,
+      "value": 4211.0,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.95,
-      "delta_pct": 0.0,
+      "value": 99.833,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.395,
-      "delta_pct": 2.3,
+      "value": 6.405,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.73,
-      "delta_pct": -4.8,
+      "value": 86.86,
+      "delta_pct": -3.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63355.0,
-      "delta_pct": 3.1,
+      "value": 63391.0,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "Trump Iran deal and US Treasury auction could strengthen USD, supporting USDCAD long. ECB rate hike risks Euro strength against USD, conflicting with setup momentum.",
-    "updated": "2026-06-11T23:12:34.976878+00:00"
+    "text": "US Canada delay Gordie Howe bridge opening creates bilateral trade friction, weighing on CAD strength and potentially invalidating USDCAD long setup.",
+    "updated": "2026-06-12T02:04:01.620512+00:00"
   },
   "ranked": {
-    "text": "VIX rising and oil falling strongly confirm USD bid pressure.",
+    "text": "USDCAD LONG: Oil weakness confirms setup, CAD depreciation pressure sustained today.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.8
+        "score": 5.6
       }
     ],
-    "updated": "2026-06-11T23:12:34.976878+00:00"
+    "updated": "2026-06-12T02:04:01.620512+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-11T23:12:34.976878+00:00"
+    "updated": "2026-06-12T02:04:01.620512+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Markets surge as Trump announces deal with Iran",
-      "U.S. Treasury to auction $22 billion 30-year bonds top hour",
-      "Euro falls after ECB decision on rate hike"
+      "Euro falls after ECB decides to raise rates amid inflation risks",
+      "NZ dollar weakens as manufacturing PMI drops to 49.9",
+      "US Treasury auctions $22 billion 30-year bonds top of hour"
     ],
-    "updated": "2026-06-11T23:12:34.976878+00:00"
+    "updated": "2026-06-12T02:04:01.620512+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
