@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-12T02:04:01.620512+00:00",
+  "updated": "2026-06-12T08:13:40.048216+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -543,21 +543,21 @@
     "confidence": "Low",
     "score": 5.0,
     "signals": 0,
-    "total": 2,
-    "stable": true
+    "total": 0,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 5,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 4,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.44,
-      "delta_pct": -12.5,
-      "direction": "down",
+      "value": 19.08,
+      "delta_pct": -1.9,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4211.0,
-      "delta_pct": 2.5,
+      "value": 4220.0,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.833,
+      "value": 99.813,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.405,
-      "delta_pct": 2.5,
+      "value": 6.385,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.86,
-      "delta_pct": -3.5,
+      "value": 84.84,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63391.0,
-      "delta_pct": 3.2,
-      "direction": "up",
+      "value": 63229.0,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Canada delay Gordie Howe bridge opening creates bilateral trade friction, weighing on CAD strength and potentially invalidating USDCAD long setup.",
-    "updated": "2026-06-12T02:04:01.620512+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-12T08:13:40.048216+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Oil weakness confirms setup, CAD depreciation pressure sustained today.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDCAD",
@@ -628,7 +628,7 @@
         "score": 5.6
       }
     ],
-    "updated": "2026-06-12T02:04:01.620512+00:00"
+    "updated": "2026-06-12T08:13:40.048216+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "May PPI, industrial price pressure"
       }
     ],
-    "updated": "2026-06-12T02:04:01.620512+00:00"
+    "updated": "2026-06-12T08:13:40.048216+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
-    "generated_at": "2026-06-11T17:30:37.594775+00:00"
+    "generated_at": "2026-06-12T08:14:24.692233+00:00"
   },
   "breaking": {
     "headlines": [
-      "Euro falls after ECB decides to raise rates amid inflation risks",
-      "NZ dollar weakens as manufacturing PMI drops to 49.9",
-      "US Treasury auctions $22 billion 30-year bonds top of hour"
+      "ECB set to raise rates, inflation risks keep tightening door open",
+      "Spanish and French inflation accelerate in May, core prices nudge higher",
+      "UK economy contracts in April as services sector cools"
     ],
-    "updated": "2026-06-12T02:04:01.620512+00:00"
+    "updated": "2026-06-12T08:13:40.048216+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
