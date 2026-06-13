@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T06:11:00.048905+00:00",
+  "updated": "2026-06-13T10:18:53.304927+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63555.0,
-      "delta_pct": -0.0,
+      "value": 63740.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-13T06:11:00.048905+00:00"
+    "updated": "2026-06-13T10:18:53.304927+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 429: Too Many Requests)",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-13T06:11:00.048905+00:00"
+    "updated": "2026-06-13T10:18:53.304927+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +698,19 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-13T06:11:00.048905+00:00"
+    "updated": "2026-06-13T10:18:53.304927+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
-    "generated_at": "2026-06-12T21:22:39.505155+00:00"
+    "generated_at": "2026-06-13T10:19:34.652385+00:00"
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open to tightening",
-      "Dollar losses expected ahead of NFP report",
-      "Iran deal unlocks $10 billion, impacts emerging market currencies"
+      "ECB signals further rate hikes as inflation risks persist",
+      "Dollar weakens ahead of NFP employment data release",
+      "Iran nuclear deal progresses, $10 billion to be unlocked"
     ],
-    "updated": "2026-06-13T06:11:00.048905+00:00"
+    "updated": "2026-06-13T10:18:53.304927+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
