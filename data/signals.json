@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T17:05:11.586738+00:00",
+  "updated": "2026-06-13T19:02:22.177690+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63919.0,
-      "delta_pct": 0.6,
+      "value": 64166.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG: Iran deal progress reduces geopolitical risk premium, weakening USD safe haven demand.\n\nUSDCHF LONG: ECB rate hike signals potential tightening cycle, supporting EUR and pressuring CHF pairs.",
-    "updated": "2026-06-13T17:05:11.586738+00:00"
+    "text": "Euro Falls After ECB Decision and ECB Set to Raise Rates conflict with USDCAD and USDCHF longs by strengthening EUR, reducing USD safe haven demand.",
+    "updated": "2026-06-13T19:02:22.177690+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI crude weakness supports CAD offered pressure.\n\nUSDCHF LONG: Macro challenges setup, risk-off regime supports CHF safe haven bid.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness supports CAD offered positioning today.\n\nUSDCHF LONG: Macro challenges setup, risk-on low conflicts with CHF safe-haven demand.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-13T17:05:11.586738+00:00"
+    "updated": "2026-06-13T19:02:22.177690+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-13T17:05:11.586738+00:00"
+    "updated": "2026-06-13T19:02:22.177690+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB Set to Raise Rates as Inflation Risks Keep Door Open to Further Tightening",
-      "Euro Falls After ECB Decision",
-      "Some Losses for the Dollar Ahead of the NFP"
+      "ECB set to raise rates as inflation risks keep door open to tightening",
+      "Some losses for dollar ahead of NFP",
+      "Gold surpasses US Treasurys as top central bank reserve asset"
     ],
-    "updated": "2026-06-13T17:05:11.586738+00:00"
+    "updated": "2026-06-13T19:02:22.177690+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
