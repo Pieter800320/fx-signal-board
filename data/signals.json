@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T01:57:36.210771+00:00",
+  "updated": "2026-06-13T06:11:00.048905+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4239.9,
-      "delta_pct": 3.7,
+      "value": 4215.0,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.807,
+      "value": 99.75,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.474,
-      "delta_pct": 3.4,
+      "value": 6.4305,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.29,
-      "delta_pct": -3.9,
+      "value": 84.88,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63762.0,
-      "delta_pct": 0.3,
+      "value": 63555.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk: Iran deal progress reduces geopolitical risk premium, weakens safe haven USD demand.\n\nUSDCHF LONG at risk: ECB rate hike tightening cycle pressures CHF strength, reduces USD upside.",
-    "updated": "2026-06-13T01:57:36.210771+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-13T06:11:00.048905+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI oil weakness supports CAD offered positioning.\n\nUSDCHF LONG: Macro challenges setup, risk-on low contradicts typical CHF safe-haven demand.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-13T01:57:36.210771+00:00"
+    "updated": "2026-06-13T06:11:00.048905+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-13T01:57:36.210771+00:00"
+    "updated": "2026-06-13T06:11:00.048905+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open",
-      "Dollar losses ahead of NFP employment data release",
-      "Iran deal unlocks $10 billion, impacts geopolitical risk premium"
+      "ECB set to raise rates as inflation risks keep door open to tightening",
+      "Dollar losses expected ahead of NFP report",
+      "Iran deal unlocks $10 billion, impacts emerging market currencies"
     ],
-    "updated": "2026-06-13T01:57:36.210771+00:00"
+    "updated": "2026-06-13T06:11:00.048905+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
