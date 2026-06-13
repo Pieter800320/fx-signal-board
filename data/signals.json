@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T10:18:53.304927+00:00",
+  "updated": "2026-06-13T13:16:02.976322+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63740.0,
-      "delta_pct": 0.3,
+      "value": 64094.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-13T10:18:53.304927+00:00"
+    "text": "ECB Set to Raise Rates conflicts with USDCHF LONG. Rate hikes strengthen EUR and CHF, reducing USD appeal against CHF.",
+    "updated": "2026-06-13T13:16:02.976322+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDCAD LONG: Macro confirms setup via WTI Oil weakness pressuring Canadian Dollar.\n\nUSDCHF LONG: Macro challenges setup as Risk-On assets rising reduce safe-haven demand.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-13T10:18:53.304927+00:00"
+    "updated": "2026-06-13T13:16:02.976322+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-13T10:18:53.304927+00:00"
+    "updated": "2026-06-13T13:16:02.976322+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB signals further rate hikes as inflation risks persist",
-      "Dollar weakens ahead of NFP employment data release",
-      "Iran nuclear deal progresses, $10 billion to be unlocked"
+      "ECB set to raise rates as inflation risks keep door open further",
+      "Some losses for dollar ahead of NFP",
+      "At least $10 billion for Iran to be unlocked in Iran deal"
     ],
-    "updated": "2026-06-13T10:18:53.304927+00:00"
+    "updated": "2026-06-13T13:16:02.976322+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
