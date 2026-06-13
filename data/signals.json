@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-13T15:22:59.014721+00:00",
+  "updated": "2026-06-13T17:05:11.586738+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64253.0,
-      "delta_pct": 1.1,
+      "value": 63919.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk: Iran deal progress reduces geopolitical premium supporting CAD safe haven flows, weakening USD upside.\n\nUSDCHF LONG at risk: ECB rate hike signals reduce CHF carry appeal versus USD, pressuring pair momentum",
-    "updated": "2026-06-13T15:22:59.014721+00:00"
+    "text": "USDCAD LONG: Iran deal progress reduces geopolitical risk premium, weakening USD safe haven demand.\n\nUSDCHF LONG: ECB rate hike signals potential tightening cycle, supporting EUR and pressuring CHF pairs.",
+    "updated": "2026-06-13T17:05:11.586738+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI collapse weakens CAD fundamentals.\n\nUSDCHF LONG: Macro challenges setup, risk-off favors CHF safe-haven bid.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI crude weakness supports CAD offered pressure.\n\nUSDCHF LONG: Macro challenges setup, risk-off regime supports CHF safe haven bid.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-13T15:22:59.014721+00:00"
+    "updated": "2026-06-13T17:05:11.586738+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Broadest measure of economic activity"
       }
     ],
-    "updated": "2026-06-13T15:22:59.014721+00:00"
+    "updated": "2026-06-13T17:05:11.586738+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -710,7 +710,7 @@
       "Euro Falls After ECB Decision",
       "Some Losses for the Dollar Ahead of the NFP"
     ],
-    "updated": "2026-06-13T15:22:59.014721+00:00"
+    "updated": "2026-06-13T17:05:11.586738+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
