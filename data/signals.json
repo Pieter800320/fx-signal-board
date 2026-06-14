@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T11:47:54.158220+00:00",
+  "updated": "2026-06-14T13:21:20.250214+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64569.0,
-      "delta_pct": 0.2,
+      "value": 64289.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-06-14T11:47:54.158220+00:00"
+    "text": "USDCAD LONG at risk: Iran deal progress reduces geopolitical premium supporting CAD safe haven flows.\n\nUSDCHF LONG challenged: ECB rate hike tightening cycle narrows USD CHF interest differential advantage.",
+    "updated": "2026-06-14T13:21:20.250214+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI weakness reinforces Canadian dollar selling pressure.\n\nUSDCHF LONG: Macro challenges setup, risk-off regime favors CHF safe-haven bid instead.",
+    "text": "USDCAD LONG: WTI collapse confirms CAD weakness setup perfectly today.\n\nUSDCHF LONG: Risk-off regime supports CHF bid, challenges USD strength.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-14T11:47:54.158220+00:00"
+    "updated": "2026-06-14T13:21:20.250214+00:00"
   },
   "calendar": {
     "events": [
@@ -678,7 +678,7 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-14T11:47:54.158220+00:00"
+    "updated": "2026-06-14T13:21:20.250214+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC today represents the next high-impact event.",
@@ -686,11 +686,11 @@
   },
   "breaking": {
     "headlines": [
-      "At least $10 billion for Iran to be unlocked in Iran deal",
-      "Trump says post from Iranian foreign minister is 'very positive'",
-      "VP Vance: Fake information about potential deal to reopen Strait"
+      "ECB set to raise rates as inflation risks keep door open to further tightening",
+      "Some losses for the dollar ahead of the NFP",
+      "At least $10 billion for Iran to be unlocked in Iran deal"
     ],
-    "updated": "2026-06-14T11:47:54.158220+00:00"
+    "updated": "2026-06-14T13:21:20.250214+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
