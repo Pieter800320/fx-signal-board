@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T02:06:49.364030+00:00",
+  "updated": "2026-06-14T08:05:05.864300+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4215.0,
-      "delta_pct": 3.0,
+      "value": 4238.8,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4305,
-      "delta_pct": 2.7,
+      "value": 6.445,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64585.0,
-      "delta_pct": 1.6,
+      "value": 64367.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD: Iran deal progress reduces geopolitical premium, weakens safe haven demand for USD.\n\nUSDCHF: ECB rate hike tightening narrows CHF carry advantage, pressures CHF strength.",
-    "updated": "2026-06-14T02:06:49.364030+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-14T08:05:05.864300+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup; WTI weakness supports CAD depreciation thesis.\n\nUSDCHF LONG: Macro challenges setup; risk-on equities reduce safe-haven CHF demand.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,72 +633,52 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-14T02:06:49.364030+00:00"
+    "updated": "2026-06-14T08:05:05.864300+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Wed",
-        "time": "12:30",
-        "iso": "2026-06-10T12:30:00+00:00",
-        "currency": "USD",
-        "name": "Consumer Price Index (CPI)",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Inflation driver for Fed policy decisions"
-      },
-      {
-        "day": "Wed",
-        "time": "13:45",
-        "iso": "2026-06-10T13:45:00+00:00",
-        "currency": "CAD",
-        "name": "Bank of Canada Interest Rate Decision",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Key monetary policy announcement"
-      },
-      {
-        "day": "Thu",
-        "time": "12:15",
-        "iso": "2026-06-11T12:15:00+00:00",
-        "currency": "EUR",
-        "name": "ECB Interest Rate Decision & Press Conference",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Lagarde's guidance shapes euro trend"
-      },
-      {
-        "day": "Thu",
-        "time": "12:30",
-        "iso": "2026-06-11T12:30:00+00:00",
-        "currency": "USD",
-        "name": "Producer Price Index (PPI)",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Wholesale inflation, leading indicator"
-      },
-      {
-        "day": "Thu",
-        "time": "12:30",
-        "iso": "2026-06-11T12:30:00+00:00",
-        "currency": "USD",
-        "name": "Initial Jobless Claims",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Labor market health indicator"
-      },
-      {
-        "day": "Fri",
-        "time": "06:00",
-        "iso": "2026-06-12T06:00:00+00:00",
+        "day": "Wednesday",
+        "time": "11:00 AM",
+        "iso": "",
         "currency": "GBP",
-        "name": "Gross Domestic Product (GDP)",
-        "forecast": "Not provided",
-        "previous": "Not provided",
-        "note": "Broadest measure of economic activity"
+        "name": "BoE Interest Rate Decision",
+        "forecast": "3.75%",
+        "previous": "3.75%",
+        "note": "No change expected; MPC to assess inflation amid Iran war impact"
+      },
+      {
+        "day": "Wednesday",
+        "time": "08:30 AM EDT",
+        "iso": "",
+        "currency": "USD",
+        "name": "Retail Sales (May)",
+        "forecast": "0.1%",
+        "previous": "0.5%",
+        "note": "Month-over-month change; consumer spending indicator"
+      },
+      {
+        "day": "Wednesday",
+        "time": "09:15 AM EDT",
+        "iso": "",
+        "currency": "USD",
+        "name": "Industrial Production (May)",
+        "forecast": "0.3%",
+        "previous": "0.7%",
+        "note": "Month-over-month change; expected moderation after April spike"
+      },
+      {
+        "day": "Tuesday",
+        "time": "09:00 AM GMT",
+        "iso": "",
+        "currency": "GBP",
+        "name": "UK Unemployment Rate (May)",
+        "forecast": "4.0%",
+        "previous": "4.1%",
+        "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-14T02:06:49.364030+00:00"
+    "updated": "2026-06-14T08:05:05.864300+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
@@ -706,11 +686,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open to further tightening",
-      "Some losses for the dollar ahead of the NFP",
+      "ECB set to raise rates as inflation risks keep door open",
+      "Dollar losses ahead of NFP data release",
       "Gold surpasses US Treasurys as top central bank reserve asset"
     ],
-    "updated": "2026-06-14T02:06:49.364030+00:00"
+    "updated": "2026-06-14T08:05:05.864300+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
