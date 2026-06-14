@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T08:05:05.864300+00:00",
+  "updated": "2026-06-14T11:47:54.158220+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64367.0,
-      "delta_pct": -0.1,
+      "value": 64569.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-14T08:05:05.864300+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-06-14T11:47:54.158220+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness reinforces Canadian dollar selling pressure.\n\nUSDCHF LONG: Macro challenges setup, risk-off regime favors CHF safe-haven bid instead.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-14T08:05:05.864300+00:00"
+    "updated": "2026-06-14T11:47:54.158220+00:00"
   },
   "calendar": {
     "events": [
@@ -678,19 +678,19 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-14T08:05:05.864300+00:00"
+    "updated": "2026-06-14T11:47:54.158220+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. No high-impact events scheduled within the next 24 hours.",
-    "generated_at": "2026-06-13T22:51:50.908316+00:00"
+    "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC today represents the next high-impact event.",
+    "generated_at": "2026-06-14T11:48:21.546775+00:00"
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open",
-      "Dollar losses ahead of NFP data release",
-      "Gold surpasses US Treasurys as top central bank reserve asset"
+      "At least $10 billion for Iran to be unlocked in Iran deal",
+      "Trump says post from Iranian foreign minister is 'very positive'",
+      "VP Vance: Fake information about potential deal to reopen Strait"
     ],
-    "updated": "2026-06-14T08:05:05.864300+00:00"
+    "updated": "2026-06-14T11:47:54.158220+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
