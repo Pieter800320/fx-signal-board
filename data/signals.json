@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T17:04:51.282093+00:00",
+  "updated": "2026-06-14T19:02:16.171000+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63970.0,
-      "delta_pct": -0.7,
+      "value": 63757.0,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Euro Falls After ECB Decision and ECB Set to Raise Rates conflict with USDCHF LONG. Rate hikes strengthen EUR relative to CHF, weakening USD/CHF upside potential.",
-    "updated": "2026-06-14T17:04:51.282093+00:00"
+    "text": "USDCAD LONG at risk: Iran deal progress reduces geopolitical premium supporting CAD safe haven flows.\n\nUSDCHF LONG at risk: ECB rate hike signals tighten EUR, supporting CHF appreciation alternatively.",
+    "updated": "2026-06-14T19:02:16.171000+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup via WTI collapse pressuring CAD weakness today.\n\nUSDCHF LONG: Macro challenges setup as risk-on equities reduce CHF safe-haven demand.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI oil decline strengthens CAD weakness thesis.\n\nUSDCHF LONG: Macro challenges setup, risk-on equities reduce safe haven CHF demand pressure.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-14T17:04:51.282093+00:00"
+    "updated": "2026-06-14T19:02:16.171000+00:00"
   },
   "calendar": {
     "events": [
@@ -678,7 +678,7 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-14T17:04:51.282093+00:00"
+    "updated": "2026-06-14T19:02:16.171000+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC today represents the next high-impact event.",
@@ -686,11 +686,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open",
-      "Dollar losses ahead of NFP jobs report",
-      "$10 billion unlocked for Iran under interim deal agreement"
+      "Euro falls after ECB decision signals potential further rate tightening",
+      "At least $10 billion for Iran to be unlocked in deal",
+      "Dollar losses expected ahead of NFP employment data release"
     ],
-    "updated": "2026-06-14T17:04:51.282093+00:00"
+    "updated": "2026-06-14T19:02:16.171000+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
