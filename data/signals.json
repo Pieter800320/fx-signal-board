@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T21:47:30.878058+00:00",
+  "updated": "2026-06-15T22:07:25.375683+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.12,
-      "delta_pct": -8.8,
+      "value": 16.2,
+      "delta_pct": -8.4,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7554.22,
+      "value": 7554.29,
       "delta_pct": 1.7,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4345.1,
-      "delta_pct": 3.1,
+      "value": 4331.0,
+      "delta_pct": 2.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.649,
+      "value": 99.669,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.501,
-      "delta_pct": 1.1,
+      "value": 6.4905,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.14,
+      "value": 81.16,
       "delta_pct": -4.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66644.0,
-      "delta_pct": 1.4,
+      "value": 66419.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG conflicted by ECB rate hike expectations strengthening EUR, reducing USD safe haven demand relative to CHF.",
-    "updated": "2026-06-15T19:35:00.330939+00:00"
+    "text": "USDCHF LONG at risk. ECB rate decision and potential further tightening could strengthen EUR relative to CHF, weakening USD strength needed for this setup.",
+    "updated": "2026-06-15T22:07:25.375683+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Risk-on strength challenges short bias, NZD resilience.\n\nUSDCHF LONG: Gold surge and risk-on challenge CHF safe-haven demand.",
+    "text": "NZDUSD SHORT: Macro context challenges setup, risk-on medium supports NZD.\n\nUSDCAD LONG: Macro context confirms setup, falling WTI strongly supports USD.\n\nUSDCHF LONG: Macro context neutral, risk-on medium slightly challenges CHF safe-haven bid.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.42
+        "score": 7.08
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.67
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.88
+        "score": 5.98
       }
     ],
-    "updated": "2026-06-15T19:35:00.330939+00:00"
+    "updated": "2026-06-15T22:07:25.375683+00:00"
   },
   "calendar": {
     "events": [
@@ -678,7 +683,7 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-15T19:35:00.330939+00:00"
+    "updated": "2026-06-15T22:07:25.375683+00:00"
   },
   "week_ahead": {
     "text": "Stagflation driven by rising oil prices and climbing Treasury yields represents the dominant macro theme , maintaining downside pressure on risk assets and supporting safe-haven flows into gold and the dollar. The BoE rate decision Wednesday will bring key focus to sterling, with the expected hold at 3.75% unlikely to spark major GBP moves unless UK unemployment data Thursday signals labor market deterioration. GBP/USD deserves close monitoring as the pair sits near May lows around 1.3330 with limited upside catalyst absent a dovish BoE surprise. The biggest wildcard is Wednesday's US retail sales and industrial production data\u2014weaker than expected figures could trigger sharp USD weakness if they suggest economic slowdown faster than markets currently price.",
@@ -690,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "US industrial production misses forecast at 0.1% vs 0.2% expected",
-      "ECB signals rate hike, keeps door open for further tightening",
-      "Trump: Strait of Hormuz will be fully open Friday"
+      "ECB Set to Raise Rates as Inflation Risks Keep Door Open to Further Tightening",
+      "Dollar mixed as markets eye key rate decisions ahead",
+      "Some Losses for the Dollar Ahead of the NFP"
     ],
-    "updated": "2026-06-15T19:35:00.330939+00:00"
+    "updated": "2026-06-15T22:07:25.375683+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
