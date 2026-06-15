@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T02:11:10.616557+00:00",
+  "updated": "2026-06-15T09:48:24.880609+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.68,
-      "delta_pct": -9.1,
-      "direction": "down",
+      "value": 16.82,
+      "delta_pct": -4.9,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4341.6,
-      "delta_pct": 3.0,
+      "value": 4360.1,
+      "delta_pct": 3.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.582,
+      "value": 99.51,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.54,
-      "delta_pct": 1.7,
+      "value": 6.492,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.85,
-      "delta_pct": -4.7,
+      "value": 80.2,
+      "delta_pct": -5.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65578.0,
-      "delta_pct": 1.8,
+      "value": 65477.0,
+      "delta_pct": 1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG at risk: Iran tensions could trigger risk-off, supporting safe-haven CAD. ECB rate hikes support EUR, pressuring USD broadly across pairs.",
-    "updated": "2026-06-15T02:11:10.616557+00:00"
+    "text": "Euro Falls After ECB Decision conflicts with USDCAD LONG. ECB rate hikes strengthen EUR, weakening USD broadly against CAD.",
+    "updated": "2026-06-15T09:48:24.880609+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI collapse reinforces CAD weakness directionally.\n\nUSDCHF LONG: Macro challenges setup, risk-off favors CHF safe-haven bid strength.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI weakness pressures CAD fundamentals.\n\nUSDCAD LONG: Macro confirms setup, risk-off regime favors USD strength.\n\nUSDCHF LONG: Macro challenges setup, risk-on equity gains reduce CHF safe-haven demand.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-15T02:11:10.616557+00:00"
+    "updated": "2026-06-15T09:48:24.880609+00:00"
   },
   "calendar": {
     "events": [
@@ -678,7 +678,7 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-15T02:11:10.616557+00:00"
+    "updated": "2026-06-15T09:48:24.880609+00:00"
   },
   "deep_analysis": {
     "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC and US Retail Sales at 08:30 AM EDT are the next high-impact events within 24 hours.",
@@ -686,11 +686,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open",
-      "Dollar losses ahead of NFP job data release",
-      "Gold surpasses US Treasurys as top central bank reserve asset"
+      "ECB set to raise rates as inflation risks keep door open to further tightening",
+      "Euro area trade deficit widens in April due to energy import surge",
+      "Dollar losses expected ahead of nonfarm payroll data release"
     ],
-    "updated": "2026-06-15T02:11:10.616557+00:00"
+    "updated": "2026-06-15T09:48:24.880609+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
