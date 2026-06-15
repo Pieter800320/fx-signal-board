@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T17:58:55.900240+00:00",
+  "updated": "2026-06-15T19:35:00.330939+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,84 +551,89 @@
     "signals": -2,
     "total": 4,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.31,
-      "delta_pct": -7.7,
+      "value": 16.12,
+      "delta_pct": -8.8,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7563.25,
-      "delta_pct": 1.8,
+      "value": 7554.22,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4378.6,
-      "delta_pct": 3.9,
+      "value": 4345.1,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.527,
-      "delta_pct": -0.2,
+      "value": 99.649,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.491,
-      "delta_pct": 0.9,
+      "value": 6.501,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.461,
-      "delta_bp": -2.6,
+      "value": 4.469,
+      "delta_bp": -1.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.615,
-      "delta_bp": -0.3,
+      "value": 3.618,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.51,
-      "delta_pct": -5.1,
+      "value": 81.14,
+      "delta_pct": -4.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66593.0,
-      "delta_pct": 1.3,
+      "value": 66644.0,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.6,
-      "delta_bp": -2.3,
+      "value": 85.1,
+      "delta_bp": -1.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-15T15:33:13.590047+00:00"
+    "text": "USDCHF LONG conflicted by ECB rate hike expectations strengthening EUR, reducing USD safe haven demand relative to CHF.",
+    "updated": "2026-06-15T19:35:00.330939+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "NZDUSD SHORT: Risk-on strength challenges short bias, NZD resilience.\n\nUSDCHF LONG: Gold surge and risk-on challenge CHF safe-haven demand.",
     "top": [
       {
-        "pair": "EURJPY",
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.42
+      },
+      {
+        "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.38
+        "score": 4.88
       }
     ],
-    "updated": "2026-06-15T15:33:13.590047+00:00"
+    "updated": "2026-06-15T19:35:00.330939+00:00"
   },
   "calendar": {
     "events": [
@@ -673,7 +678,7 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-15T15:33:13.590047+00:00"
+    "updated": "2026-06-15T19:35:00.330939+00:00"
   },
   "week_ahead": {
     "text": "Stagflation driven by rising oil prices and climbing Treasury yields represents the dominant macro theme , maintaining downside pressure on risk assets and supporting safe-haven flows into gold and the dollar. The BoE rate decision Wednesday will bring key focus to sterling, with the expected hold at 3.75% unlikely to spark major GBP moves unless UK unemployment data Thursday signals labor market deterioration. GBP/USD deserves close monitoring as the pair sits near May lows around 1.3330 with limited upside catalyst absent a dovish BoE surprise. The biggest wildcard is Wednesday's US retail sales and industrial production data\u2014weaker than expected figures could trigger sharp USD weakness if they suggest economic slowdown faster than markets currently price.",
@@ -685,11 +690,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June Empire Fed +5.7 vs +14.0 expected, signals weakness",
-      "ECB set to raise rates, inflation risks keep tightening door open",
-      "US May industrial production +0.1% vs +0.2% expected, misses"
+      "US industrial production misses forecast at 0.1% vs 0.2% expected",
+      "ECB signals rate hike, keeps door open for further tightening",
+      "Trump: Strait of Hormuz will be fully open Friday"
     ],
-    "updated": "2026-06-15T15:33:13.590047+00:00"
+    "updated": "2026-06-15T19:35:00.330939+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
