@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T11:19:49.546699+00:00",
+  "updated": "2026-06-15T15:33:13.590047+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,96 +544,91 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.82,
-      "delta_pct": -4.9,
-      "direction": "flat",
+      "value": 16.31,
+      "delta_pct": -7.7,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7431.46,
-      "delta_pct": 0.5,
+      "value": 7563.25,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4360.1,
-      "delta_pct": 3.4,
+      "value": 4378.6,
+      "delta_pct": 3.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.51,
+      "value": 99.527,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.492,
-      "delta_pct": 1.0,
+      "value": 6.491,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.487,
-      "delta_bp": 2.4,
+      "value": 4.461,
+      "delta_bp": -2.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.618,
-      "delta_bp": -0.5,
+      "value": 3.615,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.2,
-      "delta_pct": -5.5,
+      "value": 80.51,
+      "delta_pct": -5.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65477.0,
-      "delta_pct": 1.6,
+      "value": 66593.0,
+      "delta_pct": 1.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.9,
-      "delta_bp": 2.9,
+      "value": 84.6,
+      "delta_bp": -2.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Euro Falls After ECB Decision conflicts with USDCAD LONG. ECB rate hikes strengthen EUR, weakening USD broadly against CAD.",
-    "updated": "2026-06-15T09:48:24.880609+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-15T15:33:13.590047+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI weakness pressures CAD fundamentals.\n\nUSDCAD LONG: Macro confirms setup, risk-off regime favors USD strength.\n\nUSDCHF LONG: Macro challenges setup, risk-on equity gains reduce CHF safe-haven demand.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
-        "pair": "USDCAD",
+        "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.82
-      },
-      {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 5.85
+        "score": 4.38
       }
     ],
-    "updated": "2026-06-15T09:48:24.880609+00:00"
+    "updated": "2026-06-15T15:33:13.590047+00:00"
   },
   "calendar": {
     "events": [
@@ -678,23 +673,23 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-15T09:48:24.880609+00:00"
+    "updated": "2026-06-15T15:33:13.590047+00:00"
   },
   "week_ahead": {
     "text": "Stagflation driven by rising oil prices and climbing Treasury yields represents the dominant macro theme , maintaining downside pressure on risk assets and supporting safe-haven flows into gold and the dollar. The BoE rate decision Wednesday will bring key focus to sterling, with the expected hold at 3.75% unlikely to spark major GBP moves unless UK unemployment data Thursday signals labor market deterioration. GBP/USD deserves close monitoring as the pair sits near May lows around 1.3330 with limited upside catalyst absent a dovish BoE surprise. The biggest wildcard is Wednesday's US retail sales and industrial production data\u2014weaker than expected figures could trigger sharp USD weakness if they suggest economic slowdown faster than markets currently price.",
     "generated_at": "2026-06-14T22:56:41.886048+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC and US Retail Sales at 08:30 AM EDT are the next high-impact events within 24 hours.",
-    "generated_at": "2026-06-15T02:11:36.978664+00:00"
+    "text": "Gold's bullish breakout alongside falling VIX and rising equities signals sustained risk appetite, pressuring the dollar across major pairs. Cross-asset momentum confirms the risk-on theme with Bitcoin advancing and copper gaining, though weaker oil caps commodity currency strength. The setup favors USDCAD and USDCHF shorts as USD weakness accelerates into European session. Today's BoE decision at 11:00 UTC and US retail sales at 12:30 UTC could amplify moves if they disappoint hawkish expectations or show continued consumer resilience respectively.",
+    "generated_at": "2026-06-15T15:34:12.598145+00:00"
   },
   "breaking": {
     "headlines": [
-      "ECB set to raise rates as inflation risks keep door open to further tightening",
-      "Euro area trade deficit widens in April due to energy import surge",
-      "Dollar losses expected ahead of nonfarm payroll data release"
+      "US June Empire Fed +5.7 vs +14.0 expected, signals weakness",
+      "ECB set to raise rates, inflation risks keep tightening door open",
+      "US May industrial production +0.1% vs +0.2% expected, misses"
     ],
-    "updated": "2026-06-15T09:48:24.880609+00:00"
+    "updated": "2026-06-15T15:33:13.590047+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
