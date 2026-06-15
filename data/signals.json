@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-14T22:56:41.886048+00:00",
+  "updated": "2026-06-15T02:11:10.616557+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,14 +544,14 @@
     "score": 3.3,
     "signals": -1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4306.0,
-      "delta_pct": 2.2,
+      "value": 4341.6,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.476,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.582,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.516,
-      "delta_pct": 1.3,
+      "value": 6.54,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.29,
-      "delta_pct": -4.2,
+      "value": 80.85,
+      "delta_pct": -4.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65397.0,
-      "delta_pct": 1.5,
+      "value": 65578.0,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD and USDCHF both at risk from Iran deal headlines unlocking 10 billion dollars, reducing geopolitical premium and safe haven demand for CAD CHF.",
-    "updated": "2026-06-14T22:56:41.886048+00:00"
+    "text": "USDCAD LONG at risk: Iran tensions could trigger risk-off, supporting safe-haven CAD. ECB rate hikes support EUR, pressuring USD broadly across pairs.",
+    "updated": "2026-06-15T02:11:10.616557+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Macro confirms setup, WTI oil weakness supports CAD offered positioning.\n\nUSDCHF LONG: Macro challenges setup, mixed neutral backdrop weakens safe haven CHF demand.",
+    "text": "USDCAD LONG: Macro confirms setup, WTI collapse reinforces CAD weakness directionally.\n\nUSDCHF LONG: Macro challenges setup, risk-off favors CHF safe-haven bid strength.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-06-14T22:56:41.886048+00:00"
+    "updated": "2026-06-15T02:11:10.616557+00:00"
   },
   "calendar": {
     "events": [
@@ -678,19 +678,19 @@
         "note": "Labour market health indicator"
       }
     ],
-    "updated": "2026-06-14T22:56:41.886048+00:00"
+    "updated": "2026-06-15T02:11:10.616557+00:00"
   },
   "deep_analysis": {
-    "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC today represents the next high-impact event.",
-    "generated_at": "2026-06-14T11:48:21.546775+00:00"
+    "text": "Mixed signals \u2014 no directional bias. The BoE rate decision at 11:00 AM UTC and US Retail Sales at 08:30 AM EDT are the next high-impact events within 24 hours.",
+    "generated_at": "2026-06-15T02:11:36.978664+00:00"
   },
   "breaking": {
     "headlines": [
-      "Euro Falls After ECB Decision",
-      "Some Losses for Dollar Ahead of NFP",
-      "$10 Billion Iran Deal Unlocked, Risk-On Sentiment"
+      "ECB set to raise rates as inflation risks keep door open",
+      "Dollar losses ahead of NFP job data release",
+      "Gold surpasses US Treasurys as top central bank reserve asset"
     ],
-    "updated": "2026-06-14T22:56:41.886048+00:00"
+    "updated": "2026-06-15T02:11:10.616557+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
