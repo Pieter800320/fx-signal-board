@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T20:14:37.429608+00:00",
+  "updated": "2026-06-16T22:03:33.432866+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,43 +544,43 @@
     "score": 3.3,
     "signals": -1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 2,
     "total": 2,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.09,
-      "delta_pct": -0.7,
+      "value": 16.41,
+      "delta_pct": 1.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7524.45,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 7511.35,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4360.4,
-      "delta_pct": 0.7,
+      "value": 4353.0,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.531,
+      "value": 99.552,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.495,
-      "delta_pct": 0.2,
+      "value": 6.481,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.97,
-      "delta_pct": -5.9,
+      "value": 75.83,
+      "delta_pct": -6.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65638.0,
-      "delta_pct": -1.0,
+      "value": 65688.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-16T19:25:02.773556+00:00"
+    "updated": "2026-06-16T22:03:33.432866+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,15 +625,10 @@
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 4.92
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 3.18
+        "score": 5.65
       }
     ],
-    "updated": "2026-06-16T19:25:02.773556+00:00"
+    "updated": "2026-06-16T22:03:33.432866+00:00"
   },
   "calendar": {
     "events": [
@@ -688,17 +683,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-16T19:25:02.773556+00:00"
+    "updated": "2026-06-16T22:03:33.432866+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-16T09:13:38.730394+00:00"
+    "generated_at": "2026-06-16T22:04:00.935636+00:00"
   },
   "breaking": {
     "headlines": [
-      "The US treasury sells $13 billion of 20 year bonds at a high yield of 4.927%"
+      "investingLive Americas market news wrap: Oil continues to fall in the lead-up to the FOMC"
     ],
-    "updated": "2026-06-16T19:25:02.773556+00:00"
+    "updated": "2026-06-16T22:03:33.432866+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
