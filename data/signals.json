@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T16:01:31.480816+00:00",
+  "updated": "2026-06-16T19:25:02.773556+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,101 +539,101 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 3.3,
+    "signals": -1,
+    "total": 3,
     "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
+    "label": "Risk-Off",
+    "signals": 2,
     "total": 2,
     "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.17,
-      "delta_pct": -8.5,
-      "direction": "down",
+      "value": 16.09,
+      "delta_pct": -0.7,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7540.69,
-      "delta_pct": 1.5,
-      "direction": "up",
+      "value": 7524.45,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4344.6,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4360.4,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.657,
+      "value": 99.531,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.498,
+      "value": 6.495,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -3.6,
-      "direction": "flat",
+      "value": 4.428,
+      "delta_bp": -5.9,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.635,
-      "delta_bp": 1.7,
+      "value": 3.63,
+      "delta_bp": 1.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 76.31,
-      "delta_pct": -5.5,
+      "value": 75.97,
+      "delta_pct": -5.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65589.0,
-      "delta_pct": -1.1,
+      "value": 65638.0,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 81.6,
-      "delta_bp": -5.3,
+      "value": 79.8,
+      "delta_bp": -7.1,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-16T14:49:08.724158+00:00"
+    "updated": "2026-06-16T19:25:02.773556+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.77
-      },
-      {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 3.98
+        "score": 4.92
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 3.18
       }
     ],
-    "updated": "2026-06-16T14:49:08.724158+00:00"
+    "updated": "2026-06-16T19:25:02.773556+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-16T14:49:08.724158+00:00"
+    "updated": "2026-06-16T19:25:02.773556+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -696,9 +696,9 @@
   },
   "breaking": {
     "headlines": [
-      "Trump says he expects second stage of Iran deal to go quickly"
+      "The US treasury sells $13 billion of 20 year bonds at a high yield of 4.927%"
     ],
-    "updated": "2026-06-16T14:49:08.724158+00:00"
+    "updated": "2026-06-16T19:25:02.773556+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
