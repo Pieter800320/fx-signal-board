@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-15T22:07:25.375683+00:00",
+  "updated": "2026-06-16T02:15:08.218826+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4331.0,
-      "delta_pct": 2.8,
+      "value": 4329.7,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.669,
-      "delta_pct": -0.1,
+      "value": 99.702,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4905,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 6.4295,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.16,
-      "delta_pct": -4.4,
+      "value": 80.96,
+      "delta_pct": -4.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66419.0,
-      "delta_pct": 1.1,
+      "value": 66039.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG at risk. ECB rate decision and potential further tightening could strengthen EUR relative to CHF, weakening USD strength needed for this setup.",
-    "updated": "2026-06-15T22:07:25.375683+00:00"
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "updated": "2026-06-16T02:15:08.218826+00:00"
   },
   "ranked": {
-    "text": "NZDUSD SHORT: Macro context challenges setup, risk-on medium supports NZD.\n\nUSDCAD LONG: Macro context confirms setup, falling WTI strongly supports USD.\n\nUSDCHF LONG: Macro context neutral, risk-on medium slightly challenges CHF safe-haven bid.",
+    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,56 +638,62 @@
         "score": 5.98
       }
     ],
-    "updated": "2026-06-15T22:07:25.375683+00:00"
+    "updated": "2026-06-16T02:15:08.218826+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Wednesday",
-        "time": "11:00 AM",
-        "iso": "",
-        "currency": "GBP",
-        "name": "BoE Interest Rate Decision",
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "note": "No change expected; MPC to assess inflation amid Iran war impact"
+        "day": "Tue",
+        "time": "02:30",
+        "iso": "2026-06-16T02:30:00+00:00",
+        "currency": "JPY",
+        "name": "BOJ Interest Rate Decision",
+        "forecast": "+25 bps to 1.0%",
+        "previous": "0.75%",
+        "note": "Rate hike expected, yen volatility"
       },
       {
-        "day": "Wednesday",
-        "time": "08:30 AM EDT",
-        "iso": "",
+        "day": "Tue",
+        "time": "06:30",
+        "iso": "2026-06-16T06:30:00+00:00",
+        "currency": "AUD",
+        "name": "RBA Interest Rate Decision",
+        "forecast": "Hold at 4.35%",
+        "previous": "4.35%",
+        "note": "Hawkish hold, assess prior hikes"
+      },
+      {
+        "day": "Wed",
+        "time": "18:00",
+        "iso": "2026-06-17T18:00:00+00:00",
         "currency": "USD",
-        "name": "Retail Sales (May)",
-        "forecast": "0.1%",
+        "name": "Fed FOMC Decision",
+        "forecast": "Hold at 3.50%-3.75%",
+        "previous": "3.50%-3.75%",
+        "note": "Warsh first decision, inflation hawkish"
+      },
+      {
+        "day": "Wed",
+        "time": "12:30",
+        "iso": "2026-06-17T12:30:00+00:00",
+        "currency": "USD",
+        "name": "US Retail Sales m/m (May)",
+        "forecast": "0.5%",
         "previous": "0.5%",
-        "note": "Month-over-month change; consumer spending indicator"
+        "note": "Consumer spending, inflation impact"
       },
       {
-        "day": "Wednesday",
-        "time": "09:15 AM EDT",
-        "iso": "",
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-06-18T12:30:00+00:00",
         "currency": "USD",
-        "name": "Industrial Production (May)",
-        "forecast": "0.3%",
-        "previous": "0.7%",
-        "note": "Month-over-month change; expected moderation after April spike"
-      },
-      {
-        "day": "Tuesday",
-        "time": "09:00 AM GMT",
-        "iso": "",
-        "currency": "GBP",
-        "name": "UK Unemployment Rate (May)",
-        "forecast": "4.0%",
-        "previous": "4.1%",
-        "note": "Labour market health indicator"
+        "name": "Initial Jobless Claims",
+        "forecast": "245K",
+        "previous": "250K",
+        "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-15T22:07:25.375683+00:00"
-  },
-  "week_ahead": {
-    "text": "Stagflation driven by rising oil prices and climbing Treasury yields represents the dominant macro theme , maintaining downside pressure on risk assets and supporting safe-haven flows into gold and the dollar. The BoE rate decision Wednesday will bring key focus to sterling, with the expected hold at 3.75% unlikely to spark major GBP moves unless UK unemployment data Thursday signals labor market deterioration. GBP/USD deserves close monitoring as the pair sits near May lows around 1.3330 with limited upside catalyst absent a dovish BoE surprise. The biggest wildcard is Wednesday's US retail sales and industrial production data\u2014weaker than expected figures could trigger sharp USD weakness if they suggest economic slowdown faster than markets currently price.",
-    "generated_at": "2026-06-14T22:56:41.886048+00:00"
+    "updated": "2026-06-16T02:15:08.218826+00:00"
   },
   "deep_analysis": {
     "text": "Gold's bullish breakout alongside falling VIX and rising equities signals sustained risk appetite, pressuring the dollar across major pairs. Cross-asset momentum confirms the risk-on theme with Bitcoin advancing and copper gaining, though weaker oil caps commodity currency strength. The setup favors USDCAD and USDCHF shorts as USD weakness accelerates into European session. Today's BoE decision at 11:00 UTC and US retail sales at 12:30 UTC could amplify moves if they disappoint hawkish expectations or show continued consumer resilience respectively.",
@@ -695,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB Set to Raise Rates as Inflation Risks Keep Door Open to Further Tightening",
-      "Dollar mixed as markets eye key rate decisions ahead",
-      "Some Losses for the Dollar Ahead of the NFP"
+      "ECB Set to Raise Rates, Inflation Risks Keep Door Open Tightening",
+      "China Industrial Output +4.5% y/y, Beats Expectations at +4.2%",
+      "New Zealand Food Price Inflation +1.0% m/m, Prior Flat"
     ],
-    "updated": "2026-06-15T22:07:25.375683+00:00"
+    "updated": "2026-06-16T02:15:08.218826+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
