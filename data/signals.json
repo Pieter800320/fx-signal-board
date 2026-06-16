@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T02:15:08.218826+00:00",
+  "updated": "2026-06-16T09:13:15.848377+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,88 +539,88 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
+    "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "score": 3.3,
+    "signals": -1,
+    "total": 3,
     "stable": false
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.2,
-      "delta_pct": -8.4,
+      "value": 16.07,
+      "delta_pct": -9.1,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7554.29,
-      "delta_pct": 1.7,
+      "value": 7431.46,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4329.7,
-      "delta_pct": 2.7,
+      "value": 4367.1,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.702,
-      "delta_pct": -0.0,
+      "value": 99.592,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4295,
-      "delta_pct": -0.0,
+      "value": 6.484,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.469,
-      "delta_bp": -1.8,
+      "value": 4.487,
+      "delta_bp": 2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
       "value": 3.618,
-      "delta_bp": 0.0,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.96,
-      "delta_pct": -4.6,
+      "value": 77.63,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66039.0,
-      "delta_pct": 0.5,
+      "value": 66691.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.1,
-      "delta_bp": -1.8,
+      "value": 86.9,
+      "delta_bp": 2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
-    "updated": "2026-06-16T02:15:08.218826+00:00"
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "updated": "2026-06-16T09:13:15.848377+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 429: Too Many Requests)",
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 5.98
       }
     ],
-    "updated": "2026-06-16T02:15:08.218826+00:00"
+    "updated": "2026-06-16T09:13:15.848377+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-16T02:15:08.218826+00:00"
+    "updated": "2026-06-16T09:13:15.848377+00:00"
   },
   "deep_analysis": {
-    "text": "Gold's bullish breakout alongside falling VIX and rising equities signals sustained risk appetite, pressuring the dollar across major pairs. Cross-asset momentum confirms the risk-on theme with Bitcoin advancing and copper gaining, though weaker oil caps commodity currency strength. The setup favors USDCAD and USDCHF shorts as USD weakness accelerates into European session. Today's BoE decision at 11:00 UTC and US retail sales at 12:30 UTC could amplify moves if they disappoint hawkish expectations or show continued consumer resilience respectively.",
-    "generated_at": "2026-06-15T15:34:12.598145+00:00"
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "generated_at": "2026-06-16T09:13:38.730394+00:00"
   },
   "breaking": {
     "headlines": [
-      "ECB Set to Raise Rates, Inflation Risks Keep Door Open Tightening",
-      "China Industrial Output +4.5% y/y, Beats Expectations at +4.2%",
-      "New Zealand Food Price Inflation +1.0% m/m, Prior Flat"
+      "German economic sentiment picks up in June as US-Iran conflict simmers down"
     ],
-    "updated": "2026-06-16T02:15:08.218826+00:00"
+    "updated": "2026-06-16T09:13:15.848377+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
