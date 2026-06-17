@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T09:56:56.089567+00:00",
+  "updated": "2026-06-17T13:33:48.362555+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,96 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 4,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 4.0,
+    "signals": -1,
+    "total": 5,
     "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.38,
-      "delta_pct": -0.2,
+      "value": 16.05,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7511.35,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 7515.88,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4340.0,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 4356.5,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.584,
+      "value": 99.587,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.516,
-      "delta_pct": 0.4,
+      "value": 6.5015,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.487,
-      "delta_bp": 2.4,
-      "direction": "flat",
+      "value": 4.43,
+      "delta_bp": -5.7,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.618,
-      "delta_bp": -0.5,
+      "value": 3.63,
+      "delta_bp": 1.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.73,
-      "delta_pct": -0.4,
+      "value": 75.9,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64831.0,
-      "delta_pct": -1.2,
+      "value": 64984.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.9,
-      "delta_bp": 2.9,
-      "direction": "flat",
+      "value": 80.0,
+      "delta_bp": -6.9,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-17T08:51:29.875100+00:00"
+    "updated": "2026-06-17T13:33:48.362555+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.15
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.17
+      },
+      {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 5.65
+        "score": 2.35
       }
     ],
-    "updated": "2026-06-17T08:51:29.875100+00:00"
+    "updated": "2026-06-17T13:33:48.362555+00:00"
   },
   "calendar": {
     "events": [
@@ -683,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-17T08:51:29.875100+00:00"
+    "updated": "2026-06-17T13:33:48.362555+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-16T22:04:00.935636+00:00"
+    "generated_at": "2026-06-17T13:34:10.422998+00:00"
   },
   "breaking": {
     "headlines": [
-      "IEA sees 'significant overhang' in oil market next year"
+      "US May advance retail sales +0.9% vs +0.5% expected"
     ],
-    "updated": "2026-06-17T08:51:29.875100+00:00"
+    "updated": "2026-06-17T13:33:48.362555+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
