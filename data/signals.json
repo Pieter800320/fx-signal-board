@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T21:17:05.864748+00:00",
+  "updated": "2026-06-17T21:49:04.929158+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 6.7,
+    "signals": 1,
+    "total": 3,
     "stable": false
   },
   "macro": {
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.28,
-      "delta_pct": 11.4,
+      "value": 18.44,
+      "delta_pct": 12.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7407.3,
-      "delta_pct": -1.4,
+      "value": 7420.1,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4247.5,
-      "delta_pct": -1.9,
+      "value": 4276.3,
+      "delta_pct": -1.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.57,
-      "delta_pct": 1.0,
+      "value": 100.38,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.334,
-      "delta_pct": -2.4,
+      "value": 6.363,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.36,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 75.01,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64166.0,
+      "value": 64127.0,
       "delta_pct": -2.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-17T19:53:11.963187+00:00"
+    "updated": "2026-06-17T21:49:04.929158+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 7.92
-      },
-      {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.22
+        "score": 8.07
       },
       {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 4.67
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 7.62
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 7.42
       }
     ],
-    "updated": "2026-06-17T19:53:11.963187+00:00"
+    "updated": "2026-06-17T21:49:04.929158+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-17T19:53:11.963187+00:00"
+    "updated": "2026-06-17T21:49:04.929158+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "What did the markets do from the start to the end of the Fed Warsh Press conference"
+      "Economic and event calendar in Asia Thursday, June 18, 2026: New Zealand Q1 GDP preview"
     ],
-    "updated": "2026-06-17T19:53:11.963187+00:00"
+    "updated": "2026-06-17T21:49:04.929158+00:00"
   },
   "last_alert": "2026-06-17T21:17:05.864748+00:00",
   "gold_signal": {
