@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T14:28:25.181448+00:00",
+  "updated": "2026-06-17T16:49:46.481624+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,43 +544,43 @@
     "score": 4.0,
     "signals": -1,
     "total": 5,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 2,
     "total": 2,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.05,
-      "delta_pct": -2.2,
+      "value": 16.87,
+      "delta_pct": 2.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7515.88,
-      "delta_pct": 0.1,
+      "value": 7512.15,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4356.5,
-      "delta_pct": 0.6,
+      "value": 4379.9,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.587,
-      "delta_pct": 0.0,
+      "value": 99.702,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5015,
-      "delta_pct": 0.2,
+      "value": 6.498,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.9,
-      "delta_pct": -0.2,
+      "value": 75.99,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64984.0,
-      "delta_pct": -0.9,
+      "value": 65888.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-17T13:33:48.362555+00:00"
+    "updated": "2026-06-17T16:49:46.481624+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.15
-      },
-      {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 6.17
+        "score": 7.12
       },
       {
-        "pair": "EURJPY",
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 6.42
+      },
+      {
+        "pair": "USDCHF",
         "direction": "bull",
-        "score": 2.35
+        "score": 3.75
       }
     ],
-    "updated": "2026-06-17T13:33:48.362555+00:00"
+    "updated": "2026-06-17T16:49:46.481624+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-17T13:33:48.362555+00:00"
+    "updated": "2026-06-17T16:49:46.481624+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "US May advance retail sales +0.9% vs +0.5% expected"
+      "Trump: Says the Iran deal will open Strait of Hormuz"
     ],
-    "updated": "2026-06-17T13:33:48.362555+00:00"
+    "updated": "2026-06-17T16:49:46.481624+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
