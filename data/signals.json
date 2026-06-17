@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T21:49:04.929158+00:00",
+  "updated": "2026-06-17T23:12:48.561685+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
     "stable": false
   },
   "macro": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4276.3,
-      "delta_pct": -1.3,
+      "value": 4283.5,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.38,
-      "delta_pct": 0.8,
+      "value": 100.39,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.363,
-      "delta_pct": -1.9,
+      "value": 6.3795,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.01,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 75.34,
+      "delta_pct": -0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64127.0,
-      "delta_pct": -2.2,
+      "value": 64217.0,
+      "delta_pct": -2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-17T21:49:04.929158+00:00"
+    "updated": "2026-06-17T23:12:48.561685+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 7.42
       }
     ],
-    "updated": "2026-06-17T21:49:04.929158+00:00"
+    "updated": "2026-06-17T23:12:48.561685+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-17T21:49:04.929158+00:00"
+    "updated": "2026-06-17T23:12:48.561685+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Economic and event calendar in Asia Thursday, June 18, 2026: New Zealand Q1 GDP preview"
+      "New Zealand Q1 GDP 0.8% q/q (0.9% expected) and 1.5% y/y (1.1% expected)"
     ],
-    "updated": "2026-06-17T21:49:04.929158+00:00"
+    "updated": "2026-06-17T23:12:48.561685+00:00"
   },
   "last_alert": "2026-06-17T21:17:05.864748+00:00",
   "gold_signal": {
