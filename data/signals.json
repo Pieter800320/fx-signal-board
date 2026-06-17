@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-16T22:03:33.432866+00:00",
+  "updated": "2026-06-17T02:10:22.917604+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -560,28 +560,22 @@
       "direction": "flat",
       "label": "VIX"
     },
-    "spx": {
-      "value": 7511.35,
-      "delta_pct": -0.6,
-      "direction": "down",
-      "label": "S&P 500"
-    },
     "gold": {
-      "value": 4353.0,
-      "delta_pct": 0.6,
+      "value": 4360.8,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.552,
-      "delta_pct": -0.1,
+      "value": 99.523,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.481,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 6.529,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -590,34 +584,22 @@
       "direction": "down",
       "label": "US 10Y"
     },
-    "us3m": {
-      "value": 3.63,
-      "delta_bp": 1.2,
-      "direction": "flat",
-      "label": "US 3M"
-    },
     "wti": {
-      "value": 75.83,
-      "delta_pct": -6.1,
+      "value": 75.35,
+      "delta_pct": -6.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65688.0,
-      "delta_pct": -0.9,
+      "value": 65792.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
-    },
-    "curve": {
-      "value": 79.8,
-      "delta_bp": -7.1,
-      "direction": "down",
-      "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-16T22:03:33.432866+00:00"
+    "updated": "2026-06-17T02:10:22.917604+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -628,7 +610,7 @@
         "score": 5.65
       }
     ],
-    "updated": "2026-06-16T22:03:33.432866+00:00"
+    "updated": "2026-06-17T02:10:22.917604+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +665,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-16T22:03:33.432866+00:00"
+    "updated": "2026-06-17T02:10:22.917604+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -691,9 +673,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive Americas market news wrap: Oil continues to fall in the lead-up to the FOMC"
+      "China financial regulator vows to tackle property, local debt and small bank risks"
     ],
-    "updated": "2026-06-16T22:03:33.432866+00:00"
+    "updated": "2026-06-17T02:10:22.917604+00:00"
   },
   "last_alert": "2026-06-09T19:23:15.085116+00:00",
   "gold_signal": {
