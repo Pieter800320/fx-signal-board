@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T14:16:09.033665+00:00",
+  "updated": "2026-06-18T16:48:17.605600+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
+    "label": "Risk-On",
+    "signals": -1,
     "total": 5,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.16,
-      "delta_pct": -6.9,
+      "value": 16.81,
+      "delta_pct": -8.8,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7420.1,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 7499.23,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4275.4,
-      "delta_pct": -1.9,
+      "value": 4237.7,
+      "delta_pct": -2.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.66,
-      "delta_pct": 0.6,
+      "value": 100.75,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4075,
-      "delta_pct": -1.1,
+      "value": 6.392,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.447,
-      "delta_bp": -4.0,
-      "direction": "flat",
+      "value": 4.441,
+      "delta_bp": -4.6,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.655,
-      "delta_bp": 3.7,
+      "value": 3.658,
+      "delta_bp": 4.0,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.43,
-      "delta_pct": -3.1,
+      "value": 73.79,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64177.0,
-      "delta_pct": -2.2,
-      "direction": "flat",
+      "value": 62657.0,
+      "delta_pct": -4.5,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.2,
-      "delta_bp": -7.7,
+      "value": 78.3,
+      "delta_bp": -8.6,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-18T12:43:29.563295+00:00"
+    "updated": "2026-06-18T16:48:17.605600+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 7.75
+      },
+      {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 8.42
+        "score": 7.6
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.38
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 7.07
+        "score": 7.57
       }
     ],
-    "updated": "2026-06-18T12:43:29.563295+00:00"
+    "updated": "2026-06-18T16:48:17.605600+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-18T12:43:29.563295+00:00"
+    "updated": "2026-06-18T16:48:17.605600+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-18T02:08:46.661019+00:00"
+    "generated_at": "2026-06-18T16:48:39.704129+00:00"
   },
   "breaking": {
     "headlines": [
-      "US June Philly Fed business index 10.3 versus 10.0 estimate"
+      "Key Points from the  MOU between the US and Iran."
     ],
-    "updated": "2026-06-18T12:43:29.563295+00:00"
+    "updated": "2026-06-18T16:48:17.605600+00:00"
   },
   "last_alert": "2026-06-17T21:17:05.864748+00:00",
   "gold_signal": {
