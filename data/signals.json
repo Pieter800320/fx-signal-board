@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T09:21:33.599342+00:00",
+  "updated": "2026-06-18T12:43:29.563295+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 6.7,
     "signals": 1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.91,
-      "delta_pct": -8.3,
+      "value": 17.16,
+      "delta_pct": -6.9,
       "direction": "down",
       "label": "VIX"
     },
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4308.1,
-      "delta_pct": -1.2,
+      "value": 4275.4,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.39,
-      "delta_pct": 0.3,
+      "value": 100.66,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4135,
-      "delta_pct": -1.0,
+      "value": 6.4075,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.487,
-      "delta_bp": 2.4,
+      "value": 4.447,
+      "delta_bp": -4.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.618,
-      "delta_bp": -0.5,
-      "direction": "flat",
+      "value": 3.655,
+      "delta_bp": 3.7,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.07,
-      "delta_pct": -3.5,
+      "value": 74.43,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64518.0,
-      "delta_pct": 0.2,
+      "value": 64177.0,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.9,
-      "delta_bp": 2.9,
-      "direction": "flat",
+      "value": 79.2,
+      "delta_bp": -7.7,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-18T08:28:00.165531+00:00"
+    "updated": "2026-06-18T12:43:29.563295+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.87
-      },
-      {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.42
+        "score": 8.42
       },
       {
-        "pair": "EURUSD",
+        "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.22
+        "score": 7.38
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 7.07
       }
     ],
-    "updated": "2026-06-18T08:28:00.165531+00:00"
+    "updated": "2026-06-18T12:43:29.563295+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-18T08:28:00.165531+00:00"
+    "updated": "2026-06-18T12:43:29.563295+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "TMGM Enters Esports Through New Collaboration with OG Esports as Official Global Partner"
+      "US June Philly Fed business index 10.3 versus 10.0 estimate"
     ],
-    "updated": "2026-06-18T08:28:00.165531+00:00"
+    "updated": "2026-06-18T12:43:29.563295+00:00"
   },
   "last_alert": "2026-06-17T21:17:05.864748+00:00",
   "gold_signal": {
