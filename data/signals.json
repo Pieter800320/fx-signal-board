@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-17T23:12:48.561685+00:00",
+  "updated": "2026-06-18T02:08:24.919289+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,12 +544,12 @@
     "score": 5.0,
     "signals": 0,
     "total": 4,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 3,
-    "total": 5,
+    "total": 3,
     "confidence": "High",
     "stable": true
   },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4283.5,
-      "delta_pct": -1.1,
-      "direction": "down",
+      "value": 4339.0,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.39,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 100.28,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3795,
-      "delta_pct": -1.7,
+      "value": 6.411,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.34,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 74.75,
+      "delta_pct": -1.7,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64217.0,
-      "delta_pct": -2.1,
+      "value": 64526.0,
+      "delta_pct": -1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-17T23:12:48.561685+00:00"
+    "updated": "2026-06-18T02:08:24.919289+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 8.07
+        "score": 7.47
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 7.07
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.62
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 7.42
+        "score": 7.03
       }
     ],
-    "updated": "2026-06-17T23:12:48.561685+00:00"
+    "updated": "2026-06-18T02:08:24.919289+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-17T23:12:48.561685+00:00"
+    "updated": "2026-06-18T02:08:24.919289+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-17T13:34:10.422998+00:00"
+    "generated_at": "2026-06-18T02:08:46.661019+00:00"
   },
   "breaking": {
     "headlines": [
       "New Zealand Q1 GDP 0.8% q/q (0.9% expected) and 1.5% y/y (1.1% expected)"
     ],
-    "updated": "2026-06-17T23:12:48.561685+00:00"
+    "updated": "2026-06-18T02:08:24.919289+00:00"
   },
   "last_alert": "2026-06-17T21:17:05.864748+00:00",
   "gold_signal": {
