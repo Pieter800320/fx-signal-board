@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-18T18:09:12.009877+00:00",
+  "updated": "2026-06-18T20:02:53.178185+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 3.3,
+    "signals": -1,
+    "total": 3,
     "stable": false
   },
   "macro": {
@@ -551,43 +551,43 @@
     "signals": -1,
     "total": 5,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.81,
-      "delta_pct": -8.8,
+      "value": 16.47,
+      "delta_pct": -10.7,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7499.23,
+      "value": 7500.67,
       "delta_pct": 1.1,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4237.7,
+      "value": 4236.2,
       "delta_pct": -2.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.75,
+      "value": 100.79,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.392,
-      "delta_pct": -1.4,
+      "value": 6.3845,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.441,
-      "delta_bp": -4.6,
-      "direction": "down",
+      "value": 4.451,
+      "delta_bp": -3.6,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,35 +597,35 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.79,
-      "delta_pct": -3.9,
+      "value": 75.61,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62657.0,
-      "delta_pct": -4.5,
+      "value": 63058.0,
+      "delta_pct": -3.9,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 78.3,
-      "delta_bp": -8.6,
+      "value": 79.3,
+      "delta_bp": -7.6,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-18T16:48:17.605600+00:00"
+    "updated": "2026-06-18T20:02:53.178185+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "CADJPY",
+        "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.75
+        "score": 8.15
       },
       {
         "pair": "GBPUSD",
@@ -633,12 +633,12 @@
         "score": 7.6
       },
       {
-        "pair": "NZDUSD",
+        "pair": "CADJPY",
         "direction": "bear",
-        "score": 7.57
+        "score": 7.47
       }
     ],
-    "updated": "2026-06-18T16:48:17.605600+00:00"
+    "updated": "2026-06-18T20:02:53.178185+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-18T16:48:17.605600+00:00"
+    "updated": "2026-06-18T20:02:53.178185+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Key Points from the  MOU between the US and Iran."
+      "Trump: US is committed to PEACE"
     ],
-    "updated": "2026-06-18T16:48:17.605600+00:00"
+    "updated": "2026-06-18T20:02:53.178185+00:00"
   },
   "last_alert": "2026-06-18T18:09:12.009877+00:00",
   "gold_signal": {
