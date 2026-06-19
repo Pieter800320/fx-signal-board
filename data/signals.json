@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T02:35:47.060365+00:00",
+  "updated": "2026-06-19T08:55:50.146409+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 5,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.4,
-      "delta_pct": -11.1,
-      "direction": "down",
+      "value": 16.86,
+      "delta_pct": 2.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,57 +567,57 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4196.0,
-      "delta_pct": -3.7,
+      "value": 4187.2,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.83,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 100.77,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3355,
-      "delta_pct": -2.3,
-      "direction": "down",
+      "value": 6.3665,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -3.6,
+      "value": 4.487,
+      "delta_bp": 2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.658,
-      "delta_bp": 4.0,
-      "direction": "up",
+      "value": 3.618,
+      "delta_bp": -0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.64,
-      "delta_pct": -1.5,
-      "direction": "down",
+      "value": 75.95,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62921.0,
-      "delta_pct": -2.3,
+      "value": 62527.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.3,
-      "delta_bp": -7.6,
-      "direction": "down",
+      "value": 86.9,
+      "delta_bp": 2.9,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-19T02:35:47.060365+00:00"
+    "updated": "2026-06-19T08:55:50.146409+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.87
+        "score": 7.47
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.32
+        "score": 6.92
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.88
+        "score": 6.48
       }
     ],
-    "updated": "2026-06-19T02:35:47.060365+00:00"
+    "updated": "2026-06-19T08:55:50.146409+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-19T02:35:47.060365+00:00"
+    "updated": "2026-06-19T08:55:50.146409+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-18T16:48:39.704129+00:00"
+    "generated_at": "2026-06-19T08:56:12.505834+00:00"
   },
   "breaking": {
     "headlines": [
-      "Oil and US dollar rising on news that Vance cancelled his trip to negotiate with Iran"
+      "UK May retail sales +1.2% vs +0.5% m/m expected"
     ],
-    "updated": "2026-06-19T02:35:47.060365+00:00"
+    "updated": "2026-06-19T08:55:50.146409+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
