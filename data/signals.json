@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T14:17:03.260137+00:00",
+  "updated": "2026-06-19T16:25:46.647795+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.85,
-      "delta_pct": 2.7,
+      "value": 16.78,
+      "delta_pct": 2.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4188.7,
-      "delta_pct": -0.8,
+      "value": 4163.2,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.79,
-      "delta_pct": -0.1,
+      "value": 100.82,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3715,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 6.333,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.57,
-      "delta_pct": -1.3,
-      "direction": "down",
+      "value": 76.65,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62672.0,
-      "delta_pct": -0.4,
+      "value": 63257.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-19T13:24:31.645402+00:00"
+    "updated": "2026-06-19T16:25:46.647795+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.67
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 7.0
+        "score": 7.4
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.92
+        "score": 7.13
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 6.67
       }
     ],
-    "updated": "2026-06-19T13:24:31.645402+00:00"
+    "updated": "2026-06-19T16:25:46.647795+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-19T13:24:31.645402+00:00"
+    "updated": "2026-06-19T16:25:46.647795+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Israel and Hezbollah have agreed to a ceasefire to start almost immediately"
+      "UK PM Starmer to weigh future over the weekend - report"
     ],
-    "updated": "2026-06-19T13:24:31.645402+00:00"
+    "updated": "2026-06-19T16:25:46.647795+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
