@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T20:40:47.223404+00:00",
+  "updated": "2026-06-19T20:57:55.266265+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -573,8 +573,8 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.72,
-      "delta_pct": -0.1,
+      "value": 100.85,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62957.0,
-      "delta_pct": 0.1,
+      "value": 63164.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-19T19:20:04.042003+00:00"
+    "updated": "2026-06-19T20:57:55.266265+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -635,10 +635,10 @@
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 6.17
+        "score": 6.67
       }
     ],
-    "updated": "2026-06-19T19:20:04.042003+00:00"
+    "updated": "2026-06-19T20:57:55.266265+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-19T19:20:04.042003+00:00"
+    "updated": "2026-06-19T20:57:55.266265+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-19T08:56:12.505834+00:00"
+    "generated_at": "2026-06-19T20:58:17.134338+00:00"
   },
   "breaking": {
     "headlines": [
-      "Two killed in drone strike in Southern Lebanon after ceasefire"
+      "investingLive Americas market news wrap: Israel and Hezbollah agree to shaky ceasefire"
     ],
-    "updated": "2026-06-19T19:20:04.042003+00:00"
+    "updated": "2026-06-19T20:57:55.266265+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
