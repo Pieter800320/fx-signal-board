@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T09:48:01.098812+00:00",
+  "updated": "2026-06-19T13:24:31.645402+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.86,
-      "delta_pct": 2.8,
+      "value": 16.85,
+      "delta_pct": 2.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4187.2,
-      "delta_pct": -0.9,
+      "value": 4188.7,
+      "delta_pct": -0.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.77,
+      "value": 100.79,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3665,
-      "delta_pct": -0.1,
+      "value": 6.3715,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.95,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 75.57,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62527.0,
-      "delta_pct": -0.6,
+      "value": 62672.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-19T08:55:50.146409+00:00"
+    "updated": "2026-06-19T13:24:31.645402+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 7.67
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 7.0
+      },
+      {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.47
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bear",
         "score": 6.92
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.48
       }
     ],
-    "updated": "2026-06-19T08:55:50.146409+00:00"
+    "updated": "2026-06-19T13:24:31.645402+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-19T08:55:50.146409+00:00"
+    "updated": "2026-06-19T13:24:31.645402+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "UK May retail sales +1.2% vs +0.5% m/m expected"
+      "Israel and Hezbollah have agreed to a ceasefire to start almost immediately"
     ],
-    "updated": "2026-06-19T08:55:50.146409+00:00"
+    "updated": "2026-06-19T13:24:31.645402+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
