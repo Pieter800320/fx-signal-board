@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19T17:23:27.629938+00:00",
+  "updated": "2026-06-19T19:20:04.042003+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4163.2,
-      "delta_pct": -1.4,
+      "value": 4172.9,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.82,
-      "delta_pct": -0.0,
+      "value": 100.72,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.333,
-      "delta_pct": -0.7,
-      "direction": "down",
+      "value": 6.337,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 76.65,
-      "delta_pct": 0.1,
+      "value": 76.54,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63257.0,
-      "delta_pct": 0.6,
+      "value": 62957.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-19T16:25:46.647795+00:00"
+    "updated": "2026-06-19T19:20:04.042003+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -630,15 +630,15 @@
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.13
+        "score": 7.2
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 6.67
+        "score": 6.17
       }
     ],
-    "updated": "2026-06-19T16:25:46.647795+00:00"
+    "updated": "2026-06-19T19:20:04.042003+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-19T16:25:46.647795+00:00"
+    "updated": "2026-06-19T19:20:04.042003+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "UK PM Starmer to weigh future over the weekend - report"
+      "Two killed in drone strike in Southern Lebanon after ceasefire"
     ],
-    "updated": "2026-06-19T16:25:46.647795+00:00"
+    "updated": "2026-06-19T19:20:04.042003+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
