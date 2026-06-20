@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T06:16:49.876018+00:00",
+  "updated": "2026-06-20T10:23:26.597663+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,14 +544,14 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 2,
     "total": 4,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63597.0,
-      "delta_pct": -1.3,
+      "value": 63584.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-20T06:16:49.876018+00:00"
+    "updated": "2026-06-20T10:23:26.597663+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 7.47
       }
     ],
-    "updated": "2026-06-20T06:16:49.876018+00:00"
+    "updated": "2026-06-20T10:23:26.597663+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-20T06:16:49.876018+00:00"
+    "updated": "2026-06-20T10:23:26.597663+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-19T20:58:17.134338+00:00"
+    "generated_at": "2026-06-20T10:23:48.931851+00:00"
   },
   "breaking": {
     "headlines": [
       "investingLive Americas market news wrap: Israel and Hezbollah agree to shaky ceasefire"
     ],
-    "updated": "2026-06-20T06:16:49.876018+00:00"
+    "updated": "2026-06-20T10:23:26.597663+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
