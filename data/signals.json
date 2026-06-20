@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-20T17:10:53.920818+00:00",
+  "updated": "2026-06-20T19:04:18.791119+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,23 +547,23 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.4,
-      "delta_pct": -11.1,
-      "direction": "down",
+      "value": 18.44,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7500.58,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 7420.1,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
@@ -574,8 +574,8 @@
     },
     "dxy": {
       "value": 100.85,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63832.0,
-      "delta_pct": 0.5,
+      "value": 63790.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-20T17:10:53.920818+00:00"
+    "updated": "2026-06-20T19:04:18.791119+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.4
+        "score": 8.0
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.2
+        "score": 7.8
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 6.67
+        "score": 7.47
       }
     ],
-    "updated": "2026-06-20T17:10:53.920818+00:00"
+    "updated": "2026-06-20T19:04:18.791119+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-20T17:10:53.920818+00:00"
+    "updated": "2026-06-20T19:04:18.791119+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -703,7 +703,7 @@
     "headlines": [
       "Iran military command says it's closing the Strait of Hormuz due to ceasefire violations"
     ],
-    "updated": "2026-06-20T17:10:53.920818+00:00"
+    "updated": "2026-06-20T19:04:18.791119+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
