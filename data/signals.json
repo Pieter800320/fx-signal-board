@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T17:13:51.753059+00:00",
+  "updated": "2026-06-21T19:08:04.498594+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64126.0,
+      "value": 64097.0,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-21T17:13:51.753059+00:00"
+    "updated": "2026-06-21T19:08:04.498594+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.67
       }
     ],
-    "updated": "2026-06-21T17:13:51.753059+00:00"
+    "updated": "2026-06-21T19:08:04.498594+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-21T17:13:51.753059+00:00"
+    "updated": "2026-06-21T19:08:04.498594+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -703,7 +703,7 @@
     "headlines": [
       "J.D. Vance: These kinds of ceasefires are awlays \"a littel bit messy\""
     ],
-    "updated": "2026-06-21T17:13:51.753059+00:00"
+    "updated": "2026-06-21T19:08:04.498594+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
