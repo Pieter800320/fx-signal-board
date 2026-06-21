@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T19:08:04.498594+00:00",
+  "updated": "2026-06-21T21:00:28.934377+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64097.0,
-      "delta_pct": -0.2,
+      "value": 63793.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-21T19:08:04.498594+00:00"
+    "updated": "2026-06-21T21:00:28.934377+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.67
       }
     ],
-    "updated": "2026-06-21T19:08:04.498594+00:00"
+    "updated": "2026-06-21T21:00:28.934377+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-21T19:08:04.498594+00:00"
+    "updated": "2026-06-21T21:00:28.934377+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "J.D. Vance: These kinds of ceasefires are awlays \"a littel bit messy\""
+      "Economic and event calendar in Asia Monday, June 22, 2026 is a light one"
     ],
-    "updated": "2026-06-21T19:08:04.498594+00:00"
+    "updated": "2026-06-21T21:00:28.934377+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
@@ -713,5 +713,9 @@
     "h4_confidence": "Low",
     "h1_confirmed": false,
     "updated": "2026-06-19T20:40:47.223404+00:00"
+  },
+  "week_ahead": {
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "generated_at": "2026-06-21T21:00:28.934377+00:00"
   }
 }
