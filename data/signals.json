@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T02:09:49.955032+00:00",
+  "updated": "2026-06-21T08:18:21.857416+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,19 +539,19 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
-    "stable": false
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -574,8 +574,8 @@
     },
     "dxy": {
       "value": 100.85,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -585,14 +585,14 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.487,
-      "delta_bp": 2.4,
+      "value": 4.451,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.618,
-      "delta_bp": -0.5,
+      "value": 3.658,
+      "delta_bp": 1.1,
       "direction": "flat",
       "label": "US 3M"
     },
@@ -603,21 +603,21 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64177.0,
-      "delta_pct": 1.0,
+      "value": 64030.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.9,
-      "delta_bp": 2.9,
+      "value": 79.3,
+      "delta_bp": -2.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-21T02:09:49.955032+00:00"
+    "updated": "2026-06-21T08:18:21.857416+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,12 +625,12 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.4
+        "score": 7.8
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.2
+        "score": 7.6
       },
       {
         "pair": "CADJPY",
@@ -638,7 +638,7 @@
         "score": 6.67
       }
     ],
-    "updated": "2026-06-21T02:09:49.955032+00:00"
+    "updated": "2026-06-21T08:18:21.857416+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-21T02:09:49.955032+00:00"
+    "updated": "2026-06-21T08:18:21.857416+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -703,7 +703,7 @@
     "headlines": [
       "Iran military command says it's closing the Strait of Hormuz due to ceasefire violations"
     ],
-    "updated": "2026-06-21T02:09:49.955032+00:00"
+    "updated": "2026-06-21T08:18:21.857416+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
