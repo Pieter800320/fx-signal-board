@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T08:18:21.857416+00:00",
+  "updated": "2026-06-21T12:03:17.346254+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64030.0,
+      "value": 64066.0,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-21T08:18:21.857416+00:00"
+    "updated": "2026-06-21T12:03:17.346254+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.67
       }
     ],
-    "updated": "2026-06-21T08:18:21.857416+00:00"
+    "updated": "2026-06-21T12:03:17.346254+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-21T08:18:21.857416+00:00"
+    "updated": "2026-06-21T12:03:17.346254+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-20T22:55:21.818678+00:00"
+    "generated_at": "2026-06-21T12:03:39.555233+00:00"
   },
   "breaking": {
     "headlines": [
       "Iran military command says it's closing the Strait of Hormuz due to ceasefire violations"
     ],
-    "updated": "2026-06-21T08:18:21.857416+00:00"
+    "updated": "2026-06-21T12:03:17.346254+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
