@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T15:58:05.920705+00:00",
+  "updated": "2026-06-22T19:01:13.127349+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,98 +547,98 @@
     "stable": false
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.92,
-      "delta_pct": 9.3,
+      "value": 17.28,
+      "delta_pct": 5.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7470.24,
-      "delta_pct": -0.4,
+      "value": 7466.66,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4218.8,
-      "delta_pct": -0.1,
+      "value": 4209.2,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.85,
-      "delta_pct": -0.0,
+      "value": 101.01,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3785,
-      "delta_pct": 0.1,
+      "value": 6.366,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.497,
-      "delta_bp": 4.6,
+      "value": 4.507,
+      "delta_bp": 5.6,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.675,
-      "delta_bp": 1.7,
+      "value": 3.678,
+      "delta_bp": 2.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.87,
+      "value": 73.84,
       "delta_pct": -3.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64956.0,
-      "delta_pct": 2.7,
-      "direction": "up",
+      "value": 64269.0,
+      "delta_pct": 1.6,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 82.2,
-      "delta_bp": 2.9,
-      "direction": "flat",
+      "value": 82.9,
+      "delta_bp": 3.6,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-22T15:11:00.492631+00:00"
+    "updated": "2026-06-22T19:01:13.127349+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 8.07
+      },
+      {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.52
+        "score": 7.17
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.38
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 5.9
+        "score": 6.77
       }
     ],
-    "updated": "2026-06-22T15:11:00.492631+00:00"
+    "updated": "2026-06-22T19:01:13.127349+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-22T15:11:00.492631+00:00"
+    "updated": "2026-06-22T19:01:13.127349+00:00"
   },
   "week_ahead": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -707,7 +707,7 @@
     "headlines": [
       "Eurozone flash June consumer confidnce -17.7 vs -17.5 expected"
     ],
-    "updated": "2026-06-22T15:11:00.492631+00:00"
+    "updated": "2026-06-22T19:01:13.127349+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
