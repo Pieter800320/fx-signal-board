@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-21T22:56:01.257535+00:00",
+  "updated": "2026-06-22T02:13:33.925905+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
+    "signals": -1,
     "total": 3,
-    "confidence": "High",
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4170.2,
-      "delta_pct": -1.3,
-      "direction": "down",
+      "value": 4207.0,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
       "value": 100.85,
-      "delta_pct": 0.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.337,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 6.3175,
+      "delta_pct": -0.9,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.33,
-      "delta_pct": 1.0,
-      "direction": "flat",
+      "value": 75.6,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63756.0,
-      "delta_pct": -0.8,
+      "value": 64471.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-21T22:56:01.257535+00:00"
+    "updated": "2026-06-22T02:13:33.925905+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.4
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.2
+        "score": 7.8
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 6.67
+        "score": 7.27
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.0
       }
     ],
-    "updated": "2026-06-21T22:56:01.257535+00:00"
+    "updated": "2026-06-22T02:13:33.925905+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-21T22:56:01.257535+00:00"
+    "updated": "2026-06-22T02:13:33.925905+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-21T12:03:39.555233+00:00"
+    "generated_at": "2026-06-22T02:13:57.236041+00:00"
   },
   "breaking": {
     "headlines": [
-      "Economic and event calendar in Asia Monday, June 22, 2026 is a light one"
+      "UK media (Guardian) reports Starmer set to confirm autumn departure on Monday, UK time"
     ],
-    "updated": "2026-06-21T22:56:01.257535+00:00"
+    "updated": "2026-06-22T02:13:33.925905+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
