@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T10:45:11.673306+00:00",
+  "updated": "2026-06-22T15:11:00.492631+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,98 +547,98 @@
     "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.48,
-      "delta_pct": 6.6,
+      "value": 17.92,
+      "delta_pct": 9.3,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7500.58,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 7470.24,
+      "delta_pct": -0.4,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4224.0,
-      "delta_pct": -0.0,
+      "value": 4218.8,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.87,
-      "delta_pct": 0.0,
+      "value": 100.85,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3725,
-      "delta_pct": -0.0,
+      "value": 6.3785,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -1.2,
-      "direction": "flat",
+      "value": 4.497,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.658,
-      "delta_bp": 1.1,
+      "value": 3.675,
+      "delta_bp": 1.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.25,
-      "delta_pct": -1.8,
+      "value": 73.87,
+      "delta_pct": -3.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64082.0,
-      "delta_pct": 1.3,
-      "direction": "flat",
+      "value": 64956.0,
+      "delta_pct": 2.7,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.3,
-      "delta_bp": -2.3,
+      "value": 82.2,
+      "delta_bp": 2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-22T09:35:16.743205+00:00"
+    "updated": "2026-06-22T15:11:00.492631+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "USDCAD",
+        "pair": "USDCHF",
         "direction": "bull",
-        "score": 8.0
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 7.47
+        "score": 6.52
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.2
+        "score": 6.38
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 5.9
       }
     ],
-    "updated": "2026-06-22T09:35:16.743205+00:00"
+    "updated": "2026-06-22T15:11:00.492631+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-22T09:35:16.743205+00:00"
+    "updated": "2026-06-22T15:11:00.492631+00:00"
   },
   "week_ahead": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,13 +701,13 @@
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-22T02:13:57.236041+00:00"
+    "generated_at": "2026-06-22T15:11:22.498809+00:00"
   },
   "breaking": {
     "headlines": [
-      "UK's Starmer: I will resign as prime minister"
+      "Eurozone flash June consumer confidnce -17.7 vs -17.5 expected"
     ],
-    "updated": "2026-06-22T09:35:16.743205+00:00"
+    "updated": "2026-06-22T15:11:00.492631+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
