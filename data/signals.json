@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T01:52:25.882749+00:00",
+  "updated": "2026-06-23T05:56:04.009988+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -543,15 +543,15 @@
     "confidence": "Low",
     "score": 5.0,
     "signals": 0,
-    "total": 0,
-    "stable": false
+    "total": 2,
+    "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,57 +567,57 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4174.5,
-      "delta_pct": -1.2,
+      "value": 4142.6,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.03,
-      "delta_pct": 0.0,
+      "value": 101.07,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.321,
-      "delta_pct": -0.8,
+      "value": 6.2585,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.509,
-      "delta_bp": 5.8,
-      "direction": "up",
+      "value": 4.451,
+      "delta_bp": -1.2,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.68,
-      "delta_bp": 2.2,
-      "direction": "up",
+      "value": 3.658,
+      "delta_bp": 1.1,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.19,
-      "delta_pct": -3.1,
+      "value": 73.27,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63913.0,
-      "delta_pct": 1.1,
+      "value": 63361.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 82.9,
-      "delta_bp": 3.6,
-      "direction": "up",
+      "value": 79.3,
+      "delta_bp": -2.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-23T01:52:25.882749+00:00"
+    "updated": "2026-06-23T05:56:04.009988+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.4
+        "score": 8.0
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.25
+        "score": 6.85
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.47
+        "score": 6.07
       }
     ],
-    "updated": "2026-06-23T01:52:25.882749+00:00"
+    "updated": "2026-06-23T05:56:04.009988+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-23T01:52:25.882749+00:00"
+    "updated": "2026-06-23T05:56:04.009988+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-22T15:11:22.498809+00:00"
+    "generated_at": "2026-06-23T05:56:28.124867+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australia May CPI preview: fuel drag to mask sticky underlying inflation"
+      "Core prices in Japan continue to keep above 2% in May, according to BOJ data"
     ],
-    "updated": "2026-06-23T01:52:25.882749+00:00"
+    "updated": "2026-06-23T05:56:04.009988+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
