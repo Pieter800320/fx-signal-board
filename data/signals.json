@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-22T23:09:09.798619+00:00",
+  "updated": "2026-06-23T01:52:25.882749+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -549,9 +549,9 @@
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 2,
+    "total": 4,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4208.1,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 4174.5,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.0,
-      "delta_pct": 0.1,
+      "value": 101.03,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3535,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 6.321,
+      "delta_pct": -0.8,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.32,
-      "delta_pct": -3.0,
+      "value": 74.19,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63939.0,
+      "value": 63913.0,
       "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-22T23:09:09.798619+00:00"
+    "updated": "2026-06-23T01:52:25.882749+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.2
+        "score": 8.4
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.05
+        "score": 7.25
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.27
+        "score": 6.47
       }
     ],
-    "updated": "2026-06-22T23:09:09.798619+00:00"
+    "updated": "2026-06-23T01:52:25.882749+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-22T23:09:09.798619+00:00"
+    "updated": "2026-06-23T01:52:25.882749+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Australian business activity steadies in June but new orders keep falling, S&P Global says"
+      "Australia May CPI preview: fuel drag to mask sticky underlying inflation"
     ],
-    "updated": "2026-06-22T23:09:09.798619+00:00"
+    "updated": "2026-06-23T01:52:25.882749+00:00"
   },
   "last_alert": "2026-06-18T21:25:26.307647+00:00",
   "gold_signal": {
