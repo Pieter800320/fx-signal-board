@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T15:56:51.909478+00:00",
+  "updated": "2026-06-23T16:16:50.608240+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -541,83 +541,83 @@
   "regime_w1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 7.5,
-    "signals": 2,
-    "total": 4,
+    "score": 6.7,
+    "signals": 1,
+    "total": 3,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": 3,
+    "total": 5,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 19.56,
-      "delta_pct": 13.2,
+      "value": 19.26,
+      "delta_pct": 11.5,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7472.79,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 7399.51,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4133.0,
-      "delta_pct": -1.2,
+      "value": 4152.3,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.3,
-      "delta_pct": 0.3,
+      "value": 101.37,
+      "delta_pct": 0.4,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1565,
+      "value": 6.158,
       "delta_pct": -3.1,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -1.2,
+      "value": 4.479,
+      "delta_bp": 2.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.658,
-      "delta_bp": 1.1,
-      "direction": "flat",
+      "value": 3.693,
+      "delta_bp": 3.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.53,
-      "delta_pct": -1.7,
+      "value": 73.07,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62268.0,
-      "delta_pct": -2.6,
-      "direction": "down",
+      "value": 62584.0,
+      "delta_pct": -2.1,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.3,
-      "delta_bp": -2.3,
+      "value": 78.6,
+      "delta_bp": -0.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-23T12:26:28.711596+00:00"
+    "updated": "2026-06-23T16:16:50.608240+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.07
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 7.75
+        "score": 8.6
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.67
+        "score": 8.38
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.95
       }
     ],
-    "updated": "2026-06-23T12:26:28.711596+00:00"
+    "updated": "2026-06-23T16:16:50.608240+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-23T12:26:28.711596+00:00"
+    "updated": "2026-06-23T16:16:50.608240+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Trump: I agreed to allow the Hormuz Strait to remain OPEN, with no further Naval Blockade"
+      "US Richmond Fed composite index +4 vs +13 prior"
     ],
-    "updated": "2026-06-23T12:26:28.711596+00:00"
+    "updated": "2026-06-23T16:16:50.608240+00:00"
   },
   "last_alert": "2026-06-23T15:56:51.909478+00:00",
   "gold_signal": {
