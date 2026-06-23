@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T19:11:25.269984+00:00",
+  "updated": "2026-06-23T19:45:18.588897+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -555,20 +555,20 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 19.26,
-      "delta_pct": 11.5,
+      "value": 19.34,
+      "delta_pct": 11.9,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7399.51,
-      "delta_pct": -1.0,
+      "value": 7373.63,
+      "delta_pct": -1.3,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4152.3,
-      "delta_pct": -0.7,
+      "value": 4140.1,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Gold"
     },
@@ -579,58 +579,58 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.158,
-      "delta_pct": -3.1,
+      "value": 6.133,
+      "delta_pct": -3.5,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.479,
-      "delta_bp": 2.8,
-      "direction": "flat",
+      "value": 4.493,
+      "delta_bp": 4.2,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": 3.5,
+      "value": 3.69,
+      "delta_bp": 3.2,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.07,
-      "delta_pct": -2.3,
+      "value": 73.37,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62584.0,
-      "delta_pct": -2.1,
-      "direction": "flat",
+      "value": 62200.0,
+      "delta_pct": -2.7,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 78.6,
-      "delta_bp": -0.7,
+      "value": 80.3,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-23T16:16:50.608240+00:00"
+    "updated": "2026-06-23T19:45:18.588897+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 8.82
+      },
+      {
         "pair": "EURUSD",
         "direction": "bear",
         "score": 8.6
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 8.38
       },
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 7.95
       }
     ],
-    "updated": "2026-06-23T16:16:50.608240+00:00"
+    "updated": "2026-06-23T19:45:18.588897+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-23T16:16:50.608240+00:00"
+    "updated": "2026-06-23T19:45:18.588897+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-23T05:56:28.124867+00:00"
+    "generated_at": "2026-06-23T19:45:41.254875+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Richmond Fed composite index +4 vs +13 prior"
+      "US treasury so $69 billion of two-year notes at a high yield of 4.189%"
     ],
-    "updated": "2026-06-23T16:16:50.608240+00:00"
+    "updated": "2026-06-23T19:45:18.588897+00:00"
   },
   "last_alert": "2026-06-23T19:11:25.269984+00:00",
   "gold_signal": {
