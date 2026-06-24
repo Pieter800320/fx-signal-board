@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-23T22:56:07.257847+00:00",
+  "updated": "2026-06-24T01:50:34.945723+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 3,
-    "total": 5,
-    "confidence": "High",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4122.8,
-      "delta_pct": -1.4,
+      "value": 4110.7,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.39,
-      "delta_pct": 0.4,
-      "direction": "up",
+      "value": 101.42,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.123,
-      "delta_pct": -3.7,
+      "value": 6.1455,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.02,
-      "delta_pct": -2.4,
+      "value": 72.94,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62496.0,
-      "delta_pct": -2.3,
+      "value": 62920.0,
+      "delta_pct": -1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-23T22:56:07.257847+00:00"
+    "updated": "2026-06-24T01:50:34.945723+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 7.95
       }
     ],
-    "updated": "2026-06-23T22:56:07.257847+00:00"
+    "updated": "2026-06-24T01:50:34.945723+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-23T22:56:07.257847+00:00"
+    "updated": "2026-06-24T01:50:34.945723+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Morgan Stanley North Haven fund pays out less than half of Q2 investor withdrawal requests"
+      "Australian May 2026 Headline CPI 4% y/y (vs. expected 4.3%), core 3.6% y/y (expected 3.5%)"
     ],
-    "updated": "2026-06-23T22:56:07.257847+00:00"
+    "updated": "2026-06-24T01:50:34.945723+00:00"
   },
   "last_alert": "2026-06-23T19:11:25.269984+00:00",
   "gold_signal": {
