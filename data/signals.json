@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T20:51:31.591014+00:00",
+  "updated": "2026-06-24T21:14:36.343380+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -540,47 +540,47 @@
   },
   "regime_w1": {
     "regime": "Risk-Off",
-    "confidence": "High",
-    "score": 8.0,
-    "signals": 3,
-    "total": 5,
+    "confidence": "Medium",
+    "score": 7.5,
+    "signals": 2,
+    "total": 4,
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 20.04,
-      "delta_pct": 2.8,
+      "value": 18.63,
+      "delta_pct": -4.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7343.1,
-      "delta_pct": -0.3,
+      "value": 7358.22,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3992.6,
-      "delta_pct": -3.3,
+      "value": 4016.4,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.61,
-      "delta_pct": 0.2,
+      "value": 101.56,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 5.93,
-      "delta_pct": -3.4,
+      "value": 5.985,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.92,
-      "delta_pct": -4.5,
+      "value": 69.87,
+      "delta_pct": -4.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59525.0,
-      "delta_pct": -5.0,
+      "value": 60633.0,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-24T19:22:00.388050+00:00"
+    "updated": "2026-06-24T21:14:36.343380+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -628,17 +628,17 @@
         "score": 8.05
       },
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 7.45
-      },
-      {
         "pair": "AUDUSD",
         "direction": "bear",
         "score": 7.43
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.35
       }
     ],
-    "updated": "2026-06-24T19:22:00.388050+00:00"
+    "updated": "2026-06-24T21:14:36.343380+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-24T19:22:00.388050+00:00"
+    "updated": "2026-06-24T21:14:36.343380+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-24T08:48:02.862605+00:00"
+    "generated_at": "2026-06-24T21:14:58.224018+00:00"
   },
   "breaking": {
     "headlines": [
-      "Crude oil futures settle at $70.34. Stays below the 200 day MA."
+      "Australia May jobs preview: Banks tip 30-45k rebound as Easter distortion fades"
     ],
-    "updated": "2026-06-24T19:22:00.388050+00:00"
+    "updated": "2026-06-24T21:14:36.343380+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
