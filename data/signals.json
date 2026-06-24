@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T18:55:00.532303+00:00",
+  "updated": "2026-06-24T19:22:00.388050+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -540,84 +540,84 @@
   },
   "regime_w1": {
     "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 7.5,
-    "signals": 2,
-    "total": 4,
+    "confidence": "High",
+    "score": 8.0,
+    "signals": 3,
+    "total": 5,
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 3,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.28,
-      "delta_pct": -6.2,
-      "direction": "down",
+      "value": 20.04,
+      "delta_pct": 2.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7409.68,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 7343.1,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4022.9,
-      "delta_pct": -2.6,
+      "value": 3992.6,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.64,
+      "value": 101.61,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 5.982,
-      "delta_pct": -2.6,
+      "value": 5.93,
+      "delta_pct": -3.4,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.406,
-      "delta_bp": -4.5,
+      "value": 4.402,
+      "delta_bp": -4.9,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": 3.5,
+      "value": 3.69,
+      "delta_bp": 3.2,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 70.42,
-      "delta_pct": -3.8,
+      "value": 69.92,
+      "delta_pct": -4.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60191.0,
-      "delta_pct": -4.0,
+      "value": 59525.0,
+      "delta_pct": -5.0,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 71.3,
-      "delta_bp": -8.0,
+      "value": 71.2,
+      "delta_bp": -8.1,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-24T16:05:03.693036+00:00"
+    "updated": "2026-06-24T19:22:00.388050+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 8.02
+        "score": 8.05
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.47
+        "score": 7.45
       },
       {
         "pair": "AUDUSD",
         "direction": "bear",
-        "score": 7.22
+        "score": 7.43
       }
     ],
-    "updated": "2026-06-24T16:05:03.693036+00:00"
+    "updated": "2026-06-24T19:22:00.388050+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-24T16:05:03.693036+00:00"
+    "updated": "2026-06-24T19:22:00.388050+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "US May new home sales 580K vs 639K expected"
+      "Crude oil futures settle at $70.34. Stays below the 200 day MA."
     ],
-    "updated": "2026-06-24T16:05:03.693036+00:00"
+    "updated": "2026-06-24T19:22:00.388050+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
