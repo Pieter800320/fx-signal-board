@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T08:28:19.293227+00:00",
+  "updated": "2026-06-24T08:47:41.191370+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -541,23 +541,23 @@
   "regime_w1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 7.5,
-    "signals": 2,
-    "total": 4,
+    "score": 6.7,
+    "signals": 1,
+    "total": 3,
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.49,
-      "delta_pct": 12.8,
-      "direction": "up",
+      "value": 19.19,
+      "delta_pct": -1.5,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4094.5,
-      "delta_pct": -0.9,
+      "value": 4098.8,
+      "delta_pct": -0.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.48,
-      "delta_pct": 0.1,
+      "value": 101.62,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.13,
-      "delta_pct": -0.2,
+      "value": 6.135,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.59,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 71.93,
+      "delta_pct": -1.7,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62798.0,
-      "delta_pct": -1.8,
+      "value": 62676.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-24T05:54:48.495213+00:00"
+    "updated": "2026-06-24T08:47:41.191370+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 8.42
-      },
-      {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.2
+        "score": 7.67
       },
       {
-        "pair": "NZDUSD",
+        "pair": "EURJPY",
         "direction": "bear",
         "score": 7.55
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 7.4
       }
     ],
-    "updated": "2026-06-24T05:54:48.495213+00:00"
+    "updated": "2026-06-24T08:47:41.191370+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-24T05:54:48.495213+00:00"
+    "updated": "2026-06-24T08:47:41.191370+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-23T19:45:41.254875+00:00"
+    "generated_at": "2026-06-24T08:48:02.862605+00:00"
   },
   "breaking": {
     "headlines": [
-      "Trump calls on DOJ to look into oil companies for not dropping prices at the pump"
+      "Germany Ifo business sentiment rebounds further in June"
     ],
-    "updated": "2026-06-24T05:54:48.495213+00:00"
+    "updated": "2026-06-24T08:47:41.191370+00:00"
   },
   "last_alert": "2026-06-24T08:28:19.293227+00:00",
   "gold_signal": {
