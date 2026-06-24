@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-24T01:50:34.945723+00:00",
+  "updated": "2026-06-24T05:54:48.495213+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,57 +567,57 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4110.7,
-      "delta_pct": -1.7,
+      "value": 4094.5,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.42,
-      "delta_pct": 0.0,
+      "value": 101.48,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1455,
-      "delta_pct": -3.3,
-      "direction": "down",
+      "value": 6.13,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.493,
-      "delta_bp": 4.2,
-      "direction": "up",
+      "value": 4.451,
+      "delta_bp": -1.2,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.69,
-      "delta_bp": 3.2,
-      "direction": "up",
+      "value": 3.658,
+      "delta_bp": 1.1,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.94,
-      "delta_pct": -2.5,
-      "direction": "down",
+      "value": 72.59,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62920.0,
-      "delta_pct": -1.6,
+      "value": 62798.0,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 80.3,
-      "delta_bp": 1.0,
+      "value": 79.3,
+      "delta_bp": -2.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-24T01:50:34.945723+00:00"
+    "updated": "2026-06-24T05:54:48.495213+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 8.82
+        "score": 8.42
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.6
+        "score": 8.2
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 7.95
+        "score": 7.55
       }
     ],
-    "updated": "2026-06-24T01:50:34.945723+00:00"
+    "updated": "2026-06-24T05:54:48.495213+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-24T01:50:34.945723+00:00"
+    "updated": "2026-06-24T05:54:48.495213+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Australian May 2026 Headline CPI 4% y/y (vs. expected 4.3%), core 3.6% y/y (expected 3.5%)"
+      "Trump calls on DOJ to look into oil companies for not dropping prices at the pump"
     ],
-    "updated": "2026-06-24T01:50:34.945723+00:00"
+    "updated": "2026-06-24T05:54:48.495213+00:00"
   },
   "last_alert": "2026-06-23T19:11:25.269984+00:00",
   "gold_signal": {
