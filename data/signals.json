@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T19:08:36.684853+00:00",
+  "updated": "2026-06-25T19:41:31.115834+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -551,73 +551,73 @@
     "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.89,
-      "delta_pct": 1.4,
+      "value": 19.12,
+      "delta_pct": 2.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7382.98,
-      "delta_pct": 0.3,
+      "value": 7347.91,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4052.7,
-      "delta_pct": 1.6,
+      "value": 4049.6,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.32,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 101.39,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.149,
-      "delta_pct": 3.5,
+      "value": 6.139,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.38,
-      "delta_bp": -7.1,
+      "value": 4.392,
+      "delta_bp": -5.9,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.682,
-      "delta_bp": 2.4,
+      "value": 3.68,
+      "delta_bp": 2.2,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.49,
-      "delta_pct": 1.6,
+      "value": 72.22,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59608.0,
-      "delta_pct": -2.3,
-      "direction": "flat",
+      "value": 59274.0,
+      "delta_pct": -2.8,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 69.8,
-      "delta_bp": -9.5,
+      "value": 71.2,
+      "delta_bp": -8.1,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-25T16:12:29.560255+00:00"
+    "updated": "2026-06-25T19:41:31.115834+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 6.75
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.58
+        "score": 7.2
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
         "score": 6.42
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.35
       }
     ],
-    "updated": "2026-06-25T16:12:29.560255+00:00"
+    "updated": "2026-06-25T19:41:31.115834+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-25T16:12:29.560255+00:00"
+    "updated": "2026-06-25T19:41:31.115834+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Dallas Fed trimmed mean PCE price index +2.8% vs +2.4% prior"
+      "UN shipping agency says it will pause Hormuz evacuation plan"
     ],
-    "updated": "2026-06-25T16:12:29.560255+00:00"
+    "updated": "2026-06-25T19:41:31.115834+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
