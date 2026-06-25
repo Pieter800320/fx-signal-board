@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T19:41:31.115834+00:00",
+  "updated": "2026-06-25T21:19:24.237710+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 19.12,
-      "delta_pct": 2.6,
+      "value": 18.89,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7347.91,
-      "delta_pct": -0.1,
+      "value": 7357.49,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4049.6,
-      "delta_pct": 1.5,
+      "value": 4041.6,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.39,
+      "value": 101.46,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.139,
-      "delta_pct": 3.3,
+      "value": 6.1305,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.22,
-      "delta_pct": 2.7,
+      "value": 71.47,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59274.0,
-      "delta_pct": -2.8,
-      "direction": "down",
+      "value": 59488.0,
+      "delta_pct": -2.5,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-25T19:41:31.115834+00:00"
+    "updated": "2026-06-25T21:19:24.237710+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.35
       }
     ],
-    "updated": "2026-06-25T19:41:31.115834+00:00"
+    "updated": "2026-06-25T21:19:24.237710+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-25T19:41:31.115834+00:00"
+    "updated": "2026-06-25T21:19:24.237710+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "UN shipping agency says it will pause Hormuz evacuation plan"
+      "Economic and event calendar in Asia Friday, June 26, 2026 - Japan inflation sneak peek"
     ],
-    "updated": "2026-06-25T19:41:31.115834+00:00"
+    "updated": "2026-06-25T21:19:24.237710+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
