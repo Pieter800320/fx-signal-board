@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T21:19:24.237710+00:00",
+  "updated": "2026-06-25T23:04:36.180096+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4041.6,
-      "delta_pct": 1.3,
+      "value": 4037.7,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.46,
+      "value": 101.44,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1305,
-      "delta_pct": 3.2,
+      "value": 6.121,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59488.0,
-      "delta_pct": -2.5,
+      "value": 59811.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-25T21:19:24.237710+00:00"
+    "updated": "2026-06-25T23:04:36.180096+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.35
       }
     ],
-    "updated": "2026-06-25T21:19:24.237710+00:00"
+    "updated": "2026-06-25T23:04:36.180096+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-25T21:19:24.237710+00:00"
+    "updated": "2026-06-25T23:04:36.180096+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Economic and event calendar in Asia Friday, June 26, 2026 - Japan inflation sneak peek"
+      "Polestar shut out of US market from 2027 as China tech ban claims Geely-linked brand"
     ],
-    "updated": "2026-06-25T21:19:24.237710+00:00"
+    "updated": "2026-06-25T23:04:36.180096+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
