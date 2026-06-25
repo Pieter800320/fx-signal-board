@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-25T15:43:33.107206+00:00",
+  "updated": "2026-06-25T16:12:29.560255+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -544,101 +544,101 @@
     "score": 6.7,
     "signals": 1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.07,
-      "delta_pct": -3.0,
+      "value": 18.89,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7358.22,
-      "delta_pct": -0.1,
+      "value": 7382.98,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3994.8,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 4052.7,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.72,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 101.32,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.088,
-      "delta_pct": 2.4,
+      "value": 6.149,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.451,
-      "delta_bp": -1.2,
-      "direction": "flat",
+      "value": 4.38,
+      "delta_bp": -7.1,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.658,
-      "delta_bp": 1.1,
-      "direction": "flat",
+      "value": 3.682,
+      "delta_bp": 2.4,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.8,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 71.49,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61132.0,
-      "delta_pct": 0.2,
+      "value": 59608.0,
+      "delta_pct": -2.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.3,
-      "delta_bp": -2.3,
-      "direction": "flat",
+      "value": 69.8,
+      "delta_bp": -9.5,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-25T12:09:48.702193+00:00"
+    "updated": "2026-06-25T16:12:29.560255+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 7.47
-      },
-      {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.3
+        "score": 6.75
       },
       {
-        "pair": "EURJPY",
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.58
+      },
+      {
+        "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.97
+        "score": 6.42
       }
     ],
-    "updated": "2026-06-25T12:09:48.702193+00:00"
+    "updated": "2026-06-25T16:12:29.560255+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-25T12:09:48.702193+00:00"
+    "updated": "2026-06-25T16:12:29.560255+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Oman reaffirms that future arrangements for Strait of Hormuz do not involve tolls"
+      "Dallas Fed trimmed mean PCE price index +2.8% vs +2.4% prior"
     ],
-    "updated": "2026-06-25T12:09:48.702193+00:00"
+    "updated": "2026-06-25T16:12:29.560255+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
