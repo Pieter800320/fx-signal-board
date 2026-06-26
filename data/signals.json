@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T15:28:19.167446+00:00",
+  "updated": "2026-06-26T16:04:00.413666+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -541,104 +541,99 @@
   "regime_w1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 7.5,
+    "score": 10.0,
     "signals": 2,
-    "total": 4,
+    "total": 2,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 5,
+    "total": 3,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 20.48,
-      "delta_pct": 8.4,
-      "direction": "up",
+      "value": 18.75,
+      "delta_pct": -0.7,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7315.69,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 7379.45,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4070.5,
-      "delta_pct": 1.0,
+      "value": 4102.0,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.09,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 101.26,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1645,
-      "delta_pct": 1.5,
+      "value": 6.209,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.396,
-      "delta_bp": -5.5,
+      "value": 4.372,
+      "delta_bp": -7.9,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.665,
-      "delta_bp": 0.7,
+      "value": 3.663,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.56,
-      "delta_pct": -3.3,
+      "value": 69.4,
+      "delta_pct": -3.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59496.0,
-      "delta_pct": -0.4,
+      "value": 60320.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 73.1,
-      "delta_bp": -6.2,
+      "value": 70.9,
+      "delta_bp": -8.4,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-26T13:52:37.448731+00:00"
+    "updated": "2026-06-26T16:04:00.413666+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 6.28
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.18
-      },
-      {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.12
+        "score": 6.5
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 4.6
       }
     ],
-    "updated": "2026-06-26T13:52:37.448731+00:00"
+    "updated": "2026-06-26T16:04:00.413666+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +688,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-26T13:52:37.448731+00:00"
+    "updated": "2026-06-26T16:04:00.413666+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-26T01:56:51.260196+00:00"
+    "generated_at": "2026-06-26T16:04:22.383772+00:00"
   },
   "breaking": {
     "headlines": [
-      "UAE sends phone alert on missile threat"
+      "The UAE says early warning on missile was a 'technical malfunction'"
     ],
-    "updated": "2026-06-26T13:52:37.448731+00:00"
+    "updated": "2026-06-26T16:04:00.413666+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
