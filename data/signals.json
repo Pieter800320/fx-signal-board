@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-26T21:10:24.081017+00:00",
+  "updated": "2026-06-26T22:56:58.278099+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59662.0,
-      "delta_pct": -0.1,
+      "value": 59990.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-26T21:10:24.081017+00:00"
+    "updated": "2026-06-26T22:56:58.278099+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.53
       }
     ],
-    "updated": "2026-06-26T21:10:24.081017+00:00"
+    "updated": "2026-06-26T22:56:58.278099+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-26T21:10:24.081017+00:00"
+    "updated": "2026-06-26T22:56:58.278099+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Rubio:  Framework raises hopes for peace, but major obstacles remain"
+      "investingLive Americas FX news wrap 26 Jun: Greenback ends mixed, still higher for week"
     ],
-    "updated": "2026-06-26T21:10:24.081017+00:00"
+    "updated": "2026-06-26T22:56:58.278099+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
