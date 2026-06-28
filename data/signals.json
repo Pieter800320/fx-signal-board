@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T20:47:46.650963+00:00",
+  "updated": "2026-06-28T22:02:19.246691+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59600.0,
-      "delta_pct": -0.6,
+      "value": 59536.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-28T20:47:46.650963+00:00"
+    "updated": "2026-06-28T22:02:19.246691+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.53
       }
     ],
-    "updated": "2026-06-28T20:47:46.650963+00:00"
+    "updated": "2026-06-28T22:02:19.246691+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-28T20:47:46.650963+00:00"
+    "updated": "2026-06-28T22:02:19.246691+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Two revealing macro quotes from the FedEx earnings call"
+      "Economic and event calendar in Asia 29 June 2026 - data due from Japan"
     ],
-    "updated": "2026-06-28T20:47:46.650963+00:00"
+    "updated": "2026-06-28T22:02:19.246691+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
@@ -713,5 +713,9 @@
     "h4_confidence": "Low",
     "h1_confirmed": false,
     "updated": "2026-06-26T20:49:06.215765+00:00"
+  },
+  "week_ahead": {
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "generated_at": "2026-06-28T22:02:19.246691+00:00"
   }
 }
