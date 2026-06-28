@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-28T22:02:19.246691+00:00",
+  "updated": "2026-06-28T22:48:57.500047+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -541,17 +541,17 @@
   "regime_w1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
+    "score": 10.0,
+    "signals": 2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4096.3,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 4075.0,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.36,
-      "delta_pct": -0.1,
+      "value": 101.37,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.207,
-      "delta_pct": 2.2,
+      "value": 6.1935,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.23,
-      "delta_pct": -3.7,
-      "direction": "down",
+      "value": 70.16,
+      "delta_pct": 1.3,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59536.0,
-      "delta_pct": -0.7,
+      "value": 59090.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-28T22:02:19.246691+00:00"
+    "updated": "2026-06-28T22:48:57.500047+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,7 +625,7 @@
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 7.28
+        "score": 7.08
       },
       {
         "pair": "NZDUSD",
@@ -638,7 +638,7 @@
         "score": 6.53
       }
     ],
-    "updated": "2026-06-28T22:02:19.246691+00:00"
+    "updated": "2026-06-28T22:48:57.500047+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-28T22:02:19.246691+00:00"
+    "updated": "2026-06-28T22:48:57.500047+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-28T10:17:46.037445+00:00"
+    "generated_at": "2026-06-28T22:49:19.007031+00:00"
   },
   "breaking": {
     "headlines": [
       "Economic and event calendar in Asia 29 June 2026 - data due from Japan"
     ],
-    "updated": "2026-06-28T22:02:19.246691+00:00"
+    "updated": "2026-06-28T22:48:57.500047+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
@@ -716,6 +716,6 @@
   },
   "week_ahead": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-28T22:02:19.246691+00:00"
+    "generated_at": "2026-06-28T22:48:57.500047+00:00"
   }
 }
