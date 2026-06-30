@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T11:48:28.511928+00:00",
+  "updated": "2026-06-30T12:02:52.504109+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,19 +544,19 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.63,
-      "delta_pct": -0.1,
+      "value": 17.39,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,9 +567,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4031.7,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 4045.1,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.229,
-      "delta_pct": 2.2,
+      "value": 6.258,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 70.66,
-      "delta_pct": -0.1,
+      "value": 71.07,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59200.0,
-      "delta_pct": -1.6,
+      "value": 58974.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-30T09:27:34.505962+00:00"
+    "updated": "2026-06-30T12:02:52.504109+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 7.6
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 7.45
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.88
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.42
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 6.98
+        "score": 6.5
       }
     ],
-    "updated": "2026-06-30T09:27:34.505962+00:00"
+    "updated": "2026-06-30T12:02:52.504109+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-30T09:27:34.505962+00:00"
+    "updated": "2026-06-30T12:02:52.504109+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Italy inflation only marginally lower in June as services inflation cool a little"
+      "Germany June preliminary CPI +2.3% vs +2.6% y/y expected"
     ],
-    "updated": "2026-06-30T09:27:34.505962+00:00"
+    "updated": "2026-06-30T12:02:52.504109+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
