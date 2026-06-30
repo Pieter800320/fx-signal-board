@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T21:20:28.790429+00:00",
+  "updated": "2026-06-30T23:00:33.932259+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4021.8,
-      "delta_pct": -0.0,
+      "value": 4026.2,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.247,
-      "delta_pct": 2.5,
+      "value": 6.254,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 70.03,
-      "delta_pct": -1.0,
+      "value": 69.92,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 58502.0,
+      "value": 58509.0,
       "delta_pct": -2.7,
       "direction": "down",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-30T21:20:28.790429+00:00"
+    "updated": "2026-06-30T23:00:33.932259+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 5.97
       }
     ],
-    "updated": "2026-06-30T21:20:28.790429+00:00"
+    "updated": "2026-06-30T23:00:33.932259+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-30T21:20:28.790429+00:00"
+    "updated": "2026-06-30T23:00:33.932259+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "US VP Vance says ready to drop bombs on Iran again"
+      "Politico reports that US is expected to remove the export ban on Fable 'tonight'"
     ],
-    "updated": "2026-06-30T21:20:28.790429+00:00"
+    "updated": "2026-06-30T23:00:33.932259+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
