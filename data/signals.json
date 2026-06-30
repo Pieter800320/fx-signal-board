@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T19:00:15.829970+00:00",
+  "updated": "2026-06-30T19:26:21.579429+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,85 +539,85 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
-  },
-  "macro": {
-    "label": "Mixed",
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
     "signals": 0,
     "total": 2,
-    "confidence": "Neutral",
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-On",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.78,
-      "delta_pct": -4.9,
-      "direction": "flat",
+      "value": 16.45,
+      "delta_pct": -6.8,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7489.55,
-      "delta_pct": 0.7,
+      "value": 7504.13,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4043.0,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 4038.7,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.21,
+      "value": 101.18,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2595,
+      "value": 6.2605,
       "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.4,
-      "delta_bp": 2.8,
-      "direction": "flat",
+      "value": 4.418,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.737,
-      "delta_bp": 7.4,
+      "value": 3.732,
+      "delta_bp": 6.9,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.8,
-      "delta_pct": -1.3,
+      "value": 69.94,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 58382.0,
-      "delta_pct": -2.9,
+      "value": 58507.0,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 66.3,
-      "delta_bp": -4.6,
-      "direction": "down",
+      "value": 68.6,
+      "delta_bp": -2.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-30T16:12:58.135975+00:00"
+    "updated": "2026-06-30T19:26:21.579429+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.42
+        "score": 6.88
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.88
+        "score": 6.42
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 4.38
+        "score": 6.05
       }
     ],
-    "updated": "2026-06-30T16:12:58.135975+00:00"
+    "updated": "2026-06-30T19:26:21.579429+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-30T16:12:58.135975+00:00"
+    "updated": "2026-06-30T19:26:21.579429+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-30T05:59:07.812559+00:00"
+    "generated_at": "2026-06-30T19:26:43.571940+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Supreme Court justice Samuel Alito is retiring - (Update NPR retracts the story)"
+      "Canadian GDP off to a strong start in Q2 but trade uncertainty continues - RBC"
     ],
-    "updated": "2026-06-30T16:12:58.135975+00:00"
+    "updated": "2026-06-30T19:26:21.579429+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
