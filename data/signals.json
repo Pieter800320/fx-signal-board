@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-29T22:43:49.251186+00:00",
+  "updated": "2026-06-30T01:55:00.022227+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4028.2,
-      "delta_pct": -1.2,
+      "value": 3981.5,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.11,
-      "delta_pct": -0.2,
+      "value": 101.26,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.173,
-      "delta_pct": 0.5,
+      "value": 6.16,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 70.37,
+      "value": 70.33,
       "delta_pct": 1.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60301.0,
-      "delta_pct": 1.3,
+      "value": 59817.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-29T22:43:49.251186+00:00"
+    "updated": "2026-06-30T01:55:00.022227+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 6.9
       }
     ],
-    "updated": "2026-06-29T22:43:49.251186+00:00"
+    "updated": "2026-06-30T01:55:00.022227+00:00"
   },
   "calendar": {
     "events": [
@@ -693,11 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-29T22:43:49.251186+00:00"
-  },
-  "week_ahead": {
-    "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-28T22:48:57.500047+00:00"
+    "updated": "2026-06-30T01:55:00.022227+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -705,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Iran's President on Trump: \"Unreasonable boasting and unfounded threats\""
+      "China June Manufacturing PMI 50.3 (expected 50.1) Services 50.2 (49.9)"
     ],
-    "updated": "2026-06-29T22:43:49.251186+00:00"
+    "updated": "2026-06-30T01:55:00.022227+00:00"
   },
   "last_alert": "2026-06-24T11:51:05.578462+00:00",
   "gold_signal": {
