@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T21:00:55.715437+00:00",
+  "updated": "2026-06-30T21:20:28.790429+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,14 +544,14 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
-    "stable": false
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -561,26 +561,26 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7504.13,
-      "delta_pct": 0.9,
+      "value": 7499.36,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4038.7,
-      "delta_pct": 0.4,
+      "value": 4021.8,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.18,
+      "value": 101.17,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2605,
-      "delta_pct": 2.7,
+      "value": 6.247,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.94,
-      "delta_pct": -1.1,
+      "value": 70.03,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 58507.0,
+      "value": 58502.0,
       "delta_pct": -2.7,
       "direction": "down",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-06-30T19:26:21.579429+00:00"
+    "updated": "2026-06-30T21:20:28.790429+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.88
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 6.42
+        "score": 6.65
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.05
+        "score": 6.22
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 5.97
       }
     ],
-    "updated": "2026-06-30T19:26:21.579429+00:00"
+    "updated": "2026-06-30T21:20:28.790429+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-06-30T19:26:21.579429+00:00"
+    "updated": "2026-06-30T21:20:28.790429+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Canadian GDP off to a strong start in Q2 but trade uncertainty continues - RBC"
+      "US VP Vance says ready to drop bombs on Iran again"
     ],
-    "updated": "2026-06-30T19:26:21.579429+00:00"
+    "updated": "2026-06-30T21:20:28.790429+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
