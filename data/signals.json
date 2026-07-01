@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T21:14:02.249779+00:00",
+  "updated": "2026-07-01T22:58:55.312425+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4044.6,
-      "delta_pct": 0.5,
+      "value": 4055.4,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.156,
-      "delta_pct": -0.6,
+      "value": 6.1605,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.09,
-      "delta_pct": -2.0,
+      "value": 68.06,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60333.0,
-      "delta_pct": 3.0,
+      "value": 60416.0,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT accelerated by ECB rate hike defense and dollar strength headlines. USDJPY LONG supported by yen weakness and dollar strength reports.",
-    "updated": "2026-07-01T21:14:02.249779+00:00"
+    "text": "Dollar Climbs on Month and Quarter End Demand supports USDJPY LONG and GBPJPY LONG. Dollar Moves Lower as Equity Markets Strengthen conflicts with these USD longs.",
+    "updated": "2026-07-01T22:58:55.312425+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports long setup.\n\nEURUSD SHORT: US 10Y strength confirms USD bid, validates short.\n\nUSDJPY LONG: Rising US 10Y supports both USD and JPY bids.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports setup.\n\nEURUSD SHORT: US 10Y rise confirms USD strength, supports setup.\n\nUSDJPY LONG: US 10Y rise supports USD bid, confirms setup.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-07-01T21:14:02.249779+00:00"
+    "updated": "2026-07-01T22:58:55.312425+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T21:14:02.249779+00:00"
+    "updated": "2026-07-01T22:58:55.312425+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "USMCA: US did not agree to renew in current form",
-      "Dollar supported by Euro and Yen weakness",
-      "BofA says investors should stay long USD into Q3"
+      "Dollar supported by Euro and Yen weakness amid month-end demand",
+      "Europe's central bank defends rate hike to combat inflation pressures",
+      "New Zealand building permits collapse 4% month-over-month, down sharply"
     ],
-    "updated": "2026-07-01T21:14:02.249779+00:00"
+    "updated": "2026-07-01T22:58:55.312425+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
