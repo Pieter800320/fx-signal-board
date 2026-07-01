@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T19:02:57.575661+00:00",
+  "updated": "2026-07-01T19:25:27.149348+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.04,
-      "delta_pct": -2.5,
+      "value": 16.27,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7519.1,
-      "delta_pct": 0.3,
+      "value": 7501.3,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4099.0,
-      "delta_pct": 1.9,
+      "value": 4079.6,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.29,
-      "delta_pct": 0.1,
+      "value": 101.39,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1975,
-      "delta_pct": 0.1,
+      "value": 6.175,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.457,
-      "delta_bp": 8.5,
+      "value": 4.475,
+      "delta_bp": 10.3,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.715,
-      "delta_bp": 5.2,
+      "value": 3.7,
+      "delta_bp": 3.7,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.08,
-      "delta_pct": -2.0,
+      "value": 68.29,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 59927.0,
-      "delta_pct": 2.3,
-      "direction": "flat",
+      "value": 60154.0,
+      "delta_pct": 2.7,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 74.2,
-      "delta_bp": 3.3,
+      "value": 77.5,
+      "delta_bp": 6.6,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG at risk. Dollar Moves Lower as Equity Markets Strengthen contradicts dollar strength needed for long positioning.",
-    "updated": "2026-07-01T16:22:56.472766+00:00"
+    "text": "EURUSD SHORT conflicted: Dollar strength headlines (month/quarter-end demand, BofA long USD) support EUR weakness but Iran tensions and oil decline could shift risk sentiment.\n\nUSDJPY LONG supported: Dollar strength headlines align with setup.\n\nGBPJ",
+    "updated": "2026-07-01T19:25:27.149348+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: US 10Y surge confirms USD strength bias today.\n\nAUDUSD SHORT: Rising yields support risk-off USD bid thesis.\n\nUSDJPY LONG: Higher rates challenge BoJ hold stance divergence.",
+    "text": "EURUSD SHORT: US 10Y rising strongly confirms USD bid thesis.\n\nGBPJPY LONG: Risk-off regime challenges carry trade despite JPY offered.\n\nUSDJPY LONG: US 10Y strength and JPY weakness mutually reinforce.",
     "top": [
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.83
+        "score": 7.05
       },
       {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 6.55
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 6.68
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.38
+        "score": 6.28
       }
     ],
-    "updated": "2026-07-01T16:22:56.472766+00:00"
+    "updated": "2026-07-01T19:25:27.149348+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T16:22:56.472766+00:00"
+    "updated": "2026-07-01T19:25:27.149348+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US ISM Manufacturing PMI June 53.3 misses 54.0 estimate significantly",
-      "ECB's Lagarde defends rate hike to combat inflation pressures",
-      "BofA recommends staying long USD into Q3 2024"
+      "USMCA renewal uncertain as Trump decides not to renew current form",
+      "Dollar climbs on month and quarter-end demand strength",
+      "BofA recommends staying long USD into Q3"
     ],
-    "updated": "2026-07-01T16:22:56.472766+00:00"
+    "updated": "2026-07-01T19:25:27.149348+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
