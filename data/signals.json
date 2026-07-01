@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T02:00:50.211535+00:00",
+  "updated": "2026-07-01T08:00:00.757252+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.45,
-      "delta_pct": -6.8,
-      "direction": "down",
+      "value": 17.11,
+      "delta_pct": 4.0,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3991.7,
-      "delta_pct": -0.8,
+      "value": 3984.4,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.31,
-      "delta_pct": 0.1,
+      "value": 101.35,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1735,
-      "delta_pct": 1.2,
-      "direction": "up",
+      "value": 6.1555,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.418,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.372,
+      "delta_bp": -2.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.732,
-      "delta_bp": 6.9,
-      "direction": "up",
+      "value": 3.663,
+      "delta_bp": -1.7,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.8,
-      "delta_pct": -1.3,
-      "direction": "down",
+      "value": 69.4,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 58687.0,
-      "delta_pct": -2.4,
+      "value": 58649.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 68.6,
-      "delta_bp": -2.3,
+      "value": 70.9,
+      "delta_bp": -0.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-07-01T02:00:50.211535+00:00"
+    "text": "Dollar Climbs on Month- and Quarter-End Demand supports USDJPY and USDCAD longs. Dollar Moves Lower conflicts with all three setups. BofA bullish USD supports positions.",
+    "updated": "2026-07-01T08:00:00.757252+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "text": "USDJPY LONG: Gold falling confirms USD strength bias today.\n\nGBPUPY LONG: S&P 500 rising challenges risk-off regime signal.\n\nUSDCAD LONG: Gold falling confirms safe-haven USD demand thesis.",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.65
+        "score": 6.05
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.22
+        "score": 5.83
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.97
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-01T02:00:50.211535+00:00"
+    "updated": "2026-07-01T08:00:00.757252+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T02:00:50.211535+00:00"
+    "updated": "2026-07-01T08:00:00.757252+00:00"
   },
   "deep_analysis": {
-    "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "generated_at": "2026-06-30T19:26:43.571940+00:00"
+    "text": "Unavailable (HTTP Error 404: Not Found)",
+    "generated_at": "2026-07-01T08:00:39.541242+00:00"
   },
   "breaking": {
     "headlines": [
-      "RatingDog PMI caps China's strongest quarter for manufacturing since 2020"
+      "Dollar climbs on month- and quarter-end demand",
+      "BofA says investors should stay long USD into Q3",
+      "Spain manufacturing slips back into contraction in June"
     ],
-    "updated": "2026-07-01T02:00:50.211535+00:00"
+    "updated": "2026-07-01T08:00:00.757252+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
