@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T08:52:18.995332+00:00",
+  "updated": "2026-07-01T11:22:54.647036+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,19 +544,19 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.11,
-      "delta_pct": 4.0,
+      "value": 16.64,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3984.4,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 4026.6,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.35,
+      "value": 101.38,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1555,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 6.1415,
+      "delta_pct": -0.8,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.4,
-      "delta_pct": -0.1,
+      "value": 68.98,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 58649.0,
-      "delta_pct": 0.2,
+      "value": 58606.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Climbs on Month- and Quarter-End Demand supports USDJPY and USDCAD longs. Dollar Moves Lower conflicts with all three setups. BofA bullish USD supports positions.",
-    "updated": "2026-07-01T08:00:00.757252+00:00"
+    "text": "Dollar strength headlines support USDJPY LONG and AUDUSD SHORT. UK manufacturing miss slightly negative for GBPJPY but not material. No direct conflicts.",
+    "updated": "2026-07-01T11:22:54.647036+00:00"
   },
   "ranked": {
-    "text": "USDJPY LONG: Gold falling confirms USD strength bias today.\n\nGBPUPY LONG: S&P 500 rising challenges risk-off regime signal.\n\nUSDCAD LONG: Gold falling confirms safe-haven USD demand thesis.",
+    "text": "AUDUSD SHORT: Macro confirms setup; copper collapse weakens Australian commodity currency demand.\n\nUSDJPY LONG: Macro confirms setup; risk off regime strengthens safe haven yen demand.\n\nGBPJPY LONG: Macro challenges setup; rising S&P contradicts risk off positioning for carry unwind.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bear",
+        "score": 6.35
+      },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.05
+        "score": 5.85
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.83
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.38
+        "score": 5.75
       }
     ],
-    "updated": "2026-07-01T08:00:00.757252+00:00"
+    "updated": "2026-07-01T11:22:54.647036+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T08:00:00.757252+00:00"
+    "updated": "2026-07-01T11:22:54.647036+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar climbs on month- and quarter-end demand",
-      "BofA says investors should stay long USD into Q3",
-      "Spain manufacturing slips back into contraction in June"
+      "ECB defends rate hike as Eurozone inflation eases in June",
+      "Dollar climbs on month and quarter-end demand",
+      "BofA says investors should stay long USD into Q3"
     ],
-    "updated": "2026-07-01T08:00:00.757252+00:00"
+    "updated": "2026-07-01T11:22:54.647036+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
