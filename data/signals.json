@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T20:51:25.858507+00:00",
+  "updated": "2026-07-01T21:14:02.249779+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.27,
-      "delta_pct": -1.1,
+      "value": 16.59,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7501.3,
-      "delta_pct": 0.0,
+      "value": 7483.23,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4079.6,
-      "delta_pct": 1.4,
+      "value": 4044.6,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.39,
+      "value": 101.41,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.175,
-      "delta_pct": -0.3,
+      "value": 6.156,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.29,
-      "delta_pct": -1.7,
+      "value": 68.09,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60154.0,
-      "delta_pct": 2.7,
+      "value": 60333.0,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT conflicted: Dollar strength headlines (month/quarter-end demand, BofA long USD) support EUR weakness but Iran tensions and oil decline could shift risk sentiment.\n\nUSDJPY LONG supported: Dollar strength headlines align with setup.\n\nGBPJ",
-    "updated": "2026-07-01T19:25:27.149348+00:00"
+    "text": "EURUSD SHORT accelerated by ECB rate hike defense and dollar strength headlines. USDJPY LONG supported by yen weakness and dollar strength reports.",
+    "updated": "2026-07-01T21:14:02.249779+00:00"
   },
   "ranked": {
-    "text": "EURUSD SHORT: US 10Y rising strongly confirms USD bid thesis.\n\nGBPJPY LONG: Risk-off regime challenges carry trade despite JPY offered.\n\nUSDJPY LONG: US 10Y strength and JPY weakness mutually reinforce.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports long setup.\n\nEURUSD SHORT: US 10Y strength confirms USD bid, validates short.\n\nUSDJPY LONG: Rising US 10Y supports both USD and JPY bids.",
     "top": [
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 7.12
+      },
       {
         "pair": "EURUSD",
         "direction": "bear",
         "score": 7.05
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 6.68
       },
       {
         "pair": "USDJPY",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-07-01T19:25:27.149348+00:00"
+    "updated": "2026-07-01T21:14:02.249779+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T19:25:27.149348+00:00"
+    "updated": "2026-07-01T21:14:02.249779+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-01T08:00:39.541242+00:00"
+    "generated_at": "2026-07-01T21:14:29.739582+00:00"
   },
   "breaking": {
     "headlines": [
-      "USMCA renewal uncertain as Trump decides not to renew current form",
-      "Dollar climbs on month and quarter-end demand strength",
-      "BofA recommends staying long USD into Q3"
+      "USMCA: US did not agree to renew in current form",
+      "Dollar supported by Euro and Yen weakness",
+      "BofA says investors should stay long USD into Q3"
     ],
-    "updated": "2026-07-01T19:25:27.149348+00:00"
+    "updated": "2026-07-01T21:14:02.249779+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
