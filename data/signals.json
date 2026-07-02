@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T20:24:03.231236+00:00",
+  "updated": "2026-07-02T20:48:09.794901+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -548,22 +548,22 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.57,
-      "delta_pct": -0.1,
+      "value": 16.15,
+      "delta_pct": -2.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7453.29,
-      "delta_pct": -0.4,
-      "direction": "down",
+      "value": 7483.24,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
@@ -573,14 +573,14 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.85,
+      "value": 100.86,
       "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.169,
-      "delta_pct": 0.7,
+      "value": 6.1755,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.56,
-      "delta_pct": -0.0,
+      "value": 68.48,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61662.0,
-      "delta_pct": 2.8,
-      "direction": "up",
+      "value": 61324.0,
+      "delta_pct": 2.2,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-02T19:03:24.848907+00:00"
+    "text": "US dollar slides as non-farm payrolls miss weakens USD, which directly conflicts with NZDJPY and CADJPY short setups requiring USD strength.",
+    "updated": "2026-07-02T20:48:09.794901+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising and equity weakness confirm JPY bid thesis.\n\nCADJPY SHORT: Equity weakness supports JPY bid despite modest momentum divergence.",
+    "text": "NZDJPY SHORT: Gold bid challenges short thesis via safe haven demand.\n\nCADJPY SHORT: US yields rising challenges short via carry unwind risk.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 4.83
+        "score": 4.73
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 4.23
+        "score": 4.13
       }
     ],
-    "updated": "2026-07-02T19:03:24.848907+00:00"
+    "updated": "2026-07-02T20:48:09.794901+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T19:03:24.848907+00:00"
+    "updated": "2026-07-02T20:48:09.794901+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June non-farm payrolls +57K vs +110K expected, misses significantly",
-      "BOE Mann: Loosening financial conditions since June important for rate vote",
-      "US bond yields tick up on hawkish Warsh rhetoric; dollar rises"
+      "US dollar slides as non-farm payrolls miss expectations",
+      "BOE Mann: Financial conditions loosening since June impacts rate decision",
+      "US bond yields rise on hawkish Warsh rhetoric before payrolls"
     ],
-    "updated": "2026-07-02T19:03:24.848907+00:00"
+    "updated": "2026-07-02T20:48:09.794901+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
