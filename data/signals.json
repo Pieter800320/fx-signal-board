@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T11:59:18.109936+00:00",
+  "updated": "2026-07-02T13:54:17.715719+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.53,
-      "delta_pct": -0.4,
+      "value": 16.08,
+      "delta_pct": -3.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7483.23,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7534.71,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4083.2,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4145.9,
+      "delta_pct": 1.9,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.11,
-      "delta_pct": -0.3,
+      "value": 100.73,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1505,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.2145,
+      "delta_pct": 1.5,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.372,
-      "delta_bp": -2.0,
-      "direction": "flat",
+      "value": 4.475,
+      "delta_bp": 10.3,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.663,
-      "delta_bp": -1.7,
+      "value": 3.658,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 67.27,
-      "delta_pct": -1.9,
+      "value": 67.87,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61259.0,
-      "delta_pct": 2.1,
-      "direction": "flat",
+      "value": 61815.0,
+      "delta_pct": 3.0,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 70.9,
-      "delta_bp": -0.3,
-      "direction": "flat",
+      "value": 81.7,
+      "delta_bp": 10.8,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG and CADJPY SHORT at risk. Yen sudden jump and BOJ rate hike expectations support yen strength, contradicting these setups.",
-    "updated": "2026-07-02T11:59:18.109936+00:00"
+    "text": "GBPJPY LONG at risk. US NFP miss 57K vs 110K expected weakens dollar, supports yen, undermining setup. CADJPY SHORT vulnerable to same dynamic.",
+    "updated": "2026-07-02T13:54:17.715719+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-off regime challenges setup despite strong ADX momentum.\n\nNZDJPY SHORT: Risk-off macro confirms weakness in commodity-linked currency pair.\n\nCADJPY SHORT: Oil decline strongly confirms CAD weakness thesis today.",
+    "text": "GBPJPY LONG: Macro confirms setup via dual positive drivers, US 10Y and equities.\n\nNZDJPY SHORT: Macro challenges setup as gold strength contradicts risk-off yen bid thesis.\n\nCADJPY SHORT: Macro partially challenges setup as oil weakness supports yen but weakens conviction.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.38
+        "score": 5.97
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 3.3
+        "score": 3.5
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 3.08
+        "score": 3.27
       }
     ],
-    "updated": "2026-07-02T11:59:18.109936+00:00"
+    "updated": "2026-07-02T13:54:17.715719+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T11:59:18.109936+00:00"
+    "updated": "2026-07-02T13:54:17.715719+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Yen jumps suddenly, dollar lags ahead of NFP data",
-      "BOJ member expects rate hike by end of year",
-      "Dollar rises with T-note yields, quarter-end demand supports"
+      "US June non-farm payrolls +57K vs +110K expected, misses badly",
+      "US bond yields tick up on hawkish Warsh rhetoric",
+      "Yen sees sudden jump, dollar lags ahead of NFP"
     ],
-    "updated": "2026-07-02T11:59:18.109936+00:00"
+    "updated": "2026-07-02T13:54:17.715719+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
