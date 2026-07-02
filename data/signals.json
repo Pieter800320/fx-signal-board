@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T11:39:50.940020+00:00",
+  "updated": "2026-07-02T11:59:18.109936+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.85,
-      "delta_pct": 1.6,
+      "value": 16.53,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4087.2,
-      "delta_pct": 0.5,
+      "value": 4083.2,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.01,
-      "delta_pct": -0.4,
+      "value": 101.11,
+      "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.156,
-      "delta_pct": 0.5,
+      "value": 6.1505,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.16,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 67.27,
+      "delta_pct": -1.9,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60413.0,
-      "delta_pct": 0.7,
+      "value": 61259.0,
+      "delta_pct": 2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Japan government economic panel member expects BOJ to raise rates again at end of the year. This supports JPY strength, accelerating GBPJPY LONG, EURJPY SHORT, and NZDJPY SHORT setups.",
-    "updated": "2026-07-02T08:36:36.737406+00:00"
+    "text": "GBPJPY LONG and CADJPY SHORT at risk. Yen sudden jump and BOJ rate hike expectations support yen strength, contradicting these setups.",
+    "updated": "2026-07-02T11:59:18.109936+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Mixed neutral macro confirms strong momentum continuation setup favorably.\n\nEURJPY SHORT: Mixed neutral macro challenges weak CMP signal and divergence.\n\nNZDJPY SHORT: Mixed neutral macro challenges minimal CSM divergence and weak setup.",
+    "text": "GBPJPY LONG: Risk-off regime challenges setup despite strong ADX momentum.\n\nNZDJPY SHORT: Risk-off macro confirms weakness in commodity-linked currency pair.\n\nCADJPY SHORT: Oil decline strongly confirms CAD weakness thesis today.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.85
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bear",
-        "score": 4.93
+        "score": 5.38
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 3.0
+        "score": 3.3
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 3.08
       }
     ],
-    "updated": "2026-07-02T08:36:36.737406+00:00"
+    "updated": "2026-07-02T11:59:18.109936+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T08:36:36.737406+00:00"
+    "updated": "2026-07-02T11:59:18.109936+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-01T21:14:29.739582+00:00"
+    "generated_at": "2026-07-02T11:59:44.764983+00:00"
   },
   "breaking": {
     "headlines": [
-      "US payrolls preview: June NFP seen slowing sharply to 110k after May's surge",
-      "Japan government economic panel member expects BOJ to raise rates again end of year",
-      "Dollar Rises With T-note Yields"
+      "Yen jumps suddenly, dollar lags ahead of NFP data",
+      "BOJ member expects rate hike by end of year",
+      "Dollar rises with T-note yields, quarter-end demand supports"
     ],
-    "updated": "2026-07-02T08:36:36.737406+00:00"
+    "updated": "2026-07-02T11:59:18.109936+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
