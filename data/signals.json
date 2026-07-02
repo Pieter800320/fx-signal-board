@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T01:54:34.863918+00:00",
+  "updated": "2026-07-02T05:45:15.106872+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,17 +539,17 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 2,
+    "total": 0,
     "confidence": "Neutral",
     "stable": true
   },
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4060.3,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 4067.7,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.37,
+      "value": 101.35,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1705,
-      "delta_pct": -0.4,
+      "value": 6.137,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.475,
-      "delta_bp": 10.3,
-      "direction": "up",
+      "value": 4.372,
+      "delta_bp": -2.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.7,
-      "delta_bp": 3.7,
-      "direction": "up",
+      "value": 3.663,
+      "delta_bp": -1.7,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 67.74,
-      "delta_pct": -2.5,
+      "value": 67.84,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60032.0,
-      "delta_pct": 2.5,
+      "value": 60552.0,
+      "delta_pct": 3.4,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 77.5,
-      "delta_bp": 6.6,
-      "direction": "up",
+      "value": 70.9,
+      "delta_bp": -0.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT invalidated. ECB defends recent rate hike supporting Euro strength against Dollar weakness narrative.",
-    "updated": "2026-07-02T01:54:34.863918+00:00"
+    "text": "USDJPY LONG supported by dollar strength headlines. EURUSD SHORT supported by euro weakness and ECB inflation concerns. GBPJPY LONG supported by yen weakness. No conflicts detected.",
+    "updated": "2026-07-02T05:45:15.106872+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness and GBP resilience setup.\n\nEURUSD SHORT: US 10Y rise confirms USD bid and euro weakness setup.\n\nUSDJPY LONG: US 10Y rise confirms USD bid but challenges JPY strength simultaneously.",
+    "text": "GBPJPY LONG: Risk-Off regime confirms safe-haven JPY demand strength.\n\nEURUSD SHORT: Mixed macro challenges setup, lacks directional conviction today.\n\nUSDJPY LONG: Risk-Off confirms JPY strength, but WTI weakness complicates.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.12
+        "score": 6.73
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.05
+        "score": 6.65
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.28
+        "score": 5.48
       }
     ],
-    "updated": "2026-07-02T01:54:34.863918+00:00"
+    "updated": "2026-07-02T05:45:15.106872+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T01:54:34.863918+00:00"
+    "updated": "2026-07-02T05:45:15.106872+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australia trade deficit blows out, AUD under pressure",
-      "New Zealand building permits fall 4% m/m, NZD weakens",
-      "BofA recommends staying long USD into Q3 2026"
+      "US payrolls preview: June NFP seen slowing sharply to 110k after May surge",
+      "Australia's trade blows out to big deficit versus surplus expected",
+      "Dollar rises with T-note yields on month- and quarter-end demand"
     ],
-    "updated": "2026-07-02T01:54:34.863918+00:00"
+    "updated": "2026-07-02T05:45:15.106872+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
