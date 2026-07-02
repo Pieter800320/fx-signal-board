@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T22:58:55.312425+00:00",
+  "updated": "2026-07-02T01:54:34.863918+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4055.4,
-      "delta_pct": 0.8,
+      "value": 4060.3,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.41,
-      "delta_pct": 0.2,
+      "value": 101.37,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1605,
-      "delta_pct": -0.5,
+      "value": 6.1705,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.06,
-      "delta_pct": -2.1,
+      "value": 67.74,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 60416.0,
-      "delta_pct": 3.2,
+      "value": 60032.0,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Climbs on Month and Quarter End Demand supports USDJPY LONG and GBPJPY LONG. Dollar Moves Lower as Equity Markets Strengthen conflicts with these USD longs.",
-    "updated": "2026-07-01T22:58:55.312425+00:00"
+    "text": "EURUSD SHORT invalidated. ECB defends recent rate hike supporting Euro strength against Dollar weakness narrative.",
+    "updated": "2026-07-02T01:54:34.863918+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports setup.\n\nEURUSD SHORT: US 10Y rise confirms USD strength, supports setup.\n\nUSDJPY LONG: US 10Y rise supports USD bid, confirms setup.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness and GBP resilience setup.\n\nEURUSD SHORT: US 10Y rise confirms USD bid and euro weakness setup.\n\nUSDJPY LONG: US 10Y rise confirms USD bid but challenges JPY strength simultaneously.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-07-01T22:58:55.312425+00:00"
+    "updated": "2026-07-02T01:54:34.863918+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-01T22:58:55.312425+00:00"
+    "updated": "2026-07-02T01:54:34.863918+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar supported by Euro and Yen weakness amid month-end demand",
-      "Europe's central bank defends rate hike to combat inflation pressures",
-      "New Zealand building permits collapse 4% month-over-month, down sharply"
+      "Australia trade deficit blows out, AUD under pressure",
+      "New Zealand building permits fall 4% m/m, NZD weakens",
+      "BofA recommends staying long USD into Q3 2026"
     ],
-    "updated": "2026-07-01T22:58:55.312425+00:00"
+    "updated": "2026-07-02T01:54:34.863918+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
