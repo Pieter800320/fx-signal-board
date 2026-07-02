@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T18:40:20.175227+00:00",
+  "updated": "2026-07-02T19:03:24.848907+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,90 +555,85 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.73,
-      "delta_pct": 0.8,
+      "value": 16.57,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7444.62,
-      "delta_pct": -0.5,
+      "value": 7453.29,
+      "delta_pct": -0.4,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4127.5,
-      "delta_pct": 1.5,
+      "value": 4136.1,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
+      "value": 100.85,
       "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1555,
-      "delta_pct": 0.5,
-      "direction": "flat",
+      "value": 6.169,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.481,
-      "delta_bp": 10.9,
+      "value": 4.485,
+      "delta_bp": 11.3,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.672,
-      "delta_bp": 0.9,
+      "value": 3.668,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.26,
-      "delta_pct": -0.5,
+      "value": 68.56,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61748.0,
-      "delta_pct": 2.9,
+      "value": 61662.0,
+      "delta_pct": 2.8,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 80.9,
-      "delta_bp": 10.0,
+      "value": 81.7,
+      "delta_bp": 10.8,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Yen sees sudden jump ahead of NFP conflicts with JPY SHORT setups. Weakening yen thesis undermined by reported strength. Monitor NFP result for continuation.",
-    "updated": "2026-07-02T17:31:43.405263+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-02T19:03:24.848907+00:00"
   },
   "ranked": {
-    "text": "EURJPY SHORT: Gold and equities weakness confirm JPY bid thesis strongly.\n\nNZDJPY SHORT: Gold strength supports short, but equity weakness signal conflicts.\n\nCADJPY SHORT: Momentum divergence challenges setup despite cross asset JPY support.",
+    "text": "NZDJPY SHORT: Gold rising and equity weakness confirm JPY bid thesis.\n\nCADJPY SHORT: Equity weakness supports JPY bid despite modest momentum divergence.",
     "top": [
-      {
-        "pair": "EURJPY",
-        "direction": "bear",
-        "score": 6.33
-      },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 5.12
+        "score": 4.83
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 4.67
+        "score": 4.23
       }
     ],
-    "updated": "2026-07-02T17:31:43.405263+00:00"
+    "updated": "2026-07-02T19:03:24.848907+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T17:31:43.405263+00:00"
+    "updated": "2026-07-02T19:03:24.848907+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June non-farm payrolls +57K vs +110K expected, massive miss",
-      "BOE Mann: Financial conditions loosening since June important for rate vote",
-      "US bond yields tick up on hawkish Warsh rhetoric post-payrolls"
+      "US June non-farm payrolls +57K vs +110K expected, misses significantly",
+      "BOE Mann: Loosening financial conditions since June important for rate vote",
+      "US bond yields tick up on hawkish Warsh rhetoric; dollar rises"
     ],
-    "updated": "2026-07-02T17:31:43.405263+00:00"
+    "updated": "2026-07-02T19:03:24.848907+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
