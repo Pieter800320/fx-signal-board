@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T15:57:27.951006+00:00",
+  "updated": "2026-07-02T17:31:43.405263+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,101 +544,101 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.54,
-      "delta_pct": -0.3,
+      "value": 16.73,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7468.01,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7444.62,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4140.4,
-      "delta_pct": 1.8,
+      "value": 4127.5,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.76,
-      "delta_pct": -0.6,
+      "value": 100.86,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.186,
-      "delta_pct": 1.0,
-      "direction": "up",
+      "value": 6.1555,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.453,
-      "delta_bp": 8.1,
+      "value": 4.481,
+      "delta_bp": 10.9,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.665,
-      "delta_bp": 0.2,
+      "value": 3.672,
+      "delta_bp": 0.9,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 67.48,
-      "delta_pct": -1.6,
-      "direction": "down",
+      "value": 68.26,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61522.0,
-      "delta_pct": 2.5,
+      "value": 61748.0,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 78.8,
-      "delta_bp": 7.9,
+      "value": 80.9,
+      "delta_bp": 10.0,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Yen sees sudden jump ahead of NFP could invalidate JPY shorts if yen strength persists post payrolls data release.",
-    "updated": "2026-07-02T15:57:27.951006+00:00"
+    "text": "Yen sees sudden jump ahead of NFP conflicts with JPY SHORT setups. Weakening yen thesis undermined by reported strength. Monitor NFP result for continuation.",
+    "updated": "2026-07-02T17:31:43.405263+00:00"
   },
   "ranked": {
-    "text": "EURJPY SHORT: Gold bid confirms JPY strength, macro validates setup.\n\nCADJPY SHORT: Oil weakness confirms CAD weakness, macro validates setup.\n\nNZDJPY SHORT: Gold bid confirms JPY strength, macro validates setup.",
+    "text": "EURJPY SHORT: Gold and equities weakness confirm JPY bid thesis strongly.\n\nNZDJPY SHORT: Gold strength supports short, but equity weakness signal conflicts.\n\nCADJPY SHORT: Momentum divergence challenges setup despite cross asset JPY support.",
     "top": [
       {
         "pair": "EURJPY",
         "direction": "bear",
-        "score": 5.93
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 4.88
+        "score": 6.33
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 4.73
+        "score": 5.12
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 4.67
       }
     ],
-    "updated": "2026-07-02T15:57:27.951006+00:00"
+    "updated": "2026-07-02T17:31:43.405263+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T15:57:27.951006+00:00"
+    "updated": "2026-07-02T17:31:43.405263+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June non-farm payrolls +57K vs +110K expected",
-      "US bond yields tick up on hawkish Warsh rhetoric",
-      "Yen sees sudden jump, dollar lags ahead of NFP"
+      "US June non-farm payrolls +57K vs +110K expected, massive miss",
+      "BOE Mann: Financial conditions loosening since June important for rate vote",
+      "US bond yields tick up on hawkish Warsh rhetoric post-payrolls"
     ],
-    "updated": "2026-07-02T15:57:27.951006+00:00"
+    "updated": "2026-07-02T17:31:43.405263+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
