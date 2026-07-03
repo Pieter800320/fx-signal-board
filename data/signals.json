@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T11:57:35.091010+00:00",
+  "updated": "2026-07-03T13:47:59.107475+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.99,
-      "delta_pct": -1.0,
+      "value": 15.86,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4197.6,
-      "delta_pct": 2.1,
+      "value": 4179.6,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.76,
-      "delta_pct": -0.1,
+      "value": 100.83,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2265,
-      "delta_pct": 1.8,
+      "value": 6.21,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.39,
-      "delta_pct": -0.4,
+      "value": 68.58,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61940.0,
-      "delta_pct": 0.7,
+      "value": 62081.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running pressures BOJ toward tightening, supporting JPY and conflicting with CADJPY SHORT and GBPJPY LONG setups.",
-    "updated": "2026-07-03T11:57:35.091010+00:00"
+    "text": "Japan wage hikes confirm persistent inflation pressures, supporting continued BOJ hawkishness. This strengthens JPY across the board, directly conflicting with CADJPY SHORT and GBPJPY LONG setups.",
+    "updated": "2026-07-03T13:47:59.107475+00:00"
   },
   "ranked": {
-    "text": "CADJPY SHORT: Gold rally confirms JPY strength; USD weakness supports short.\n\nGBPJPY LONG: Risk-off regime challenges GBP strength; JPY bid headwind.\n\nUSDCAD LONG: Risk-off favors CAD via commodity link; confirms setup.",
+    "text": "CADJPY SHORT: Gold bid confirms JPY strength, validates risk-off short thesis today.\n\nGBPJPY LONG: Mixed macro neutral contradicts risk-off positioning, lacks conviction driver.\n\nUSDCAD LONG: Risk-off regime challenges CAD strength, copper rise insufficient confirmation here.",
     "top": [
       {
         "pair": "CADJPY",
@@ -638,7 +638,7 @@
         "score": 3.2
       }
     ],
-    "updated": "2026-07-03T11:57:35.091010+00:00"
+    "updated": "2026-07-03T13:47:59.107475+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-03T11:57:35.091010+00:00"
+    "updated": "2026-07-03T13:47:59.107475+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-03T01:24:34.948124+00:00"
+    "generated_at": "2026-07-03T13:48:24.029425+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
-      "Germany June services PMI beats prelim, eases eurozone contraction concerns"
+      "Japan wage hikes confirmed to have topped 5% for a third year running",
+      "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
+      "Eurozone services contraction eases in June as cost pressures cool"
     ],
-    "updated": "2026-07-03T11:57:35.091010+00:00"
+    "updated": "2026-07-03T13:47:59.107475+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
