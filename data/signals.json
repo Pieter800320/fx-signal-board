@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T22:52:46.769385+00:00",
+  "updated": "2026-07-03T01:24:09.872421+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4135.6,
-      "delta_pct": 1.7,
+      "value": 4187.0,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
       "value": 100.85,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1755,
-      "delta_pct": 0.8,
+      "value": 6.2125,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.51,
-      "delta_pct": -0.1,
+      "value": 68.42,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61391.0,
-      "delta_pct": 2.3,
-      "direction": "flat",
+      "value": 61531.0,
+      "delta_pct": 2.5,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-02T22:52:46.769385+00:00"
+    "text": "NZ consumer confidence rebounds as inflation expectations reset lower supports NZDJPY SHORT. US dollar slides as non-farm payrolls miss conflicts with both SHORT setups.",
+    "updated": "2026-07-03T01:24:09.872421+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold bid confirms JPY strength, macro aligns setup.\n\nCADJPY SHORT: Rising yields challenge CAD weakness, macro conflicts setup.",
+    "text": "NZDJPY SHORT: Gold bid confirms JPY strength, supports short thesis.\n\nCADJPY SHORT: Rising yields challenge CAD weakness, weakens short case.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 4.13
       }
     ],
-    "updated": "2026-07-02T22:52:46.769385+00:00"
+    "updated": "2026-07-03T01:24:09.872421+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-02T22:52:46.769385+00:00"
+    "updated": "2026-07-03T01:24:09.872421+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-02T11:59:44.764983+00:00"
+    "generated_at": "2026-07-03T01:24:34.948124+00:00"
   },
   "breaking": {
     "headlines": [
-      "US dollar slides as non-farm payrolls miss expectations",
-      "BOE Mann: Financial conditions loosening important for rate vote",
-      "US bond yields tick up on hawkish Warsh rhetoric"
+      "US non-farm payrolls miss, dollar slides sharply lower",
+      "Japan services rebound but inflation hits four-year high",
+      "Australian services return to growth, confidence hits 2.5-year low"
     ],
-    "updated": "2026-07-02T22:52:46.769385+00:00"
+    "updated": "2026-07-03T01:24:09.872421+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
