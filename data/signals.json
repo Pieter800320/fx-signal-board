@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T20:19:14.664670+00:00",
+  "updated": "2026-07-03T20:48:58.298470+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -573,7 +573,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.84,
+      "value": 100.86,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62159.0,
-      "delta_pct": 1.1,
+      "value": 62800.0,
+      "delta_pct": 2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-03T18:55:33.868989+00:00"
+    "text": "Japan wage hikes topped 5% for third consecutive year supports JPY strength, conflicting with NZDJPY and AUDJPY short setups.",
+    "updated": "2026-07-03T20:48:58.298470+00:00"
   },
   "ranked": {
-    "text": "USDCAD LONG: Risk-off favors safe-haven USD, confirming setup despite weak score.",
+    "text": "NZDJPY SHORT: Gold rally confirms JPY bid thesis perfectly today.\n\nNZDUSD SHORT: Mixed macro neutral lacks directional conviction for shorts.\n\nAUDUSD SHORT: Risk-off regime supports AUD weakness but copper offsetting.",
     "top": [
       {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 4.03
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 5.03
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 4.8
+      },
+      {
+        "pair": "AUDUSD",
+        "direction": "bear",
+        "score": 4.7
       }
     ],
-    "updated": "2026-07-03T18:55:33.868989+00:00"
+    "updated": "2026-07-03T20:48:58.298470+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-03T18:55:33.868989+00:00"
+    "updated": "2026-07-03T20:48:58.298470+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -693,9 +703,9 @@
     "headlines": [
       "Japan wage hikes confirmed topped 5% for third consecutive year",
       "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
-      "Eurozone services contraction eases in June as cost pressures cool"
+      "Eurozone services contraction eases June as cost pressures cool"
     ],
-    "updated": "2026-07-03T18:55:33.868989+00:00"
+    "updated": "2026-07-03T20:48:58.298470+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
