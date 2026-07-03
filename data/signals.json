@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T08:15:27.211992+00:00",
+  "updated": "2026-07-03T08:41:30.777644+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,19 +544,19 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.15,
-      "delta_pct": -2.7,
+      "value": 15.92,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4187.4,
-      "delta_pct": 1.8,
+      "value": 4193.8,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.245,
-      "delta_pct": 2.1,
+      "value": 6.2275,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.06,
-      "delta_pct": 0.5,
+      "value": 68.35,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61678.0,
-      "delta_pct": 2.8,
-      "direction": "up",
+      "value": 61687.0,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,24 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-03T05:38:06.387847+00:00"
+    "text": "Dollar Rises With T-note Yields and U.S. bond yields tick up on hawkish Warsh rhetoric support USD strength, potentially weakening the CADJPY short setup by strengthening the JPY carry currency.",
+    "updated": "2026-07-03T08:41:30.777644+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold strength confirms JPY bid thesis, macro aligned.\n\nCADJPY SHORT: Rising copper challenges CAD weakness, macro conflict present.",
+    "text": "Gold rising confirms JPY bid, challenging short bias premise.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 4.73
-      },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 4.13
+        "score": 3.77
       }
     ],
-    "updated": "2026-07-03T05:38:06.387847+00:00"
+    "updated": "2026-07-03T08:41:30.777644+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-03T05:38:06.387847+00:00"
+    "updated": "2026-07-03T08:41:30.777644+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +692,10 @@
   "breaking": {
     "headlines": [
       "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "Dollar Rises With T-note Yields",
-      "Japan services activity rebounds as input costs hit four-year inflation high"
+      "Eurozone services contraction eases in June as cost pressures cool",
+      "Dollar Rises With T-note Yields"
     ],
-    "updated": "2026-07-03T05:38:06.387847+00:00"
+    "updated": "2026-07-03T08:41:30.777644+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
