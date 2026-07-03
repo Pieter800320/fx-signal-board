@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T18:17:56.239860+00:00",
+  "updated": "2026-07-03T18:55:33.868989+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4186.9,
+      "value": 4187.3,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
-      "delta_pct": 0.0,
+      "value": 100.84,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2245,
+      "value": 6.224,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.69,
-      "delta_pct": 0.0,
+      "value": 68.78,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62218.0,
-      "delta_pct": 1.2,
+      "value": 62159.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed 5% for third year running supports GBPJPY long. US bond yields rising on hawkish Warsh supports USDCAD long. No material conflicts detected.",
-    "updated": "2026-07-03T17:07:23.539720+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-03T18:55:33.868989+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-Off regime supports JPY strength, challenging long bias.\n\nUSDCAD LONG: Risk-Off favors CAD via commodity correlation, opposing setup.\n\nNZDUSD SHORT: Mixed macro neutral; commodity strength supports NZD, challenging short.",
+    "text": "USDCAD LONG: Risk-off favors safe-haven USD, confirming setup despite weak score.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 3.9
-      },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 3.7
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 2.85
+        "score": 4.03
       }
     ],
-    "updated": "2026-07-03T17:07:23.539720+00:00"
+    "updated": "2026-07-03T18:55:33.868989+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-03T17:07:23.539720+00:00"
+    "updated": "2026-07-03T18:55:33.868989+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +692,10 @@
   "breaking": {
     "headlines": [
       "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "Eurozone services contraction eases June as cost pressures cool",
-      "US bond yields tick up on hawkish Warsh rhetoric"
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
+      "Eurozone services contraction eases in June as cost pressures cool"
     ],
-    "updated": "2026-07-03T17:07:23.539720+00:00"
+    "updated": "2026-07-03T18:55:33.868989+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
