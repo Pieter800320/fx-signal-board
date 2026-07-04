@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T05:31:46.084416+00:00",
+  "updated": "2026-07-04T08:15:46.181593+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62459.0,
+      "value": 62472.0,
       "delta_pct": 1.6,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports yen strength, conflicting with NZDJPY SHORT and NZDUSD SHORT setups.",
-    "updated": "2026-07-04T05:31:46.084416+00:00"
+    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports yen strength, potentially conflicting with NZDJPY SHORT and AUDUSD SHORT setups.",
+    "updated": "2026-07-04T08:15:46.181593+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising confirms JPY safe-haven bid strength today.\n\nNZDUSD SHORT: Mixed macro neutral context provides no directional confirmation signal.\n\nAUDUSD SHORT: Mixed macro neutral lacks risk-off conviction for AUD weakness.",
+    "text": "NZDJPY SHORT: Gold rising confirms JPY bid strength, supports short setup.\n\nNZDUSD SHORT: Mixed macro neutral context provides no directional confirmation either way.\n\nAUDUSD SHORT: Risk off regime confirms AUD weakness, supports short bias.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-04T05:31:46.084416+00:00"
+    "updated": "2026-07-04T08:15:46.181593+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-04T05:31:46.084416+00:00"
+    "updated": "2026-07-04T08:15:46.181593+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +702,10 @@
   "breaking": {
     "headlines": [
       "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "Eurozone services contraction eases June as cost pressures cool",
-      "US bond yields tick up on hawkish Warsh rhetoric payrolls awaited"
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
+      "Eurozone services contraction eases June as cost pressures cool"
     ],
-    "updated": "2026-07-04T05:31:46.084416+00:00"
+    "updated": "2026-07-04T08:15:46.181593+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
