@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T05:49:50.300266+00:00",
+  "updated": "2026-07-05T08:34:25.641810+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
     "stable": false
   },
   "macro": {
@@ -551,7 +551,7 @@
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -584,6 +584,18 @@
       "direction": "up",
       "label": "Copper"
     },
+    "us10y": {
+      "value": 4.485,
+      "delta_bp": 1.0,
+      "direction": "flat",
+      "label": "US 10Y"
+    },
+    "us3m": {
+      "value": 3.668,
+      "delta_bp": -3.2,
+      "direction": "down",
+      "label": "US 3M"
+    },
     "wti": {
       "value": 68.78,
       "delta_pct": 0.1,
@@ -591,18 +603,24 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62660.0,
-      "delta_pct": 0.2,
+      "value": 62897.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
+    },
+    "curve": {
+      "value": 81.7,
+      "delta_bp": 4.2,
+      "direction": "up",
+      "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports BoJ hawkishness, accelerating NZDJPY and NZDUSD shorts via JPY strength.",
-    "updated": "2026-07-05T05:49:50.300266+00:00"
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "updated": "2026-07-05T08:34:25.641810+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising confirms JPY strength bid thesis today.\n\nNZDUSD SHORT: Mixed macro neutral context provides no directional confirmation signal.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness but copper rising challenges.",
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
     "top": [
       {
         "pair": "NZDJPY",
@@ -620,7 +638,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-05T05:49:50.300266+00:00"
+    "updated": "2026-07-05T08:34:25.641810+00:00"
   },
   "calendar": {
     "events": [
@@ -675,19 +693,17 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-05T05:49:50.300266+00:00"
+    "updated": "2026-07-05T08:34:25.641810+00:00"
   },
   "deep_analysis": {
-    "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-04T18:48:05.359340+00:00"
+    "text": "Unavailable (HTTP Error 400: Bad Request)",
+    "generated_at": "2026-07-05T08:34:48.761947+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "US bond yields tick up on hawkish Warsh rhetoric ahead payrolls",
-      "Eurozone services contraction eases June as cost pressures cool significantly"
+      "The US consumer is \"stressed\" but spending on cats is \"on fire\" according to General Mills"
     ],
-    "updated": "2026-07-05T05:49:50.300266+00:00"
+    "updated": "2026-07-05T08:34:25.641810+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
