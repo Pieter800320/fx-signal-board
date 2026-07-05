@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T11:20:49.153025+00:00",
+  "updated": "2026-07-05T12:59:21.218269+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62614.0,
-      "delta_pct": 0.1,
+      "value": 62684.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
-    "updated": "2026-07-05T11:20:49.153025+00:00"
+    "updated": "2026-07-05T12:59:21.218269+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -638,7 +638,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-05T11:20:49.153025+00:00"
+    "updated": "2026-07-05T12:59:21.218269+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-05T11:20:49.153025+00:00"
+    "updated": "2026-07-05T12:59:21.218269+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 400: Bad Request)",
@@ -703,7 +703,7 @@
     "headlines": [
       "The US consumer is \"stressed\" but spending on cats is \"on fire\" according to General Mills"
     ],
-    "updated": "2026-07-05T11:20:49.153025+00:00"
+    "updated": "2026-07-05T12:59:21.218269+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
