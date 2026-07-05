@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T01:29:32.557641+00:00",
+  "updated": "2026-07-05T05:49:50.300266+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -574,8 +574,8 @@
     },
     "dxy": {
       "value": 100.86,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
@@ -591,18 +591,18 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62887.0,
-      "delta_pct": 0.5,
+      "value": 62660.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports NZDJPY SHORT and NZDUSD SHORT by strengthening yen carry dynamics and BOJ policy expectations.",
-    "updated": "2026-07-05T01:29:32.557641+00:00"
+    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports BoJ hawkishness, accelerating NZDJPY and NZDUSD shorts via JPY strength.",
+    "updated": "2026-07-05T05:49:50.300266+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold surge confirms JPY strength bias today.\n\nNZDUSD SHORT: Mixed macro neutral neither confirms nor challenges setup.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness, supports short.",
+    "text": "NZDJPY SHORT: Gold rising confirms JPY strength bid thesis today.\n\nNZDUSD SHORT: Mixed macro neutral context provides no directional confirmation signal.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness but copper rising challenges.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -620,7 +620,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-05T01:29:32.557641+00:00"
+    "updated": "2026-07-05T05:49:50.300266+00:00"
   },
   "calendar": {
     "events": [
@@ -675,7 +675,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-05T01:29:32.557641+00:00"
+    "updated": "2026-07-05T05:49:50.300266+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -684,10 +684,10 @@
   "breaking": {
     "headlines": [
       "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
-      "Eurozone services contraction eases June as cost pressures cool"
+      "US bond yields tick up on hawkish Warsh rhetoric ahead payrolls",
+      "Eurozone services contraction eases June as cost pressures cool significantly"
     ],
-    "updated": "2026-07-05T01:29:32.557641+00:00"
+    "updated": "2026-07-05T05:49:50.300266+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
