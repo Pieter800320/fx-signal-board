@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T22:43:01.516807+00:00",
+  "updated": "2026-07-05T01:29:32.557641+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
     "stable": false
   },
   "macro": {
@@ -584,18 +584,6 @@
       "direction": "up",
       "label": "Copper"
     },
-    "us10y": {
-      "value": 4.372,
-      "delta_bp": -2.0,
-      "direction": "flat",
-      "label": "US 10Y"
-    },
-    "us3m": {
-      "value": 3.663,
-      "delta_bp": -1.7,
-      "direction": "flat",
-      "label": "US 3M"
-    },
     "wti": {
       "value": 68.78,
       "delta_pct": 0.1,
@@ -603,24 +591,18 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63154.0,
-      "delta_pct": 1.0,
+      "value": 62887.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
-    },
-    "curve": {
-      "value": 70.9,
-      "delta_bp": -0.3,
-      "direction": "flat",
-      "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes topped 5% for third year running supports yen strength, conflicting with NZDJPY and NZDUSD shorts.",
-    "updated": "2026-07-04T22:43:01.516807+00:00"
+    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports NZDJPY SHORT and NZDUSD SHORT by strengthening yen carry dynamics and BOJ policy expectations.",
+    "updated": "2026-07-05T01:29:32.557641+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising confirms JPY bid strength, supports short.\n\nNZDUSD SHORT: Mixed macro neutral lacks directional conviction for risk-off.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness, supports short setup.",
+    "text": "NZDJPY SHORT: Gold surge confirms JPY strength bias today.\n\nNZDUSD SHORT: Mixed macro neutral neither confirms nor challenges setup.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness, supports short.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +620,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-04T22:43:01.516807+00:00"
+    "updated": "2026-07-05T01:29:32.557641+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +675,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-04T22:43:01.516807+00:00"
+    "updated": "2026-07-05T01:29:32.557641+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +684,10 @@
   "breaking": {
     "headlines": [
       "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "US bond yields rise on hawkish Warsh rhetoric ahead payrolls",
-      "Eurozone services contraction eases as cost pressures cool significantly"
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
+      "Eurozone services contraction eases June as cost pressures cool"
     ],
-    "updated": "2026-07-04T22:43:01.516807+00:00"
+    "updated": "2026-07-05T01:29:32.557641+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
