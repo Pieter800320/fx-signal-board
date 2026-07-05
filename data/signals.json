@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-05T22:01:55.236300+00:00",
+  "updated": "2026-07-05T22:44:35.001389+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4187.3,
-      "delta_pct": 1.8,
+      "value": 4197.4,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 100.87,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.224,
-      "delta_pct": 1.8,
+      "value": 6.228,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.78,
-      "delta_pct": 0.1,
+      "value": 68.4,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62969.0,
-      "delta_pct": -0.2,
+      "value": 63504.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports JPY strength, conflicting with NZDJPY SHORT and weakening AUDUSD SHORT thesis.",
-    "updated": "2026-07-05T22:01:55.236300+00:00"
+    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports yen strength, conflicting with NZDJPY SHORT and NZDUSD SHORT setups.",
+    "updated": "2026-07-05T22:44:35.001389+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rise confirms JPY strength, supports short setup.\n\nNZDUSD SHORT: Risk-off regime supports, but copper strength challenges conviction.\n\nAUDUSD SHORT: Risk-off aligns with short, no cross-asset headwinds present.",
+    "text": "NZDJPY SHORT: Gold rally confirms JPY strength, supports short setup.\n\nNZDUSD SHORT: Risk-off regime confirms, but copper gains slightly challenge.\n\nAUDUSD SHORT: Risk-off Medium confirms AUD weakness, no macro conflict.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-05T22:01:55.236300+00:00"
+    "updated": "2026-07-05T22:44:35.001389+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-05T22:01:55.236300+00:00"
+    "updated": "2026-07-05T22:44:35.001389+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan wage hikes confirmed topped 5% for third consecutive year",
-      "US bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "Germany June services PMI 48.6 vs 46.8 prelim, Eurozone contraction eases"
+      "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
+      "Japan wage hikes confirmed topped 5% for third year running",
+      "Dollar rises with T-note yields as Euro and Yen weaken"
     ],
-    "updated": "2026-07-05T22:01:55.236300+00:00"
+    "updated": "2026-07-05T22:44:35.001389+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
@@ -717,7 +717,7 @@
     "updated": "2026-07-03T20:19:14.664670+00:00"
   },
   "week_ahead": {
-    "text": "I'll search for the latest FX market previews for you. Central bank decisions dominate this week, with US data focus providing the macro backbone alongside two critical rate decisions from Japan and Australia that will reset interest rate differentials across major pairs . The BOJ rate decision and USD/JPY breakout risk remain at the forefront, as BOJ intervention risk continues to keep traders on edge . USD/JPY is knocking on the door of a major breakout , making the Tuesday decision the week's pivotal event for the yen and carry trade unwinds. Markets have given up on optimism, with war-related fears and upbeat US data boosting the US Dollar demand , creating a potential reversal wildcard if geopolitical tensions ease unexpectedly and risk sentiment returns.",
-    "generated_at": "2026-07-05T22:01:55.236300+00:00"
+    "text": "US data dominates this week , with BOJ intervention risk continuing to keep traders on edge around USD/JPY as rate differentials widen between major economies. The BOJ rate hike to 1.0% Tuesday marks the most consequential central bank decision, expected to pressure the yen directly. Watch USD/JPY closely\u2014the pair remains vulnerable to intervention after recent strength, making risk of sudden policy moves high. The biggest wildcard is whether soft US jobs data could trigger Fed hold signals earlier than priced, undermining the dollar's carry advantage.",
+    "generated_at": "2026-07-05T22:44:35.001389+00:00"
   }
 }
