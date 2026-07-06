@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T21:16:41.525224+00:00",
+  "updated": "2026-07-06T22:53:20.655172+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4176.3,
-      "delta_pct": 1.5,
+      "value": 4178.6,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.87,
-      "delta_pct": 0.0,
+      "value": 100.86,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.251,
-      "delta_pct": 2.2,
+      "value": 6.255,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.6,
-      "delta_pct": -0.1,
+      "value": 68.68,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64247.0,
-      "delta_pct": 1.1,
+      "value": 64179.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Gains on Strength in US Services Activity and Dollar Rises With T-note Yields conflict with GBPUSD LONG and NZDJPY LONG setups.",
-    "updated": "2026-07-06T21:16:41.525224+00:00"
+    "text": "Dollar Rises With T-note Yields conflicts with GBPUSD LONG and NZDJPY LONG setups as stronger USD weakens both pairs.",
+    "updated": "2026-07-06T22:53:20.655172+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rising confirms GBP bid thesis directly.\n\nGBPJPY LONG: Risk-On regime supports carry trade, weakens JPY fundamentally.\n\nNZDJPY LONG: Copper surge and equity strength both support NZD.",
+    "text": "GBPUSD LONG: S&P 500 rising confirms GBP strength bias today.\n\nGBPJPY LONG: Risk-on regime supports carry trade unwinding challenge here.\n\nNZDJPY LONG: Copper surge confirms NZD bid macro tailwind.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 3.43
       }
     ],
-    "updated": "2026-07-06T21:16:41.525224+00:00"
+    "updated": "2026-07-06T22:53:20.655172+00:00"
   },
   "calendar": {
     "events": [
@@ -693,11 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-06T21:16:41.525224+00:00"
-  },
-  "week_ahead": {
-    "text": "US data dominates this week , with BOJ intervention risk continuing to keep traders on edge around USD/JPY as rate differentials widen between major economies. The BOJ rate hike to 1.0% Tuesday marks the most consequential central bank decision, expected to pressure the yen directly. Watch USD/JPY closely\u2014the pair remains vulnerable to intervention after recent strength, making risk of sudden policy moves high. The biggest wildcard is whether soft US jobs data could trigger Fed hold signals earlier than priced, undermining the dollar's carry advantage.",
-    "generated_at": "2026-07-05T22:44:35.001389+00:00"
+    "updated": "2026-07-06T22:53:20.655172+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -705,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US bond yields rise on hawkish Warsh rhetoric; payrolls data awaited",
-      "Canada services PMI collapses to 47.1 from 50.6, signals weakness",
-      "Dollar gains strength as US services activity outperforms expectations"
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
+      "Canada services PMI drops to 47.1 from 50.6, signals weakness",
+      "Dollar gains on US services activity strength, yields tick up"
     ],
-    "updated": "2026-07-06T21:16:41.525224+00:00"
+    "updated": "2026-07-06T22:53:20.655172+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
