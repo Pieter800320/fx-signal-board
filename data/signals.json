@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T01:30:53.082257+00:00",
+  "updated": "2026-07-06T06:12:23.431375+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4199.3,
-      "delta_pct": 2.1,
+      "value": 4159.7,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.92,
+      "value": 100.99,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.258,
-      "delta_pct": 2.3,
+      "value": 6.2155,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.64,
-      "delta_pct": -0.1,
+      "value": 68.9,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63681.0,
-      "delta_pct": 0.9,
+      "value": 63016.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan wage hikes confirmed to have topped 5% for a third year running supports JPY strength, potentially invalidating NZDJPY SHORT and AUDUSD SHORT setups.",
-    "updated": "2026-07-06T01:30:53.082257+00:00"
+    "text": "Australia TD-MI Inflation Gauge 32.9% y/y vs prior 4.4% could accelerate AUDUSD SHORT if RBA seen as behind curve on rates.",
+    "updated": "2026-07-06T06:12:23.431375+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold strength confirms JPY bid thesis perfectly today.\n\nNZDUSD SHORT: Mixed macro neutral stance challenges conviction without directional catalyst.\n\nAUDUSD SHORT: Risk-off regime confirms AUD weakness but copper strength complicates.",
+    "text": "NZDJPY SHORT: Gold rising confirms JPY bid, strengthens short thesis.\n\nNZDUSD SHORT: Mixed macro neutral, no clear commodity driver confirmation.\n\nAUDUSD SHORT: Copper strength challenges short, supports risk-on AUD.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 4.7
       }
     ],
-    "updated": "2026-07-06T01:30:53.082257+00:00"
+    "updated": "2026-07-06T06:12:23.431375+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-06T01:30:53.082257+00:00"
+    "updated": "2026-07-06T06:12:23.431375+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan wage hikes confirmed topped 5% for third year running",
+      "Australia TD-MI Inflation Gauge June 2026: 32.9% y/y, prior 4.4%",
       "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "Dollar rises with T-note yields; Euro and Yen weakness"
+      "Dollar Rises With T-note Yields"
     ],
-    "updated": "2026-07-06T01:30:53.082257+00:00"
+    "updated": "2026-07-06T06:12:23.431375+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
