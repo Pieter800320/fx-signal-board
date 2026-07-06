@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T09:05:47.230575+00:00",
+  "updated": "2026-07-06T11:51:44.961804+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.15,
-      "delta_pct": -2.7,
+      "value": 16.31,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4159.7,
-      "delta_pct": 1.1,
+      "value": 4167.7,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.99,
-      "delta_pct": 0.1,
+      "value": 101.08,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2155,
-      "delta_pct": 1.7,
+      "value": 6.238,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.9,
-      "delta_pct": 0.3,
+      "value": 68.44,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63016.0,
-      "delta_pct": -0.1,
+      "value": 62878.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Australia TD-MI Inflation Gauge 32.9% y/y vs prior 4.4% could accelerate AUDUSD SHORT if RBA seen as behind curve on rates.",
-    "updated": "2026-07-06T06:12:23.431375+00:00"
+    "text": "Dollar strength from T-note yields and Euro weakness support USD shorts. EURUSD SHORT and USDCAD LONG aligned with headlines. NZDUSD SHORT needs monitoring.",
+    "updated": "2026-07-06T11:51:44.961804+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising confirms JPY bid, strengthens short thesis.\n\nNZDUSD SHORT: Mixed macro neutral, no clear commodity driver confirmation.\n\nAUDUSD SHORT: Copper strength challenges short, supports risk-on AUD.",
+    "text": "NZDUSD SHORT: Risk-off regime confirms setup; commodity weakness pressures NZD.\n\nEURUSD SHORT: Risk-off regime confirms setup; USD strength outpaces EUR.\n\nUSDCAD LONG: Risk-off regime confirms setup; safe-haven USD beats CAD.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 5.03
-      },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 4.8
+        "score": 6.75
       },
       {
-        "pair": "AUDUSD",
+        "pair": "EURUSD",
         "direction": "bear",
-        "score": 4.7
+        "score": 6.53
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 6.2
       }
     ],
-    "updated": "2026-07-06T06:12:23.431375+00:00"
+    "updated": "2026-07-06T11:51:44.961804+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-06T06:12:23.431375+00:00"
+    "updated": "2026-07-06T11:51:44.961804+00:00"
   },
   "week_ahead": {
     "text": "US data dominates this week , with BOJ intervention risk continuing to keep traders on edge around USD/JPY as rate differentials widen between major economies. The BOJ rate hike to 1.0% Tuesday marks the most consequential central bank decision, expected to pressure the yen directly. Watch USD/JPY closely\u2014the pair remains vulnerable to intervention after recent strength, making risk of sudden policy moves high. The biggest wildcard is whether soft US jobs data could trigger Fed hold signals earlier than priced, undermining the dollar's carry advantage.",
@@ -701,15 +701,15 @@
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-05T20:43:58.647392+00:00"
+    "generated_at": "2026-07-06T11:52:21.825788+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australia TD-MI Inflation Gauge June 2026: 32.9% y/y, prior 4.4%",
       "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "Dollar Rises With T-note Yields"
+      "Eurozone investor sentiment sees significant improvement in July - Sentix survey",
+      "Dollar Supported by Euro and Yen Weakness"
     ],
-    "updated": "2026-07-06T06:12:23.431375+00:00"
+    "updated": "2026-07-06T11:51:44.961804+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
