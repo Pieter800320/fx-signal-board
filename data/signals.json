@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T17:48:41.430038+00:00",
+  "updated": "2026-07-06T18:01:38.216152+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.0,
-      "delta_pct": -0.9,
+      "value": 15.96,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7523.74,
-      "delta_pct": 0.5,
+      "value": 7531.27,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4152.2,
-      "delta_pct": 1.0,
+      "value": 4171.7,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.08,
-      "delta_pct": 0.2,
+      "value": 100.9,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2105,
-      "delta_pct": 1.6,
+      "value": 6.2465,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -591,54 +591,54 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.685,
-      "delta_bp": 1.7,
-      "direction": "flat",
+      "value": 3.69,
+      "delta_bp": 2.2,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.95,
-      "delta_pct": 0.4,
+      "value": 68.78,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61989.0,
-      "delta_pct": -2.5,
+      "value": 63534.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 80.0,
-      "delta_bp": -1.7,
+      "value": 79.5,
+      "delta_bp": -2.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Rises With T-note Yields supports USDCAD and USDJPY longs. Canada PMI weakness at 47.1 accelerates USDCAD long. No conflicts detected.",
-    "updated": "2026-07-06T14:47:39.150197+00:00"
+    "text": "Dollar firms, US bond yields tick up on hawkish Warsh rhetoric. This supports USD strength, accelerating USDJPY LONG and GBPUSD LONG setups.",
+    "updated": "2026-07-06T18:01:38.216152+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: S&P 500 rise confirms GBP bid strength directly.\n\nUSDCAD LONG: Mixed neutral macro offers no confirming commodity tailwind.\n\nUSDJPY LONG: Gold strength challenges safe haven USD demand thesis.",
+    "text": "GBPUSD LONG: S&P 500 rising confirms GBP bid thesis directionally.\n\nGBPJPY LONG: Risk-on regime supports carry but ADX weakness challenges conviction.\n\nUSDJPY LONG: Negative momentum divergence contradicts risk-on setup despite regime alignment.",
     "top": [
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 7.8
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.95
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.65
+        "score": 6.45
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 4.63
+        "score": 4.15
       }
     ],
-    "updated": "2026-07-06T14:47:39.150197+00:00"
+    "updated": "2026-07-06T18:01:38.216152+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-06T14:47:39.150197+00:00"
+    "updated": "2026-07-06T18:01:38.216152+00:00"
   },
   "week_ahead": {
     "text": "US data dominates this week , with BOJ intervention risk continuing to keep traders on edge around USD/JPY as rate differentials widen between major economies. The BOJ rate hike to 1.0% Tuesday marks the most consequential central bank decision, expected to pressure the yen directly. Watch USD/JPY closely\u2014the pair remains vulnerable to intervention after recent strength, making risk of sudden policy moves high. The biggest wildcard is whether soft US jobs data could trigger Fed hold signals earlier than priced, undermining the dollar's carry advantage.",
@@ -705,11 +705,11 @@
   },
   "breaking": {
     "headlines": [
-      "US ISM Non-Manufacturing PMI June 54.0 meets estimate, signals steady services",
-      "Canada services PMI crashes to 47.1 from 50.6, signals CAD weakness",
-      "US bond yields tick up on hawkish Warsh rhetoric; payrolls awaited"
+      "US ISM Non-Manufacturing PMI matches estimate at 54.0, signals steady services",
+      "Canada services PMI collapses to 47.1 from 50.6, CAD under pressure",
+      "Dollar rises as US bond yields tick up on hawkish Warsh rhetoric"
     ],
-    "updated": "2026-07-06T14:47:39.150197+00:00"
+    "updated": "2026-07-06T18:01:38.216152+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
