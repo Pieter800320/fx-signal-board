@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T15:46:15.685326+00:00",
+  "updated": "2026-07-07T16:14:14.284802+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,103 +542,98 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.88,
-      "delta_pct": 2.0,
+      "value": 16.12,
+      "delta_pct": 3.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7537.43,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 7508.27,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4174.8,
-      "delta_pct": 0.5,
+      "value": 4150.6,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.92,
+      "value": 100.97,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2395,
-      "delta_pct": 1.0,
-      "direction": "up",
+      "value": 6.2105,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.485,
-      "delta_bp": 1.0,
+      "value": 4.517,
+      "delta_bp": 3.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.668,
-      "delta_bp": -3.2,
-      "direction": "down",
+      "value": 3.725,
+      "delta_bp": 5.7,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.01,
-      "delta_pct": 0.7,
-      "direction": "flat",
+      "value": 70.43,
+      "delta_pct": 2.7,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63661.0,
-      "delta_pct": -0.5,
+      "value": 63791.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 81.7,
-      "delta_bp": 4.2,
-      "direction": "up",
+      "value": 79.2,
+      "delta_bp": -2.5,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Rises With T-note Yields conflicts with GBPUSD LONG and USDCAD LONG. Strong USD headwind undermines both setups.",
-    "updated": "2026-07-07T12:18:12.290928+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-07T16:14:14.284802+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro confirms setup via risk-on equity bid supporting GBP.\n\nGBPUSD LONG: Macro confirms setup via S&P strength driving GBP appreciation today.\n\nUSDCAD LONG: Macro challenges setup as risk-on low limits CAD safe-haven demand.",
+    "text": "GBPJPY LONG: Risk-on low environment challenges strong momentum continuation setup today.\n\nUSDJPY LONG: Ranging regime with weak price action contradicts bullish scoring premise.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.85
+        "score": 6.3
       },
       {
-        "pair": "GBPUSD",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 4.92
+        "score": 2.8
       }
     ],
-    "updated": "2026-07-07T12:18:12.290928+00:00"
+    "updated": "2026-07-07T16:14:14.284802+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-07T12:18:12.290928+00:00"
+    "updated": "2026-07-07T16:14:14.284802+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-07T01:31:22.929738+00:00"
+    "generated_at": "2026-07-07T16:14:38.586662+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: DXY Holds $100.93 on Policy Divergence",
+      "One-year inflation expectations hit highest since 2023 in New York Fed survey",
       "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "German factory output rises more than expected in May"
+      "Canada May trade balance $4.24 billion vs $2.85 billion expected"
     ],
-    "updated": "2026-07-07T12:18:12.290928+00:00"
+    "updated": "2026-07-07T16:14:14.284802+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
