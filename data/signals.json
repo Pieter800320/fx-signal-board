@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-06T22:53:20.655172+00:00",
+  "updated": "2026-07-07T01:30:57.845152+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4178.6,
-      "delta_pct": 1.6,
+      "value": 4146.3,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
-      "delta_pct": -0.0,
+      "value": 100.9,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.255,
-      "delta_pct": 2.3,
+      "value": 6.222,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.68,
-      "delta_pct": -0.0,
+      "value": 68.63,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64179.0,
-      "delta_pct": 1.0,
+      "value": 63903.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Rises With T-note Yields conflicts with GBPUSD LONG and NZDJPY LONG setups as stronger USD weakens both pairs.",
-    "updated": "2026-07-06T22:53:20.655172+00:00"
+    "text": "Dollar Rises With T-note Yields conflicts with GBPUSD LONG and NZDJPY LONG as USD strength undermines these setups.",
+    "updated": "2026-07-07T01:30:57.845152+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rising confirms GBP strength bias today.\n\nGBPJPY LONG: Risk-on regime supports carry trade unwinding challenge here.\n\nNZDJPY LONG: Copper surge confirms NZD bid macro tailwind.",
+    "text": "GBPUSD LONG: S&P 500 rising confirms GBP strength thesis directly.\n\nGBPJPY LONG: Risk-on regime supports carry trade unwind headwinds partially.\n\nNZDJPY LONG: Copper surge supports NZD but score remains marginal.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 3.43
       }
     ],
-    "updated": "2026-07-06T22:53:20.655172+00:00"
+    "updated": "2026-07-07T01:30:57.845152+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-06T22:53:20.655172+00:00"
+    "updated": "2026-07-07T01:30:57.845152+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-06T11:52:21.825788+00:00"
+    "generated_at": "2026-07-07T01:31:22.929738+00:00"
   },
   "breaking": {
     "headlines": [
-      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited",
-      "Canada services PMI drops to 47.1 from 50.6, signals weakness",
-      "Dollar gains on US services activity strength, yields tick up"
+      "US ISM Non-Manufacturing PMI meets estimate at 54.0, supports dollar strength",
+      "US bond yields rise on hawkish Warsh rhetoric ahead of payrolls",
+      "Japan wages miss but household spending beats, growth remains solid"
     ],
-    "updated": "2026-07-06T22:53:20.655172+00:00"
+    "updated": "2026-07-07T01:30:57.845152+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
