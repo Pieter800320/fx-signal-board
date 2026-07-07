@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T01:30:57.845152+00:00",
+  "updated": "2026-07-07T05:54:12.366585+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,60 +567,60 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4146.3,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 4130.8,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.9,
-      "delta_pct": 0.0,
+      "value": 100.94,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.222,
-      "delta_pct": 1.8,
-      "direction": "up",
+      "value": 6.205,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.479,
-      "delta_bp": -0.6,
+      "value": 4.485,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.69,
-      "delta_bp": 2.2,
-      "direction": "up",
+      "value": 3.668,
+      "delta_bp": -3.2,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 68.63,
-      "delta_pct": -0.1,
+      "value": 69.21,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63903.0,
-      "delta_pct": 0.6,
+      "value": 63184.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 78.9,
-      "delta_bp": -2.8,
-      "direction": "flat",
+      "value": 81.7,
+      "delta_bp": 4.2,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Rises With T-note Yields conflicts with GBPUSD LONG and NZDJPY LONG as USD strength undermines these setups.",
-    "updated": "2026-07-07T01:30:57.845152+00:00"
+    "text": "Dollar Gains on Strength in US Services Activity and Dollar Rises With T-note Yields both support USDCAD LONG. USD strength accelerates this setup.",
+    "updated": "2026-07-07T05:54:12.366585+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rising confirms GBP strength thesis directly.\n\nGBPJPY LONG: Risk-on regime supports carry trade unwind headwinds partially.\n\nNZDJPY LONG: Copper surge supports NZD but score remains marginal.",
+    "text": "GBPUSD LONG: S&P 500 rally confirms GBP bid strength thesis today.\n\nGBPJPY LONG: Risk-on regime supports carry trade but ADX momentum weak.\n\nUSDCAD LONG: Gold weakness supports USD bid but score suspiciously low.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -633,12 +633,12 @@
         "score": 6.45
       },
       {
-        "pair": "NZDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 3.43
+        "score": 3.48
       }
     ],
-    "updated": "2026-07-07T01:30:57.845152+00:00"
+    "updated": "2026-07-07T05:54:12.366585+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-07T01:30:57.845152+00:00"
+    "updated": "2026-07-07T05:54:12.366585+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US ISM Non-Manufacturing PMI meets estimate at 54.0, supports dollar strength",
-      "US bond yields rise on hawkish Warsh rhetoric ahead of payrolls",
-      "Japan wages miss but household spending beats, growth remains solid"
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls data awaited",
+      "Dollar gains on strength in US services activity",
+      "Japan wages miss but growth solid, household spending better expected"
     ],
-    "updated": "2026-07-07T01:30:57.845152+00:00"
+    "updated": "2026-07-07T05:54:12.366585+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
