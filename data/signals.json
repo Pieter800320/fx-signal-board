@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T19:06:53.903947+00:00",
+  "updated": "2026-07-07T19:28:04.239407+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,47 +547,47 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.12,
-      "delta_pct": 3.5,
+      "value": 16.31,
+      "delta_pct": 4.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7508.27,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 7495.59,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4150.6,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 4109.4,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 101.12,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2105,
-      "delta_pct": 0.5,
+      "value": 6.172,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.517,
-      "delta_bp": 3.2,
-      "direction": "flat",
+      "value": 4.529,
+      "delta_bp": 4.4,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,43 +597,43 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 70.43,
-      "delta_pct": 2.7,
+      "value": 72.36,
+      "delta_pct": 5.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63791.0,
-      "delta_pct": -0.3,
+      "value": 63606.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 79.2,
-      "delta_bp": -2.5,
+      "value": 80.4,
+      "delta_bp": -1.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-07T16:14:14.284802+00:00"
+    "text": "Dollar strength headlines support both setups. One year inflation expectations rising could pressure JPY weakness narrative. No direct conflicts detected.",
+    "updated": "2026-07-07T19:28:04.239407+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on low environment challenges strong momentum continuation setup today.\n\nUSDJPY LONG: Ranging regime with weak price action contradicts bullish scoring premise.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness thesis entirely.\n\nUSDJPY LONG: US 10Y supports but Gold weakness contradicts setup.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.3
+        "score": 6.75
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 2.8
+        "score": 3.7
       }
     ],
-    "updated": "2026-07-07T16:14:14.284802+00:00"
+    "updated": "2026-07-07T19:28:04.239407+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-07T16:14:14.284802+00:00"
+    "updated": "2026-07-07T19:28:04.239407+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "One-year inflation expectations hit highest since 2023 in New York Fed survey",
-      "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
-      "Canada May trade balance $4.24 billion vs $2.85 billion expected"
+      "One-year inflation expectations hit highest since 2023, New York Fed survey",
+      "Canada May trade balance $4.24B vs $2.85B expected",
+      "US bond yields rise on hawkish Warsh rhetoric; payrolls awaited"
     ],
-    "updated": "2026-07-07T16:14:14.284802+00:00"
+    "updated": "2026-07-07T19:28:04.239407+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
