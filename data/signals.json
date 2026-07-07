@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T08:29:19.660414+00:00",
+  "updated": "2026-07-07T08:58:55.461913+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,12 +551,12 @@
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.57,
-      "delta_pct": -3.6,
+      "value": 15.84,
+      "delta_pct": 1.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4130.8,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4139.6,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.94,
+      "value": 100.91,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.205,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.2315,
+      "delta_pct": 0.9,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 69.21,
-      "delta_pct": 1.0,
-      "direction": "flat",
+      "value": 69.44,
+      "delta_pct": 1.3,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63184.0,
-      "delta_pct": -0.6,
+      "value": 63076.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Dollar Gains on Strength in US Services Activity and Dollar Rises With T-note Yields both support USDCAD LONG. USD strength accelerates this setup.",
-    "updated": "2026-07-07T05:54:12.366585+00:00"
+    "text": "Dollar Gains on Strength in US Services Activity and Dollar Rises With T-note Yields support USDCAD long. No direct conflicts with setups.",
+    "updated": "2026-07-07T08:58:55.461913+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rally confirms GBP bid strength thesis today.\n\nGBPJPY LONG: Risk-on regime supports carry trade but ADX momentum weak.\n\nUSDCAD LONG: Gold weakness supports USD bid but score suspiciously low.",
+    "text": "GBPUSD LONG: S&P 500 rising confirms GBP bid strength thesis directly.\n\nGBPJPY LONG: Risk-on environment supports carry trade, though momentum divergence challenges conviction.\n\nUSDCAD LONG: Oil rally contradicts setup; CAD strength limits upside potential.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.8
+        "score": 7.85
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.45
+        "score": 6.85
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 3.48
+        "score": 4.2
       }
     ],
-    "updated": "2026-07-07T05:54:12.366585+00:00"
+    "updated": "2026-07-07T08:58:55.461913+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-07T05:54:12.366585+00:00"
+    "updated": "2026-07-07T08:58:55.461913+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US bond yields rise on hawkish Warsh rhetoric; payrolls data awaited",
-      "Dollar gains on strength in US services activity",
-      "Japan wages miss but growth solid, household spending better expected"
+      "Dollar Gains on Strength in US Services Activity",
+      "U.S. bond yields tick up on hawkish Warsh rhetoric; payrolls awaited",
+      "German factory output rises more than expected in May"
     ],
-    "updated": "2026-07-07T05:54:12.366585+00:00"
+    "updated": "2026-07-07T08:58:55.461913+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
