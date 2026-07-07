@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-07T21:11:34.180090+00:00",
+  "updated": "2026-07-07T22:47:46.623695+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4116.6,
-      "delta_pct": -0.9,
+      "value": 4111.6,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.09,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 101.12,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.182,
-      "delta_pct": 0.1,
+      "value": 6.1705,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.2,
-      "delta_pct": 5.3,
+      "value": 72.37,
+      "delta_pct": 5.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63737.0,
-      "delta_pct": -0.4,
+      "value": 63518.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Stubborn Dollar Threatens Major Breakout accelerates USDJPY LONG. Strong dollar momentum supports both setups. One-year inflation expectations support hawkish stance, positive for JPY pairs.",
-    "updated": "2026-07-07T21:11:34.180090+00:00"
+    "text": "US Dollar Gains Ground and Stubborn Dollar Threatens Major Breakout support USD strength, accelerating USDJPY LONG. RBNZ rate hike expected could weaken JPY, conflicting both setups.",
+    "updated": "2026-07-07T22:47:46.623695+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY offered setup strongly.\n\nUSDJPY LONG: Rising 10Y supports USD bid but weak momentum challenges.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports setup.\n\nUSDJPY LONG: US 10Y supports USD but oil strength challenges.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-07-07T21:11:34.180090+00:00"
+    "updated": "2026-07-07T22:47:46.623695+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-07T21:11:34.180090+00:00"
+    "updated": "2026-07-07T22:47:46.623695+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "RBNZ rate hike expected, NZD rally potential",
-      "Dollar holds $100.93 amid policy divergence signals",
-      "US inflation expectations hit highest since 2023"
+      "Trump reimposes Iran sanctions, oil climbs pressuring USD pairs",
+      "RBNZ rate hike expected, NZD strength likely today",
+      "DXY holds $100.93 on policy divergence, dollar breakout threat"
     ],
-    "updated": "2026-07-07T21:11:34.180090+00:00"
+    "updated": "2026-07-07T22:47:46.623695+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
