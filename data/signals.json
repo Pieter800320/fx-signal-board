@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T01:15:45.545904+00:00",
+  "updated": "2026-07-08T04:53:41.067590+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4113.1,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 4133.4,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.14,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.1,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1785,
-      "delta_pct": 0.0,
+      "value": 6.2045,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.99,
-      "delta_pct": 5.0,
+      "value": 72.24,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63513.0,
-      "delta_pct": -0.8,
+      "value": 62675.0,
+      "delta_pct": -2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "U.S. Dollar Gains Ground headline directly supports USDJPY LONG and GBPJPY LONG through JPY weakness and dollar strength acceleration.",
-    "updated": "2026-07-08T01:15:45.545904+00:00"
+    "text": "Dollar bid and oil rally support USDJPY long. RBNZ rate hike expected supports GBP strength, favorable for GBPJPY long. No direct conflicts detected.",
+    "updated": "2026-07-08T04:53:41.067590+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports setup.\n\nUSDJPY LONG: Rising 10Y and falling gold confirm USD strength.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness bias setup today.\n\nUSDJPY LONG: Risk-on low challenges USD bid momentum strength signal.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-07-08T01:15:45.545904+00:00"
+    "updated": "2026-07-08T04:53:41.067590+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-08T01:15:45.545904+00:00"
+    "updated": "2026-07-08T04:53:41.067590+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-07T16:14:38.586662+00:00"
+    "generated_at": "2026-07-08T04:54:05.935853+00:00"
   },
   "breaking": {
     "headlines": [
-      "RBNZ rate hike expected, NZD volatility likely to surge",
-      "One-year inflation expectations hit highest since 2023, Fed survey",
-      "Dollar gains as oil rallies on Iran sanctions reimposition"
+      "RBNZ rate hike expected, NZD strengthens, first increase in 3 years",
+      "Oil rallies on Iran sanctions, dollar bid, USD/CAD pressure",
+      "One-year inflation expectations hit highest since 2023, Fed survey"
     ],
-    "updated": "2026-07-08T01:15:45.545904+00:00"
+    "updated": "2026-07-08T04:53:41.067590+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
