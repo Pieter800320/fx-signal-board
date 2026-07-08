@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T11:10:20.471182+00:00",
+  "updated": "2026-07-08T11:39:24.514079+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.41,
-      "delta_pct": 1.7,
-      "direction": "flat",
+      "value": 18.36,
+      "delta_pct": 13.8,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4134.2,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4060.8,
+      "delta_pct": -2.0,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
-      "delta_pct": -0.2,
+      "value": 101.16,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.167,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 6.071,
+      "delta_pct": -1.6,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.96,
-      "delta_pct": 2.2,
+      "value": 74.31,
+      "delta_pct": 5.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62868.0,
-      "delta_pct": -0.7,
+      "value": 62107.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG and EURJPY LONG accelerated by dollar strength headlines and oil rally supporting yen weakness. GBPJPY LONG threatened by stubborn dollar strength against major pairs.",
-    "updated": "2026-07-08T08:01:57.896347+00:00"
+    "text": "USDJPY LONG accelerated by dollar strength from Trump Iran deal withdrawal and oil rally headlines. GBP and NZD weakness vs JPY less directly supported.",
+    "updated": "2026-07-08T11:39:24.514079+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supporting GBP strength setup.\n\nUSDJPY LONG: Rising US 10Y supports USD bid but challenges mixed regime.\n\nEURJPY LONG: Momentum divergence challenges setup despite US 10Y favoring JPY offered.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY weakness, supports long.\n\nNZDJPY LONG: US 10Y rise confirms JPY weakness, supports long.\n\nUSDJPY LONG: VIX spike and US 10Y rise confirm USD bid strongly.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.8
+        "score": 7.05
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 6.05
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.3
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 3.43
+        "score": 3.7
       }
     ],
-    "updated": "2026-07-08T08:01:57.896347+00:00"
+    "updated": "2026-07-08T11:39:24.514079+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-08T08:01:57.896347+00:00"
+    "updated": "2026-07-08T11:39:24.514079+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Oil jumps on Trump Iran sanctions, dollar bid strengthens",
-      "US Dollar holds $100.93, policy divergence supports continued strength",
-      "RBNZ first rate hike in 3 years signals tightening"
+      "Trump cancels Iran deal, oil surges, USD strengthens against EUR and GBP",
+      "Dollar gains on US services strength, DXY holds above 100.93 level",
+      "Risk sentiment deteriorates as Trump threatens trade ties with Spain"
     ],
-    "updated": "2026-07-08T08:01:57.896347+00:00"
+    "updated": "2026-07-08T11:39:24.514079+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
