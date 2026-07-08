@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T20:24:52.857871+00:00",
+  "updated": "2026-07-08T20:51:33.953652+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,40 +547,40 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.8,
-      "delta_pct": 4.2,
+      "value": 16.9,
+      "delta_pct": 4.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7480.05,
+      "value": 7482.71,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4101.0,
-      "delta_pct": -1.1,
+      "value": 4084.8,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
-      "delta_pct": -0.2,
+      "value": 101.06,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.134,
-      "delta_pct": -0.6,
+      "value": 6.119,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.69,
-      "delta_pct": 4.6,
+      "value": 75.0,
+      "delta_pct": 6.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62138.0,
+      "value": 62181.0,
       "delta_pct": -1.8,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY setups conflict with stubborn dollar strength and safe haven flows supporting USD. Dollar breakout threatens recovery.",
-    "updated": "2026-07-08T18:59:50.165746+00:00"
+    "text": "GBPUSD LONG conflicts with dollar strength headlines. Middle East safe haven flows and US services strength both support USD upside against GBP.",
+    "updated": "2026-07-08T20:51:33.953652+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-On regime confirms setup, WTI strength supports commodity sensitivity.\n\nGBPJPY LONG: Risk-On regime confirms setup, carry trade benefits from risk appetite.\n\nNZDJPY LONG: Weak setup challenged by mixed macro, gold weakness hurts risk sentiment.",
+    "text": "GBPUSD LONG: Risk-On regime confirms setup, WTI strength supports risk appetite.\n\nGBPJPY LONG: Risk-On regime confirms setup, oil rally bolsters carry trade.\n\nNZDJPY LONG: Weak macro context challenges setup, conflicting risk signals weaken conviction.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.6
+        "score": 8.15
       },
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 5.6
       }
     ],
-    "updated": "2026-07-08T18:59:50.165746+00:00"
+    "updated": "2026-07-08T20:51:33.953652+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-08T18:59:50.165746+00:00"
+    "updated": "2026-07-08T20:51:33.953652+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Middle East conflict drives safe-haven flows to US Dollar",
-      "Dollar gains on strength in US services activity",
-      "Stubborn dollar threatens major breakout against euro and franc"
+      "Middle East Conflict Drives Safe-Haven Flows to US Dollar",
+      "Stubborn Dollar Threatens Major Breakout Against Euro and Franc",
+      "Dollar Gains on Strength in US Services Activity"
     ],
-    "updated": "2026-07-08T18:59:50.165746+00:00"
+    "updated": "2026-07-08T20:51:33.953652+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
