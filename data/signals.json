@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-08T15:27:52.880774+00:00",
+  "updated": "2026-07-08T15:55:27.558751+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 3,
+    "total": 5,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.45,
-      "delta_pct": 8.2,
+      "value": 18.23,
+      "delta_pct": 13.0,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7503.85,
-      "delta_pct": -0.4,
+      "value": 7431.99,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4082.0,
-      "delta_pct": -1.5,
+      "value": 4041.9,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.18,
-      "delta_pct": 0.0,
+      "value": 101.27,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.089,
-      "delta_pct": -1.3,
+      "value": 6.0665,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.567,
-      "delta_bp": 3.8,
-      "direction": "flat",
+      "value": 4.597,
+      "delta_bp": 6.8,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.723,
-      "delta_bp": -0.2,
+      "value": 3.725,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.04,
-      "delta_pct": 5.1,
+      "value": 75.75,
+      "delta_pct": 7.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 61809.0,
-      "delta_pct": -2.4,
-      "direction": "flat",
+      "value": 61651.0,
+      "delta_pct": -2.6,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.4,
-      "delta_bp": 4.0,
+      "value": 87.2,
+      "delta_bp": 6.8,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Dollar Gains Ground and Stubborn Dollar Threatens Major Breakout conflict with GBPJPY LONG and NZDJPY LONG setups by strengthening JPY.",
-    "updated": "2026-07-08T13:20:07.308086+00:00"
+    "text": "Dollar strength headlines conflict with all three JPY pairs. USD/JPY rallying undermines GBPJPY, NZDJPY, and EURJPY long setups.",
+    "updated": "2026-07-08T15:55:27.558751+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-off supports JPY bid, challenges setup.\n\nNZDJPY LONG: Risk-off supports JPY bid, challenges setup.\n\nUSDJPY LONG: VIX spike and gold decline confirm setup.",
+    "text": "GBPJPY LONG: US 10Y rise confirms JPY offered thesis, supports setup strongly today.\n\nNZDJPY LONG: Rising US 10Y supports JPY weakness but weak momentum challenges conviction.\n\nEURJPY LONG: US 10Y confirms JPY offered but negative CSM divergence challenges setup.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.65
+        "score": 8.2
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 5.65
+        "score": 4.65
       },
       {
-        "pair": "USDJPY",
+        "pair": "EURJPY",
         "direction": "bull",
-        "score": 3.3
+        "score": 4.35
       }
     ],
-    "updated": "2026-07-08T13:20:07.308086+00:00"
+    "updated": "2026-07-08T15:55:27.558751+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-08T13:20:07.308086+00:00"
+    "updated": "2026-07-08T15:55:27.558751+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar strengthens on US services activity, threatens euro breakout",
-      "DXY holds $100.93 on policy divergence amid dollar resilience",
-      "BofA highlights FX intervention impact on central bank reserves"
+      "Dollar gains strength on US services activity, threatens euro breakout",
+      "DXY holds $100.93 on policy divergence; EUR/USD recovery uncertain",
+      "BofA highlights FX intervention impact on central bank balance sheets"
     ],
-    "updated": "2026-07-08T13:20:07.308086+00:00"
+    "updated": "2026-07-08T15:55:27.558751+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
