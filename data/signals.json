@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T16:05:49.732223+00:00",
+  "updated": "2026-07-09T16:18:10.455047+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.78,
-      "delta_pct": -0.7,
+      "value": 16.07,
+      "delta_pct": -4.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7482.71,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 7532.15,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4122.4,
-      "delta_pct": 1.3,
+      "value": 4137.2,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.94,
-      "delta_pct": -0.1,
+      "value": 100.87,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.239,
-      "delta_pct": 3.0,
+      "value": 6.2855,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.569,
-      "delta_bp": 4.0,
+      "value": 4.547,
+      "delta_bp": -2.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.723,
-      "delta_bp": -0.2,
-      "direction": "flat",
+      "value": 3.688,
+      "delta_bp": -3.5,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.67,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 72.14,
+      "delta_pct": -1.9,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62722.0,
-      "delta_pct": 0.7,
+      "value": 62746.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.6,
-      "delta_bp": 4.2,
-      "direction": "up",
+      "value": 85.9,
+      "delta_bp": 1.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY conflict with dollar strength from Middle East tensions and safe haven flows accelerating USD demand.",
-    "updated": "2026-07-09T12:25:07.618290+00:00"
+    "text": "GBPUSD and GBPJPY conflict with dollar strength headlines. Middle East safe haven flows support JPY, opposing NZDJPY long setup.",
+    "updated": "2026-07-09T16:18:10.455047+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper surge confirms NZD strength in risk-on environment.\n\nGBPUSD LONG: Mixed macro neutral backdrop challenges momentum without directional conviction.\n\nGBPJPY LONG: Risk-on regime confirms yen weakness offsetting mixed macro backdrop.",
+    "text": "NZDJPY LONG: Copper surge and equity strength confirm risk-on NZD bid setup.\n\nGBPUSD LONG: S&P 500 strength confirms GBP bid but ADX weak.\n\nGBPJPY LONG: Equity rally confirms GBP bid with strong trend momentum.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.95
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 6.7
+        "score": 8.88
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.6
+        "score": 7.78
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 6.9
       }
     ],
-    "updated": "2026-07-09T12:25:07.618290+00:00"
+    "updated": "2026-07-09T16:18:10.455047+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T12:25:07.618290+00:00"
+    "updated": "2026-07-09T16:18:10.455047+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar climbs on escalation of Middle East hostilities",
-      "DXY nears $101 ahead of FOMC meeting minutes",
-      "Safe-haven flows drive US dollar amid Middle East conflict"
+      "FOMC minutes signal policy divergence, EUR/USD and GBP/USD at risk",
+      "Middle East escalation drives safe-haven flows to US Dollar",
+      "DXY approaches 101 ahead of FOMC meeting minutes release"
     ],
-    "updated": "2026-07-09T12:25:07.618290+00:00"
+    "updated": "2026-07-09T16:18:10.455047+00:00"
   },
   "last_alert": "2026-07-09T16:05:49.732223+00:00",
   "gold_signal": {
