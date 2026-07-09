@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T20:52:23.090642+00:00",
+  "updated": "2026-07-09T21:08:21.582607+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,39 +548,39 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": false
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.05,
-      "delta_pct": -5.0,
+      "value": 15.84,
+      "delta_pct": -6.3,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7535.67,
-      "delta_pct": 0.7,
+      "value": 7543.64,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4134.5,
-      "delta_pct": 1.6,
+      "value": 4132.8,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.91,
+      "value": 100.94,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.253,
-      "delta_pct": 3.3,
+      "value": 6.249,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.51,
-      "delta_pct": -2.7,
+      "value": 71.77,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63101.0,
-      "delta_pct": 1.4,
+      "value": 63308.0,
+      "delta_pct": 1.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG conflicts: RBNZ rate hike sparks Kiwi rally, reducing carry advantage. GBPJPY and GBPUSD conflict: safe haven flows strengthen USD, weakening pairs.",
-    "updated": "2026-07-09T19:15:15.165224+00:00"
+    "text": "NZDJPY LONG and GBPJPY LONG conflict with safe haven flows to USD and JPY strengthening. GBPUSD LONG pressured by dollar gains on Middle East escalation and geopolitical risk.",
+    "updated": "2026-07-09T21:08:21.582607+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper surge and VIX decline strongly confirm risk-on setup.\n\nGBPUSD LONG: Mixed macro neutral stance challenges momentum driven GBP bid.\n\nGBPJPY LONG: S&P 500 strength confirms GBP bid in risk-on.",
+    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on setup.\n\nGBPJPY LONG: S&P 500 rising confirms setup, but macro divergence creates headwind.\n\nGBPUSD LONG: Weak ADX challenges momentum despite S&P 500 bid confirmation.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -630,7 +630,7 @@
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 8.03
+        "score": 8.18
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.9
       }
     ],
-    "updated": "2026-07-09T19:15:15.165224+00:00"
+    "updated": "2026-07-09T21:08:21.582607+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T19:15:15.165224+00:00"
+    "updated": "2026-07-09T21:08:21.582607+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Treasury 30-year bonds auction at 5.058% yield signals rate expectations",
-      "Dollar climbs on escalation of Middle East hostilities, safe-haven flows",
-      "US existing home sales miss expectations at 4.09m versus 4.20m"
+      "US Treasury 30-year bonds auction at 5.058% yield signals higher rates",
+      "Dollar climbs on Middle East escalation and safe-haven flows",
+      "US existing home sales miss expectations at 4.09 million"
     ],
-    "updated": "2026-07-09T19:15:15.165224+00:00"
+    "updated": "2026-07-09T21:08:21.582607+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
