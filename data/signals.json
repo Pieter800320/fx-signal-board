@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T12:16:57.710987+00:00",
+  "updated": "2026-07-09T12:25:07.618290+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4119.3,
-      "delta_pct": 1.2,
+      "value": 4122.4,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.95,
+      "value": 100.94,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2195,
-      "delta_pct": 2.7,
+      "value": 6.239,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.85,
-      "delta_pct": -0.9,
+      "value": 73.67,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62858.0,
-      "delta_pct": 1.0,
+      "value": 62722.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and NZDJPY conflict with safe haven USD flows and DXY strength near 101 ahead of FOMC minutes.",
-    "updated": "2026-07-09T09:02:42.961652+00:00"
+    "text": "GBPUSD and GBPJPY conflict with dollar strength from Middle East tensions and safe haven flows accelerating USD demand.",
+    "updated": "2026-07-09T12:25:07.618290+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: D1 regime confirms, macro context challenges due to risk-on divergence.\n\nNZDJPY LONG: Copper strength confirms macro support for New Zealand commodity currency.\n\nGBPUSD LONG: Risk-on alignment confirms setup, macro divergence presents minor headwind constraint.",
+    "text": "NZDJPY LONG: Copper surge confirms NZD strength in risk-on environment.\n\nGBPUSD LONG: Mixed macro neutral backdrop challenges momentum without directional conviction.\n\nGBPJPY LONG: Risk-on regime confirms yen weakness offsetting mixed macro backdrop.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 8.07
-      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.85
+        "score": 7.95
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.83
+        "score": 6.7
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 6.6
       }
     ],
-    "updated": "2026-07-09T09:02:42.961652+00:00"
+    "updated": "2026-07-09T12:25:07.618290+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T09:02:42.961652+00:00"
+    "updated": "2026-07-09T12:25:07.618290+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar climbs on Middle East escalation, safe-haven flows surge",
+      "Dollar climbs on escalation of Middle East hostilities",
       "DXY nears $101 ahead of FOMC meeting minutes",
-      "Oil rally supports USD gains versus EUR, GBP, JPY"
+      "Safe-haven flows drive US dollar amid Middle East conflict"
     ],
-    "updated": "2026-07-09T09:02:42.961652+00:00"
+    "updated": "2026-07-09T12:25:07.618290+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
