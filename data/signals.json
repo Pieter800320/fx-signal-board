@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T08:33:43.765715+00:00",
+  "updated": "2026-07-09T09:02:42.961652+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.9,
-      "delta_pct": 4.8,
+      "value": 16.78,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4084.5,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4119.3,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.92,
+      "value": 100.95,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1455,
-      "delta_pct": 1.5,
+      "value": 6.2195,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.71,
-      "delta_pct": 0.3,
+      "value": 72.85,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62430.0,
-      "delta_pct": -1.4,
+      "value": 62858.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY conflict. Dollar strength from Middle East safe-haven flows and oil rally directly opposes GBP longs.",
-    "updated": "2026-07-09T05:50:36.223186+00:00"
+    "text": "GBPUSD and NZDJPY conflict with safe haven USD flows and DXY strength near 101 ahead of FOMC minutes.",
+    "updated": "2026-07-09T09:02:42.961652+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Macro Risk-On Low challenges strong technical score via GBP strength.\n\nGBPJPY LONG: Macro Risk-On Low challenges setup despite solid JPY weakness bias.\n\nNZDJPY LONG: Copper strength confirms macro tailwind for NZD carry trade.",
+    "text": "GBPJPY LONG: D1 regime confirms, macro context challenges due to risk-on divergence.\n\nNZDJPY LONG: Copper strength confirms macro support for New Zealand commodity currency.\n\nGBPUSD LONG: Risk-on alignment confirms setup, macro divergence presents minor headwind constraint.",
     "top": [
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 8.15
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.98
+        "score": 8.07
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 5.8
+        "score": 7.85
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 7.83
       }
     ],
-    "updated": "2026-07-09T05:50:36.223186+00:00"
+    "updated": "2026-07-09T09:02:42.961652+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T05:50:36.223186+00:00"
+    "updated": "2026-07-09T09:02:42.961652+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Middle East conflict drives safe-haven flows to US dollar",
-      "Dollar climbs on escalation of Middle East hostilities",
-      "Stubborn dollar threatens major breakout against euro and franc"
+      "Dollar climbs on Middle East escalation, safe-haven flows surge",
+      "DXY nears $101 ahead of FOMC meeting minutes",
+      "Oil rally supports USD gains versus EUR, GBP, JPY"
     ],
-    "updated": "2026-07-09T05:50:36.223186+00:00"
+    "updated": "2026-07-09T09:02:42.961652+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
