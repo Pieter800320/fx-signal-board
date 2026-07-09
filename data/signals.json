@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T21:08:21.582607+00:00",
+  "updated": "2026-07-09T22:59:40.497886+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,7 +567,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4132.8,
+      "value": 4131.3,
       "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
@@ -579,7 +579,7 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.249,
+      "value": 6.246,
       "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.77,
-      "delta_pct": -2.4,
+      "value": 71.84,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63308.0,
-      "delta_pct": 1.7,
+      "value": 63170.0,
+      "delta_pct": 1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG and GBPJPY LONG conflict with safe haven flows to USD and JPY strengthening. GBPUSD LONG pressured by dollar gains on Middle East escalation and geopolitical risk.",
-    "updated": "2026-07-09T21:08:21.582607+00:00"
+    "text": "NZDJPY LONG conflict: RBNZ Rate Hike Sparks Kiwi Rally supports setup. GBPJPY and GBPUSD conflict: Dollar gains on Middle East escalation pressures sterling pairs.",
+    "updated": "2026-07-09T22:59:40.497886+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on setup.\n\nGBPJPY LONG: S&P 500 rising confirms setup, but macro divergence creates headwind.\n\nGBPUSD LONG: Weak ADX challenges momentum despite S&P 500 bid confirmation.",
+    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on setup.\n\nGBPUSD LONG: S&P 500 rising confirms GBP bid but ADX weak.\n\nGBPJPY LONG: S&P 500 rising confirms setup with strong ADX momentum.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.9
       }
     ],
-    "updated": "2026-07-09T21:08:21.582607+00:00"
+    "updated": "2026-07-09T22:59:40.497886+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T21:08:21.582607+00:00"
+    "updated": "2026-07-09T22:59:40.497886+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury 30-year bonds auction at 5.058% yield signals higher rates",
-      "Dollar climbs on Middle East escalation and safe-haven flows",
-      "US existing home sales miss expectations at 4.09 million"
+      "US Treasury 30-year bonds auction at 5.058% yield, market impact",
+      "Dollar climbs on Middle East escalation, safe-haven flows strengthen",
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-09T21:08:21.582607+00:00"
+    "updated": "2026-07-09T22:59:40.497886+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
