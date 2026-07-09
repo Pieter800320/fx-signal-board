@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T01:23:42.158687+00:00",
+  "updated": "2026-07-09T05:50:36.223186+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,7 +551,7 @@
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4084.0,
-      "delta_pct": -1.5,
-      "direction": "down",
+      "value": 4084.5,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.01,
-      "delta_pct": -0.0,
+      "value": 100.92,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.1325,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.1455,
+      "delta_pct": 1.5,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.38,
-      "delta_pct": 5.6,
-      "direction": "up",
+      "value": 73.71,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62410.0,
+      "value": 62430.0,
       "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with dollar strength from Middle East tensions and oil rally. Safe haven flows to USD threaten this setup.",
-    "updated": "2026-07-09T01:23:42.158687+00:00"
+    "text": "GBPUSD and GBPJPY conflict. Dollar strength from Middle East safe-haven flows and oil rally directly opposes GBP longs.",
+    "updated": "2026-07-09T05:50:36.223186+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-on regime confirms strong momentum setup. WTI strength supports.\n\nGBPJPY LONG: Risk-on environment aligns with high conviction score. Oil rally confirms.\n\nNZDJPY LONG: Mixed macro and weak CMP challenge marginal score. Gold weakness headwind.",
+    "text": "GBPUSD LONG: Macro Risk-On Low challenges strong technical score via GBP strength.\n\nGBPJPY LONG: Macro Risk-On Low challenges setup despite solid JPY weakness bias.\n\nNZDJPY LONG: Copper strength confirms macro tailwind for NZD carry trade.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -635,10 +635,10 @@
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 5.6
+        "score": 5.8
       }
     ],
-    "updated": "2026-07-09T01:23:42.158687+00:00"
+    "updated": "2026-07-09T05:50:36.223186+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T01:23:42.158687+00:00"
+    "updated": "2026-07-09T05:50:36.223186+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-08T17:15:21.857056+00:00"
+    "generated_at": "2026-07-09T05:51:15.664242+00:00"
   },
   "breaking": {
     "headlines": [
-      "Dollar climbs on Middle East escalation, safe-haven flows",
-      "Oil rally drives USD gains against EUR, GBP, CAD",
+      "Middle East conflict drives safe-haven flows to US dollar",
+      "Dollar climbs on escalation of Middle East hostilities",
       "Stubborn dollar threatens major breakout against euro and franc"
     ],
-    "updated": "2026-07-09T01:23:42.158687+00:00"
+    "updated": "2026-07-09T05:50:36.223186+00:00"
   },
   "last_alert": "2026-06-30T19:00:15.829970+00:00",
   "gold_signal": {
