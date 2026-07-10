@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T18:25:53.589906+00:00",
+  "updated": "2026-07-10T19:10:27.244097+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,45 +548,45 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.42,
-      "delta_pct": -2.7,
+      "value": 15.26,
+      "delta_pct": -3.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7555.78,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 7576.33,
+      "delta_pct": 0.4,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4122.2,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 4109.3,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.76,
-      "delta_pct": -0.2,
+      "value": 100.95,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.286,
-      "delta_pct": 1.1,
+      "value": 6.2785,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.545,
-      "delta_bp": 0.6,
+      "value": 4.567,
+      "delta_bp": 2.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,43 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.08,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 71.59,
+      "delta_pct": -0.7,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63961.0,
-      "delta_pct": 1.2,
+      "value": 63841.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.2,
-      "delta_bp": -0.5,
+      "value": 87.4,
+      "delta_bp": 1.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY face headwinds from dollar strength headlines citing sticky inflation and FOMC minutes supporting USD. NZDJPY supported by RBNZ rate hike catalyst.",
-    "updated": "2026-07-10T16:09:58.979329+00:00"
+    "text": "GBPUSD LONG conflicts with US Dollar Firms headline indicating dollar strength against pound sterling.",
+    "updated": "2026-07-10T19:10:27.244097+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms NZD bid thesis today.\n\nGBPUSD LONG: Risk-on medium supports sterling but oil weakness neutral.\n\nGBPJPY LONG: Risk-on medium supports both currencies equally, no edge.",
+    "text": "NZDJPY LONG: Copper strength confirms NZD bid, supports setup robustly.\n\nGBPUSD LONG: Risk-on low challenges GBP conviction despite equity support.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.35
+        "score": 6.93
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.2
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 6.12
+        "score": 6.4
       }
     ],
-    "updated": "2026-07-10T16:09:58.979329+00:00"
+    "updated": "2026-07-10T19:10:27.244097+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T16:09:58.979329+00:00"
+    "updated": "2026-07-10T19:10:27.244097+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "FOMC Minutes show policy divergence, dollar reacts sharply",
-      "Canada building permits miss 2.4% estimate at -1.7%",
-      "French and German inflation confirmed, easing ECB pressure"
+      "FOMC Minutes show policy divergence, dollar reacts strongly",
+      "Canada building permits miss at -1.7% versus 2.4%",
+      "Dollar climbs on Middle East hostilities escalation"
     ],
-    "updated": "2026-07-10T16:09:58.979329+00:00"
+    "updated": "2026-07-10T19:10:27.244097+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
