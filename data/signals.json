@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T15:35:51.681845+00:00",
+  "updated": "2026-07-10T16:09:58.979329+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,97 +548,97 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.92,
-      "delta_pct": 0.5,
+      "value": 15.42,
+      "delta_pct": -2.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7543.64,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 7555.78,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4111.9,
-      "delta_pct": -0.5,
+      "value": 4122.2,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
-      "delta_pct": -0.1,
+      "value": 100.76,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.265,
-      "delta_pct": 0.8,
+      "value": 6.286,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.539,
-      "delta_bp": -3.0,
+      "value": 4.545,
+      "delta_bp": 0.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.682,
-      "delta_bp": -4.1,
-      "direction": "down",
+      "value": 3.693,
+      "delta_bp": 1.1,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.73,
-      "delta_pct": 0.9,
-      "direction": "flat",
+      "value": 71.08,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64384.0,
-      "delta_pct": 1.9,
+      "value": 63961.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.7,
-      "delta_bp": 1.1,
+      "value": 85.2,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPJPY and NZDJPY longs conflict with dollar strength from US Iran tensions and oil rally. GBPUSD long faces headwinds from dollar gains amid Middle East escalation.",
-    "updated": "2026-07-10T12:16:24.633714+00:00"
+    "text": "GBPUSD and GBPJPY face headwinds from dollar strength headlines citing sticky inflation and FOMC minutes supporting USD. NZDJPY supported by RBNZ rate hike catalyst.",
+    "updated": "2026-07-10T16:09:58.979329+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro confirms via S&P strength driving GBP bid today.\n\nNZDJPY LONG: Macro confirms via dual S&P and Copper strength supporting NZD.\n\nGBPUSD LONG: Macro confirms via S&P rally providing tailwind for GBP.",
+    "text": "NZDJPY LONG: Copper strength confirms NZD bid thesis today.\n\nGBPUSD LONG: Risk-on medium supports sterling but oil weakness neutral.\n\nGBPJPY LONG: Risk-on medium supports both currencies equally, no edge.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 7.5
-      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.2
+        "score": 7.35
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.4
+        "score": 6.2
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 6.12
       }
     ],
-    "updated": "2026-07-10T12:16:24.633714+00:00"
+    "updated": "2026-07-10T16:09:58.979329+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T12:16:24.633714+00:00"
+    "updated": "2026-07-10T16:09:58.979329+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Dollar climbs on escalation of Middle East hostilities",
-      "US Dollar reacts to FOMC minutes on policy divergence",
-      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
+      "FOMC Minutes show policy divergence, dollar reacts sharply",
+      "Canada building permits miss 2.4% estimate at -1.7%",
+      "French and German inflation confirmed, easing ECB pressure"
     ],
-    "updated": "2026-07-10T12:16:24.633714+00:00"
+    "updated": "2026-07-10T16:09:58.979329+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
