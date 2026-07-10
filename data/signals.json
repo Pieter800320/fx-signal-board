@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T08:28:20.217528+00:00",
+  "updated": "2026-07-10T08:54:05.211545+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.84,
-      "delta_pct": -6.3,
-      "direction": "down",
+      "value": 16.09,
+      "delta_pct": 1.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4119.0,
-      "delta_pct": -0.3,
+      "value": 4110.6,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.8,
+      "value": 100.83,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2925,
-      "delta_pct": 1.2,
+      "value": 6.264,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.38,
-      "delta_pct": 0.4,
+      "value": 71.98,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64115.0,
-      "delta_pct": 3.0,
-      "direction": "up",
+      "value": 64141.0,
+      "delta_pct": 1.5,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG and GBPJPY LONG conflict with safe haven flows to USD and yen strength headlines. Dollar and yen rallying undermines these long setups.",
-    "updated": "2026-07-10T05:47:49.738607+00:00"
+    "text": "GBPUSD and GBPJPY at risk from dollar strength amid oil rally and Middle East tensions. USD gaining ground conflicts with GBP long setups.",
+    "updated": "2026-07-10T08:54:05.211545+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and copper rising strongly confirm the setup.\n\nGBPJPY LONG: S&P 500 rising confirms setup; macro context fully aligned.\n\nGBPUSD LONG: S&P 500 rising confirms but low ADX challenges conviction.",
+    "text": "NZDJPY LONG: Risk-on and copper strength directly confirm NZD bid thesis.\n\nGBPJPY LONG: Risk-on supports GBP, but ranging regime limits JPY weakness.\n\nGBPUSD LONG: Risk-on GBP strength confirmed, but low ADX signals weak momentum.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 9.28
+        "score": 7.55
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 8.18
+        "score": 7.08
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.9
+        "score": 6.4
       }
     ],
-    "updated": "2026-07-10T05:47:49.738607+00:00"
+    "updated": "2026-07-10T08:54:05.211545+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T05:47:49.738607+00:00"
+    "updated": "2026-07-10T08:54:05.211545+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-09T19:15:40.133045+00:00"
+    "generated_at": "2026-07-10T08:54:30.161061+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan PPI +7.1% beats forecast, BOJ hike pressure increases",
-      "Dollar gains on Middle East tensions, safe-haven flows surge",
-      "RBNZ rate hike sparks kiwi rally amid global consolidation"
+      "US Dollar gains amid Middle East escalation and oil rally",
+      "RBNZ rate hike sparks kiwi rally, signals policy divergence",
+      "French and German inflation confirmed steady, easing ECB pressure"
     ],
-    "updated": "2026-07-10T05:47:49.738607+00:00"
+    "updated": "2026-07-10T08:54:05.211545+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
