@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T01:20:44.007186+00:00",
+  "updated": "2026-07-10T05:47:49.738607+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
@@ -567,9 +567,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4134.0,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 4119.0,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.265,
-      "delta_pct": 3.5,
+      "value": 6.2925,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 72.0,
-      "delta_pct": -2.1,
-      "direction": "down",
+      "value": 72.38,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63320.0,
-      "delta_pct": 1.7,
-      "direction": "flat",
+      "value": 64115.0,
+      "delta_pct": 3.0,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG invalidated by RBNZ rate hike sparking Kiwi rally, reducing carry appeal. GBPJPY LONG and GBPUSD LONG conflicted by dollar safe haven flows from Middle East escalation.",
-    "updated": "2026-07-10T01:20:44.007186+00:00"
+    "text": "NZDJPY LONG and GBPJPY LONG conflict with safe haven flows to USD and yen strength headlines. Dollar and yen rallying undermines these long setups.",
+    "updated": "2026-07-10T05:47:49.738607+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on directional bias.\n\nGBPUSD LONG: S&P 500 rising confirms setup but ADX weakness challenges momentum.\n\nGBPJPY LONG: Risk-on regime with equity strength confirms carry trade bullish setup.",
+    "text": "NZDJPY LONG: VIX falling and copper rising strongly confirm the setup.\n\nGBPJPY LONG: S&P 500 rising confirms setup; macro context fully aligned.\n\nGBPUSD LONG: S&P 500 rising confirms but low ADX challenges conviction.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 9.08
+        "score": 9.28
       },
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.9
       }
     ],
-    "updated": "2026-07-10T01:20:44.007186+00:00"
+    "updated": "2026-07-10T05:47:49.738607+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T01:20:44.007186+00:00"
+    "updated": "2026-07-10T05:47:49.738607+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan June 2026 PPI +7.1% y/y vs. expected 6.8%, prior 6.3%",
-      "Dollar climbs on escalation of Middle East hostilities, safe-haven flows",
-      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
+      "Japan PPI +7.1% beats forecast, BOJ hike pressure increases",
+      "Dollar gains on Middle East tensions, safe-haven flows surge",
+      "RBNZ rate hike sparks kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-10T01:20:44.007186+00:00"
+    "updated": "2026-07-10T05:47:49.738607+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
