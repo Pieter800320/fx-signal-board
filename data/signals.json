@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T20:56:58.894787+00:00",
+  "updated": "2026-07-10T22:45:27.898697+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4120.8,
-      "delta_pct": -0.2,
+      "value": 4128.9,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.98,
+      "value": 100.96,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.286,
+      "value": 6.285,
       "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63785.0,
-      "delta_pct": 0.9,
+      "value": 64086.0,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind from US Dollar Firms Amid Sticky Inflation headline suggesting dollar strength. NZDJPY LONG supported by RBNZ Rate Hike Sparks Kiwi Rally headline.",
-    "updated": "2026-07-10T20:56:58.894787+00:00"
+    "text": "GBPUSD LONG potentially conflicted by US Dollar strength headlines citing sticky inflation and FOMC minutes supporting dollar appreciation.",
+    "updated": "2026-07-10T22:45:27.898697+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX decline and risk-on equities strongly confirm directional bias.\n\nGBPUSD LONG: Rising S&P 500 supports setup but medium risk-on limits conviction.",
+    "text": "NZDJPY LONG: VIX falling and copper rising confirm NZD strength setup.\n\nGBPUSD LONG: S&P 500 rising confirms GBP bid but ADX weak.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-10T20:56:58.894787+00:00"
+    "updated": "2026-07-10T22:45:27.898697+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T20:56:58.894787+00:00"
+    "updated": "2026-07-10T22:45:27.898697+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid sticky inflation and FOMC minutes policy divergence",
+      "US Dollar gains amid sticky inflation, FOMC minutes signal policy divergence",
       "Canada building permits miss forecast at -1.7% versus 2.4% estimate",
-      "Dollar climbs on escalation of Middle East hostilities, oil rally"
+      "Dollar climbs on escalation of Middle East hostilities, oil prices rise"
     ],
-    "updated": "2026-07-10T20:56:58.894787+00:00"
+    "updated": "2026-07-10T22:45:27.898697+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
