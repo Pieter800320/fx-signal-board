@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T12:04:38.161081+00:00",
+  "updated": "2026-07-10T12:16:24.633714+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,15 +548,15 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.09,
-      "delta_pct": 1.6,
+      "value": 15.92,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4110.6,
+      "value": 4111.9,
       "delta_pct": -0.5,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.83,
+      "value": 100.86,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.264,
+      "value": 6.265,
       "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.98,
-      "delta_pct": -0.1,
+      "value": 72.73,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64141.0,
-      "delta_pct": 1.5,
+      "value": 64384.0,
+      "delta_pct": 1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and GBPJPY at risk from dollar strength amid oil rally and Middle East tensions. USD gaining ground conflicts with GBP long setups.",
-    "updated": "2026-07-10T08:54:05.211545+00:00"
+    "text": "GBPJPY and NZDJPY longs conflict with dollar strength from US Iran tensions and oil rally. GBPUSD long faces headwinds from dollar gains amid Middle East escalation.",
+    "updated": "2026-07-10T12:16:24.633714+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Risk-on and copper strength directly confirm NZD bid thesis.\n\nGBPJPY LONG: Risk-on supports GBP, but ranging regime limits JPY weakness.\n\nGBPUSD LONG: Risk-on GBP strength confirmed, but low ADX signals weak momentum.",
+    "text": "GBPJPY LONG: Macro confirms via S&P strength driving GBP bid today.\n\nNZDJPY LONG: Macro confirms via dual S&P and Copper strength supporting NZD.\n\nGBPUSD LONG: Macro confirms via S&P rally providing tailwind for GBP.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 7.55
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.5
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 7.2
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-10T08:54:05.211545+00:00"
+    "updated": "2026-07-10T12:16:24.633714+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T08:54:05.211545+00:00"
+    "updated": "2026-07-10T12:16:24.633714+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid Middle East escalation and oil rally",
-      "RBNZ rate hike sparks kiwi rally, signals policy divergence",
-      "French and German inflation confirmed steady, easing ECB pressure"
+      "Dollar climbs on escalation of Middle East hostilities",
+      "US Dollar reacts to FOMC minutes on policy divergence",
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-10T08:54:05.211545+00:00"
+    "updated": "2026-07-10T12:16:24.633714+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
