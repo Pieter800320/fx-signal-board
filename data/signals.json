@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-10T20:37:35.997706+00:00",
+  "updated": "2026-07-10T20:56:58.894787+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,56 +555,56 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.26,
-      "delta_pct": -3.7,
-      "direction": "flat",
+      "value": 15.03,
+      "delta_pct": -5.1,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7576.33,
+      "value": 7575.39,
       "delta_pct": 0.4,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4109.3,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 4120.8,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.95,
+      "value": 100.98,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2785,
-      "delta_pct": 1.0,
+      "value": 6.286,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.567,
-      "delta_bp": 2.8,
+      "value": 4.569,
+      "delta_bp": 3.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": 1.1,
+      "value": 3.695,
+      "delta_bp": 1.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.59,
-      "delta_pct": -0.7,
+      "value": 71.51,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63841.0,
-      "delta_pct": 1.0,
+      "value": 63785.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with US Dollar Firms headline indicating dollar strength against pound sterling.",
-    "updated": "2026-07-10T19:10:27.244097+00:00"
+    "text": "GBPUSD LONG faces headwind from US Dollar Firms Amid Sticky Inflation headline suggesting dollar strength. NZDJPY LONG supported by RBNZ Rate Hike Sparks Kiwi Rally headline.",
+    "updated": "2026-07-10T20:56:58.894787+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms NZD bid, supports setup robustly.\n\nGBPUSD LONG: Risk-on low challenges GBP conviction despite equity support.",
+    "text": "NZDJPY LONG: VIX decline and risk-on equities strongly confirm directional bias.\n\nGBPUSD LONG: Rising S&P 500 supports setup but medium risk-on limits conviction.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 6.93
+        "score": 7.12
       },
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-10T19:10:27.244097+00:00"
+    "updated": "2026-07-10T20:56:58.894787+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-10T19:10:27.244097+00:00"
+    "updated": "2026-07-10T20:56:58.894787+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-10T08:54:30.161061+00:00"
+    "generated_at": "2026-07-10T20:57:23.557513+00:00"
   },
   "breaking": {
     "headlines": [
-      "FOMC Minutes show policy divergence, dollar reacts strongly",
-      "Canada building permits miss at -1.7% versus 2.4%",
-      "Dollar climbs on Middle East hostilities escalation"
+      "US Dollar gains amid sticky inflation and FOMC minutes policy divergence",
+      "Canada building permits miss forecast at -1.7% versus 2.4% estimate",
+      "Dollar climbs on escalation of Middle East hostilities, oil rally"
     ],
-    "updated": "2026-07-10T19:10:27.244097+00:00"
+    "updated": "2026-07-10T20:56:58.894787+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
