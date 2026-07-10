@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-09T22:59:40.497886+00:00",
+  "updated": "2026-07-10T01:20:44.007186+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4131.3,
-      "delta_pct": 1.5,
+      "value": 4134.0,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.94,
+      "value": 100.8,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.246,
-      "delta_pct": 3.2,
+      "value": 6.265,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.84,
-      "delta_pct": -2.3,
+      "value": 72.0,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63170.0,
-      "delta_pct": 1.5,
+      "value": 63320.0,
+      "delta_pct": 1.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG conflict: RBNZ Rate Hike Sparks Kiwi Rally supports setup. GBPJPY and GBPUSD conflict: Dollar gains on Middle East escalation pressures sterling pairs.",
-    "updated": "2026-07-09T22:59:40.497886+00:00"
+    "text": "NZDJPY LONG invalidated by RBNZ rate hike sparking Kiwi rally, reducing carry appeal. GBPJPY LONG and GBPUSD LONG conflicted by dollar safe haven flows from Middle East escalation.",
+    "updated": "2026-07-10T01:20:44.007186+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on setup.\n\nGBPUSD LONG: S&P 500 rising confirms GBP bid but ADX weak.\n\nGBPJPY LONG: S&P 500 rising confirms setup with strong ADX momentum.",
+    "text": "NZDJPY LONG: VIX falling and copper surge strongly confirm risk-on directional bias.\n\nGBPUSD LONG: S&P 500 rising confirms setup but ADX weakness challenges momentum.\n\nGBPJPY LONG: Risk-on regime with equity strength confirms carry trade bullish setup.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.9
       }
     ],
-    "updated": "2026-07-09T22:59:40.497886+00:00"
+    "updated": "2026-07-10T01:20:44.007186+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-09T22:59:40.497886+00:00"
+    "updated": "2026-07-10T01:20:44.007186+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury 30-year bonds auction at 5.058% yield, market impact",
-      "Dollar climbs on Middle East escalation, safe-haven flows strengthen",
+      "Japan June 2026 PPI +7.1% y/y vs. expected 6.8%, prior 6.3%",
+      "Dollar climbs on escalation of Middle East hostilities, safe-haven flows",
       "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-09T22:59:40.497886+00:00"
+    "updated": "2026-07-10T01:20:44.007186+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
