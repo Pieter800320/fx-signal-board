@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T18:39:29.701593+00:00",
+  "updated": "2026-07-11T20:35:03.341772+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64280.0,
-      "delta_pct": 0.2,
+      "value": 64308.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with US Dollar Firms headline indicating dollar strength bias against sterling today.",
-    "updated": "2026-07-11T18:39:29.701593+00:00"
+    "text": "GBPUSD LONG conflicts: US Dollar Firms Amid Sticky Inflation headline suggests dollar strength headwinds for cable.",
+    "updated": "2026-07-11T20:35:03.341772+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm NZD strength thesis.\n\nGBPUSD LONG: S&P rising confirms GBP bid but low ADX challenges momentum.",
+    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm the setup.\n\nGBPUSD LONG: S&P rising confirms setup but low ADX challenges momentum.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-11T18:39:29.701593+00:00"
+    "updated": "2026-07-11T20:35:03.341772+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-11T18:39:29.701593+00:00"
+    "updated": "2026-07-11T20:35:03.341772+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid Middle East tensions, oil rally impacts currency pairs",
-      "Canada building permits miss forecast at -1.7% versus 2.4% estimate",
-      "French inflation confirmed lower in June, eases ECB pressure outlook"
+      "US Dollar Gains Ground Amid Rally In Oil Markets: EUR/USD, GBP/USD Analysis",
+      "Canada building permits May -1.7% versus 2.4% estimate misses expectations",
+      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
     ],
-    "updated": "2026-07-11T18:39:29.701593+00:00"
+    "updated": "2026-07-11T20:35:03.341772+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
