@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T10:49:21.022388+00:00",
+  "updated": "2026-07-11T12:43:11.456577+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64127.0,
-      "delta_pct": -0.0,
+      "value": 64088.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind from US Dollar strengthening amid sticky inflation and oil rally. Dollar firmness contradicts bullish GBP setup momentum.",
-    "updated": "2026-07-11T10:49:21.022388+00:00"
+    "text": "GBPUSD LONG conflicts with US Dollar Firms headline indicating dollar strength against sterling. NZDJPY LONG supported by RBNZ Rate Hike Sparks Kiwi Rally.",
+    "updated": "2026-07-11T12:43:11.456577+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm NZD strength setup.\n\nGBPUSD LONG: S&P rising confirms GBP bid but ADX weak challenges momentum.",
+    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm NZD bid strongly.\n\nGBPUSD LONG: S&P rising confirms GBP bid but ADX sixteen suggests weak trend.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-11T10:49:21.022388+00:00"
+    "updated": "2026-07-11T12:43:11.456577+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-11T10:49:21.022388+00:00"
+    "updated": "2026-07-11T12:43:11.456577+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "US Dollar gains amid sticky inflation, FOMC minutes signal policy divergence",
-      "Canada building permits miss forecast at -1.7% versus 2.4% estimate",
-      "Dollar climbs on escalation of Middle East hostilities, oil prices rise"
+      "Canada building permits decline to -1.7% versus 2.4% estimate",
+      "Dollar climbs on escalation of Middle East hostilities, oil rally"
     ],
-    "updated": "2026-07-11T10:49:21.022388+00:00"
+    "updated": "2026-07-11T12:43:11.456577+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
