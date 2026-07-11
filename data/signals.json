@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-11T01:14:26.428256+00:00",
+  "updated": "2026-07-11T04:48:54.343546+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4128.9,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 4104.1,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.96,
+      "value": 100.97,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.285,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 6.2335,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.51,
-      "delta_pct": -0.8,
+      "value": 71.41,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64100.0,
-      "delta_pct": 1.4,
+      "value": 64132.0,
+      "delta_pct": 1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by US Dollar Firms headlines showing dollar strength against GBP. NZDJPY LONG supported by RBNZ Rate Hike Sparks Kiwi Rally headline.",
-    "updated": "2026-07-11T01:14:26.428256+00:00"
+    "text": "GBPUSD LONG conflicts with US Dollar Firms headline suggesting dollar strength ahead. Dollar Climbs on Middle East escalation also supports USD strength bias.",
+    "updated": "2026-07-11T04:48:54.343546+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strengthens NZD bid signal.\n\nGBPUSD LONG: Macro confirms setup, risk-on medium supports GBP appreciation thesis.",
+    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm NZD strength today.\n\nGBPUSD LONG: Risk-on medium supports GBP bid but low ADX challenges momentum.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.12
+        "score": 6.93
       },
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-11T01:14:26.428256+00:00"
+    "updated": "2026-07-11T04:48:54.343546+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-11T01:14:26.428256+00:00"
+    "updated": "2026-07-11T04:48:54.343546+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid Middle East tensions and oil market rally",
-      "Canada building permits miss forecast at -1.7% versus 2.4% estimate",
-      "French inflation confirmed falling in June, easing ECB pressure"
+      "FOMC Minutes show policy divergence, dollar reacts sharply",
+      "Canada building permits miss at -1.7% vs 2.4%",
+      "Dollar gains amid Middle East tensions, oil rally"
     ],
-    "updated": "2026-07-11T01:14:26.428256+00:00"
+    "updated": "2026-07-11T04:48:54.343546+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
