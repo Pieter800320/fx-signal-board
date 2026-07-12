@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T21:50:30.602702+00:00",
+  "updated": "2026-07-12T22:34:11.862643+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,15 +542,15 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4113.7,
-      "delta_pct": -0.4,
+      "value": 4091.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
-      "delta_pct": 0.0,
+      "value": 101.14,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.282,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 6.2505,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 71.41,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 73.81,
+      "delta_pct": 3.4,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63865.0,
-      "delta_pct": 0.1,
+      "value": 63778.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG: UK PM Burnham expansive autumn budget may weaken GBP via fiscal concerns. NZDJPY LONG: Middle East escalation strengthens JPY safe haven demand, opposing setup.",
-    "updated": "2026-07-12T21:50:30.602702+00:00"
+    "text": "GBPUSD LONG conflicted by UK fiscal uncertainty from incoming PM Burnham budget announcement. Dollar strength headlines support NZDJPY LONG setup.",
+    "updated": "2026-07-12T22:34:11.862643+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strengthens NZD bid.\n\nGBPUSD LONG: Macro confirms setup, risk-on medium supports GBP appreciation.",
+    "text": "NZDJPY LONG: VIX falling and S&P rising confirm setup strongly today.\n\nGBPUSD LONG: S&P rising confirms setup but weak ADX challenges conviction.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.12
+        "score": 6.93
       },
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T21:50:30.602702+00:00"
+    "updated": "2026-07-12T22:34:11.862643+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T21:50:30.602702+00:00"
+    "updated": "2026-07-12T22:34:11.862643+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -700,7 +700,7 @@
       "Dollar climbs on escalation of Middle East hostilities",
       "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-12T21:50:30.602702+00:00"
+    "updated": "2026-07-12T22:34:11.862643+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
@@ -712,7 +712,7 @@
     "updated": "2026-07-10T20:37:35.997706+00:00"
   },
   "week_ahead": {
-    "text": "I'll search for the latest weekly FX previews to provide you with current market analysis. US data dominates the week as markets reassess rate expectations and test dollar resilience amid geopolitical tensions. The Strait of Hormuz shutdown and Iran escalation create the critical backdrop, though the BOJ rate hike to 100 bps Tuesday will directly trigger JPY volatility as it competes with Fed pause positioning. USD/JPY faces BOJ intervention risk at breakout attempts while testing critical resistance above 161.60. Oil supply disruption through Hormuz poses the biggest wildcard\u2014if crude sustains elevated levels it threatens to reignite inflation fears and derail the Fed hold consensus priced into Wednesday.",
-    "generated_at": "2026-07-12T21:50:30.602702+00:00"
+    "text": "The dollar dominates amid slew of US data and Mideast tensions , with US data in focus this week . USD/JPY is knocking on the door of a major breakout, but BOJ intervention risk continues to keep traders on edge as the deterioration of the former ceasefire between the USA and Iran continues into daily exchanges of fire centred around the Strait of Hormuz, with the Strait effectively closed to shipping . BOJ's interest rate decision will determine whether USD/JPY can extend higher , presenting the critical pivot for the week. Watch USD/JPY closely as it balances Fed tightening expectations against potential BOJ intervention and geopolitical risk premium. If the Strait closure does not change quickly, the price of crude oil is going to trade higher when markets open this week , adding inflationary pressure that could derail rate cut bets.",
+    "generated_at": "2026-07-12T22:34:11.862643+00:00"
   }
 }
