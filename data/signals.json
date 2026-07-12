@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T11:05:07.721030+00:00",
+  "updated": "2026-07-12T12:44:37.165780+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
@@ -567,9 +567,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4113.7,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 4104.1,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
@@ -579,9 +579,9 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.282,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 6.2335,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63859.0,
-      "delta_pct": 0.1,
+      "value": 63985.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG potentially challenged by dollar strength headlines citing sticky inflation and FOMC minutes supporting USD appreciation against GBP.",
-    "updated": "2026-07-12T11:05:07.721030+00:00"
+    "text": "GBPUSD LONG conflicts with Dollar Firms headline. USD strength amid sticky inflation and FOMC minutes suggest headwinds for GBP appreciation.",
+    "updated": "2026-07-12T12:44:37.165780+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strengthens NZD carry bid.\n\nGBPUSD LONG: Macro confirms setup, risk-on medium supports GBP upside.",
+    "text": "NZDJPY LONG: VIX falling and risk-on confluence strongly confirm the setup.\n\nGBPUSD LONG: Risk-on medium supports GBP bid but low ADX challenges momentum.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.12
+        "score": 6.93
       },
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T11:05:07.721030+00:00"
+    "updated": "2026-07-12T12:44:37.165780+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T11:05:07.721030+00:00"
+    "updated": "2026-07-12T12:44:37.165780+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid sticky inflation, FOMC minutes signal policy divergence",
-      "Canada building permits miss at -1.7% versus 2.4% estimate",
-      "Dollar climbs on escalation of Middle East hostilities, oil rally"
+      "US Dollar Gains Ground Amid Rally In The Oil Markets: EUR/USD, GBP/USD, USD/CAD, USD/JPY",
+      "Canada building permits May -1.7% versus 2.4% estimate, CAD under pressure",
+      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
     ],
-    "updated": "2026-07-12T11:05:07.721030+00:00"
+    "updated": "2026-07-12T12:44:37.165780+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
