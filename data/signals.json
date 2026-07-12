@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T07:51:52.342827+00:00",
+  "updated": "2026-07-12T09:38:49.482933+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63824.0,
-      "delta_pct": 0.0,
+      "value": 63877.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with Dollar Firms Amid Sticky Inflation headline, suggesting USD strength headwinds for GBP appreciation.",
-    "updated": "2026-07-12T07:51:52.342827+00:00"
+    "text": "GBPUSD LONG conflicted by dollar strength headlines citing sticky inflation and FOMC minutes supporting USD rally momentum.",
+    "updated": "2026-07-12T09:38:49.482933+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and copper rising strongly confirm setup.\n\nGBPUSD LONG: S&P 500 rising confirms but low ADX challenges.",
+    "text": "NZDJPY LONG: VIX decline and risk-on confluence strongly confirms the setup.\n\nGBPUSD LONG: Rising equities support setup but weak ADX challenges momentum sustainability.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T07:51:52.342827+00:00"
+    "updated": "2026-07-12T09:38:49.482933+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T07:51:52.342827+00:00"
+    "updated": "2026-07-12T09:38:49.482933+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid sticky inflation and FOMC policy divergence signals",
-      "Canada building permits miss estimate at -1.7%, weighs on CAD",
-      "Dollar climbs on Middle East escalation and oil market rally"
+      "US Dollar Gains Ground Amid Rally In The Oil Markets: EUR/USD, GBP/USD",
+      "Canada building permits for May -1.7% versus 2.4% estimate",
+      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
     ],
-    "updated": "2026-07-12T07:51:52.342827+00:00"
+    "updated": "2026-07-12T09:38:49.482933+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
