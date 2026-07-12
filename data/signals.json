@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T14:44:47.349086+00:00",
+  "updated": "2026-07-12T16:40:20.537727+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64027.0,
+      "value": 64076.0,
       "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG potentially challenged by US Dollar strengthening on sticky inflation and geopolitical tensions. Dollar firmness contradicts setup thesis.",
-    "updated": "2026-07-12T14:44:47.349086+00:00"
+    "text": "GBPUSD LONG faces headwinds from dollar strength headlines citing sticky inflation and FOMC minutes signaling policy divergence favoring USD.",
+    "updated": "2026-07-12T16:40:20.537727+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling strongly confirms the carry trade bid setup today.\n\nGBPUSD LONG: S&P 500 rising supports GBP bid but low ADX challenges momentum conviction.",
+    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strongly supports NZD bid thesis.\n\nGBPUSD LONG: Macro confirms setup, risk on medium supports GBP strength continuation.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T14:44:47.349086+00:00"
+    "updated": "2026-07-12T16:40:20.537727+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T14:44:47.349086+00:00"
+    "updated": "2026-07-12T16:40:20.537727+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "FOMC Minutes signal policy divergence, USD strengthens against GBP/EUR",
-      "Canada building permits miss forecast at -1.7%, CAD under pressure",
-      "French inflation falls in June, eases ECB rate pressure"
+      "US CPI and Fed Chair Warsh take center stage this week",
+      "Canada building permits for May -1.7% versus 2.4% estimate",
+      "Dollar climbs on escalation of Middle East hostilities"
     ],
-    "updated": "2026-07-12T14:44:47.349086+00:00"
+    "updated": "2026-07-12T16:40:20.537727+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
