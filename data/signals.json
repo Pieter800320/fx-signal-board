@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T18:43:13.129358+00:00",
+  "updated": "2026-07-12T20:32:40.984144+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64068.0,
-      "delta_pct": 0.4,
+      "value": 64148.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind: US Dollar strengthening on sticky inflation and geopolitical tensions could pressure sterling upside.",
-    "updated": "2026-07-12T18:43:13.129358+00:00"
+    "text": "GBPUSD LONG faces headwind from dollar strength headlines citing sticky inflation and FOMC minutes supporting USD. NZDJPY LONG supported by RBNZ rate hike catalyst.",
+    "updated": "2026-07-12T20:32:40.984144+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling confirms setup as primary NZD strength driver today.\n\nGBPUSD LONG: S&P 500 rising confirms setup but weak ADX challenges conviction.",
+    "text": "NZDJPY LONG: VIX decline and risk-on equities strongly confirm setup thesis.\n\nGBPUSD LONG: S&P 500 strength confirms but weak ADX challenges momentum.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T18:43:13.129358+00:00"
+    "updated": "2026-07-12T20:32:40.984144+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T18:43:13.129358+00:00"
+    "updated": "2026-07-12T20:32:40.984144+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "US CPI and Fed Chair Warsh take center stage this week",
-      "Canada building permits May -1.7% versus 2.4% estimate",
+      "Canada building permits for May -1.7% versus 2.4% estimate",
       "Dollar climbs on escalation of Middle East hostilities"
     ],
-    "updated": "2026-07-12T18:43:13.129358+00:00"
+    "updated": "2026-07-12T20:32:40.984144+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
