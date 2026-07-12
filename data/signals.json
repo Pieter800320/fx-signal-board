@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T20:32:40.984144+00:00",
+  "updated": "2026-07-12T21:50:30.602702+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64148.0,
-      "delta_pct": 0.5,
+      "value": 63865.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind from dollar strength headlines citing sticky inflation and FOMC minutes supporting USD. NZDJPY LONG supported by RBNZ rate hike catalyst.",
-    "updated": "2026-07-12T20:32:40.984144+00:00"
+    "text": "GBPUSD LONG: UK PM Burnham expansive autumn budget may weaken GBP via fiscal concerns. NZDJPY LONG: Middle East escalation strengthens JPY safe haven demand, opposing setup.",
+    "updated": "2026-07-12T21:50:30.602702+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX decline and risk-on equities strongly confirm setup thesis.\n\nGBPUSD LONG: S&P 500 strength confirms but weak ADX challenges momentum.",
+    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strengthens NZD bid.\n\nGBPUSD LONG: Macro confirms setup, risk-on medium supports GBP appreciation.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T20:32:40.984144+00:00"
+    "updated": "2026-07-12T21:50:30.602702+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T20:32:40.984144+00:00"
+    "updated": "2026-07-12T21:50:30.602702+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "US CPI and Fed Chair Warsh take center stage this week",
-      "Canada building permits for May -1.7% versus 2.4% estimate",
-      "Dollar climbs on escalation of Middle East hostilities"
+      "Dollar climbs on escalation of Middle East hostilities",
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-12T20:32:40.984144+00:00"
+    "updated": "2026-07-12T21:50:30.602702+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
@@ -710,5 +710,9 @@
     "h4_confidence": "Low",
     "h1_confirmed": false,
     "updated": "2026-07-10T20:37:35.997706+00:00"
+  },
+  "week_ahead": {
+    "text": "I'll search for the latest weekly FX previews to provide you with current market analysis. US data dominates the week as markets reassess rate expectations and test dollar resilience amid geopolitical tensions. The Strait of Hormuz shutdown and Iran escalation create the critical backdrop, though the BOJ rate hike to 100 bps Tuesday will directly trigger JPY volatility as it competes with Fed pause positioning. USD/JPY faces BOJ intervention risk at breakout attempts while testing critical resistance above 161.60. Oil supply disruption through Hormuz poses the biggest wildcard\u2014if crude sustains elevated levels it threatens to reignite inflation fears and derail the Fed hold consensus priced into Wednesday.",
+    "generated_at": "2026-07-12T21:50:30.602702+00:00"
   }
 }
