@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T20:45:17.838639+00:00",
+  "updated": "2026-07-13T22:41:00.069132+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4005.7,
-      "delta_pct": -2.4,
+      "value": 4010.4,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.31,
+      "value": 101.28,
       "delta_pct": 0.3,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2745,
-      "delta_pct": 0.7,
+      "value": 6.2735,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.05,
-      "delta_pct": 9.3,
+      "value": 78.11,
+      "delta_pct": 9.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62093.0,
-      "delta_pct": -2.6,
+      "value": 62002.0,
+      "delta_pct": -2.8,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG accelerated by RBNZ rate hike sparking Kiwi rally. EURUSD SHORT supported by dollar firmness amid sticky inflation concerns.",
-    "updated": "2026-07-13T20:45:17.838639+00:00"
+    "text": "NZDJPY LONG accelerated by RBNZ rate hike sparking Kiwi rally headline. EURUSD SHORT supported by dollar firmness amid sticky inflation reports.",
+    "updated": "2026-07-13T22:41:00.069132+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup via rising US 10Y JPY weakness driver.\n\nEURUSD SHORT: Macro confirms setup via VIX spike USD strength driver.",
+    "text": "NZDJPY LONG: Macro confirms setup via rising copper bidding NZD strongly.\n\nEURUSD SHORT: Macro confirms setup via VIX and ten year rising.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 2.78
       }
     ],
-    "updated": "2026-07-13T20:45:17.838639+00:00"
+    "updated": "2026-07-13T22:41:00.069132+00:00"
   },
   "calendar": {
     "events": [
@@ -688,11 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-13T20:45:17.838639+00:00"
-  },
-  "week_ahead": {
-    "text": "The dollar dominates amid slew of US data and Mideast tensions , with US data in focus this week . USD/JPY is knocking on the door of a major breakout, but BOJ intervention risk continues to keep traders on edge as the deterioration of the former ceasefire between the USA and Iran continues into daily exchanges of fire centred around the Strait of Hormuz, with the Strait effectively closed to shipping . BOJ's interest rate decision will determine whether USD/JPY can extend higher , presenting the critical pivot for the week. Watch USD/JPY closely as it balances Fed tightening expectations against potential BOJ intervention and geopolitical risk premium. If the Strait closure does not change quickly, the price of crude oil is going to trade higher when markets open this week , adding inflationary pressure that could derail rate cut bets.",
-    "generated_at": "2026-07-12T22:34:11.862643+00:00"
+    "updated": "2026-07-13T22:41:00.069132+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -700,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump reimposes Iran blockade, places 20% toll on Hormuz shipping",
-      "US June federal budget deficit $120 billion vs $138 billion expected",
-      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
+      "US Dollar Reacts to FOMC Minutes on Policy Divergence GBP/USD EUR/USD",
+      "NZ QSBO Business Confidence Rebounds Rising Cost Pressures Cloud RBNZ Path",
+      "Oil Prices Spike as Trump Announces Blockade and Tolls"
     ],
-    "updated": "2026-07-13T20:45:17.838639+00:00"
+    "updated": "2026-07-13T22:41:00.069132+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
