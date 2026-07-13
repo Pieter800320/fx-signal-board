@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T18:46:46.784179+00:00",
+  "updated": "2026-07-13T19:06:48.786454+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -540,65 +540,65 @@
   },
   "regime_w1": {
     "regime": "Risk-On",
-    "confidence": "High",
+    "confidence": "Medium",
     "score": 0.0,
-    "signals": -3,
-    "total": 3,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.32,
-      "delta_pct": 8.6,
+      "value": 16.96,
+      "delta_pct": 12.8,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7536.39,
-      "delta_pct": -0.5,
+      "value": 7522.61,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4023.1,
-      "delta_pct": -2.0,
+      "value": 4009.3,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.12,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 101.24,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3055,
-      "delta_pct": 1.2,
+      "value": 6.282,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.598,
-      "delta_bp": 2.9,
-      "direction": "flat",
+      "value": 4.614,
+      "delta_bp": 4.5,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.723,
-      "delta_bp": 2.8,
+      "value": 3.732,
+      "delta_bp": 3.7,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.86,
-      "delta_pct": 4.8,
+      "value": 77.54,
+      "delta_pct": 8.6,
       "direction": "up",
       "label": "WTI Oil"
     },
@@ -609,26 +609,31 @@
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.5,
-      "delta_bp": 0.1,
+      "value": 88.2,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG at risk. RBNZ rate hike sparks Kiwi rally, but US Dollar gains amid oil rally and geopolitical tensions support Yen strength.",
-    "updated": "2026-07-13T16:16:26.651956+00:00"
+    "text": "EURUSD SHORT invalidated. Sticky inflation and FOMC minutes signal stronger USD support, conflicting with euro strength needed for short.\n\nNZDJPY LONG accelerated. RBNZ rate hike sparks Kiwi rally, supporting long positioning.",
+    "updated": "2026-07-13T19:06:48.786454+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms NZD bid, macro supports setup thesis.",
+    "text": "NZDJPY LONG: Macro confirms setup via rising copper supporting NZD bid.\n\nEURUSD SHORT: Macro confirms setup via VIX and US 10Y supporting USD bid.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.58
+        "score": 7.08
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 2.73
       }
     ],
-    "updated": "2026-07-13T16:16:26.651956+00:00"
+    "updated": "2026-07-13T19:06:48.786454+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-13T16:16:26.651956+00:00"
+    "updated": "2026-07-13T19:06:48.786454+00:00"
   },
   "week_ahead": {
     "text": "The dollar dominates amid slew of US data and Mideast tensions , with US data in focus this week . USD/JPY is knocking on the door of a major breakout, but BOJ intervention risk continues to keep traders on edge as the deterioration of the former ceasefire between the USA and Iran continues into daily exchanges of fire centred around the Strait of Hormuz, with the Strait effectively closed to shipping . BOJ's interest rate decision will determine whether USD/JPY can extend higher , presenting the critical pivot for the week. Watch USD/JPY closely as it balances Fed tightening expectations against potential BOJ intervention and geopolitical risk premium. If the Strait closure does not change quickly, the price of crude oil is going to trade higher when markets open this week , adding inflationary pressure that could derail rate cut bets.",
@@ -695,11 +700,11 @@
   },
   "breaking": {
     "headlines": [
-      "US 2-year yields touched highest since February 2025",
       "Trump reimposes Iran blockade, places 20% toll on Hormuz shipping",
-      "India inflation breaches RBI target at 4.38% in June"
+      "US 2-year yields touched highest since February 2025",
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-13T16:16:26.651956+00:00"
+    "updated": "2026-07-13T19:06:48.786454+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
