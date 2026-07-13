@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-12T22:34:11.862643+00:00",
+  "updated": "2026-07-13T01:17:09.476596+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4091.0,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4083.5,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.14,
+      "value": 101.18,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2505,
-      "delta_pct": 0.3,
+      "value": 6.234,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.81,
-      "delta_pct": 3.4,
+      "value": 74.33,
+      "delta_pct": 4.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63778.0,
-      "delta_pct": -0.0,
+      "value": 63807.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by UK fiscal uncertainty from incoming PM Burnham budget announcement. Dollar strength headlines support NZDJPY LONG setup.",
-    "updated": "2026-07-12T22:34:11.862643+00:00"
+    "text": "GBPUSD LONG at risk. Incoming PM Burnham's expansive autumn budget could weaken GBP if fiscal concerns emerge. US CPI this week may strengthen USD.",
+    "updated": "2026-07-13T01:17:09.476596+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: VIX falling and S&P rising confirm setup strongly today.\n\nGBPUSD LONG: S&P rising confirms setup but weak ADX challenges conviction.",
+    "text": "NZDJPY LONG: VIX falling and S&P rising both confirm NZD strength setup.\n\nGBPUSD LONG: S&P rising confirms GBP bid but low ADX challenges momentum.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 6.4
       }
     ],
-    "updated": "2026-07-12T22:34:11.862643+00:00"
+    "updated": "2026-07-13T01:17:09.476596+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-12T22:34:11.862643+00:00"
+    "updated": "2026-07-13T01:17:09.476596+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-12T11:05:33.795770+00:00"
+    "generated_at": "2026-07-13T01:17:34.596589+00:00"
   },
   "breaking": {
     "headlines": [
       "US CPI and Fed Chair Warsh take center stage this week",
-      "Dollar climbs on escalation of Middle East hostilities",
-      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation",
+      "Dollar climbs on escalation of Middle East hostilities"
     ],
-    "updated": "2026-07-12T22:34:11.862643+00:00"
+    "updated": "2026-07-13T01:17:09.476596+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
