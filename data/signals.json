@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-13T12:13:58.723401+00:00",
+  "updated": "2026-07-13T12:23:31.310600+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.27,
-      "delta_pct": 8.3,
+      "value": 16.39,
+      "delta_pct": 9.0,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4083.6,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 4065.0,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.86,
-      "delta_pct": -0.1,
+      "value": 100.97,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.262,
-      "delta_pct": 0.5,
-      "direction": "flat",
+      "value": 6.2925,
+      "delta_pct": 0.9,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 73.2,
-      "delta_pct": 2.5,
+      "value": 74.02,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62986.0,
-      "delta_pct": -1.2,
+      "value": 63996.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG conflict with dollar strength headlines. USD gaining ground and dollar firms undermine GBP long setups.",
-    "updated": "2026-07-13T08:38:24.716253+00:00"
+    "text": "NZDJPY Long: Risk-off sentiment from US-Iran tensions favors JPY strength, opposing NZD upside potential materially.",
+    "updated": "2026-07-13T12:23:31.310600+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: S&P 500 strength confirms NZD bid thesis directly today.\n\nGBPUSD LONG: Risk-on medium supports GBP bid but VIX spike challenges.\n\nGBPJPY LONG: High ADX fifty one conflicts with ranging low regime.",
+    "text": "NZDJPY LONG: Risk-off environment challenges setup despite copper strength.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.8
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 7.73
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 5.4
+        "score": 8.0
       }
     ],
-    "updated": "2026-07-13T08:38:24.716253+00:00"
+    "updated": "2026-07-13T12:23:31.310600+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-13T08:38:24.716253+00:00"
+    "updated": "2026-07-13T12:23:31.310600+00:00"
   },
   "week_ahead": {
     "text": "The dollar dominates amid slew of US data and Mideast tensions , with US data in focus this week . USD/JPY is knocking on the door of a major breakout, but BOJ intervention risk continues to keep traders on edge as the deterioration of the former ceasefire between the USA and Iran continues into daily exchanges of fire centred around the Strait of Hormuz, with the Strait effectively closed to shipping . BOJ's interest rate decision will determine whether USD/JPY can extend higher , presenting the critical pivot for the week. Watch USD/JPY closely as it balances Fed tightening expectations against potential BOJ intervention and geopolitical risk premium. If the Strait closure does not change quickly, the price of crude oil is going to trade higher when markets open this week , adding inflationary pressure that could derail rate cut bets.",
@@ -705,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains amid Middle East tensions, oil rally impacts majors",
-      "Dollar firms on sticky inflation, FOMC minutes signal policy divergence",
-      "RBNZ rate hike sparks kiwi rally amid global consolidation"
+      "US-Iran tensions escalate; Trump claims Strait of Hormuz control",
+      "India inflation breaches RBI target first time in 16 months",
+      "Dollar firms on sticky inflation; FOMC minutes signal policy divergence"
     ],
-    "updated": "2026-07-13T08:38:24.716253+00:00"
+    "updated": "2026-07-13T12:23:31.310600+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
