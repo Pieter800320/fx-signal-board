@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T07:30:41.452545+00:00",
+  "updated": "2026-07-14T09:41:45.546787+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.22,
-      "delta_pct": 0.3,
+      "value": 17.34,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4034.0,
-      "delta_pct": 0.9,
+      "value": 4022.9,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.22,
-      "delta_pct": -0.1,
+      "value": 101.09,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.381,
-      "delta_pct": 2.4,
+      "value": 6.3775,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.39,
-      "delta_pct": 2.9,
+      "value": 80.55,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62536.0,
-      "delta_pct": 0.5,
+      "value": 62505.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT invalidated. US inflation focus and sticky inflation headlines suggest dollar strength, contradicting euro weakness bias.",
-    "updated": "2026-07-14T07:30:41.452545+00:00"
+    "text": "EURUSD SHORT potentially challenged by sticky inflation supporting dollar strength. NZDJPY LONG supported by RBNZ rate hike sparking kiwi rally.",
+    "updated": "2026-07-14T09:41:45.546787+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms via dual tailwinds, JPY weakness and NZD strength.\n\nEURUSD SHORT: Macro challenges setup, US 10Y rise supports USD bid strength.",
+    "text": "NZDJPY LONG: US 10Y rise and copper strength both confirm the setup.\n\nEURUSD SHORT: US 10Y rise challenges the setup by supporting USD.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 3.4
       }
     ],
-    "updated": "2026-07-14T07:30:41.452545+00:00"
+    "updated": "2026-07-14T09:41:45.546787+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T07:30:41.452545+00:00"
+    "updated": "2026-07-14T09:41:45.546787+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "China June exports surge 27% y/y, smashing AI demand forecasts",
-      "US inflation main focus today, dollar momentum tests support",
+      "US inflation main focus today, CPI forecasts distribution critical",
+      "Dollar firms amid sticky inflation, GBP/USD EUR/USD implications",
       "RBNZ rate hike sparks kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-14T07:30:41.452545+00:00"
+    "updated": "2026-07-14T09:41:45.546787+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
