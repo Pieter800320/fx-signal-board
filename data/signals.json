@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T20:46:46.172172+00:00",
+  "updated": "2026-07-14T22:42:30.271469+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,7 +567,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4057.4,
+      "value": 4058.0,
       "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
@@ -579,7 +579,7 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3645,
+      "value": 6.3665,
       "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.24,
-      "delta_pct": 2.7,
+      "value": 79.94,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64456.0,
-      "delta_pct": 3.6,
+      "value": 64910.0,
+      "delta_pct": 4.3,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG may accelerate. RBNZ rate hike supports NZD strength. China GDP Wednesday could pressure JPY if risk sentiment improves.",
-    "updated": "2026-07-14T20:46:46.172172+00:00"
+    "text": "NZDJPY LONG could be pressured by strong USD momentum ahead of US CPI. Dollar strength typically weakens JPY carry trades and reduces NZD relative appeal.",
+    "updated": "2026-07-14T22:42:30.271469+00:00"
   },
   "ranked": {
-    "text": "Macro context challenges setup. Risk-On Low conflicts with ranging regime strength.",
+    "text": "NZDJPY LONG: Macro confirms setup, copper bid supports NZD strength today.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -628,7 +628,7 @@
         "score": 7.88
       }
     ],
-    "updated": "2026-07-14T20:46:46.172172+00:00"
+    "updated": "2026-07-14T22:42:30.271469+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T20:46:46.172172+00:00"
+    "updated": "2026-07-14T22:42:30.271469+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -691,11 +691,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June CPI 3.5% vs 3.8% expected, dollar strengthens",
-      "RBNZ rate hike sparks NZD rally amid global consolidation",
-      "China Q2 GDP and June activity data due Wednesday"
+      "US Dollar Price Forecast: DXY Eyes $103 Ahead of US CPI and Fed Signals",
+      "US Dollar Price Forecast: Risk Sentiment Shifts After FOMC Minutes \u2014 GBP/USD Outlook",
+      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
     ],
-    "updated": "2026-07-14T20:46:46.172172+00:00"
+    "updated": "2026-07-14T22:42:30.271469+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
