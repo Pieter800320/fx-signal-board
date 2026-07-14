@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T16:21:00.565255+00:00",
+  "updated": "2026-07-14T16:58:02.444991+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,94 +551,84 @@
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.35,
-      "delta_pct": -4.7,
+      "value": 16.47,
+      "delta_pct": -4.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7552.95,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 7542.39,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4087.4,
-      "delta_pct": 2.3,
+      "value": 4065.5,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.75,
-      "delta_pct": -0.5,
+      "value": 100.87,
+      "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.421,
-      "delta_pct": 3.0,
+      "value": 6.3775,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.569,
-      "delta_bp": -4.0,
-      "direction": "down",
+      "value": 4.581,
+      "delta_bp": -2.8,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.695,
-      "delta_bp": -3.3,
+      "value": 3.7,
+      "delta_bp": -2.8,
       "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.9,
-      "delta_pct": 1.0,
-      "direction": "flat",
+      "value": 79.36,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64179.0,
-      "delta_pct": 3.1,
+      "value": 64684.0,
+      "delta_pct": 3.9,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -0.7,
+      "value": 88.1,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with US CPI beat and small business optimism strengthening USD. AUDUSD LONG similarly pressured by dollar strength. NZDJPY LONG supported by RBNZ rate hike mention.",
-    "updated": "2026-07-14T15:13:33.738075+00:00"
+    "text": "NZDJPY LONG invalidated by RBNZ rate hike sparking Kiwi rally. NZD strengthens, reducing JPY appreciation potential needed for setup.",
+    "updated": "2026-07-14T16:58:02.444991+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Mixed macro confirms setup via copper and equity strength.\n\nAUDUSD LONG: Gold strength and copper rally confirm AUD bullish thesis.\n\nGBPUSD LONG: S&P 500 rising confirms GBP bid, macro supportive overall.",
+    "text": "Macro confirms setup. Risk-on low supports carry trade positioning.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.22
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 7.5
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 7.02
+        "score": 7.88
       }
     ],
-    "updated": "2026-07-14T15:13:33.738075+00:00"
+    "updated": "2026-07-14T16:58:02.444991+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +683,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T15:13:33.738075+00:00"
+    "updated": "2026-07-14T16:58:02.444991+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-14T04:36:15.690839+00:00"
+    "generated_at": "2026-07-14T16:58:28.065807+00:00"
   },
   "breaking": {
     "headlines": [
-      "US June CPI 3.5% vs 3.8% expected, beats forecast",
+      "US June CPI 3.5% vs 3.8% expected, beats forecasts",
       "US NFIB small business optimism 97.4 vs 95.7 expected",
-      "RBNZ rate hike sparks kiwi rally amid consolidation"
+      "RBNZ rate hike sparks kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-14T15:13:33.738075+00:00"
+    "updated": "2026-07-14T16:58:02.444991+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
