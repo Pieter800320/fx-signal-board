@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T01:07:09.014198+00:00",
+  "updated": "2026-07-14T04:35:51.741674+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,8 +547,8 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 3,
     "confidence": "Low",
     "stable": false
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4011.5,
-      "delta_pct": -2.3,
-      "direction": "down",
+      "value": 4022.4,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.24,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.18,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2945,
-      "delta_pct": 1.0,
+      "value": 6.3525,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.84,
-      "delta_pct": 11.8,
+      "value": 79.56,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "WTI Oil"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT: Digital euro talks and sticky US inflation support dollar strength, accelerating the setup. NZDJPY LONG: RBNZ rate hike and rebounding business confidence accelerate kiwi rally.",
-    "updated": "2026-07-14T01:07:09.014198+00:00"
+    "text": "EURUSD SHORT conflicts with US inflation focus and sticky inflation headlines suggesting dollar strength. NZDJPY LONG supported by RBNZ rate hike catalyst.",
+    "updated": "2026-07-14T04:35:51.741674+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, JPY weakness and NZD strength aligned today.\n\nEURUSD SHORT: Macro confirms setup, triple USD bid from VIX, yields, gold.",
+    "text": "NZDJPY LONG: Macro confirms setup via JPY weakness and NZD strength drivers.\n\nEURUSD SHORT: Macro confirms setup via dual USD bid from VIX and rates.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -630,10 +630,10 @@
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 2.78
+        "score": 2.58
       }
     ],
-    "updated": "2026-07-14T01:07:09.014198+00:00"
+    "updated": "2026-07-14T04:35:51.741674+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T01:07:09.014198+00:00"
+    "updated": "2026-07-14T04:35:51.741674+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-13T16:16:51.610059+00:00"
+    "generated_at": "2026-07-14T04:36:15.690839+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar reacts to FOMC minutes on policy divergence",
-      "RBNZ rate hike sparks kiwi rally amid global consolidation",
-      "Oil prices spike as Trump announces blockade and tolls"
+      "China exports surge 27% y/y, crushes forecast on AI demand",
+      "US inflation focus ahead, Fed unlikely to relax policy soon",
+      "Dollar reacts to FOMC minutes on policy divergence signals"
     ],
-    "updated": "2026-07-14T01:07:09.014198+00:00"
+    "updated": "2026-07-14T04:35:51.741674+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
