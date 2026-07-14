@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T07:15:20.837415+00:00",
+  "updated": "2026-07-14T07:30:41.452545+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.16,
-      "delta_pct": 14.2,
-      "direction": "up",
+      "value": 17.22,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4022.4,
-      "delta_pct": 0.6,
+      "value": 4034.0,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.18,
+      "value": 101.22,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3525,
-      "delta_pct": 1.9,
+      "value": 6.381,
+      "delta_pct": 2.4,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.56,
-      "delta_pct": 1.8,
+      "value": 80.39,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63758.0,
-      "delta_pct": -0.1,
+      "value": 62536.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT conflicts with US inflation focus and sticky inflation headlines suggesting dollar strength. NZDJPY LONG supported by RBNZ rate hike catalyst.",
-    "updated": "2026-07-14T04:35:51.741674+00:00"
+    "text": "EURUSD SHORT invalidated. US inflation focus and sticky inflation headlines suggest dollar strength, contradicting euro weakness bias.",
+    "updated": "2026-07-14T07:30:41.452545+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup via JPY weakness and NZD strength drivers.\n\nEURUSD SHORT: Macro confirms setup via dual USD bid from VIX and rates.",
+    "text": "NZDJPY LONG: Macro confirms via dual tailwinds, JPY weakness and NZD strength.\n\nEURUSD SHORT: Macro challenges setup, US 10Y rise supports USD bid strength.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 5.75
+        "score": 7.62
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 2.58
+        "score": 3.4
       }
     ],
-    "updated": "2026-07-14T04:35:51.741674+00:00"
+    "updated": "2026-07-14T07:30:41.452545+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T04:35:51.741674+00:00"
+    "updated": "2026-07-14T07:30:41.452545+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "China exports surge 27% y/y, crushes forecast on AI demand",
-      "US inflation focus ahead, Fed unlikely to relax policy soon",
-      "Dollar reacts to FOMC minutes on policy divergence signals"
+      "China June exports surge 27% y/y, smashing AI demand forecasts",
+      "US inflation main focus today, dollar momentum tests support",
+      "RBNZ rate hike sparks kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-14T04:35:51.741674+00:00"
+    "updated": "2026-07-14T07:30:41.452545+00:00"
   },
   "last_alert": "2026-07-09T20:52:23.090642+00:00",
   "gold_signal": {
