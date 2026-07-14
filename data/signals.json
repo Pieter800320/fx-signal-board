@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T20:18:28.934510+00:00",
+  "updated": "2026-07-14T20:46:46.172172+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,80 +555,80 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.39,
-      "delta_pct": -4.5,
+      "value": 16.5,
+      "delta_pct": -3.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7548.66,
+      "value": 7543.59,
       "delta_pct": 0.4,
-      "direction": "up",
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4053.2,
-      "delta_pct": 1.4,
+      "value": 4057.4,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.96,
+      "value": 100.94,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3605,
-      "delta_pct": 2.0,
+      "value": 6.3645,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.587,
-      "delta_bp": -2.2,
+      "value": 4.585,
+      "delta_bp": -2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.697,
-      "delta_bp": -3.1,
+      "value": 3.7,
+      "delta_bp": -2.8,
       "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.58,
-      "delta_pct": 1.8,
+      "value": 80.24,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64527.0,
-      "delta_pct": 3.7,
+      "value": 64456.0,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.0,
-      "delta_bp": 0.9,
+      "value": 88.5,
+      "delta_bp": 0.4,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDJPY long invalidated by RBNZ rate hike sparking Kiwi rally, strengthening NZD while JPY weakens from risk sentiment shift.",
-    "updated": "2026-07-14T18:55:22.278054+00:00"
+    "text": "NZDJPY LONG may accelerate. RBNZ rate hike supports NZD strength. China GDP Wednesday could pressure JPY if risk sentiment improves.",
+    "updated": "2026-07-14T20:46:46.172172+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper surge confirms NZD strength, supports long bias.",
+    "text": "Macro context challenges setup. Risk-On Low conflicts with ranging regime strength.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.95
+        "score": 7.88
       }
     ],
-    "updated": "2026-07-14T18:55:22.278054+00:00"
+    "updated": "2026-07-14T20:46:46.172172+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T18:55:22.278054+00:00"
+    "updated": "2026-07-14T20:46:46.172172+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -691,11 +691,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June CPI 3.5% vs 3.8% expected, stronger than forecast",
-      "US NFIB small business optimism 97.4 vs 95.7 expected",
-      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
+      "US June CPI 3.5% vs 3.8% expected, dollar strengthens",
+      "RBNZ rate hike sparks NZD rally amid global consolidation",
+      "China Q2 GDP and June activity data due Wednesday"
     ],
-    "updated": "2026-07-14T18:55:22.278054+00:00"
+    "updated": "2026-07-14T20:46:46.172172+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
