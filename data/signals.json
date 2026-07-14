@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-14T12:19:27.297266+00:00",
+  "updated": "2026-07-14T12:57:27.800275+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -549,14 +549,14 @@
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 2,
+    "total": 4,
     "confidence": "Neutral",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.36,
-      "delta_pct": 1.2,
+      "value": 16.72,
+      "delta_pct": -2.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,73 +567,68 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4027.9,
-      "delta_pct": 0.8,
+      "value": 4093.0,
+      "delta_pct": 2.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.16,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 100.63,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.379,
-      "delta_pct": 2.3,
+      "value": 6.397,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.609,
-      "delta_bp": 4.0,
-      "direction": "up",
+      "value": 4.559,
+      "delta_bp": -5.0,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.728,
-      "delta_bp": 3.3,
-      "direction": "up",
+      "value": 3.695,
+      "delta_bp": -3.3,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.89,
-      "delta_pct": 3.5,
+      "value": 80.67,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62685.0,
-      "delta_pct": 0.7,
-      "direction": "flat",
+      "value": 63868.0,
+      "delta_pct": 2.6,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.1,
-      "delta_bp": 0.7,
+      "value": 86.4,
+      "delta_bp": -1.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD SHORT: US CPI data ahead conflicts with setup given USD strength forecasts and inflation focus dominating headlines.",
-    "updated": "2026-07-14T11:13:58.962905+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-14T12:57:27.800275+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: US 10Y rise and copper strength directly confirm the setup.\n\nEURUSD SHORT: US 10Y rise contradicts setup by supporting dollar bid.",
+    "text": "NZDJPY LONG: Copper surge confirms NZD strength, challenges risk-off yen bid.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.22
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 2.53
+        "score": 8.03
       }
     ],
-    "updated": "2026-07-14T11:13:58.962905+00:00"
+    "updated": "2026-07-14T12:57:27.800275+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-14T11:13:58.962905+00:00"
+    "updated": "2026-07-14T12:57:27.800275+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +691,11 @@
   },
   "breaking": {
     "headlines": [
-      "US NFIB small business optimism 97.4 beats forecast 95.7",
-      "RBNZ rate hike sparks kiwi rally amid consolidation",
-      "Dollar firms amid sticky inflation, GBP/USD EUR/USD moves"
+      "US June CPI 3.5% vs 3.8% expected, inflation cooler than forecast",
+      "US June NFIB small business optimism index 97.4 vs 95.7 expected",
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-14T11:13:58.962905+00:00"
+    "updated": "2026-07-14T12:57:27.800275+00:00"
   },
   "last_alert": "2026-07-14T12:19:27.297266+00:00",
   "gold_signal": {
