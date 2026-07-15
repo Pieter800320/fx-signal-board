@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T16:38:42.166922+00:00",
+  "updated": "2026-07-15T17:00:07.100965+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,103 +542,103 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.18,
-      "delta_pct": -5.7,
-      "direction": "down",
+      "value": 16.4,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7558.15,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 7542.35,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4065.0,
-      "delta_pct": 0.1,
+      "value": 4042.3,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.72,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 100.7,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.379,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.341,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.553,
-      "delta_bp": -5.6,
-      "direction": "down",
+      "value": 4.555,
+      "delta_bp": -3.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.69,
-      "delta_bp": -3.8,
-      "direction": "down",
+      "value": 3.695,
+      "delta_bp": -0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.87,
-      "delta_pct": -0.6,
+      "value": 79.39,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65345.0,
-      "delta_pct": 0.6,
+      "value": 65077.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.3,
-      "delta_bp": -1.8,
+      "value": 86.0,
+      "delta_bp": -2.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD and AUDUSD long setups challenged by stronger than expected US Empire Manufacturing data suggesting USD strength ahead.",
-    "updated": "2026-07-15T15:14:29.490777+00:00"
+    "text": "GBPUSD LONG challenged by Shabana Mahmood Chancellor appointment uncertainty and sticky inflation dynamics supporting USD strength.",
+    "updated": "2026-07-15T17:00:07.100965+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: VIX falling and copper rising strongly confirm the setup.\n\nGBPUSD LONG: S&P 500 rising and DXY falling confirm the setup.\n\nAUDUSD LONG: VIX falling, S&P 500 rising, copper rising confirm setup.",
+    "text": "NZDUSD LONG: Risk-on low challenges setup, needs sustained risk appetite confirmation.\n\nGBPUSD LONG: Ranging low macro confirms setup, supports consolidation continuation bias.\n\nNZDJPY LONG: Risk-on low challenges carry setup, yen strength headwind present.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 9.45
+        "score": 8.15
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.57
+        "score": 7.47
       },
       {
-        "pair": "AUDUSD",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.57
+        "score": 7.42
       }
     ],
-    "updated": "2026-07-15T15:14:29.490777+00:00"
+    "updated": "2026-07-15T17:00:07.100965+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T15:14:29.490777+00:00"
+    "updated": "2026-07-15T17:00:07.100965+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Empire Manufacturing July 15.6 beats estimate 8.80, signals strength",
-      "US June PPI 5.5% beats expectations, inflation cooling confirmed",
-      "Euro area industrial output falls May, misses estimates significantly"
+      "US Empire Manufacturing 15.6 beats forecast, significantly exceeds prior month",
+      "US June PPI 5.5% below expectations, inflation cooling signals",
+      "Euro area industrial output falls May, misses estimates"
     ],
-    "updated": "2026-07-15T15:14:29.490777+00:00"
+    "updated": "2026-07-15T17:00:07.100965+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
