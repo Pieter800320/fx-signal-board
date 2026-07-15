@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T12:19:56.680119+00:00",
+  "updated": "2026-07-15T13:00:51.450581+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.34,
-      "delta_pct": -4.8,
-      "direction": "flat",
+      "value": 16.18,
+      "delta_pct": -5.7,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,65 +567,70 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4035.9,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4070.7,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
-      "delta_pct": -0.3,
+      "value": 100.87,
+      "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.359,
-      "delta_pct": 0.5,
-      "direction": "flat",
+      "value": 6.3915,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.609,
-      "delta_bp": 4.0,
-      "direction": "up",
+      "value": 4.571,
+      "delta_bp": -3.8,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.728,
-      "delta_bp": 3.3,
-      "direction": "up",
+      "value": 3.672,
+      "delta_bp": -5.6,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.0,
-      "delta_pct": 0.8,
+      "value": 79.68,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64648.0,
-      "delta_pct": -0.5,
+      "value": 65117.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.1,
-      "delta_bp": 0.7,
+      "value": 89.9,
+      "delta_bp": 1.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG invalidated by RBNZ rate hike catalyst sparking Kiwi rally, reducing JPY relative strength needed for setup.",
-    "updated": "2026-07-15T11:17:21.774533+00:00"
+    "text": "GBPUSD LONG challenged by multiple headlines suggesting dollar strength amid sticky inflation and yield pushes. AUDUSD LONG vulnerable to risk sentiment shifts. NZDJPY LONG faces JPY support from yield dynamics.",
+    "updated": "2026-07-15T13:00:51.450581+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro confirms setup via weakening dollar from falling DXY.\n\nNZDJPY LONG: Macro challenges setup as rising US 10Y strengthens JPY.",
+    "text": "AUDUSD LONG: VIX falling and copper rising both confirm AUD strength thesis.\n\nGBPUSD LONG: DXY falling confirms USD weakness but macro risk-on medium limits upside.\n\nNZDJPY LONG: VIX falling and copper rising confirm NZD bid, supporting long.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 7.78
+        "score": 8.6
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 7.7
       },
       {
         "pair": "NZDJPY",
@@ -633,7 +638,7 @@
         "score": 7.65
       }
     ],
-    "updated": "2026-07-15T11:17:21.774533+00:00"
+    "updated": "2026-07-15T13:00:51.450581+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T11:17:21.774533+00:00"
+    "updated": "2026-07-15T13:00:51.450581+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area industrial output falls in May, missing estimates",
-      "Cooler US inflation gives markets a bit of breather",
-      "RBNZ rate hike sparks kiwi rally amid global consolidation"
+      "US Empire Manufacturing July 15.6 beats estimate 8.80, surges from 5.70",
+      "US June PPI 5.5% significantly undershoots 6.2% forecast, inflation cools",
+      "Euro area industrial output falls May, misses estimates, weighs EUR"
     ],
-    "updated": "2026-07-15T11:17:21.774533+00:00"
+    "updated": "2026-07-15T13:00:51.450581+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
