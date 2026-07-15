@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T18:13:37.437954+00:00",
+  "updated": "2026-07-15T18:49:09.491896+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.4,
-      "delta_pct": -0.6,
+      "value": 15.71,
+      "delta_pct": -4.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7542.35,
-      "delta_pct": -0.0,
+      "value": 7563.57,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4042.3,
-      "delta_pct": -0.5,
+      "value": 4078.9,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.7,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 100.37,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.341,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.3945,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.555,
-      "delta_bp": -3.0,
+      "value": 4.545,
+      "delta_bp": -4.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.695,
-      "delta_bp": -0.5,
+      "value": 3.69,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.39,
-      "delta_pct": 0.1,
+      "value": 79.82,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65077.0,
-      "delta_pct": 0.2,
+      "value": 64953.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.0,
-      "delta_bp": -2.5,
+      "value": 85.5,
+      "delta_bp": -3.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG challenged by Shabana Mahmood Chancellor appointment uncertainty and sticky inflation dynamics supporting USD strength.",
-    "updated": "2026-07-15T17:00:07.100965+00:00"
+    "text": "GBPUSD LONG accelerated by Shabana Mahmood becoming UK Chancellor, potentially signaling policy shifts. US Empire Manufacturing beat 15.6 vs 8.80 estimate supports USD strength, challenging all three longs.",
+    "updated": "2026-07-15T18:49:09.491896+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-on low challenges setup, needs sustained risk appetite confirmation.\n\nGBPUSD LONG: Ranging low macro confirms setup, supports consolidation continuation bias.\n\nNZDJPY LONG: Risk-on low challenges carry setup, yen strength headwind present.",
+    "text": "AUDUSD LONG: Copper strength and risk-on regime confirm bullish setup strongly.\n\nNZDUSD LONG: Risk-on environment and weakening USD confirm positioning perfectly today.\n\nGBPUSD LONG: Mixed macro neutral context challenges momentum but DXY weakness supports.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 9.32
+      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.15
+        "score": 9.25
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.47
-      },
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 7.42
+        "score": 8.47
       }
     ],
-    "updated": "2026-07-15T17:00:07.100965+00:00"
+    "updated": "2026-07-15T18:49:09.491896+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T17:00:07.100965+00:00"
+    "updated": "2026-07-15T18:49:09.491896+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Empire Manufacturing 15.6 beats forecast, significantly exceeds prior month",
-      "US June PPI 5.5% below expectations, inflation cooling signals",
-      "Euro area industrial output falls May, misses estimates"
+      "US Empire Manufacturing 15.6 vs 5.70 last month, beats estimate",
+      "US June PPI 5.5% vs 6.2% expected, inflation cooling",
+      "Shabana Mahmood becomes next UK Chancellor of the Exchequer"
     ],
-    "updated": "2026-07-15T17:00:07.100965+00:00"
+    "updated": "2026-07-15T18:49:09.491896+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
