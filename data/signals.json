@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T07:19:25.324511+00:00",
+  "updated": "2026-07-15T07:44:26.559751+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.5,
-      "delta_pct": -3.8,
+      "value": 16.33,
+      "delta_pct": -4.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,68 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4039.3,
-      "delta_pct": -0.5,
+      "value": 4033.0,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.8,
-      "delta_pct": -0.5,
+      "value": 100.89,
+      "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.38,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.3415,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.585,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.609,
+      "delta_bp": 4.0,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.7,
-      "delta_bp": -2.8,
-      "direction": "down",
+      "value": 3.728,
+      "delta_bp": 3.3,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.78,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 80.35,
+      "delta_pct": 1.3,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64731.0,
-      "delta_pct": 4.0,
-      "direction": "up",
+      "value": 64523.0,
+      "delta_pct": -0.7,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.5,
-      "delta_bp": 0.4,
+      "value": 88.1,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "RBNZ Rate Hike Sparks Kiwi Rally could accelerate NZDJPY long setup by strengthening NZD component.",
-    "updated": "2026-07-15T04:35:25.159816+00:00"
+    "text": "GBPUSD LONG conflicts with sticky inflation headline suggesting dollar strength. NZDJPY LONG supported by RBNZ rate hike catalyst.",
+    "updated": "2026-07-15T07:44:26.559751+00:00"
   },
   "ranked": {
-    "text": "Macro context challenges setup: Risk-On Low constrains NZD strength.",
+    "text": "AUDUSD LONG: DXY weakness confirms USD offered positioning today.\n\nNZDJPY LONG: Rising US 10Y challenges JPY offered thesis.\n\nGBPUSD LONG: DXY falling confirms USD weakness macro driver.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 8.2
+      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.88
+        "score": 7.65
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 7.38
       }
     ],
-    "updated": "2026-07-15T04:35:25.159816+00:00"
+    "updated": "2026-07-15T07:44:26.559751+00:00"
   },
   "calendar": {
     "events": [
@@ -683,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T04:35:25.159816+00:00"
+    "updated": "2026-07-15T07:44:26.559751+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-14T16:58:28.065807+00:00"
+    "generated_at": "2026-07-15T07:45:00.717738+00:00"
   },
   "breaking": {
     "headlines": [
-      "China Q2 GDP growth cools to 4.3%, weakest pace in three and a half years",
-      "US Dollar Price Forecast: DXY Eyes $103 Ahead of US CPI and Fed Signals",
-      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
+      "China Q2 GDP cools to 4.3%, weakest pace in three and a half years",
+      "Cooler US inflation gives markets a bit of a breather",
+      "RBNZ rate hike sparks kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-15T04:35:25.159816+00:00"
+    "updated": "2026-07-15T07:44:26.559751+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
