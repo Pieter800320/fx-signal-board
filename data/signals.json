@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T01:04:29.153629+00:00",
+  "updated": "2026-07-15T04:35:25.159816+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -561,26 +561,26 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7543.59,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 7515.34,
+      "delta_pct": -0.8,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4063.9,
-      "delta_pct": 1.7,
-      "direction": "up",
+      "value": 4039.3,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.84,
-      "delta_pct": -0.4,
+      "value": 100.8,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3775,
-      "delta_pct": 2.3,
+      "value": 6.38,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.41,
-      "delta_pct": 2.9,
-      "direction": "up",
+      "value": 79.78,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64703.0,
+      "value": 64731.0,
       "delta_pct": 4.0,
       "direction": "up",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "New Zealand retail data miss accelerates NZDJPY long. Weaker NZD data conflicts with bullish Kiwi setup momentum.",
-    "updated": "2026-07-15T01:04:29.153629+00:00"
+    "text": "RBNZ Rate Hike Sparks Kiwi Rally could accelerate NZDJPY long setup by strengthening NZD component.",
+    "updated": "2026-07-15T04:35:25.159816+00:00"
   },
   "ranked": {
-    "text": "Macro confirms setup: rising copper supports NZD strength directly.",
+    "text": "Macro context challenges setup: Risk-On Low constrains NZD strength.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -628,7 +628,7 @@
         "score": 7.88
       }
     ],
-    "updated": "2026-07-15T01:04:29.153629+00:00"
+    "updated": "2026-07-15T04:35:25.159816+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +683,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T01:04:29.153629+00:00"
+    "updated": "2026-07-15T04:35:25.159816+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -691,11 +691,11 @@
   },
   "breaking": {
     "headlines": [
-      "New Zealand retail data misses sharply: +1.3% y/y versus +3.3% prior",
-      "China Q2 GDP and June activity data release Wednesday",
-      "US CPI and Fed signals ahead; DXY eyes $103 resistance"
+      "China Q2 GDP growth cools to 4.3%, weakest pace in three and a half years",
+      "US Dollar Price Forecast: DXY Eyes $103 Ahead of US CPI and Fed Signals",
+      "RBNZ Rate Hike Sparks Kiwi Rally Amid Global Consolidation"
     ],
-    "updated": "2026-07-15T01:04:29.153629+00:00"
+    "updated": "2026-07-15T04:35:25.159816+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
