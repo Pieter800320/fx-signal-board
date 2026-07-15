@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T07:44:26.559751+00:00",
+  "updated": "2026-07-15T09:44:48.933997+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.33,
-      "delta_pct": -4.8,
-      "direction": "flat",
+      "value": 16.25,
+      "delta_pct": -5.3,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -573,15 +573,15 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.89,
-      "delta_pct": -0.4,
+      "value": 100.96,
+      "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3415,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.3805,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.35,
-      "delta_pct": 1.3,
-      "direction": "up",
+      "value": 79.92,
+      "delta_pct": 0.7,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64523.0,
-      "delta_pct": -0.7,
+      "value": 64662.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with sticky inflation headline suggesting dollar strength. NZDJPY LONG supported by RBNZ rate hike catalyst.",
-    "updated": "2026-07-15T07:44:26.559751+00:00"
+    "text": "GBPUSD LONG conflicts with sticky inflation narrative supporting USD strength. NZDJPY LONG accelerated by RBNZ rate hike sparking Kiwi rally.",
+    "updated": "2026-07-15T09:44:48.933997+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: DXY weakness confirms USD offered positioning today.\n\nNZDJPY LONG: Rising US 10Y challenges JPY offered thesis.\n\nGBPUSD LONG: DXY falling confirms USD weakness macro driver.",
+    "text": "AUDUSD LONG: VIX decline and copper strength confirm directional bias strongly.\n\nNZDJPY LONG: Rising yields challenge yen weakness, but VIX offset remains positive.\n\nGBPUSD LONG: DXY weakness confirms setup, though equity selling creates headwind risk.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.2
+        "score": 8.6
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.65
+        "score": 8.05
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-15T07:44:26.559751+00:00"
+    "updated": "2026-07-15T09:44:48.933997+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T07:44:26.559751+00:00"
+    "updated": "2026-07-15T09:44:48.933997+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "China Q2 GDP cools to 4.3%, weakest pace in three and a half years",
+      "Euro area industrial output falls in May, missing estimates",
       "Cooler US inflation gives markets a bit of a breather",
-      "RBNZ rate hike sparks kiwi rally amid global consolidation"
+      "RBNZ rate hike sparks Kiwi rally amid global consolidation"
     ],
-    "updated": "2026-07-15T07:44:26.559751+00:00"
+    "updated": "2026-07-15T09:44:48.933997+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
