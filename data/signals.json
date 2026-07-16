@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T11:06:10.824331+00:00",
+  "updated": "2026-07-16T11:23:18.007843+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.85,
-      "delta_pct": 1.1,
+      "value": 16.09,
+      "delta_pct": 2.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4038.9,
-      "delta_pct": -0.1,
+      "value": 4034.6,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.56,
+      "value": 100.57,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3915,
-      "delta_pct": 1.6,
+      "value": 6.374,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64055.0,
-      "delta_pct": -1.0,
+      "value": 64169.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar Retreats headline conflicts with NZDUSD LONG and AUDUSD LONG. Weakening USD supports these setups rather than conflicts.\n\nNo breaking catalysts.",
-    "updated": "2026-07-16T09:51:20.467659+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-16T11:23:18.007843+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro risk-off challenges setup despite copper strength supporting NZD.\n\nNZDJPY LONG: Macro risk-off challenges setup despite copper strength supporting NZD.\n\nAUDUSD LONG: Macro risk-off challenges setup despite copper strength supporting AUD.",
+    "text": "AUDUSD LONG: Macro risk-on low challenges copper strength confirmation thesis.\n\nNZDUSD LONG: Macro risk-on low challenges commodity currency bid momentum.\n\nNZDJPY LONG: Macro risk-on low challenges carry trade risk appetite setup.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 7.53
+      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.35
+        "score": 7.4
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.12
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 8.1
+        "score": 7.35
       }
     ],
-    "updated": "2026-07-16T09:51:20.467659+00:00"
+    "updated": "2026-07-16T11:23:18.007843+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T09:51:20.467659+00:00"
+    "updated": "2026-07-16T11:23:18.007843+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US producer prices drop, dollar retreats against EUR/USD and GBP/USD",
-      "Eurozone trade deficit widens to biggest since January 2023",
-      "UK economy grows marginally in May, services sector bounces"
+      "U.S. Dollar Retreats As Producer Prices Drop: EUR/USD, GBP/USD, USD/CAD",
+      "Eurozone trade deficit widens further in May, biggest since January 2023",
+      "UK economy grows marginally in May, driven by services sector bounce"
     ],
-    "updated": "2026-07-16T09:51:20.467659+00:00"
+    "updated": "2026-07-16T11:23:18.007843+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
