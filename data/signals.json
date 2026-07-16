@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T18:11:57.963088+00:00",
+  "updated": "2026-07-16T18:50:40.996342+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,28 +547,28 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.36,
-      "delta_pct": 4.4,
-      "direction": "flat",
+      "value": 16.57,
+      "delta_pct": 5.7,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7553.2,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 7533.09,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3994.9,
-      "delta_pct": -1.2,
+      "value": 3983.3,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Gold"
     },
@@ -579,14 +579,14 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.338,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 6.2935,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.58,
-      "delta_bp": 3.5,
+      "value": 4.567,
+      "delta_bp": 2.2,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.78,
-      "delta_pct": -1.0,
+      "value": 78.26,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64431.0,
-      "delta_pct": -0.4,
+      "value": 64218.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.5,
-      "delta_bp": 2.8,
+      "value": 87.2,
+      "delta_bp": 1.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-07-16T16:57:57.970275+00:00"
+    "updated": "2026-07-16T18:50:40.996342+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms, copper strength supports commodity currency bid.\n\nNZDJPY LONG: Macro confirms, risk-on regime favors higher-yielding NZD.\n\nAUDUSD LONG: Macro confirms, copper rally strengthens Australian commodity exporter.",
+    "text": "NZDUSD LONG: Macro confirms setup, risk-on supports NZD strength today.\n\nNZDJPY LONG: Macro confirms setup, yen weakness aligns risk-on environment.\n\nGBPUSD LONG: Macro challenges setup, equity weakness reduces GBP safe-haven demand.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.73
+        "score": 7.03
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.62
+        "score": 7.03
       },
       {
-        "pair": "AUDUSD",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.18
+        "score": 5.83
       }
     ],
-    "updated": "2026-07-16T16:57:57.970275+00:00"
+    "updated": "2026-07-16T18:50:40.996342+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T16:57:57.970275+00:00"
+    "updated": "2026-07-16T18:50:40.996342+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -703,9 +703,9 @@
     "headlines": [
       "US July Philly Fed business index +41.4 vs +13.0 expected",
       "US initial jobless claims 208K vs 217K estimate",
-      "US Dollar retreats as producer prices drop significantly"
+      "Canada June housing starts 239.0K vs 257.9K expected"
     ],
-    "updated": "2026-07-16T16:57:57.970275+00:00"
+    "updated": "2026-07-16T18:50:40.996342+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
