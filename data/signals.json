@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T11:23:18.007843+00:00",
+  "updated": "2026-07-16T13:08:55.610614+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,24 +539,24 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "High",
+    "score": 0.0,
+    "signals": -3,
+    "total": 3,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.09,
-      "delta_pct": 2.7,
+      "value": 16.31,
+      "delta_pct": 4.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,61 +567,66 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4034.6,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 3998.6,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.57,
-      "delta_pct": 0.1,
+      "value": 100.66,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.374,
-      "delta_pct": 1.3,
+      "value": 6.3555,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.545,
-      "delta_bp": -4.0,
-      "direction": "flat",
+      "value": 4.592,
+      "delta_bp": 4.7,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.688,
-      "delta_bp": -1.2,
+      "value": 3.69,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.49,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 80.56,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64169.0,
-      "delta_pct": -0.8,
+      "value": 63969.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 85.7,
-      "delta_bp": -2.8,
-      "direction": "flat",
+      "value": 90.2,
+      "delta_bp": 4.5,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-07-16T11:23:18.007843+00:00"
+    "updated": "2026-07-16T13:08:55.610614+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro risk-on low challenges copper strength confirmation thesis.\n\nNZDUSD LONG: Macro risk-on low challenges commodity currency bid momentum.\n\nNZDJPY LONG: Macro risk-on low challenges carry trade risk appetite setup.",
+    "text": "NZDJPY LONG: US 10Y rising confirms JPY weakness thesis perfectly today.\n\nAUDUSD LONG: Copper strength confirms AUD bid but macro regime mixed.\n\nNZDUSD LONG: Copper rally and risk-on regime strongly confirm NZD strength.",
     "top": [
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 7.75
+      },
       {
         "pair": "AUDUSD",
         "direction": "bull",
@@ -631,14 +636,9 @@
         "pair": "NZDUSD",
         "direction": "bull",
         "score": 7.4
-      },
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 7.35
       }
     ],
-    "updated": "2026-07-16T11:23:18.007843+00:00"
+    "updated": "2026-07-16T13:08:55.610614+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T11:23:18.007843+00:00"
+    "updated": "2026-07-16T13:08:55.610614+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Retreats As Producer Prices Drop: EUR/USD, GBP/USD, USD/CAD",
-      "Eurozone trade deficit widens further in May, biggest since January 2023",
-      "UK economy grows marginally in May, driven by services sector bounce"
+      "US July Philly Fed business index +41.4 vs +13.0 expected",
+      "Canada June housing starts 239.0K vs 257.9K expected",
+      "Eurozone trade deficit widens further in May, biggest since January 2023"
     ],
-    "updated": "2026-07-16T11:23:18.007843+00:00"
+    "updated": "2026-07-16T13:08:55.610614+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
