@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T15:08:22.072499+00:00",
+  "updated": "2026-07-16T15:22:18.732735+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -544,7 +544,7 @@
     "score": 0.0,
     "signals": -3,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.31,
-      "delta_pct": 4.1,
+      "value": 15.95,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7572.4,
-      "delta_pct": 0.4,
+      "value": 7556.86,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3998.6,
+      "value": 3997.8,
       "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.66,
+      "value": 100.73,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3555,
-      "delta_pct": 1.0,
+      "value": 6.352,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.592,
-      "delta_bp": 4.7,
+      "value": 4.588,
+      "delta_bp": 4.3,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.69,
-      "delta_bp": 0.2,
+      "value": 3.695,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.56,
-      "delta_pct": 1.2,
-      "direction": "up",
+      "value": 79.62,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63969.0,
-      "delta_pct": -1.1,
+      "value": 64501.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.2,
-      "delta_bp": 4.5,
+      "value": 89.3,
+      "delta_bp": 3.6,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-07-16T13:08:55.610614+00:00"
+    "updated": "2026-07-16T15:22:18.732735+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: US 10Y rising confirms JPY weakness thesis perfectly today.\n\nAUDUSD LONG: Copper strength confirms AUD bid but macro regime mixed.\n\nNZDUSD LONG: Copper rally and risk-on regime strongly confirm NZD strength.",
+    "text": "NZDJPY LONG: US 10Y rise and copper strength both confirm setup decisively.\n\nNZDUSD LONG: Copper strength confirms NZD bid, macro supports risk-on positioning.\n\nAUDUSD LONG: Copper rally confirms AUD bid, aligns with risk-on regime.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.75
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 7.53
+        "score": 8.03
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.4
+        "score": 7.73
+      },
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 7.18
       }
     ],
-    "updated": "2026-07-16T13:08:55.610614+00:00"
+    "updated": "2026-07-16T15:22:18.732735+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T13:08:55.610614+00:00"
+    "updated": "2026-07-16T15:22:18.732735+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +702,10 @@
   "breaking": {
     "headlines": [
       "US July Philly Fed business index +41.4 vs +13.0 expected",
-      "Canada June housing starts 239.0K vs 257.9K expected",
-      "Eurozone trade deficit widens further in May, biggest since January 2023"
+      "US initial jobless claims 208K vs 217K estimate",
+      "US Dollar retreats as producer prices drop significantly"
     ],
-    "updated": "2026-07-16T13:08:55.610614+00:00"
+    "updated": "2026-07-16T15:22:18.732735+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
