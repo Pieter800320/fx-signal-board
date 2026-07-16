@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-15T22:44:00.146419+00:00",
+  "updated": "2026-07-16T01:13:12.872655+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4066.8,
-      "delta_pct": 0.1,
+      "value": 4048.6,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.5,
-      "delta_pct": -0.4,
+      "value": 100.46,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.383,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.361,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.44,
-      "delta_pct": 1.4,
+      "value": 80.26,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64830.0,
-      "delta_pct": -0.2,
+      "value": 64548.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG potentially accelerated by Shabana Mahmood becoming UK Chancellor, signaling potential policy shifts. Dollar weakness headlines support all three long setups.",
-    "updated": "2026-07-15T22:44:00.146419+00:00"
+    "text": "GBPUSD LONG accelerated by Shabana Mahmood UK Chancellor appointment, potentially dovish policy shift. USD weakness from cooling inflation supports all three longs.",
+    "updated": "2026-07-16T01:13:12.872655+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: VIX falling and copper rising strongly confirm setup.\n\nAUDUSD LONG: VIX falling and copper rising strongly confirm setup.\n\nGBPUSD LONG: Falling DXY confirms setup, but weak momentum challenges.",
+    "text": "NZDUSD LONG: VIX falling and DXY falling both confirm setup strongly today.\n\nAUDUSD LONG: VIX falling and DXY falling both confirm setup strongly today.\n\nGBPUSD LONG: VIX falling and DXY falling confirm setup, oil neutral here.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 9.45
+        "score": 9.25
       },
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 8.47
       }
     ],
-    "updated": "2026-07-15T22:44:00.146419+00:00"
+    "updated": "2026-07-16T01:13:12.872655+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-15T22:44:00.146419+00:00"
+    "updated": "2026-07-16T01:13:12.872655+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Empire Manufacturing July 15.6 beats expectations, signals economic strength",
-      "US Dollar retreats as producer prices drop significantly",
-      "Dollar firms amid sticky inflation concerns ahead of CPI"
+      "US Empire Manufacturing beats at 15.6 vs 8.80 estimate",
+      "US Producer Prices Drop, Dollar Retreats Against Major Pairs",
+      "US Military Strikes Iran, Geopolitical Risk Escalates"
     ],
-    "updated": "2026-07-15T22:44:00.146419+00:00"
+    "updated": "2026-07-16T01:13:12.872655+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
