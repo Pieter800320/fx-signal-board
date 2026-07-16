@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T20:40:00.206543+00:00",
+  "updated": "2026-07-16T22:43:47.037276+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3979.0,
+      "value": 3979.2,
       "delta_pct": -1.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.75,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 100.71,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.292,
-      "delta_pct": -0.0,
+      "value": 6.288,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.45,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 78.96,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64098.0,
-      "delta_pct": -0.9,
+      "value": 64020.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-16T20:40:00.206543+00:00"
+    "text": "GBPUSD LONG conflicted by dollar strength headline. USD moving higher challenges GBP upside momentum directly.",
+    "updated": "2026-07-16T22:43:47.037276+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Mixed macro supports risk-on bias confirming setup.\n\nNZDUSD LONG: Risk appetite neutrality challenges higher-beta commodity currency play.\n\nGBPUSD LONG: VIX spike contradicts ranging low regime conviction slightly.",
+    "text": "NZDJPY LONG: Macro neutral supports ranging regime, momentum confirms upside.\n\nNZDUSD LONG: Mixed macro challenges setup, but momentum divergence sustains signal.\n\nGBPUSD LONG: VIX spike and equity weakness challenge ranging confirmation today.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 5.83
       }
     ],
-    "updated": "2026-07-16T20:40:00.206543+00:00"
+    "updated": "2026-07-16T22:43:47.037276+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T20:40:00.206543+00:00"
+    "updated": "2026-07-16T22:43:47.037276+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-16T09:51:47.338856+00:00"
+    "generated_at": "2026-07-16T22:44:11.927151+00:00"
   },
   "breaking": {
     "headlines": [
-      "Philly Fed business index +41.4 beats +13.0 estimate significantly",
-      "Canada June housing starts 239.0K misses 257.9K forecast",
-      "US initial jobless claims 208K beat 217K estimate"
+      "US July Philly Fed business index +41.4 vs +13.0 expected",
+      "Decades long bull turns bearish citing structural deficits inflation",
+      "US initial jobless claims 208K vs 217K estimate"
     ],
-    "updated": "2026-07-16T20:40:00.206543+00:00"
+    "updated": "2026-07-16T22:43:47.037276+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
