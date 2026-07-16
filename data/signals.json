@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-16T07:26:59.731422+00:00",
+  "updated": "2026-07-16T07:49:33.021326+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.67,
-      "delta_pct": -5.0,
-      "direction": "down",
+      "value": 15.79,
+      "delta_pct": 0.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4038.2,
-      "delta_pct": -0.1,
+      "value": 4030.1,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.52,
-      "delta_pct": 0.0,
+      "value": 100.48,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4125,
-      "delta_pct": 1.9,
+      "value": 6.3785,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.45,
-      "delta_pct": -0.2,
+      "value": 79.7,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64554.0,
-      "delta_pct": -0.6,
+      "value": 64198.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-16T04:45:36.716063+00:00"
+    "text": "US Dollar Retreats conflicts with NZDUSD LONG, AUDUSD LONG. Weakening USD supports these setups rather than conflicts.\n\nNo breaking catalysts.",
+    "updated": "2026-07-16T07:49:33.021326+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Falling VIX and rising copper both confirm strong AUD bid.\n\nNZDUSD LONG: Risk-on regime with falling VIX and rising copper confirms NZD.\n\nNZDJPY LONG: Risk-on environment confirms NZD strength against JPY carry unwind.",
+    "text": "NZDUSD LONG: Macro confirms. Risk-on regime supports commodity currency strength today.\n\nNZDJPY LONG: Macro confirms. Risk-on drives yen weakness, NZD strength simultaneously.\n\nAUDUSD LONG: Macro confirms. Copper rally underpins Australian dollar bid pressure.",
     "top": [
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 9.18
-      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 9.05
+        "score": 8.35
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.32
+        "score": 8.12
+      },
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 8.1
       }
     ],
-    "updated": "2026-07-16T04:45:36.716063+00:00"
+    "updated": "2026-07-16T07:49:33.021326+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-16T04:45:36.716063+00:00"
+    "updated": "2026-07-16T07:49:33.021326+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US slaps 25% tariff on Brazil goods, exempts beef and coffee",
-      "US Dollar retreats as producer prices drop: EUR/USD, GBP/USD analysis",
-      "Risk sentiment shifts after FOMC minutes: GBP/USD and EUR/USD outlook"
+      "US Dollar retreats as producer prices drop significantly",
+      "US Dollar weakens ahead of CPI and Fed signals",
+      "UK economy grows marginally in May, services sector bounce"
     ],
-    "updated": "2026-07-16T04:45:36.716063+00:00"
+    "updated": "2026-07-16T07:49:33.021326+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
