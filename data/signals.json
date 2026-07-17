@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T01:17:09.176274+00:00",
+  "updated": "2026-07-17T04:48:51.878416+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,16 +542,16 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
+    "label": "Risk-Off",
+    "signals": 2,
     "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3994.1,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 3985.4,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.71,
-      "delta_pct": 0.2,
+      "value": 100.78,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2755,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 6.214,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.12,
-      "delta_pct": -0.6,
+      "value": 79.23,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63889.0,
-      "delta_pct": -1.3,
+      "value": 63506.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG at risk. US Dollar Retreats as Producer Prices Drop contradicts bullish bias for GBP strength.",
-    "updated": "2026-07-17T01:17:09.176274+00:00"
+    "text": "GBPUSD and NZDUSD exposed to USD strength. Retail sales met estimates supporting dollar. Producer price drop creates conflicting signals for continuation.",
+    "updated": "2026-07-17T04:48:51.878416+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Mixed macro neutrality challenges momentum continuation bias here.\n\nNZDUSD LONG: Risk-off VIX spike challenges carry trade positioning today.\n\nGBPUSD LONG: S&P weakness challenges sterling strength conviction in mixed macro.",
+    "text": "NZDJPY LONG: VIX surge challenges carry trade unwinding risk today.\n\nNZDUSD LONG: Mixed macro neutral stance confirms ranging consolidation setup.\n\nGBPUSD LONG: Risk-off environment challenges sterling strength conviction here.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 5.83
       }
     ],
-    "updated": "2026-07-17T01:17:09.176274+00:00"
+    "updated": "2026-07-17T04:48:51.878416+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T01:17:09.176274+00:00"
+    "updated": "2026-07-17T04:48:51.878416+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Retreats As Producer Prices Drop significantly",
-      "US Retail Sales Match Estimates, Dollar Moves Higher",
-      "Singapore June Exports Rise 20.7% But Miss Forecasts"
+      "U.S. Dollar Retreats As Producer Prices Drop: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
+      "Trump's China election claims risk unsettling trade truce ahead of Xi meeting",
+      "EUR/USD Outlook: Why European Gas Prices Could Become the Euro's Biggest Driver"
     ],
-    "updated": "2026-07-17T01:17:09.176274+00:00"
+    "updated": "2026-07-17T04:48:51.878416+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
