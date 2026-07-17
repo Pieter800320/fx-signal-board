@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T10:53:23.032023+00:00",
+  "updated": "2026-07-17T11:11:07.938157+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.27,
-      "delta_pct": 9.2,
+      "value": 18.08,
+      "delta_pct": 8.1,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4002.5,
-      "delta_pct": 0.4,
+      "value": 3996.5,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.76,
-      "delta_pct": 0.0,
+      "value": 100.84,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.22,
-      "delta_pct": -1.2,
+      "value": 6.224,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.67,
-      "delta_pct": 0.9,
-      "direction": "flat",
+      "value": 80.0,
+      "delta_pct": 1.3,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62958.0,
-      "delta_pct": -1.3,
+      "value": 63053.0,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,13 @@
     }
   },
   "catalyst": {
-    "text": "U.S. Dollar Retreats As Producer Prices Drop conflicts with GBPUSD long setup by strengthening EUR and weakening dollar demand.",
-    "updated": "2026-07-17T09:41:46.023802+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-17T11:11:07.938157+00:00"
   },
   "ranked": {
-    "text": "Risk-off medium contradicts GBPUSD long; VIX surge favors safe-haven USD.",
-    "top": [
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 4.92
-      }
-    ],
-    "updated": "2026-07-17T09:41:46.023802+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-07-17T11:11:07.938157+00:00"
   },
   "calendar": {
     "events": [
@@ -683,19 +677,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T09:41:46.023802+00:00"
+    "updated": "2026-07-17T11:11:07.938157+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-16T22:44:11.927151+00:00"
+    "generated_at": "2026-07-17T11:11:32.227993+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar retreats as producer prices drop significantly",
-      "Euro area inflation confirmed eased in June",
-      "Trump's China claims risk unsettling trade truce ahead"
+      "Euro area inflation confirmed eased slightly in June",
+      "U.S. Dollar retreats as producer prices drop significantly",
+      "Trump's China election claims risk unsettling trade truce"
     ],
-    "updated": "2026-07-17T09:41:46.023802+00:00"
+    "updated": "2026-07-17T11:11:07.938157+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
