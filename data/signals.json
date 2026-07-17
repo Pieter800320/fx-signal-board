@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T20:11:15.253121+00:00",
+  "updated": "2026-07-17T20:39:27.622046+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,20 +555,20 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.5,
-      "delta_pct": 10.6,
+      "value": 18.77,
+      "delta_pct": 12.2,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7457.95,
+      "value": 7457.69,
       "delta_pct": -1.0,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4018.1,
-      "delta_pct": 0.8,
+      "value": 4014.6,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,14 +579,14 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.267,
+      "value": 6.2625,
       "delta_pct": -0.5,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.537,
-      "delta_bp": -3.2,
+      "value": 4.541,
+      "delta_bp": -2.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,35 +597,35 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.47,
-      "delta_pct": 3.2,
+      "value": 81.72,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64183.0,
-      "delta_pct": 0.6,
+      "value": 63952.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 83.0,
-      "delta_bp": -4.2,
+      "value": 83.4,
+      "delta_bp": -3.8,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-17T18:46:21.814634+00:00"
+    "text": "US Dollar moves higher on retail sales. DXY strength conflicts with NZDUSD long and NZDJPY long setups.",
+    "updated": "2026-07-17T20:39:27.622046+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off supports NZD safe-haven demand confirmation.\n\nNZDJPY LONG: VIX surge favors JPY carry unwind challenge.",
+    "text": "NZDUSD LONG: Risk-off favors safe-haven JPY over NZD, challenging setup.\n\nNZDJPY LONG: Risk-off and VIX spike strengthen JPY carry unwind.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.97
+        "score": 7.65
       },
       {
         "pair": "NZDJPY",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-17T18:46:21.814634+00:00"
+    "updated": "2026-07-17T20:39:27.622046+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T18:46:21.814634+00:00"
+    "updated": "2026-07-17T20:39:27.622046+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July consumer sentiment 54.4 beats 51.0 forecast significantly",
-      "US housing starts June 1.427M exceeds 1.310M estimate",
-      "Iran targets ship in Hormuz, escalates Middle East tensions"
+      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
+      "Trump adds Canadian tariffs due to wildfire smoke",
+      "US Dollar moves higher as retail sales meet estimates"
     ],
-    "updated": "2026-07-17T18:46:21.814634+00:00"
+    "updated": "2026-07-17T20:39:27.622046+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
