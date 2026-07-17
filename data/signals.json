@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T20:39:27.622046+00:00",
+  "updated": "2026-07-17T22:35:00.046230+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4014.6,
-      "delta_pct": 0.7,
+      "value": 4023.0,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.76,
+      "value": 100.75,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2625,
-      "delta_pct": -0.5,
+      "value": 6.2705,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.72,
-      "delta_pct": 3.5,
+      "value": 81.77,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63952.0,
-      "delta_pct": 0.3,
+      "value": 63893.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar moves higher on retail sales. DXY strength conflicts with NZDUSD long and NZDJPY long setups.",
-    "updated": "2026-07-17T20:39:27.622046+00:00"
+    "text": "US Dollar strength headlines conflict with NZDUSD LONG. Strong retail sales and dollar moves higher weaken NZD relative strength thesis.",
+    "updated": "2026-07-17T22:35:00.046230+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off favors safe-haven JPY over NZD, challenging setup.\n\nNZDJPY LONG: Risk-off and VIX spike strengthen JPY carry unwind.",
+    "text": "NZDUSD LONG: Risk-off challenges setup; equity weakness undermines risk currency demand.\n\nNZDJPY LONG: Risk-off challenges setup; yen strength attracts safe-haven flows.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-17T20:39:27.622046+00:00"
+    "updated": "2026-07-17T22:35:00.046230+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T20:39:27.622046+00:00"
+    "updated": "2026-07-17T22:35:00.046230+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -700,7 +700,7 @@
       "Trump adds Canadian tariffs due to wildfire smoke",
       "US Dollar moves higher as retail sales meet estimates"
     ],
-    "updated": "2026-07-17T20:39:27.622046+00:00"
+    "updated": "2026-07-17T22:35:00.046230+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
