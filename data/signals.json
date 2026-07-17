@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T16:21:03.884116+00:00",
+  "updated": "2026-07-17T16:54:49.472770+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,21 +555,21 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.04,
-      "delta_pct": 7.8,
+      "value": 18.15,
+      "delta_pct": 8.5,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7470.39,
-      "delta_pct": -0.8,
+      "value": 7495.05,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3998.2,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4022.2,
+      "delta_pct": 0.9,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
@@ -579,61 +579,61 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.256,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.2635,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.525,
-      "delta_bp": -4.4,
-      "direction": "down",
+      "value": 4.545,
+      "delta_bp": -2.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": -0.4,
+      "value": 3.705,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.55,
-      "delta_pct": 2.0,
+      "value": 81.34,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63118.0,
-      "delta_pct": -1.1,
+      "value": 63599.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 83.2,
-      "delta_bp": -4.0,
+      "value": 84.0,
+      "delta_bp": -3.2,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Dollar strengthening on retail sales and UMich sentiment beats could accelerate USD appreciation, pressuring NZDUSD and NZDJPY longs.",
-    "updated": "2026-07-17T15:03:13.072538+00:00"
+    "text": "US Dollar strengthening on retail sales and UMich sentiment beats directly conflicts with NZDUSD LONG and NZDJPY LONG setups.",
+    "updated": "2026-07-17T16:54:49.472770+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off headwinds challenge setup; USD safe-haven flows competing.\n\nNZDJPY LONG: Risk-off environment challenges carry trade; JPY strengthening pressures position.",
+    "text": "NZDUSD LONG: Risk-off challenges setup, USD safe-haven demand headwind.\n\nNZDJPY LONG: Risk-off confirms setup, JPY weakness supports NZD.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.15
+        "score": 7.85
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 6.85
+        "score": 7.08
       }
     ],
-    "updated": "2026-07-17T15:03:13.072538+00:00"
+    "updated": "2026-07-17T16:54:49.472770+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T15:03:13.072538+00:00"
+    "updated": "2026-07-17T16:54:49.472770+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "US housing starts June 1.427 million versus 1.310 million estimate",
-      "US June import prices +0.3% vs -0.7% expected"
+      "US July UMich consumer sentiment 54.4 beats 51.0 forecast significantly",
+      "US June import prices +0.3% versus -0.7% expected surprise",
+      "US housing starts 1.427 million exceed 1.310 million estimate"
     ],
-    "updated": "2026-07-17T15:03:13.072538+00:00"
+    "updated": "2026-07-17T16:54:49.472770+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
