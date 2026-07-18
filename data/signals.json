@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T18:40:28.659146+00:00",
+  "updated": "2026-07-18T20:34:05.257593+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64453.0,
-      "delta_pct": 0.9,
+      "value": 64583.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strengthening on retail sales and moving higher conflicts with NZDUSD long setup. USD strength headwind for both pairs.",
-    "updated": "2026-07-18T18:40:28.659146+00:00"
+    "text": "US Dollar strength headlines conflict with NZDUSD LONG. DXY rising pressures NZD weakness. USD JPY strength supports NZDJPY LONG.",
+    "updated": "2026-07-18T20:34:05.257593+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off supports NZD safe-haven demand today.\n\nNZDJPY LONG: Oil surge aids carry trade unwind pressure.",
+    "text": "NZDUSD LONG: Risk-off environment challenges setup, USD safe-haven demand headwind.\n\nNZDJPY LONG: Risk-off JPY strength directly contradicts bullish NZD positioning.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-18T18:40:28.659146+00:00"
+    "updated": "2026-07-18T20:34:05.257593+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-18T18:40:28.659146+00:00"
+    "updated": "2026-07-18T20:34:05.257593+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump adds Canadian tariffs due to wildfire smoke crisis",
-      "US Dollar retreats as producer prices drop significantly"
+      "Trump adds Canadian tariffs due to wildfire smoke crossing border",
+      "U.S. Dollar retreats as producer prices drop significantly"
     ],
-    "updated": "2026-07-18T18:40:28.659146+00:00"
+    "updated": "2026-07-18T20:34:05.257593+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
