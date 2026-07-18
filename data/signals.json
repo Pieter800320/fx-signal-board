@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-17T22:35:00.046230+00:00",
+  "updated": "2026-07-18T01:09:19.995801+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63893.0,
-      "delta_pct": 0.2,
+      "value": 63873.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength headlines conflict with NZDUSD LONG. Strong retail sales and dollar moves higher weaken NZD relative strength thesis.",
-    "updated": "2026-07-17T22:35:00.046230+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-18T01:09:19.995801+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off challenges setup; equity weakness undermines risk currency demand.\n\nNZDJPY LONG: Risk-off challenges setup; yen strength attracts safe-haven flows.",
+    "text": "NZDUSD LONG: Risk-off challenges setup, VIX spike favors safe-haven currencies.\n\nNZDJPY LONG: Risk-off challenges setup, JPY safe-haven bid undermines NZD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-17T22:35:00.046230+00:00"
+    "updated": "2026-07-18T01:09:19.995801+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-17T22:35:00.046230+00:00"
+    "updated": "2026-07-18T01:09:19.995801+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-17T11:11:32.227993+00:00"
+    "generated_at": "2026-07-18T01:09:44.886902+00:00"
   },
   "breaking": {
     "headlines": [
-      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump adds Canadian tariffs due to wildfire smoke",
-      "US Dollar moves higher as retail sales meet estimates"
+      "US July UMich consumer sentiment 54.4 beats 51.0 forecast",
+      "Trump threatens additional Canadian tariffs over wildfire smoke",
+      "US retail sales meet estimates, dollar moves higher"
     ],
-    "updated": "2026-07-17T22:35:00.046230+00:00"
+    "updated": "2026-07-18T01:09:19.995801+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
