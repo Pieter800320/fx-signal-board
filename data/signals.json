@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T10:53:05.186351+00:00",
+  "updated": "2026-07-18T12:40:58.362767+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63961.0,
-      "delta_pct": 0.1,
+      "value": 64133.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "U.S. Dollar strengthening on retail sales and higher oil prices conflicts with NZDUSD LONG and NZDJPY LONG setups.",
-    "updated": "2026-07-18T10:53:05.186351+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-18T12:40:58.362767+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off environment challenges setup despite strong technicals today.\n\nNZDJPY LONG: VIX spike and risk-off sentiment challenges carry trade setup.",
+    "text": "NZDUSD LONG: Risk-off favors NZD safe-haven demand confirmation.\n\nNZDJPY LONG: VIX surge supports carry unwind challenge.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-18T10:53:05.186351+00:00"
+    "updated": "2026-07-18T12:40:58.362767+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-18T10:53:05.186351+00:00"
+    "updated": "2026-07-18T12:40:58.362767+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -700,7 +700,7 @@
       "Trump adds Canadian tariffs due to wildfire smoke crossing border",
       "U.S. Dollar retreats as producer prices drop significantly"
     ],
-    "updated": "2026-07-18T10:53:05.186351+00:00"
+    "updated": "2026-07-18T12:40:58.362767+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
