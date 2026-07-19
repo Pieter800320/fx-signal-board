@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T21:52:41.244703+00:00",
+  "updated": "2026-07-19T22:37:10.470148+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 3,
-    "total": 3,
-    "confidence": "High",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4018.8,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 3999.0,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.75,
-      "delta_pct": 0.0,
+      "value": 100.85,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.265,
-      "delta_pct": -0.5,
+      "value": 6.2565,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.78,
-      "delta_pct": 3.6,
+      "value": 84.31,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64348.0,
-      "delta_pct": -0.7,
+      "value": 64664.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength from retail sales and higher oil rig count pressures NZDUSD long. USD/JPY strength conflicts with NZDJPY long thesis.",
-    "updated": "2026-07-19T21:52:41.244703+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-19T22:37:10.470148+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off headwinds challenge setup, USD safe-haven demand rising.\n\nNZDJPY LONG: Risk-off environment challenges carry, JPY strengthening as safe-haven.",
+    "text": "NZDUSD LONG: Risk-off challenges setup, USD safe-haven demand conflicts strength.\n\nNZDJPY LONG: Risk-off challenges setup, JPY carry unwind pressures NZD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T21:52:41.244703+00:00"
+    "updated": "2026-07-19T22:37:10.470148+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T21:52:41.244703+00:00"
+    "updated": "2026-07-19T22:37:10.470148+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar higher as retail sales meet estimates, EUR/USD USD/CAD affected",
-      "Trump adds Canadian tariffs due to wildfire smoke cross-border impact",
-      "EUR/USD outlook: European gas prices become euro's biggest driver"
+      "US Dollar rises as retail sales meet estimates, impacts EUR/USD and GBP/USD",
+      "Trump threatens additional Canadian tariffs over wildfire smoke cross-border issue",
+      "European gas prices emerge as major euro driver, affects EUR/USD outlook"
     ],
-    "updated": "2026-07-19T21:52:41.244703+00:00"
+    "updated": "2026-07-19T22:37:10.470148+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
@@ -712,7 +712,7 @@
     "updated": "2026-07-17T20:11:15.253121+00:00"
   },
   "week_ahead": {
-    "text": "Risk-off sentiment dominates with US Dollar weakness, persistent Yen vulnerability, and crude oil surging on US-Iran escalation threatening sustained market volatility. The BOJ rate hike Tuesday and deteriorating US-Iran relations will drive JPY strength and broader currency repricing, while softer inflation data limits Fed hiking pressure . Watch USD/JPY closely as long positioning has already yielded 0.43% gains this week suggesting momentum may face technical resistance. The Strait of Hormuz closure threatens crude shocks that could reignite inflationary fears if Trump allows further oil advances , creating the biggest execution risk for range-bound positioning.",
-    "generated_at": "2026-07-19T21:52:41.244703+00:00"
+    "text": "Geopolitical tensions between the US and Iran combined with war-related fears are driving safe-haven demand and bolstering the US Dollar , a theme likely to persist through the week as escalation risks remain elevated. The BOJ interest rate decision on Tuesday will be critical for Yen weakness as market expectations center on a 25 basis point hike that could trigger sharp JPY appreciation if delivered. USD/JPY deserves close attention given persistent Yen weakness , particularly as the BOJ decision could reverse recent downside pressure on the pair. The Strait of Hormuz closure threatens crude oil volatility, though presidential intervention could quickly reverse direction and create dangerous trading conditions , making oil-linked pairs and risk sentiment wildly unpredictable this week.",
+    "generated_at": "2026-07-19T22:37:10.470148+00:00"
   }
 }
