@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T07:52:20.506282+00:00",
+  "updated": "2026-07-19T09:39:59.838008+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64677.0,
-      "delta_pct": -0.2,
+      "value": 64461.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strengthening on retail sales data conflicts with NZDUSD LONG and NZDJPY LONG setups requiring NZD appreciation or USD weakness.",
-    "updated": "2026-07-19T07:52:20.506282+00:00"
+    "text": "US Dollar strength from retail sales and UMich sentiment data conflicts with NZDUSD long setup. USD strengthening undermines NZD appreciation potential.",
+    "updated": "2026-07-19T09:39:59.838008+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off favors safe-haven JPY, challenges NZD strength.\n\nNZDJPY LONG: Risk-off supports JPY carry unwind, challenges position.",
+    "text": "NZDUSD LONG: Risk-off challenges setup, VIX surge favors safe havens instead.\n\nNZDJPY LONG: Risk-off supports setup, JPY weakness aids NZD appreciation thesis.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T07:52:20.506282+00:00"
+    "updated": "2026-07-19T09:39:59.838008+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T07:52:20.506282+00:00"
+    "updated": "2026-07-19T09:39:59.838008+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump adds Canadian tariffs due to wildfire smoke escalation",
-      "U.S. Dollar retreats as producer prices drop significantly"
+      "US July consumer sentiment 54.4 beats expectations, supports USD strength",
+      "Trump threatens additional Canadian tariffs over wildfire smoke",
+      "US Dollar retreats as producer prices drop significantly"
     ],
-    "updated": "2026-07-19T07:52:20.506282+00:00"
+    "updated": "2026-07-19T09:39:59.838008+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
