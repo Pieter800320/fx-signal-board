@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T16:40:07.107837+00:00",
+  "updated": "2026-07-19T18:43:13.849238+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64526.0,
-      "delta_pct": -0.4,
+      "value": 64395.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength headlines conflict with NZDUSD long setup. Strong retail sales and higher DXY support USD appreciation against NZD.",
-    "updated": "2026-07-19T16:40:07.107837+00:00"
+    "text": "US Dollar strengthening on retail sales and higher oil prices conflicts with NZDUSD LONG and NZDJPY LONG setups.",
+    "updated": "2026-07-19T18:43:13.849238+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off challenges setup; VIX spike favors safe-haven USD strength.\n\nNZDJPY LONG: Risk-off confirms setup; JPY weakness supports NZD outperformance thesis.",
+    "text": "NZDUSD LONG: Risk-off favors safe-haven JPY over commodity NZD.\n\nNZDJPY LONG: Oil strength supports NZD despite risk-off headwinds.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T16:40:07.107837+00:00"
+    "updated": "2026-07-19T18:43:13.849238+00:00"
   },
   "calendar": {
     "events": [
@@ -688,19 +688,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T16:40:07.107837+00:00"
+    "updated": "2026-07-19T18:43:13.849238+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-19T04:56:22.503434+00:00"
+    "generated_at": "2026-07-19T18:43:39.912367+00:00"
   },
   "breaking": {
     "headlines": [
       "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump says he will add to Canadian tariffs due to wildfire smoke",
-      "U.S. Dollar Moves Higher As Retail Sales Meet Estimates"
+      "Trump adds Canadian tariffs due to wildfire smoke escalation",
+      "US Dollar moves higher as retail sales meet estimates"
     ],
-    "updated": "2026-07-19T16:40:07.107837+00:00"
+    "updated": "2026-07-19T18:43:13.849238+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
