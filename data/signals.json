@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T12:42:37.300531+00:00",
+  "updated": "2026-07-19T14:44:13.961487+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,8 +548,8 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 4,
-    "total": 4,
+    "signals": 3,
+    "total": 3,
     "confidence": "High",
     "stable": true
   },
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4012.7,
-      "delta_pct": 0.7,
+      "value": 4018.8,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,9 +579,9 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.22,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 6.265,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.49,
-      "delta_pct": 4.5,
+      "value": 81.78,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64326.0,
-      "delta_pct": -0.7,
+      "value": 64463.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength headlines conflict with NZDUSD LONG. Dollar rising pressures NZD weakness. NZDJPY LONG remains unaffected by USD catalysts.",
-    "updated": "2026-07-19T12:42:37.300531+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-19T14:44:13.961487+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off supports NZD safe-haven demand confirmation.\n\nNZDJPY LONG: VIX surge elevates JPY carry unwind risk.",
+    "text": "NZDUSD LONG: Risk-off supports NZD strength despite equity weakness today.\n\nNZDJPY LONG: VIX spike and risk-off favor JPY safe-haven over NZD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T12:42:37.300531+00:00"
+    "updated": "2026-07-19T14:44:13.961487+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T12:42:37.300531+00:00"
+    "updated": "2026-07-19T14:44:13.961487+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump adds Canadian tariffs due to wildfire smoke cross-border",
+      "Trump adds Canadian tariffs due to wildfire smoke",
       "U.S. Dollar retreats as producer prices drop significantly"
     ],
-    "updated": "2026-07-19T12:42:37.300531+00:00"
+    "updated": "2026-07-19T14:44:13.961487+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
