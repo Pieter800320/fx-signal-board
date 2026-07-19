@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T20:34:37.715986+00:00",
+  "updated": "2026-07-19T21:52:41.244703+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64466.0,
-      "delta_pct": -0.5,
+      "value": 64348.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength headlines (retail sales, DXY moving higher) conflict with NZDUSD LONG and NZDJPY LONG setups. USD appreciation headwinds.",
-    "updated": "2026-07-19T20:34:37.715986+00:00"
+    "text": "US Dollar strength from retail sales and higher oil rig count pressures NZDUSD long. USD/JPY strength conflicts with NZDJPY long thesis.",
+    "updated": "2026-07-19T21:52:41.244703+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off supports NZD safe-haven demand confirmation.\n\nNZDJPY LONG: VIX spike challenges yen carry unwind setup.",
+    "text": "NZDUSD LONG: Risk-off headwinds challenge setup, USD safe-haven demand rising.\n\nNZDJPY LONG: Risk-off environment challenges carry, JPY strengthening as safe-haven.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T20:34:37.715986+00:00"
+    "updated": "2026-07-19T21:52:41.244703+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T20:34:37.715986+00:00"
+    "updated": "2026-07-19T21:52:41.244703+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July UMich consumer sentiment 54.4 beats expected 51.0 significantly",
-      "Trump adds Canadian tariffs due to wildfire smoke escalation",
-      "US Dollar retreats as producer prices drop unexpectedly"
+      "US Dollar higher as retail sales meet estimates, EUR/USD USD/CAD affected",
+      "Trump adds Canadian tariffs due to wildfire smoke cross-border impact",
+      "EUR/USD outlook: European gas prices become euro's biggest driver"
     ],
-    "updated": "2026-07-19T20:34:37.715986+00:00"
+    "updated": "2026-07-19T21:52:41.244703+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
@@ -710,5 +710,9 @@
     "h4_confidence": "Medium",
     "h1_confirmed": false,
     "updated": "2026-07-17T20:11:15.253121+00:00"
+  },
+  "week_ahead": {
+    "text": "Risk-off sentiment dominates with US Dollar weakness, persistent Yen vulnerability, and crude oil surging on US-Iran escalation threatening sustained market volatility. The BOJ rate hike Tuesday and deteriorating US-Iran relations will drive JPY strength and broader currency repricing, while softer inflation data limits Fed hiking pressure . Watch USD/JPY closely as long positioning has already yielded 0.43% gains this week suggesting momentum may face technical resistance. The Strait of Hormuz closure threatens crude shocks that could reignite inflationary fears if Trump allows further oil advances , creating the biggest execution risk for range-bound positioning.",
+    "generated_at": "2026-07-19T21:52:41.244703+00:00"
   }
 }
