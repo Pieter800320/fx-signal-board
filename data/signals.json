@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-18T22:34:37.357213+00:00",
+  "updated": "2026-07-19T01:13:52.846629+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64709.0,
+      "value": 64734.0,
       "delta_pct": 1.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strength headlines (retail sales, UMich sentiment beat) conflict with NZDUSD LONG and NZDJPY LONG. USD appreciation pressures both setups.",
-    "updated": "2026-07-18T22:34:37.357213+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-19T01:13:52.846629+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off headwinds challenge setup, VIX surge favors safe havens.\n\nNZDJPY LONG: Risk-off environment challenges carry trade, equity weakness pressures yen.",
+    "text": "NZDUSD LONG: Risk-off favors safe-haven NZD strength, confirming setup.\n\nNZDJPY LONG: VIX spike supports JPY safe-haven bid, challenging carry.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-18T22:34:37.357213+00:00"
+    "updated": "2026-07-19T01:13:52.846629+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-18T22:34:37.357213+00:00"
+    "updated": "2026-07-19T01:13:52.846629+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
-      "Trump adds Canadian tariffs due to wildfire smoke crossing border",
-      "U.S. Dollar retreats as producer prices drop significantly"
+      "US July UMich consumer sentiment 54.4 beats 51.0 forecast",
+      "Trump threatens additional Canadian tariffs over wildfire smoke",
+      "US Dollar moves higher as retail sales meet estimates"
     ],
-    "updated": "2026-07-18T22:34:37.357213+00:00"
+    "updated": "2026-07-19T01:13:52.846629+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
