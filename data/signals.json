@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T18:43:13.849238+00:00",
+  "updated": "2026-07-19T20:34:37.715986+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64395.0,
-      "delta_pct": -0.6,
+      "value": 64466.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strengthening on retail sales and higher oil prices conflicts with NZDUSD LONG and NZDJPY LONG setups.",
-    "updated": "2026-07-19T18:43:13.849238+00:00"
+    "text": "US Dollar strength headlines (retail sales, DXY moving higher) conflict with NZDUSD LONG and NZDJPY LONG setups. USD appreciation headwinds.",
+    "updated": "2026-07-19T20:34:37.715986+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off favors safe-haven JPY over commodity NZD.\n\nNZDJPY LONG: Oil strength supports NZD despite risk-off headwinds.",
+    "text": "NZDUSD LONG: Risk-off supports NZD safe-haven demand confirmation.\n\nNZDJPY LONG: VIX spike challenges yen carry unwind setup.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.38
       }
     ],
-    "updated": "2026-07-19T18:43:13.849238+00:00"
+    "updated": "2026-07-19T20:34:37.715986+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T18:43:13.849238+00:00"
+    "updated": "2026-07-19T20:34:37.715986+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July prelim UMich consumer sentiment 54.4 vs 51.0 expected",
+      "US July UMich consumer sentiment 54.4 beats expected 51.0 significantly",
       "Trump adds Canadian tariffs due to wildfire smoke escalation",
-      "US Dollar moves higher as retail sales meet estimates"
+      "US Dollar retreats as producer prices drop unexpectedly"
     ],
-    "updated": "2026-07-19T18:43:13.849238+00:00"
+    "updated": "2026-07-19T20:34:37.715986+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
