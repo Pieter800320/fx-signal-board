@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T22:37:10.470148+00:00",
+  "updated": "2026-07-20T01:17:29.127589+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 3999.0,
-      "delta_pct": -0.3,
+      "value": 4015.9,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.85,
-      "delta_pct": 0.1,
+      "value": 100.77,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2565,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 6.283,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.31,
-      "delta_pct": 2.2,
+      "value": 83.46,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64664.0,
-      "delta_pct": -0.2,
+      "value": 64747.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,23 +617,23 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-07-19T22:37:10.470148+00:00"
+    "updated": "2026-07-20T01:17:29.127589+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-off challenges setup, USD safe-haven demand conflicts strength.\n\nNZDJPY LONG: Risk-off challenges setup, JPY carry unwind pressures NZD.",
+    "text": "NZDUSD LONG: Macro confirms setup. Copper strength supports NZD bid thesis.\n\nNZDJPY LONG: Macro challenges setup. Risk-off medium pressures carry trade unwinding.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.65
+        "score": 7.85
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.38
+        "score": 7.58
       }
     ],
-    "updated": "2026-07-19T22:37:10.470148+00:00"
+    "updated": "2026-07-20T01:17:29.127589+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-19T22:37:10.470148+00:00"
+    "updated": "2026-07-20T01:17:29.127589+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar rises as retail sales meet estimates, impacts EUR/USD and GBP/USD",
-      "Trump threatens additional Canadian tariffs over wildfire smoke cross-border issue",
-      "European gas prices emerge as major euro driver, affects EUR/USD outlook"
+      "US Dollar higher as retail sales meet estimates, impacts major pairs",
+      "Trump adds Canadian tariffs over wildfire smoke, USD/CAD pressure",
+      "European gas prices emerge as euro's biggest driver, EUR/USD outlook"
     ],
-    "updated": "2026-07-19T22:37:10.470148+00:00"
+    "updated": "2026-07-20T01:17:29.127589+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
