@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T01:17:29.127589+00:00",
+  "updated": "2026-07-20T05:24:00.291485+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4015.9,
+      "value": 4017.9,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.77,
-      "delta_pct": 0.0,
+      "value": 100.71,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.283,
-      "delta_pct": 1.0,
+      "value": 6.2785,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.46,
+      "value": 83.44,
       "delta_pct": 1.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64747.0,
-      "delta_pct": -0.1,
+      "value": 64135.0,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-20T01:17:29.127589+00:00"
+    "text": "US Dollar strengthens on retail sales and producer price data. USD strength directly conflicts with NZDUSD LONG and NZDJPY LONG setups.",
+    "updated": "2026-07-20T05:24:00.291485+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup. Copper strength supports NZD bid thesis.\n\nNZDJPY LONG: Macro challenges setup. Risk-off medium pressures carry trade unwinding.",
+    "text": "NZDUSD LONG: Copper strength confirms NZD bid despite equity weakness today.\n\nNZDJPY LONG: Risk-off challenges setup; JPY safe-haven bid competes with NZD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 7.58
       }
     ],
-    "updated": "2026-07-20T01:17:29.127589+00:00"
+    "updated": "2026-07-20T05:24:00.291485+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-20T01:17:29.127589+00:00"
+    "updated": "2026-07-20T05:24:00.291485+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -696,11 +696,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar higher as retail sales meet estimates, impacts major pairs",
-      "Trump adds Canadian tariffs over wildfire smoke, USD/CAD pressure",
-      "European gas prices emerge as euro's biggest driver, EUR/USD outlook"
+      "Oil jumps as US-Iran war spreads, Hormuz tankers struck",
+      "US Dollar moves higher as retail sales meet estimates",
+      "Trump adds Canadian tariffs due to wildfire smoke impacts"
     ],
-    "updated": "2026-07-20T01:17:29.127589+00:00"
+    "updated": "2026-07-20T05:24:00.291485+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
