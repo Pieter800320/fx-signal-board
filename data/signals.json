@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T11:52:23.382349+00:00",
+  "updated": "2026-07-20T12:06:20.713111+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.41,
-      "delta_pct": -1.9,
+      "value": 18.0,
+      "delta_pct": -4.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4029.2,
-      "delta_pct": 0.4,
+      "value": 4032.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.72,
-      "delta_pct": -0.0,
+      "value": 100.79,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3215,
-      "delta_pct": 1.6,
+      "value": 6.3335,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.72,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 80.38,
+      "delta_pct": -2.6,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64171.0,
-      "delta_pct": -0.8,
+      "value": 64767.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind from USD strength headlines mentioning retail sales boost and dollar moves higher. Oil geopolitical escalation supports NZDJPY LONG via risk-on environment.",
-    "updated": "2026-07-20T08:30:18.010856+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-20T12:06:20.713111+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms NZD bid, macro supports risk-off.\n\nNZDUSD LONG: Copper rally supports NZD, but risk-off challenges USD safety.\n\nGBPUSD LONG: Risk-off macro challenges long setup, needs internal momentum confirmation.",
+    "text": "AUDUSD LONG: Copper strength confirms AUD bid thesis today.\n\nNZDJPY LONG: Risk-on regime supports NZD strength against JPY.\n\nNZDUSD LONG: Copper rally confirms NZD bid in risk-on.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 8.3
+      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.78
+        "score": 8.07
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.28
-      },
-      {
-        "pair": "GBPUSD",
-        "direction": "bull",
-        "score": 6.98
+        "score": 7.78
       }
     ],
-    "updated": "2026-07-20T08:30:18.010856+00:00"
+    "updated": "2026-07-20T12:06:20.713111+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-20T08:30:18.010856+00:00"
+    "updated": "2026-07-20T12:06:20.713111+00:00"
   },
   "week_ahead": {
     "text": "Geopolitical tensions between the US and Iran combined with war-related fears are driving safe-haven demand and bolstering the US Dollar , a theme likely to persist through the week as escalation risks remain elevated. The BOJ interest rate decision on Tuesday will be critical for Yen weakness as market expectations center on a 25 basis point hike that could trigger sharp JPY appreciation if delivered. USD/JPY deserves close attention given persistent Yen weakness , particularly as the BOJ decision could reverse recent downside pressure on the pair. The Strait of Hormuz closure threatens crude oil volatility, though presidential intervention could quickly reverse direction and create dangerous trading conditions , making oil-linked pairs and risk sentiment wildly unpredictable this week.",
@@ -705,11 +705,11 @@
   },
   "breaking": {
     "headlines": [
-      "Oil jumps as US-Iran war spread, Hormuz tankers struck",
-      "US Dollar moves higher as retail sales meet estimates",
-      "ECB SAFE survey shows inflation and wage growth easing"
+      "US retail sales meet estimates, dollar moves higher across major pairs",
+      "ECB Q2 SAFE survey shows inflation and wage growth expectations easing",
+      "Iran diplomatic efforts active, oil prices ease amid mediation proposals"
     ],
-    "updated": "2026-07-20T08:30:18.010856+00:00"
+    "updated": "2026-07-20T12:06:20.713111+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
