@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-20T18:58:38.792542+00:00",
+  "updated": "2026-07-20T19:18:44.540448+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,90 +555,85 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.93,
-      "delta_pct": -4.5,
+      "value": 18.43,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7464.4,
-      "delta_pct": 0.1,
+      "value": 7443.87,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4015.4,
-      "delta_pct": 0.1,
+      "value": 4010.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.97,
+      "value": 100.95,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3425,
+      "value": 6.3435,
       "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.604,
-      "delta_bp": 6.3,
+      "value": 4.598,
+      "delta_bp": 5.7,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.707,
-      "delta_bp": 0.0,
+      "value": 3.705,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.91,
-      "delta_pct": -0.7,
+      "value": 82.8,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65451.0,
-      "delta_pct": 1.2,
+      "value": 65134.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.7,
-      "delta_bp": 6.3,
+      "value": 89.3,
+      "delta_bp": 5.9,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF long conflicted by oil retreat and Iran diplomatic efforts easing risk-off demand for safe-haven CHF strength.",
-    "updated": "2026-07-20T17:14:15.662031+00:00"
+    "text": "US leading index -0.2% weakens economic outlook, potentially pressuring USD strength that USDCHF LONG depends on. Monitor closely.",
+    "updated": "2026-07-20T19:18:44.540448+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, dual tailwind from rising yields and copper demand.\n\nNZDUSD LONG: Macro confirms setup, copper strength supports NZD bid thesis.\n\nUSDCHF LONG: Macro challenges setup, risk-on low weakens safe-haven USD bid case.",
+    "text": "NZDUSD LONG: Macro confirms setup via copper strength supporting NZD demand.\n\nUSDCHF LONG: Macro confirms setup via US 10Y rise supporting USD bid.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 7.23
-      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.9
+        "score": 5.62
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 5.07
+        "score": 5.03
       }
     ],
-    "updated": "2026-07-20T17:14:15.662031+00:00"
+    "updated": "2026-07-20T19:18:44.540448+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-20T17:14:15.662031+00:00"
+    "updated": "2026-07-20T19:18:44.540448+00:00"
   },
   "week_ahead": {
     "text": "Geopolitical tensions between the US and Iran combined with war-related fears are driving safe-haven demand and bolstering the US Dollar , a theme likely to persist through the week as escalation risks remain elevated. The BOJ interest rate decision on Tuesday will be critical for Yen weakness as market expectations center on a 25 basis point hike that could trigger sharp JPY appreciation if delivered. USD/JPY deserves close attention given persistent Yen weakness , particularly as the BOJ decision could reverse recent downside pressure on the pair. The Strait of Hormuz closure threatens crude oil volatility, though presidential intervention could quickly reverse direction and create dangerous trading conditions , making oil-linked pairs and risk sentiment wildly unpredictable this week.",
@@ -705,11 +700,11 @@
   },
   "breaking": {
     "headlines": [
-      "US leading index June -0.2% versus -0.1% estimate, signals slowdown",
-      "Canada June CPI 2.8% beats 2.9% estimate, BoC relief",
-      "US retail sales meet estimates, supports dollar strength near-term"
+      "Canada June CPI YoY 2.8% vs 2.9% estimate, below expectations",
+      "US leading index June -0.2% versus -0.1% estimate, disappoints",
+      "US retail sales meet estimates, supports Dollar strength"
     ],
-    "updated": "2026-07-20T17:14:15.662031+00:00"
+    "updated": "2026-07-20T19:18:44.540448+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
