@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T20:21:33.997360+00:00",
+  "updated": "2026-07-21T20:55:00.418496+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,19 +555,19 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.02,
-      "delta_pct": -8.7,
+      "value": 17.05,
+      "delta_pct": -8.6,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7508.61,
+      "value": 7509.2,
       "delta_pct": 0.9,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4085.3,
+      "value": 4085.1,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
@@ -579,14 +579,14 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5235,
+      "value": 6.5275,
       "delta_pct": 3.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.63,
-      "delta_bp": 3.2,
+      "value": 4.628,
+      "delta_bp": 3.0,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.36,
+      "value": 84.38,
       "delta_pct": 1.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66271.0,
-      "delta_pct": 1.6,
+      "value": 66379.0,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.0,
-      "delta_bp": 0.7,
+      "value": 89.8,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-21T18:59:17.947515+00:00"
+    "text": "USDJPY trades to 40 year high accelerates AUDJPY and CADJPY longs via USD strength. USDCHF long supported. Canada tariff tensions could pressure CADJPY.",
+    "updated": "2026-07-21T20:55:00.418496+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX fall and gold rise strongly confirm AUD strength thesis.\n\nAUDUSD LONG: Risk-on environment and falling VIX confirm Australian dollar bid setup.\n\nUSDCHF LONG: Risk-on macro challenges safe-haven CHF strength, weakening long rationale.",
+    "text": "AUDJPY LONG: VIX falling and gold rising strongly confirm setup.\n\nUSDCHF LONG: Risk-on regime challenges safe-haven CHF bid setup.\n\nCADJPY LONG: Oil rising and risk-on environment confirm setup.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.5
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 6.83
+        "score": 7.17
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
         "score": 6.68
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-21T18:59:17.947515+00:00"
+    "updated": "2026-07-21T20:55:00.418496+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-21T18:59:17.947515+00:00"
+    "updated": "2026-07-21T20:55:00.418496+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump rejects 10-day Iran cease-fire proposal, Middle East tensions escalate",
-      "Canada Carney claims Trump tariffs violate USMCA trade agreement",
-      "US retail sales meet estimates, Dollar strengthens across major pairs"
+      "USDJPY trades to 40 year high, strong dollar momentum",
+      "US retail sales meet estimates, DXY rises higher",
+      "Canada Carney: tariff threats violate USMCA agreement"
     ],
-    "updated": "2026-07-21T18:59:17.947515+00:00"
+    "updated": "2026-07-21T20:55:00.418496+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
