@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T01:14:44.107576+00:00",
+  "updated": "2026-07-21T04:53:50.100185+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
     "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4027.3,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4051.6,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.98,
-      "delta_pct": 0.2,
+      "value": 100.94,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.36,
-      "delta_pct": 2.3,
+      "value": 6.416,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.18,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 82.14,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65507.0,
-      "delta_pct": 1.3,
+      "value": 65443.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG invalidated. Canada tariffs weaken USD fundamentals and boost CHF safe haven appeal, contradicting long bias.",
-    "updated": "2026-07-21T01:14:44.107576+00:00"
+    "text": "New Zealand Q2 CPI beat 4.1% vs 4.0% expected could accelerate NZDUSD long. USD strength headlines support both setups.",
+    "updated": "2026-07-21T04:53:50.100185+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: US 10Y rising confirms USD strength bias today.\n\nNZDUSD LONG: Copper rally supports NZD but Risk-On Medium limits upside.",
+    "text": "USDCHF LONG: US 10Y rise confirms USD bid thesis strongly today.\n\nNZDUSD LONG: Copper strength supports NZD but risk-on medium limits upside.",
     "top": [
       {
         "pair": "USDCHF",
@@ -633,7 +633,7 @@
         "score": 5.55
       }
     ],
-    "updated": "2026-07-21T01:14:44.107576+00:00"
+    "updated": "2026-07-21T04:53:50.100185+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +688,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-21T01:14:44.107576+00:00"
+    "updated": "2026-07-21T04:53:50.100185+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -697,10 +697,10 @@
   "breaking": {
     "headlines": [
       "Trump hits Canada with new tariffs on alcohol, dairy and autos",
-      "New Zealand Q2 CPI 4.1% y/y, exceeds expectations at 1.5% q/q",
-      "US Retail Sales meet estimates, USD strengthens against major pairs"
+      "New Zealand Q2 CPI 4.1% y/y, above expectations at 1.5% q/q",
+      "US Dollar moves higher as retail sales meet estimates across major pairs"
     ],
-    "updated": "2026-07-21T01:14:44.107576+00:00"
+    "updated": "2026-07-21T04:53:50.100185+00:00"
   },
   "last_alert": "2026-07-14T16:21:00.565255+00:00",
   "gold_signal": {
