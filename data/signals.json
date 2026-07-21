@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T15:27:10.336781+00:00",
+  "updated": "2026-07-21T17:03:34.100777+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,42 +551,42 @@
     "signals": -2,
     "total": 4,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.26,
-      "delta_pct": -7.5,
+      "value": 17.13,
+      "delta_pct": -8.2,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7504.82,
-      "delta_pct": 0.8,
+      "value": 7511.98,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4080.4,
+      "value": 4077.2,
       "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.12,
+      "value": 101.11,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.534,
-      "delta_pct": 3.7,
+      "value": 6.5605,
+      "delta_pct": 4.2,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.622,
-      "delta_bp": 2.4,
+      "value": 4.626,
+      "delta_bp": 2.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,30 +597,30 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.12,
-      "delta_pct": 1.1,
+      "value": 84.42,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66632.0,
-      "delta_pct": 2.1,
+      "value": 66493.0,
+      "delta_pct": 1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.2,
-      "delta_bp": -0.1,
+      "value": 89.6,
+      "delta_bp": 0.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Canada tariff tensions could pressure AUDUSD long if risk sentiment deteriorates. Strong US Dollar momentum supports USDCHF long setup.",
-    "updated": "2026-07-21T15:27:10.336781+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-21T17:03:34.100777+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling strengthens AUD carry appeal.\n\nAUDUSD LONG: Macro confirms setup, risk-on environment supports AUD outperformance broadly.\n\nUSDCHF LONG: Macro challenges setup, mixed macro contradicts typical CHF safe-haven flows.",
+    "text": "AUDJPY LONG: VIX falling and gold rising strongly confirm AUD strength setup.\n\nAUDUSD LONG: Risk-on environment with VIX decline confirms broad AUD bid thesis.\n\nUSDCHF LONG: Risk-on regime challenges safe-haven CHF, but lacks specific cross-asset drivers.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 6.68
       }
     ],
-    "updated": "2026-07-21T15:27:10.336781+00:00"
+    "updated": "2026-07-21T17:03:34.100777+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-21T15:27:10.336781+00:00"
+    "updated": "2026-07-21T17:03:34.100777+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canada Carney: Latest tariff threat violates USMCA agreement",
-      "ADP weekly employment drops to 16,500 from 19,750",
-      "US retail sales meet estimates, dollar moves higher"
+      "Canada Carney: Latest tariff threat are a violation of USMCA",
+      "U.S. Dollar Moves Higher As Retail Sales Meet Estimates: USD/CAD",
+      "ADP weekly NER Pulse 16,500 vs 19,750 last week"
     ],
-    "updated": "2026-07-21T15:27:10.336781+00:00"
+    "updated": "2026-07-21T17:03:34.100777+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
