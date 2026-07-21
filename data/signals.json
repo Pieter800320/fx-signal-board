@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T20:55:00.418496+00:00",
+  "updated": "2026-07-21T22:41:18.387683+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,7 +567,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4085.1,
+      "value": 4087.7,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5275,
-      "delta_pct": 3.6,
+      "value": 6.5355,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.38,
-      "delta_pct": 1.4,
+      "value": 84.68,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66379.0,
-      "delta_pct": 1.8,
+      "value": 66285.0,
+      "delta_pct": 1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY trades to 40 year high accelerates AUDJPY and CADJPY longs via USD strength. USDCHF long supported. Canada tariff tensions could pressure CADJPY.",
-    "updated": "2026-07-21T20:55:00.418496+00:00"
+    "text": "USDJPY trades to 40 year high conflicts with AUDJPY LONG and CADJPY LONG. Strong USD headwinds undermine JPY crosses.",
+    "updated": "2026-07-21T22:41:18.387683+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and gold rising strongly confirm setup.\n\nUSDCHF LONG: Risk-on regime challenges safe-haven CHF bid setup.\n\nCADJPY LONG: Oil rising and risk-on environment confirm setup.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX collapse and gold surge drive AUD strength.\n\nUSDCHF LONG: Macro challenges setup, risk-on environment typically weakens safe-haven Swiss franc.\n\nCADJPY LONG: Macro confirms setup, oil rally and risk-on sentiment support Canadian dollar.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 5.38
       }
     ],
-    "updated": "2026-07-21T20:55:00.418496+00:00"
+    "updated": "2026-07-21T22:41:18.387683+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-21T20:55:00.418496+00:00"
+    "updated": "2026-07-21T22:41:18.387683+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "USDJPY trades to 40 year high, strong dollar momentum",
-      "US retail sales meet estimates, DXY rises higher",
-      "Canada Carney: tariff threats violate USMCA agreement"
+      "USDJPY trades to 40 year high, dollar strength accelerates",
+      "US Dollar gains as retail sales meet estimates, DXY rises",
+      "Canada Carney: latest tariff threats violate USMCA agreement"
     ],
-    "updated": "2026-07-21T20:55:00.418496+00:00"
+    "updated": "2026-07-21T22:41:18.387683+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
