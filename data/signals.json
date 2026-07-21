@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-21T15:09:05.673606+00:00",
+  "updated": "2026-07-21T15:27:10.336781+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -542,103 +542,103 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.82,
-      "delta_pct": -4.5,
-      "direction": "flat",
+      "value": 17.26,
+      "delta_pct": -7.5,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7443.28,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7504.82,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4057.8,
-      "delta_pct": 1.2,
+      "value": 4080.4,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.02,
-      "delta_pct": 0.0,
+      "value": 101.12,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.528,
-      "delta_pct": 3.6,
+      "value": 6.534,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.604,
-      "delta_bp": 0.6,
+      "value": 4.622,
+      "delta_bp": 2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.72,
-      "delta_bp": 1.5,
-      "direction": "flat",
+      "value": 3.73,
+      "delta_bp": 2.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.1,
-      "delta_pct": 1.0,
+      "value": 84.12,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66523.0,
-      "delta_pct": 2.0,
+      "value": 66632.0,
+      "delta_pct": 2.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.4,
-      "delta_bp": -0.9,
+      "value": 89.2,
+      "delta_bp": -0.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG potentially challenged by USD strength narrative, though CHF typically appreciates in risk-off environments conflicting with dollar strength thesis.",
-    "updated": "2026-07-21T13:07:07.970410+00:00"
+    "text": "Canada tariff tensions could pressure AUDUSD long if risk sentiment deteriorates. Strong US Dollar momentum supports USDCHF long setup.",
+    "updated": "2026-07-21T15:27:10.336781+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro Risk-On Low challenges setup despite strong cross asset Gold Copper bid.\n\nNZDJPY LONG: Macro Risk-On Low challenges setup despite Copper strength supporting NZD momentum.\n\nUSDCHF LONG: Macro Risk-On Low challenges setup with no cross asset confirmation present.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling strengthens AUD carry appeal.\n\nAUDUSD LONG: Macro confirms setup, risk-on environment supports AUD outperformance broadly.\n\nUSDCHF LONG: Macro challenges setup, mixed macro contradicts typical CHF safe-haven flows.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.33
+      },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 6.8
-      },
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 6.38
+        "score": 6.83
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.9
+        "score": 6.68
       }
     ],
-    "updated": "2026-07-21T13:07:07.970410+00:00"
+    "updated": "2026-07-21T15:27:10.336781+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-21T13:07:07.970410+00:00"
+    "updated": "2026-07-21T15:27:10.336781+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Retail Sales meet estimates, Dollar strengthens across major pairs",
-      "ADP employment drops to 16,500 vs 19,750 prior week",
-      "USTR Greer: Canada offering better trade deals to other countries"
+      "Canada Carney: Latest tariff threat violates USMCA agreement",
+      "ADP weekly employment drops to 16,500 from 19,750",
+      "US retail sales meet estimates, dollar moves higher"
     ],
-    "updated": "2026-07-21T13:07:07.970410+00:00"
+    "updated": "2026-07-21T15:27:10.336781+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
