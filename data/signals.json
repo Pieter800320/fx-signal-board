@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T18:14:12.108996+00:00",
+  "updated": "2026-07-22T18:51:57.931025+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,20 +555,20 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.78,
-      "delta_pct": -1.6,
+      "value": 16.96,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7521.19,
-      "delta_pct": 0.2,
+      "value": 7507.03,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4152.3,
-      "delta_pct": 2.0,
+      "value": 4140.6,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,14 +579,14 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4905,
-      "delta_pct": -0.3,
+      "value": 6.4755,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.65,
-      "delta_bp": 2.2,
+      "value": 4.654,
+      "delta_bp": 2.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.28,
-      "delta_pct": 1.6,
+      "value": 87.08,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66241.0,
-      "delta_pct": -0.4,
+      "value": 65826.0,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.5,
-      "delta_bp": 0.7,
+      "value": 90.9,
+      "delta_bp": 1.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "CADJPY and AUDJPY at risk. Oil prices surge on Middle East conflict, supporting CAD and AUD strength, opposing JPY strength needed for these longs.",
-    "updated": "2026-07-22T17:03:48.061697+00:00"
+    "text": "GBPUSD SHORT conflicts with US Dollar Dominance headlines suggesting potential upside resistance. USDCHF LONG supported by rate yield strength. CADJPY exposed to oil inventory miss risk.",
+    "updated": "2026-07-22T18:51:57.931025+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-off backdrop supports CHF strength, challenging bullish setup.\n\nAUDJPY LONG: Gold strength supports AUD bid, confirming long positioning.\n\nCADJPY LONG: Oil strength supports CAD bid, confirming long positioning.",
+    "text": "USDCHF LONG: Risk-off supports safe haven CHF demand, challenging setup.\n\nGBPUSD SHORT: Risk-off low favors GBP stability, challenging short thesis.\n\nCADJPY LONG: WTI oil strength directly confirms CAD bid strength.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 6.63
       },
       {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 5.05
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 5.48
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 4.55
+        "score": 4.95
       }
     ],
-    "updated": "2026-07-22T17:03:48.061697+00:00"
+    "updated": "2026-07-22T18:51:57.931025+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-22T17:03:48.061697+00:00"
+    "updated": "2026-07-22T18:51:57.931025+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains as oil prices test new highs amid Middle East conflict",
-      "US Dollar strengthens on retail sales; EUR/USD, GBP/USD under pressure",
-      "Red Sea shipping disruption forces vessels reroute; crude elevated"
+      "US treasury auctions 20-year bonds at 5.163% yield",
+      "USD dollar dominates as rate yields strengthen",
+      "Crude oil inventories rise 2.010M vs -1.052M estimate"
     ],
-    "updated": "2026-07-22T17:03:48.061697+00:00"
+    "updated": "2026-07-22T18:51:57.931025+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
