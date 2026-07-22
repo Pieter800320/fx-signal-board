@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T15:08:56.055174+00:00",
+  "updated": "2026-07-22T15:24:17.285106+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,28 +547,28 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.4,
-      "delta_pct": 2.1,
+      "value": 16.93,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7509.2,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 7518.11,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4123.4,
-      "delta_pct": 1.3,
+      "value": 4163.4,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,32 +579,32 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.509,
+      "value": 6.5095,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.646,
-      "delta_bp": 1.8,
+      "value": 4.654,
+      "delta_bp": 2.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.735,
-      "delta_bp": 0.5,
+      "value": 3.743,
+      "delta_bp": 1.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.09,
+      "value": 87.15,
       "delta_pct": 2.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65616.0,
-      "delta_pct": -1.3,
+      "value": 66027.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-22T13:13:05.843547+00:00"
+    "text": "CADJPY and AUDJPY conflict: Oil prices rising elevates USD/JPY, strengthening JPY and weakening these pairs.",
+    "updated": "2026-07-22T15:24:17.285106+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG challenges setup; risk-off driving CHF safe haven strength.",
+    "text": "USDCHF LONG: Mixed neutral macro challenges strength, needs safe haven confirmation.\n\nAUDJPY LONG: Gold rising confirms AUD bid, supports setup directionally.\n\nCADJPY LONG: Oil rising supports CAD, but mixed macro limits conviction.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.42
+        "score": 7.08
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 5.05
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 4.55
       }
     ],
-    "updated": "2026-07-22T13:13:05.843547+00:00"
+    "updated": "2026-07-22T15:24:17.285106+00:00"
   },
   "calendar": {
     "events": [
@@ -683,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-22T13:13:05.843547+00:00"
+    "updated": "2026-07-22T15:24:17.285106+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-22T01:13:27.601912+00:00"
+    "generated_at": "2026-07-22T15:24:43.247625+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains as oil prices test new highs amid Middle East conflict",
+      "US Dollar gains as oil prices test new highs amid Middle East tensions",
       "Red Sea shipping disruption forces vessels to change course, impacts trade",
-      "US retail sales meet estimates, boosts dollar across major currency pairs"
+      "US Dollar moves higher as retail sales meet estimates"
     ],
-    "updated": "2026-07-22T13:13:05.843547+00:00"
+    "updated": "2026-07-22T15:24:17.285106+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
