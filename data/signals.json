@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T20:55:29.470240+00:00",
+  "updated": "2026-07-22T22:47:03.556108+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4134.8,
-      "delta_pct": 1.6,
+      "value": 4127.7,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.11,
-      "delta_pct": -0.1,
+      "value": 101.14,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.487,
-      "delta_pct": -0.4,
+      "value": 6.4795,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.53,
-      "delta_pct": 1.9,
+      "value": 88.15,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65893.0,
-      "delta_pct": -0.9,
+      "value": 65942.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG and CADJPY LONG at risk from geopolitical escalation driving safe haven flows to JPY. AUDJPY vulnerable to Australian jobs data.",
-    "updated": "2026-07-22T20:55:29.470240+00:00"
+    "text": "USDCHF LONG supported by US Dollar strength headlines. AUDJPY and CADJPY LONG conflict with rising oil prices and geopolitical tensions supporting JPY safe haven demand.",
+    "updated": "2026-07-22T22:47:03.556108+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Strong dollar bid challenges risk-off CHF safe haven flows.\n\nAUDJPY LONG: Gold rising confirms AUD strength, supports long setup.\n\nCADJPY LONG: Oil rising confirms CAD strength, supports long setup.",
+    "text": "USDCHF LONG: Risk-off supports CHF strength, challenging the long setup.\n\nAUDJPY LONG: Gold rally confirms AUD strength, supporting the long.\n\nCADJPY LONG: Oil surge confirms CAD strength, supporting the long.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.95
       }
     ],
-    "updated": "2026-07-22T20:55:29.470240+00:00"
+    "updated": "2026-07-22T22:47:03.556108+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-22T20:55:29.470240+00:00"
+    "updated": "2026-07-22T22:47:03.556108+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury 20-year bonds auction at 5.163% yield, USD strengthens",
-      "Middle East tensions escalate, oil prices surge, risk sentiment shifts",
-      "USD dominates as oil tests new highs against EUR/USD, GBP/USD"
+      "US treasury auctions 20-year bonds at high yield 5.163%",
+      "US Dollar dominates on rate yields, EUR/USD under pressure",
+      "Middle East tensions escalate, oil prices test new highs"
     ],
-    "updated": "2026-07-22T20:55:29.470240+00:00"
+    "updated": "2026-07-22T22:47:03.556108+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
