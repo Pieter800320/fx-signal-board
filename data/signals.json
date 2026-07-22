@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T01:13:01.796733+00:00",
+  "updated": "2026-07-22T04:53:21.034042+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4110.8,
-      "delta_pct": 2.5,
+      "value": 4131.6,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.15,
-      "delta_pct": 0.2,
+      "value": 101.14,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.55,
-      "delta_pct": 4.0,
-      "direction": "up",
+      "value": 6.5215,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.01,
-      "delta_pct": 2.1,
-      "direction": "up",
+      "value": 85.39,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 66486.0,
-      "delta_pct": 1.9,
+      "value": 66344.0,
+      "delta_pct": 1.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "AUDJPY LONG and CADJPY LONG conflict with USDJPY hitting 40 year high, which strengthens JPY across pairs, pressuring long yen crosses.",
-    "updated": "2026-07-22T01:13:01.796733+00:00"
+    "text": "AUDJPY and CADJPY longs at risk. USD strength headlines and JPY weakness from oil-driven imports complicate these setups significantly.",
+    "updated": "2026-07-22T04:53:21.034042+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and gold rising strongly confirm risk-on AUD bid setup.\n\nUSDCHF LONG: Risk-on macro challenges safe-haven CHF strength, weakens setup conviction.\n\nCADJPY LONG: Oil rising and VIX falling confirm risk-on CAD carry strength.",
+    "text": "AUDJPY LONG: VIX falling and gold rising strongly confirm AUD strength setup.\n\nUSDCHF LONG: Risk-on regime challenges safe haven CHF bid, weakens setup.\n\nCADJPY LONG: VIX falling and S&P rising confirm CAD bid thesis.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -635,10 +635,10 @@
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 5.38
+        "score": 4.97
       }
     ],
-    "updated": "2026-07-22T01:13:01.796733+00:00"
+    "updated": "2026-07-22T04:53:21.034042+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-22T01:13:01.796733+00:00"
+    "updated": "2026-07-22T04:53:21.034042+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "USDJPY trades to 40-year high, dollar strength accelerates",
-      "US retail sales boost DXY, pressure on EUR/USD GBP/USD",
-      "Japan exports beat expectations, supports JPY strength dynamics"
+      "US Dollar gains as retail sales meet estimates; EUR/USD, GBP/USD under pressure",
+      "Japan trade surplus widens, complicates BOJ monetary policy hold decision",
+      "UK CPI report imminent; inflation data critical for GBP direction"
     ],
-    "updated": "2026-07-22T01:13:01.796733+00:00"
+    "updated": "2026-07-22T04:53:21.034042+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
