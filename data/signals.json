@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-22T22:47:03.556108+00:00",
+  "updated": "2026-07-23T01:19:59.775422+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4127.7,
-      "delta_pct": 1.4,
+      "value": 4136.4,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.14,
-      "delta_pct": -0.0,
+      "value": 101.06,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4795,
-      "delta_pct": -0.5,
+      "value": 6.49,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.15,
-      "delta_pct": 3.8,
+      "value": 87.92,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65942.0,
-      "delta_pct": -0.8,
+      "value": 65875.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG supported by US Dollar strength headlines. AUDJPY and CADJPY LONG conflict with rising oil prices and geopolitical tensions supporting JPY safe haven demand.",
-    "updated": "2026-07-22T22:47:03.556108+00:00"
+    "text": "USDCHF LONG accelerated by US Dollar strength headlines and geopolitical tensions supporting safe haven demand.\n\nAUDJPY LONG potential headwind from Australian jobs report upcoming, could impact JPY carry dynamics.\n\nCADJPY LONG conflicted by US Canada trade",
+    "updated": "2026-07-23T01:19:59.775422+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-off supports CHF strength, challenging the long setup.\n\nAUDJPY LONG: Gold rally confirms AUD strength, supporting the long.\n\nCADJPY LONG: Oil surge confirms CAD strength, supporting the long.",
+    "text": "USDCHF LONG: Risk-off supports CHF strength, challenging setup.\n\nAUDJPY LONG: Gold strength confirms AUD bid, supporting setup.\n\nCADJPY LONG: Oil strength confirms CAD bid, supporting setup.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 4.95
       }
     ],
-    "updated": "2026-07-22T22:47:03.556108+00:00"
+    "updated": "2026-07-23T01:19:59.775422+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-22T22:47:03.556108+00:00"
+    "updated": "2026-07-23T01:19:59.775422+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury auctions 20-year bonds at high yield 5.163%",
-      "US Dollar dominates on rate yields, EUR/USD under pressure",
-      "Middle East tensions escalate, oil prices test new highs"
+      "US Dollar gains ground as oil prices test new highs",
+      "Middle East tensions keep markets on edge, oil higher",
+      "US Trade Rep eyes interim deals with Canada, Mexico"
     ],
-    "updated": "2026-07-22T22:47:03.556108+00:00"
+    "updated": "2026-07-23T01:19:59.775422+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
