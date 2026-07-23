@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T20:47:13.186993+00:00",
+  "updated": "2026-07-23T22:42:46.320680+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 3,
-    "total": 5,
-    "confidence": "High",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,7 +567,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4052.4,
+      "value": 4052.3,
       "delta_pct": -2.3,
       "direction": "down",
       "label": "Gold"
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.33,
-      "delta_pct": -1.9,
+      "value": 6.3325,
+      "delta_pct": -1.8,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.92,
-      "delta_pct": 5.9,
+      "value": 92.14,
+      "delta_pct": 6.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65071.0,
-      "delta_pct": -1.6,
+      "value": 65160.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBP USD SHORT conflicted by US Dollar Dominates headline suggesting continued dollar strength would support GBP weakness but ECB patience narrative may limit GBP downside near term",
-    "updated": "2026-07-23T20:47:13.186993+00:00"
+    "text": "Risk off sentiment supports USDJPY LONG and USDCHF LONG. USD dollar strength supports all three setups. No direct conflicts detected with headline catalysts.",
+    "updated": "2026-07-23T22:42:46.320680+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: VIX spike and USD bid confirm bearish GBP setup strongly.\n\nUSDCHF LONG: Rising rates and safe haven flows confirm USD strength.\n\nUSDJPY LONG: VIX surge and yen demand challenge pure USD long thesis.",
+    "text": "GBPUSD SHORT: VIX surge and US yields confirm strong USD bid thesis.\n\nUSDCHF LONG: Rising rates and risk-off environment support safe-haven CHF demand.\n\nUSDJPY LONG: VIX spike confirms BOJ carry unwind and USD safety flows.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 7.08
       }
     ],
-    "updated": "2026-07-23T20:47:13.186993+00:00"
+    "updated": "2026-07-23T22:42:46.320680+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T20:47:13.186993+00:00"
+    "updated": "2026-07-23T22:42:46.320680+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB holds rates steady amid oil price swings, flexibility later",
-      "US mortgage rates hit highest level since August 2025",
-      "US Dollar gains as oil prices test new highs"
+      "Trump unveils new tariffs designed to survive legal challenge, WSJ reports",
+      "U.S. Dollar Gains Ground As Brent Oil Hits $100: EUR/USD, GBP/USD",
+      "Risk off sentiment as geopolitical tensions rise, FX markets volatile"
     ],
-    "updated": "2026-07-23T20:47:13.186993+00:00"
+    "updated": "2026-07-23T22:42:46.320680+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
