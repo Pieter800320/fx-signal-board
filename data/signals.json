@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T11:16:04.412122+00:00",
+  "updated": "2026-07-23T11:43:01.738401+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.92,
-      "delta_pct": 7.7,
+      "value": 17.88,
+      "delta_pct": 7.5,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4096.5,
-      "delta_pct": -1.2,
+      "value": 4083.6,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.08,
-      "delta_pct": -0.1,
+      "value": 101.27,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4525,
-      "delta_pct": 0.0,
+      "value": 6.4615,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.35,
-      "delta_pct": 2.9,
+      "value": 90.71,
+      "delta_pct": 4.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65434.0,
-      "delta_pct": -1.0,
+      "value": 65546.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USD/CHF LONG accelerated by US Dollar strength headlines and rate decision expectations. CADJPY and AUDJPY less directly impacted by current headlines.",
-    "updated": "2026-07-23T08:04:35.257767+00:00"
+    "text": "USDCHF LONG supported by US Dollar strength headlines. CADJPY and AUDJPY potentially pressured by BOE rate hike bets strengthening CHF and weakening JPY carry appeal.",
+    "updated": "2026-07-23T11:43:01.738401+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and gold weakness both strongly confirm USD bid setup.\n\nCADJPY LONG: Oil strength confirms CAD bid but yen weakness contradicts carry appeal.\n\nAUDJPY LONG: Macro context offers no directional support for either currency today.",
+    "text": "USDCHF LONG: VIX surge and gold weakness both strongly confirm USD bid thesis.\n\nCADJPY LONG: Rising WTI confirms CAD strength but mixed regime limits conviction.\n\nAUDJPY LONG: Mixed macro regime with no cross asset support challenges setup.",
     "top": [
       {
         "pair": "USDCHF",
@@ -630,15 +630,15 @@
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 6.58
+        "score": 6.4
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 5.9
+        "score": 5.48
       }
     ],
-    "updated": "2026-07-23T08:04:35.257767+00:00"
+    "updated": "2026-07-23T11:43:01.738401+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T08:04:35.257767+00:00"
+    "updated": "2026-07-23T11:43:01.738401+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains as oil prices test new highs across major pairs",
-      "Fed and ECB rate decisions at turning point for GBP/USD, EUR/USD",
-      "US Trade Rep pursues interim deals with Canada, Mexico by year-end"
+      "BOE rate hike bets ramp up as gilt yields surge higher",
+      "US Dollar gains ground as oil prices test new highs",
+      "Fed and ECB rate decisions: are GBP/USD and EUR/USD turning"
     ],
-    "updated": "2026-07-23T08:04:35.257767+00:00"
+    "updated": "2026-07-23T11:43:01.738401+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
