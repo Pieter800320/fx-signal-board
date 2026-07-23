@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T20:17:52.410190+00:00",
+  "updated": "2026-07-23T20:47:13.186993+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,72 +555,72 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 19.59,
-      "delta_pct": 17.7,
+      "value": 18.7,
+      "delta_pct": 12.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7393.3,
-      "delta_pct": -1.4,
+      "value": 7408.3,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4047.7,
-      "delta_pct": -2.4,
+      "value": 4052.4,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.46,
+      "value": 101.44,
       "delta_pct": 0.3,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3135,
-      "delta_pct": -2.1,
+      "value": 6.33,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.697,
-      "delta_bp": 4.0,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.797,
-      "delta_bp": 5.2,
+      "value": 3.8,
+      "delta_bp": 5.5,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.03,
-      "delta_pct": 6.0,
+      "value": 91.92,
+      "delta_pct": 5.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64855.0,
-      "delta_pct": -1.9,
+      "value": 65071.0,
+      "delta_pct": -1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.0,
-      "delta_bp": -1.2,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk: ECB patience narrative could support GBP strength. USDJPY LONG supported by geopolitical tensions and rate yield dominance.",
-    "updated": "2026-07-23T18:54:29.437576+00:00"
+    "text": "GBP USD SHORT conflicted by US Dollar Dominates headline suggesting continued dollar strength would support GBP weakness but ECB patience narrative may limit GBP downside near term",
+    "updated": "2026-07-23T20:47:13.186993+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: VIX surge and Gold weakness confirm USD bid thesis strongly.\n\nUSDCHF LONG: Risk-off environment supports CHF safety bid alongside USD strength.\n\nUSDJPY LONG: VIX spike validates yen carry unwind and USD appreciation setup.",
+    "text": "GBPUSD SHORT: VIX spike and USD bid confirm bearish GBP setup strongly.\n\nUSDCHF LONG: Rising rates and safe haven flows confirm USD strength.\n\nUSDJPY LONG: VIX surge and yen demand challenge pure USD long thesis.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 7.08
       }
     ],
-    "updated": "2026-07-23T18:54:29.437576+00:00"
+    "updated": "2026-07-23T20:47:13.186993+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T18:54:29.437576+00:00"
+    "updated": "2026-07-23T20:47:13.186993+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Europe's central bank holds rates steady amid swings in oil prices",
-      "30 year mortgage rates reach highest level since August 2025",
-      "U.S. Dollar gains ground as oil prices test new highs"
+      "ECB holds rates steady amid oil price swings, flexibility later",
+      "US mortgage rates hit highest level since August 2025",
+      "US Dollar gains as oil prices test new highs"
     ],
-    "updated": "2026-07-23T18:54:29.437576+00:00"
+    "updated": "2026-07-23T20:47:13.186993+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
