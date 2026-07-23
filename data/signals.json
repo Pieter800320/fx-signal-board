@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T18:17:38.720713+00:00",
+  "updated": "2026-07-23T18:54:29.437576+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -544,67 +544,67 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 3,
+    "total": 5,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 19.45,
-      "delta_pct": 16.9,
+      "value": 19.59,
+      "delta_pct": 17.7,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7404.36,
-      "delta_pct": -1.3,
+      "value": 7393.3,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4053.7,
-      "delta_pct": -2.2,
+      "value": 4047.7,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.41,
+      "value": 101.46,
       "delta_pct": 0.3,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3415,
-      "delta_pct": -1.7,
+      "value": 6.3135,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.695,
-      "delta_bp": 3.8,
+      "value": 4.697,
+      "delta_bp": 4.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.795,
-      "delta_bp": 5.0,
+      "value": 3.797,
+      "delta_bp": 5.2,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.36,
-      "delta_pct": 6.4,
+      "value": 92.03,
+      "delta_pct": 6.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64693.0,
-      "delta_pct": -2.1,
+      "value": 64855.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG accelerated by geopolitical tensions Iran hostilities and safe haven demand. GBPUSD SHORT supported by dollar strength on rate yield advantage.",
-    "updated": "2026-07-23T17:06:48.071637+00:00"
+    "text": "GBPUSD SHORT at risk: ECB patience narrative could support GBP strength. USDJPY LONG supported by geopolitical tensions and rate yield dominance.",
+    "updated": "2026-07-23T18:54:29.437576+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: VIX surge and USD bid strongly confirm short setup.\n\nUSDCHF LONG: Risk off environment with rising VIX confirms long.\n\nUSDJPY LONG: VIX spike and safe haven flows confirm long.",
+    "text": "GBPUSD SHORT: VIX surge and Gold weakness confirm USD bid thesis strongly.\n\nUSDCHF LONG: Risk-off environment supports CHF safety bid alongside USD strength.\n\nUSDJPY LONG: VIX spike validates yen carry unwind and USD appreciation setup.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 7.55
+        "score": 7.95
       },
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 7.08
       }
     ],
-    "updated": "2026-07-23T17:06:48.071637+00:00"
+    "updated": "2026-07-23T18:54:29.437576+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T17:06:48.071637+00:00"
+    "updated": "2026-07-23T18:54:29.437576+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US 30-year mortgage rates reach highest level since August 2025",
-      "ECB holds rates steady amid oil price swings, signals patience",
-      "Canada PM Carney warns defending interests in US trade war"
+      "Europe's central bank holds rates steady amid swings in oil prices",
+      "30 year mortgage rates reach highest level since August 2025",
+      "U.S. Dollar gains ground as oil prices test new highs"
     ],
-    "updated": "2026-07-23T17:06:48.071637+00:00"
+    "updated": "2026-07-23T18:54:29.437576+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
