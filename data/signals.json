@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T01:19:59.775422+00:00",
+  "updated": "2026-07-23T04:59:28.847199+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4136.4,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 4124.6,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.06,
-      "delta_pct": -0.1,
+      "value": 100.97,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.49,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 6.525,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.92,
-      "delta_pct": 3.5,
+      "value": 88.2,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65875.0,
-      "delta_pct": -0.9,
+      "value": 65571.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG accelerated by US Dollar strength headlines and geopolitical tensions supporting safe haven demand.\n\nAUDJPY LONG potential headwind from Australian jobs report upcoming, could impact JPY carry dynamics.\n\nCADJPY LONG conflicted by US Canada trade",
-    "updated": "2026-07-23T01:19:59.775422+00:00"
+    "text": "GBPUSD SHORT potentially challenged by US Dollar strength headlines suggesting further USD appreciation may already be priced in currently.",
+    "updated": "2026-07-23T04:59:28.847199+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-off supports CHF strength, challenging setup.\n\nAUDJPY LONG: Gold strength confirms AUD bid, supporting setup.\n\nCADJPY LONG: Oil strength confirms CAD bid, supporting setup.",
+    "text": "USDCHF LONG: Gold weakness confirms USD strength bias today.\n\nAUDJPY LONG: Copper strength supports AUD bid, challenges JPY safety.\n\nGBPUSD SHORT: Gold falling reinforces USD bid, supports short thesis.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.63
+        "score": 6.83
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 5.38
+        "score": 5.57
       },
       {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 4.95
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 5.05
       }
     ],
-    "updated": "2026-07-23T01:19:59.775422+00:00"
+    "updated": "2026-07-23T04:59:28.847199+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T01:19:59.775422+00:00"
+    "updated": "2026-07-23T04:59:28.847199+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-22T15:24:43.247625+00:00"
+    "generated_at": "2026-07-23T04:59:53.492882+00:00"
   },
   "breaking": {
     "headlines": [
       "US Dollar gains ground as oil prices test new highs",
       "Middle East tensions keep markets on edge, oil higher",
-      "US Trade Rep eyes interim deals with Canada, Mexico"
+      "Fed and ECB rate decisions: GBP/USD, EUR/USD turning point"
     ],
-    "updated": "2026-07-23T01:19:59.775422+00:00"
+    "updated": "2026-07-23T04:59:28.847199+00:00"
   },
   "last_alert": "2026-07-21T07:37:18.476728+00:00",
   "gold_signal": {
