@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T15:16:55.488914+00:00",
+  "updated": "2026-07-23T15:45:47.122506+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,49 +539,49 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
-  },
-  "macro": {
-    "label": "Mixed",
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
     "signals": 0,
     "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-Off",
+    "signals": 3,
+    "total": 5,
+    "confidence": "High",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.97,
-      "delta_pct": 14.0,
+      "value": 20.2,
+      "delta_pct": 21.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7498.96,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 7390.8,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4055.9,
-      "delta_pct": -2.2,
+      "value": 4050.7,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.41,
-      "delta_pct": 0.3,
+      "value": 101.54,
+      "delta_pct": 0.4,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4135,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 6.337,
+      "delta_pct": -1.8,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -591,54 +591,54 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.763,
-      "delta_bp": 1.8,
-      "direction": "flat",
+      "value": 3.783,
+      "delta_bp": 3.8,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.19,
-      "delta_pct": 5.0,
+      "value": 92.47,
+      "delta_pct": 6.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64991.0,
-      "delta_pct": -1.7,
+      "value": 64855.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 94.4,
-      "delta_bp": 3.2,
-      "direction": "up",
+      "value": 92.4,
+      "delta_bp": 1.2,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG supported by dollar strength and rate yields. CADJPY LONG unaffected by Canada retail sales match. AUDJPY LONG unaffected by headlines. No breaking catalysts.",
-    "updated": "2026-07-23T13:15:41.121572+00:00"
+    "text": "GBPUSD SHORT at risk. Trump trade war escalation and Canada PM response could strengthen GBP as safe haven alternative to USD.",
+    "updated": "2026-07-23T15:45:47.122506+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and rising rates strongly confirm USD strength setup today.\n\nCADJPY LONG: Oil rally supports CAD bid but rate rise JPY offered conflicts.\n\nAUDJPY LONG: Rising rates JPY weakness contradicts momentum divergence weakness in pair today.",
+    "text": "GBPUSD SHORT: VIX surge and Treasury yields confirm USD strength bias.\n\nUSDCHF LONG: Rising yields and risk-off flows confirm safe-haven USD demand.\n\nUSDJPY LONG: VIX spike supports carry unwind and yen safe-haven flows.",
     "top": [
+      {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 7.55
+      },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.43
+        "score": 7.22
       },
       {
-        "pair": "CADJPY",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.6
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 5.88
+        "score": 7.08
       }
     ],
-    "updated": "2026-07-23T13:15:41.121572+00:00"
+    "updated": "2026-07-23T15:45:47.122506+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T13:15:41.121572+00:00"
+    "updated": "2026-07-23T15:45:47.122506+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US jobless claims 187K beat 212K forecast, supports dollar strength",
-      "BOE rate hike bets surge as gilt yields spike higher",
-      "Oil prices surge, dollar climbs alongside rising bond yields"
+      "US initial jobless claims 187K versus 212K expected",
+      "Canada PM Carney: Will not hesitate to defend trade interests",
+      "US Dollar gains ground as oil prices test new highs"
     ],
-    "updated": "2026-07-23T13:15:41.121572+00:00"
+    "updated": "2026-07-23T15:45:47.122506+00:00"
   },
   "last_alert": "2026-07-23T15:16:55.488914+00:00",
   "gold_signal": {
