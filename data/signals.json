@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T20:52:33.558589+00:00",
+  "updated": "2026-07-24T22:47:13.650331+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4057.3,
-      "delta_pct": 0.3,
+      "value": 4055.7,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.49,
-      "delta_pct": 0.1,
+      "value": 101.46,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3365,
+      "value": 6.3395,
       "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.5,
-      "delta_pct": -1.8,
+      "value": 90.47,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64088.0,
-      "delta_pct": -1.5,
+      "value": 64112.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT potentially accelerated by USD strength headlines and Strait of Hormuz meeting supporting risk-off sentiment favoring dollar.",
-    "updated": "2026-07-24T20:52:33.558589+00:00"
+    "text": "GBPUSD SHORT at risk. Strait of Hormuz shipping meeting could support GBP risk sentiment and weaken USD downside momentum.",
+    "updated": "2026-07-24T22:47:13.650331+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms via risk-off demand for CHF safe haven.\n\nUSDJPY LONG: Macro challenges setup as mixed neutral environment limits JPY carry trades.\n\nGBPUSD SHORT: Macro confirms via oil decline reducing UK energy sector support.",
+    "text": "USDCHF LONG: Macro confirms, risk-off mixed regime supports safe-haven CHF strength.\n\nUSDJPY LONG: Macro challenges, neutral rates environment weakens carry trade momentum signals.\n\nGBPUSD SHORT: Macro neutral, mixed regime provides no directional conviction for sterling weakness.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.38
       }
     ],
-    "updated": "2026-07-24T20:52:33.558589+00:00"
+    "updated": "2026-07-24T22:47:13.650331+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T20:52:33.558589+00:00"
+    "updated": "2026-07-24T22:47:13.650331+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB holds rates steady, USD gains on yield differentials",
-      "Trump increases military pressure on Iran, oil volatility expected",
-      "Brent oil hits $100, USD strengthens against major pairs"
+      "US Dollar gains as Brent oil hits $100 barrel",
+      "ECB holds rates steady amid oil price volatility",
+      "Trump escalates Iran military pressure, geopolitical risk spikes"
     ],
-    "updated": "2026-07-24T20:52:33.558589+00:00"
+    "updated": "2026-07-24T22:47:13.650331+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
