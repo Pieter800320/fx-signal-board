@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T16:49:03.104096+00:00",
+  "updated": "2026-07-24T17:17:07.117809+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,46 +547,46 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.14,
-      "delta_pct": -3.0,
+      "value": 17.92,
+      "delta_pct": -4.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7441.3,
-      "delta_pct": 0.4,
-      "direction": "up",
+      "value": 7433.16,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4065.7,
+      "value": 4067.9,
       "delta_pct": 0.5,
-      "direction": "flat",
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.37,
-      "delta_pct": -0.1,
+      "value": 101.43,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3485,
+      "value": 6.349,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.675,
-      "delta_bp": -2.8,
+      "value": 4.665,
+      "delta_bp": -3.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.96,
-      "delta_pct": -2.4,
+      "value": 88.28,
+      "delta_pct": -4.2,
       "direction": "down",
       "label": "WTI Oil"
     },
@@ -609,36 +609,36 @@
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 88.2,
-      "delta_bp": -2.1,
-      "direction": "flat",
+      "value": 87.2,
+      "delta_bp": -3.1,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "CADJPY and AUDJPY at risk. Canada PPI miss and weak housing data could weaken CAD and support USD strength, reducing JPY upside potential.",
-    "updated": "2026-07-24T15:18:29.946306+00:00"
+    "text": "USDCHF LONG: ECB holds rates steady, supporting CHF strength and limiting USD upside potential against CHF.\n\nAUDJPY LONG and CADJPY LONG: Oil moves lower on Iran talks resumption, weakening commodity currencies AUD and CA",
+    "updated": "2026-07-24T17:17:07.117809+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: CHF strength from risk-off contradicts USD positioning directionally.\n\nAUDJPY LONG: S&P and copper strength confirm AUD bid thesis strongly.\n\nCADJPY LONG: S&P strength confirms CAD bid but oil weakness pressures.",
+    "text": "USDCHF LONG: Macro context challenges setup; oil weakness supports CHF haven demand.\n\nAUDJPY LONG: Macro context confirms setup; gold and copper strength bid AUD higher.\n\nCADJPY LONG: Macro context challenges setup; oil decline pressures CAD commodity currency weakness.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.12
+        "score": 6.75
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.3
+        "score": 6.1
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 6.08
+        "score": 5.48
       }
     ],
-    "updated": "2026-07-24T15:18:29.946306+00:00"
+    "updated": "2026-07-24T17:17:07.117809+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T15:18:29.946306+00:00"
+    "updated": "2026-07-24T17:17:07.117809+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canada June PPI -1.4% versus -0.4% expected, CAD under pressure",
-      "ECB holds rates steady amid oil price volatility, EUR weak",
-      "US new-home sales beat at 0.628M versus 0.610M estimate"
+      "ECB holds rates steady amid oil price swings, USD strengthens",
+      "US new-home sales beat: 0.628M versus 0.610M estimate",
+      "Brent oil hits $100, USD gains ground globally"
     ],
-    "updated": "2026-07-24T15:18:29.946306+00:00"
+    "updated": "2026-07-24T17:17:07.117809+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
