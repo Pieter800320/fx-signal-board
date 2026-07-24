@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T22:42:46.320680+00:00",
+  "updated": "2026-07-24T01:16:18.280900+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4052.3,
-      "delta_pct": -2.3,
+      "value": 4045.0,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.44,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.39,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3325,
-      "delta_pct": -1.8,
+      "value": 6.3255,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.14,
-      "delta_pct": 6.1,
+      "value": 91.55,
+      "delta_pct": 5.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65160.0,
-      "delta_pct": -1.4,
+      "value": 64973.0,
+      "delta_pct": -1.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Risk off sentiment supports USDJPY LONG and USDCHF LONG. USD dollar strength supports all three setups. No direct conflicts detected with headline catalysts.",
-    "updated": "2026-07-23T22:42:46.320680+00:00"
+    "text": "USDJPY LONG conflicted by Japan inflation jump to 1.7% y/y, signaling potential BOJ tightening pressure against continued yen weakness.",
+    "updated": "2026-07-24T01:16:18.280900+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: VIX surge and US yields confirm strong USD bid thesis.\n\nUSDCHF LONG: Rising rates and risk-off environment support safe-haven CHF demand.\n\nUSDJPY LONG: VIX spike confirms BOJ carry unwind and USD safety flows.",
+    "text": "GBPUSD SHORT: VIX surge and USD bid confirm short setup perfectly.\n\nUSDCHF LONG: Rising US yields and risk-off support long bias.\n\nUSDJPY LONG: VIX spike and safe-haven flows confirm upside momentum.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 7.08
       }
     ],
-    "updated": "2026-07-23T22:42:46.320680+00:00"
+    "updated": "2026-07-24T01:16:18.280900+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-23T22:42:46.320680+00:00"
+    "updated": "2026-07-24T01:16:18.280900+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump unveils new tariffs designed to survive legal challenge, WSJ reports",
-      "U.S. Dollar Gains Ground As Brent Oil Hits $100: EUR/USD, GBP/USD",
-      "Risk off sentiment as geopolitical tensions rise, FX markets volatile"
+      "Trump tariffs designed survive legal challenge, USD strength",
+      "Japan inflation jumps to 1.7% y/y, BoJ implications",
+      "Risk-off sentiment rises amid geopolitical tensions globally"
     ],
-    "updated": "2026-07-23T22:42:46.320680+00:00"
+    "updated": "2026-07-24T01:16:18.280900+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
