@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T11:27:21.946765+00:00",
+  "updated": "2026-07-24T13:09:20.681306+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,21 +542,21 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.78,
-      "delta_pct": 0.4,
+      "value": 18.84,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4063.5,
-      "delta_pct": 0.4,
+      "value": 4056.5,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.35,
-      "delta_pct": -0.1,
+      "value": 101.49,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.359,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 6.342,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.703,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.681,
+      "delta_bp": -2.2,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.8,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 3.793,
+      "delta_bp": -0.7,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.83,
-      "delta_pct": -2.6,
+      "value": 89.4,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65012.0,
-      "delta_pct": -0.1,
+      "value": 64315.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.3,
-      "delta_bp": -0.9,
+      "value": 88.8,
+      "delta_bp": -1.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY and USDCHF challenged by US Dollar strength narrative. ECB patience suggests limited upside for JPY crosses against EUR and CHF.",
-    "updated": "2026-07-24T11:27:21.946765+00:00"
+    "text": "USDCHF LONG conflict: US Dollar Gains Ground headline supports setup. EURJPY LONG conflict: Euro area business activity rises headline undermines JPY strength bias. No other material conflicts identified.",
+    "updated": "2026-07-24T13:09:20.681306+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise and copper strength confirm AUD-JPY divergence thesis.\n\nEURJPY LONG: Rising US 10Y supports JPY weakness but equity selloff challenges.\n\nUSDCHF LONG: US 10Y strength confirms USD bid despite broader risk-off tone.",
+    "text": "EURJPY LONG: Mixed neutral macro challenges JPY weakness continuation bias today.\n\nAUDJPY LONG: Mixed neutral macro challenges AUD strength as oil falls.\n\nUSDCHF LONG: Mixed neutral macro confirms CHF safe haven with risk off.",
     "top": [
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 7.1
-      },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.72
+        "score": 6.33
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 6.3
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.38
+        "score": 5.98
       }
     ],
-    "updated": "2026-07-24T11:27:21.946765+00:00"
+    "updated": "2026-07-24T13:09:20.681306+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T11:27:21.946765+00:00"
+    "updated": "2026-07-24T13:09:20.681306+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "UK July flash services PMI 51.8 vs 49.4 expected",
-      "Germany July flash manufacturing PMI 52.2 vs 50.5 expected",
-      "U.S. Dollar gains ground as Brent oil hits $100"
+      "Canada June PPI -1.4% versus -0.4% expected, impacts USD/CAD",
+      "U.S. Dollar gains as Brent oil hits $100 level",
+      "Euro area business activity rises first time in four months"
     ],
-    "updated": "2026-07-24T11:27:21.946765+00:00"
+    "updated": "2026-07-24T13:09:20.681306+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
