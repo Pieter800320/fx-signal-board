@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T20:25:12.631187+00:00",
+  "updated": "2026-07-24T20:52:33.558589+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,36 +551,36 @@
     "signals": 0,
     "total": 0,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.72,
-      "delta_pct": 0.1,
+      "value": 18.58,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7408.38,
+      "value": 7411.98,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4056.9,
+      "value": 4057.3,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
-      "delta_pct": 0.0,
+      "value": 101.49,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.342,
-      "delta_pct": 0.6,
+      "value": 6.3365,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -591,36 +591,36 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.803,
-      "delta_bp": 0.3,
+      "value": 3.805,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.36,
-      "delta_pct": -3.1,
+      "value": 90.5,
+      "delta_pct": -1.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64146.0,
-      "delta_pct": -1.4,
+      "value": 64088.0,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.6,
-      "delta_bp": -2.7,
+      "value": 87.4,
+      "delta_bp": -2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDJPY and CADJPY at risk. Oil moving lower reduces safe haven demand and weakens yen carry trade appeal. Trump Iran diplomacy signals reduce geopolitical premium.",
-    "updated": "2026-07-24T19:06:33.855108+00:00"
+    "text": "GBPUSD SHORT potentially accelerated by USD strength headlines and Strait of Hormuz meeting supporting risk-off sentiment favoring dollar.",
+    "updated": "2026-07-24T20:52:33.558589+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, safe-haven demand supports strength.\n\nUSDJPY LONG: Macro confirms setup, risk-off environment favors yen pairs.\n\nCADJPY LONG: Macro challenges setup, oil weakness pressures Canadian currency.",
+    "text": "USDCHF LONG: Macro confirms via risk-off demand for CHF safe haven.\n\nUSDJPY LONG: Macro challenges setup as mixed neutral environment limits JPY carry trades.\n\nGBPUSD SHORT: Macro confirms via oil decline reducing UK energy sector support.",
     "top": [
       {
         "pair": "USDCHF",
@@ -633,12 +633,12 @@
         "score": 5.7
       },
       {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 5.23
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-24T19:06:33.855108+00:00"
+    "updated": "2026-07-24T20:52:33.558589+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T19:06:33.855108+00:00"
+    "updated": "2026-07-24T20:52:33.558589+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-24T08:01:39.399923+00:00"
+    "generated_at": "2026-07-24T20:52:58.639259+00:00"
   },
   "breaking": {
     "headlines": [
-      "Brent Oil hits $100, US Dollar gains ground on majors",
-      "ECB holds rates steady amid oil price swings",
-      "Trump 301 tariffs tomorrow, EU fines today tensions rise"
+      "ECB holds rates steady, USD gains on yield differentials",
+      "Trump increases military pressure on Iran, oil volatility expected",
+      "Brent oil hits $100, USD strengthens against major pairs"
     ],
-    "updated": "2026-07-24T19:06:33.855108+00:00"
+    "updated": "2026-07-24T20:52:33.558589+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
