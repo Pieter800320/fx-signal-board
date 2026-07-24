@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T18:23:32.647261+00:00",
+  "updated": "2026-07-24T19:06:33.855108+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,103 +542,103 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.92,
-      "delta_pct": -4.2,
+      "value": 18.72,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7433.16,
-      "delta_pct": 0.3,
+      "value": 7408.38,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4067.9,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 4056.9,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.43,
+      "value": 101.47,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.349,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 6.342,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.665,
-      "delta_bp": -3.8,
+      "value": 4.679,
+      "delta_bp": -2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.793,
-      "delta_bp": -0.7,
+      "value": 3.803,
+      "delta_bp": 0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.28,
-      "delta_pct": -4.2,
+      "value": 89.36,
+      "delta_pct": -3.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63926.0,
-      "delta_pct": -1.7,
+      "value": 64146.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.2,
-      "delta_bp": -3.1,
-      "direction": "down",
+      "value": 87.6,
+      "delta_bp": -2.7,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG: ECB holds rates steady, supporting CHF strength and limiting USD upside potential against CHF.\n\nAUDJPY LONG and CADJPY LONG: Oil moves lower on Iran talks resumption, weakening commodity currencies AUD and CA",
-    "updated": "2026-07-24T17:17:07.117809+00:00"
+    "text": "USDJPY and CADJPY at risk. Oil moving lower reduces safe haven demand and weakens yen carry trade appeal. Trump Iran diplomacy signals reduce geopolitical premium.",
+    "updated": "2026-07-24T19:06:33.855108+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro context challenges setup; oil weakness supports CHF haven demand.\n\nAUDJPY LONG: Macro context confirms setup; gold and copper strength bid AUD higher.\n\nCADJPY LONG: Macro context challenges setup; oil decline pressures CAD commodity currency weakness.",
+    "text": "USDCHF LONG: Macro confirms setup, safe-haven demand supports strength.\n\nUSDJPY LONG: Macro confirms setup, risk-off environment favors yen pairs.\n\nCADJPY LONG: Macro challenges setup, oil weakness pressures Canadian currency.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.75
+        "score": 7.08
       },
       {
-        "pair": "AUDJPY",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.1
+        "score": 5.7
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 5.48
+        "score": 5.23
       }
     ],
-    "updated": "2026-07-24T17:17:07.117809+00:00"
+    "updated": "2026-07-24T19:06:33.855108+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T17:17:07.117809+00:00"
+    "updated": "2026-07-24T19:06:33.855108+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB holds rates steady amid oil price swings, USD strengthens",
-      "US new-home sales beat: 0.628M versus 0.610M estimate",
-      "Brent oil hits $100, USD gains ground globally"
+      "Brent Oil hits $100, US Dollar gains ground on majors",
+      "ECB holds rates steady amid oil price swings",
+      "Trump 301 tariffs tomorrow, EU fines today tensions rise"
     ],
-    "updated": "2026-07-24T17:17:07.117809+00:00"
+    "updated": "2026-07-24T19:06:33.855108+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
