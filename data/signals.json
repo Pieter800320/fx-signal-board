@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T07:36:52.534406+00:00",
+  "updated": "2026-07-24T08:01:13.017277+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,22 +542,22 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.7,
-      "delta_pct": 12.4,
-      "direction": "up",
+      "value": 18.89,
+      "delta_pct": 1.0,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4029.0,
-      "delta_pct": -0.4,
+      "value": 4050.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.45,
-      "delta_pct": 0.0,
+      "value": 101.34,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.316,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.3455,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.65,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 90.38,
+      "delta_pct": -2.0,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65256.0,
-      "delta_pct": -1.3,
+      "value": 65428.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG accelerated by Japan June inflation jumping to 1.7% y/y, supporting BoJ tightening expectations and yen weakness. Risk-off sentiment supports safe-haven positioning.",
-    "updated": "2026-07-24T04:55:21.678001+00:00"
+    "text": "USDCHF LONG conflicted by ECB holding rates steady and USD strength headlines supporting CHF appreciation instead. EURJPY and AUDJPY setups unaffected by current catalysts.",
+    "updated": "2026-07-24T08:01:13.017277+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: VIX and rates rising confirm USD strength bias here.\n\nUSDJPY LONG: Risk-off environment supports yen carry unwind and USD bid.\n\nUSDCHF LONG: VIX spike confirms safe haven CHF bid challenge setup.",
+    "text": "EURJPY LONG: US 10Y rise confirms JPY weakness, supporting long setup.\n\nAUDJPY LONG: Copper strength confirms AUD bid, but oil weakness challenges AUD fundamentals.\n\nUSDCHF LONG: US 10Y rise confirms USD strength, validating the directional bias.",
     "top": [
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 7.75
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 7.28
       },
       {
-        "pair": "USDJPY",
+        "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.08
+        "score": 6.6
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.02
+        "score": 6.38
       }
     ],
-    "updated": "2026-07-24T04:55:21.678001+00:00"
+    "updated": "2026-07-24T08:01:13.017277+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T04:55:21.678001+00:00"
+    "updated": "2026-07-24T08:01:13.017277+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-23T17:07:12.891916+00:00"
+    "generated_at": "2026-07-24T08:01:39.399923+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan June inflation jumps to 1.7% y/y, stronger than expected",
-      "US Dollar gains ground as Brent oil hits $100 barrel",
-      "Trump unveils new tariffs designed to survive legal challenge"
+      "Germany July flash manufacturing PMI 52.2 vs 50.5 expected",
+      "U.S. Dollar Gains Ground As Brent Oil Hits $100",
+      "ECB holds rates steady amid swings in oil prices"
     ],
-    "updated": "2026-07-24T04:55:21.678001+00:00"
+    "updated": "2026-07-24T08:01:13.017277+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
