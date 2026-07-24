@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-24T11:06:55.639279+00:00",
+  "updated": "2026-07-24T11:27:21.946765+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.89,
-      "delta_pct": 1.0,
+      "value": 18.78,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4050.0,
-      "delta_pct": 0.1,
+      "value": 4063.5,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.34,
+      "value": 101.35,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3455,
-      "delta_pct": 0.6,
+      "value": 6.359,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.38,
-      "delta_pct": -2.0,
+      "value": 89.83,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65428.0,
-      "delta_pct": 0.6,
+      "value": 65012.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG conflicted by ECB holding rates steady and USD strength headlines supporting CHF appreciation instead. EURJPY and AUDJPY setups unaffected by current catalysts.",
-    "updated": "2026-07-24T08:01:13.017277+00:00"
+    "text": "EURJPY and USDCHF challenged by US Dollar strength narrative. ECB patience suggests limited upside for JPY crosses against EUR and CHF.",
+    "updated": "2026-07-24T11:27:21.946765+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: US 10Y rise confirms JPY weakness, supporting long setup.\n\nAUDJPY LONG: Copper strength confirms AUD bid, but oil weakness challenges AUD fundamentals.\n\nUSDCHF LONG: US 10Y rise confirms USD strength, validating the directional bias.",
+    "text": "AUDJPY LONG: US 10Y rise and copper strength confirm AUD-JPY divergence thesis.\n\nEURJPY LONG: Rising US 10Y supports JPY weakness but equity selloff challenges.\n\nUSDCHF LONG: US 10Y strength confirms USD bid despite broader risk-off tone.",
     "top": [
-      {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 7.28
-      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.6
+        "score": 7.1
+      },
+      {
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 6.72
       },
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 6.38
       }
     ],
-    "updated": "2026-07-24T08:01:13.017277+00:00"
+    "updated": "2026-07-24T11:27:21.946765+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-24T08:01:13.017277+00:00"
+    "updated": "2026-07-24T11:27:21.946765+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
+      "UK July flash services PMI 51.8 vs 49.4 expected",
       "Germany July flash manufacturing PMI 52.2 vs 50.5 expected",
-      "U.S. Dollar Gains Ground As Brent Oil Hits $100",
-      "ECB holds rates steady amid swings in oil prices"
+      "U.S. Dollar gains ground as Brent oil hits $100"
     ],
-    "updated": "2026-07-24T08:01:13.017277+00:00"
+    "updated": "2026-07-24T11:27:21.946765+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
