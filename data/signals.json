@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T07:45:23.606944+00:00",
+  "updated": "2026-07-25T09:22:46.682198+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63974.0,
-      "delta_pct": -0.2,
+      "value": 63825.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US UK meeting on Strait of Hormuz shipping protection could strengthen GBP safe haven demand amid geopolitical tensions.",
-    "updated": "2026-07-25T07:45:23.606944+00:00"
+    "text": "GBPUSD SHORT accelerated by US Dollar strength from Brent oil at 100 and geopolitical tensions supporting safe haven demand.",
+    "updated": "2026-07-25T09:22:46.682198+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-off supports CHF safe haven bid confirmation.\n\nUSDJPY LONG: Risk-off contradicts carry unwind, challenges momentum setup.\n\nGBPUSD SHORT: Oil weakness supports USD strength, confirms short.",
+    "text": "USDCHF LONG: Macro confirms; risk-off supports CHF safe-haven demand strength.\n\nUSDJPY LONG: Macro challenges; risk-off favors CHF over JPY currently.\n\nGBPUSD SHORT: Macro neutral; oil decline reduces GBP commodity-linked support pressure.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.38
       }
     ],
-    "updated": "2026-07-25T07:45:23.606944+00:00"
+    "updated": "2026-07-25T09:22:46.682198+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-25T07:45:23.606944+00:00"
+    "updated": "2026-07-25T09:22:46.682198+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-24T20:52:58.639259+00:00"
+    "generated_at": "2026-07-25T09:23:11.388233+00:00"
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Gains Ground As Brent Oil Hits $100: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
-      "ECB holds rates steady amid swings in oil prices",
-      "US and UK planning meeting on Strait of Hormuz shipping protection"
+      "U.S. Dollar Gains Ground As Brent Oil Hits $100: Analysis",
+      "ECB Holds Steady, PMI Data in Focus \u2013 DXY Extends Gains",
+      "Geopolitics remain the focus for traders, Iran tensions escalate"
     ],
-    "updated": "2026-07-25T07:45:23.606944+00:00"
+    "updated": "2026-07-25T09:22:46.682198+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
