@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T04:51:36.859391+00:00",
+  "updated": "2026-07-25T07:45:23.606944+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64137.0,
-      "delta_pct": -1.4,
+      "value": 63974.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT potentially accelerated by US Dollar strength headlines and geopolitical risk premium supporting safe haven currencies against GBP.",
-    "updated": "2026-07-25T04:51:36.859391+00:00"
+    "text": "GBPUSD SHORT at risk. US UK meeting on Strait of Hormuz shipping protection could strengthen GBP safe haven demand amid geopolitical tensions.",
+    "updated": "2026-07-25T07:45:23.606944+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms via Mixed Low regime supporting safe haven CHF demand.\n\nUSDJPY LONG: Macro confirms via Mixed Low regime supporting traditional JPY safe haven flows.\n\nGBPUSD SHORT: Macro challenges via Mixed Neutral context lacking clear GBP directional pressure catalyst.",
+    "text": "USDCHF LONG: Risk-off supports CHF safe haven bid confirmation.\n\nUSDJPY LONG: Risk-off contradicts carry unwind, challenges momentum setup.\n\nGBPUSD SHORT: Oil weakness supports USD strength, confirms short.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.38
       }
     ],
-    "updated": "2026-07-25T04:51:36.859391+00:00"
+    "updated": "2026-07-25T07:45:23.606944+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-25T04:51:36.859391+00:00"
+    "updated": "2026-07-25T07:45:23.606944+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +702,10 @@
   "breaking": {
     "headlines": [
       "U.S. Dollar Gains Ground As Brent Oil Hits $100: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
-      "ECB Holds Steady, PMI Data in Focus \u2013 Can DXY Extend Gains Against GBP/USD and EUR/USD?",
-      "EU fines today, Trump 301 tariffs tomorrow?"
+      "ECB holds rates steady amid swings in oil prices",
+      "US and UK planning meeting on Strait of Hormuz shipping protection"
     ],
-    "updated": "2026-07-25T04:51:36.859391+00:00"
+    "updated": "2026-07-25T07:45:23.606944+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
