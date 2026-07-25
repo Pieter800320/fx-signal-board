@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T10:58:13.116449+00:00",
+  "updated": "2026-07-25T12:52:10.054855+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,22 +548,22 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 3,
-    "total": 3,
-    "confidence": "High",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.7,
-      "delta_pct": 12.4,
-      "direction": "up",
+      "value": 18.58,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7408.3,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 7411.98,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.43,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.47,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.703,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.679,
+      "delta_bp": -2.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.8,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 3.805,
+      "delta_bp": 0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64000.0,
-      "delta_pct": -0.2,
+      "value": 64041.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.3,
-      "delta_bp": -0.9,
+      "value": 87.4,
+      "delta_bp": -2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping protection meeting could strengthen GBP sentiment unexpectedly.",
-    "updated": "2026-07-25T10:58:13.116449+00:00"
+    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping meeting suggests potential GBP support from geopolitical cooperation narrative.",
+    "updated": "2026-07-25T12:52:10.054855+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and rising yields strongly confirm USD safe-haven bid.\n\nUSDJPY LONG: Rising yields support but BoJ divergence challenges momentum sustainability here.\n\nGBPUSD SHORT: Risk-off environment confirms USD strength but weak momentum divergence questions conviction.",
+    "text": "USDCHF LONG: Macro confirms, risk-off strengthens traditional safe-haven CHF demand.\n\nUSDJPY LONG: Macro challenges, risk-off weakens yen carry unwind momentum.\n\nGBPUSD SHORT: Macro confirms, risk-off pressure supports GBP weakness continuation.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.88
+        "score": 7.08
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
+        "score": 5.7
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 6.18
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-25T10:58:13.116449+00:00"
+    "updated": "2026-07-25T12:52:10.054855+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-25T10:58:13.116449+00:00"
+    "updated": "2026-07-25T12:52:10.054855+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains ground as Brent oil hits $100",
-      "ECB holds rates steady amid oil price swings",
-      "Trump meets advisors on military pressure against Iran"
+      "U.S. Dollar gains as Brent oil hits $100: EUR/USD, GBP/USD, USD/CAD analysis",
+      "ECB holds rates steady amid oil price swings and recession concerns",
+      "Trump meets advisors on Iran military pressure; geopolitics dominate FX focus"
     ],
-    "updated": "2026-07-25T10:58:13.116449+00:00"
+    "updated": "2026-07-25T12:52:10.054855+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
