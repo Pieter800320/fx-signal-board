@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-25T18:43:28.714671+00:00",
+  "updated": "2026-07-25T20:37:20.875101+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 101.43,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64330.0,
-      "delta_pct": 0.4,
+      "value": 64264.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping protection meeting could strengthen GBP geopolitically and support cable.",
-    "updated": "2026-07-25T18:43:28.714671+00:00"
+    "text": "Geopolitical tensions around Iran and Strait of Hormuz shipping could accelerate USDJPY long through risk-off flows strengthening safe-haven yen demand.",
+    "updated": "2026-07-25T20:37:20.875101+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms, safe-haven flows support CHF strength today.\n\nUSDJPY LONG: Macro confirms, risk-off environment drives traditional yen safe-haven bid.\n\nGBPUSD SHORT: Macro neutral, oil decline favors GBP energy exposure slightly.",
+    "text": "USDCHF LONG: Risk-off environment confirms USD safe-haven bid strength today.\n\nUSDJPY LONG: Oil weakness and risk-off support JPY carry unwind dynamics.\n\nGBPUSD SHORT: DXY strength confirms bearish setup despite mixed regime constraints present.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.47
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.1
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 5.78
       }
     ],
-    "updated": "2026-07-25T18:43:28.714671+00:00"
+    "updated": "2026-07-25T20:37:20.875101+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-25T18:43:28.714671+00:00"
+    "updated": "2026-07-25T20:37:20.875101+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -702,10 +702,10 @@
   "breaking": {
     "headlines": [
       "US Dollar gains as Brent oil hits $100, impacts major pairs",
-      "ECB holds rates steady; PMI data shapes dollar direction ahead",
-      "Geopolitical tensions rise; Iran military pressure could boost safe havens"
+      "ECB holds rates steady amid oil price volatility",
+      "Trump escalates Iran pressure; geopolitics drive FX trading focus"
     ],
-    "updated": "2026-07-25T18:43:28.714671+00:00"
+    "updated": "2026-07-25T20:37:20.875101+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
