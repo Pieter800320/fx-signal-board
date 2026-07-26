@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T18:48:08.515627+00:00",
+  "updated": "2026-07-26T20:42:16.941009+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.703,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.679,
+      "delta_bp": -2.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.8,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 3.805,
+      "delta_bp": 0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64666.0,
-      "delta_pct": 0.6,
+      "value": 64605.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.3,
-      "delta_bp": -0.9,
+      "value": 87.4,
+      "delta_bp": -2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US and UK planning meeting on Strait of Hormuz shipping protection signals potential GBP support from geopolitical cooperation.",
-    "updated": "2026-07-26T18:48:08.515627+00:00"
+    "text": "GBPUSD SHORT at risk. \"US Dollar Price Forecast\" headlines suggest dollar strength against GBP, potentially accelerating your short but also indicating strong upward pressure counteracting the setup.",
+    "updated": "2026-07-26T20:42:16.941009+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: US 10Y rise confirms USD strength bid setup today.\n\nUSDJPY LONG: Rising US rates support carry unwind and yen weakness.\n\nGBPUSD SHORT: US 10Y strength challenges GBP short despite momentum deterioration.",
+    "text": "USDCHF LONG: Mixed neutral macro confirms safe haven USD strength signal.\n\nUSDJPY LONG: Oil decline challenges carry trade unwind thesis slightly.\n\nGBPUSD SHORT: Mixed regime neutral, commodity weakness supports risk-off positioning.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.47
+        "score": 7.08
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
+        "score": 5.7
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.78
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-26T18:48:08.515627+00:00"
+    "updated": "2026-07-26T20:42:16.941009+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T18:48:08.515627+00:00"
+    "updated": "2026-07-26T20:42:16.941009+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Gains Ground As Brent Oil Hits $100: EUR/USD, GBP/USD Analysis",
-      "ECB Holds Steady Amid Oil Price Swings, Signals Future Flexibility",
-      "Iran Geopolitics Escalate: Trump Considers Increased Military Pressure Strategy"
+      "ECB holds rates steady; PMI data in focus for EUR/USD moves",
+      "US Dollar gains as Brent oil hits $100 milestone",
+      "FOMC, BoE, BoJ meetings next week drive major currency pairs"
     ],
-    "updated": "2026-07-26T18:48:08.515627+00:00"
+    "updated": "2026-07-26T20:42:16.941009+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
