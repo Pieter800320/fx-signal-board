@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T20:42:16.941009+00:00",
+  "updated": "2026-07-26T21:59:22.448978+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,23 +547,23 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.58,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 18.7,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7411.98,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 7408.3,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 101.43,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.679,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.805,
-      "delta_bp": 0.5,
-      "direction": "flat",
+      "value": 3.8,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64605.0,
-      "delta_pct": 0.5,
+      "value": 64791.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -2.9,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. \"US Dollar Price Forecast\" headlines suggest dollar strength against GBP, potentially accelerating your short but also indicating strong upward pressure counteracting the setup.",
-    "updated": "2026-07-26T20:42:16.941009+00:00"
+    "text": "GBPUSD SHORT conflicts with ECB holding rates steady and dollar gains momentum. Oil at $100 supports USD strength for USDCHF LONG and USDJPY LONG.",
+    "updated": "2026-07-26T21:59:22.448978+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Mixed neutral macro confirms safe haven USD strength signal.\n\nUSDJPY LONG: Oil decline challenges carry trade unwind thesis slightly.\n\nGBPUSD SHORT: Mixed regime neutral, commodity weakness supports risk-off positioning.",
+    "text": "USDCHF LONG: VIX surge and rising yields strongly confirm USD strength bias.\n\nUSDJPY LONG: Rising US yields support carry unwind but BOJ divergence challenges.\n\nGBPUSD SHORT: VIX and yields support USD bid, confirming bearish GBP setup.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.88
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.5
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 6.18
       }
     ],
-    "updated": "2026-07-26T20:42:16.941009+00:00"
+    "updated": "2026-07-26T21:59:22.448978+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T20:42:16.941009+00:00"
+    "updated": "2026-07-26T21:59:22.448978+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB holds rates steady; PMI data in focus for EUR/USD moves",
-      "US Dollar gains as Brent oil hits $100 milestone",
-      "FOMC, BoE, BoJ meetings next week drive major currency pairs"
+      "US Dollar gains ground as Brent oil hits $100",
+      "FOMC, BoE, BoJ, US PCE, US GDP, EZ CPI next week",
+      "Trump meets advisors on military pressure against Iran strategy"
     ],
-    "updated": "2026-07-26T20:42:16.941009+00:00"
+    "updated": "2026-07-26T21:59:22.448978+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
@@ -715,5 +715,9 @@
     "h4_confidence": "Low",
     "h1_confirmed": false,
     "updated": "2026-07-24T20:25:12.631187+00:00"
+  },
+  "week_ahead": {
+    "text": "I'll search for current FX market outlooks for this week. Geopolitical tensions in the Middle East combined with upbeat US data are boosting dollar demand, with markets shifting away from optimism , setting a risk-off tone for the week ahead. The Federal Reserve will meet next week, driving significant focus on the US dollar , making the Wednesday FOMC decision the critical event affecting USD positioning and global carry flows. USD/JPY demands attention given robust retail sales and labor market strength keeping uncertainty around the September Fed decision in place , with the BOJ rate hike Tuesday adding yen appreciation pressure. Higher oil prices amid US-Iran conflict remain an additional risk , with potential for escalation to disrupt energy markets and derail Fed hold expectations during the week.",
+    "generated_at": "2026-07-26T21:59:22.448978+00:00"
   }
 }
