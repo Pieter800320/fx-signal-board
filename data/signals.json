@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T21:59:22.448978+00:00",
+  "updated": "2026-07-26T22:45:02.468482+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,103 +542,103 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
-    "stable": false
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.7,
-      "delta_pct": 12.4,
-      "direction": "up",
+      "value": 18.58,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7408.3,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 7411.98,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4070.8,
-      "delta_pct": 0.6,
+      "value": 4094.3,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.43,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.3,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3575,
+      "value": 6.3685,
       "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.703,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.679,
+      "delta_bp": -2.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.8,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 3.805,
+      "delta_bp": 0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.31,
-      "delta_pct": -3.1,
+      "value": 84.48,
+      "delta_pct": -5.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64791.0,
-      "delta_pct": 0.7,
+      "value": 65371.0,
+      "delta_pct": 1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.3,
-      "delta_bp": -0.9,
+      "value": 87.4,
+      "delta_bp": -2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT conflicts with ECB holding rates steady and dollar gains momentum. Oil at $100 supports USD strength for USDCHF LONG and USDJPY LONG.",
-    "updated": "2026-07-26T21:59:22.448978+00:00"
+    "text": "USDJPY LONG at risk. BoJ decision upcoming creates major volatility risk for carry unwind positioning and potential intervention concerns.",
+    "updated": "2026-07-26T22:45:02.468482+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and rising yields strongly confirm USD strength bias.\n\nUSDJPY LONG: Rising US yields support carry unwind but BOJ divergence challenges.\n\nGBPUSD SHORT: VIX and yields support USD bid, confirming bearish GBP setup.",
+    "text": "USDCHF LONG: Macro confirms via risk-off demand for CHF safe-haven.\n\nUSDJPY LONG: Macro challenges as risk-off typically weakens carry trades.\n\nGBPUSD SHORT: Macro confirms via risk-off supporting USD strength broadly.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.88
+        "score": 7.08
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
+        "score": 5.7
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 6.18
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-26T21:59:22.448978+00:00"
+    "updated": "2026-07-26T22:45:02.468482+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T21:59:22.448978+00:00"
+    "updated": "2026-07-26T22:45:02.468482+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
+      "FOMC, BoE, BoJ meetings next week create major cross-asset risk",
       "US Dollar gains ground as Brent oil hits $100",
-      "FOMC, BoE, BoJ, US PCE, US GDP, EZ CPI next week",
-      "Trump meets advisors on military pressure against Iran strategy"
+      "ECB holds rates steady amid oil price swings"
     ],
-    "updated": "2026-07-26T21:59:22.448978+00:00"
+    "updated": "2026-07-26T22:45:02.468482+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
@@ -717,7 +717,7 @@
     "updated": "2026-07-24T20:25:12.631187+00:00"
   },
   "week_ahead": {
-    "text": "I'll search for current FX market outlooks for this week. Geopolitical tensions in the Middle East combined with upbeat US data are boosting dollar demand, with markets shifting away from optimism , setting a risk-off tone for the week ahead. The Federal Reserve will meet next week, driving significant focus on the US dollar , making the Wednesday FOMC decision the critical event affecting USD positioning and global carry flows. USD/JPY demands attention given robust retail sales and labor market strength keeping uncertainty around the September Fed decision in place , with the BOJ rate hike Tuesday adding yen appreciation pressure. Higher oil prices amid US-Iran conflict remain an additional risk , with potential for escalation to disrupt energy markets and derail Fed hold expectations during the week.",
-    "generated_at": "2026-07-26T21:59:22.448978+00:00"
+    "text": "Geopolitical tensions in the Middle East combined with US economic resilience create conflicting market forces as the Iran conflict pushes oil higher while fueling concerns about inflation and growth. The Federal Reserve meeting Wednesday is the pivotal central bank event affecting the dollar's direction. USD/JPY demands close attention as the dollar printed its highest close in 15 months near key long-term resistance, showing bullish technicals ahead of the BOJ hike. The biggest risk is whether the Fed maintains hawkish rhetoric despite falling inflation globally , potentially surprising markets if they signal more cuts than expected.",
+    "generated_at": "2026-07-26T22:45:02.468482+00:00"
   }
 }
