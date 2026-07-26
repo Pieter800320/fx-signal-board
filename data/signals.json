@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T16:41:06.788297+00:00",
+  "updated": "2026-07-26T18:48:08.515627+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.679,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.805,
-      "delta_bp": 0.5,
-      "direction": "flat",
+      "value": 3.8,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64775.0,
-      "delta_pct": 0.7,
+      "value": 64666.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -2.9,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "GBPUSD SHORT at risk. US and UK planning meeting on Strait of Hormuz shipping protection signals potential GBP support from geopolitical cooperation.",
-    "updated": "2026-07-26T16:41:06.788297+00:00"
+    "updated": "2026-07-26T18:48:08.515627+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms, risk-off supports safe-haven CHF strength today.\n\nUSDJPY LONG: Macro challenges, risk-off medium contradicts typical JPY safe-haven flow.\n\nGBPUSD SHORT: Macro neutral, oil weakness does not directly pressure GBP.",
+    "text": "USDCHF LONG: US 10Y rise confirms USD strength bid setup today.\n\nUSDJPY LONG: Rising US rates support carry unwind and yen weakness.\n\nGBPUSD SHORT: US 10Y strength challenges GBP short despite momentum deterioration.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.47
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.5
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 5.78
       }
     ],
-    "updated": "2026-07-26T16:41:06.788297+00:00"
+    "updated": "2026-07-26T18:48:08.515627+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T16:41:06.788297+00:00"
+    "updated": "2026-07-26T18:48:08.515627+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Gains Ground As Brent Oil Hits $100: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
-      "ECB Holds Steady, PMI Data in Focus \u2013 Can DXY Extend Gains Against GBP/USD and EUR/USD?",
-      "EU fines today, Trump 301 tariffs tomorrow?"
+      "U.S. Dollar Gains Ground As Brent Oil Hits $100: EUR/USD, GBP/USD Analysis",
+      "ECB Holds Steady Amid Oil Price Swings, Signals Future Flexibility",
+      "Iran Geopolitics Escalate: Trump Considers Increased Military Pressure Strategy"
     ],
-    "updated": "2026-07-26T16:41:06.788297+00:00"
+    "updated": "2026-07-26T18:48:08.515627+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
