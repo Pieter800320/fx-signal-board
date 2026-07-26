@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T01:20:08.769360+00:00",
+  "updated": "2026-07-26T05:15:50.085866+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,58 +542,58 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 3,
-    "total": 3,
-    "confidence": "High",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.7,
-      "delta_pct": 12.4,
-      "direction": "up",
+      "value": 18.58,
+      "delta_pct": -0.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7408.3,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 7411.98,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4067.6,
-      "delta_pct": 0.5,
+      "value": 4070.8,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.43,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 101.47,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.32,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.3575,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.703,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 4.679,
+      "delta_bp": -2.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.8,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 3.805,
+      "delta_bp": 0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64431.0,
-      "delta_pct": 0.5,
+      "value": 64453.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 90.3,
-      "delta_bp": -0.9,
+      "value": 87.4,
+      "delta_bp": -2.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT invalidated. US and UK planning meeting on Strait of Hormuz shipping protection suggests potential GBP strength from geopolitical cooperation narrative.",
-    "updated": "2026-07-26T01:20:08.769360+00:00"
+    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping meeting signals potential GBP support from geopolitical cooperation narrative.",
+    "updated": "2026-07-26T05:15:50.085866+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge and rising yields strongly confirm USD bid thesis.\n\nUSDJPY LONG: Rising yields support setup but BoJ divergence creates headwind.\n\nGBPUSD SHORT: Risk-off environment and USD strength confirm bearish GBP direction.",
+    "text": "USDCHF LONG: Risk-off environment confirms safe-haven CHF strength thesis directly.\n\nUSDJPY LONG: Mixed regime challenges carry unwind; BOJ policy divergence dominates.\n\nGBPUSD SHORT: Risk-off supports USD flows; oil decline weakens GBP correlation.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.88
+        "score": 7.08
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 6.5
+        "score": 5.7
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 6.18
+        "score": 5.38
       }
     ],
-    "updated": "2026-07-26T01:20:08.769360+00:00"
+    "updated": "2026-07-26T05:15:50.085866+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T01:20:08.769360+00:00"
+    "updated": "2026-07-26T05:15:50.085866+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains ground as Brent oil hits $100",
-      "ECB holds steady rates amid swings in oil prices",
-      "Trump meets advisors on military pressure strategy against Iran"
+      "U.S. Dollar Gains Ground As Brent Oil Hits $100: Analysis",
+      "ECB Holds Steady, PMI Data in Focus \u2013 DXY Gains",
+      "Iran geopolitics escalate, US military pressure decision imminent"
     ],
-    "updated": "2026-07-26T01:20:08.769360+00:00"
+    "updated": "2026-07-26T05:15:50.085866+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
