@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T09:58:45.065332+00:00",
+  "updated": "2026-07-26T11:16:09.511296+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,23 +547,23 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.58,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 18.7,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7411.98,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 7408.3,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 101.43,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.679,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.805,
-      "delta_bp": 0.5,
-      "direction": "flat",
+      "value": 3.8,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64478.0,
-      "delta_pct": 0.3,
+      "value": 64447.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -2.9,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping protection meeting could support GBP safe haven demand.",
-    "updated": "2026-07-26T09:58:45.065332+00:00"
+    "text": "GBPUSD SHORT at risk. US and UK planning meeting on Strait of Hormuz shipping protection suggests potential GBP strength from geopolitical cooperation.",
+    "updated": "2026-07-26T11:16:09.511296+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms, safe-haven demand supports CHF strength today.\n\nUSDJPY LONG: Macro challenges, oil drop reduces yen carry trade appeal.\n\nGBPUSD SHORT: Macro neutral, mixed regime offers no directional confirmation signal.",
+    "text": "USDCHF LONG: VIX surge and rising rates strongly confirm USD strength bid.\n\nUSDJPY LONG: Rising US yields support carry unwind but mixed regime challenges conviction.\n\nGBPUSD SHORT: DXY strength and risk-off environment confirm bearish GBP positioning thesis.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.88
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.5
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 6.18
       }
     ],
-    "updated": "2026-07-26T09:58:45.065332+00:00"
+    "updated": "2026-07-26T11:16:09.511296+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T09:58:45.065332+00:00"
+    "updated": "2026-07-26T11:16:09.511296+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-25T22:40:48.626010+00:00"
+    "generated_at": "2026-07-26T11:16:34.576229+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains as Brent oil hits $100, impacts major pairs",
-      "ECB holds rates steady; dollar extends gains versus EUR/USD, GBP/USD",
-      "Geopolitical tensions on Iran focus traders; shipping strait security concerns"
+      "US Dollar gains as Brent oil hits $100 amid geopolitical tensions",
+      "ECB holds rates steady; markets await flexibility signals ahead",
+      "Trump escalates Iran pressure; Strait of Hormuz shipping concerns rise"
     ],
-    "updated": "2026-07-26T09:58:45.065332+00:00"
+    "updated": "2026-07-26T11:16:09.511296+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
