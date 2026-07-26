@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T12:49:15.810254+00:00",
+  "updated": "2026-07-26T14:54:44.667034+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,23 +547,23 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.58,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 18.7,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7411.98,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 7408.3,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 101.43,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.679,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.805,
-      "delta_bp": 0.5,
-      "direction": "flat",
+      "value": 3.8,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
@@ -603,42 +603,42 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64412.0,
-      "delta_pct": 0.2,
+      "value": 64644.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -2.9,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT at risk. US UK meeting on Strait of Hormuz protection signals potential cooperation reducing geopolitical premium supporting GBP strength.",
-    "updated": "2026-07-26T12:49:15.810254+00:00"
+    "text": "GBPUSD SHORT at risk. US and UK planning Strait of Hormuz shipping protection meeting suggests potential GBP support from geopolitical cooperation signals.",
+    "updated": "2026-07-26T14:54:44.667034+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms setup, CHF safe haven demand rising.\n\nUSDJPY LONG: Macro challenges setup, risk off contradicts carry unwind.\n\nGBPUSD SHORT: Macro confirms setup, risk off supports USD strength.",
+    "text": "USDCHF LONG: Rising US yields and VIX confirm safe haven USD demand thesis.\n\nUSDJPY LONG: US rate rise supports yen carry unwind, but BOJ divergence challenges.\n\nGBPUSD SHORT: VIX spike and rate rises confirm USD strength over sterling.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.88
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.5
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 6.18
       }
     ],
-    "updated": "2026-07-26T12:49:15.810254+00:00"
+    "updated": "2026-07-26T14:54:44.667034+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T12:49:15.810254+00:00"
+    "updated": "2026-07-26T14:54:44.667034+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains ground as Brent oil hits $100",
-      "ECB holds rates steady amid swings in oil prices",
-      "Trump meets advisors on military pressure against Iran"
+      "U.S. Dollar gains as Brent oil hits $100, impacts major pairs",
+      "ECB holds rates steady amid oil price swings, signals flexibility",
+      "Geopolitics focus: Trump military pressure on Iran affects risk sentiment"
     ],
-    "updated": "2026-07-26T12:49:15.810254+00:00"
+    "updated": "2026-07-26T14:54:44.667034+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
