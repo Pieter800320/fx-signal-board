@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T18:27:05.202946+00:00",
+  "updated": "2026-07-27T19:04:57.997480+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,98 +547,98 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.58,
-      "delta_pct": 5.4,
-      "direction": "up",
+      "value": 19.3,
+      "delta_pct": 3.9,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7405.2,
-      "delta_pct": -0.1,
+      "value": 7409.94,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4079.8,
+      "value": 4079.7,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.45,
-      "delta_pct": -0.0,
+      "value": 101.53,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3785,
-      "delta_pct": 0.9,
+      "value": 6.3955,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.645,
-      "delta_bp": -3.4,
+      "value": 4.643,
+      "delta_bp": -3.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.818,
-      "delta_bp": 1.3,
+      "value": 3.8,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.26,
-      "delta_pct": -6.8,
+      "value": 82.25,
+      "delta_pct": -7.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64590.0,
-      "delta_pct": -1.1,
+      "value": 64771.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 82.7,
-      "delta_bp": -4.7,
+      "value": 84.3,
+      "delta_bp": -3.1,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Dollar Gains Ground headline accelerates USDJPY LONG and USDCHF LONG. Durable Goods miss may limit upside. No direct conflict with NZDUSD SHORT.",
-    "updated": "2026-07-27T16:04:59.183687+00:00"
+    "text": "USDJPY LONG potentially accelerated by yield strength (Treasury 5yr at 4.408%, 2yr high yield). Dollar gains as yields rise supports the setup.",
+    "updated": "2026-07-27T19:04:57.997480+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX surge confirms USD bid thesis, risk-off flow driver.\n\nNZDUSD SHORT: Rising VIX supports USD strength, commodity currency weakness driver.\n\nUSDJPY LONG: Mixed regime challenges carry unwind, volatility spike partially offsets.",
+    "text": "USDCHF LONG: Oil weakness supports safe haven CHF strength confirmation.\n\nUSDJPY LONG: Mixed neutral macro lacks conviction for sustained JPY bid.\n\nNZDUSD SHORT: Copper strength challenges bearish NZD setup despite technical scores.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.0
+        "score": 6.88
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.75
+        "score": 5.88
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 5.8
       }
     ],
-    "updated": "2026-07-27T16:04:59.183687+00:00"
+    "updated": "2026-07-27T19:04:57.997480+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-27T16:04:59.183687+00:00"
+    "updated": "2026-07-27T19:04:57.997480+00:00"
   },
   "week_ahead": {
     "text": "Geopolitical tensions in the Middle East combined with US economic resilience create conflicting market forces as the Iran conflict pushes oil higher while fueling concerns about inflation and growth. The Federal Reserve meeting Wednesday is the pivotal central bank event affecting the dollar's direction. USD/JPY demands close attention as the dollar printed its highest close in 15 months near key long-term resistance, showing bullish technicals ahead of the BOJ hike. The biggest risk is whether the Fed maintains hawkish rhetoric despite falling inflation globally , potentially surprising markets if they signal more cuts than expected.",
@@ -715,11 +715,11 @@
   },
   "breaking": {
     "headlines": [
-      "US durable goods orders miss badly at 0.3% versus 2.5% expected",
-      "US treasury sells $69 billion 2-year notes at high yield",
-      "ECB holds rates steady amid oil price swings, signals flexibility"
+      "US durable goods orders miss badly at 0.3% vs 2.5% expected",
+      "US Treasury sells $70B five-year notes at high yield 4.408%",
+      "Dollar gains ground as Brent oil hits $100 per barrel"
     ],
-    "updated": "2026-07-27T16:04:59.183687+00:00"
+    "updated": "2026-07-27T19:04:57.997480+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
