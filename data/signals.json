@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T01:24:14.392485+00:00",
+  "updated": "2026-07-27T05:33:51.092972+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,152 +548,162 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": 3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.58,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 18.7,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7411.98,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 7408.3,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4111.0,
-      "delta_pct": 1.1,
+      "value": 4091.2,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.18,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 101.19,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3695,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.348,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.679,
-      "delta_bp": -2.4,
-      "direction": "flat",
+      "value": 4.703,
+      "delta_bp": 4.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.805,
-      "delta_bp": 0.5,
-      "direction": "flat",
+      "value": 3.8,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.35,
-      "delta_pct": -4.4,
+      "value": 84.61,
+      "delta_pct": -5.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65005.0,
-      "delta_pct": 1.1,
+      "value": 65341.0,
+      "delta_pct": 1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 87.4,
-      "delta_bp": -2.9,
+      "value": 90.3,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG faces headwind: BoJ decision next week may signal policy divergence, potentially weakening yen carry trades. GBPUSD SHORT supported: BoE decision alongside geopolitical uncertainty could accelerate pound weakness.",
-    "updated": "2026-07-27T01:24:14.392485+00:00"
+    "text": "GBPUSD SHORT conflicted by BoE decision upcoming this week, potential rate pause could weaken sterling bearish case materially.",
+    "updated": "2026-07-27T05:33:51.092972+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-off environment confirms safe-haven CHF strength thesis.\n\nUSDJPY LONG: Oil weakness challenges carry unwind, weakening JPY appeal.\n\nGBPUSD SHORT: Risk-off supports GBP weakness, confirms bearish directional bias.",
+    "text": "USDCHF LONG: VIX and Treasury yields confirm USD strength setup.\n\nUSDJPY LONG: Rising yields support but BoJ divergence challenges momentum.\n\nGBPUSD SHORT: Risk-off environment confirms USD bid, weakens sterling.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 7.67
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.7
+        "score": 6.5
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 5.38
+        "score": 5.98
       }
     ],
-    "updated": "2026-07-27T01:24:14.392485+00:00"
+    "updated": "2026-07-27T05:33:51.092972+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Tue",
-        "time": "02:30",
-        "iso": "2026-06-16T02:30:00+00:00",
-        "currency": "JPY",
-        "name": "BOJ Interest Rate Decision",
-        "forecast": "+25 bps to 1.0%",
-        "previous": "0.75%",
-        "note": "Rate hike expected, yen volatility"
-      },
-      {
-        "day": "Tue",
-        "time": "06:30",
-        "iso": "2026-06-16T06:30:00+00:00",
-        "currency": "AUD",
-        "name": "RBA Interest Rate Decision",
-        "forecast": "Hold at 4.35%",
-        "previous": "4.35%",
-        "note": "Hawkish hold, assess prior hikes"
-      },
-      {
         "day": "Wed",
         "time": "18:00",
-        "iso": "2026-06-17T18:00:00+00:00",
+        "iso": "2026-07-29T18:00:00+00:00",
         "currency": "USD",
-        "name": "Fed FOMC Decision",
-        "forecast": "Hold at 3.50%-3.75%",
-        "previous": "3.50%-3.75%",
-        "note": "Warsh first decision, inflation hawkish"
-      },
-      {
-        "day": "Wed",
-        "time": "12:30",
-        "iso": "2026-06-17T12:30:00+00:00",
-        "currency": "USD",
-        "name": "US Retail Sales m/m (May)",
-        "forecast": "0.5%",
-        "previous": "0.5%",
-        "note": "Consumer spending, inflation impact"
+        "name": "Fed Funds Rate Decision",
+        "forecast": "3.5%-3.75%",
+        "previous": "3.5%-3.75%",
+        "note": "FOMC hold expected, major USD catalyst"
       },
       {
         "day": "Thu",
         "time": "12:30",
-        "iso": "2026-06-18T12:30:00+00:00",
+        "iso": "2026-07-30T12:30:00+00:00",
         "currency": "USD",
-        "name": "Initial Jobless Claims",
-        "forecast": "245K",
-        "previous": "250K",
-        "note": "Labor market resilience check"
+        "name": "PCE Price Index",
+        "forecast": "2.8%",
+        "previous": "2.7%",
+        "note": "Fed preferred inflation gauge, sharp moves"
+      },
+      {
+        "day": "Thu",
+        "time": "12:30",
+        "iso": "2026-07-30T12:30:00+00:00",
+        "currency": "USD",
+        "name": "GDP (Advance Estimate)",
+        "forecast": "2.0%",
+        "previous": "2.4%",
+        "note": "Key economic growth data, USD impact"
+      },
+      {
+        "day": "Mon",
+        "time": "12:30",
+        "iso": "2026-07-27T12:30:00+00:00",
+        "currency": "USD",
+        "name": "Durable Goods Orders",
+        "forecast": "-0.2%",
+        "previous": "0.1%",
+        "note": "Business investment indicator, medium impact"
+      },
+      {
+        "day": "Thu",
+        "time": "11:00",
+        "iso": "2026-07-30T11:00:00+00:00",
+        "currency": "GBP",
+        "name": "BoE Bank Rate Decision",
+        "forecast": "3.75%",
+        "previous": "3.75%",
+        "note": "Hold expected with hawkish tilt likely"
+      },
+      {
+        "day": "Thu",
+        "time": "22:40",
+        "iso": "2026-07-30T22:40:00+00:00",
+        "currency": "AUD",
+        "name": "RBA Interest Rate Decision",
+        "forecast": "4.35%",
+        "previous": "4.35%",
+        "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-27T01:24:14.392485+00:00"
+    "updated": "2026-07-27T05:33:51.092972+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "FOMC, BoE, BoJ decisions and US PCE/GDP create major cross-asset risk",
-      "US Dollar gains as Brent oil hits $100 amid geopolitical tensions",
-      "ECB holds rates steady; flexibility expected later this year"
+      "Week ahead: FOMC, BoE, BoJ, US PCE and GDP create major cross-asset risk",
+      "US Dollar gains as Brent oil hits $100: EUR/USD, GBP/USD, USD/JPY analysis",
+      "Iran halts strikes if US maintains pause, boosting peace trades"
     ],
-    "updated": "2026-07-27T01:24:14.392485+00:00"
+    "updated": "2026-07-27T05:33:51.092972+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
