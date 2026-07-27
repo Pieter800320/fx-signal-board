@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-26T22:45:02.468482+00:00",
+  "updated": "2026-07-27T01:24:14.392485+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4094.3,
-      "delta_pct": 0.7,
+      "value": 4111.0,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.3,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 101.18,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3685,
+      "value": 6.3695,
       "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.48,
-      "delta_pct": -5.4,
+      "value": 85.35,
+      "delta_pct": -4.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65371.0,
-      "delta_pct": 1.6,
+      "value": 65005.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG at risk. BoJ decision upcoming creates major volatility risk for carry unwind positioning and potential intervention concerns.",
-    "updated": "2026-07-26T22:45:02.468482+00:00"
+    "text": "USDJPY LONG faces headwind: BoJ decision next week may signal policy divergence, potentially weakening yen carry trades. GBPUSD SHORT supported: BoE decision alongside geopolitical uncertainty could accelerate pound weakness.",
+    "updated": "2026-07-27T01:24:14.392485+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro confirms via risk-off demand for CHF safe-haven.\n\nUSDJPY LONG: Macro challenges as risk-off typically weakens carry trades.\n\nGBPUSD SHORT: Macro confirms via risk-off supporting USD strength broadly.",
+    "text": "USDCHF LONG: Risk-off environment confirms safe-haven CHF strength thesis.\n\nUSDJPY LONG: Oil weakness challenges carry unwind, weakening JPY appeal.\n\nGBPUSD SHORT: Risk-off supports GBP weakness, confirms bearish directional bias.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.38
       }
     ],
-    "updated": "2026-07-26T22:45:02.468482+00:00"
+    "updated": "2026-07-27T01:24:14.392485+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Labor market resilience check"
       }
     ],
-    "updated": "2026-07-26T22:45:02.468482+00:00"
+    "updated": "2026-07-27T01:24:14.392485+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-26T11:16:34.576229+00:00"
+    "generated_at": "2026-07-27T01:24:40.699858+00:00"
   },
   "breaking": {
     "headlines": [
-      "FOMC, BoE, BoJ meetings next week create major cross-asset risk",
-      "US Dollar gains ground as Brent oil hits $100",
-      "ECB holds rates steady amid oil price swings"
+      "FOMC, BoE, BoJ decisions and US PCE/GDP create major cross-asset risk",
+      "US Dollar gains as Brent oil hits $100 amid geopolitical tensions",
+      "ECB holds rates steady; flexibility expected later this year"
     ],
-    "updated": "2026-07-26T22:45:02.468482+00:00"
+    "updated": "2026-07-27T01:24:14.392485+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
