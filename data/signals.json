@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T20:57:20.314602+00:00",
+  "updated": "2026-07-27T22:45:46.557078+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4078.3,
-      "delta_pct": 0.3,
+      "value": 4076.2,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.54,
-      "delta_pct": 0.1,
+      "value": 101.51,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.398,
-      "delta_pct": 1.2,
+      "value": 6.3925,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.0,
-      "delta_pct": -8.2,
+      "value": 81.85,
+      "delta_pct": -8.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64895.0,
-      "delta_pct": -0.7,
+      "value": 64093.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG supported by \"Dollar Fights Back\" and yield strength headlines. USDCHF LONG aligns with USD strength. NZDUSD SHORT consistent with broad dollar gains. No breaking catalysts.",
-    "updated": "2026-07-27T20:57:20.314602+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-27T22:45:46.557078+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-on weakness challenges setup; oil decline reduces CHF safe-haven demand.\n\nNZDUSD SHORT: Risk-on low confirms setup; copper weakness pressures NZD commodity exposure.\n\nUSDJPY LONG: Mixed regime challenges setup; oil decline reduces JPY safe-haven flows.",
+    "text": "USDCHF LONG: Risk-on weakness challenges setup; CHF safe-haven demand strengthens.\n\nNZDUSD SHORT: Oil collapse challenges NZD short; commodity exposure creates headwind.\n\nUSDJPY LONG: Risk-off environment confirms setup; yen safe-haven bid supports.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.55
       }
     ],
-    "updated": "2026-07-27T20:57:20.314602+00:00"
+    "updated": "2026-07-27T22:45:46.557078+00:00"
   },
   "calendar": {
     "events": [
@@ -703,11 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-27T20:57:20.314602+00:00"
-  },
-  "week_ahead": {
-    "text": "Geopolitical tensions in the Middle East combined with US economic resilience create conflicting market forces as the Iran conflict pushes oil higher while fueling concerns about inflation and growth. The Federal Reserve meeting Wednesday is the pivotal central bank event affecting the dollar's direction. USD/JPY demands close attention as the dollar printed its highest close in 15 months near key long-term resistance, showing bullish technicals ahead of the BOJ hike. The biggest risk is whether the Fed maintains hawkish rhetoric despite falling inflation globally , potentially surprising markets if they signal more cuts than expected.",
-    "generated_at": "2026-07-26T22:45:02.468482+00:00"
+    "updated": "2026-07-27T22:45:46.557078+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury sells $70B of 5-year notes at high yield 4.408%",
-      "Dollar fights back as yields drop against EUR, GBP, JPY",
-      "US Dollar gains ground as Brent Oil hits $100"
+      "US Treasury sells $70B 5-year notes at 4.408% yield",
+      "Dollar gains ground as Brent oil hits $100",
+      "ECB holds steady rates amid oil price swings"
     ],
-    "updated": "2026-07-27T20:57:20.314602+00:00"
+    "updated": "2026-07-27T22:45:46.557078+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
