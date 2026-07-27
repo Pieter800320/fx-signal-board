@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T08:38:22.440480+00:00",
+  "updated": "2026-07-27T09:00:14.164867+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 3,
-    "total": 3,
-    "confidence": "High",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 4,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 18.7,
-      "delta_pct": 12.4,
-      "direction": "up",
+      "value": 17.61,
+      "delta_pct": -5.8,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4091.2,
-      "delta_pct": 0.6,
+      "value": 4094.8,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.19,
+      "value": 101.27,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.348,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.376,
+      "delta_pct": 0.9,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.61,
-      "delta_pct": -5.3,
+      "value": 83.39,
+      "delta_pct": -6.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65341.0,
-      "delta_pct": 1.6,
+      "value": 65051.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD SHORT conflicted by BoE decision upcoming this week, potential rate pause could weaken sterling bearish case materially.",
-    "updated": "2026-07-27T05:33:51.092972+00:00"
+    "text": "EURJPY LONG faces headwind from ECB holding rates steady while BoJ remains hawkish, weakening EUR relative to JPY.",
+    "updated": "2026-07-27T09:00:14.164867+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: VIX and Treasury yields confirm USD strength setup.\n\nUSDJPY LONG: Rising yields support but BoJ divergence challenges momentum.\n\nGBPUSD SHORT: Risk-off environment confirms USD bid, weakens sterling.",
+    "text": "AUDJPY LONG: VIX falling and 10Y rising confirm setup robustly.\n\nAUDUSD LONG: VIX falling and commodity strength confirm AUD bid.\n\nEURJPY LONG: US 10Y rising confirms JPY offered pressure.",
     "top": [
       {
-        "pair": "USDCHF",
+        "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.67
+        "score": 7.72
       },
       {
-        "pair": "USDJPY",
+        "pair": "AUDUSD",
         "direction": "bull",
-        "score": 6.5
+        "score": 6.95
       },
       {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 5.98
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 5.6
       }
     ],
-    "updated": "2026-07-27T05:33:51.092972+00:00"
+    "updated": "2026-07-27T09:00:14.164867+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-27T05:33:51.092972+00:00"
+    "updated": "2026-07-27T09:00:14.164867+00:00"
   },
   "week_ahead": {
     "text": "Geopolitical tensions in the Middle East combined with US economic resilience create conflicting market forces as the Iran conflict pushes oil higher while fueling concerns about inflation and growth. The Federal Reserve meeting Wednesday is the pivotal central bank event affecting the dollar's direction. USD/JPY demands close attention as the dollar printed its highest close in 15 months near key long-term resistance, showing bullish technicals ahead of the BOJ hike. The biggest risk is whether the Fed maintains hawkish rhetoric despite falling inflation globally , potentially surprising markets if they signal more cuts than expected.",
@@ -716,10 +716,10 @@
   "breaking": {
     "headlines": [
       "Week ahead: FOMC, BoE, BoJ, US PCE and GDP create major cross-asset risk",
-      "US Dollar gains as Brent oil hits $100: EUR/USD, GBP/USD, USD/JPY analysis",
-      "Iran halts strikes if US maintains pause, boosting peace trades"
+      "US Dollar gains ground as Brent oil hits $100",
+      "Germany business sentiment rises further and exceeds expectations"
     ],
-    "updated": "2026-07-27T05:33:51.092972+00:00"
+    "updated": "2026-07-27T09:00:14.164867+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
