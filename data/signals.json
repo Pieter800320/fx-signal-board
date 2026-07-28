@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T18:19:59.354809+00:00",
+  "updated": "2026-07-28T19:00:19.732858+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,39 +555,39 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.95,
-      "delta_pct": -3.9,
+      "value": 18.32,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7445.04,
+      "value": 7439.3,
       "delta_pct": 0.4,
-      "direction": "up",
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4037.0,
-      "delta_pct": -0.9,
+      "value": 4023.9,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.32,
+      "value": 101.41,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3605,
-      "delta_pct": 0.3,
+      "value": 6.336,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.596,
-      "delta_bp": -4.5,
-      "direction": "down",
+      "value": 4.602,
+      "delta_bp": -3.9,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.43,
-      "delta_pct": -5.1,
+      "value": 79.25,
+      "delta_pct": -4.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63877.0,
-      "delta_pct": 0.2,
+      "value": 63689.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 83.6,
-      "delta_bp": -0.8,
+      "value": 84.2,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk: US Treasury yields rising (4.473% on 7-year notes) strengthens USD, pressures EUR. Dollar fights back narrative confirms headwind.",
-    "updated": "2026-07-28T17:15:49.951434+00:00"
+    "text": "EURJPY LONG at risk: US Dollar strength headlines conflict with EUR weakness vs JPY. Dollar flexing across majors undermines setup.",
+    "updated": "2026-07-28T19:00:19.732858+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Macro confirms setup via JPY weakness from risk-on equity bid today.\n\nAUDUSD SHORT: Macro confirms setup via gold falling creating USD safe haven bid.\n\nNZDJPY LONG: Macro challenges setup despite S&P rise from falling commodities pressuring NZD.",
+    "text": "EURJPY LONG: Macro context confirms setup via JPY weakness from risk-on positioning.\n\nNZDJPY LONG: Macro context challenges setup as NZD correlates commodity weakness today.\n\nUSDCAD LONG: Macro context confirms setup via WTI weakness supporting USD strength.",
     "top": [
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.2
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 4.08
+        "score": 5.88
       },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 3.73
+        "score": 4.73
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bull",
+        "score": 4.67
       }
     ],
-    "updated": "2026-07-28T17:15:49.951434+00:00"
+    "updated": "2026-07-28T19:00:19.732858+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T17:15:49.951434+00:00"
+    "updated": "2026-07-28T19:00:19.732858+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $44B 7-year notes at high 4.473% yield",
-      "Conference Board Consumer Confidence 90.8 versus 92.3 estimate miss",
-      "Richmond Fed manufacturing index 5 versus 10 estimate disappoints"
+      "US treasury sells $44B 7-year notes, yield 4.473%",
+      "Conference Board Consumer Confidence 90.8 vs 92.3 estimate",
+      "Netanyahu confirms additional Iran strikes unavoidable to Trump"
     ],
-    "updated": "2026-07-28T17:15:49.951434+00:00"
+    "updated": "2026-07-28T19:00:19.732858+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
