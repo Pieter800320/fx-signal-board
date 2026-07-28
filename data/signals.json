@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T15:26:27.182848+00:00",
+  "updated": "2026-07-28T15:55:51.655401+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -544,101 +544,101 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.62,
-      "delta_pct": -0.3,
+      "value": 18.07,
+      "delta_pct": -3.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7413.18,
-      "delta_pct": 0.0,
+      "value": 7441.81,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4032.4,
-      "delta_pct": -1.0,
+      "value": 4041.9,
+      "delta_pct": -0.8,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.52,
-      "delta_pct": 0.0,
+      "value": 101.29,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3105,
-      "delta_pct": -0.4,
+      "value": 6.365,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.63,
-      "delta_bp": -1.1,
-      "direction": "flat",
+      "value": 4.594,
+      "delta_bp": -4.7,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.79,
-      "delta_bp": -0.7,
-      "direction": "flat",
+      "value": 3.755,
+      "delta_bp": -4.2,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.32,
-      "delta_pct": -1.6,
+      "value": 79.22,
+      "delta_pct": -4.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63365.0,
-      "delta_pct": -0.6,
+      "value": 63765.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.0,
-      "delta_bp": -0.4,
+      "value": 83.9,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-28T13:22:29.881686+00:00"
+    "text": "EURJPY LONG at risk. Dollar strengthening headlines conflict with EUR weakness needed for long setup. USD/JPY gains noted.",
+    "updated": "2026-07-28T15:55:51.655401+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: Risk-off regime confirms USD bid thesis perfectly today.\n\nUSDCHF LONG: Gold falling and risk-off both validate safe-haven flows.\n\nUSDJPY LONG: Mixed macro challenges pure risk-off interpretation despite ADX strength.",
+    "text": "EURJPY LONG: Macro confirms setup, yen weakness supports carry trade.\n\nAUDUSD SHORT: Macro confirms setup, falling gold pressures commodity currency.\n\nNZDJPY LONG: Macro challenges setup, risk-on low reduces carry appeal.",
     "top": [
       {
-        "pair": "GBPUSD",
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 6.2
+      },
+      {
+        "pair": "AUDUSD",
         "direction": "bear",
-        "score": 7.35
+        "score": 4.08
       },
       {
-        "pair": "USDCHF",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.18
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 6.08
+        "score": 3.53
       }
     ],
-    "updated": "2026-07-28T13:22:29.881686+00:00"
+    "updated": "2026-07-28T15:55:51.655401+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T13:22:29.881686+00:00"
+    "updated": "2026-07-28T15:55:51.655401+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "ECB holds steady amid oil price swings, impacts EUR/USD",
-      "Fed, PCE, NFP data in focus for DXY direction",
-      "Dollar gains as Brent oil hits $100 threshold"
+      "Conference Board Consumer Confidence 90.8 misses 92.3 estimate",
+      "Richmond Fed manufacturing index 5 misses 10 estimate",
+      "US advance goods trade balance -$101.5B beats -$100B"
     ],
-    "updated": "2026-07-28T13:22:29.881686+00:00"
+    "updated": "2026-07-28T15:55:51.655401+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
