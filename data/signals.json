@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T20:20:37.109783+00:00",
+  "updated": "2026-07-28T20:54:17.292311+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.32,
-      "delta_pct": -1.9,
+      "value": 18.21,
+      "delta_pct": -2.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7439.3,
-      "delta_pct": 0.4,
+      "value": 7428.78,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4023.9,
-      "delta_pct": -1.2,
+      "value": 4029.6,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.41,
+      "value": 101.42,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.336,
+      "value": 6.337,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.602,
-      "delta_bp": -3.9,
+      "value": 4.604,
+      "delta_bp": -3.7,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.25,
-      "delta_pct": -4.1,
+      "value": 79.11,
+      "delta_pct": -4.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63689.0,
-      "delta_pct": -0.1,
+      "value": 63846.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.2,
-      "delta_bp": -0.2,
+      "value": 84.4,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk: US Dollar strength headlines conflict with EUR weakness vs JPY. Dollar flexing across majors undermines setup.",
-    "updated": "2026-07-28T19:00:19.732858+00:00"
+    "text": "EURJPY and USDJPY longs at risk from US dollar weakness narrative despite yield strength. Richmond Fed miss and consumer confidence miss suggest dollar downside pressure ahead.",
+    "updated": "2026-07-28T20:54:17.292311+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Macro context confirms setup via JPY weakness from risk-on positioning.\n\nNZDJPY LONG: Macro context challenges setup as NZD correlates commodity weakness today.\n\nUSDCAD LONG: Macro context confirms setup via WTI weakness supporting USD strength.",
+    "text": "USDCHF LONG: Gold weakness confirms USD strength bias today.\n\nEURJPY LONG: Mixed risk-on lacks conviction for carry extension.\n\nUSDJPY LONG: Gold falling supports USD bid, confirms setup.",
     "top": [
+      {
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 6.5
+      },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 5.88
+        "score": 6.38
       },
       {
-        "pair": "NZDJPY",
+        "pair": "USDJPY",
         "direction": "bull",
-        "score": 4.73
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 4.67
+        "score": 5.85
       }
     ],
-    "updated": "2026-07-28T19:00:19.732858+00:00"
+    "updated": "2026-07-28T20:54:17.292311+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T19:00:19.732858+00:00"
+    "updated": "2026-07-28T20:54:17.292311+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $44B 7-year notes, yield 4.473%",
-      "Conference Board Consumer Confidence 90.8 vs 92.3 estimate",
-      "Netanyahu confirms additional Iran strikes unavoidable to Trump"
+      "US treasury sells $44B 7-year notes at high yield 4.473%",
+      "Conference Board Consumer Confidence July 90.8 versus 92.3 estimate",
+      "Netanyahu confirms additional Iran nuclear facility strikes unavoidable"
     ],
-    "updated": "2026-07-28T19:00:19.732858+00:00"
+    "updated": "2026-07-28T20:54:17.292311+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
