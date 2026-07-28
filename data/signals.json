@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T15:55:51.655401+00:00",
+  "updated": "2026-07-28T17:15:49.951434+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-Off",
     "confidence": "Medium",
     "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "signals": 2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -555,72 +555,72 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 18.07,
-      "delta_pct": -3.2,
+      "value": 17.95,
+      "delta_pct": -3.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7441.81,
+      "value": 7445.04,
       "delta_pct": 0.4,
-      "direction": "flat",
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4041.9,
-      "delta_pct": -0.8,
+      "value": 4037.0,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.29,
-      "delta_pct": -0.2,
+      "value": 101.32,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.365,
-      "delta_pct": 0.4,
+      "value": 6.3605,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.594,
-      "delta_bp": -4.7,
+      "value": 4.596,
+      "delta_bp": -4.5,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.755,
-      "delta_bp": -4.2,
+      "value": 3.76,
+      "delta_bp": -3.7,
       "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.22,
-      "delta_pct": -4.1,
+      "value": 78.43,
+      "delta_pct": -5.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63765.0,
-      "delta_pct": 0.1,
+      "value": 63877.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 83.9,
-      "delta_bp": -0.5,
+      "value": 83.6,
+      "delta_bp": -0.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk. Dollar strengthening headlines conflict with EUR weakness needed for long setup. USD/JPY gains noted.",
-    "updated": "2026-07-28T15:55:51.655401+00:00"
+    "text": "EURJPY LONG at risk: US Treasury yields rising (4.473% on 7-year notes) strengthens USD, pressures EUR. Dollar fights back narrative confirms headwind.",
+    "updated": "2026-07-28T17:15:49.951434+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Macro confirms setup, yen weakness supports carry trade.\n\nAUDUSD SHORT: Macro confirms setup, falling gold pressures commodity currency.\n\nNZDJPY LONG: Macro challenges setup, risk-on low reduces carry appeal.",
+    "text": "EURJPY LONG: Macro confirms setup via JPY weakness from risk-on equity bid today.\n\nAUDUSD SHORT: Macro confirms setup via gold falling creating USD safe haven bid.\n\nNZDJPY LONG: Macro challenges setup despite S&P rise from falling commodities pressuring NZD.",
     "top": [
       {
         "pair": "EURJPY",
@@ -635,10 +635,10 @@
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 3.53
+        "score": 3.73
       }
     ],
-    "updated": "2026-07-28T15:55:51.655401+00:00"
+    "updated": "2026-07-28T17:15:49.951434+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T15:55:51.655401+00:00"
+    "updated": "2026-07-28T17:15:49.951434+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-28T04:49:28.076335+00:00"
+    "generated_at": "2026-07-28T17:16:17.510799+00:00"
   },
   "breaking": {
     "headlines": [
-      "Conference Board Consumer Confidence 90.8 misses 92.3 estimate",
-      "Richmond Fed manufacturing index 5 misses 10 estimate",
-      "US advance goods trade balance -$101.5B beats -$100B"
+      "US treasury sells $44B 7-year notes at high 4.473% yield",
+      "Conference Board Consumer Confidence 90.8 versus 92.3 estimate miss",
+      "Richmond Fed manufacturing index 5 versus 10 estimate disappoints"
     ],
-    "updated": "2026-07-28T15:55:51.655401+00:00"
+    "updated": "2026-07-28T17:15:49.951434+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
