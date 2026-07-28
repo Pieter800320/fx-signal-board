@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-27T22:45:46.557078+00:00",
+  "updated": "2026-07-28T01:11:50.861634+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4076.2,
-      "delta_pct": 0.2,
+      "value": 4055.8,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.51,
+      "value": 101.47,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3925,
-      "delta_pct": 1.1,
+      "value": 6.358,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.85,
-      "delta_pct": -8.4,
+      "value": 81.9,
+      "delta_pct": -8.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64093.0,
-      "delta_pct": -1.9,
-      "direction": "flat",
+      "value": 63167.0,
+      "delta_pct": -3.3,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-27T22:45:46.557078+00:00"
+    "text": "USDJPY LONG may face headwinds. Headline states Dollar fights back as yields drop, conflicting with typical yen strength during risk-off periods.",
+    "updated": "2026-07-28T01:11:50.861634+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-on weakness challenges setup; CHF safe-haven demand strengthens.\n\nNZDUSD SHORT: Oil collapse challenges NZD short; commodity exposure creates headwind.\n\nUSDJPY LONG: Risk-off environment confirms setup; yen safe-haven bid supports.",
+    "text": "USDCHF LONG: Risk-on weakness challenges setup; oil collapse reduces CHF safe-haven appeal.\n\nNZDUSD SHORT: Risk-on low confirms setup; commodity selloff pressures NZD fundamentals directly.\n\nUSDJPY LONG: Mixed regime challenges setup; oil weakness reduces yen carry appeal.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.55
       }
     ],
-    "updated": "2026-07-27T22:45:46.557078+00:00"
+    "updated": "2026-07-28T01:11:50.861634+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-27T22:45:46.557078+00:00"
+    "updated": "2026-07-28T01:11:50.861634+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -713,9 +713,9 @@
     "headlines": [
       "US Treasury sells $70B 5-year notes at 4.408% yield",
       "Dollar gains ground as Brent oil hits $100",
-      "ECB holds steady rates amid oil price swings"
+      "ECB holds steady rates amid oil price volatility"
     ],
-    "updated": "2026-07-27T22:45:46.557078+00:00"
+    "updated": "2026-07-28T01:11:50.861634+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
