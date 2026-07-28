@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T01:11:50.861634+00:00",
+  "updated": "2026-07-28T04:49:03.535714+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4055.8,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4046.6,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.47,
+      "value": 101.51,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.358,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 6.3635,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.9,
-      "delta_pct": -8.3,
+      "value": 81.67,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63167.0,
+      "value": 63212.0,
       "delta_pct": -3.3,
       "direction": "down",
       "label": "Bitcoin"
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG may face headwinds. Headline states Dollar fights back as yields drop, conflicting with typical yen strength during risk-off periods.",
-    "updated": "2026-07-28T01:11:50.861634+00:00"
+    "text": "USDJPY LONG accelerated by dollar strength headlines and yield focus. Oil volatility noted but no direct conflicts to setups.",
+    "updated": "2026-07-28T04:49:03.535714+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Risk-on weakness challenges setup; oil collapse reduces CHF safe-haven appeal.\n\nNZDUSD SHORT: Risk-on low confirms setup; commodity selloff pressures NZD fundamentals directly.\n\nUSDJPY LONG: Mixed regime challenges setup; oil weakness reduces yen carry appeal.",
+    "text": "USDCHF LONG: Gold falling confirms USD strength bias here today.\n\nNZDUSD SHORT: Gold falling supports USD bid against risk currency.\n\nUSDJPY LONG: Gold falling challenges setup, yen bid competes with dollar.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.88
+        "score": 7.08
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 5.8
+        "score": 6.0
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.55
+        "score": 5.75
       }
     ],
-    "updated": "2026-07-28T01:11:50.861634+00:00"
+    "updated": "2026-07-28T04:49:03.535714+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T01:11:50.861634+00:00"
+    "updated": "2026-07-28T04:49:03.535714+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-27T16:05:25.982057+00:00"
+    "generated_at": "2026-07-28T04:49:28.076335+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Treasury sells $70B 5-year notes at 4.408% yield",
-      "Dollar gains ground as Brent oil hits $100",
-      "ECB holds steady rates amid oil price volatility"
+      "US Treasury 5-year notes sell at 4.408% yield, supports dollar",
+      "Dollar fights back as yields drop, EUR/USD GBP/USD under pressure",
+      "Oil hits $100 brent, dollar gains ground across major pairs"
     ],
-    "updated": "2026-07-28T01:11:50.861634+00:00"
+    "updated": "2026-07-28T04:49:03.535714+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
