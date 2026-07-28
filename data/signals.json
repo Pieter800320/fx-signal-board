@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T11:48:02.717056+00:00",
+  "updated": "2026-07-28T13:22:29.881686+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,88 +539,88 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 19.06,
-      "delta_pct": 2.1,
+      "value": 18.62,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
       "value": 7413.18,
-      "delta_pct": 0.1,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4029.7,
-      "delta_pct": -1.1,
+      "value": 4032.4,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.56,
-      "delta_pct": 0.1,
+      "value": 101.52,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3075,
-      "delta_pct": -0.5,
+      "value": 6.3105,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.641,
-      "delta_bp": -6.2,
-      "direction": "down",
+      "value": 4.63,
+      "delta_bp": -1.1,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.797,
-      "delta_bp": -0.3,
+      "value": 3.79,
+      "delta_bp": -0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.66,
-      "delta_pct": -1.1,
+      "value": 81.32,
+      "delta_pct": -1.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63411.0,
-      "delta_pct": -0.5,
+      "value": 63365.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 84.4,
-      "delta_bp": -5.9,
-      "direction": "down",
+      "value": 84.0,
+      "delta_bp": -0.4,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-07-28T11:48:02.717056+00:00"
+    "updated": "2026-07-28T13:22:29.881686+00:00"
   },
   "ranked": {
-    "text": "GBPUSD SHORT: Gold falling confirms USD bid, reinforces short thesis.\n\nUSDCHF LONG: Risk-off regime confirms CHF safe-haven demand strength.\n\nUSDJPY LONG: Ten-year yield decline challenges carry trade unwind setup.",
+    "text": "GBPUSD SHORT: Risk-off regime confirms USD bid thesis perfectly today.\n\nUSDCHF LONG: Gold falling and risk-off both validate safe-haven flows.\n\nUSDJPY LONG: Mixed macro challenges pure risk-off interpretation despite ADX strength.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.08
       }
     ],
-    "updated": "2026-07-28T11:48:02.717056+00:00"
+    "updated": "2026-07-28T13:22:29.881686+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T11:48:02.717056+00:00"
+    "updated": "2026-07-28T13:22:29.881686+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains ground as Brent oil hits $100 per barrel",
-      "Fed, PCE and NFP data in focus for dollar direction",
-      "ECB holds steady rates amid oil price volatility swings"
+      "ECB holds steady amid oil price swings, impacts EUR/USD",
+      "Fed, PCE, NFP data in focus for DXY direction",
+      "Dollar gains as Brent oil hits $100 threshold"
     ],
-    "updated": "2026-07-28T11:48:02.717056+00:00"
+    "updated": "2026-07-28T13:22:29.881686+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
