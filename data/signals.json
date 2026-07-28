@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T07:42:57.668078+00:00",
+  "updated": "2026-07-28T08:08:04.613657+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,19 +544,19 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.67,
-      "delta_pct": 0.5,
+      "value": 19.01,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4046.6,
+      "value": 4047.6,
       "delta_pct": -0.7,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.51,
-      "delta_pct": 0.0,
+      "value": 101.55,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3635,
-      "delta_pct": 0.4,
+      "value": 6.325,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.67,
-      "delta_pct": -1.1,
+      "value": 80.61,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63212.0,
-      "delta_pct": -3.3,
-      "direction": "down",
+      "value": 63432.0,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG accelerated by dollar strength headlines and yield focus. Oil volatility noted but no direct conflicts to setups.",
-    "updated": "2026-07-28T04:49:03.535714+00:00"
+    "text": "USDJPY LONG accelerated by dollar gains as yields drop and Fed focus intensifies. Japan core inflation steady at 2.7% supports BOJ hold expectations.",
+    "updated": "2026-07-28T08:08:04.613657+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Gold falling confirms USD strength bias here today.\n\nNZDUSD SHORT: Gold falling supports USD bid against risk currency.\n\nUSDJPY LONG: Gold falling challenges setup, yen bid competes with dollar.",
+    "text": "USDCHF LONG: Macro confirms setup via safe-haven flows into CHF today.\n\nNZDUSD SHORT: Macro challenges setup as NZD risk-off underperformance needs confirmation.\n\nUSDJPY LONG: Macro confirms setup via JPY safe-haven demand in risk-off.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 7.08
+        "score": 6.95
       },
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.0
+        "score": 5.85
       },
       {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.75
+        "score": 5.73
       }
     ],
-    "updated": "2026-07-28T04:49:03.535714+00:00"
+    "updated": "2026-07-28T08:08:04.613657+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T04:49:03.535714+00:00"
+    "updated": "2026-07-28T08:08:04.613657+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury 5-year notes sell at 4.408% yield, supports dollar",
-      "Dollar fights back as yields drop, EUR/USD GBP/USD under pressure",
-      "Oil hits $100 brent, dollar gains ground across major pairs"
+      "Japan core inflation 2.7% in June, BOJ policy implications",
+      "ECB holds rates steady amid oil price volatility",
+      "US dollar gains as Brent oil hits $100"
     ],
-    "updated": "2026-07-28T04:49:03.535714+00:00"
+    "updated": "2026-07-28T08:08:04.613657+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
