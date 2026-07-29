@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-28T22:46:06.625042+00:00",
+  "updated": "2026-07-29T01:14:40.209142+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4015.6,
-      "delta_pct": -1.4,
+      "value": 4009.6,
+      "delta_pct": -1.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.39,
+      "value": 101.38,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3345,
-      "delta_pct": -0.1,
+      "value": 6.3385,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.85,
-      "delta_pct": 0.3,
+      "value": 82.52,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63773.0,
-      "delta_pct": 0.1,
+      "value": 63738.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY and USDJPY longs at risk if Fed cuts rates soon. Treasury yield data and upcoming Fed decision could weaken yen carry appeal significantly.",
-    "updated": "2026-07-28T22:46:06.625042+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-29T01:14:40.209142+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Gold decline confirms USD strength bias today.\n\nEURJPY LONG: Mixed risk-on challenges carry trade momentum sustainability.\n\nUSDJPY LONG: Gold falling reinforces USD bid macro driver.",
+    "text": "USDCHF LONG: Gold decline confirms USD strength bias today.\n\nEURJPY LONG: Risk-on low challenges carry trade momentum sustainability.\n\nUSDJPY LONG: Gold falling reinforces safe haven USD demand.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 5.85
       }
     ],
-    "updated": "2026-07-28T22:46:06.625042+00:00"
+    "updated": "2026-07-29T01:14:40.209142+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-28T22:46:06.625042+00:00"
+    "updated": "2026-07-29T01:14:40.209142+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -713,9 +713,9 @@
     "headlines": [
       "US treasury sells $44B 7-year notes at high yield 4.473%",
       "Fed holds rates, signals data-dependence ahead of GDP PCE data",
-      "Dollar strengthens across EUR/USD, GBP/USD, USD/JPY as yields shift"
+      "Dollar strengthens across EUR/USD, GBP/USD, USD/CHF on yield support"
     ],
-    "updated": "2026-07-28T22:46:06.625042+00:00"
+    "updated": "2026-07-29T01:14:40.209142+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
