@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T15:12:28.143493+00:00",
+  "updated": "2026-07-29T15:42:38.651913+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -539,72 +539,72 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 2,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
     "total": 2,
     "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 18.91,
-      "delta_pct": 3.8,
-      "direction": "flat",
+      "value": 19.82,
+      "delta_pct": 6.2,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7428.78,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 7364.67,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4076.3,
-      "delta_pct": 1.0,
+      "value": 4070.1,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.45,
-      "delta_pct": 0.1,
+      "value": 101.46,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.306,
-      "delta_pct": -0.3,
+      "value": 6.308,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.629,
-      "delta_bp": 2.5,
+      "value": 4.639,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.768,
-      "delta_bp": 0.8,
+      "value": 3.778,
+      "delta_bp": -1.9,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.48,
-      "delta_pct": 6.6,
+      "value": 84.56,
+      "delta_pct": 6.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64145.0,
-      "delta_pct": 0.4,
+      "value": 63920.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG accelerated by geopolitical tension Iran strikes and Red Sea risks driving safe haven demand for CHF.",
-    "updated": "2026-07-29T13:28:48.348006+00:00"
+    "text": "USDJPY LONG and USDCHF LONG accelerated by geopolitical tensions Iran strikes increasing safe haven demand for JPY and CHF. AUDUSD SHORT supported by risk off sentiment.",
+    "updated": "2026-07-29T15:42:38.651913+00:00"
   },
   "ranked": {
-    "text": "AUDUSD SHORT: Risk-off headwinds challenge setup despite momentum weakness.\n\nUSDCHF LONG: Risk-off medium supports CHF safe-haven bid strength.\n\nNZDUSD SHORT: Oil strength challenges NZD short, offsetting momentum signal.",
+    "text": "AUDUSD SHORT: VIX spike and USD bid confirm risk-off setup perfectly today.\n\nUSDCHF LONG: Rising VIX confirms safe-haven USD demand, weak ADX challenges conviction.\n\nUSDJPY LONG: VIX strength confirms yen bid, but oil rally complicates narrative.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bear",
-        "score": 5.9
+        "score": 7.08
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 5.75
+        "score": 6.05
       },
       {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 3.75
+        "pair": "USDJPY",
+        "direction": "bull",
+        "score": 5.68
       }
     ],
-    "updated": "2026-07-29T13:28:48.348006+00:00"
+    "updated": "2026-07-29T15:42:38.651913+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-29T13:28:48.348006+00:00"
+    "updated": "2026-07-29T15:42:38.651913+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD and GBP/USD in Focus",
+      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD in Focus",
       "Oil climbs as Iran rejects Oman proposal on Strait of Hormuz",
-      "Trump: We'll be hitting Iran hard. Strikes in reaction to attacks on US in Jordan"
+      "Trump: We'll hit Iran hard in reaction to Jordan attacks"
     ],
-    "updated": "2026-07-29T13:28:48.348006+00:00"
+    "updated": "2026-07-29T15:42:38.651913+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
