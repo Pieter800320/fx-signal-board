@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T01:14:40.209142+00:00",
+  "updated": "2026-07-29T04:54:18.814195+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4009.6,
-      "delta_pct": -1.6,
-      "direction": "down",
+      "value": 4025.2,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.38,
+      "value": 101.25,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.3385,
-      "delta_pct": -0.0,
+      "value": 6.2855,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.52,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 82.11,
+      "delta_pct": 3.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63738.0,
-      "delta_pct": 0.0,
+      "value": 63823.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-29T01:14:40.209142+00:00"
+    "text": "USD strength headlines support USDCHF LONG and USDJPY LONG. Fed decision pending could accelerate moves. No direct conflicts identified for setups.",
+    "updated": "2026-07-29T04:54:18.814195+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Gold decline confirms USD strength bias today.\n\nEURJPY LONG: Risk-on low challenges carry trade momentum sustainability.\n\nUSDJPY LONG: Gold falling reinforces safe haven USD demand.",
+    "text": "EURJPY LONG: Oil rally supports risk-on, confirming upside momentum.\n\nUSDCHF LONG: Risk-on conflicts with CHF safe-haven bid challenge.\n\nUSDJPY LONG: Mixed regime limits carry trade conviction despite momentum.",
     "top": [
-      {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 6.5
-      },
       {
         "pair": "EURJPY",
         "direction": "bull",
         "score": 6.38
       },
       {
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 6.3
+      },
+      {
         "pair": "USDJPY",
         "direction": "bull",
-        "score": 5.85
+        "score": 5.65
       }
     ],
-    "updated": "2026-07-29T01:14:40.209142+00:00"
+    "updated": "2026-07-29T04:54:18.814195+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-29T01:14:40.209142+00:00"
+    "updated": "2026-07-29T04:54:18.814195+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $44B 7-year notes at high yield 4.473%",
-      "Fed holds rates, signals data-dependence ahead of GDP PCE data",
-      "Dollar strengthens across EUR/USD, GBP/USD, USD/CHF on yield support"
+      "Australian June CPI 3.8% y/y vs 4.0% expected, AUD weakens",
+      "US 7-year Treasury yields 4.473%, supports dollar strength",
+      "Fed decision imminent, GDP and PCE data critical for DXY"
     ],
-    "updated": "2026-07-29T01:14:40.209142+00:00"
+    "updated": "2026-07-29T04:54:18.814195+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
