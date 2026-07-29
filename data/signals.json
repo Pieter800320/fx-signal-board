@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T15:42:38.651913+00:00",
+  "updated": "2026-07-29T17:00:03.313126+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,72 +555,72 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 19.82,
-      "delta_pct": 6.2,
+      "value": 20.06,
+      "delta_pct": 7.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7364.67,
-      "delta_pct": -0.7,
+      "value": 7371.47,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4070.1,
-      "delta_pct": 0.8,
+      "value": 4076.1,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
       "value": 101.46,
-      "delta_pct": -0.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.308,
-      "delta_pct": -0.2,
+      "value": 6.301,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.639,
-      "delta_bp": -0.2,
+      "value": 4.649,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.778,
-      "delta_bp": -1.9,
-      "direction": "flat",
+      "value": 3.775,
+      "delta_bp": -2.2,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.56,
+      "value": 84.57,
       "delta_pct": 6.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63920.0,
-      "delta_pct": 0.1,
+      "value": 63733.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 86.1,
-      "delta_bp": 1.7,
+      "value": 87.4,
+      "delta_bp": 3.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDJPY LONG and USDCHF LONG accelerated by geopolitical tensions Iran strikes increasing safe haven demand for JPY and CHF. AUDUSD SHORT supported by risk off sentiment.",
-    "updated": "2026-07-29T15:42:38.651913+00:00"
+    "text": "USDJPY LONG and USDCHF LONG accelerated by geopolitical tension Iran headlines supporting safe haven demand and USD strength.",
+    "updated": "2026-07-29T17:00:03.313126+00:00"
   },
   "ranked": {
-    "text": "AUDUSD SHORT: VIX spike and USD bid confirm risk-off setup perfectly today.\n\nUSDCHF LONG: Rising VIX confirms safe-haven USD demand, weak ADX challenges conviction.\n\nUSDJPY LONG: VIX strength confirms yen bid, but oil rally complicates narrative.",
+    "text": "AUDUSD SHORT: VIX surge and USD bid strongly confirm short thesis today.\n\nUSDCHF LONG: Risk-off environment supports long but weak ADX challenges conviction.\n\nUSDJPY LONG: Safe-haven flows confirm long setup despite BoJ policy headwinds.",
     "top": [
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 5.68
       }
     ],
-    "updated": "2026-07-29T15:42:38.651913+00:00"
+    "updated": "2026-07-29T17:00:03.313126+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-29T15:42:38.651913+00:00"
+    "updated": "2026-07-29T17:00:03.313126+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD in Focus",
+      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD and GBP/USD in Focus",
       "Oil climbs as Iran rejects Oman proposal on Strait of Hormuz",
-      "Trump: We'll hit Iran hard in reaction to Jordan attacks"
+      "Trump: We'll be hitting Iran hard. Strikes in reaction to US attacks"
     ],
-    "updated": "2026-07-29T15:42:38.651913+00:00"
+    "updated": "2026-07-29T17:00:03.313126+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
