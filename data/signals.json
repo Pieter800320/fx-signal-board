@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T07:47:51.666611+00:00",
+  "updated": "2026-07-29T08:12:11.731964+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
+    "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 10.0,
-    "signals": 2,
-    "total": 2,
-    "stable": true
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
@@ -561,84 +561,84 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7428.78,
-      "delta_pct": 0.2,
+      "value": 7413.18,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4025.2,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4102.1,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.25,
-      "delta_pct": -0.1,
+      "value": 101.33,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.2855,
-      "delta_pct": -0.6,
+      "value": 6.3345,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.604,
-      "delta_bp": -3.7,
-      "direction": "flat",
+      "value": 4.641,
+      "delta_bp": -6.2,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.76,
-      "delta_bp": -3.7,
-      "direction": "down",
+      "value": 3.797,
+      "delta_bp": -0.3,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.11,
-      "delta_pct": 3.6,
+      "value": 82.07,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63823.0,
-      "delta_pct": 0.2,
+      "value": 64307.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
       "value": 84.4,
-      "delta_bp": 0.0,
-      "direction": "flat",
+      "delta_bp": -5.9,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USD strength headlines support USDCHF LONG and USDJPY LONG. Fed decision pending could accelerate moves. No direct conflicts identified for setups.",
-    "updated": "2026-07-29T04:54:18.814195+00:00"
+    "text": "Australian June CPI 3.8% y/y vs 4.0% expected conflicts with AUDUSD SHORT. Lower inflation reduces RBA rate hike expectations, supporting AUD.",
+    "updated": "2026-07-29T08:12:11.731964+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Oil rally supports risk-on, confirming upside momentum.\n\nUSDCHF LONG: Risk-on conflicts with CHF safe-haven bid challenge.\n\nUSDJPY LONG: Mixed regime limits carry trade conviction despite momentum.",
+    "text": "AUDUSD SHORT: Macro challenges setup, oil strength supports AUD upside.\n\nEURJPY LONG: Macro neutral, yen weakness from risk-on bias absent.\n\nNZDJPY LONG: Macro challenges setup, gold strength supports NZD weakness.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bear",
+        "score": 6.35
+      },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.38
+        "score": 4.1
       },
       {
-        "pair": "USDCHF",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 6.3
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 5.65
+        "score": 3.3
       }
     ],
-    "updated": "2026-07-29T04:54:18.814195+00:00"
+    "updated": "2026-07-29T08:12:11.731964+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-29T04:54:18.814195+00:00"
+    "updated": "2026-07-29T08:12:11.731964+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-28T17:16:17.510799+00:00"
+    "generated_at": "2026-07-29T08:12:37.002743+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australian June CPI 3.8% y/y vs 4.0% expected, AUD weakens",
-      "US 7-year Treasury yields 4.473%, supports dollar strength",
-      "Fed decision imminent, GDP and PCE data critical for DXY"
+      "Australian June CPI 3.8% y/y vs +4.0% expected",
+      "US Dollar flexes strength across EUR/USD, GBP/USD, USD/CHF",
+      "German import prices fell in June due to energy"
     ],
-    "updated": "2026-07-29T04:54:18.814195+00:00"
+    "updated": "2026-07-29T08:12:11.731964+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
