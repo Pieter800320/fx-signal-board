@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T07:38:08.975141+00:00",
+  "updated": "2026-07-30T08:00:39.200510+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,22 +542,22 @@
     "regime": "Risk-Off",
     "confidence": "Medium",
     "score": 10.0,
-    "signals": 2,
-    "total": 2,
+    "signals": 1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 3,
-    "total": 5,
-    "confidence": "High",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 20.66,
-      "delta_pct": 13.5,
-      "direction": "up",
+      "value": 19.75,
+      "delta_pct": -4.4,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4109.9,
-      "delta_pct": 1.9,
+      "value": 4098.1,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.93,
-      "delta_pct": 0.1,
+      "value": 101.05,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.365,
+      "value": 6.368,
       "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.75,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 85.34,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63997.0,
-      "delta_pct": 0.2,
+      "value": 63912.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG conflicted. Dollar strength headlines contradict yen weakness needed for long setup. USD appreciation pressures JPY higher.",
-    "updated": "2026-07-30T04:42:11.352577+00:00"
+    "text": "EURJPY LONG conflicted by Fed decision threatening volatility and dollar strength across USD pairs including JPY. USDCHF LONG supported by dollar strength forecasts.",
+    "updated": "2026-07-30T08:00:39.200510+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Macro challenges setup, risk-off headwinds weaken JPY carry appeal.\n\nAUDUSD SHORT: Macro confirms setup, VIX spike strengthens USD safe-haven bid.",
+    "text": "EURJPY LONG: Risk-off supports JPY strength, challenging long bias.\n\nNZDJPY LONG: Copper rally confirms NZD bid, supporting setup.\n\nUSDCHF LONG: Risk-off favors CHF safety, challenging USD strength.",
     "top": [
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.7
+        "score": 7.03
       },
       {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 5.03
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 4.62
+      },
+      {
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 4.3
       }
     ],
-    "updated": "2026-07-30T04:42:11.352577+00:00"
+    "updated": "2026-07-30T08:00:39.200510+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-30T04:42:11.352577+00:00"
+    "updated": "2026-07-30T08:00:39.200510+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed stands pat, markets lose ground across USD pairs",
-      "US completes heavy wave of attacks on Iran",
-      "Russia attacks western Ukraine, Polish defenses activated"
+      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD in Focus",
+      "Spain inflation estimated to accelerate further in July",
+      "French economy bounces back in Q2 but momentum remains sluggish"
     ],
-    "updated": "2026-07-30T04:42:11.352577+00:00"
+    "updated": "2026-07-30T08:00:39.200510+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
