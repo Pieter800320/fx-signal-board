@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T11:15:24.330772+00:00",
+  "updated": "2026-07-30T11:42:59.665753+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 5,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 19.75,
-      "delta_pct": -4.4,
-      "direction": "flat",
+      "value": 19.23,
+      "delta_pct": -6.9,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4098.1,
-      "delta_pct": 1.6,
+      "value": 4134.9,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.05,
-      "delta_pct": 0.2,
+      "value": 100.75,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.368,
-      "delta_pct": 1.5,
+      "value": 6.449,
+      "delta_pct": 2.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.34,
-      "delta_pct": 1.0,
-      "direction": "up",
+      "value": 83.38,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63912.0,
-      "delta_pct": 0.0,
+      "value": 64572.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG conflicted by Fed decision threatening volatility and dollar strength across USD pairs including JPY. USDCHF LONG supported by dollar strength forecasts.",
-    "updated": "2026-07-30T08:00:39.200510+00:00"
+    "text": "EURJPY LONG at risk: Fed decision threatens USD strength, which would weaken JPY weakness that supports the trade.",
+    "updated": "2026-07-30T11:42:59.665753+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Risk-off supports JPY strength, challenging long bias.\n\nNZDJPY LONG: Copper rally confirms NZD bid, supporting setup.\n\nUSDCHF LONG: Risk-off favors CHF safety, challenging USD strength.",
+    "text": "NZDJPY LONG: Macro confirms setup, VIX falling strengthens carry demand today.\n\nEURJPY LONG: Macro challenges setup, risk-off medium conflicts with JPY weakness.",
     "top": [
-      {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 7.03
-      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 4.62
+        "score": 6.4
       },
       {
-        "pair": "USDCHF",
+        "pair": "EURJPY",
         "direction": "bull",
-        "score": 4.3
+        "score": 6.12
       }
     ],
-    "updated": "2026-07-30T08:00:39.200510+00:00"
+    "updated": "2026-07-30T11:42:59.665753+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-30T08:00:39.200510+00:00"
+    "updated": "2026-07-30T11:42:59.665753+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-29T20:40:45.696099+00:00"
+    "generated_at": "2026-07-30T11:43:25.291080+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Fed Decision Day Puts DXY, EUR/USD in Focus",
-      "Spain inflation estimated to accelerate further in July",
-      "French economy bounces back in Q2 but momentum remains sluggish"
+      "Eurozone Q2 GDP +0.4% beats +0.2% expected, EUR strength",
+      "Fed decision today threatens USD volatility across major pairs",
+      "Germany inflation accelerates July, pressures ECB policy outlook"
     ],
-    "updated": "2026-07-30T08:00:39.200510+00:00"
+    "updated": "2026-07-30T11:42:59.665753+00:00"
   },
   "last_alert": "2026-07-30T11:15:24.330772+00:00",
   "gold_signal": {
