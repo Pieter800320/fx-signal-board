@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-29T22:43:56.800709+00:00",
+  "updated": "2026-07-30T01:07:55.132649+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4132.0,
-      "delta_pct": 2.4,
+      "value": 4125.8,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.8,
-      "delta_pct": -0.6,
+      "value": 100.88,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.365,
+      "value": 6.369,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.4,
-      "delta_pct": 6.5,
+      "value": 84.6,
+      "delta_pct": 6.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63946.0,
-      "delta_pct": 0.1,
+      "value": 63789.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk. USD strength headlines and Fed meeting focus could strengthen JPY, weakening EUR/JPY upside. Iran tensions may support safe-haven flows to JPY.",
-    "updated": "2026-07-29T22:43:56.800709+00:00"
+    "text": "EURJPY LONG conflict: USD strength headlines contradict the weaker dollar implied by long EUR/JPY positioning during Fed dovish signals.",
+    "updated": "2026-07-30T01:07:55.132649+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Risk-off environment challenges long positioning, JPY strengthens.\n\nAUDUSD SHORT: VIX surge confirms short bias, USD bid supports.",
+    "text": "EURJPY LONG: Macro challenges setup; risk-off favors JPY strength.\n\nAUDUSD SHORT: Macro confirms setup; VIX spike strengthens USD bid.",
     "top": [
       {
         "pair": "EURJPY",
@@ -633,7 +633,7 @@
         "score": 5.03
       }
     ],
-    "updated": "2026-07-29T22:43:56.800709+00:00"
+    "updated": "2026-07-30T01:07:55.132649+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-29T22:43:56.800709+00:00"
+    "updated": "2026-07-30T01:07:55.132649+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed holds rates steady, markets lose ground on decision",
-      "Oil climbs as Iran rejects Oman strait proposal",
-      "Trump weighs two-week campaign of strikes against Iran"
+      "Fed holds rates steady, signals data-dependent policy ahead",
+      "US confirms strikes against Iran, weighs further escalation",
+      "Dollar strengthens as yields drop across EUR/USD, GBP/USD"
     ],
-    "updated": "2026-07-29T22:43:56.800709+00:00"
+    "updated": "2026-07-30T01:07:55.132649+00:00"
   },
   "last_alert": "2026-07-23T18:17:38.720713+00:00",
   "gold_signal": {
