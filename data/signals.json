@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T20:52:01.375014+00:00",
+  "updated": "2026-07-30T22:52:55.591679+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4165.8,
-      "delta_pct": 3.2,
+      "value": 4168.9,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.976,
+      "value": 99.969,
       "delta_pct": -0.8,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.495,
-      "delta_pct": 3.5,
+      "value": 6.5025,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.12,
-      "delta_pct": -0.4,
+      "value": 84.06,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64780.0,
+      "value": 64822.0,
       "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD long threatened by Fed decision day focus on USD strength and potential rate hold supporting dollar appreciation.",
-    "updated": "2026-07-30T20:52:01.375014+00:00"
+    "text": "NZ consumer confidence surge supports NZDUSD long. FOMC meeting and USD strength headlines create near term volatility risk for position.",
+    "updated": "2026-07-30T22:52:55.591679+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: VIX collapse and risk-on sentiment confirm NZD strength setup.",
+    "text": "NZDUSD LONG: Risk-on tailwinds confirm setup via copper strength and equities rally.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.9
       }
     ],
-    "updated": "2026-07-30T20:52:01.375014+00:00"
+    "updated": "2026-07-30T22:52:55.591679+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-30T20:52:01.375014+00:00"
+    "updated": "2026-07-30T22:52:55.591679+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Atlanta Fed GDPNow initial estimate for Q3 is set at 5.0%",
-      "US initial jobless claims 197K versus 200K expected",
-      "Dallas Fed Trimmed Mean +1.4% vs +2.7% in May"
+      "USDJPY moves sharply lower on speculation of intervention",
+      "US PCE inflation 3.7% matches expectations, core steady 3.3%",
+      "Atlanta Fed GDPNow Q3 estimate raised to 5.0%"
     ],
-    "updated": "2026-07-30T20:52:01.375014+00:00"
+    "updated": "2026-07-30T22:52:55.591679+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
