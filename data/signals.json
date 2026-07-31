@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T20:48:31.786680+00:00",
+  "updated": "2026-07-31T22:45:49.679591+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4108.3,
-      "delta_pct": 0.2,
+      "value": 4098.6,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.782,
+      "value": 99.803,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5225,
-      "delta_pct": 1.2,
+      "value": 6.5075,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.56,
-      "delta_pct": 1.2,
+      "value": 86.8,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62937.0,
+      "value": 62887.0,
       "delta_pct": -2.8,
       "direction": "down",
       "label": "Bitcoin"
@@ -616,8 +616,8 @@
     }
   },
   "catalyst": {
-    "text": "USD moves higher as employee benefits rise and yields increase. This directly conflicts with NZDUSD long setup as stronger USD weakens NZD.",
-    "updated": "2026-07-31T20:48:31.786680+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-31T22:45:49.679591+00:00"
   },
   "ranked": {
     "text": "VIX falling and copper rising strongly confirm NZD long setup.",
@@ -628,7 +628,7 @@
         "score": 7.5
       }
     ],
-    "updated": "2026-07-31T20:48:31.786680+00:00"
+    "updated": "2026-07-31T22:45:49.679591+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-31T20:48:31.786680+00:00"
+    "updated": "2026-07-31T22:45:49.679591+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD strengthens",
-      "Eurozone inflation ticks up July; USD/JPY intervention concerns emerge",
-      "Canada May GDP beats 0.3% vs 0.2% expected forecast"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected",
+      "University of Michigan Consumer confidence final July 55.2 vs 54.0",
+      "Canada May GDP 0.3% versus 0.2% expected"
     ],
-    "updated": "2026-07-31T20:48:31.786680+00:00"
+    "updated": "2026-07-31T22:45:49.679591+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
