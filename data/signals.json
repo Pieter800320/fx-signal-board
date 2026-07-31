@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T11:49:57.978263+00:00",
+  "updated": "2026-07-31T13:22:16.368427+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,24 +539,24 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
-    "total": 1,
+    "total": 3,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.0,
-      "delta_pct": -0.5,
+      "value": 17.21,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,68 +567,68 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4109.5,
-      "delta_pct": 0.2,
+      "value": 4092.3,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.29,
+      "value": 100.36,
       "delta_pct": 0.3,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.48,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 6.4995,
+      "delta_pct": 0.9,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.663,
-      "delta_bp": 4.1,
-      "direction": "up",
+      "value": 4.7,
+      "delta_bp": 3.7,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.675,
-      "delta_bp": 1.7,
+      "value": 3.68,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.89,
-      "delta_pct": 1.6,
+      "value": 85.69,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63759.0,
+      "value": 63747.0,
       "delta_pct": -1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.8,
-      "delta_bp": 2.4,
-      "direction": "flat",
+      "value": 102.0,
+      "delta_bp": 3.2,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDUSD long conflicts with USD strength theme. Multiple headlines emphasize Fed decision driving USD higher across major pairs, weighing on NZD.",
-    "updated": "2026-07-31T11:49:57.978263+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-31T13:22:16.368427+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-on environment confirms setup via equity strength bid.",
+    "text": "Macro confirms NZDUSD long: risk-on supports NZD commodity currency bid.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.85
+        "score": 6.05
       }
     ],
-    "updated": "2026-07-31T11:49:57.978263+00:00"
+    "updated": "2026-07-31T13:22:16.368427+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-31T11:49:57.978263+00:00"
+    "updated": "2026-07-31T13:22:16.368427+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-07-31T01:20:54.419198+00:00"
+    "generated_at": "2026-07-31T13:22:41.350456+00:00"
   },
   "breaking": {
     "headlines": [
       "Eurozone inflation ticks up in July; USD/JPY intervention again?",
       "Fed holds rates, markets turn to PCE and BoE decision",
-      "French inflation accelerates in July, reaffirming broader regional trend"
+      "Dollar retreats as ECB and BoE hold policy steady"
     ],
-    "updated": "2026-07-31T11:49:57.978263+00:00"
+    "updated": "2026-07-31T13:22:16.368427+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
