@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T15:51:41.936500+00:00",
+  "updated": "2026-07-31T17:13:54.849161+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,33 +555,33 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.51,
-      "delta_pct": 2.5,
+      "value": 16.84,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7444.15,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 7475.75,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4098.3,
+      "value": 4099.9,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.07,
-      "delta_pct": 0.1,
+      "value": 100.04,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4935,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.4665,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -591,36 +591,36 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.682,
-      "delta_bp": 0.7,
+      "value": 3.688,
+      "delta_bp": 1.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.97,
-      "delta_pct": 1.7,
+      "value": 84.81,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62656.0,
-      "delta_pct": -3.2,
+      "value": 62821.0,
+      "delta_pct": -2.9,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 105.5,
-      "delta_bp": 6.7,
+      "value": 104.9,
+      "delta_bp": 6.1,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDUSD long invalidated. USD strength headlines (employee benefits, yields, ECB/BoE hold steadier than expected) conflict with NZD appreciation bias.",
-    "updated": "2026-07-31T15:51:41.936500+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-07-31T17:13:54.849161+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Copper strength confirms setup, supports NZD cyclical bid.",
+    "text": "NZDUSD LONG: Risk-on environment supports NZD strength thesis today.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 6.5
       }
     ],
-    "updated": "2026-07-31T15:51:41.936500+00:00"
+    "updated": "2026-07-31T17:13:54.849161+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-31T15:51:41.936500+00:00"
+    "updated": "2026-07-31T17:13:54.849161+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -703,9 +703,9 @@
     "headlines": [
       "US Q2 Employment Cost Index +0.9% vs +0.8% expected, supports USD strength",
       "Eurozone inflation ticks up July; USD/JPY intervention concerns emerge",
-      "Canada May GDP 0.3% beats 0.2% estimate, supports CAD"
+      "Michigan Consumer confidence 55.2 beats 54.0 estimate, USD higher"
     ],
-    "updated": "2026-07-31T15:51:41.936500+00:00"
+    "updated": "2026-07-31T17:13:54.849161+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
