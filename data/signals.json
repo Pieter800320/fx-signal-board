@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T11:32:33.176543+00:00",
+  "updated": "2026-07-31T11:49:57.978263+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,15 +548,15 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.88,
-      "delta_pct": -1.2,
+      "value": 17.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4118.7,
-      "delta_pct": 0.5,
+      "value": 4109.5,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.18,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 100.29,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.509,
-      "delta_pct": 1.0,
-      "direction": "up",
+      "value": 6.48,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.09,
-      "delta_pct": -1.8,
-      "direction": "down",
+      "value": 84.89,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63798.0,
-      "delta_pct": -1.4,
+      "value": 63759.0,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-07-31T08:24:52.031461+00:00"
+    "text": "NZDUSD long conflicts with USD strength theme. Multiple headlines emphasize Fed decision driving USD higher across major pairs, weighing on NZD.",
+    "updated": "2026-07-31T11:49:57.978263+00:00"
   },
   "ranked": {
-    "text": "S&P 500 and copper strength confirm NZD bid thesis today.",
+    "text": "NZDUSD LONG: Risk-on environment confirms setup via equity strength bid.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 6.38
+        "score": 5.85
       }
     ],
-    "updated": "2026-07-31T08:24:52.031461+00:00"
+    "updated": "2026-07-31T11:49:57.978263+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-31T08:24:52.031461+00:00"
+    "updated": "2026-07-31T11:49:57.978263+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "China July manufacturing PMI 49.2 vs 50.0 expected, weakens CNY",
-      "French inflation accelerates in July, reaffirming regional trend strength",
-      "Fed holds rates, markets turn to PCE and BoE decision"
+      "Eurozone inflation ticks up in July; USD/JPY intervention again?",
+      "Fed holds rates, markets turn to PCE and BoE decision",
+      "French inflation accelerates in July, reaffirming broader regional trend"
     ],
-    "updated": "2026-07-31T08:24:52.031461+00:00"
+    "updated": "2026-07-31T11:49:57.978263+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
