@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T01:20:27.394540+00:00",
+  "updated": "2026-07-31T05:19:50.139569+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 5,
-    "confidence": "High",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4154.8,
-      "delta_pct": 3.0,
+      "value": 4139.3,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.13,
-      "delta_pct": -0.7,
-      "direction": "down",
+      "value": 100.22,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4945,
-      "delta_pct": 3.5,
+      "value": 6.5195,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.62,
-      "delta_pct": -2.2,
+      "value": 81.85,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65008.0,
-      "delta_pct": 1.7,
+      "value": 64325.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD LONG could face headwinds from USD strength focus in FOMC decision ahead, potentially limiting NZD gains despite positive NZ consumer confidence bounce.",
-    "updated": "2026-07-31T01:20:27.394540+00:00"
+    "text": "NZ consumer confidence bounce supports NZDUSD long. Fed decision day creates USD strength risk that could undermine the setup.",
+    "updated": "2026-07-31T05:19:50.139569+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, risk-on bid strengthens NZD positioning today.",
+    "text": "NZDUSD LONG: Macro confirms setup, risk-on drives commodity currency bid.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.9
+        "score": 7.7
       }
     ],
-    "updated": "2026-07-31T01:20:27.394540+00:00"
+    "updated": "2026-07-31T05:19:50.139569+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-07-31T01:20:27.394540+00:00"
+    "updated": "2026-07-31T05:19:50.139569+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan industrial production beats +1.3% m/m, exceeds +0.7% forecast",
-      "USDJPY drops sharply on intervention speculation",
-      "Atlanta Fed GDPNow Q3 estimate rises to 5.0%"
+      "China July manufacturing PMI 49.2 vs 50.0 expected",
+      "Fed holds rates, signals data-dependence ahead",
+      "NZ consumer confidence bounces to 99.3 from 91.3"
     ],
-    "updated": "2026-07-31T01:20:27.394540+00:00"
+    "updated": "2026-07-31T05:19:50.139569+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
