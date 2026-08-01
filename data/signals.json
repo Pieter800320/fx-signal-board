@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T16:42:40.292836+00:00",
+  "updated": "2026-08-01T18:45:38.078644+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62897.0,
-      "delta_pct": 0.1,
+      "value": 62271.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-01T16:42:40.292836+00:00"
+    "text": "USD moves higher as employee benefits rise and yields increase. This strengthens USD and weakens NZD, conflicting with NZDUSD long setup.",
+    "updated": "2026-08-01T18:45:38.078644+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Rising yields and falling VIX confirm risk-on NZD bid.",
+    "text": "NZDUSD LONG: VIX falling and S&P 500 rising confirm setup strongly.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-01T16:42:40.292836+00:00"
+    "updated": "2026-08-01T18:45:38.078644+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-01T16:42:40.292836+00:00"
+    "updated": "2026-08-01T18:45:38.078644+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-01T05:12:39.643160+00:00"
+    "generated_at": "2026-08-01T18:46:03.268088+00:00"
   },
   "breaking": {
     "headlines": [
-      "US Employment Cost Index beats +0.9% vs +0.8%, supports USD strength",
-      "Michigan Consumer Confidence final 55.2 exceeds 54.0 estimate, supports risk",
-      "Eurozone inflation ticks up July; USD/JPY intervention risk signals weakness"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected",
+      "Michigan Consumer confidence final July 55.2 vs 54.0 estimate",
+      "Eurozone inflation ticks up July; USD/JPY intervention again"
     ],
-    "updated": "2026-08-01T16:42:40.292836+00:00"
+    "updated": "2026-08-01T18:45:38.078644+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
