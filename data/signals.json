@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T20:37:22.384140+00:00",
+  "updated": "2026-08-01T22:40:58.752051+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62553.0,
-      "delta_pct": -0.4,
+      "value": 62797.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USD moves higher as employee benefits rise and yields increase. This headwind contradicts NZDUSD long setup by strengthening USD broadly.",
-    "updated": "2026-08-01T20:37:22.384140+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-01T22:40:58.752051+00:00"
   },
   "ranked": {
-    "text": "VIX falling and S&P 500 rising confirm NZD strength setup.",
+    "text": "VIX falling and S&P 500 rising both confirm NZD strength today.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-01T20:37:22.384140+00:00"
+    "updated": "2026-08-01T22:40:58.752051+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-01T20:37:22.384140+00:00"
+    "updated": "2026-08-01T22:40:58.752051+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected",
-      "University of Michigan Consumer confidence final July 55.2 vs 54.0",
-      "Eurozone inflation ticks up July; USD/JPY intervention again possible"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD strengthens",
+      "Michigan Consumer confidence final 55.2 beats 54.0 estimate",
+      "Eurozone inflation ticks up July; USD/JPY intervention concerns emerge"
     ],
-    "updated": "2026-08-01T20:37:22.384140+00:00"
+    "updated": "2026-08-01T22:40:58.752051+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
