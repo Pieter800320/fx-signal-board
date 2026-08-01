@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T12:44:59.157062+00:00",
+  "updated": "2026-08-01T14:49:49.512215+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63029.0,
+      "value": 63033.0,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-01T12:44:59.157062+00:00"
+    "updated": "2026-08-01T14:49:49.512215+00:00"
   },
   "ranked": {
-    "text": "VIX falling and S&P 500 rising confirm NZD strength setup.",
+    "text": "NZDUSD LONG: VIX collapse and risk-on confirm NZD strength setup.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-01T12:44:59.157062+00:00"
+    "updated": "2026-08-01T14:49:49.512215+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-01T12:44:59.157062+00:00"
+    "updated": "2026-08-01T14:49:49.512215+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD higher",
-      "Michigan Consumer Confidence final 55.2 vs 54.0 estimate beats",
-      "Canada May GDP 0.3% versus 0.2% expected, CAD strengthens"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD rallies",
+      "Michigan Consumer confidence final 55.2 beats 54.0 estimate, supports USD",
+      "Eurozone inflation ticks up July; USD/JPY intervention concerns emerge"
     ],
-    "updated": "2026-08-01T12:44:59.157062+00:00"
+    "updated": "2026-08-01T14:49:49.512215+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
