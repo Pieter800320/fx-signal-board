@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02T14:52:24.243980+00:00",
+  "updated": "2026-08-02T16:41:31.643086+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63036.0,
-      "delta_pct": 0.4,
+      "value": 63150.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-02T14:52:24.243980+00:00"
+    "updated": "2026-08-02T16:41:31.643086+00:00"
   },
   "ranked": {
-    "text": "VIX falling and S&P 500 rising both confirm NZD strength setup.",
+    "text": "NZDUSD LONG: Risk-on backdrop confirms; VIX decline supports NZD strength.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-02T14:52:24.243980+00:00"
+    "updated": "2026-08-02T16:41:31.643086+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-02T14:52:24.243980+00:00"
+    "updated": "2026-08-02T16:41:31.643086+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD strengthens",
-      "Michigan Consumer confidence final 55.2 beats 54.0 estimate, supports USD",
-      "Eurozone inflation ticks up July; USD/JPY intervention concerns emerge"
+      "Fed holds rates, markets turn to PCE inflation data",
+      "ECB and BoE hold steady, EUR/USD and GBP/USD rally",
+      "Fed decision threatens volatility across USD pairs today"
     ],
-    "updated": "2026-08-02T14:52:24.243980+00:00"
+    "updated": "2026-08-02T16:41:31.643086+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
