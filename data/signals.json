@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02T01:19:24.821893+00:00",
+  "updated": "2026-08-02T05:11:26.762012+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -540,17 +540,17 @@
   },
   "regime_w1": {
     "regime": "Risk-On",
-    "confidence": "Medium",
+    "confidence": "High",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -3,
+    "total": 3,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,9 +567,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4049.1,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 4107.0,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.436,
-      "delta_pct": -0.1,
+      "value": 6.4655,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62936.0,
-      "delta_pct": 0.2,
+      "value": 63402.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USD moves higher as employee benefits rise and yields increase. This strengthens the dollar and directly conflicts with NZDUSD long setup.",
-    "updated": "2026-08-02T01:19:24.821893+00:00"
+    "text": "USD moves higher as employee benefits rise and yields increase. This strengthens the US dollar against NZD, conflicting with NZDUSD long setup.",
+    "updated": "2026-08-02T05:11:26.762012+00:00"
   },
   "ranked": {
-    "text": "VIX falling and S&P rising confirm NZD bid setup strongly.",
+    "text": "VIX falling and S&P 500 rising strongly confirm NZDUSD long setup today.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-02T01:19:24.821893+00:00"
+    "updated": "2026-08-02T05:11:26.762012+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-02T01:19:24.821893+00:00"
+    "updated": "2026-08-02T05:11:26.762012+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, USD strengthens",
-      "Michigan Consumer confidence final 55.2 beats 54.0 estimate",
-      "Eurozone inflation ticks up July; USD/JPY intervention risk remains"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected",
+      "Michigan Consumer confidence final July 55.2 vs 54.0 estimate",
+      "Eurozone inflation ticks up July; USD/JPY intervention again possible"
     ],
-    "updated": "2026-08-02T01:19:24.821893+00:00"
+    "updated": "2026-08-02T05:11:26.762012+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
