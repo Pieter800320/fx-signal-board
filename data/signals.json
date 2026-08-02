@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-02T20:39:23.349779+00:00",
+  "updated": "2026-08-02T21:56:02.142742+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63347.0,
-      "delta_pct": 0.9,
+      "value": 63532.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-02T20:39:23.349779+00:00"
+    "updated": "2026-08-02T21:56:02.142742+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: VIX falling and S&P 500 rising confirm setup robustly.",
+    "text": "VIX falling and S&P 500 rising confirm NZD strength setup.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.3
       }
     ],
-    "updated": "2026-08-02T20:39:23.349779+00:00"
+    "updated": "2026-08-02T21:56:02.142742+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-02T20:39:23.349779+00:00"
+    "updated": "2026-08-02T21:56:02.142742+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Q2 Employment Cost Index +0.9% vs +0.8% expected, supports USD",
-      "Michigan Consumer Confidence 55.2 beats 54.0 estimate, boosts risk sentiment",
-      "Eurozone inflation ticks up July; USD/JPY intervention again expected"
+      "US Q2 Employment Cost Index +0.9% vs +0.8% expected",
+      "University of Michigan Consumer confidence final 55.2 vs 54.0",
+      "Eurozone inflation ticks up July; USD/JPY intervention suspected again"
     ],
-    "updated": "2026-08-02T20:39:23.349779+00:00"
+    "updated": "2026-08-02T21:56:02.142742+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
@@ -715,5 +715,9 @@
     "h4_confidence": "High",
     "h1_confirmed": false,
     "updated": "2026-07-31T20:24:26.046309+00:00"
+  },
+  "week_ahead": {
+    "text": "I'll search for the latest FX market previews to provide you with current analysis. The search results are dated and contain older forecasts from June-July 2026. Let me provide a briefing synthesized from your high-impact event schedule and current market state:\n\nPersistent geopolitical tensions and Middle East uncertainty continue to underpin risk sentiment as markets navigate a critical week of US macro data and global central bank decisions. Wednesday's Fed decision holds the line while Thursday's PCE inflation and GDP print will determine whether disinflation momentum remains intact or dissipates. USD strength against risk currencies awaits confirmation from labor and price data early in the week, with a potential warning flag if durable goods orders contract further. EUR/USD faces pressure from ECB divergence and elevated oil volatility tied to regional conflict, making the dollar the most critical asset to monitor for directional conviction across major pairs this week.",
+    "generated_at": "2026-08-02T21:56:02.142742+00:00"
   }
 }
