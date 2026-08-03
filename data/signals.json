@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T15:48:00.720936+00:00",
+  "updated": "2026-08-03T16:12:15.604901+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,103 +542,103 @@
     "regime": "Risk-On",
     "confidence": "High",
     "score": 0.0,
-    "signals": -3,
-    "total": 3,
+    "signals": -4,
+    "total": 4,
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 4,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.04,
-      "delta_pct": 0.3,
+      "value": 15.67,
+      "delta_pct": -2.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7489.72,
-      "delta_pct": 0.7,
+      "value": 7582.98,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4107.1,
-      "delta_pct": 1.4,
+      "value": 4091.1,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.746,
-      "delta_pct": -0.1,
+      "value": 99.937,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4805,
-      "delta_pct": 0.7,
+      "value": 6.5215,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.676,
-      "delta_bp": -6.9,
+      "value": 4.69,
+      "delta_bp": -5.5,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.688,
-      "delta_bp": 0.6,
-      "direction": "flat",
+      "value": 3.703,
+      "delta_bp": 2.1,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.95,
-      "delta_pct": -6.8,
+      "value": 79.54,
+      "delta_pct": -6.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62666.0,
-      "delta_pct": -1.3,
+      "value": 63685.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.8,
-      "delta_bp": -7.5,
+      "value": 98.7,
+      "delta_bp": -7.6,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-03T12:46:21.176717+00:00"
+    "updated": "2026-08-03T16:12:15.604901+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y collapse and gold surge strongly confirm JPY bid thesis.\n\nGBPJPY SHORT: Falling rates and rising gold reinforce safe haven JPY demand signal.\n\nUSDJPY SHORT: Rate decline supports JPY strength but risk on equities challenge thesis.",
+    "text": "AUDJPY SHORT: US 10Y decline and gold strength confirm JPY bid thesis.\n\nGBPJPY SHORT: Falling US 10Y validates safe haven JPY appreciation narrative.\n\nNZDJPY SHORT: Risk off environment and gold rally support JPY strength thesis.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bear",
-        "score": 7.08
+        "score": 6.67
       },
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.85
+        "score": 6.58
       },
       {
-        "pair": "USDJPY",
+        "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.52
+        "score": 6.1
       }
     ],
-    "updated": "2026-08-03T12:46:21.176717+00:00"
+    "updated": "2026-08-03T16:12:15.604901+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-03T12:46:21.176717+00:00"
+    "updated": "2026-08-03T16:12:15.604901+00:00"
   },
   "week_ahead": {
     "text": "I'll search for the latest FX weekly previews to provide you with current market analysis. The dominant theme is US Dollar strength driven by war-related concerns and resilient US economic data despite Middle East disruptions. The Fed rate decision on Wednesday holds rates at 3.75%, making Thursday's PCE inflation and GDP readings the critical catalysts for dollar directivity and medium-term rate expectations. EUR/USD remains under pressure as traders evaluate signals from the Federal Reserve and evolving geopolitical developments. The primary risk is Israeli military escalation, which could trigger sharp safe-haven flows that override technical support levels.",
@@ -715,11 +715,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed holds rates, markets turn to PCE inflation data",
-      "Euro area industrial activity ramps up in July, PMI data",
-      "US dollar fights back across majors ahead of FOMC"
+      "Atlanta Fed GDPNow growth estimate rises to 6.2% from 5% previously",
+      "US ISM Manufacturing PMI for July 55.6 versus 54.0 estimate",
+      "US Construction Spending for June -0.1% vs 0.2% estimate"
     ],
-    "updated": "2026-08-03T12:46:21.176717+00:00"
+    "updated": "2026-08-03T16:12:15.604901+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
