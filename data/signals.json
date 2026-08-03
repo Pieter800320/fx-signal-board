@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T20:49:11.178924+00:00",
+  "updated": "2026-08-03T22:45:41.684725+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "High",
     "score": 0.0,
-    "signals": -4,
-    "total": 4,
+    "signals": -3,
+    "total": 3,
     "stable": true
   },
   "macro": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4113.8,
-      "delta_pct": 1.6,
+      "value": 4108.7,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.963,
+      "value": 99.991,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5495,
-      "delta_pct": 1.8,
+      "value": 6.5405,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.99,
+      "value": 80.05,
       "delta_pct": -5.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63779.0,
-      "delta_pct": 0.5,
+      "value": 63451.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-03T20:49:11.178924+00:00"
+    "text": "Risk-On sentiment from Wall Street and Atlanta Fed GDPNow rise to 6.2% supports USD strength, conflicting with JPY shorts positioning.",
+    "updated": "2026-08-03T22:45:41.684725+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y decline and gold strength confirm JPY bid thesis.\n\nUSDJPY SHORT: Falling US 10Y rates strongly confirm safe haven yen demand.\n\nNZDJPY SHORT: Gold rally and Treasury weakness confirm yen appreciation directional bias.",
+    "text": "AUDJPY SHORT: US 10Y decline and gold strength confirm JPY bid thesis strongly.\n\nUSDJPY SHORT: Falling US yields support yen strength but equity gains challenge setup.\n\nNZDJPY SHORT: US 10Y weakness confirms yen bid despite risk-on equity momentum.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-03T20:49:11.178924+00:00"
+    "updated": "2026-08-03T22:45:41.684725+00:00"
   },
   "calendar": {
     "events": [
@@ -703,23 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-03T20:49:11.178924+00:00"
-  },
-  "week_ahead": {
-    "text": "I'll search for the latest FX weekly previews to provide you with current market analysis. The dominant theme is US Dollar strength driven by war-related concerns and resilient US economic data despite Middle East disruptions. The Fed rate decision on Wednesday holds rates at 3.75%, making Thursday's PCE inflation and GDP readings the critical catalysts for dollar directivity and medium-term rate expectations. EUR/USD remains under pressure as traders evaluate signals from the Federal Reserve and evolving geopolitical developments. The primary risk is Israeli military escalation, which could trigger sharp safe-haven flows that override technical support levels.",
-    "generated_at": "2026-08-02T22:41:47.821695+00:00"
+    "updated": "2026-08-03T22:45:41.684725+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-03T08:53:56.540846+00:00"
+    "generated_at": "2026-08-03T22:46:06.832779+00:00"
   },
   "breaking": {
     "headlines": [
       "Atlanta Fed GDPNow growth estimate rises to 6.2% from 5% previously",
-      "US ISM Manufacturing PMI for July 55.6 versus 54.0 estimate",
-      "US Construction Spending for June -0.1% vs 0.2% estimate"
+      "US Construction Spending for June misses at -0.1% versus 0.2%",
+      "US Dollar Price Forecast: NFP Week Puts DXY, EUR/USD in Focus"
     ],
-    "updated": "2026-08-03T20:49:11.178924+00:00"
+    "updated": "2026-08-03T22:45:41.684725+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
