@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T08:35:37.412439+00:00",
+  "updated": "2026-08-03T08:53:31.995743+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.99,
-      "delta_pct": -6.4,
-      "direction": "down",
+      "value": 16.12,
+      "delta_pct": 0.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4112.5,
+      "value": 4115.1,
       "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.713,
-      "delta_pct": -0.1,
+      "value": 99.807,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.552,
-      "delta_pct": 1.8,
+      "value": 6.543,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.43,
-      "delta_pct": -6.2,
+      "value": 80.16,
+      "delta_pct": -5.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62735.0,
-      "delta_pct": -0.0,
+      "value": 62399.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "FOMC meeting decision threatens volatility across USD pairs. Fed policy shift could weaken NZD relative strength and invalidate long setup timing.",
-    "updated": "2026-08-03T05:24:20.656719+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-03T08:53:31.995743+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-on environment confirms setup, copper strength drives NZD bid.",
+    "text": "GBPJPY SHORT: Gold bid confirms JPY strength, macro validates setup.\n\nCADJPY SHORT: Oil weakness and gold bid doubly confirm CAD offered.\n\nAUDJPY SHORT: Gold strength confirms JPY bid despite risk on tone.",
     "top": [
       {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 7.5
+        "pair": "GBPJPY",
+        "direction": "bear",
+        "score": 7.03
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 6.82
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bear",
+        "score": 6.6
       }
     ],
-    "updated": "2026-08-03T05:24:20.656719+00:00"
+    "updated": "2026-08-03T08:53:31.995743+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-03T05:24:20.656719+00:00"
+    "updated": "2026-08-03T08:53:31.995743+00:00"
   },
   "week_ahead": {
     "text": "I'll search for the latest FX weekly previews to provide you with current market analysis. The dominant theme is US Dollar strength driven by war-related concerns and resilient US economic data despite Middle East disruptions. The Fed rate decision on Wednesday holds rates at 3.75%, making Thursday's PCE inflation and GDP readings the critical catalysts for dollar directivity and medium-term rate expectations. EUR/USD remains under pressure as traders evaluate signals from the Federal Reserve and evolving geopolitical developments. The primary risk is Israeli military escalation, which could trigger sharp safe-haven flows that override technical support levels.",
@@ -701,15 +711,15 @@
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-02T20:39:47.172248+00:00"
+    "generated_at": "2026-08-03T08:53:56.540846+00:00"
   },
   "breaking": {
     "headlines": [
-      "Fed holds rates, markets turn to PCE inflation data next",
-      "China private manufacturing PMI misses at 50.9 versus 51.5 expected",
-      "Oil slumps on Trump Iran claims, risk sentiment pressures commodities"
+      "Fed holds rates, markets await PCE data and BoE decision",
+      "Euro area industrial activity strengthens in July despite weak demand",
+      "UK manufacturing PMI declines to 51.9 from 52.8 preliminary"
     ],
-    "updated": "2026-08-03T05:24:20.656719+00:00"
+    "updated": "2026-08-03T08:53:31.995743+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
