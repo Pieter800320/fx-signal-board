@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T20:35:29.053539+00:00",
+  "updated": "2026-08-03T20:49:11.178924+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.79,
-      "delta_pct": -1.3,
+      "value": 15.86,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7608.14,
-      "delta_pct": 1.6,
+      "value": 7600.5,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4102.7,
-      "delta_pct": 1.3,
+      "value": 4113.8,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.9,
-      "delta_pct": 0.1,
+      "value": 99.963,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.549,
+      "value": 6.5495,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.684,
-      "delta_bp": -6.1,
+      "value": 4.686,
+      "delta_bp": -5.9,
       "direction": "down",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.33,
-      "delta_pct": -5.1,
+      "value": 79.99,
+      "delta_pct": -5.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63875.0,
-      "delta_pct": 0.6,
+      "value": 63779.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.4,
-      "delta_bp": -7.9,
+      "value": 98.6,
+      "delta_bp": -7.7,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Dollar Fights Back headline conflicts with all three short JPY pairs. Strong USD data accelerates yen weakness, invalidating shorts.",
-    "updated": "2026-08-03T19:11:51.907235+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-03T20:49:11.178924+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y fall and gold rise strongly confirm JPY bid.\n\nGBPJPY SHORT: Falling yields support JPY strength but weaker momentum signals caution.\n\nUSDJPY SHORT: Dual JPY tailwinds from rates and gold confirm directional bias.",
+    "text": "AUDJPY SHORT: US 10Y decline and gold strength confirm JPY bid thesis.\n\nUSDJPY SHORT: Falling US 10Y rates strongly confirm safe haven yen demand.\n\nNZDJPY SHORT: Gold rally and Treasury weakness confirm yen appreciation directional bias.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bear",
-        "score": 7.3
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 6.45
+        "score": 7.08
       },
       {
         "pair": "USDJPY",
         "direction": "bear",
         "score": 6.35
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 6.33
       }
     ],
-    "updated": "2026-08-03T19:11:51.907235+00:00"
+    "updated": "2026-08-03T20:49:11.178924+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-03T19:11:51.907235+00:00"
+    "updated": "2026-08-03T20:49:11.178924+00:00"
   },
   "week_ahead": {
     "text": "I'll search for the latest FX weekly previews to provide you with current market analysis. The dominant theme is US Dollar strength driven by war-related concerns and resilient US economic data despite Middle East disruptions. The Fed rate decision on Wednesday holds rates at 3.75%, making Thursday's PCE inflation and GDP readings the critical catalysts for dollar directivity and medium-term rate expectations. EUR/USD remains under pressure as traders evaluate signals from the Federal Reserve and evolving geopolitical developments. The primary risk is Israeli military escalation, which could trigger sharp safe-haven flows that override technical support levels.",
@@ -719,7 +719,7 @@
       "US ISM Manufacturing PMI for July 55.6 versus 54.0 estimate",
       "US Construction Spending for June -0.1% vs 0.2% estimate"
     ],
-    "updated": "2026-08-03T19:11:51.907235+00:00"
+    "updated": "2026-08-03T20:49:11.178924+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
