@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T20:37:23.886925+00:00",
+  "updated": "2026-08-04T20:58:20.622206+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.34,
-      "delta_pct": 3.0,
+      "value": 16.5,
+      "delta_pct": 4.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7753.11,
-      "delta_pct": 2.0,
+      "value": 7736.52,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4137.8,
-      "delta_pct": 2.6,
+      "value": 4133.6,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.865,
+      "value": 99.868,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6305,
-      "delta_pct": 1.8,
+      "value": 6.6275,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.84,
-      "delta_pct": -5.6,
+      "value": 75.36,
+      "delta_pct": -6.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64298.0,
+      "value": 64286.0,
       "delta_pct": 1.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,12 +617,18 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-04T19:13:56.872498+00:00"
+    "updated": "2026-08-04T20:58:20.622206+00:00"
   },
   "ranked": {
-    "text": "No qualifying setups.",
-    "top": [],
-    "updated": "2026-08-04T19:13:56.872498+00:00"
+    "text": "NZDUSD LONG: S&P 500 strength confirms risk-on NZD bid thesis directly.",
+    "top": [
+      {
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 7.22
+      }
+    ],
+    "updated": "2026-08-04T20:58:20.622206+00:00"
   },
   "calendar": {
     "events": [
@@ -687,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T19:13:56.872498+00:00"
+    "updated": "2026-08-04T20:58:20.622206+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -695,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US June factory orders -0.3% vs +0.2% expected, signals weakness",
-      "JOLTs job openings 7.359M vs 7.400M, below expectations",
-      "Canadian manufacturing PMI hits four-year high, CAD strength signal"
+      "JOLTs job openings miss estimate, lower than previous month",
+      "Fed holds rates, markets focus on PCE inflation data",
+      "Canadian manufacturing PMI hits four-year high, USD/CAD pressure"
     ],
-    "updated": "2026-08-04T19:13:56.872498+00:00"
+    "updated": "2026-08-04T20:58:20.622206+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
