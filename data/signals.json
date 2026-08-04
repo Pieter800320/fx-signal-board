@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T11:29:56.295026+00:00",
+  "updated": "2026-08-04T11:52:24.644526+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "High",
     "score": 0.0,
-    "signals": -3,
-    "total": 3,
+    "signals": -4,
+    "total": 4,
     "stable": true
   },
   "macro": {
@@ -551,12 +551,12 @@
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.7,
-      "delta_pct": -1.8,
+      "value": 15.64,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4121.2,
-      "delta_pct": 1.8,
+      "value": 4117.0,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.997,
-      "delta_pct": 0.2,
+      "value": 99.921,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6245,
-      "delta_pct": 2.9,
+      "value": 6.6595,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.67,
-      "delta_pct": -4.7,
-      "direction": "down",
+      "value": 79.55,
+      "delta_pct": -1.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63574.0,
-      "delta_pct": 0.1,
+      "value": 63859.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-04T08:11:26.029864+00:00"
+    "text": "NZDUSD LONG faces headwinds from US Dollar strength narrative across multiple headlines. NFP week and Fed focus suggest USD upside pressure challenging NZD long positions.",
+    "updated": "2026-08-04T11:52:24.644526+00:00"
   },
   "ranked": {
-    "text": "CADJPY SHORT: Macro confirms setup, oil weakness directly pressures Canadian dollar.\n\nUSDJPY SHORT: Macro challenges setup, risk-on regime typically supports dollar strength.\n\nGBPJPY SHORT: Macro confirms setup, gold bid reinforces yen safe-haven appeal.",
+    "text": "US 10Y strength challenges NZD bid despite risk-on copper.",
     "top": [
       {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 5.35
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bear",
-        "score": 4.15
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 4.12
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 6.12
       }
     ],
-    "updated": "2026-08-04T08:11:26.029864+00:00"
+    "updated": "2026-08-04T11:52:24.644526+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T08:11:26.029864+00:00"
+    "updated": "2026-08-04T11:52:24.644526+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-03T22:46:06.832779+00:00"
+    "generated_at": "2026-08-04T11:52:50.026041+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australia household spending beats expectations, up 0.8% in June",
-      "South Korea core inflation hits 2-1/2 year high despite cooling",
-      "US Dollar Price Forecast: NFP Week Puts DXY in Focus"
+      "Australia household spending beats, up 0.8% in June, supports AUD",
+      "US non-farm payrolls data this week drives USD volatility",
+      "South Korea core inflation hits 2-1/2 year high despite cooling"
     ],
-    "updated": "2026-08-04T08:11:26.029864+00:00"
+    "updated": "2026-08-04T11:52:24.644526+00:00"
   },
   "last_alert": "2026-08-04T11:29:56.295026+00:00",
   "gold_signal": {
