@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-03T22:45:41.684725+00:00",
+  "updated": "2026-08-04T01:11:38.575112+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4108.7,
-      "delta_pct": 1.5,
+      "value": 4105.7,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.991,
+      "value": 100.04,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5405,
-      "delta_pct": 1.6,
+      "value": 6.547,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.05,
-      "delta_pct": -5.5,
+      "value": 80.96,
+      "delta_pct": -4.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63451.0,
-      "delta_pct": -0.0,
+      "value": 63389.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Risk-On sentiment from Wall Street and Atlanta Fed GDPNow rise to 6.2% supports USD strength, conflicting with JPY shorts positioning.",
-    "updated": "2026-08-03T22:45:41.684725+00:00"
+    "text": "Atlanta Fed GDPNow rising to 6.2% supports USD strength, which directly conflicts with all three JPY shorts requiring JPY weakness.",
+    "updated": "2026-08-04T01:11:38.575112+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y decline and gold strength confirm JPY bid thesis strongly.\n\nUSDJPY SHORT: Falling US yields support yen strength but equity gains challenge setup.\n\nNZDJPY SHORT: US 10Y weakness confirms yen bid despite risk-on equity momentum.",
+    "text": "AUDJPY SHORT: US 10Y falling and gold rising both confirm JPY strength bid.\n\nUSDJPY SHORT: Falling US 10Y yields confirm the JPY appreciation directional thesis.\n\nNZDJPY SHORT: Gold rising confirms JPY bid despite mixed macro neutral regime today.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-03T22:45:41.684725+00:00"
+    "updated": "2026-08-04T01:11:38.575112+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-03T22:45:41.684725+00:00"
+    "updated": "2026-08-04T01:11:38.575112+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Atlanta Fed GDPNow growth estimate rises to 6.2% from 5% previously",
-      "US Construction Spending for June misses at -0.1% versus 0.2%",
+      "South Korea core CPI shows biggest annual rise since December 2023",
       "US Dollar Price Forecast: NFP Week Puts DXY, EUR/USD in Focus"
     ],
-    "updated": "2026-08-03T22:45:41.684725+00:00"
+    "updated": "2026-08-04T01:11:38.575112+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
