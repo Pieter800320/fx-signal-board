@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T11:52:24.644526+00:00",
+  "updated": "2026-08-04T13:28:59.338452+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -540,10 +540,10 @@
   },
   "regime_w1": {
     "regime": "Risk-On",
-    "confidence": "High",
+    "confidence": "Medium",
     "score": 0.0,
-    "signals": -4,
-    "total": 4,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -555,72 +555,72 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.64,
-      "delta_pct": -2.2,
+      "value": 15.57,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7489.72,
-      "delta_pct": 0.7,
+      "value": 7600.5,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4117.0,
-      "delta_pct": 2.1,
+      "value": 4120.6,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.921,
-      "delta_pct": 0.1,
+      "value": 99.987,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6595,
-      "delta_pct": 2.2,
+      "value": 6.631,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.745,
-      "delta_bp": 8.2,
-      "direction": "up",
+      "value": 4.661,
+      "delta_bp": -2.5,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.682,
-      "delta_bp": 0.7,
-      "direction": "flat",
+      "value": 3.735,
+      "delta_bp": 3.5,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.55,
-      "delta_pct": -1.0,
-      "direction": "flat",
+      "value": 77.55,
+      "delta_pct": -3.5,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63859.0,
+      "value": 63850.0,
       "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 106.3,
-      "delta_bp": 7.5,
-      "direction": "up",
+      "value": 92.6,
+      "delta_bp": -6.0,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDUSD LONG faces headwinds from US Dollar strength narrative across multiple headlines. NFP week and Fed focus suggest USD upside pressure challenging NZD long positions.",
-    "updated": "2026-08-04T11:52:24.644526+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-04T13:28:59.338452+00:00"
   },
   "ranked": {
-    "text": "US 10Y strength challenges NZD bid despite risk-on copper.",
+    "text": "Macro context confirms setup: S&P 500 and copper strength support NZD bid.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 6.12
       }
     ],
-    "updated": "2026-08-04T11:52:24.644526+00:00"
+    "updated": "2026-08-04T13:28:59.338452+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T11:52:24.644526+00:00"
+    "updated": "2026-08-04T13:28:59.338452+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australia household spending beats, up 0.8% in June, supports AUD",
-      "US non-farm payrolls data this week drives USD volatility",
-      "South Korea core inflation hits 2-1/2 year high despite cooling"
+      "US Treasury Secretary hints imminent BoJ rate hike to CNBC",
+      "Canada June trade balance beats expectations at plus 3.86B",
+      "US International Trade deficit widens to minus 73.3B in June"
     ],
-    "updated": "2026-08-04T11:52:24.644526+00:00"
+    "updated": "2026-08-04T13:28:59.338452+00:00"
   },
   "last_alert": "2026-08-04T11:29:56.295026+00:00",
   "gold_signal": {
