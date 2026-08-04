@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T07:43:58.826820+00:00",
+  "updated": "2026-08-04T08:11:26.029864+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
+    "label": "Risk-On",
+    "signals": -1,
     "total": 3,
     "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.86,
-      "delta_pct": -0.8,
+      "value": 15.7,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4118.7,
-      "delta_pct": 1.7,
+      "value": 4121.2,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.998,
+      "value": 99.997,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6115,
-      "delta_pct": 2.7,
+      "value": 6.6245,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.686,
-      "delta_bp": -5.9,
-      "direction": "down",
+      "value": 4.745,
+      "delta_bp": 8.2,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.7,
-      "delta_bp": 1.8,
+      "value": 3.682,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.17,
-      "delta_pct": -4.1,
+      "value": 80.67,
+      "delta_pct": -4.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64110.0,
-      "delta_pct": 1.0,
+      "value": 63574.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.6,
-      "delta_bp": -7.7,
-      "direction": "down",
+      "value": 106.3,
+      "delta_bp": 7.5,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Australia household spending beats strongly at 0.8% vs 0.2% expected. This supports AUD strength, conflicting with AUDJPY SHORT setup.",
-    "updated": "2026-08-04T04:49:51.676191+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-04T08:11:26.029864+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y falling and gold rising both confirm JPY bid strength.\n\nUSDJPY SHORT: Falling US 10Y rates confirm safe haven JPY bid directionally.\n\nNZDJPY SHORT: US 10Y decline confirms JPY bid despite mixed macro neutrality.",
+    "text": "CADJPY SHORT: Macro confirms setup, oil weakness directly pressures Canadian dollar.\n\nUSDJPY SHORT: Macro challenges setup, risk-on regime typically supports dollar strength.\n\nGBPJPY SHORT: Macro confirms setup, gold bid reinforces yen safe-haven appeal.",
     "top": [
       {
-        "pair": "AUDJPY",
+        "pair": "CADJPY",
         "direction": "bear",
-        "score": 7.08
+        "score": 5.35
       },
       {
         "pair": "USDJPY",
         "direction": "bear",
-        "score": 6.35
+        "score": 4.15
       },
       {
-        "pair": "NZDJPY",
+        "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.33
+        "score": 4.12
       }
     ],
-    "updated": "2026-08-04T04:49:51.676191+00:00"
+    "updated": "2026-08-04T08:11:26.029864+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T04:49:51.676191+00:00"
+    "updated": "2026-08-04T08:11:26.029864+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australia household spending beats expectations at 0.8% in June",
+      "Australia household spending beats expectations, up 0.8% in June",
       "South Korea core inflation hits 2-1/2 year high despite cooling",
-      "US Dollar Price Forecast: Fed Holds Rates, PCE and BoE"
+      "US Dollar Price Forecast: NFP Week Puts DXY in Focus"
     ],
-    "updated": "2026-08-04T04:49:51.676191+00:00"
+    "updated": "2026-08-04T08:11:26.029864+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
