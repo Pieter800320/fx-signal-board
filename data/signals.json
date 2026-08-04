@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T01:11:38.575112+00:00",
+  "updated": "2026-08-04T04:49:51.676191+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -561,26 +561,26 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7600.5,
-      "delta_pct": 1.5,
+      "value": 7489.72,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4105.7,
-      "delta_pct": 1.4,
+      "value": 4118.7,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.04,
+      "value": 99.998,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.547,
-      "delta_pct": 1.7,
+      "value": 6.6115,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.96,
-      "delta_pct": -4.4,
+      "value": 81.17,
+      "delta_pct": -4.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63389.0,
-      "delta_pct": -0.1,
+      "value": 64110.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Atlanta Fed GDPNow rising to 6.2% supports USD strength, which directly conflicts with all three JPY shorts requiring JPY weakness.",
-    "updated": "2026-08-04T01:11:38.575112+00:00"
+    "text": "Australia household spending beats strongly at 0.8% vs 0.2% expected. This supports AUD strength, conflicting with AUDJPY SHORT setup.",
+    "updated": "2026-08-04T04:49:51.676191+00:00"
   },
   "ranked": {
-    "text": "AUDJPY SHORT: US 10Y falling and gold rising both confirm JPY strength bid.\n\nUSDJPY SHORT: Falling US 10Y yields confirm the JPY appreciation directional thesis.\n\nNZDJPY SHORT: Gold rising confirms JPY bid despite mixed macro neutral regime today.",
+    "text": "AUDJPY SHORT: US 10Y falling and gold rising both confirm JPY bid strength.\n\nUSDJPY SHORT: Falling US 10Y rates confirm safe haven JPY bid directionally.\n\nNZDJPY SHORT: US 10Y decline confirms JPY bid despite mixed macro neutrality.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-04T01:11:38.575112+00:00"
+    "updated": "2026-08-04T04:49:51.676191+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T01:11:38.575112+00:00"
+    "updated": "2026-08-04T04:49:51.676191+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Atlanta Fed GDPNow growth estimate rises to 6.2% from 5% previously",
-      "South Korea core CPI shows biggest annual rise since December 2023",
-      "US Dollar Price Forecast: NFP Week Puts DXY, EUR/USD in Focus"
+      "Australia household spending beats expectations at 0.8% in June",
+      "South Korea core inflation hits 2-1/2 year high despite cooling",
+      "US Dollar Price Forecast: Fed Holds Rates, PCE and BoE"
     ],
-    "updated": "2026-08-04T01:11:38.575112+00:00"
+    "updated": "2026-08-04T04:49:51.676191+00:00"
   },
   "last_alert": "2026-07-30T20:19:11.907093+00:00",
   "gold_signal": {
