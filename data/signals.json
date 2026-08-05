@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04T22:49:43.901737+00:00",
+  "updated": "2026-08-05T01:12:36.422296+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4140.6,
-      "delta_pct": 2.7,
+      "value": 4135.3,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.882,
+      "value": 99.872,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.639,
-      "delta_pct": 1.9,
+      "value": 6.627,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.24,
-      "delta_pct": -6.3,
+      "value": 75.81,
+      "delta_pct": -5.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64147.0,
-      "delta_pct": 1.1,
+      "value": 63953.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "New Zealand jobs report today could accelerate NZDUSD long if data beats expectations. Monitor for volatility.",
-    "updated": "2026-08-04T22:49:43.901737+00:00"
+    "text": "NZDUSD long invalidated. NZ unemployment jumped to 5.6% vs 5.4% expected, weakening NZD fundamentals near term.",
+    "updated": "2026-08-05T01:12:36.422296+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 rising confirms risk-on NZD bid strength.",
+    "text": "NZDUSD LONG: S&P 500 and copper gains confirm risk-on NZD strength.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.22
       }
     ],
-    "updated": "2026-08-04T22:49:43.901737+00:00"
+    "updated": "2026-08-05T01:12:36.422296+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-04T22:49:43.901737+00:00"
+    "updated": "2026-08-05T01:12:36.422296+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-04T11:52:50.026041+00:00"
+    "generated_at": "2026-08-05T01:13:00.273382+00:00"
   },
   "breaking": {
     "headlines": [
-      "Fed holds rates, markets turn to PCE inflation data",
-      "Canadian manufacturing PMI hits four-year high, USD/CAD pressured",
-      "Lebanon-Israel talks progress, Strait of Hormuz shipping negotiations ongoing"
+      "New Zealand unemployment jumps to 5.6%, exceeding expectations significantly",
+      "Australia services PMI hits six-month high of 53.6",
+      "Japan real wages rise sixth month, supporting BoJ rate hike case"
     ],
-    "updated": "2026-08-04T22:49:43.901737+00:00"
+    "updated": "2026-08-05T01:12:36.422296+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
