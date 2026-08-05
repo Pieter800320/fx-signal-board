@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T07:44:44.867349+00:00",
+  "updated": "2026-08-05T08:09:49.387901+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -541,22 +541,22 @@
   "regime_w1": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 0.0,
+    "score": 2.5,
     "signals": -2,
-    "total": 2,
+    "total": 4,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.5,
-      "delta_pct": 4.0,
+      "value": 15.94,
+      "delta_pct": -3.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4192.0,
-      "delta_pct": 3.9,
+      "value": 4229.8,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.807,
+      "value": 99.822,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.648,
-      "delta_pct": 2.1,
-      "direction": "up",
+      "value": 6.6575,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.16,
-      "delta_pct": -6.4,
-      "direction": "down",
+      "value": 76.03,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64119.0,
+      "value": 64110.0,
       "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "NZ commodity prices post biggest monthly fall since 2022 on dairy slide directly conflicts with NZDUSD LONG setup by weakening NZD fundamentals.",
-    "updated": "2026-08-05T04:49:52.450833+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-05T08:09:49.387901+00:00"
   },
   "ranked": {
-    "text": "S&P 500 and copper strength confirm NZD bid thesis.",
+    "text": "US 10Y falling and gold rising both confirm JPY strength headwind.",
     "top": [
       {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 7.22
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 6.0
       }
     ],
-    "updated": "2026-08-05T04:49:52.450833+00:00"
+    "updated": "2026-08-05T08:09:49.387901+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T04:49:52.450833+00:00"
+    "updated": "2026-08-05T08:09:49.387901+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "China PMI disappoints at 50.4 versus 53.7 expected, weakens CNY",
-      "Fed holds rates, markets await PCE data and BoE decision",
-      "NZ commodity prices post biggest monthly fall since 2022"
+      "Germany July final services PMI 49.8 vs 49.6 prelim, EUR impact",
+      "Italy July services PMI 52.5 beats expectations, supports EUR strength",
+      "US Dollar fights back across majors, EUR/USD and GBP/USD tested"
     ],
-    "updated": "2026-08-05T04:49:52.450833+00:00"
+    "updated": "2026-08-05T08:09:49.387901+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
