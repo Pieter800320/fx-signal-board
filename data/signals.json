@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T15:20:43.290875+00:00",
+  "updated": "2026-08-05T15:52:07.667536+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,88 +547,93 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.92,
-      "delta_pct": 2.5,
+      "value": 16.33,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7736.52,
-      "delta_pct": 1.8,
-      "direction": "up",
+      "value": 7735.61,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4248.7,
-      "delta_pct": 3.7,
+      "value": 4316.2,
+      "delta_pct": 5.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.732,
+      "value": 99.692,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6935,
-      "delta_pct": 1.1,
+      "value": 6.7095,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.625,
-      "delta_bp": -0.2,
+      "value": 4.623,
+      "delta_bp": -0.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.73,
-      "delta_bp": 0.0,
+      "value": 3.735,
+      "delta_bp": 0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 76.0,
-      "delta_pct": 0.3,
+      "value": 75.16,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64073.0,
-      "delta_pct": 0.0,
+      "value": 64426.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.5,
-      "delta_bp": -0.2,
+      "value": 88.8,
+      "delta_bp": -0.9,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-05T13:27:28.482518+00:00"
+    "text": "USDJPY SHORT potentially challenged by dollar strength headlines suggesting USD fighting back across majors. NFP week ahead adds volatility risk to both setups.",
+    "updated": "2026-08-05T15:52:07.667536+00:00"
   },
   "ranked": {
-    "text": "Gold rising confirms JPY bid strength, challenging short conviction.",
+    "text": "USDJPY SHORT: Gold surge confirms JPY bid, macro supports short.\n\nNZDUSD LONG: Copper strength supports NZD, risk-on validates long.",
     "top": [
       {
-        "pair": "NZDJPY",
+        "pair": "USDJPY",
         "direction": "bear",
-        "score": 4.63
+        "score": 6.68
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 3.5
       }
     ],
-    "updated": "2026-08-05T13:27:28.482518+00:00"
+    "updated": "2026-08-05T15:52:07.667536+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T13:27:28.482518+00:00"
+    "updated": "2026-08-05T15:52:07.667536+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July ADP employment +44K misses +70K forecast significantly",
-      "Euro services PMI confirms July rebound across region",
-      "Dollar retreats as ECB, BoE hold rates steady"
+      "US July ISM services 54.1 misses 54.5 forecast, signals softening",
+      "US ADP employment +44K disappoints, trails +70K expectation",
+      "Euro services PMI rebounds, EUR strengthens against weakening dollar"
     ],
-    "updated": "2026-08-05T13:27:28.482518+00:00"
+    "updated": "2026-08-05T15:52:07.667536+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
