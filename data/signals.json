@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T01:12:36.422296+00:00",
+  "updated": "2026-08-05T04:49:52.450833+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4135.3,
-      "delta_pct": 2.5,
+      "value": 4192.0,
+      "delta_pct": 3.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.872,
+      "value": 99.807,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.627,
-      "delta_pct": 1.7,
+      "value": 6.648,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.81,
-      "delta_pct": -5.6,
+      "value": 75.16,
+      "delta_pct": -6.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63953.0,
-      "delta_pct": 0.8,
+      "value": 64119.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD long invalidated. NZ unemployment jumped to 5.6% vs 5.4% expected, weakening NZD fundamentals near term.",
-    "updated": "2026-08-05T01:12:36.422296+00:00"
+    "text": "NZ commodity prices post biggest monthly fall since 2022 on dairy slide directly conflicts with NZDUSD LONG setup by weakening NZD fundamentals.",
+    "updated": "2026-08-05T04:49:52.450833+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 and copper gains confirm risk-on NZD strength.",
+    "text": "S&P 500 and copper strength confirm NZD bid thesis.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -628,7 +628,7 @@
         "score": 7.22
       }
     ],
-    "updated": "2026-08-05T01:12:36.422296+00:00"
+    "updated": "2026-08-05T04:49:52.450833+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T01:12:36.422296+00:00"
+    "updated": "2026-08-05T04:49:52.450833+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "New Zealand unemployment jumps to 5.6%, exceeding expectations significantly",
-      "Australia services PMI hits six-month high of 53.6",
-      "Japan real wages rise sixth month, supporting BoJ rate hike case"
+      "China PMI disappoints at 50.4 versus 53.7 expected, weakens CNY",
+      "Fed holds rates, markets await PCE data and BoE decision",
+      "NZ commodity prices post biggest monthly fall since 2022"
     ],
-    "updated": "2026-08-05T01:12:36.422296+00:00"
+    "updated": "2026-08-05T04:49:52.450833+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
