@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T20:51:11.786260+00:00",
+  "updated": "2026-08-05T22:45:03.212122+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,7 +567,7 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4308.2,
+      "value": 4309.0,
       "delta_pct": 5.2,
       "direction": "up",
       "label": "Gold"
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.741,
-      "delta_pct": 1.9,
+      "value": 6.7535,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.98,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 75.1,
+      "delta_pct": -0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64841.0,
-      "delta_pct": 1.2,
+      "value": 64634.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US ADP employment miss of 26K could weaken USD strength, potentially undermining USDJPY short setup momentum.",
-    "updated": "2026-08-05T20:51:11.786260+00:00"
+    "text": "US ADP employment miss and services PMI beat create mixed signals. Gold strength suggests risk-off bias, pressuring NZDUSD long. Dollar subdued headline conflicts with USDJPY short conviction.",
+    "updated": "2026-08-05T22:45:03.212122+00:00"
   },
   "ranked": {
-    "text": "USDJPY SHORT: Gold surge confirms JPY bid thesis, supports short.\n\nNZDUSD LONG: Risk-on low challenges copper bid strength today.",
+    "text": "USDJPY SHORT: Gold surge contradicts JPY bid thesis through risk-on shift.\n\nNZDUSD LONG: Copper strength confirms NZD commodity currency tailwind setup.",
     "top": [
       {
         "pair": "USDJPY",
@@ -633,7 +633,7 @@
         "score": 4.5
       }
     ],
-    "updated": "2026-08-05T20:51:11.786260+00:00"
+    "updated": "2026-08-05T22:45:03.212122+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T20:51:11.786260+00:00"
+    "updated": "2026-08-05T22:45:03.212122+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -708,9 +708,9 @@
     "headlines": [
       "US July ADP employment +44K misses +70K forecast significantly",
       "US S&P Global services PMI beats 54.6 vs 53.6",
-      "Euro area services PMI rebounds, drives business activity growth"
+      "Dollar subdued, gold climbs; US stocks reach record highs"
     ],
-    "updated": "2026-08-05T20:51:11.786260+00:00"
+    "updated": "2026-08-05T22:45:03.212122+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
