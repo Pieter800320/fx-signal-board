@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T11:25:28.794673+00:00",
+  "updated": "2026-08-05T11:48:32.130130+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -551,12 +551,12 @@
     "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.94,
-      "delta_pct": -3.4,
+      "value": 16.68,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4229.8,
-      "delta_pct": 3.3,
+      "value": 4245.9,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.822,
-      "delta_pct": -0.1,
+      "value": 99.703,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6575,
-      "delta_pct": 0.6,
+      "value": 6.648,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 76.03,
-      "delta_pct": 0.3,
+      "value": 75.83,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64110.0,
-      "delta_pct": 1.0,
+      "value": 64023.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,18 +617,18 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-05T08:09:49.387901+00:00"
+    "updated": "2026-08-05T11:48:32.130130+00:00"
   },
   "ranked": {
-    "text": "US 10Y falling and gold rising both confirm JPY strength headwind.",
+    "text": "US 10Y falling and gold rising both confirm JPY strength bid.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.0
+        "score": 5.03
       }
     ],
-    "updated": "2026-08-05T08:09:49.387901+00:00"
+    "updated": "2026-08-05T11:48:32.130130+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T08:09:49.387901+00:00"
+    "updated": "2026-08-05T11:48:32.130130+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Germany July final services PMI 49.8 vs 49.6 prelim, EUR impact",
-      "Italy July services PMI 52.5 beats expectations, supports EUR strength",
-      "US Dollar fights back across majors, EUR/USD and GBP/USD tested"
+      "Eurozone services PMI rebounds in July, drives business activity rebound",
+      "Dollar retreats as ECB and BoE hold policy steady",
+      "NFP week ahead keeps DXY, EUR/USD and GBP/USD in focus"
     ],
-    "updated": "2026-08-05T08:09:49.387901+00:00"
+    "updated": "2026-08-05T11:48:32.130130+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
