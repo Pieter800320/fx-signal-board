@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T11:48:32.130130+00:00",
+  "updated": "2026-08-05T13:27:28.482518+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
+    "label": "Risk-On",
+    "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.68,
-      "delta_pct": 1.1,
+      "value": 16.92,
+      "delta_pct": 2.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,68 +567,68 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4245.9,
+      "value": 4248.7,
       "delta_pct": 3.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.703,
+      "value": 99.732,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.648,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.6935,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.627,
-      "delta_bp": -5.9,
-      "direction": "down",
+      "value": 4.625,
+      "delta_bp": -0.2,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
       "value": 3.73,
-      "delta_bp": 3.0,
-      "direction": "up",
+      "delta_bp": 0.0,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.83,
-      "delta_pct": 0.1,
+      "value": 76.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64023.0,
-      "delta_pct": -0.1,
+      "value": 64073.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.7,
-      "delta_bp": -8.9,
-      "direction": "down",
+      "value": 89.5,
+      "delta_bp": -0.2,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-05T11:48:32.130130+00:00"
+    "updated": "2026-08-05T13:27:28.482518+00:00"
   },
   "ranked": {
-    "text": "US 10Y falling and gold rising both confirm JPY strength bid.",
+    "text": "Gold rising confirms JPY bid strength, challenging short conviction.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 5.03
+        "score": 4.63
       }
     ],
-    "updated": "2026-08-05T11:48:32.130130+00:00"
+    "updated": "2026-08-05T13:27:28.482518+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T11:48:32.130130+00:00"
+    "updated": "2026-08-05T13:27:28.482518+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-05T01:13:00.273382+00:00"
+    "generated_at": "2026-08-05T13:27:52.757448+00:00"
   },
   "breaking": {
     "headlines": [
-      "Eurozone services PMI rebounds in July, drives business activity rebound",
-      "Dollar retreats as ECB and BoE hold policy steady",
-      "NFP week ahead keeps DXY, EUR/USD and GBP/USD in focus"
+      "US July ADP employment +44K misses +70K forecast significantly",
+      "Euro services PMI confirms July rebound across region",
+      "Dollar retreats as ECB, BoE hold rates steady"
     ],
-    "updated": "2026-08-05T11:48:32.130130+00:00"
+    "updated": "2026-08-05T13:27:28.482518+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
