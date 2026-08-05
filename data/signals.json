@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T18:39:26.018283+00:00",
+  "updated": "2026-08-05T19:06:58.165374+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,93 +547,93 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.96,
-      "delta_pct": -3.3,
-      "direction": "flat",
+      "value": 15.58,
+      "delta_pct": -5.6,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7738.88,
+      "value": 7739.63,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4302.5,
-      "delta_pct": 5.1,
+      "value": 4322.9,
+      "delta_pct": 5.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.759,
-      "delta_pct": -0.1,
+      "value": 99.671,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7325,
-      "delta_pct": 1.7,
+      "value": 6.7505,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.631,
-      "delta_bp": 0.4,
+      "value": 4.615,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.735,
-      "delta_bp": 0.5,
+      "value": 3.73,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.91,
-      "delta_pct": -1.1,
-      "direction": "down",
+      "value": 75.2,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64520.0,
-      "delta_pct": 0.7,
+      "value": 64823.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.6,
-      "delta_bp": -0.1,
+      "value": 88.5,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US ADP employment missed expectations at 44K vs 70K forecast, weakening USD ahead of NFP Friday. This accelerates USDJPY SHORT setup.",
-    "updated": "2026-08-05T17:14:46.996625+00:00"
+    "text": "US ADP employment missed expectations at 44K vs 70K expected, weakening USD. This supports USDJPY SHORT and conflicts with potential USD strength needed for NZDUSD LONG.",
+    "updated": "2026-08-05T19:06:58.165374+00:00"
   },
   "ranked": {
-    "text": "USDJPY SHORT: Gold surge confirms JPY bid, supports short setup.\n\nNZDUSD LONG: Copper rise supports NZD, but oil weakness challenges.",
+    "text": "USDJPY SHORT: Gold rising contradicts safe haven JPY bid thesis today.\n\nNZDUSD LONG: VIX falling and copper rising both confirm NZD strength.",
     "top": [
       {
         "pair": "USDJPY",
         "direction": "bear",
-        "score": 6.68
+        "score": 5.68
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 3.5
+        "score": 4.7
       }
     ],
-    "updated": "2026-08-05T17:14:46.996625+00:00"
+    "updated": "2026-08-05T19:06:58.165374+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-05T17:14:46.996625+00:00"
+    "updated": "2026-08-05T19:06:58.165374+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July ADP employment +44K misses +70K forecast significantly",
-      "US S&P Global services PMI beats at 54.6 versus 53.6",
-      "US ISM services index 54.1 undershoots 54.5 expectation slightly"
+      "S&P Global services PMI beats at 54.6 vs 53.6",
+      "Euro services PMI rebounds strongly, supporting EUR strength"
     ],
-    "updated": "2026-08-05T17:14:46.996625+00:00"
+    "updated": "2026-08-05T19:06:58.165374+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
