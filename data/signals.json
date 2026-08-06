@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T11:53:23.115956+00:00",
+  "updated": "2026-08-06T13:25:37.002299+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.96,
-      "delta_pct": 0.9,
+      "value": 16.01,
+      "delta_pct": 1.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,62 +567,62 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4320.7,
-      "delta_pct": 1.8,
+      "value": 4295.9,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.78,
+      "value": 99.798,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.785,
-      "delta_pct": 1.2,
+      "value": 6.75,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.617,
-      "delta_bp": -1.0,
+      "value": 4.647,
+      "delta_bp": 3.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.725,
-      "delta_bp": -0.5,
+      "value": 3.728,
+      "delta_bp": 0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.2,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 76.49,
+      "delta_pct": 1.7,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64513.0,
-      "delta_pct": -0.1,
+      "value": 64150.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 89.2,
-      "delta_bp": -0.5,
+      "value": 91.9,
+      "delta_bp": 2.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US job cuts at 2-year lows support USD strength setup. Euro retail sales decline and German construction weakness support EUR/USD downside. No direct conflicts detected.",
-    "updated": "2026-08-06T11:53:23.115956+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-06T13:25:37.002299+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-08-06T11:53:23.115956+00:00"
+    "updated": "2026-08-06T13:25:37.002299+00:00"
   },
   "calendar": {
     "events": [
@@ -687,7 +687,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-06T11:53:23.115956+00:00"
+    "updated": "2026-08-06T13:25:37.002299+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -695,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area retail sales unexpectedly fall in June amid broader slump",
-      "US employers announce fewest job cuts in two years in July",
-      "Dollar retreats as ECB and BoE hold policy steady; EUR/USD rallies"
+      "US Q2 unit labor costs +1.3% vs +2.1% expected, inflation moderates",
+      "Euro area retail sales fall unexpectedly in June amid activity slump",
+      "US initial jobless claims 199K beat 202K estimate, labor market softens"
     ],
-    "updated": "2026-08-06T11:53:23.115956+00:00"
+    "updated": "2026-08-06T13:25:37.002299+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
