@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T11:28:48.359456+00:00",
+  "updated": "2026-08-06T11:53:23.115956+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.88,
-      "delta_pct": 0.4,
+      "value": 15.96,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4321.0,
+      "value": 4320.7,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.753,
+      "value": 99.78,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7115,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 6.785,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 75.4,
-      "delta_pct": 0.2,
+      "value": 75.2,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64770.0,
-      "delta_pct": 0.3,
+      "value": 64513.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,13 @@
     }
   },
   "catalyst": {
-    "text": "Australian June trade surplus stronger than expected could accelerate AUDJPY SHORT as risk sentiment weakens. Japan equities slide supports the setup.",
-    "updated": "2026-08-06T08:08:48.126916+00:00"
+    "text": "US job cuts at 2-year lows support USD strength setup. Euro retail sales decline and German construction weakness support EUR/USD downside. No direct conflicts detected.",
+    "updated": "2026-08-06T11:53:23.115956+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Mixed neutral macro challenges weak momentum setup confirmation.\n\nNZDJPY SHORT: Gold rising JPY bid confirms cross-asset macro driver.\n\nAUDJPY SHORT: Gold rising JPY bid confirms despite weak technicals.",
-    "top": [
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 4.3
-      },
-      {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 3.38
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bear",
-        "score": 2.7
-      }
-    ],
-    "updated": "2026-08-06T08:08:48.126916+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-08-06T11:53:23.115956+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +687,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-06T08:08:48.126916+00:00"
+    "updated": "2026-08-06T11:53:23.115956+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australian June trade surplus AU$1.929bn, significantly beats deficit expectations",
-      "Trump administration refunds $100bn of struck down tariffs",
-      "German factory orders rise more than expected in June"
+      "Euro area retail sales unexpectedly fall in June amid broader slump",
+      "US employers announce fewest job cuts in two years in July",
+      "Dollar retreats as ECB and BoE hold policy steady; EUR/USD rallies"
     ],
-    "updated": "2026-08-06T08:08:48.126916+00:00"
+    "updated": "2026-08-06T11:53:23.115956+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
