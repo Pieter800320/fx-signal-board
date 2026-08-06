@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06T07:44:32.701856+00:00",
+  "updated": "2026-08-06T08:08:48.126916+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -541,53 +541,53 @@
   "regime_w1": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 4.0,
+    "score": 3.3,
     "signals": -1,
-    "total": 5,
+    "total": 3,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.81,
-      "delta_pct": -4.2,
+      "value": 15.88,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7600.5,
-      "delta_pct": 2.2,
-      "direction": "up",
+      "value": 7723.55,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4319.3,
-      "delta_pct": 7.1,
+      "value": 4321.0,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.731,
-      "delta_pct": -0.2,
+      "value": 99.753,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.712,
-      "delta_pct": 3.0,
-      "direction": "up",
+      "value": 6.7115,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
       "value": 4.617,
-      "delta_bp": -6.9,
-      "direction": "down",
+      "delta_bp": -1.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,43 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 74.7,
-      "delta_pct": -0.7,
+      "value": 75.4,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64589.0,
-      "delta_pct": 1.8,
+      "value": 64770.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
       "value": 89.2,
-      "delta_bp": -6.4,
-      "direction": "down",
+      "delta_bp": -0.5,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Japan equities slide pressures USDJPY short. Australian trade surplus strengthens AUD, supporting NZDUSD long. No direct conflicts with setups.",
-    "updated": "2026-08-06T04:50:20.811381+00:00"
+    "text": "Australian June trade surplus stronger than expected could accelerate AUDJPY SHORT as risk sentiment weakens. Japan equities slide supports the setup.",
+    "updated": "2026-08-06T08:08:48.126916+00:00"
   },
   "ranked": {
-    "text": "USDJPY SHORT: Falling US 10Y and rising Gold confirm JPY bid thesis.\n\nNZDUSD LONG: Rising S&P 500 and Copper confirm NZD strength setup.",
+    "text": "NZDUSD LONG: Mixed neutral macro challenges weak momentum setup confirmation.\n\nNZDJPY SHORT: Gold rising JPY bid confirms cross-asset macro driver.\n\nAUDJPY SHORT: Gold rising JPY bid confirms despite weak technicals.",
     "top": [
-      {
-        "pair": "USDJPY",
-        "direction": "bear",
-        "score": 6.08
-      },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 4.7
+        "score": 4.3
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 3.38
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bear",
+        "score": 2.7
       }
     ],
-    "updated": "2026-08-06T04:50:20.811381+00:00"
+    "updated": "2026-08-06T08:08:48.126916+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-06T04:50:20.811381+00:00"
+    "updated": "2026-08-06T08:08:48.126916+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
+      "Australian June trade surplus AU$1.929bn, significantly beats deficit expectations",
       "Trump administration refunds $100bn of struck down tariffs",
-      "Australian June trade surplus AU$1.929bn, beats deficit expectations",
-      "US S&P Global services PMI 54.6 beats 53.6 prelim"
+      "German factory orders rise more than expected in June"
     ],
-    "updated": "2026-08-06T04:50:20.811381+00:00"
+    "updated": "2026-08-06T08:08:48.126916+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
