@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T17:53:20.459822+00:00",
+  "updated": "2026-08-07T18:34:21.452371+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,85 +555,85 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.98,
-      "delta_pct": -1.1,
+      "value": 14.92,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7743.46,
+      "value": 7738.72,
       "delta_pct": 0.4,
-      "direction": "up",
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4395.6,
-      "delta_pct": 3.6,
+      "value": 4392.2,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.526,
+      "value": 99.564,
       "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.591,
+      "value": 6.5935,
       "delta_pct": -1.4,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.652,
-      "delta_bp": -1.8,
+      "value": 4.656,
+      "delta_bp": -1.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.715,
-      "delta_bp": -1.7,
+      "value": 3.718,
+      "delta_bp": -1.4,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.4,
-      "delta_pct": 1.4,
+      "value": 78.28,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64899.0,
-      "delta_pct": 1.0,
+      "value": 64758.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.7,
-      "delta_bp": -0.1,
+      "value": 93.8,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US July non-farm payrolls -23K vs +80K expected. Significantly weaker than forecast, supporting USD weakness and validating NZDUSD LONG and GBPUSD LONG setups.",
-    "updated": "2026-08-07T16:37:19.309914+00:00"
+    "text": "US July non-farm payrolls missed badly at minus 23K versus plus 80K expected. This weakens USD, supporting both NZDUSD and GBPUSD long setups.",
+    "updated": "2026-08-07T18:34:21.452371+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rising supports risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, DXY falling strengthens GBP upside momentum.",
+    "text": "NZDUSD LONG: Risk-On regime confirms setup, DXY weakness supports USD selling pressure.\n\nGBPUSD LONG: Mixed macro neutral challenges momentum, but DXY falling reinforces long bias.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.88
+        "score": 8.67
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.75
+        "score": 8.55
       }
     ],
-    "updated": "2026-08-07T16:37:19.309914+00:00"
+    "updated": "2026-08-07T18:34:21.452371+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T16:37:19.309914+00:00"
+    "updated": "2026-08-07T18:34:21.452371+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-07T16:37:19.309914+00:00"
+    "updated": "2026-08-07T18:34:21.452371+00:00"
   },
   "last_alert": "2026-08-07T17:53:20.459822+00:00",
   "gold_signal": {
