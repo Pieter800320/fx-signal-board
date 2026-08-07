@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T20:24:49.284848+00:00",
+  "updated": "2026-08-07T22:21:50.378865+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.88,
-      "delta_pct": -1.8,
+      "value": 14.9,
+      "delta_pct": -1.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4401.8,
+      "value": 4401.3,
       "delta_pct": 3.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.59,
+      "value": 99.604,
       "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5845,
+      "value": 6.585,
       "delta_pct": -1.5,
       "direction": "down",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.06,
+      "value": 77.08,
       "delta_pct": -0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64953.0,
-      "delta_pct": 1.1,
+      "value": 64878.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls turn negative, dollar drops. This directly supports both NZDUSD and GBPUSD long setups by weakening the dollar.",
-    "updated": "2026-08-07T20:24:49.284848+00:00"
+    "text": "US July non-farm payrolls missed badly at -23K vs +80K expected, supporting dollar weakness and validating both NZDUSD LONG and GBPUSD LONG setups.",
+    "updated": "2026-08-07T22:21:50.378865+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rally strengthens NZD bid pressure.\n\nGBPUSD LONG: Macro confirms setup, equity strength and DXY weakness align perfectly.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength drives commodity currency bid.\n\nGBPUSD LONG: Macro confirms setup, risk-on regime supports GBP outperformance versus USD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-07T20:24:49.284848+00:00"
+    "updated": "2026-08-07T22:21:50.378865+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T20:24:49.284848+00:00"
+    "updated": "2026-08-07T22:21:50.378865+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July non-farm payrolls -23K vs +80K expected, dollar drops",
+      "US July non-farm payrolls -23K vs +80K expected",
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-07T20:24:49.284848+00:00"
+    "updated": "2026-08-07T22:21:50.378865+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
