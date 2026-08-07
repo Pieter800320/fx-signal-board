@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T06:11:51.276107+00:00",
+  "updated": "2026-08-07T06:55:11.424873+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4326.7,
-      "delta_pct": 2.0,
+      "value": 4351.3,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.958,
+      "value": 99.945,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7415,
+      "value": 6.74,
       "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 78.06,
-      "delta_pct": 1.0,
+      "value": 78.02,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64262.0,
+      "value": 64260.0,
       "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Japan household spending falls for seventh month weakens JPY fundamentals, supporting AUDJPY short thesis. USD strength ahead of NFP also supports the setup.",
-    "updated": "2026-08-07T04:15:38.664588+00:00"
+    "text": "Japan household spending falls for seventh month, clouding BOJ rate path. Weakens BOJ hawkish expectations, supporting JPY shorts CADJPY EURJPY GBPJPY.",
+    "updated": "2026-08-07T06:55:11.424873+00:00"
   },
   "ranked": {
-    "text": "Gold rising and Risk-On regime challenge AUDJPY short setup fundamentally.",
+    "text": "CADJPY SHORT: Gold bid supports JPY strength, confirming setup thesis.\n\nEURJPY SHORT: Risk-On macro contradicts JPY safe-haven bid, challenging setup.\n\nGBPJPY SHORT: Risk-On macro contradicts JPY safe-haven bid, challenging setup.",
     "top": [
       {
-        "pair": "AUDJPY",
+        "pair": "CADJPY",
         "direction": "bear",
-        "score": 2.35
+        "score": 2.52
+      },
+      {
+        "pair": "EURJPY",
+        "direction": "bear",
+        "score": 1.95
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bear",
+        "score": 1.95
       }
     ],
-    "updated": "2026-08-07T04:15:38.664588+00:00"
+    "updated": "2026-08-07T06:55:11.424873+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T04:15:38.664588+00:00"
+    "updated": "2026-08-07T06:55:11.424873+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "China July exports beat forecasts despite fresh US tariffs pressure",
       "Japan household spending falls seventh month, clouding BOJ rate path",
-      "USD moves higher with yields ahead of US jobs report"
+      "China July exports beat forecasts despite fresh US tariffs",
+      "Dollar losses ahead of NFP, DXY EUR/USD GBP/USD in focus"
     ],
-    "updated": "2026-08-07T04:15:38.664588+00:00"
+    "updated": "2026-08-07T06:55:11.424873+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
