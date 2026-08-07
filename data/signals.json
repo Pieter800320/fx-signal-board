@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T01:54:25.371434+00:00",
+  "updated": "2026-08-07T04:15:38.664588+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4315.1,
-      "delta_pct": 1.6,
+      "value": 4326.7,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.92,
-      "delta_pct": -0.1,
+      "value": 99.958,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7305,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.7415,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.82,
-      "delta_pct": 3.5,
-      "direction": "up",
+      "value": 78.06,
+      "delta_pct": 1.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64364.0,
-      "delta_pct": -0.4,
+      "value": 64262.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Japan household spending fell significantly worse than expected at -6.4% m/m versus -3.1% forecast. This weakens JPY fundamentals, conflicting with AUDJPY short thesis which relies on JPY strength.",
-    "updated": "2026-08-07T01:54:25.371434+00:00"
+    "text": "Japan household spending falls for seventh month weakens JPY fundamentals, supporting AUDJPY short thesis. USD strength ahead of NFP also supports the setup.",
+    "updated": "2026-08-07T04:15:38.664588+00:00"
   },
   "ranked": {
-    "text": "Gold rising supports JPY strength, challenging short setup.",
+    "text": "Gold rising and Risk-On regime challenge AUDJPY short setup fundamentally.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -628,7 +628,7 @@
         "score": 2.35
       }
     ],
-    "updated": "2026-08-07T01:54:25.371434+00:00"
+    "updated": "2026-08-07T04:15:38.664588+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T01:54:25.371434+00:00"
+    "updated": "2026-08-07T04:15:38.664588+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
+      "China July exports beat forecasts despite fresh US tariffs pressure",
       "Japan household spending falls seventh month, clouding BOJ rate path",
-      "USD rises with yields ahead of US jobs report",
-      "NFP week keeps DXY, EUR/USD and GBP/USD in focus"
+      "USD moves higher with yields ahead of US jobs report"
     ],
-    "updated": "2026-08-07T01:54:25.371434+00:00"
+    "updated": "2026-08-07T04:15:38.664588+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
