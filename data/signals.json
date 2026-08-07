@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T14:15:22.425545+00:00",
+  "updated": "2026-08-07T14:42:36.383972+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,106 +539,101 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 4,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 2,
+    "total": 4,
     "confidence": "Neutral",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.2,
-      "delta_pct": 0.3,
+      "value": 14.93,
+      "delta_pct": -1.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7709.96,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7745.95,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4371.6,
-      "delta_pct": 3.1,
+      "value": 4406.2,
+      "delta_pct": 3.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.871,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 99.594,
+      "delta_pct": -0.4,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.647,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 6.609,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.67,
-      "delta_bp": 5.3,
-      "direction": "up",
+      "value": 4.639,
+      "delta_bp": -3.1,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.732,
-      "delta_bp": 0.7,
+      "value": 3.715,
+      "delta_bp": -1.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.2,
-      "delta_pct": -0.1,
+      "value": 77.48,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65102.0,
+      "value": 65095.0,
       "delta_pct": 1.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.8,
-      "delta_bp": 4.6,
-      "direction": "up",
+      "value": 92.4,
+      "delta_bp": -1.4,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-07T12:32:42.630939+00:00"
+    "text": "US July non-farm payrolls -23K vs +80K expected. Dollar weakness expected. Conflicts with GBPUSD LONG setup requiring dollar strength.",
+    "updated": "2026-08-07T14:42:36.383972+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Risk-on regime confirms setup, weak momentum challenges conviction.\n\nUSDJPY SHORT: Gold strength contradicts short, supports JPY bid instead.\n\nGBPJPY SHORT: Gold rally undermines short, JPY strength conflicts signal.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength bids risk currencies.\n\nGBPUSD LONG: Macro confirms setup, DXY weakness offers USD broadly.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.05
+        "score": 7.88
       },
       {
-        "pair": "USDJPY",
-        "direction": "bear",
-        "score": 4.55
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 3.53
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 7.65
       }
     ],
-    "updated": "2026-08-07T12:32:42.630939+00:00"
+    "updated": "2026-08-07T14:42:36.383972+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T12:32:42.630939+00:00"
+    "updated": "2026-08-07T14:42:36.383972+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "All eyes on US jobs report now",
-      "Dollar muted ahead of NFP release",
-      "Trump says rate hike up to Board"
+      "US July non-farm payrolls -23K vs +80K expected",
+      "Canada July employment change +75.1K vs +15K expected",
+      "Trump says rate hike isn't completely up to Warsh, Board"
     ],
-    "updated": "2026-08-07T12:32:42.630939+00:00"
+    "updated": "2026-08-07T14:42:36.383972+00:00"
   },
   "last_alert": "2026-08-07T14:15:22.425545+00:00",
   "gold_signal": {
