@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-07T10:05:51.323718+00:00",
+  "updated": "2026-08-07T10:38:51.522142+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4359.3,
-      "delta_pct": 2.8,
+      "value": 4373.0,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.98,
-      "delta_pct": 0.0,
+      "value": 99.93,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7205,
-      "delta_pct": 0.5,
+      "value": 6.6845,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.77,
-      "delta_pct": 0.6,
+      "value": 77.18,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64554.0,
-      "delta_pct": 0.5,
+      "value": 64822.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-07T08:42:16.950926+00:00"
+    "text": "NFP report imminent creates major USD volatility risk for both setups. NZDUSD long and GBPJPY short both exposed to sharp dollar moves.",
+    "updated": "2026-08-07T10:38:51.522142+00:00"
   },
   "ranked": {
-    "text": "Gold rising strengthens JPY bid, challenging short signal.",
+    "text": "NZDUSD LONG: Risk-on regime confirms setup, but weak momentum challenges conviction.\n\nGBPJPY SHORT: Gold strength challenges short, creates competing JPY bid pressure.",
     "top": [
+      {
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 5.05
+      },
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 3.13
+        "score": 3.85
       }
     ],
-    "updated": "2026-08-07T08:42:16.950926+00:00"
+    "updated": "2026-08-07T10:38:51.522142+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-07T08:42:16.950926+00:00"
+    "updated": "2026-08-07T10:38:51.522142+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-06T22:37:22.735589+00:00"
+    "generated_at": "2026-08-07T10:39:17.810759+00:00"
   },
   "breaking": {
     "headlines": [
-      "Beijing exports beat forecasts on AI demand despite US tariffs",
-      "Japan household spending falls seventh month, clouding BOJ rate path",
-      "Dollar losses ahead of NFP, DXY EUR/USD GBP/USD in focus"
+      "Trump questions Fed independence on rate hike decisions",
+      "China July exports beat forecasts despite US tariffs",
+      "US Dollar weakens ahead of crucial NFP report"
     ],
-    "updated": "2026-08-07T08:42:16.950926+00:00"
+    "updated": "2026-08-07T10:38:51.522142+00:00"
   },
   "last_alert": "2026-08-04T20:37:23.886925+00:00",
   "gold_signal": {
