@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T20:13:34.183941+00:00",
+  "updated": "2026-08-08T22:13:22.853605+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65024.0,
-      "delta_pct": 0.2,
+      "value": 64952.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls turned negative at minus 23K versus plus 80K expected. Dollar weakness accelerates both NZDUSD and GBPUSD long setups.",
-    "updated": "2026-08-08T20:13:34.183941+00:00"
+    "text": "NZDUSD LONG and GBPUSD LONG both accelerated by negative NFP data causing dollar weakness across majors.",
+    "updated": "2026-08-08T22:13:22.853605+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rally and DXY weakness align perfectly.\n\nGBPUSD LONG: Macro confirms setup, risk-on environment supports GBP bid with DXY falling.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rising supports risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, equity strength and DXY weakness align perfectly.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T20:13:34.183941+00:00"
+    "updated": "2026-08-08T22:13:22.853605+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T20:13:34.183941+00:00"
+    "updated": "2026-08-08T22:13:22.853605+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US non-farm payrolls miss badly at -23K vs +80K expected",
-      "Canada employment beats at +75.1K vs +15K expected",
-      "US dollar retreats sharply on weak jobs data"
+      "US July non-farm payrolls -23K vs +80K expected",
+      "Canada July employment change +75.1K vs +15K expected",
+      "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-08T20:13:34.183941+00:00"
+    "updated": "2026-08-08T22:13:22.853605+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
