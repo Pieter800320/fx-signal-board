@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T03:14:02.547497+00:00",
+  "updated": "2026-08-08T04:43:25.978032+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4401.3,
-      "delta_pct": 3.8,
+      "value": 4340.7,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.585,
-      "delta_pct": -1.5,
+      "value": 6.5705,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 77.08,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 78.18,
+      "delta_pct": 1.2,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64899.0,
-      "delta_pct": 1.0,
+      "value": 64997.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD LONG and GBPUSD LONG both supported by dollar weakness from negative NFP data. No direct conflicts detected.",
-    "updated": "2026-08-08T03:14:02.547497+00:00"
+    "text": "US non-farm payrolls turned negative, weakening USD fundamentally. This accelerates both NZDUSD and GBPUSD long setups by strengthening commodity and sterling currencies.",
+    "updated": "2026-08-08T04:43:25.978032+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength supports risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, equity rally and DXY weakness align perfectly.",
+    "text": "NZDUSD LONG: S&P 500 strength confirms NZD bid, DXY weakness supports.\n\nGBPUSD LONG: Risk-on environment confirms both GBP bid and USD weakness.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T03:14:02.547497+00:00"
+    "updated": "2026-08-08T04:43:25.978032+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T03:14:02.547497+00:00"
+    "updated": "2026-08-08T04:43:25.978032+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-08T03:14:02.547497+00:00"
+    "updated": "2026-08-08T04:43:25.978032+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
