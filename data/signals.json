@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T10:17:42.256412+00:00",
+  "updated": "2026-08-08T12:18:06.475138+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64960.0,
-      "delta_pct": 0.1,
+      "value": 64990.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US July non-farm payrolls missed significantly at negative 23K. Dollar drops on weak employment data, supporting NZDUSD and GBPUSD long setups.",
-    "updated": "2026-08-08T10:17:42.256412+00:00"
+    "text": "US non-farm payrolls turned negative, weakening USD. This accelerates both NZDUSD LONG and GBPUSD LONG setups as dollar weakness favors these pairs.",
+    "updated": "2026-08-08T12:18:06.475138+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rally bidding risk currencies higher.\n\nGBPUSD LONG: Macro confirms setup, equities strength supporting GBP outperformance against USD.",
+    "text": "NZDUSD LONG: S&P 500 strength and DXY weakness directly confirm signal.\n\nGBPUSD LONG: Risk-on regime with equity rally and dollar weakness confirms.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T10:17:42.256412+00:00"
+    "updated": "2026-08-08T12:18:06.475138+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T10:17:42.256412+00:00"
+    "updated": "2026-08-08T12:18:06.475138+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-08T10:17:42.256412+00:00"
+    "updated": "2026-08-08T12:18:06.475138+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
