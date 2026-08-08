@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T04:43:25.978032+00:00",
+  "updated": "2026-08-08T06:27:49.970517+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64997.0,
+      "value": 64944.0,
       "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls turned negative, weakening USD fundamentally. This accelerates both NZDUSD and GBPUSD long setups by strengthening commodity and sterling currencies.",
-    "updated": "2026-08-08T04:43:25.978032+00:00"
+    "text": "GBPUSD LONG conflicts with US dollar strength from negative NFP miss, which typically weakens GBP relative to USD.",
+    "updated": "2026-08-08T06:27:49.970517+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 strength confirms NZD bid, DXY weakness supports.\n\nGBPUSD LONG: Risk-on environment confirms both GBP bid and USD weakness.",
+    "text": "NZDUSD LONG: Macro confirms setup via S&P 500 rally strengthening commodity currency bid.\n\nGBPUSD LONG: Macro confirms setup via equity risk-on and weakening US dollar index.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T04:43:25.978032+00:00"
+    "updated": "2026-08-08T06:27:49.970517+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T04:43:25.978032+00:00"
+    "updated": "2026-08-08T06:27:49.970517+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July non-farm payrolls -23K vs +80K expected",
-      "Canada July employment change +75.1K vs +15K expected",
-      "New York Fed survey: One year inflation expectations dip to 3.6%"
+      "US non-farm payrolls miss badly: -23K vs +80K expected",
+      "Canada employment surges +75.1K, significantly beats +15K forecast",
+      "Dollar drops sharply as NFP disappoints, inflation expectations ease"
     ],
-    "updated": "2026-08-08T04:43:25.978032+00:00"
+    "updated": "2026-08-08T06:27:49.970517+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
