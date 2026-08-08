@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T08:23:35.144364+00:00",
+  "updated": "2026-08-08T10:17:42.256412+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64929.0,
+      "value": 64960.0,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG may be accelerated by dollar weakness from negative NFP (-23K vs +80K expected). NZDUSD LONG similarly supported.",
-    "updated": "2026-08-08T08:23:35.144364+00:00"
+    "text": "US July non-farm payrolls missed significantly at negative 23K. Dollar drops on weak employment data, supporting NZDUSD and GBPUSD long setups.",
+    "updated": "2026-08-08T10:17:42.256412+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength bids NZD.\n\nGBPUSD LONG: Macro confirms setup, risk-on environment supports GBP bid.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rally bidding risk currencies higher.\n\nGBPUSD LONG: Macro confirms setup, equities strength supporting GBP outperformance against USD.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T08:23:35.144364+00:00"
+    "updated": "2026-08-08T10:17:42.256412+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T08:23:35.144364+00:00"
+    "updated": "2026-08-08T10:17:42.256412+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-08T08:23:35.144364+00:00"
+    "updated": "2026-08-08T10:17:42.256412+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
