@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-08T00:36:43.858537+00:00",
+  "updated": "2026-08-08T03:14:02.547497+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -573,7 +573,7 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.604,
+      "value": 99.6,
       "delta_pct": -0.4,
       "direction": "down",
       "label": "DXY"
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64844.0,
-      "delta_pct": 0.9,
+      "value": 64899.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls turned negative, weakening USD. This accelerates both NZDUSD and GBPUSD long setups by supporting these pairs against the dollar.",
-    "updated": "2026-08-08T00:36:43.858537+00:00"
+    "text": "NZDUSD LONG and GBPUSD LONG both supported by dollar weakness from negative NFP data. No direct conflicts detected.",
+    "updated": "2026-08-08T03:14:02.547497+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 strength and falling DXY fully confirm setup thesis.\n\nGBPUSD LONG: S&P 500 strength and falling DXY fully confirm setup thesis.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength supports risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, equity rally and DXY weakness align perfectly.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-08T00:36:43.858537+00:00"
+    "updated": "2026-08-08T03:14:02.547497+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-08T00:36:43.858537+00:00"
+    "updated": "2026-08-08T03:14:02.547497+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Canada July employment change +75.1K vs +15K expected",
       "New York Fed survey: One year inflation expectations dip to 3.6%"
     ],
-    "updated": "2026-08-08T00:36:43.858537+00:00"
+    "updated": "2026-08-08T03:14:02.547497+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
