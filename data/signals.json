@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T10:19:09.988180+00:00",
+  "updated": "2026-08-09T12:20:06.726749+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64900.0,
+      "value": 64886.0,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls turned negative, weakening the dollar. This accelerates GBPUSD long and NZDUSD long setups through dollar weakness.",
-    "updated": "2026-08-09T10:19:09.988180+00:00"
+    "text": "US July non-farm payrolls -23K vs +80K expected weakens USD, accelerates both NZDUSD and GBPUSD long setups.",
+    "updated": "2026-08-09T12:20:06.726749+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 rising confirms NZD bid, DXY falling supports setup.\n\nGBPUSD LONG: S&P 500 rising confirms GBP bid, DXY falling supports setup.",
+    "text": "NZDUSD LONG: S&P 500 strength and DXY weakness confirm setup perfectly today.\n\nGBPUSD LONG: Mixed macro neutral stance challenges strong momentum but DXY supports.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-09T10:19:09.988180+00:00"
+    "updated": "2026-08-09T12:20:06.726749+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T10:19:09.988180+00:00"
+    "updated": "2026-08-09T12:20:06.726749+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July non-farm payrolls -23K vs +80K expected, dollar drops",
-      "Canada July employment +75.1K vs +15K expected, CAD strengthens",
+      "Canada July employment +75.1K vs +15K expected, supports CAD",
       "China July CPI cools to six-month low, producer prices ease"
     ],
-    "updated": "2026-08-09T10:19:09.988180+00:00"
+    "updated": "2026-08-09T12:20:06.726749+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
