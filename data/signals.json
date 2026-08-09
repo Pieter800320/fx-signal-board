@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T20:15:54.260250+00:00",
+  "updated": "2026-08-09T21:31:18.351768+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65051.0,
-      "delta_pct": 0.2,
+      "value": 65095.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD and GBPUSD both benefit from dollar weakness. Negative NFP confirms USD retreat, accelerating both long setups.",
-    "updated": "2026-08-09T20:15:54.260250+00:00"
+    "text": "NZDUSD and GBPUSD both benefit from dollar weakness. Negative NFP accelerates dollar weakness, supporting both long setups. No direct conflicts identified.",
+    "updated": "2026-08-09T21:31:18.351768+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 rising and DXY falling confirm setup perfectly today.\n\nGBPUSD LONG: S&P 500 rising and DXY falling confirm setup perfectly today.",
+    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength bids NZD directly.\n\nGBPUSD LONG: Macro confirms setup, risk-on environment supports GBP outperformance.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-09T20:15:54.260250+00:00"
+    "updated": "2026-08-09T21:31:18.351768+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T20:15:54.260250+00:00"
+    "updated": "2026-08-09T21:31:18.351768+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July non-farm payrolls -23K vs +80K expected, dollar drops",
-      "China July CPI cools to six-month low, producer prices ease",
-      "Canada July employment change +75.1K vs +15K expected"
+      "Canada July employment +75.1K vs +15K expected, outperforms",
+      "China July CPI cools to six-month low, producer prices ease"
     ],
-    "updated": "2026-08-09T20:15:54.260250+00:00"
+    "updated": "2026-08-09T21:31:18.351768+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
@@ -720,5 +720,9 @@
     "h4_confidence": "Medium",
     "h1_confirmed": true,
     "updated": "2026-08-07T19:54:13.054080+00:00"
+  },
+  "week_ahead": {
+    "text": "Fed rate decision uncertainty and scaling back of rate hike bets are supporting gold above $4,300 amid cooling geopolitical tensions , anchoring sentiment to defensive positioning rather than growth expectations. Wednesday's Fed meeting will be pivotal for dollar direction as the 3.5-3.75% hold faces market repricing of terminal rates. Thursday's PCE inflation and GDP data carry outsized weight for USD/JPY after recent yen volatility, determining if weakness persists or reverses. Watch EUR/USD closely given mixed Fed signals typically widen spreads against euro stability; the pair faces technical breakdown pressure below 1.15 if growth disappoints. The largest wildcard remains whether Fed communications pivot dovish on recession fears, triggering renewed safe-haven demand that could spike yen and franc strength unexpectedly.",
+    "generated_at": "2026-08-09T21:31:18.351768+00:00"
   }
 }
