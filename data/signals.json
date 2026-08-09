@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T03:21:37.230705+00:00",
+  "updated": "2026-08-09T04:52:18.162085+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4340.7,
-      "delta_pct": 2.3,
+      "value": 4399.7,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5705,
-      "delta_pct": -1.7,
+      "value": 6.591,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Copper"
     },
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64722.0,
+      "value": 64732.0,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG supported by dollar weakness from negative NFP. NZDUSD LONG also benefits. No direct conflicts detected.",
-    "updated": "2026-08-09T03:21:37.230705+00:00"
+    "text": "GBPUSD LONG at risk. US non-farm payrolls missed significantly negative 23K versus 80K expected, weakening dollar support for GBP strength.",
+    "updated": "2026-08-09T04:52:18.162085+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength drives risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, equities rising supports GBP outperformance thesis.",
+    "text": "NZDUSD LONG: S&P 500 strength and falling DXY perfectly confirm the setup.\n\nGBPUSD LONG: S&P 500 rally and weaker dollar fully support the trade.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-09T03:21:37.230705+00:00"
+    "updated": "2026-08-09T04:52:18.162085+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T03:21:37.230705+00:00"
+    "updated": "2026-08-09T04:52:18.162085+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July non-farm payrolls -23K vs +80K expected",
+      "US July non-farm payrolls -23K vs +80K expected, dollar drops",
       "Canada July employment change +75.1K vs +15K expected",
-      "New York Fed survey: One year inflation expectations dip to 3.6%"
+      "China's July CPI cools to six-month low, producer prices ease"
     ],
-    "updated": "2026-08-09T03:21:37.230705+00:00"
+    "updated": "2026-08-09T04:52:18.162085+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
