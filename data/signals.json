@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T21:31:18.351768+00:00",
+  "updated": "2026-08-09T22:14:59.628661+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,17 +539,17 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 4,
-    "stable": true
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 6.7,
+    "signals": 1,
+    "total": 3,
+    "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 4,
+    "total": 2,
     "confidence": "Neutral",
     "stable": true
   },
@@ -568,20 +568,20 @@
     },
     "gold": {
       "value": 4399.7,
-      "delta_pct": 3.7,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.6,
-      "delta_pct": -0.4,
-      "direction": "down",
+      "value": 99.611,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
       "value": 6.591,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -598,13 +598,13 @@
     },
     "wti": {
       "value": 78.18,
-      "delta_pct": 1.2,
-      "direction": "up",
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65095.0,
-      "delta_pct": 0.3,
+      "value": 65328.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "NZDUSD and GBPUSD both benefit from dollar weakness. Negative NFP accelerates dollar weakness, supporting both long setups. No direct conflicts identified.",
-    "updated": "2026-08-09T21:31:18.351768+00:00"
+    "text": "GBPUSD LONG conflict: US non-farm payrolls negative 23K vs 80K expected weakens dollar support for sterling upside.",
+    "updated": "2026-08-09T22:14:59.628661+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 strength bids NZD directly.\n\nGBPUSD LONG: Macro confirms setup, risk-on environment supports GBP outperformance.",
+    "text": "NZDUSD LONG: S&P 500 strength confirms risk-on NZD bid thesis.\n\nGBPUSD LONG: Mixed macro challenges sustained GBP upside momentum.",
     "top": [
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.88
+        "score": 8.47
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.7
+        "score": 8.3
       }
     ],
-    "updated": "2026-08-09T21:31:18.351768+00:00"
+    "updated": "2026-08-09T22:14:59.628661+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T21:31:18.351768+00:00"
+    "updated": "2026-08-09T22:14:59.628661+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July non-farm payrolls -23K vs +80K expected, dollar drops",
-      "Canada July employment +75.1K vs +15K expected, outperforms",
+      "Canada July employment +75.1K vs +15K expected, CAD strengthens",
       "China July CPI cools to six-month low, producer prices ease"
     ],
-    "updated": "2026-08-09T21:31:18.351768+00:00"
+    "updated": "2026-08-09T22:14:59.628661+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
@@ -722,7 +722,7 @@
     "updated": "2026-08-07T19:54:13.054080+00:00"
   },
   "week_ahead": {
-    "text": "Fed rate decision uncertainty and scaling back of rate hike bets are supporting gold above $4,300 amid cooling geopolitical tensions , anchoring sentiment to defensive positioning rather than growth expectations. Wednesday's Fed meeting will be pivotal for dollar direction as the 3.5-3.75% hold faces market repricing of terminal rates. Thursday's PCE inflation and GDP data carry outsized weight for USD/JPY after recent yen volatility, determining if weakness persists or reverses. Watch EUR/USD closely given mixed Fed signals typically widen spreads against euro stability; the pair faces technical breakdown pressure below 1.15 if growth disappoints. The largest wildcard remains whether Fed communications pivot dovish on recession fears, triggering renewed safe-haven demand that could spike yen and franc strength unexpectedly.",
-    "generated_at": "2026-08-09T21:31:18.351768+00:00"
+    "text": "I'll search for current weekly FX previews to get the latest market outlook. The USD has been suffering from rising optimism over a potential US-Iran peace agreement that would not only end the current crisis but also reopen the Strait of Hormuz. Gold gathered bullish momentum and climbed to its highest level since mid-June above $4,300, supported by cooling geopolitical tensions and investors scaling back bets for a Federal Reserve interest rate hike in September. The Fed's Wednesday decision is critical as markets test expectations for September cuts, with Thursday's PCE inflation and GDP data from the US likely to shape near-term dollar direction and rate outlook. Watch USD/JPY closely as geopolitical easing potentially supports carry unwinding and risk rotation back into developed markets. The biggest wildcard remains Iran negotiations\u2014any escalation reverses the week's risk-on dollar weakness and sends gold higher.",
+    "generated_at": "2026-08-09T22:14:59.628661+00:00"
   }
 }
