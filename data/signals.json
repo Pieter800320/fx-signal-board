@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T18:19:09.800684+00:00",
+  "updated": "2026-08-09T20:15:54.260250+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65153.0,
-      "delta_pct": 0.4,
+      "value": 65051.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US non-farm payrolls missed significantly negative at -23K versus +80K expected. This weakens USD broadly, accelerating both NZDUSD and GBPUSD long setups.",
-    "updated": "2026-08-09T18:19:09.800684+00:00"
+    "text": "NZDUSD and GBPUSD both benefit from dollar weakness. Negative NFP confirms USD retreat, accelerating both long setups.",
+    "updated": "2026-08-09T20:15:54.260250+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: Macro confirms setup, S&P 500 rising supports risk-on NZD bid.\n\nGBPUSD LONG: Macro confirms setup, equities strength and DXY weakness align perfectly.",
+    "text": "NZDUSD LONG: S&P 500 rising and DXY falling confirm setup perfectly today.\n\nGBPUSD LONG: S&P 500 rising and DXY falling confirm setup perfectly today.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-09T18:19:09.800684+00:00"
+    "updated": "2026-08-09T20:15:54.260250+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T18:19:09.800684+00:00"
+    "updated": "2026-08-09T20:15:54.260250+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US non-farm payrolls miss -23K vs +80K expected",
-      "Canada employment surges +75.1K, far exceeds +15K forecast",
-      "China CPI cools to six-month low, easing pressures"
+      "US July non-farm payrolls -23K vs +80K expected, dollar drops",
+      "China July CPI cools to six-month low, producer prices ease",
+      "Canada July employment change +75.1K vs +15K expected"
     ],
-    "updated": "2026-08-09T18:19:09.800684+00:00"
+    "updated": "2026-08-09T20:15:54.260250+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
