@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-09T04:52:18.162085+00:00",
+  "updated": "2026-08-09T06:32:56.937524+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64732.0,
-      "delta_pct": -0.2,
+      "value": 64793.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG at risk. US non-farm payrolls missed significantly negative 23K versus 80K expected, weakening dollar support for GBP strength.",
-    "updated": "2026-08-09T04:52:18.162085+00:00"
+    "text": "US non-farm payrolls missed significantly at minus 23K versus plus 80K expected. Dollar weakness directly accelerates both NZDUSD and GBPUSD long setups.",
+    "updated": "2026-08-09T06:32:56.937524+00:00"
   },
   "ranked": {
-    "text": "NZDUSD LONG: S&P 500 strength and falling DXY perfectly confirm the setup.\n\nGBPUSD LONG: S&P 500 rally and weaker dollar fully support the trade.",
+    "text": "NZDUSD LONG: Macro confirms via S&P 500 rising and DXY falling simultaneously.\n\nGBPUSD LONG: Macro confirms via S&P 500 rising and DXY falling simultaneously.",
     "top": [
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 8.7
       }
     ],
-    "updated": "2026-08-09T04:52:18.162085+00:00"
+    "updated": "2026-08-09T06:32:56.937524+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-09T04:52:18.162085+00:00"
+    "updated": "2026-08-09T06:32:56.937524+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July non-farm payrolls -23K vs +80K expected, dollar drops",
-      "Canada July employment change +75.1K vs +15K expected",
-      "China's July CPI cools to six-month low, producer prices ease"
+      "Canada July employment +75.1K vs +15K expected",
+      "China July CPI cools to six-month low, producer prices ease"
     ],
-    "updated": "2026-08-09T04:52:18.162085+00:00"
+    "updated": "2026-08-09T06:32:56.937524+00:00"
   },
   "last_alert": "2026-08-07T19:54:13.054080+00:00",
   "gold_signal": {
