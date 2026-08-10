@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T17:54:33.864615+00:00",
+  "updated": "2026-08-10T18:37:28.346782+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,93 +547,88 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.13,
-      "delta_pct": 1.5,
+      "value": 15.39,
+      "delta_pct": 3.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7749.57,
+      "value": 7747.0,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4422.0,
-      "delta_pct": 1.9,
+      "value": 4425.5,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.705,
-      "delta_pct": 0.1,
+      "value": 99.806,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.632,
-      "delta_pct": 0.9,
+      "value": 6.6105,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.692,
-      "delta_bp": 3.2,
+      "value": 4.7,
+      "delta_bp": 4.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.72,
-      "delta_bp": 1.0,
+      "value": 3.718,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.14,
-      "delta_pct": 3.8,
+      "value": 82.07,
+      "delta_pct": 5.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64054.0,
-      "delta_pct": -1.2,
+      "value": 63760.0,
+      "delta_pct": -1.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.2,
-      "delta_bp": 2.2,
-      "direction": "flat",
+      "value": 98.2,
+      "delta_bp": 3.2,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-10T16:38:50.384714+00:00"
+    "updated": "2026-08-10T18:37:28.346782+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro neutral doesn't confirm strong momentum setup decisively.\n\nNZDUSD LONG: Copper rally confirms NZD bid thesis, supports long.",
+    "text": "GBPUSD LONG: Mixed macro neutral challenges strong momentum setup, oil strength uncertain.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.58
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 6.33
+        "score": 7.25
       }
     ],
-    "updated": "2026-08-10T16:38:50.384714+00:00"
+    "updated": "2026-08-10T18:37:28.346782+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-10T16:38:50.384714+00:00"
+    "updated": "2026-08-10T18:37:28.346782+00:00"
   },
   "week_ahead": {
     "text": "I'll search for current weekly FX previews to get the latest market outlook. The USD has been suffering from rising optimism over a potential US-Iran peace agreement that would not only end the current crisis but also reopen the Strait of Hormuz. Gold gathered bullish momentum and climbed to its highest level since mid-June above $4,300, supported by cooling geopolitical tensions and investors scaling back bets for a Federal Reserve interest rate hike in September. The Fed's Wednesday decision is critical as markets test expectations for September cuts, with Thursday's PCE inflation and GDP data from the US likely to shape near-term dollar direction and rate outlook. Watch USD/JPY closely as geopolitical easing potentially supports carry unwinding and risk rotation back into developed markets. The biggest wildcard remains Iran negotiations\u2014any escalation reverses the week's risk-on dollar weakness and sends gold higher.",
@@ -706,15 +701,15 @@
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-10T05:13:12.417192+00:00"
+    "generated_at": "2026-08-10T18:37:53.021910+00:00"
   },
   "breaking": {
     "headlines": [
-      "US nonfarm payrolls drop, dollar retreats amid NFP weakness",
-      "Euro investor confidence returns positive territory, supports EUR strength",
-      "Dollar weakness lifts EUR/USD and GBP/USD ahead NFP"
+      "US July employment trends 107.71 vs 106.74 prior",
+      "Euro area investor confidence returns to positive territory August",
+      "US Dollar retreats as non-farm payrolls drop analysis"
     ],
-    "updated": "2026-08-10T16:38:50.384714+00:00"
+    "updated": "2026-08-10T18:37:28.346782+00:00"
   },
   "last_alert": "2026-08-10T08:44:58.374358+00:00",
   "gold_signal": {
