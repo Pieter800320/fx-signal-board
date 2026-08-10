@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T10:24:04.751598+00:00",
+  "updated": "2026-08-10T10:52:59.842071+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.48,
-      "delta_pct": 3.9,
+      "value": 15.46,
+      "delta_pct": 3.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4406.8,
-      "delta_pct": 1.5,
+      "value": 4397.4,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.648,
-      "delta_pct": 0.0,
+      "value": 99.705,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.634,
-      "delta_pct": 1.0,
+      "value": 6.6195,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 79.23,
-      "delta_pct": 1.3,
+      "value": 79.31,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65145.0,
-      "delta_pct": 0.5,
+      "value": 64967.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "U.S. Dollar Retreats headline directly conflicts with GBPUSD LONG and NZDUSD LONG setups by supporting dollar weakness reversal risk.",
-    "updated": "2026-08-10T09:02:29.476997+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-10T10:52:59.842071+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rising confirms risk-on GBP bid setup today.\n\nNZDUSD LONG: Copper and equities rising confirm dual NZD bullish drivers.",
+    "text": "GBPUSD LONG: Mixed macro neutral challenges strong momentum signal; awaits directional catalyst.\n\nNZDUSD LONG: S&P 500 and copper strength confirm cross asset bullish drivers.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.68
+        "score": 7.95
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 8.38
+        "score": 7.53
       }
     ],
-    "updated": "2026-08-10T09:02:29.476997+00:00"
+    "updated": "2026-08-10T10:52:59.842071+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-10T09:02:29.476997+00:00"
+    "updated": "2026-08-10T10:52:59.842071+00:00"
   },
   "week_ahead": {
     "text": "I'll search for current weekly FX previews to get the latest market outlook. The USD has been suffering from rising optimism over a potential US-Iran peace agreement that would not only end the current crisis but also reopen the Strait of Hormuz. Gold gathered bullish momentum and climbed to its highest level since mid-June above $4,300, supported by cooling geopolitical tensions and investors scaling back bets for a Federal Reserve interest rate hike in September. The Fed's Wednesday decision is critical as markets test expectations for September cuts, with Thursday's PCE inflation and GDP data from the US likely to shape near-term dollar direction and rate outlook. Watch USD/JPY closely as geopolitical easing potentially supports carry unwinding and risk rotation back into developed markets. The biggest wildcard remains Iran negotiations\u2014any escalation reverses the week's risk-on dollar weakness and sends gold higher.",
@@ -710,11 +710,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar Retreats As Non Farm Payrolls Drop: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
-      "China's July CPI cools to six-month low as producer prices also ease",
-      "Euro area investor confidence returns to positive territory in August - Sentix"
+      "U.S. Dollar Retreats As Non Farm Payrolls Drop: EUR/USD, GBP/USD, USD/CAD",
+      "China's July CPI cools to six-month low as producer prices ease",
+      "Euro area investor confidence returns to positive territory in August"
     ],
-    "updated": "2026-08-10T09:02:29.476997+00:00"
+    "updated": "2026-08-10T10:52:59.842071+00:00"
   },
   "last_alert": "2026-08-10T08:44:58.374358+00:00",
   "gold_signal": {
