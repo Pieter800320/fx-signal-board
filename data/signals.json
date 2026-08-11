@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T20:01:44.205333+00:00",
+  "updated": "2026-08-11T20:29:35.607813+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -561,32 +561,32 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7721.3,
-      "delta_pct": -0.4,
-      "direction": "down",
+      "value": 7728.2,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4421.8,
-      "delta_pct": 1.4,
+      "value": 4426.9,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.86,
-      "delta_pct": 0.1,
+      "value": 99.82,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6225,
-      "delta_pct": 0.4,
+      "value": 6.6265,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.686,
-      "delta_bp": -1.3,
+      "value": 4.684,
+      "delta_bp": -1.5,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,35 +597,35 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.15,
-      "delta_pct": 1.2,
+      "value": 83.42,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63244.0,
-      "delta_pct": -1.0,
+      "value": 63611.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 95.6,
-      "delta_bp": -2.5,
+      "value": 95.4,
+      "delta_bp": -2.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Dollar Moves Higher As Oil Rallies 5 percent conflicts with GBPUSD LONG and NZDUSD LONG. Strong dollar headwind invalidates both setups.",
-    "updated": "2026-08-11T18:41:09.392678+00:00"
+    "text": "U.S. Dollar Moves Higher As Oil Rallies 5% directly conflicts with GBPUSD LONG and NZDUSD LONG. Strong dollar headwinds.",
+    "updated": "2026-08-11T20:29:35.607813+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-off supports safe-haven USD strength challenge.\n\nNZDUSD LONG: Risk-off environment challenges commodity currency upside.",
+    "text": "GBPUSD LONG: Risk-off favors safe-haven GBP, confirming setup strength today.\n\nNZDUSD LONG: Risk-off headwinds challenge NZD commodity-linked weakness significantly.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.03
+        "score": 7.65
       },
       {
         "pair": "NZDUSD",
@@ -633,7 +633,7 @@
         "score": 4.92
       }
     ],
-    "updated": "2026-08-11T18:41:09.392678+00:00"
+    "updated": "2026-08-11T20:29:35.607813+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-11T18:41:09.392678+00:00"
+    "updated": "2026-08-11T20:29:35.607813+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $75 billion 3-year notes at high yield 4.291%",
-      "U.S. Dollar moves higher as oil rallies 5%: EUR/USD, GBP/USD affected",
-      "ADP weekly NER pulse 8.25K vs 15K prior disappoints"
+      "US treasury sells $75 billion 3-year notes at 4.291% yield",
+      "U.S. Dollar moves higher as oil rallies 5% amid supply risks",
+      "ADP weekly NER pulse 8.25K vs 15K prior, signals labor weakness"
     ],
-    "updated": "2026-08-11T18:41:09.392678+00:00"
+    "updated": "2026-08-11T20:29:35.607813+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
