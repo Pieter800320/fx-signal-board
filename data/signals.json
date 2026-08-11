@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T20:29:35.607813+00:00",
+  "updated": "2026-08-11T22:27:36.680708+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4426.9,
-      "delta_pct": 1.5,
+      "value": 4431.9,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.82,
+      "value": 99.812,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6265,
-      "delta_pct": 0.5,
+      "value": 6.633,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.42,
-      "delta_pct": 1.6,
+      "value": 83.55,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63611.0,
-      "delta_pct": -0.5,
+      "value": 63652.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "U.S. Dollar Moves Higher As Oil Rallies 5% directly conflicts with GBPUSD LONG and NZDUSD LONG. Strong dollar headwinds.",
-    "updated": "2026-08-11T20:29:35.607813+00:00"
+    "text": "GBP/USD and NZD/USD face headwinds. US yields rising and dollar strengthening on oil rally and upcoming CPI data directly conflict with long setups.",
+    "updated": "2026-08-11T22:27:36.680708+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-off favors safe-haven GBP, confirming setup strength today.\n\nNZDUSD LONG: Risk-off headwinds challenge NZD commodity-linked weakness significantly.",
+    "text": "GBPUSD LONG: Risk-off supports safe-haven flows into sterling.\n\nNZDUSD LONG: Risk-off headwinds challenge growth-currency long bias.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 4.92
       }
     ],
-    "updated": "2026-08-11T20:29:35.607813+00:00"
+    "updated": "2026-08-11T22:27:36.680708+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-11T20:29:35.607813+00:00"
+    "updated": "2026-08-11T22:27:36.680708+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $75 billion 3-year notes at 4.291% yield",
-      "U.S. Dollar moves higher as oil rallies 5% amid supply risks",
-      "ADP weekly NER pulse 8.25K vs 15K prior, signals labor weakness"
+      "Stocks/yields slip as markets await US CPI data",
+      "US Dollar rises as oil rallies 5% sharply",
+      "US Treasury 3-year notes sell at 4.291% yield"
     ],
-    "updated": "2026-08-11T20:29:35.607813+00:00"
+    "updated": "2026-08-11T22:27:36.680708+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
