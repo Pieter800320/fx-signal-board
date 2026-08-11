@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T08:12:38.433973+00:00",
+  "updated": "2026-08-11T08:40:21.087752+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.46,
-      "delta_pct": 3.8,
+      "value": 15.49,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4423.2,
-      "delta_pct": 1.4,
+      "value": 4429.2,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.834,
-      "delta_pct": 0.0,
+      "value": 99.87,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.624,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.6695,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.75,
-      "delta_pct": 0.8,
-      "direction": "flat",
+      "value": 84.29,
+      "delta_pct": 2.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63893.0,
-      "delta_pct": -1.5,
+      "value": 64027.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-11T06:40:20.898779+00:00"
+    "text": "U.S. Dollar Moves Higher As Oil Rallies 5 percent conflicts with GBPUSD long. Dollar strength headwinds weaken setup.",
+    "updated": "2026-08-11T08:40:21.087752+00:00"
   },
   "ranked": {
-    "text": "GBPUSD: Risk-off environment challenges long bias despite strong momentum.\n\nNZDUSD: Ranging regime confirms setup but weak price action challenges conviction.",
+    "text": "GBPUSD LONG: Risk-off headwinds challenge setup despite oil strength tailwinds.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.03
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 4.92
+        "score": 6.08
       }
     ],
-    "updated": "2026-08-11T06:40:20.898779+00:00"
+    "updated": "2026-08-11T08:40:21.087752+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-11T06:40:20.898779+00:00"
+    "updated": "2026-08-11T08:40:21.087752+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +705,7 @@
       "UK data: Barclaycard spending rises 2.0% in July as consumer confidence hits 21-month high",
       "U.S. Dollar Moves Higher As Oil Rallies 5%: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY"
     ],
-    "updated": "2026-08-11T06:40:20.898779+00:00"
+    "updated": "2026-08-11T08:40:21.087752+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
