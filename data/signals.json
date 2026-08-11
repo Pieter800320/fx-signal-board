@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-10T22:22:39.311154+00:00",
+  "updated": "2026-08-11T00:40:38.901825+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4451.8,
-      "delta_pct": 2.6,
+      "value": 4472.3,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.807,
+      "value": 99.756,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6315,
-      "delta_pct": 0.9,
+      "value": 6.636,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.22,
+      "value": 82.23,
       "delta_pct": 5.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63949.0,
+      "value": 63915.0,
       "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US employment trends beat expectations, supporting dollar strength. This contradicts GBPUSD long and NZDUSD long setups by favoring USD appreciation against both pairs.",
-    "updated": "2026-08-10T22:22:39.311154+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-11T00:40:38.901825+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro neutral context challenges momentum strength confirmation today.\n\nNZDUSD LONG: Copper surge strongly confirms commodity-linked NZD bullish bias setup.",
+    "text": "GBPUSD: Mixed macro neutral stance challenges strong momentum continuation setup.\n\nNZDUSD: Copper rally confirms long bias via commodity currency tailwind.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 6.12
       }
     ],
-    "updated": "2026-08-10T22:22:39.311154+00:00"
+    "updated": "2026-08-11T00:40:38.901825+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-10T22:22:39.311154+00:00"
+    "updated": "2026-08-11T00:40:38.901825+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +707,10 @@
   "breaking": {
     "headlines": [
       "US July employment trends 107.71 vs 106.74 prior",
-      "U.S. Dollar Moves Higher As Oil Rallies 5%",
-      "RBA decision Tuesday, yen sinks amid risk sentiment"
+      "investingLive Americas market news wrap: Gold and oil continue to climb, yen sinks",
+      "Economic and event calendar in Asia Tuesday, August 11, 2026 - Japan holiday, RBA decision"
     ],
-    "updated": "2026-08-10T22:22:39.311154+00:00"
+    "updated": "2026-08-11T00:40:38.901825+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
