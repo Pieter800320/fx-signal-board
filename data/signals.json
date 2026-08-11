@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T11:49:54.998260+00:00",
+  "updated": "2026-08-11T12:33:07.626404+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.5,
-      "delta_pct": 0.3,
+      "value": 15.47,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4439.4,
-      "delta_pct": 1.8,
+      "value": 4451.2,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.839,
-      "delta_pct": 0.0,
+      "value": 99.865,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.686,
-      "delta_pct": 1.4,
+      "value": 6.654,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.44,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 82.58,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64218.0,
-      "delta_pct": 0.5,
+      "value": 64284.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,18 +617,18 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-11T10:38:17.528859+00:00"
+    "updated": "2026-08-11T12:33:07.626404+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro neutral challenges ranging regime, oil strength supports.",
+    "text": "GBPUSD LONG: Mixed macro neutral challenges ranging regime confirmation, momentum divergence.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.88
+        "score": 6.65
       }
     ],
-    "updated": "2026-08-11T10:38:17.528859+00:00"
+    "updated": "2026-08-11T12:33:07.626404+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-11T10:38:17.528859+00:00"
+    "updated": "2026-08-11T12:33:07.626404+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US NFIB small business optimism beats forecast at 99.8 vs 97.5",
-      "Singapore doubles 2026 growth outlook to 4.5-5.5% on tech cycle",
-      "US Dollar rallies 5% as oil prices surge significantly higher"
+      "ADP weekly employment 8.25K vs 15K prior, signals labor market weakness",
+      "US NFIB small business optimism 99.8 beats 97.5 expected forecast",
+      "US Dollar rallies 5% as oil surges, EUR/USD GBP/USD pressured"
     ],
-    "updated": "2026-08-11T10:38:17.528859+00:00"
+    "updated": "2026-08-11T12:33:07.626404+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
