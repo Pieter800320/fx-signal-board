@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-11T22:27:36.680708+00:00",
+  "updated": "2026-08-12T00:46:13.699635+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4431.9,
-      "delta_pct": 1.6,
+      "value": 4441.9,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.812,
-      "delta_pct": 0.0,
+      "value": 99.807,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.633,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 6.644,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.55,
-      "delta_pct": 1.7,
+      "value": 83.74,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63652.0,
+      "value": 63676.0,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBP/USD and NZD/USD face headwinds. US yields rising and dollar strengthening on oil rally and upcoming CPI data directly conflict with long setups.",
-    "updated": "2026-08-11T22:27:36.680708+00:00"
+    "text": "U.S. Dollar Moves Higher As Oil Rallies 5% accelerates USD strength, conflicting with GBPUSD and NZDUSD long setups. Rising yields support dollar.",
+    "updated": "2026-08-12T00:46:13.699635+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-off supports safe-haven flows into sterling.\n\nNZDUSD LONG: Risk-off headwinds challenge growth-currency long bias.",
+    "text": "GBPUSD LONG: Risk-off environment challenges bullish setup, demand weakness.\n\nNZDUSD LONG: Copper strength confirms long bias, commodity tailwind.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -630,10 +630,10 @@
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 4.92
+        "score": 5.12
       }
     ],
-    "updated": "2026-08-11T22:27:36.680708+00:00"
+    "updated": "2026-08-12T00:46:13.699635+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-11T22:27:36.680708+00:00"
+    "updated": "2026-08-12T00:46:13.699635+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "Stocks/yields slip as markets await US CPI data",
-      "US Dollar rises as oil rallies 5% sharply",
-      "US Treasury 3-year notes sell at 4.291% yield"
+      "U.S. Dollar Moves Higher As Oil Rallies 5%: EUR/USD, GBP/USD, USD/JPY",
+      "US treasury sells $75 billion 3 year notes at 4.291% yield",
+      "Japan bond yields rise as oil gains stoke inflation concerns"
     ],
-    "updated": "2026-08-11T22:27:36.680708+00:00"
+    "updated": "2026-08-12T00:46:13.699635+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
