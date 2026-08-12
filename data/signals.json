@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T20:02:06.137449+00:00",
+  "updated": "2026-08-12T20:27:56.382659+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.54,
-      "delta_pct": -4.8,
+      "value": 14.53,
+      "delta_pct": -4.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7758.79,
-      "delta_pct": 0.4,
+      "value": 7748.5,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4470.2,
+      "value": 4468.8,
       "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.993,
+      "value": 100.01,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6155,
-      "delta_pct": 0.1,
+      "value": 6.607,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.68,
-      "delta_bp": -0.4,
+      "value": 4.682,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,30 +597,30 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.26,
-      "delta_pct": 0.1,
+      "value": 82.9,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63375.0,
-      "delta_pct": -0.3,
+      "value": 63448.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.3,
-      "delta_bp": 1.9,
+      "value": 97.5,
+      "delta_bp": 2.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG conflicted. US deficit highest since 2021 and high treasury yields support USD strength, but risk-off environment from fiscal concerns could weaken CHF demand less, reducing upside momentum for this pair specifically.",
-    "updated": "2026-08-12T18:42:16.434314+00:00"
+    "text": "GBPJPY LONG and AUDJPY LONG conflict with USD strength headlines. US yields rising and dollar rallying pressures yen pairs. USDCHF LONG aligns with dollar strength theme.",
+    "updated": "2026-08-12T20:27:56.382659+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-on regime confirms setup, strong ADX validates momentum continuation.\n\nAUDJPY LONG: Gold rally reinforces AUD strength, macro confirms cross-asset driver.\n\nUSDCHF LONG: Low ADX challenges setup, weak momentum contradicts risk-on confirmation.",
+    "text": "GBPJPY LONG: Risk-on regime supports carry but momentum divergence challenges.\n\nAUDJPY LONG: Gold strength confirms AUD bid, reinforces carry thesis.\n\nUSDCHF LONG: Risk-on favors USD but CHF safe-haven bid weakens.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -630,7 +630,7 @@
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 4.15
+        "score": 3.93
       },
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 2.8
       }
     ],
-    "updated": "2026-08-12T18:42:16.434314+00:00"
+    "updated": "2026-08-12T20:27:56.382659+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T18:42:16.434314+00:00"
+    "updated": "2026-08-12T20:27:56.382659+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-12T07:01:23.321120+00:00"
+    "generated_at": "2026-08-12T20:28:22.282918+00:00"
   },
   "breaking": {
     "headlines": [
-      "US July CPI 3.4% y/y meets expectations, inflation stable",
       "Cleveland Fed median CPI +0.3% vs +0.2% prior",
-      "US treasury sells 10 year notes at high 4.683% yield"
+      "US treasury sells 10 year notes at high yield 4.683%",
+      "US government deficit July highest since 2021"
     ],
-    "updated": "2026-08-12T18:42:16.434314+00:00"
+    "updated": "2026-08-12T20:27:56.382659+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
