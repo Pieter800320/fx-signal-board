@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T16:02:57.503079+00:00",
+  "updated": "2026-08-12T16:42:16.676791+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.87,
-      "delta_pct": -2.7,
+      "value": 14.79,
+      "delta_pct": -3.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7747.28,
-      "delta_pct": 0.2,
+      "value": 7750.63,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4479.8,
+      "value": 4480.0,
       "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.761,
-      "delta_pct": -0.1,
+      "value": 99.908,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.652,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 6.633,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.666,
-      "delta_bp": -1.8,
+      "value": 4.67,
+      "delta_bp": -1.4,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.93,
-      "delta_pct": -0.3,
+      "value": 83.12,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63522.0,
-      "delta_pct": -0.0,
+      "value": 63459.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 95.6,
-      "delta_bp": 0.2,
+      "value": 96.0,
+      "delta_bp": 0.6,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCAD SHORT invalidated by Canada Building Permits beat 18.5% vs 0.8%, supporting CAD strength and undermining the short setup.",
-    "updated": "2026-08-12T14:48:16.467603+00:00"
+    "text": "GBPUSD LONG faces headwind from dollar strength on oil rally and CPI support. USDCAD SHORT conflicts with strong Canadian building permits beat. GBPJPY LONG vulnerable to yen support narrative.",
+    "updated": "2026-08-12T16:42:16.676791+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-on regime confirms setup, sterling strength momentum driver.\n\nUSDCAD SHORT: Mixed macro challenges weak score, commodity divergence unclear signal.\n\nGBPJPY LONG: Risk-on supports long, but weak CMP challenges conviction strength.",
+    "text": "GBPUSD LONG: Risk-On regime confirms setup, strong momentum driver aligns bullish bias.\n\nUSDCAD SHORT: Mixed macro challenges setup, conflicting USD strength versus commodity weakness.\n\nGBPJPY LONG: Risk-On regime confirms setup, but ADX divergence suggests overbought exhaustion.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.15
+        "score": 6.85
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 5.25
+        "score": 5.05
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 4.93
+        "score": 4.45
       }
     ],
-    "updated": "2026-08-12T14:48:16.467603+00:00"
+    "updated": "2026-08-12T16:42:16.676791+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T14:48:16.467603+00:00"
+    "updated": "2026-08-12T16:42:16.676791+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canada Building Permits surge 18.5% vs 0.8% estimate, USD/CAD pressured",
-      "US July CPI meets 3.4% expectation, dollar reaction mixed",
-      "Oil rallies 5%, lifting USD against EUR/GBP/JPY pairs"
+      "US July CPI 3.4% y/y meets expectations, dollar awaits confirmation",
+      "Canada Building Permits surge 18.5% vs 0.8% estimate, CAD rallies",
+      "Cleveland Fed median CPI +0.3% exceeds +0.2% prior estimate"
     ],
-    "updated": "2026-08-12T14:48:16.467603+00:00"
+    "updated": "2026-08-12T16:42:16.676791+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
