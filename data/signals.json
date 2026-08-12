@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T06:19:41.754141+00:00",
+  "updated": "2026-08-12T07:00:58.809182+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4464.0,
+      "value": 4460.9,
       "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.885,
+      "value": 99.876,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.659,
-      "delta_pct": 0.7,
+      "value": 6.6665,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.88,
-      "delta_pct": 0.8,
+      "value": 83.49,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63765.0,
-      "delta_pct": -0.2,
+      "value": 63649.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "Goldman chief economist expects benign July US CPI print could weaken USD, supporting GBPUSD long. Oil rally supports both setups.",
-    "updated": "2026-08-12T05:20:29.227788+00:00"
+    "text": "Goldman chief economist expects benign July US CPI print could weaken USD strength and support GBP/USD long setup.",
+    "updated": "2026-08-12T07:00:58.809182+00:00"
   },
   "ranked": {
-    "text": "GBPUSD: Mixed macro neutral framework challenges strong directional conviction today.\n\nNZDUSD: Copper strength confirms macro support for commodity-linked currency bid.",
+    "text": "GBPUSD LONG: Risk-off headwinds challenge setup despite gold strength signal.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.65
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 5.12
+        "score": 6.42
       }
     ],
-    "updated": "2026-08-12T05:20:29.227788+00:00"
+    "updated": "2026-08-12T07:00:58.809182+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +693,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T05:20:29.227788+00:00"
+    "updated": "2026-08-12T07:00:58.809182+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-11T18:41:34.270166+00:00"
+    "generated_at": "2026-08-12T07:01:23.321120+00:00"
   },
   "breaking": {
     "headlines": [
-      "Goldman chief economist Hatzius expects benign July US CPI print",
-      "Japan bond yields rise as oil gains stoke inflation concerns",
-      "US Dollar moves higher as oil rallies 5 percent"
+      "Germany inflation accelerates in July, core prices remain steady",
+      "Goldman chief economist expects benign July US CPI print",
+      "US Dollar rises as oil rallies 5 percent"
     ],
-    "updated": "2026-08-12T05:20:29.227788+00:00"
+    "updated": "2026-08-12T07:00:58.809182+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
