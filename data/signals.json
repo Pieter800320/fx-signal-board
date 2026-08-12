@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T03:51:43.434130+00:00",
+  "updated": "2026-08-12T05:20:29.227788+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4463.5,
-      "delta_pct": 2.3,
+      "value": 4464.0,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.868,
-      "delta_pct": 0.0,
+      "value": 99.885,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.658,
-      "delta_pct": 1.0,
+      "value": 6.659,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.08,
-      "delta_pct": 2.4,
-      "direction": "up",
+      "value": 83.88,
+      "delta_pct": 0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63742.0,
-      "delta_pct": -0.3,
+      "value": 63765.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar Moves Higher As Oil Rallies 5% conflicts with GBPUSD LONG and NZDUSD LONG. Strong dollar headwinds undermine both setups.",
-    "updated": "2026-08-12T03:51:43.434130+00:00"
+    "text": "Goldman chief economist expects benign July US CPI print could weaken USD, supporting GBPUSD long. Oil rally supports both setups.",
+    "updated": "2026-08-12T05:20:29.227788+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-off environment challenges setup, strength requires safe-haven flows.\n\nNZDUSD LONG: Copper strength confirms macro tailwind for commodity currency.",
+    "text": "GBPUSD: Mixed macro neutral framework challenges strong directional conviction today.\n\nNZDUSD: Copper strength confirms macro support for commodity-linked currency bid.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -633,7 +633,7 @@
         "score": 5.12
       }
     ],
-    "updated": "2026-08-12T03:51:43.434130+00:00"
+    "updated": "2026-08-12T05:20:29.227788+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T03:51:43.434130+00:00"
+    "updated": "2026-08-12T05:20:29.227788+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "Japan bond yields rise as oil gains stoke inflation concerns",
       "US Dollar moves higher as oil rallies 5 percent"
     ],
-    "updated": "2026-08-12T03:51:43.434130+00:00"
+    "updated": "2026-08-12T05:20:29.227788+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
