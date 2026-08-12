@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T10:14:33.991461+00:00",
+  "updated": "2026-08-12T10:46:37.354474+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.31,
-      "delta_pct": 0.2,
+      "value": 15.4,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4464.3,
-      "delta_pct": 1.9,
+      "value": 4475.3,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.848,
+      "value": 99.845,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6705,
-      "delta_pct": 0.9,
+      "value": 6.689,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.55,
-      "delta_pct": 0.4,
+      "value": 83.15,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63730.0,
-      "delta_pct": 0.3,
+      "value": 64071.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "US CPI data and Non Farm Payrolls significantly impact USD strength. CPI could weaken DXY, supporting GBP/USD long. Monitor releases closely today.",
-    "updated": "2026-08-12T08:55:51.532111+00:00"
+    "text": "US CPI report expected today could strengthen USD and weaken GBP/USD long setup if inflation accelerates.",
+    "updated": "2026-08-12T10:46:37.354474+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro neutrality challenges strong momentum continuation bias here.",
+    "text": "GBPUSD LONG: Mixed macro neutral challenges ranging regime confirmation requirement specifically.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.92
+        "score": 7.3
       }
     ],
-    "updated": "2026-08-12T08:55:51.532111+00:00"
+    "updated": "2026-08-12T10:46:37.354474+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T08:55:51.532111+00:00"
+    "updated": "2026-08-12T10:46:37.354474+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Germany inflation confirmed to accelerate in July but core prices remain steadier",
-      "U.S. Dollar Moves Higher As Oil Rallies 5%: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
-      "U.S. Dollar Retreats As Non Farm Payrolls Drop: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY"
+      "US CPI report today could revive DXY, test EUR/USD and GBP/USD",
+      "U.S. Dollar rallies 5% with oil; impacts EUR/USD, GBP/USD, USD/CAD",
+      "Germany inflation accelerates July; core prices steady, affects EUR weakness"
     ],
-    "updated": "2026-08-12T08:55:51.532111+00:00"
+    "updated": "2026-08-12T10:46:37.354474+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
