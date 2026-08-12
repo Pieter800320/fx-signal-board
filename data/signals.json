@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T11:53:09.100796+00:00",
+  "updated": "2026-08-12T12:35:58.870047+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.4,
-      "delta_pct": 0.8,
+      "value": 15.37,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,68 +567,68 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4475.3,
-      "delta_pct": 2.1,
+      "value": 4464.9,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.845,
-      "delta_pct": 0.0,
+      "value": 99.795,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.689,
-      "delta_pct": 1.2,
+      "value": 6.677,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.684,
-      "delta_bp": -1.5,
+      "value": 4.658,
+      "delta_bp": -2.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.73,
-      "delta_bp": 1.2,
+      "value": 3.72,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.15,
-      "delta_pct": -0.1,
+      "value": 83.74,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64071.0,
-      "delta_pct": 0.8,
+      "value": 64108.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 95.4,
-      "delta_bp": -2.7,
+      "value": 93.8,
+      "delta_bp": -1.6,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US CPI report expected today could strengthen USD and weaken GBP/USD long setup if inflation accelerates.",
-    "updated": "2026-08-12T10:46:37.354474+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-12T12:35:58.870047+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro neutral challenges ranging regime confirmation requirement specifically.",
+    "text": "GBPUSD LONG: Mixed macro challenges strong momentum setup, risk-off headwinds.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.3
+        "score": 7.58
       }
     ],
-    "updated": "2026-08-12T10:46:37.354474+00:00"
+    "updated": "2026-08-12T12:35:58.870047+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T10:46:37.354474+00:00"
+    "updated": "2026-08-12T12:35:58.870047+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US CPI report today could revive DXY, test EUR/USD and GBP/USD",
-      "U.S. Dollar rallies 5% with oil; impacts EUR/USD, GBP/USD, USD/CAD",
-      "Germany inflation accelerates July; core prices steady, affects EUR weakness"
+      "US July CPI 3.4% y/y meets expectations, dollar reaction uncertain",
+      "US Dollar rallies 5% as oil surges, EUR/USD pressured",
+      "India CPI accelerates to 4.45% July, food prices driving inflation"
     ],
-    "updated": "2026-08-12T10:46:37.354474+00:00"
+    "updated": "2026-08-12T12:35:58.870047+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
