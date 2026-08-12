@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T14:22:20.928165+00:00",
+  "updated": "2026-08-12T14:48:16.467603+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,80 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.37,
-      "delta_pct": 0.6,
+      "value": 14.87,
+      "delta_pct": -2.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7728.2,
-      "delta_pct": -0.3,
+      "value": 7747.28,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4464.9,
-      "delta_pct": 1.9,
+      "value": 4479.8,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.795,
-      "delta_pct": -0.0,
+      "value": 99.761,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.677,
-      "delta_pct": 1.0,
+      "value": 6.652,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.658,
-      "delta_bp": -2.6,
+      "value": 4.666,
+      "delta_bp": -1.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.72,
-      "delta_bp": -1.0,
-      "direction": "flat",
+      "value": 3.71,
+      "delta_bp": -2.0,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.74,
-      "delta_pct": 0.6,
+      "value": 82.93,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64108.0,
-      "delta_pct": 0.9,
+      "value": 63522.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.8,
-      "delta_bp": -1.6,
+      "value": 95.6,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-12T12:35:58.870047+00:00"
+    "text": "USDCAD SHORT invalidated by Canada Building Permits beat 18.5% vs 0.8%, supporting CAD strength and undermining the short setup.",
+    "updated": "2026-08-12T14:48:16.467603+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Mixed macro challenges strong momentum setup, risk-off headwinds.",
+    "text": "GBPUSD LONG: Risk-on regime confirms setup, sterling strength momentum driver.\n\nUSDCAD SHORT: Mixed macro challenges weak score, commodity divergence unclear signal.\n\nGBPJPY LONG: Risk-on supports long, but weak CMP challenges conviction strength.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.58
+        "score": 8.15
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 5.25
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 4.93
       }
     ],
-    "updated": "2026-08-12T12:35:58.870047+00:00"
+    "updated": "2026-08-12T14:48:16.467603+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T12:35:58.870047+00:00"
+    "updated": "2026-08-12T14:48:16.467603+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July CPI 3.4% y/y meets expectations, dollar reaction uncertain",
-      "US Dollar rallies 5% as oil surges, EUR/USD pressured",
-      "India CPI accelerates to 4.45% July, food prices driving inflation"
+      "Canada Building Permits surge 18.5% vs 0.8% estimate, USD/CAD pressured",
+      "US July CPI meets 3.4% expectation, dollar reaction mixed",
+      "Oil rallies 5%, lifting USD against EUR/GBP/JPY pairs"
     ],
-    "updated": "2026-08-12T12:35:58.870047+00:00"
+    "updated": "2026-08-12T14:48:16.467603+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
