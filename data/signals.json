@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T08:24:02.837113+00:00",
+  "updated": "2026-08-12T08:55:51.532111+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.28,
-      "delta_pct": -1.2,
+      "value": 15.31,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4460.9,
-      "delta_pct": 1.8,
+      "value": 4464.3,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.876,
-      "delta_pct": 0.1,
+      "value": 99.848,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6665,
-      "delta_pct": 0.8,
+      "value": 6.6705,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.49,
-      "delta_pct": 0.3,
+      "value": 83.55,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63649.0,
-      "delta_pct": -0.4,
+      "value": 63730.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,19 @@
     }
   },
   "catalyst": {
-    "text": "Goldman chief economist expects benign July US CPI print could weaken USD strength and support GBP/USD long setup.",
-    "updated": "2026-08-12T07:00:58.809182+00:00"
+    "text": "US CPI data and Non Farm Payrolls significantly impact USD strength. CPI could weaken DXY, supporting GBP/USD long. Monitor releases closely today.",
+    "updated": "2026-08-12T08:55:51.532111+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-off headwinds challenge setup despite gold strength signal.",
+    "text": "GBPUSD LONG: Mixed macro neutrality challenges strong momentum continuation bias here.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.42
+        "score": 6.92
       }
     ],
-    "updated": "2026-08-12T07:00:58.809182+00:00"
+    "updated": "2026-08-12T08:55:51.532111+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T07:00:58.809182+00:00"
+    "updated": "2026-08-12T08:55:51.532111+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Germany inflation accelerates in July, core prices remain steady",
-      "Goldman chief economist expects benign July US CPI print",
-      "US Dollar rises as oil rallies 5 percent"
+      "Germany inflation confirmed to accelerate in July but core prices remain steadier",
+      "U.S. Dollar Moves Higher As Oil Rallies 5%: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY",
+      "U.S. Dollar Retreats As Non Farm Payrolls Drop: Analysis For EUR/USD, GBP/USD, USD/CAD, USD/JPY"
     ],
-    "updated": "2026-08-12T07:00:58.809182+00:00"
+    "updated": "2026-08-12T08:55:51.532111+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
