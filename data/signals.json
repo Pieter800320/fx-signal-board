@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T10:15:54.064673+00:00",
+  "updated": "2026-08-13T10:48:25.551274+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,24 +539,24 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.69,
-      "delta_pct": 1.0,
+      "value": 14.6,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4432.1,
-      "delta_pct": 0.5,
+      "value": 4446.6,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.97,
-      "delta_pct": -0.0,
+      "value": 99.874,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5315,
-      "delta_pct": -1.0,
-      "direction": "down",
+      "value": 6.5785,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.84,
-      "delta_pct": -1.7,
+      "value": 81.5,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63702.0,
-      "delta_pct": 0.5,
+      "value": 63572.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,23 +617,12 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-13T08:57:56.906354+00:00"
+    "updated": "2026-08-13T10:48:25.551274+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Mixed neutral macro challenges setup; CHF safe haven demand unclear.\n\nEURJPY SHORT: Gold rising challenges short; yen bid contradicts bearish setup.",
-    "top": [
-      {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 4.42
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bear",
-        "score": 2.2
-      }
-    ],
-    "updated": "2026-08-13T08:57:56.906354+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-08-13T10:48:25.551274+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +687,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T08:57:56.906354+00:00"
+    "updated": "2026-08-13T10:48:25.551274+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Gains Ground As Inflation Rate Meets Expectations",
-      "UK Q2 GDP +0.4% matches expectations, services sector strengthens",
-      "Spain inflation rises in July, headline and core prices up"
+      "U.S. Dollar gains as inflation meets expectations: EUR/USD, GBP/USD analysis",
+      "UK Q2 GDP +0.4% meets expectations; services sector drives growth",
+      "Spain inflation rises in July; headline and core prices increase"
     ],
-    "updated": "2026-08-13T08:57:56.906354+00:00"
+    "updated": "2026-08-13T10:48:25.551274+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
