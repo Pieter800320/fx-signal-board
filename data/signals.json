@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-12T22:26:19.842589+00:00",
+  "updated": "2026-08-13T00:48:42.315196+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4460.5,
-      "delta_pct": 1.8,
+      "value": 4496.6,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.985,
-      "delta_pct": 0.2,
+      "value": 99.926,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.607,
-      "delta_pct": -0.1,
+      "value": 6.622,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.77,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 82.32,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63431.0,
-      "delta_pct": -0.2,
+      "value": 63522.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-12T22:26:19.842589+00:00"
+    "text": "GBPJPY LONG and AUDJPY LONG conflicted by USD strength headlines. JPY strengthening undermines both setups. USDCHF LONG supported by USD gains.",
+    "updated": "2026-08-13T00:48:42.315196+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, strong ADX validates momentum persistence.\n\nAUDJPY LONG: Gold rally confirms AUD strength, macro tailwind aligns trade.\n\nUSDCHF LONG: Risk-On contradicts CHF safe-haven demand, weak ADX signals unreliable.",
+    "text": "GBPJPY LONG: Risk-on regime confirms setup; momentum divergence challenges conviction.\n\nAUDJPY LONG: Gold strength confirms AUD bid macro tailwind.\n\nUSDCHF LONG: Mixed macro and low ADX challenge momentum setup.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 2.8
       }
     ],
-    "updated": "2026-08-12T22:26:19.842589+00:00"
+    "updated": "2026-08-13T00:48:42.315196+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-12T22:26:19.842589+00:00"
+    "updated": "2026-08-13T00:48:42.315196+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "CPI meets expectations, USD reverses declines and closes higher",
-      "US treasury yields reach 4.683%, highest 10-year note sale",
-      "RBNZ inflation expectations data released, NZD volatility expected"
+      "US CPI meets expectations, USD reverses declines and closes higher",
+      "US treasury sells 10-year notes at high yield 4.683%",
+      "Japan July PPI surges 7.2%, lower than expected 7.4%"
     ],
-    "updated": "2026-08-12T22:26:19.842589+00:00"
+    "updated": "2026-08-13T00:48:42.315196+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
