@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T08:26:11.987581+00:00",
+  "updated": "2026-08-13T08:57:56.906354+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -544,19 +544,19 @@
     "score": 6.7,
     "signals": 1,
     "total": 3,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.55,
-      "delta_pct": -4.8,
+      "value": 14.69,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4436.5,
-      "delta_pct": 0.6,
+      "value": 4432.1,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.03,
-      "delta_pct": 0.0,
+      "value": 99.97,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.552,
-      "delta_pct": -0.7,
+      "value": 6.5315,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.84,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 81.84,
+      "delta_pct": -1.7,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63808.0,
-      "delta_pct": 0.6,
+      "value": 63702.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,23 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-13T07:04:48.136210+00:00"
+    "updated": "2026-08-13T08:57:56.906354+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rally confirms JPY strength bid thesis directly.\n\nUSDCHF LONG: Mixed neutral macro challenges weak momentum setup confirmation.\n\nEURJPY SHORT: Gold strength supports JPY bid despite weak technicals.",
+    "text": "USDCHF LONG: Mixed neutral macro challenges setup; CHF safe haven demand unclear.\n\nEURJPY SHORT: Gold rising challenges short; yen bid contradicts bearish setup.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 6.45
-      },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.75
+        "score": 4.42
       },
       {
         "pair": "EURJPY",
         "direction": "bear",
-        "score": 2.33
+        "score": 2.2
       }
     ],
-    "updated": "2026-08-13T07:04:48.136210+00:00"
+    "updated": "2026-08-13T08:57:56.906354+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T07:04:48.136210+00:00"
+    "updated": "2026-08-13T08:57:56.906354+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-12T20:28:22.282918+00:00"
+    "generated_at": "2026-08-13T08:58:21.750378+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan July PPI surges 7.2%, lower than expected 7.4%",
-      "UK Q2 preliminary GDP +0.4% matches expectations",
-      "US Dollar gains ground as inflation rate meets expectations"
+      "US Dollar Gains Ground As Inflation Rate Meets Expectations",
+      "UK Q2 GDP +0.4% matches expectations, services sector strengthens",
+      "Spain inflation rises in July, headline and core prices up"
     ],
-    "updated": "2026-08-13T07:04:48.136210+00:00"
+    "updated": "2026-08-13T08:57:56.906354+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
