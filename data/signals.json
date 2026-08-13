@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T20:26:03.260937+00:00",
+  "updated": "2026-08-13T22:27:15.916340+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.61,
-      "delta_pct": 0.4,
+      "value": 14.63,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,14 +567,14 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4406.1,
-      "delta_pct": -0.1,
+      "value": 4409.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.976,
-      "delta_pct": -0.0,
+      "value": 99.949,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.18,
-      "delta_pct": -2.5,
+      "value": 81.05,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63374.0,
-      "delta_pct": -0.0,
+      "value": 63554.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG and AUDJPY LONG conflict with USD strength headlines. Strong dollar typically pressures JPY pairs lower. Monitor CPI test catalyst closely.",
-    "updated": "2026-08-13T20:26:03.260937+00:00"
+    "text": "USDCHF LONG at risk: US Dollar Gains Ground headline supports setup but CPI test looms could weaken USD if inflation disappoints.\n\nAUDJPY LONG and GBPJPY LONG at risk: US Dollar strength headlines conflict with Yen",
+    "updated": "2026-08-13T22:27:15.916340+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro challenges setup; risk-on low disfavors safe-haven CHF strength.\n\nAUDJPY LONG: Macro confirms setup; S&P 500 rising supports AUD carry bid.\n\nGBPJPY LONG: Macro confirms setup; S&P 500 rising supports GBP carry bid.",
+    "text": "USDCHF LONG: Ranging regime confirms setup; weak momentum challenges conviction.\n\nAUDJPY LONG: Risk-on environment confirms AUD bid thesis today.\n\nGBPJPY LONG: Risk-on supports GBP but ranging regime limits moves.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 3.1
       }
     ],
-    "updated": "2026-08-13T20:26:03.260937+00:00"
+    "updated": "2026-08-13T22:27:15.916340+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T20:26:03.260937+00:00"
+    "updated": "2026-08-13T22:27:15.916340+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-13T08:58:21.750378+00:00"
+    "generated_at": "2026-08-13T22:27:41.583149+00:00"
   },
   "breaking": {
     "headlines": [
-      "US initial claims 209K exceed 202K estimate, labor weakness signals",
-      "US 30-year treasury yields spike to 5.216%, strengthening dollar",
-      "Dollar gains as inflation meets expectations; EUR/USD, GBP/USD retreat"
+      "US inflation meets expectations, DXY tests key levels ahead of CPI",
+      "US 30-year bonds yield 5.216%, strengthens dollar across major pairs",
+      "US dollar gains as oil rallies 5%, EUR/USD and GBP/USD retreat"
     ],
-    "updated": "2026-08-13T20:26:03.260937+00:00"
+    "updated": "2026-08-13T22:27:15.916340+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
