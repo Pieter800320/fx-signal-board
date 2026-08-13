@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T11:53:36.976213+00:00",
+  "updated": "2026-08-13T12:37:01.262227+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
@@ -551,12 +551,12 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.6,
-      "delta_pct": 0.3,
+      "value": 14.58,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,62 +567,62 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4446.6,
-      "delta_pct": 0.9,
+      "value": 4442.6,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.874,
+      "value": 99.941,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5785,
-      "delta_pct": -0.3,
+      "value": 6.6005,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.682,
-      "delta_bp": -0.2,
+      "value": 4.672,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.707,
-      "delta_bp": -2.3,
-      "direction": "down",
+      "value": 3.703,
+      "delta_bp": -0.4,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.5,
+      "value": 81.55,
       "delta_pct": -2.1,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63572.0,
-      "delta_pct": 0.3,
+      "value": 63538.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.5,
-      "delta_bp": 2.1,
+      "value": 96.9,
+      "delta_bp": -0.6,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-13T10:48:25.551274+00:00"
+    "updated": "2026-08-13T12:37:01.262227+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-08-13T10:48:25.551274+00:00"
+    "updated": "2026-08-13T12:37:01.262227+00:00"
   },
   "calendar": {
     "events": [
@@ -687,7 +687,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T10:48:25.551274+00:00"
+    "updated": "2026-08-13T12:37:01.262227+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -695,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains as inflation meets expectations: EUR/USD, GBP/USD analysis",
-      "UK Q2 GDP +0.4% meets expectations; services sector drives growth",
-      "Spain inflation rises in July; headline and core prices increase"
+      "US inflation rate meets expectations, USD gains ground post-CPI",
+      "US initial claims rise to 209K, above 202K estimate",
+      "Euro area industrial output flat; Spain inflation accelerates July"
     ],
-    "updated": "2026-08-13T10:48:25.551274+00:00"
+    "updated": "2026-08-13T12:37:01.262227+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
