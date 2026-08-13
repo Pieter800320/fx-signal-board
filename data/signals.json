@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T06:21:28.509366+00:00",
+  "updated": "2026-08-13T07:04:48.136210+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 6.7,
+    "signals": 1,
+    "total": 3,
     "stable": false
   },
   "macro": {
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4462.2,
-      "delta_pct": 1.2,
+      "value": 4436.5,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.973,
-      "delta_pct": -0.0,
+      "value": 100.03,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.561,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 6.552,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.13,
-      "delta_pct": -0.2,
+      "value": 82.84,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63894.0,
-      "delta_pct": 0.5,
+      "value": 63808.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY and AUDJPY longs challenged by USD strength headlines. USD gains and dollar moves higher contradict yen weakness needed for these setups.",
-    "updated": "2026-08-13T05:24:43.363478+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-13T07:04:48.136210+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, ADX strength validates momentum continuation.\n\nAUDJPY LONG: Gold surge confirms AUD bid, macro tailwind supports pair direction.\n\nUSDCHF LONG: Low ADX challenges momentum setup, weak CHF demand contradicts conviction.",
+    "text": "NZDJPY SHORT: Gold rally confirms JPY strength bid thesis directly.\n\nUSDCHF LONG: Mixed neutral macro challenges weak momentum setup confirmation.\n\nEURJPY SHORT: Gold strength supports JPY bid despite weak technicals.",
     "top": [
       {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 4.45
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 3.93
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 6.45
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 2.8
+        "score": 4.75
+      },
+      {
+        "pair": "EURJPY",
+        "direction": "bear",
+        "score": 2.33
       }
     ],
-    "updated": "2026-08-13T05:24:43.363478+00:00"
+    "updated": "2026-08-13T07:04:48.136210+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T05:24:43.363478+00:00"
+    "updated": "2026-08-13T07:04:48.136210+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US CPI meets expectations, USD reverses declines and closes higher",
       "Japan July PPI surges 7.2%, lower than expected 7.4%",
-      "US government deficit in July highest since 2021"
+      "UK Q2 preliminary GDP +0.4% matches expectations",
+      "US Dollar gains ground as inflation rate meets expectations"
     ],
-    "updated": "2026-08-13T05:24:43.363478+00:00"
+    "updated": "2026-08-13T07:04:48.136210+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
