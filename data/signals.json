@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T19:57:42.566758+00:00",
+  "updated": "2026-08-13T20:26:03.260937+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-Off",
     "confidence": "Medium",
     "score": 10.0,
-    "signals": 2,
-    "total": 2,
+    "signals": 1,
+    "total": 1,
     "stable": true
   },
   "macro": {
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.69,
-      "delta_pct": 1.0,
+      "value": 14.61,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7799.58,
+      "value": 7798.99,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4414.1,
-      "delta_pct": 0.1,
+      "value": 4406.1,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.966,
+      "value": 99.976,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.596,
-      "delta_pct": -0.0,
+      "value": 6.5835,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.643,
-      "delta_bp": -3.9,
-      "direction": "flat",
+      "value": 4.641,
+      "delta_bp": -4.1,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.703,
-      "delta_bp": -0.4,
+      "value": 3.705,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.12,
-      "delta_pct": -2.6,
+      "value": 81.18,
+      "delta_pct": -2.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63116.0,
-      "delta_pct": -0.5,
+      "value": 63374.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 94.0,
-      "delta_bp": -3.5,
+      "value": 93.6,
+      "delta_bp": -3.9,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG conflicted by dollar tentative sentiment. GBPJPY LONG threatened by pound testing support levels. AUDJPY LONG vulnerable to broader yen strength themes.",
-    "updated": "2026-08-13T18:42:42.742275+00:00"
+    "text": "GBPJPY LONG and AUDJPY LONG conflict with USD strength headlines. Strong dollar typically pressures JPY pairs lower. Monitor CPI test catalyst closely.",
+    "updated": "2026-08-13T20:26:03.260937+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Macro challenges setup, risk-on low favors CHF safe-haven.\n\nAUDJPY LONG: Macro confirms setup, S&P 500 rising supports AUD.\n\nGBPJPY LONG: Macro confirms setup, S&P 500 rising supports GBP.",
+    "text": "USDCHF LONG: Macro challenges setup; risk-on low disfavors safe-haven CHF strength.\n\nAUDJPY LONG: Macro confirms setup; S&P 500 rising supports AUD carry bid.\n\nGBPJPY LONG: Macro confirms setup; S&P 500 rising supports GBP carry bid.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.2
+        "score": 4.15
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 3.3
+        "score": 3.6
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 3.17
+        "score": 3.1
       }
     ],
-    "updated": "2026-08-13T18:42:42.742275+00:00"
+    "updated": "2026-08-13T20:26:03.260937+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T18:42:42.742275+00:00"
+    "updated": "2026-08-13T20:26:03.260937+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells 30 year bonds at high yield 5.216%",
-      "US initial claims 209K vs 202K estimate, labor softening",
-      "US Dollar gains as inflation rate meets expectations"
+      "US initial claims 209K exceed 202K estimate, labor weakness signals",
+      "US 30-year treasury yields spike to 5.216%, strengthening dollar",
+      "Dollar gains as inflation meets expectations; EUR/USD, GBP/USD retreat"
     ],
-    "updated": "2026-08-13T18:42:42.742275+00:00"
+    "updated": "2026-08-13T20:26:03.260937+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
