@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T16:03:02.275858+00:00",
+  "updated": "2026-08-13T16:40:50.972111+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,93 +547,98 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.74,
-      "delta_pct": 1.3,
+      "value": 14.7,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7803.5,
-      "delta_pct": 0.7,
+      "value": 7785.21,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4430.7,
-      "delta_pct": 0.5,
+      "value": 4422.3,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.87,
-      "delta_pct": -0.1,
+      "value": 99.97,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6165,
-      "delta_pct": 0.3,
+      "value": 6.6085,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.623,
-      "delta_bp": -5.9,
+      "value": 4.639,
+      "delta_bp": -4.3,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": -1.4,
+      "value": 3.697,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.9,
-      "delta_pct": -2.8,
+      "value": 82.28,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63856.0,
-      "delta_pct": 0.7,
+      "value": 62961.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.0,
-      "delta_bp": -4.5,
+      "value": 94.2,
+      "delta_bp": -3.3,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-13T14:48:23.758803+00:00"
+    "text": "GBPUSD LONG conflicted by dollar gains headline and GBP/USD retreat mentions. USDJPY SHORT conflicted by dollar strengthening across multiple headlines.",
+    "updated": "2026-08-13T16:40:50.972111+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rising confirms risk-on GBP bid thesis today.\n\nUSDJPY SHORT: Falling US 10Y supports JPY bid, challenges carry unwind.",
+    "text": "GBPUSD LONG: S&P 500 strength confirms risk-on GBP bid setup directly.\n\nUSDJPY SHORT: Falling US 10Y confirms safe-haven JPY bid thesis.\n\nAUDJPY LONG: S&P 500 rising supports AUD bid, but oil weakness challenges.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.0
+        "score": 6.9
       },
       {
         "pair": "USDJPY",
         "direction": "bear",
-        "score": 5.9
+        "score": 5.07
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 4.15
       }
     ],
-    "updated": "2026-08-13T14:48:23.758803+00:00"
+    "updated": "2026-08-13T16:40:50.972111+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T14:48:23.758803+00:00"
+    "updated": "2026-08-13T16:40:50.972111+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -707,10 +712,10 @@
   "breaking": {
     "headlines": [
       "US inflation rate meets expectations, dollar gains ground",
-      "US initial claims 209K exceed 202K estimate",
-      "Euro area industrial output flat, Spain inflation rises"
+      "US initial claims 209K vs 202K estimate, signals weaken",
+      "Euro area industrial output flat June, EUR pressure mounts"
     ],
-    "updated": "2026-08-13T14:48:23.758803+00:00"
+    "updated": "2026-08-13T16:40:50.972111+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
