@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T11:50:21.838887+00:00",
+  "updated": "2026-08-14T12:32:41.818551+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.56,
-      "delta_pct": -0.5,
+      "value": 14.54,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4405.9,
-      "delta_pct": 1.0,
+      "value": 4434.7,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.729,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 99.576,
+      "delta_pct": -0.4,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.582,
-      "delta_pct": -0.2,
+      "value": 6.5865,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.81,
-      "delta_pct": 0.7,
+      "value": 81.87,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62790.0,
-      "delta_pct": -1.0,
+      "value": 62831.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-14T10:44:13.393902+00:00"
+    "text": "GBPUSD LONG conflicts with multiple dollar strength headlines citing GBP/USD resistance tests and dollar gains on inflation data. Monitor CPI closely.",
+    "updated": "2026-08-14T12:32:41.818551+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-on equities confirm GBP strength narrative today.\n\nUSDCAD SHORT: Risk-on equities confirm CAD bid, USD weakness.\n\nNZDUSD LONG: Risk-on equities confirm NZD bid over USD.",
+    "text": "GBPUSD LONG: S&P 500 rally and DXY weakness confirm setup perfectly today.\n\nUSDCAD SHORT: Risk-on environment and falling DXY strongly confirm USD weakness thesis.\n\nNZDUSD LONG: Rising equities and softer dollar confirm NZD bid momentum today.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.22
+        "score": 8.8
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 8.0
+        "score": 7.97
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 6.88
+        "score": 7.58
       }
     ],
-    "updated": "2026-08-14T10:44:13.393902+00:00"
+    "updated": "2026-08-14T12:32:41.818551+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T10:44:13.393902+00:00"
+    "updated": "2026-08-14T12:32:41.818551+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "China new bank loans contract again in July, second time this year",
-      "U.S. Dollar gains ground as inflation rate meets expectations",
-      "French inflation accelerates in July, core prices move up"
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets EUR/USD GBP/USD Rally",
+      "China new bank loans contract again July, second time this year",
+      "French inflation accelerates again July, core prices move up"
     ],
-    "updated": "2026-08-14T10:44:13.393902+00:00"
+    "updated": "2026-08-14T12:32:41.818551+00:00"
   },
   "last_alert": "2026-08-14T11:50:21.838887+00:00",
   "gold_signal": {
