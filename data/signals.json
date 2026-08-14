@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T20:18:08.760178+00:00",
+  "updated": "2026-08-14T22:08:53.249368+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.23,
-      "delta_pct": -2.7,
+      "value": 14.25,
+      "delta_pct": -2.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4428.7,
-      "delta_pct": 1.5,
+      "value": 4432.0,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.645,
+      "value": 99.636,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6035,
+      "value": 6.6065,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.49,
-      "delta_pct": 1.5,
+      "value": 82.4,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62855.0,
+      "value": 62839.0,
       "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by dollar strength headlines and CPI/PPI uncertainty. USDCAD SHORT challenged by Canadian manufacturing beat and dollar resilience. NZDUSD appears least affected.",
-    "updated": "2026-08-14T20:18:08.760178+00:00"
+    "text": "GBPUSD LONG conflicted by dollar strength headlines and yield rise supporting USD. USDCAD SHORT challenged by softer inflation supporting Fed cuts and weaker dollar. NZDUSD LONG less directly impacted by current headlines.",
+    "updated": "2026-08-14T22:08:53.249368+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Macro confirms setup via falling DXY and risk-on sentiment.\n\nUSDCAD SHORT: Macro confirms setup via rising oil and falling DXY.\n\nNZDUSD LONG: Macro challenges setup, risk-on macro conflicts with falling yields.",
+    "text": "GBPUSD LONG: Macro confirms setup, DXY falling supports USD weakness thesis.\n\nUSDCAD SHORT: Macro confirms setup, rising oil strengthens Canadian dollar fundamentals.\n\nNZDUSD LONG: Macro confirms setup, broad USD offered environment supports long.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.1
       }
     ],
-    "updated": "2026-08-14T20:18:08.760178+00:00"
+    "updated": "2026-08-14T22:08:53.249368+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T20:18:08.760178+00:00"
+    "updated": "2026-08-14T22:08:53.249368+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July retail sales -0.6% vs +0.1% expected, signals weak consumer",
-      "US August UMich consumer sentiment 51.0 vs 54.5 expected, misses badly",
-      "Trump declares Strait of Hormuz US territory, geopolitical risk escalates sharply"
+      "US August prelim UMich consumer sentiment 51.0 vs 54.5 expected",
+      "US July retail sales -0.6% vs +0.1% expected",
+      "Stocks finish mixed as yields rise and dollar falls"
     ],
-    "updated": "2026-08-14T20:18:08.760178+00:00"
+    "updated": "2026-08-14T22:08:53.249368+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
