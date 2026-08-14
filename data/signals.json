@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T22:27:15.916340+00:00",
+  "updated": "2026-08-14T00:47:43.566740+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4409.0,
-      "delta_pct": 0.0,
+      "value": 4396.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.949,
+      "value": 99.895,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5835,
+      "value": 6.5855,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.05,
-      "delta_pct": -2.7,
+      "value": 81.23,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63554.0,
-      "delta_pct": 0.2,
+      "value": 63437.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF LONG at risk: US Dollar Gains Ground headline supports setup but CPI test looms could weaken USD if inflation disappoints.\n\nAUDJPY LONG and GBPJPY LONG at risk: US Dollar strength headlines conflict with Yen",
-    "updated": "2026-08-13T22:27:15.916340+00:00"
+    "text": "GBPJPY and AUDJPY conflict with US Dollar strength headlines. Strong USD typically weakens JPY pairs as capital flows to dollars, invalidating long positions in yen crosses.",
+    "updated": "2026-08-14T00:47:43.566740+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Ranging regime confirms setup; weak momentum challenges conviction.\n\nAUDJPY LONG: Risk-on environment confirms AUD bid thesis today.\n\nGBPJPY LONG: Risk-on supports GBP but ranging regime limits moves.",
+    "text": "USDCHF LONG: Ranging regime confirms setup but weak momentum challenges conviction here.\n\nAUDJPY LONG: S&P 500 rising confirms AUD bid, supports long thesis.\n\nGBPJPY LONG: S&P 500 rising confirms GBP bid, supports long thesis.",
     "top": [
       {
         "pair": "USDCHF",
@@ -638,7 +638,7 @@
         "score": 3.1
       }
     ],
-    "updated": "2026-08-13T22:27:15.916340+00:00"
+    "updated": "2026-08-14T00:47:43.566740+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-13T22:27:15.916340+00:00"
+    "updated": "2026-08-14T00:47:43.566740+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US inflation meets expectations, DXY tests key levels ahead of CPI",
-      "US 30-year bonds yield 5.216%, strengthens dollar across major pairs",
-      "US dollar gains as oil rallies 5%, EUR/USD and GBP/USD retreat"
+      "U.S. Dollar gains as inflation meets expectations, EUR/USD and GBP/USD retreat",
+      "US 30-year treasury yields spike to 5.216%, highest recent level",
+      "NZ manufacturing cools to 54.3 in July, signals economic slowdown"
     ],
-    "updated": "2026-08-13T22:27:15.916340+00:00"
+    "updated": "2026-08-14T00:47:43.566740+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
