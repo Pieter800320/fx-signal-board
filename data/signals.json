@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T10:11:10.530518+00:00",
+  "updated": "2026-08-14T10:44:13.393902+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.62,
-      "delta_pct": -0.1,
+      "value": 14.56,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4402.0,
-      "delta_pct": 0.9,
+      "value": 4405.9,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.723,
+      "value": 99.729,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5805,
+      "value": 6.582,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.45,
-      "delta_pct": 1.5,
-      "direction": "up",
+      "value": 81.81,
+      "delta_pct": 0.7,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62855.0,
-      "delta_pct": -0.9,
+      "value": 62790.0,
+      "delta_pct": -1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD SHORT faces headwind from US Dollar strengthening headlines. GBPUSD LONG conflicts with GBP weakness and DXY strength narratives across multiple forecasts.",
-    "updated": "2026-08-14T08:53:28.437643+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-14T10:44:13.393902+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup, risk-on regime strengthens CAD bid pressure.\n\nGBPUSD LONG: Macro confirms setup, equity rally supports GBP appreciation momentum.\n\nCADJPY LONG: Macro challenges setup, contradictory oil and equities both bidding CAD.",
+    "text": "GBPUSD LONG: Risk-on equities confirm GBP strength narrative today.\n\nUSDCAD SHORT: Risk-on equities confirm CAD bid, USD weakness.\n\nNZDUSD LONG: Risk-on equities confirm NZD bid over USD.",
     "top": [
-      {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 8.18
-      },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.12
+        "score": 8.22
       },
       {
-        "pair": "CADJPY",
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 8.0
+      },
+      {
+        "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.22
+        "score": 6.88
       }
     ],
-    "updated": "2026-08-14T08:53:28.437643+00:00"
+    "updated": "2026-08-14T10:44:13.393902+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T08:53:28.437643+00:00"
+    "updated": "2026-08-14T10:44:13.393902+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-13T22:27:41.583149+00:00"
+    "generated_at": "2026-08-14T10:44:37.412750+00:00"
   },
   "breaking": {
     "headlines": [
-      "US inflation meets expectations, dollar gains ground against EUR/USD, GBP/USD",
-      "French inflation accelerates July, core prices rise pressuring euro",
-      "Trump orders up to 100% tariffs on drone imports"
+      "China new bank loans contract again in July, second time this year",
+      "U.S. Dollar gains ground as inflation rate meets expectations",
+      "French inflation accelerates in July, core prices move up"
     ],
-    "updated": "2026-08-14T08:53:28.437643+00:00"
+    "updated": "2026-08-14T10:44:13.393902+00:00"
   },
   "last_alert": "2026-08-14T08:21:49.404683+00:00",
   "gold_signal": {
