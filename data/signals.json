@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T14:18:53.328710+00:00",
+  "updated": "2026-08-14T14:42:48.492133+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.54,
-      "delta_pct": -0.6,
+      "value": 14.61,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7798.99,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 7793.07,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4434.7,
-      "delta_pct": 1.6,
+      "value": 4446.4,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.576,
-      "delta_pct": -0.4,
+      "value": 99.507,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5865,
-      "delta_pct": -0.1,
+      "value": 6.622,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.641,
-      "delta_bp": -4.1,
-      "direction": "down",
+      "value": 4.661,
+      "delta_bp": 2.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.705,
-      "delta_bp": -0.2,
+      "value": 3.7,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.87,
-      "delta_pct": 0.8,
+      "value": 81.6,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62831.0,
-      "delta_pct": -0.9,
+      "value": 62676.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.6,
-      "delta_bp": -3.9,
-      "direction": "down",
+      "value": 96.1,
+      "delta_bp": 2.5,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with multiple dollar strength headlines citing GBP/USD resistance tests and dollar gains on inflation data. Monitor CPI closely.",
-    "updated": "2026-08-14T12:32:41.818551+00:00"
+    "text": "GBPUSD LONG challenged by dollar strength headlines suggesting GBP resistance tests ahead. USDCAD SHORT supported by softer US data reducing rate cut odds.",
+    "updated": "2026-08-14T14:42:48.492133+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: S&P 500 rally and DXY weakness confirm setup perfectly today.\n\nUSDCAD SHORT: Risk-on environment and falling DXY strongly confirm USD weakness thesis.\n\nNZDUSD LONG: Rising equities and softer dollar confirm NZD bid momentum today.",
+    "text": "GBPUSD LONG: Macro risk-on low challenges setup, needs USD weakness confirmation.\n\nUSDCAD SHORT: Macro risk-on low challenges setup, requires sustained DXY breakdown.\n\nNZDUSD LONG: Macro risk-on low challenges setup, risk appetite divergence problematic.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 8.8
+        "score": 8.15
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 7.97
+        "score": 7.78
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.58
+        "score": 7.1
       }
     ],
-    "updated": "2026-08-14T12:32:41.818551+00:00"
+    "updated": "2026-08-14T14:42:48.492133+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T12:32:41.818551+00:00"
+    "updated": "2026-08-14T14:42:48.492133+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets EUR/USD GBP/USD Rally",
-      "China new bank loans contract again July, second time this year",
-      "French inflation accelerates again July, core prices move up"
+      "US August consumer sentiment 51.0 vs 54.5 expected, significant miss",
+      "US July retail sales -0.6% vs +0.1% expected, weakness confirmed",
+      "Dollar falls amid mixed markets, inflation expectations impact EUR/USD GBP/USD"
     ],
-    "updated": "2026-08-14T12:32:41.818551+00:00"
+    "updated": "2026-08-14T14:42:48.492133+00:00"
   },
   "last_alert": "2026-08-14T14:18:53.328710+00:00",
   "gold_signal": {
