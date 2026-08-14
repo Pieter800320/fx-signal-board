@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T00:47:43.566740+00:00",
+  "updated": "2026-08-14T03:52:05.092413+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4396.0,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 4381.1,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.895,
+      "value": 99.885,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5855,
-      "delta_pct": -0.2,
+      "value": 6.574,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.23,
-      "delta_pct": -2.4,
+      "value": 81.36,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63437.0,
-      "delta_pct": 0.1,
+      "value": 63269.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY and AUDJPY conflict with US Dollar strength headlines. Strong USD typically weakens JPY pairs as capital flows to dollars, invalidating long positions in yen crosses.",
-    "updated": "2026-08-14T00:47:43.566740+00:00"
+    "text": "GBPJPY and AUDJPY conflict with US Dollar strength headlines. DXY gains and USD/JPY rallying reduce JPY weakness needed for these longs.",
+    "updated": "2026-08-14T03:52:05.092413+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Ranging regime confirms setup but weak momentum challenges conviction here.\n\nAUDJPY LONG: S&P 500 rising confirms AUD bid, supports long thesis.\n\nGBPJPY LONG: S&P 500 rising confirms GBP bid, supports long thesis.",
+    "text": "USDCHF LONG: Macro confirms setup, gold weakness supports safe haven USD bid.\n\nAUDJPY LONG: Macro confirms setup, risk on environment supports AUD strength bid.\n\nGBPJPY LONG: Macro challenges setup, ranging regime conflicts with momentum driven long thesis.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 4.15
+        "score": 4.35
       },
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 3.1
       }
     ],
-    "updated": "2026-08-14T00:47:43.566740+00:00"
+    "updated": "2026-08-14T03:52:05.092413+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T00:47:43.566740+00:00"
+    "updated": "2026-08-14T03:52:05.092413+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "U.S. Dollar gains as inflation meets expectations, EUR/USD and GBP/USD retreat",
-      "US 30-year treasury yields spike to 5.216%, highest recent level",
-      "NZ manufacturing cools to 54.3 in July, signals economic slowdown"
+      "Trump orders tariffs up to 100% on drone imports, citing security concerns",
+      "U.S. Dollar gains as inflation rate meets expectations; EUR/USD, GBP/USD retreat",
+      "EUR risk: Latvia air threat alert, Finland restricts Gulf of Finland traffic"
     ],
-    "updated": "2026-08-14T00:47:43.566740+00:00"
+    "updated": "2026-08-14T03:52:05.092413+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
