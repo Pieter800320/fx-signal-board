@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-14T06:19:42.690160+00:00",
+  "updated": "2026-08-14T07:01:18.607566+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4376.4,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4390.2,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.862,
+      "value": 99.826,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.558,
-      "delta_pct": -0.5,
+      "value": 6.586,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.36,
-      "delta_pct": -2.3,
-      "direction": "down",
+      "value": 82.15,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63269.0,
-      "delta_pct": -0.2,
+      "value": 62901.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY and AUDJPY conflict with US Dollar strength headlines. Strong USD headwinds against JPY pairs. USDCHF aligns with dollar momentum.",
-    "updated": "2026-08-14T05:21:14.285921+00:00"
+    "text": "GBPUSD LONG at risk: US Dollar gains ground, GBP tests support. CPI test looms as key resistance level.",
+    "updated": "2026-08-14T07:01:18.607566+00:00"
   },
   "ranked": {
-    "text": "USDCHF LONG: Ranging regime confirms setup but weak momentum challenges entry conviction.\n\nAUDJPY LONG: Risk-on S&P strength confirms AUD bid, supports carry positioning thesis.\n\nGBPJPY LONG: Risk-on environment and S&P rise confirm GBP bid but high ADX warns.",
+    "text": "USDCAD SHORT: Macro challenges setup, oil strength contradicts short conviction.\n\nGBPUSD LONG: Macro confirms setup, risk-on environment supports sterling appreciation.\n\nUSDJPY SHORT: Macro confirms setup, falling yields and gold bid yen.",
     "top": [
       {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 4.15
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 6.45
       },
       {
-        "pair": "AUDJPY",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 3.6
+        "score": 6.18
       },
       {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 3.1
+        "pair": "USDJPY",
+        "direction": "bear",
+        "score": 5.5
       }
     ],
-    "updated": "2026-08-14T05:21:14.285921+00:00"
+    "updated": "2026-08-14T07:01:18.607566+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-14T05:21:14.285921+00:00"
+    "updated": "2026-08-14T07:01:18.607566+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump orders tariffs up to 100% on drone imports, citing security concerns",
-      "US Dollar gains as inflation meets expectations, EUR/USD and GBP/USD retreat",
-      "EUR risk: Latvia air threat alert, Finland restricts Gulf of Finland traffic"
+      "French inflation accelerates in July, core prices rise significantly",
+      "US Dollar gains as inflation meets expectations, EUR/USD retreats",
+      "German wholesale prices bounce back as energy tax cut lapses"
     ],
-    "updated": "2026-08-14T05:21:14.285921+00:00"
+    "updated": "2026-08-14T07:01:18.607566+00:00"
   },
   "last_alert": "2026-08-10T19:56:28.516597+00:00",
   "gold_signal": {
