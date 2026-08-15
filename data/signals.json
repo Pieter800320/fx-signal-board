@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-15T18:08:57.618718+00:00",
+  "updated": "2026-08-15T20:07:27.768781+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63007.0,
+      "value": 63021.0,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG potentially challenged by dollar strength headlines and CPI/PPI tests. USDCAD SHORT conflicted by Canada manufacturing beat and dollar gains narrative.",
-    "updated": "2026-08-15T18:08:57.618718+00:00"
+    "text": "GBPUSD LONG conflicted by dollar weakness narrative and Fed cut bets reducing GBP outperformance potential. USDCAD SHORT supported by softer US data undermining dollar.",
+    "updated": "2026-08-15T20:07:27.768781+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-On macro confirms setup, DXY weakness drives USD offered.\n\nUSDCAD SHORT: Risk-On macro and oil strength confirm CAD bid setup.\n\nNZDUSD LONG: Risk-On macro confirms, DXY falling supports USD weakness trend.",
+    "text": "GBPUSD LONG: Macro confirms setup via falling DXY weakening USD fundamentals.\n\nUSDCAD SHORT: Macro confirms setup via rising WTI and falling DXY.\n\nNZDUSD LONG: Macro confirms setup via falling DXY but challenged by rising rates.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.1
       }
     ],
-    "updated": "2026-08-15T18:08:57.618718+00:00"
+    "updated": "2026-08-15T20:07:27.768781+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-15T18:08:57.618718+00:00"
+    "updated": "2026-08-15T20:07:27.768781+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,7 +715,7 @@
       "US July retail sales -0.6% vs +0.1% expected",
       "Stocks finish mixed as yields rise and dollar falls"
     ],
-    "updated": "2026-08-15T18:08:57.618718+00:00"
+    "updated": "2026-08-15T20:07:27.768781+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
