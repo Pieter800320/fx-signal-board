@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T04:22:29.926428+00:00",
+  "updated": "2026-08-16T06:16:32.600063+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63082.0,
-      "delta_pct": 0.2,
+      "value": 62984.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicts with dollar gains narrative from multiple headlines. USDCAD SHORT supported by weak US data accelerating Fed cut bets. NZDUSD LONG no direct conflict identified.",
-    "updated": "2026-08-16T04:22:29.926428+00:00"
+    "text": "GBPUSD LONG conflicts with US Dollar gains ground headline showing dollar strength. USDCAD SHORT conflicts with Canada Manufacturing Sales beat supporting CAD strength.",
+    "updated": "2026-08-16T06:16:32.600063+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-on regime and falling DXY confirm setup, momentum driver.\n\nUSDCAD SHORT: Rising oil and falling DXY confirm setup, dual driver.\n\nNZDUSD LONG: Falling DXY confirms setup, but momentum flat challenges conviction.",
+    "text": "GBPUSD LONG: Macro confirms setup via falling DXY and risk-on environment.\n\nUSDCAD SHORT: Macro confirms setup via rising oil and falling DXY.\n\nNZDUSD LONG: Macro confirms setup via falling DXY offsetting risk-on macro caution.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.1
       }
     ],
-    "updated": "2026-08-16T04:22:29.926428+00:00"
+    "updated": "2026-08-16T06:16:32.600063+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-16T04:22:29.926428+00:00"
+    "updated": "2026-08-16T06:16:32.600063+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,7 +715,7 @@
       "US July retail sales -0.6% vs +0.1% expected",
       "Stocks finish mixed as yields rise and dollar falls"
     ],
-    "updated": "2026-08-16T04:22:29.926428+00:00"
+    "updated": "2026-08-16T06:16:32.600063+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
