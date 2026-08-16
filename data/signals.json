@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T20:05:58.232103+00:00",
+  "updated": "2026-08-16T21:19:22.065420+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63046.0,
-      "delta_pct": 0.0,
+      "value": 62998.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by dollar strength headlines and Fed cut bets uncertainty. USDCAD SHORT supported by weak US data. NZDUSD LONG neutral.",
-    "updated": "2026-08-16T20:05:58.232103+00:00"
+    "text": "GBPUSD LONG conflicted by dollar strength headlines and yield rise supporting USD. USDCAD SHORT weakened by Canada manufacturing beat and softer US data supporting CAD strength.",
+    "updated": "2026-08-16T21:19:22.065420+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Macro confirms setup, DXY weakness supports USD selling pressure.\n\nUSDCAD SHORT: Macro confirms setup, oil strength reinforces CAD bid thesis.\n\nNZDUSD LONG: Macro challenges setup, rising rates may support USD demand.",
+    "text": "GBPUSD LONG: Macro confirms setup via falling DXY and risk-on sentiment.\n\nUSDCAD SHORT: Macro confirms setup via rising oil and falling DXY.\n\nNZDUSD LONG: Macro confirms setup via falling DXY offsetting risk-on macro caution.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.1
       }
     ],
-    "updated": "2026-08-16T20:05:58.232103+00:00"
+    "updated": "2026-08-16T21:19:22.065420+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-16T20:05:58.232103+00:00"
+    "updated": "2026-08-16T21:19:22.065420+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,7 +715,7 @@
       "US July retail sales -0.6% vs +0.1% expected",
       "Stocks finish mixed as yields rise and dollar falls"
     ],
-    "updated": "2026-08-16T20:05:58.232103+00:00"
+    "updated": "2026-08-16T21:19:22.065420+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
@@ -725,5 +725,9 @@
     "h4_confidence": "High",
     "h1_confirmed": true,
     "updated": "2026-08-14T19:50:57.182551+00:00"
+  },
+  "week_ahead": {
+    "text": "I'll search for current FX market previews to provide you with the most up-to-date weekly outlook. Stagflation fears are driving global markets as dual shocks of rising oil and climbing Treasury yields reshape currency dynamics. The week focuses on major economic data from Germany, the United States, New Zealand, and the United Kingdom, plus the RBA meeting outcome. Weak US employment data and Middle East uncertainty create diverging signals across USD/MXN, gold, stocks, oil, USD/JPY, DAX and EUR/USD. August's low liquidity means surprise data can push prices further than normal, magnifying volatility risk.",
+    "generated_at": "2026-08-16T21:19:22.065420+00:00"
   }
 }
