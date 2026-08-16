@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T14:09:43.319389+00:00",
+  "updated": "2026-08-16T16:08:29.292031+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62994.0,
-      "delta_pct": -0.0,
+      "value": 63077.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by dollar strength headlines and yields rising. USDCAD SHORT conflicted by softer dollar narrative and Canada manufacturing beat.",
-    "updated": "2026-08-16T14:09:43.319389+00:00"
+    "text": "GBPUSD LONG conflicted by dollar strength narrative across multiple headlines. USDCAD SHORT conflicted by strong Canadian manufacturing data and dollar firmness themes.",
+    "updated": "2026-08-16T16:08:29.292031+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Macro confirms setup, USD weakness from DXY falling primary driver.\n\nUSDCAD SHORT: Macro confirms setup, oil strength and USD weakness dual drivers.\n\nNZDUSD LONG: Macro challenges setup, risk-on low macro conflicts with USD offered thesis.",
+    "text": "GBPUSD LONG: Macro confirms setup, DXY falling supports USD weakness.\n\nUSDCAD SHORT: Macro confirms setup, rising oil strengthens Canadian dollar.\n\nNZDUSD LONG: Macro confirms setup, falling DXY supports NZD upside.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 6.1
       }
     ],
-    "updated": "2026-08-16T14:09:43.319389+00:00"
+    "updated": "2026-08-16T16:08:29.292031+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-16T14:09:43.319389+00:00"
+    "updated": "2026-08-16T16:08:29.292031+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-16T02:49:16.166293+00:00"
+    "generated_at": "2026-08-16T16:08:54.565542+00:00"
   },
   "breaking": {
     "headlines": [
-      "US July retail sales -0.6% vs +0.1% expected",
       "US August prelim UMich consumer sentiment 51.0 vs 54.5 expected",
-      "US Dollar falls as yields rise, stocks finish mixed"
+      "US July retail sales -0.6% vs +0.1% expected",
+      "Stocks finish mixed as yields rise and dollar falls"
     ],
-    "updated": "2026-08-16T14:09:43.319389+00:00"
+    "updated": "2026-08-16T16:08:29.292031+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
