@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T05:40:17.517633+00:00",
+  "updated": "2026-08-17T06:24:41.014923+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4454.5,
+      "value": 4453.5,
       "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.49,
+      "value": 99.508,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7225,
+      "value": 6.727,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.2,
-      "delta_pct": -0.2,
+      "value": 81.87,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63435.0,
-      "delta_pct": 0.7,
+      "value": 63522.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG faces headwind from UK housing slump and hiring freeze clouding outlook. GBP weakness risk elevated.",
-    "updated": "2026-08-17T04:27:39.772738+00:00"
+    "text": "AUDJPY LONG conflicts with yen firms headline. JPY strength undermines AUD upside potential. USDCAD SHORT supported by softer PPI boosting Fed cut bets weakening USD.",
+    "updated": "2026-08-17T06:24:41.014923+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-On regime confirms setup, Sterling benefits from risk appetite.\n\nUSDCAD SHORT: Risk-On weakens USD, but rising rates support Canadian commodity strength.\n\nNZDUSD LONG: Copper rally strongly confirms setup, supporting New Zealand commodity currency.",
+    "text": "AUDJPY LONG: Macro confirms setup, US 10Y and Gold combination strongly bid AUD.\n\nNZDUSD LONG: Macro confirms setup, Copper strength provides tailwind for NZD bid.\n\nUSDCAD SHORT: Macro challenges setup, no commodity support for Canadian Dollar weakness.",
     "top": [
       {
-        "pair": "GBPUSD",
+        "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.2
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 6.78
+        "score": 7.62
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 5.9
+        "score": 7.5
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 7.35
       }
     ],
-    "updated": "2026-08-17T04:27:39.772738+00:00"
+    "updated": "2026-08-17T06:24:41.014923+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T04:27:39.772738+00:00"
+    "updated": "2026-08-17T06:24:41.014923+00:00"
   },
   "week_ahead": {
     "text": "Stagflation concerns are dominating as rising oil prices and climbing Treasury yields create a dual shock to markets . USD/JPY strength stands out while EUR/USD faces vulnerability this week , making the Fed's Wednesday decision critical for directional cues on the dollar. Watch EUR/USD closely as it remains caught between US recession fears and geopolitical safe-haven demands. Tariffs and sanctions could well dominate market developments this week , representing the biggest unquantifiable risk to any technical setup.",
@@ -715,11 +715,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan Q2 GDP undershoots forecasts, complicating BOJ's hike timeline",
-      "Yen firms as traders push back Fed rate hike bets",
-      "US inflation meets expectations, impacts EUR/USD and GBP/USD levels"
+      "China's delayed July data looms as markets eye demand and PBOC's yuan stance",
+      "Yen edges higher as traders push back Fed rate hike bets, shrug off soft GDP",
+      "US Dollar Price Forecast: CPI Test Looms as DXY, EUR/USD and GBP/USD Hold Key Levels"
     ],
-    "updated": "2026-08-17T04:27:39.772738+00:00"
+    "updated": "2026-08-17T06:24:41.014923+00:00"
   },
   "last_alert": "2026-08-17T05:40:17.517633+00:00",
   "gold_signal": {
