@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T20:11:08.468146+00:00",
+  "updated": "2026-08-17T22:09:49.540024+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.21,
-      "delta_pct": 6.7,
+      "value": 15.19,
+      "delta_pct": 6.6,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4474.7,
-      "delta_pct": 2.2,
+      "value": 4473.1,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.577,
+      "value": 99.583,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6115,
+      "value": 6.6125,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.65,
-      "delta_pct": 2.7,
+      "value": 84.96,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64239.0,
+      "value": 64281.0,
       "delta_pct": 2.3,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG potentially accelerated by headlines showing GBP rallying as USD weakens and Fed cut bets rise. USDCAD SHORT aligns with USD weakness narrative.",
-    "updated": "2026-08-17T20:11:08.468146+00:00"
+    "text": "GBPUSD LONG and GBPJPY LONG conflict with \"U.S. Dollar Gains Ground As Inflation Rate Meets Expectations\" headline suggesting USD strength.",
+    "updated": "2026-08-17T22:09:49.540024+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD bid pressure.\n\nGBPJPY LONG: Macro challenges setup, risk off contradicts carry trade appetite.\n\nGBPUSD LONG: Macro challenges setup, S&P weakness conflicts with GBP strength.",
+    "text": "USDCAD SHORT: Macro confirms, oil strength supports Canadian currency bid.\n\nGBPJPY LONG: Macro challenges, risk-off sentiment pressures carry trades.\n\nGBPUSD LONG: Macro challenges, equity weakness contradicts broad risk-on momentum.",
     "top": [
       {
         "pair": "USDCAD",
@@ -638,7 +638,7 @@
         "score": 5.3
       }
     ],
-    "updated": "2026-08-17T20:11:08.468146+00:00"
+    "updated": "2026-08-17T22:09:49.540024+00:00"
   },
   "calendar": {
     "events": [
@@ -703,11 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T20:11:08.468146+00:00"
-  },
-  "week_ahead": {
-    "text": "Stagflation concerns are dominating as rising oil prices and climbing Treasury yields create a dual shock to markets . USD/JPY strength stands out while EUR/USD faces vulnerability this week , making the Fed's Wednesday decision critical for directional cues on the dollar. Watch EUR/USD closely as it remains caught between US recession fears and geopolitical safe-haven demands. Tariffs and sanctions could well dominate market developments this week , representing the biggest unquantifiable risk to any technical setup.",
-    "generated_at": "2026-08-16T22:05:20.518632+00:00"
+    "updated": "2026-08-17T22:09:49.540024+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -719,7 +715,7 @@
       "US August NAHB housing market index 35 vs 33 expected",
       "European stocks close mostly lower as yields rise"
     ],
-    "updated": "2026-08-17T20:11:08.468146+00:00"
+    "updated": "2026-08-17T22:09:49.540024+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
