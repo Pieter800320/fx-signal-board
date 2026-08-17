@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T11:32:16.548143+00:00",
+  "updated": "2026-08-17T12:14:46.608549+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,9 +555,9 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.97,
-      "delta_pct": 5.1,
-      "direction": "up",
+      "value": 14.92,
+      "delta_pct": 4.7,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4452.5,
+      "value": 4450.7,
       "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.444,
+      "value": 99.436,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.692,
-      "delta_pct": 1.4,
+      "value": 6.6775,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.13,
-      "delta_pct": 0.9,
+      "value": 82.52,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63268.0,
-      "delta_pct": 0.7,
+      "value": 63599.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,12 +616,17 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and USDCAD SHORT both face headwinds from stronger USD narrative across multiple headlines discussing dollar gains and resistance tests.",
-    "updated": "2026-08-17T10:17:49.034256+00:00"
+    "text": "GBPUSD LONG threatened by dollar strength headlines suggesting DXY recovery potential despite softer inflation readings.",
+    "updated": "2026-08-17T12:14:46.608549+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Rising yields support USD strength, challenging long bias.\n\nUSDCAD SHORT: Copper surge supports CAD, challenging short recommendation.\n\nAUDJPY LONG: Cross asset confluence strongly confirms setup across all drivers.",
+    "text": "AUDJPY LONG: Macro confirms setup via rising commodities and JPY weakness today.\n\nGBPUSD LONG: Macro confirms setup via broad risk-on appetite and sterling strength.\n\nUSDCAD SHORT: Macro challenges setup as rising yields typically support Canadian dollar.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.92
+      },
       {
         "pair": "GBPUSD",
         "direction": "bull",
@@ -631,14 +636,9 @@
         "pair": "USDCAD",
         "direction": "bear",
         "score": 7.38
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 7.33
       }
     ],
-    "updated": "2026-08-17T10:17:49.034256+00:00"
+    "updated": "2026-08-17T12:14:46.608549+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T10:17:49.034256+00:00"
+    "updated": "2026-08-17T12:14:46.608549+00:00"
   },
   "week_ahead": {
     "text": "Stagflation concerns are dominating as rising oil prices and climbing Treasury yields create a dual shock to markets . USD/JPY strength stands out while EUR/USD faces vulnerability this week , making the Fed's Wednesday decision critical for directional cues on the dollar. Watch EUR/USD closely as it remains caught between US recession fears and geopolitical safe-haven demands. Tariffs and sanctions could well dominate market developments this week , representing the biggest unquantifiable risk to any technical setup.",
@@ -716,10 +716,10 @@
   "breaking": {
     "headlines": [
       "China retail sales disappoint July, industrial output slows, home prices decline",
-      "US Dollar gains as inflation rate meets expectations across major pairs",
-      "CPI test looms as DXY, EUR/USD and GBP/USD hold key levels"
+      "US Dollar Price Forecast: Softer PPI boosts Fed cut bets",
+      "CPI test looms as DXY, EUR/USD, GBP/USD hold key levels"
     ],
-    "updated": "2026-08-17T10:17:49.034256+00:00"
+    "updated": "2026-08-17T12:14:46.608549+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
