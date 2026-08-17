@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-16T22:05:20.518632+00:00",
+  "updated": "2026-08-17T00:25:53.817908+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4437.3,
-      "delta_pct": 1.7,
+      "value": 4434.9,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.67,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.549,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.613,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 6.646,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.4,
-      "delta_pct": 1.4,
-      "direction": "up",
+      "value": 82.15,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62823.0,
-      "delta_pct": -0.3,
+      "value": 62715.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and USDCAD SHORT both conflict with dollar strength narrative in multiple headlines suggesting USD gains ground and DXY revival potential.",
-    "updated": "2026-08-16T22:05:20.518632+00:00"
+    "text": "GBPUSD LONG conflicted by UK housing slump and hiring freeze headline. NZDUSD LONG supported by positive retail spending data. No other material conflicts.",
+    "updated": "2026-08-17T00:25:53.817908+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Macro confirms via falling DXY and risk-on regime alignment.\n\nUSDCAD SHORT: Macro confirms via rising oil support and USD weakness.\n\nNZDUSD LONG: Macro challenges slightly as risk-on low conflicts setup.",
+    "text": "GBPUSD LONG: Risk-On regime confirms setup, but US rates rising headwind.\n\nUSDCAD SHORT: Risk-On regime confirms, but rising rates support CAD strength.\n\nNZDUSD LONG: Copper strength confirms macro, aligns with risk-on positioning.",
     "top": [
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.6
+        "score": 7.2
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 7.58
+        "score": 6.78
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 6.1
+        "score": 5.9
       }
     ],
-    "updated": "2026-08-16T22:05:20.518632+00:00"
+    "updated": "2026-08-17T00:25:53.817908+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-16T22:05:20.518632+00:00"
+    "updated": "2026-08-17T00:25:53.817908+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US August prelim UMich consumer sentiment 51.0 vs 54.5 expected",
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets",
-      "China delays July economic data release to late afternoon slot"
+      "Japan Q2 GDP undershoots forecasts, complicating BOJ hike timeline",
+      "US inflation meets expectations, Fed cut bets shift outlook",
+      "UK housing slump and hiring freeze cloud economic outlook"
     ],
-    "updated": "2026-08-16T22:05:20.518632+00:00"
+    "updated": "2026-08-17T00:25:53.817908+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
