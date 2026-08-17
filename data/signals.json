@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T19:33:33.518674+00:00",
+  "updated": "2026-08-17T20:11:08.468146+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -544,7 +544,7 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.17,
-      "delta_pct": 6.5,
+      "value": 15.21,
+      "delta_pct": 6.7,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7757.69,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 7745.06,
+      "delta_pct": -0.5,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4470.0,
-      "delta_pct": 2.0,
+      "value": 4474.7,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.596,
+      "value": 99.577,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6055,
-      "delta_pct": 0.1,
+      "value": 6.6115,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -591,54 +591,54 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.697,
-      "delta_bp": 0.0,
+      "value": 3.703,
+      "delta_bp": 0.6,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.69,
-      "delta_pct": 2.8,
+      "value": 84.65,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64406.0,
-      "delta_pct": 2.5,
-      "direction": "up",
+      "value": 64239.0,
+      "delta_pct": 2.3,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.7,
-      "delta_bp": 2.8,
+      "value": 102.1,
+      "delta_bp": 2.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCAD SHORT conflicted. Canada CPI beat expectations at 3.0% vs 2.9%, supporting CAD strength and undermining the short setup.",
-    "updated": "2026-08-17T18:17:58.652416+00:00"
+    "text": "GBPUSD LONG and GBPJPY LONG potentially accelerated by headlines showing GBP rallying as USD weakens and Fed cut bets rise. USDCAD SHORT aligns with USD weakness narrative.",
+    "updated": "2026-08-17T20:11:08.468146+00:00"
   },
   "ranked": {
-    "text": "CADJPY LONG: Macro confirms via WTI oil surge strengthening Canadian commodity currency.\n\nAUDJPY LONG: Macro confirms via gold and Bitcoin rallies bidding Australian dollar.\n\nUSDCAD SHORT: Macro confirms via oil strength supporting Canadian dollar depreciation setup.",
+    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD bid pressure.\n\nGBPJPY LONG: Macro challenges setup, risk off contradicts carry trade appetite.\n\nGBPUSD LONG: Macro challenges setup, S&P weakness conflicts with GBP strength.",
     "top": [
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 8.43
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 8.28
-      },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 7.97
+        "score": 7.52
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 7.0
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 5.3
       }
     ],
-    "updated": "2026-08-17T18:17:58.652416+00:00"
+    "updated": "2026-08-17T20:11:08.468146+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T18:17:58.652416+00:00"
+    "updated": "2026-08-17T20:11:08.468146+00:00"
   },
   "week_ahead": {
     "text": "Stagflation concerns are dominating as rising oil prices and climbing Treasury yields create a dual shock to markets . USD/JPY strength stands out while EUR/USD faces vulnerability this week , making the Fed's Wednesday decision critical for directional cues on the dollar. Watch EUR/USD closely as it remains caught between US recession fears and geopolitical safe-haven demands. Tariffs and sanctions could well dominate market developments this week , representing the biggest unquantifiable risk to any technical setup.",
@@ -716,10 +716,10 @@
   "breaking": {
     "headlines": [
       "US Empire Manufacturing index 20.60 vs 11.00 estimate",
-      "Canada July CPI 3.0% y/y vs +2.9% expected",
-      "US August NAHB housing market index 35 vs 33 expected"
+      "US August NAHB housing market index 35 vs 33 expected",
+      "European stocks close mostly lower as yields rise"
     ],
-    "updated": "2026-08-17T18:17:58.652416+00:00"
+    "updated": "2026-08-17T20:11:08.468146+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
