@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T07:56:01.683281+00:00",
+  "updated": "2026-08-17T08:26:59.511743+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -542,21 +542,21 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -3,
+    "total": 5,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.25,
-      "delta_pct": -2.6,
+      "value": 14.95,
+      "delta_pct": 4.9,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4453.5,
-      "delta_pct": 1.7,
+      "value": 4458.9,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.508,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 99.341,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.727,
-      "delta_pct": 1.9,
+      "value": 6.6855,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.87,
-      "delta_pct": -0.6,
+      "value": 82.14,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 63522.0,
-      "delta_pct": 0.8,
+      "value": 63366.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "AUDJPY LONG conflicts with yen firms headline. JPY strength undermines AUD upside potential. USDCAD SHORT supported by softer PPI boosting Fed cut bets weakening USD.",
-    "updated": "2026-08-17T06:24:41.014923+00:00"
+    "text": "GBPUSD LONG faces headwinds from US Dollar strength themes recurring across multiple headlines. GBP testing resistance per forecasts conflicts with bullish setup conviction.",
+    "updated": "2026-08-17T08:26:59.511743+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, US 10Y and Gold combination strongly bid AUD.\n\nNZDUSD LONG: Macro confirms setup, Copper strength provides tailwind for NZD bid.\n\nUSDCAD SHORT: Macro challenges setup, no commodity support for Canadian Dollar weakness.",
+    "text": "GBPUSD LONG: Macro confirms setup; DXY falling supports USD weakness thesis.\n\nUSDCAD SHORT: Macro confirms setup; risk-on regime favors commodity-linked CAD strength.\n\nNZDUSD LONG: Macro confirms setup; copper rally strengthens NZD as commodity proxy.",
     "top": [
       {
-        "pair": "AUDJPY",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.62
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 7.5
+        "score": 8.15
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 7.35
+        "score": 7.55
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bull",
+        "score": 7.4
       }
     ],
-    "updated": "2026-08-17T06:24:41.014923+00:00"
+    "updated": "2026-08-17T08:26:59.511743+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T06:24:41.014923+00:00"
+    "updated": "2026-08-17T08:26:59.511743+00:00"
   },
   "week_ahead": {
     "text": "Stagflation concerns are dominating as rising oil prices and climbing Treasury yields create a dual shock to markets . USD/JPY strength stands out while EUR/USD faces vulnerability this week , making the Fed's Wednesday decision critical for directional cues on the dollar. Watch EUR/USD closely as it remains caught between US recession fears and geopolitical safe-haven demands. Tariffs and sanctions could well dominate market developments this week , representing the biggest unquantifiable risk to any technical setup.",
@@ -715,11 +715,11 @@
   },
   "breaking": {
     "headlines": [
-      "China's delayed July data looms as markets eye demand and PBOC's yuan stance",
-      "Yen edges higher as traders push back Fed rate hike bets, shrug off soft GDP",
-      "US Dollar Price Forecast: CPI Test Looms as DXY, EUR/USD and GBP/USD Hold Key Levels"
+      "China retail sales disappoint July, industrial output slows, home prices decline",
+      "US Dollar gains as inflation meets expectations, EUR/USD GBP/USD USD/JPY affected",
+      "CPI test looms as DXY, EUR/USD and GBP/USD hold key levels"
     ],
-    "updated": "2026-08-17T06:24:41.014923+00:00"
+    "updated": "2026-08-17T08:26:59.511743+00:00"
   },
   "last_alert": "2026-08-17T07:56:01.683281+00:00",
   "gold_signal": {
