@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T00:25:53.817908+00:00",
+  "updated": "2026-08-17T02:49:07.964692+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4434.9,
-      "delta_pct": 1.2,
+      "value": 4449.7,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.549,
+      "value": 99.521,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.646,
-      "delta_pct": 0.7,
+      "value": 6.7175,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.15,
-      "delta_pct": -0.3,
+      "value": 82.72,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 62715.0,
-      "delta_pct": -0.5,
+      "value": 63206.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by UK housing slump and hiring freeze headline. NZDUSD LONG supported by positive retail spending data. No other material conflicts.",
-    "updated": "2026-08-17T00:25:53.817908+00:00"
+    "text": "GBPUSD LONG conflicted by UK housing slump and hiring freeze weakening pound fundamentals near term.",
+    "updated": "2026-08-17T02:49:07.964692+00:00"
   },
   "ranked": {
-    "text": "GBPUSD LONG: Risk-On regime confirms setup, but US rates rising headwind.\n\nUSDCAD SHORT: Risk-On regime confirms, but rising rates support CAD strength.\n\nNZDUSD LONG: Copper strength confirms macro, aligns with risk-on positioning.",
+    "text": "GBPUSD LONG: Risk-On regime confirms setup, momentum divergence challenges conviction slightly.\n\nUSDCAD SHORT: Risk-On favors CAD weakness, but rising copper supports Canadian dollar.\n\nNZDUSD LONG: Copper strength confirms macro thesis, risk-on regime supports commodity currency bid.",
     "top": [
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 5.9
       }
     ],
-    "updated": "2026-08-17T00:25:53.817908+00:00"
+    "updated": "2026-08-17T02:49:07.964692+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T00:25:53.817908+00:00"
+    "updated": "2026-08-17T02:49:07.964692+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan Q2 GDP undershoots forecasts, complicating BOJ hike timeline",
-      "US inflation meets expectations, Fed cut bets shift outlook",
-      "UK housing slump and hiring freeze cloud economic outlook"
+      "Japan Q2 GDP undershoots forecasts, complicating BOJ's hike timeline",
+      "Yen edges higher as traders push back Fed rate hike bets",
+      "US inflation meets expectations, dollar gains ground across major pairs"
     ],
-    "updated": "2026-08-17T00:25:53.817908+00:00"
+    "updated": "2026-08-17T02:49:07.964692+00:00"
   },
   "last_alert": "2026-08-14T19:50:57.182551+00:00",
   "gold_signal": {
