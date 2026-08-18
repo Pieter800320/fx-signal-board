@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T20:08:25.477419+00:00",
+  "updated": "2026-08-18T22:08:04.619041+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -544,19 +544,19 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.75,
-      "delta_pct": 3.7,
+      "value": 15.84,
+      "delta_pct": 4.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4397.6,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 4389.5,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.662,
+      "value": 99.655,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4645,
-      "delta_pct": -2.1,
+      "value": 6.456,
+      "delta_pct": -2.2,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.09,
-      "delta_pct": -0.5,
+      "value": 84.42,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64585.0,
-      "delta_pct": 0.1,
+      "value": 64523.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG conflicted. Canadian dollar extending losses as US downplays trade deal hopes with Canada, weakening CAD component.",
-    "updated": "2026-08-18T20:08:25.477419+00:00"
+    "text": "CADJPY LONG invalidated by Canadian dollar extending losses amid US tariff uncertainty and failed trade deal negotiations.",
+    "updated": "2026-08-18T22:08:04.619041+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro risk-off challenges carry trade setup today.\n\nCADJPY LONG: Macro risk-off pressures commodity-linked carry unwind risk.\n\nEURJPY LONG: Macro risk-off conflicts with risk-on momentum divergence.",
+    "text": "GBPJPY LONG: Risk-On regime confirms setup, macro tailwind intact today.\n\nCADJPY LONG: Risk-On regime confirms setup, commodity weakness challenges CAD strength.\n\nEURJPY LONG: Risk-On regime confirms setup, but copper decline signals caution.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-18T20:08:25.477419+00:00"
+    "updated": "2026-08-18T22:08:04.619041+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T20:08:25.477419+00:00"
+    "updated": "2026-08-18T22:08:04.619041+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canadian dollar extends losses as US downplays hopes for trade deal",
-      "Trump weighs Canada tariff reprieve ahead of midnight deadline negotiations",
-      "US inflation meets expectations, dollar gains as Fed minutes loom"
+      "Trump weighs Canada tariff reprieve as midnight deadline approaches",
+      "Canadian dollar extends losses on failed US trade deal hopes",
+      "US Dollar gains as inflation meets expectations, EUR/USD pressured"
     ],
-    "updated": "2026-08-18T20:08:25.477419+00:00"
+    "updated": "2026-08-18T22:08:04.619041+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
