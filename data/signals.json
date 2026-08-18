@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T19:32:26.841258+00:00",
+  "updated": "2026-08-18T20:08:25.477419+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.76,
-      "delta_pct": 3.8,
+      "value": 15.75,
+      "delta_pct": 3.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7701.54,
-      "delta_pct": -0.6,
+      "value": 7691.76,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4409.3,
-      "delta_pct": -0.2,
+      "value": 4397.6,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.661,
+      "value": 99.662,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4725,
-      "delta_pct": -2.0,
+      "value": 6.4645,
+      "delta_pct": -2.1,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.708,
-      "delta_bp": -1.6,
+      "value": 4.706,
+      "delta_bp": -1.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -603,24 +603,24 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64694.0,
-      "delta_pct": 0.3,
+      "value": 64585.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.3,
-      "delta_bp": -1.8,
+      "value": 100.1,
+      "delta_bp": -2.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-18T18:16:28.955175+00:00"
+    "text": "CADJPY LONG conflicted. Canadian dollar extending losses as US downplays trade deal hopes with Canada, weakening CAD component.",
+    "updated": "2026-08-18T20:08:25.477419+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro risk-off challenges carry trade momentum driver.\n\nEURJPY LONG: Macro risk-off challenges yen weakness momentum driver.\n\nAUDJPY LONG: Macro risk-off challenges commodity currency strength driver.",
+    "text": "GBPJPY LONG: Macro risk-off challenges carry trade setup today.\n\nCADJPY LONG: Macro risk-off pressures commodity-linked carry unwind risk.\n\nEURJPY LONG: Macro risk-off conflicts with risk-on momentum divergence.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,17 +628,17 @@
         "score": 6.98
       },
       {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 6.88
+      },
+      {
         "pair": "EURJPY",
         "direction": "bull",
         "score": 6.33
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 6.25
       }
     ],
-    "updated": "2026-08-18T18:16:28.955175+00:00"
+    "updated": "2026-08-18T20:08:25.477419+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T18:16:28.955175+00:00"
+    "updated": "2026-08-18T20:08:25.477419+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-18T06:19:22.078264+00:00"
+    "generated_at": "2026-08-18T20:08:52.522744+00:00"
   },
   "breaking": {
     "headlines": [
-      "Canadian and US negotiators meet ahead of midnight tariff deadline",
-      "Atlanta Fed downgrades Q3 growth estimate to 4.03% from 4.31%",
-      "Cleveland Fed survey: businesses expect inflation easing, investment weakening"
+      "Canadian dollar extends losses as US downplays hopes for trade deal",
+      "Trump weighs Canada tariff reprieve ahead of midnight deadline negotiations",
+      "US inflation meets expectations, dollar gains as Fed minutes loom"
     ],
-    "updated": "2026-08-18T18:16:28.955175+00:00"
+    "updated": "2026-08-18T20:08:25.477419+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
