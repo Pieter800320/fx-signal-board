@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T05:35:27.467440+00:00",
+  "updated": "2026-08-18T06:18:57.719725+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.19,
-      "delta_pct": 6.6,
-      "direction": "up",
+      "value": 14.25,
+      "delta_pct": -2.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,78 +567,78 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4448.2,
+      "value": 4446.6,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.649,
-      "delta_pct": -0.0,
+      "value": 99.688,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5625,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.5745,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.724,
-      "delta_bp": 2.8,
-      "direction": "flat",
+      "value": 4.696,
+      "delta_bp": 5.5,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.703,
-      "delta_bp": 0.6,
+      "value": 3.697,
+      "delta_bp": -0.8,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.3,
-      "delta_pct": 0.9,
-      "direction": "flat",
+      "value": 85.44,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64071.0,
-      "delta_pct": 2.0,
+      "value": 64212.0,
+      "delta_pct": 2.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.1,
-      "delta_bp": 2.2,
-      "direction": "flat",
+      "value": 99.9,
+      "delta_bp": 6.3,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and USDCAD SHORT conflict with USD strength narrative. Multiple headlines show dollar gaining ground and Fed hike bets remaining relevant despite recent weakness.",
-    "updated": "2026-08-18T04:21:31.353218+00:00"
+    "text": "CADJPY LONG conflicted by US Dollar Gains Ground headline suggesting USD strength. JPY weakness may reverse if safe haven demand increases.",
+    "updated": "2026-08-18T06:18:57.719725+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, VIX surge challenges conviction.\n\nUSDCAD SHORT: Risk-On supports trade, but Gold strength contradicts CAD weakness.\n\nGBPUSD LONG: Risk-On alignment confirmed, yet VIX spike reduces conviction slightly.",
+    "text": "CADJPY LONG: Macro confirms via US10Y rise and WTI strength.\n\nGBPJPY LONG: Macro confirms via US10Y rise offering JPY.\n\nAUDJPY LONG: Macro confirms via US10Y rise and gold.",
     "top": [
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 8.28
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.0
+        "score": 6.9
       },
       {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 6.92
-      },
-      {
-        "pair": "GBPUSD",
+        "pair": "AUDJPY",
         "direction": "bull",
-        "score": 5.3
+        "score": 6.83
       }
     ],
-    "updated": "2026-08-18T04:21:31.353218+00:00"
+    "updated": "2026-08-18T06:18:57.719725+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T04:21:31.353218+00:00"
+    "updated": "2026-08-18T06:18:57.719725+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-17T18:18:24.848359+00:00"
+    "generated_at": "2026-08-18T06:19:22.078264+00:00"
   },
   "breaking": {
     "headlines": [
-      "Fed cut bets fade as softer PPI boosts EUR/USD and GBP/USD rally",
-      "Heavy tone in Treasuries has further to run as truce lapses",
-      "US Dollar gains as inflation rate meets expectations across major pairs"
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 EUR/USD Rally",
+      "ING says heavy tone in Treasuries has further to run as truce lapses",
+      "US Dollar Price Forecast: Fed Hike Bets Fade as EUR/USD and GBP/USD Rally"
     ],
-    "updated": "2026-08-18T04:21:31.353218+00:00"
+    "updated": "2026-08-18T06:18:57.719725+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
