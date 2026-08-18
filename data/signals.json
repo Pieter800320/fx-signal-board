@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T02:44:12.154457+00:00",
+  "updated": "2026-08-18T04:21:31.353218+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -561,27 +561,27 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7745.06,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 7785.76,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4452.9,
-      "delta_pct": 1.7,
+      "value": 4448.2,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.597,
-      "delta_pct": -0.1,
+      "value": 99.649,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.573,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.5625,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.01,
-      "delta_pct": 3.2,
-      "direction": "up",
+      "value": 85.3,
+      "delta_pct": 0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64067.0,
+      "value": 64071.0,
       "delta_pct": 2.0,
       "direction": "flat",
       "label": "Bitcoin"
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG conflict with US Dollar gaining ground as inflation meets expectations headline.",
-    "updated": "2026-08-18T02:44:12.154457+00:00"
+    "text": "GBPUSD LONG and USDCAD SHORT conflict with USD strength narrative. Multiple headlines show dollar gaining ground and Fed hike bets remaining relevant despite recent weakness.",
+    "updated": "2026-08-18T04:21:31.353218+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD appreciation pressure.\n\nGBPJPY LONG: Macro challenges setup, risk-off sentiment pressures carry trade unwinding.\n\nGBPUSD LONG: Macro challenges setup, equity weakness contradicts risk-on directional bias.",
+    "text": "GBPJPY LONG: Risk-On regime confirms setup, VIX surge challenges conviction.\n\nUSDCAD SHORT: Risk-On supports trade, but Gold strength contradicts CAD weakness.\n\nGBPUSD LONG: Risk-On alignment confirmed, yet VIX spike reduces conviction slightly.",
     "top": [
-      {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 7.52
-      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
         "score": 7.0
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 6.92
       },
       {
         "pair": "GBPUSD",
@@ -638,7 +638,7 @@
         "score": 5.3
       }
     ],
-    "updated": "2026-08-18T02:44:12.154457+00:00"
+    "updated": "2026-08-18T04:21:31.353218+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T02:44:12.154457+00:00"
+    "updated": "2026-08-18T04:21:31.353218+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar gains as inflation meets expectations; EUR/USD, GBP/USD affected",
-      "Treasury yields rise heavily; truce lapses signal further strength ahead",
-      "Australian consumer sentiment rises but remains deeply pessimistic; AUD pressured"
+      "Fed cut bets fade as softer PPI boosts EUR/USD and GBP/USD rally",
+      "Heavy tone in Treasuries has further to run as truce lapses",
+      "US Dollar gains as inflation rate meets expectations across major pairs"
     ],
-    "updated": "2026-08-18T02:44:12.154457+00:00"
+    "updated": "2026-08-18T04:21:31.353218+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
