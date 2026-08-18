@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T00:25:08.019026+00:00",
+  "updated": "2026-08-18T02:44:12.154457+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4477.7,
-      "delta_pct": 2.2,
+      "value": 4452.9,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.545,
+      "value": 99.597,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.613,
-      "delta_pct": 0.2,
+      "value": 6.573,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.9,
-      "delta_pct": 3.0,
+      "value": 85.01,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64423.0,
-      "delta_pct": 2.6,
-      "direction": "up",
+      "value": 64067.0,
+      "delta_pct": 2.0,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG conflict with \"US Dollar Gains Ground As Inflation Rate Meets Expectations\" headline suggesting dollar strength ahead.",
-    "updated": "2026-08-18T00:25:08.019026+00:00"
+    "text": "GBPUSD LONG and GBPJPY LONG conflict with US Dollar gaining ground as inflation meets expectations headline.",
+    "updated": "2026-08-18T02:44:12.154457+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD bid pressure.\n\nGBPJPY LONG: Macro challenges setup, risk-off medium undermines carry trade demand.\n\nGBPUSD LONG: Macro challenges setup, S&P weakness contradicts risk-on positioning confirmation.",
+    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD appreciation pressure.\n\nGBPJPY LONG: Macro challenges setup, risk-off sentiment pressures carry trade unwinding.\n\nGBPUSD LONG: Macro challenges setup, equity weakness contradicts risk-on directional bias.",
     "top": [
       {
         "pair": "USDCAD",
@@ -638,7 +638,7 @@
         "score": 5.3
       }
     ],
-    "updated": "2026-08-18T00:25:08.019026+00:00"
+    "updated": "2026-08-18T02:44:12.154457+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T00:25:08.019026+00:00"
+    "updated": "2026-08-18T02:44:12.154457+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Empire Manufacturing index 20.60 vs 11.00 estimate",
-      "US August NAHB housing market index 35 vs 33 expected",
-      "European stocks close mostly lower as yields rise"
+      "US Dollar gains as inflation meets expectations; EUR/USD, GBP/USD affected",
+      "Treasury yields rise heavily; truce lapses signal further strength ahead",
+      "Australian consumer sentiment rises but remains deeply pessimistic; AUD pressured"
     ],
-    "updated": "2026-08-18T00:25:08.019026+00:00"
+    "updated": "2026-08-18T02:44:12.154457+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
