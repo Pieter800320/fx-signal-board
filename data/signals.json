@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T15:38:06.499289+00:00",
+  "updated": "2026-08-18T16:15:06.769842+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
     "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 4,
-    "total": 4,
-    "confidence": "High",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.73,
-      "delta_pct": 10.4,
-      "direction": "up",
+      "value": 15.74,
+      "delta_pct": 3.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7706.36,
-      "delta_pct": -1.0,
+      "value": 7705.74,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4456.8,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 4423.2,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.568,
-      "delta_pct": -0.1,
+      "value": 99.609,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5275,
-      "delta_pct": -1.2,
+      "value": 6.5025,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.722,
-      "delta_bp": 2.6,
+      "value": 4.716,
+      "delta_bp": -0.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.71,
-      "delta_bp": 1.3,
+      "value": 3.705,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.13,
-      "delta_pct": -0.4,
+      "value": 84.47,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64351.0,
-      "delta_pct": -0.2,
+      "value": 64715.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 101.2,
-      "delta_bp": 1.3,
+      "value": 101.1,
+      "delta_bp": -1.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-18T14:19:18.918223+00:00"
+    "text": "CADJPY LONG invalidated. Canadian Dollar under renewed pressure as Trump tariff deadline approaches, weakening CAD component.",
+    "updated": "2026-08-18T16:15:06.769842+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold strength confirms AUD bid despite equities weakness.\n\nAUDUSD LONG: Gold rally supports AUD despite broader risk-off signals.\n\nEURJPY LONG: Equity selloff challenges EUR momentum in risk-off environment.",
+    "text": "GBPJPY LONG: Macro risk-off challenges carry trade positioning today.\n\nCADJPY LONG: Macro risk-off challenges but BoJ support persists.\n\nEURJPY LONG: Macro risk-off challenges yield differential carry appeal.",
     "top": [
       {
-        "pair": "AUDJPY",
+        "pair": "GBPJPY",
         "direction": "bull",
-        "score": 8.4
+        "score": 7.38
       },
       {
-        "pair": "AUDUSD",
+        "pair": "CADJPY",
         "direction": "bull",
-        "score": 7.5
+        "score": 7.05
       },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.98
+        "score": 6.8
       }
     ],
-    "updated": "2026-08-18T14:19:18.918223+00:00"
+    "updated": "2026-08-18T16:15:06.769842+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T14:19:18.918223+00:00"
+    "updated": "2026-08-18T16:15:06.769842+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July import prices -0.4% vs +0.1% expected, deflation signal",
-      "US July housing starts 1.239m vs 1.350m expected, misses",
-      "US July industrial production +0.2% vs +0.3% expected, weak"
+      "Canadian Dollar under pressure as Trump tariff deadline approaches",
+      "Atlanta Fed downgrades Q3 growth to 4.03% from 4.31%",
+      "US import prices fall 0.4% versus 0.1% expected increase"
     ],
-    "updated": "2026-08-18T14:19:18.918223+00:00"
+    "updated": "2026-08-18T16:15:06.769842+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
