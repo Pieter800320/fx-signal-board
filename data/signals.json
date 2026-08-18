@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T07:44:27.895832+00:00",
+  "updated": "2026-08-18T08:19:08.624903+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "label": "Risk-Off",
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.25,
-      "delta_pct": -2.6,
-      "direction": "flat",
+      "value": 16.01,
+      "delta_pct": 12.4,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4446.6,
+      "value": 4446.9,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.688,
-      "delta_pct": 0.0,
+      "value": 99.669,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5745,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.526,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.44,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 84.5,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64212.0,
-      "delta_pct": 2.2,
+      "value": 64168.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG conflicted by US Dollar Gains Ground headline suggesting USD strength. JPY weakness may reverse if safe haven demand increases.",
-    "updated": "2026-08-18T06:18:57.719725+00:00"
+    "text": "USDCAD SHORT at risk: \"U.S. Dollar Gains Ground As Inflation Rate Meets Expectations\" supports USD strength against CAD.",
+    "updated": "2026-08-18T08:19:08.624903+00:00"
   },
   "ranked": {
-    "text": "CADJPY LONG: Macro confirms via US10Y rise and WTI strength.\n\nGBPJPY LONG: Macro confirms via US10Y rise offering JPY.\n\nAUDJPY LONG: Macro confirms via US10Y rise and gold.",
+    "text": "AUDJPY LONG: US 10Y rise and gold strength confirm setup perfectly today.\n\nUSDCAD SHORT: Risk-On macro contradicts short USD bias, challenges setup slightly.\n\nCADJPY LONG: Rising US 10Y confirms JPY weakness, supports setup strongly.",
     "top": [
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 8.28
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 6.9
-      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.83
+        "score": 8.58
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 7.3
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 6.88
       }
     ],
-    "updated": "2026-08-18T06:18:57.719725+00:00"
+    "updated": "2026-08-18T08:19:08.624903+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T06:18:57.719725+00:00"
+    "updated": "2026-08-18T08:19:08.624903+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 EUR/USD Rally",
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets EUR/USD GBP/USD Rally",
       "ING says heavy tone in Treasuries has further to run as truce lapses",
-      "US Dollar Price Forecast: Fed Hike Bets Fade as EUR/USD and GBP/USD Rally"
+      "US Dollar Gains Ground As Inflation Rate Meets Expectations: EUR/USD GBP/USD USD/JPY"
     ],
-    "updated": "2026-08-18T06:18:57.719725+00:00"
+    "updated": "2026-08-18T08:19:08.624903+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
