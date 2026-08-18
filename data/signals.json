@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-17T22:09:49.540024+00:00",
+  "updated": "2026-08-18T00:25:08.019026+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4473.1,
-      "delta_pct": 2.1,
+      "value": 4477.7,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.583,
+      "value": 99.545,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6125,
+      "value": 6.613,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.96,
-      "delta_pct": 3.1,
+      "value": 84.9,
+      "delta_pct": 3.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64281.0,
-      "delta_pct": 2.3,
-      "direction": "flat",
+      "value": 64423.0,
+      "delta_pct": 2.6,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG conflict with \"U.S. Dollar Gains Ground As Inflation Rate Meets Expectations\" headline suggesting USD strength.",
-    "updated": "2026-08-17T22:09:49.540024+00:00"
+    "text": "GBPUSD LONG and GBPJPY LONG conflict with \"US Dollar Gains Ground As Inflation Rate Meets Expectations\" headline suggesting dollar strength ahead.",
+    "updated": "2026-08-18T00:25:08.019026+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms, oil strength supports Canadian currency bid.\n\nGBPJPY LONG: Macro challenges, risk-off sentiment pressures carry trades.\n\nGBPUSD LONG: Macro challenges, equity weakness contradicts broad risk-on momentum.",
+    "text": "USDCAD SHORT: Macro confirms setup, WTI strength supports CAD bid pressure.\n\nGBPJPY LONG: Macro challenges setup, risk-off medium undermines carry trade demand.\n\nGBPUSD LONG: Macro challenges setup, S&P weakness contradicts risk-on positioning confirmation.",
     "top": [
       {
         "pair": "USDCAD",
@@ -638,7 +638,7 @@
         "score": 5.3
       }
     ],
-    "updated": "2026-08-17T22:09:49.540024+00:00"
+    "updated": "2026-08-18T00:25:08.019026+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-17T22:09:49.540024+00:00"
+    "updated": "2026-08-18T00:25:08.019026+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,7 +715,7 @@
       "US August NAHB housing market index 35 vs 33 expected",
       "European stocks close mostly lower as yields rise"
     ],
-    "updated": "2026-08-17T22:09:49.540024+00:00"
+    "updated": "2026-08-18T00:25:08.019026+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
