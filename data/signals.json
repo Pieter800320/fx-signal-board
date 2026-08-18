@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T09:40:15.262549+00:00",
+  "updated": "2026-08-18T10:14:22.351651+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,12 +551,12 @@
     "signals": 2,
     "total": 4,
     "confidence": "Medium",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.01,
-      "delta_pct": 12.4,
+      "value": 15.94,
+      "delta_pct": 11.9,
       "direction": "up",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4446.9,
+      "value": 4450.4,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.669,
+      "value": 99.621,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.526,
-      "delta_pct": -1.2,
+      "value": 6.5425,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.5,
-      "delta_pct": 0.0,
+      "value": 84.02,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64168.0,
-      "delta_pct": -0.5,
+      "value": 64093.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD SHORT at risk: \"U.S. Dollar Gains Ground As Inflation Rate Meets Expectations\" supports USD strength against CAD.",
-    "updated": "2026-08-18T08:19:08.624903+00:00"
+    "text": "USDCAD SHORT invalidated. US Dollar gaining ground as inflation meets expectations, supporting USD strength against CAD.",
+    "updated": "2026-08-18T10:14:22.351651+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise and gold strength confirm setup perfectly today.\n\nUSDCAD SHORT: Risk-On macro contradicts short USD bias, challenges setup slightly.\n\nCADJPY LONG: Rising US 10Y confirms JPY weakness, supports setup strongly.",
+    "text": "AUDJPY LONG: Macro confirms setup, US 10Y and gold both bid AUD fundamentals.\n\nCADJPY LONG: Macro confirms setup, US 10Y rising pressures JPY denominator.\n\nUSDCAD SHORT: Macro challenges setup, risk on environment typically supports USD strength.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 8.58
+        "score": 8.43
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 7.6
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
         "score": 7.3
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 6.88
       }
     ],
-    "updated": "2026-08-18T08:19:08.624903+00:00"
+    "updated": "2026-08-18T10:14:22.351651+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T08:19:08.624903+00:00"
+    "updated": "2026-08-18T10:14:22.351651+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets EUR/USD GBP/USD Rally",
-      "ING says heavy tone in Treasuries has further to run as truce lapses",
-      "US Dollar Gains Ground As Inflation Rate Meets Expectations: EUR/USD GBP/USD USD/JPY"
+      "Germany ZEW current conditions -61.1 beats expectations, signals eurozone stabilization",
+      "US Dollar weakens as Fed rate hike bets fade significantly",
+      "UK labour market cools further, pressures GBP downside near-term"
     ],
-    "updated": "2026-08-18T08:19:08.624903+00:00"
+    "updated": "2026-08-18T10:14:22.351651+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
