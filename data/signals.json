@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T13:48:24.874670+00:00",
+  "updated": "2026-08-18T14:19:18.918223+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
+    "signals": 4,
     "total": 4,
-    "confidence": "Medium",
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.71,
-      "delta_pct": 10.2,
+      "value": 15.73,
+      "delta_pct": 10.4,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7785.76,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7706.36,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4450.2,
-      "delta_pct": 0.7,
+      "value": 4456.8,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.632,
-      "delta_pct": -0.0,
+      "value": 99.568,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5505,
-      "delta_pct": -0.8,
+      "value": 6.5275,
+      "delta_pct": -1.2,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.696,
-      "delta_bp": 5.5,
-      "direction": "up",
+      "value": 4.722,
+      "delta_bp": 2.6,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.697,
-      "delta_bp": -0.8,
+      "value": 3.71,
+      "delta_bp": 1.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.2,
+      "value": 84.13,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64233.0,
-      "delta_pct": -0.4,
+      "value": 64351.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.9,
-      "delta_bp": 6.3,
-      "direction": "up",
+      "value": 101.2,
+      "delta_bp": 1.3,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-18T12:17:13.331221+00:00"
+    "updated": "2026-08-18T14:19:18.918223+00:00"
   },
   "ranked": {
-    "text": "AUDJPY: Gold strength and JPY weakness confirm long setup perfectly.\n\nCADJPY: Rising US 10Y supports JPY weakness thesis cleanly.\n\nEURJPY: Risk-off macro challenges momentum despite 10Y JPY offered.",
+    "text": "AUDJPY LONG: Gold strength confirms AUD bid despite equities weakness.\n\nAUDUSD LONG: Gold rally supports AUD despite broader risk-off signals.\n\nEURJPY LONG: Equity selloff challenges EUR momentum in risk-off environment.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.98
+        "score": 8.4
       },
       {
-        "pair": "CADJPY",
+        "pair": "AUDUSD",
         "direction": "bull",
-        "score": 7.45
+        "score": 7.5
       },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 7.38
+        "score": 6.98
       }
     ],
-    "updated": "2026-08-18T12:17:13.331221+00:00"
+    "updated": "2026-08-18T14:19:18.918223+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T12:17:13.331221+00:00"
+    "updated": "2026-08-18T14:19:18.918223+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Germany August ZEW survey current conditions -61.1 vs -69.5 expected",
-      "UK labour market shows further signs of cooling in June",
-      "U.S. Dollar Gains Ground As Inflation Rate Meets Expectations"
+      "US July import prices -0.4% vs +0.1% expected, deflation signal",
+      "US July housing starts 1.239m vs 1.350m expected, misses",
+      "US July industrial production +0.2% vs +0.3% expected, weak"
     ],
-    "updated": "2026-08-18T12:17:13.331221+00:00"
+    "updated": "2026-08-18T14:19:18.918223+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
