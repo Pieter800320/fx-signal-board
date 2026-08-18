@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T17:33:53.033779+00:00",
+  "updated": "2026-08-18T18:16:28.955175+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.74,
-      "delta_pct": 3.6,
+      "value": 15.76,
+      "delta_pct": 3.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7705.74,
-      "delta_pct": -0.5,
+      "value": 7701.54,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4423.2,
-      "delta_pct": 0.1,
+      "value": 4409.3,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.609,
-      "delta_pct": -0.0,
+      "value": 99.661,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5025,
-      "delta_pct": -1.5,
+      "value": 6.4725,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.716,
-      "delta_bp": -0.8,
+      "value": 4.708,
+      "delta_bp": -1.6,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.47,
-      "delta_pct": -0.0,
+      "value": 84.09,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64715.0,
+      "value": 64694.0,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 101.1,
-      "delta_bp": -1.0,
+      "value": 100.3,
+      "delta_bp": -1.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG invalidated. Canadian Dollar under renewed pressure as Trump tariff deadline approaches, weakening CAD component.",
-    "updated": "2026-08-18T16:15:06.769842+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-18T18:16:28.955175+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro risk-off challenges carry trade positioning today.\n\nCADJPY LONG: Macro risk-off challenges but BoJ support persists.\n\nEURJPY LONG: Macro risk-off challenges yield differential carry appeal.",
+    "text": "GBPJPY LONG: Macro risk-off challenges carry trade momentum driver.\n\nEURJPY LONG: Macro risk-off challenges yen weakness momentum driver.\n\nAUDJPY LONG: Macro risk-off challenges commodity currency strength driver.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.38
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bull",
-        "score": 7.05
+        "score": 6.98
       },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.8
+        "score": 6.33
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 6.25
       }
     ],
-    "updated": "2026-08-18T16:15:06.769842+00:00"
+    "updated": "2026-08-18T18:16:28.955175+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T16:15:06.769842+00:00"
+    "updated": "2026-08-18T18:16:28.955175+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canadian Dollar under pressure as Trump tariff deadline approaches",
-      "Atlanta Fed downgrades Q3 growth to 4.03% from 4.31%",
-      "US import prices fall 0.4% versus 0.1% expected increase"
+      "Canadian and US negotiators meet ahead of midnight tariff deadline",
+      "Atlanta Fed downgrades Q3 growth estimate to 4.03% from 4.31%",
+      "Cleveland Fed survey: businesses expect inflation easing, investment weakening"
     ],
-    "updated": "2026-08-18T16:15:06.769842+00:00"
+    "updated": "2026-08-18T18:16:28.955175+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
