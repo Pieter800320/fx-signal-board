@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T20:10:55.310040+00:00",
+  "updated": "2026-08-19T22:10:46.303575+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 10.0,
     "signals": 1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Mixed",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.04,
-      "delta_pct": -5.1,
+      "value": 14.89,
+      "delta_pct": -6.0,
       "direction": "down",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4566.6,
-      "delta_pct": 4.6,
+      "value": 4581.5,
+      "delta_pct": 4.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.796,
+      "value": 98.778,
       "delta_pct": -0.9,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4955,
-      "delta_pct": 0.2,
+      "value": 6.5085,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.25,
-      "delta_pct": -0.8,
+      "value": 84.62,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 68588.0,
-      "delta_pct": 6.0,
+      "value": 69391.0,
+      "delta_pct": 7.3,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCHF SHORT invalidated. US Treasury liquidity support buyback operations and surprise dollar weakness contradict short USD positioning.",
-    "updated": "2026-08-19T20:10:55.310040+00:00"
+    "text": "AUDUSD LONG at risk: Australia jobs preview headline suggests uncertainty on hiring surge, could weaken AUD if data disappoints expectations.\n\nUSDCHF SHORT pressured: Dollar weakness from Treasury bond buyback move and Fed cut bets support the short thesis.",
+    "updated": "2026-08-19T22:10:46.303575+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: VIX falling and gold rising strongly confirm setup momentum.\n\nNZDUSD LONG: VIX falling confirms but momentum divergence challenges conviction slightly.\n\nUSDCHF SHORT: Falling yields and gold rising confirm CHF bid decisively.",
+    "text": "AUDUSD LONG: Macro confirms setup, VIX falling and gold rising drive AUD strength.\n\nNZDUSD LONG: Macro confirms setup, DXY weakness and risk-on environment support NZD.\n\nUSDCHF SHORT: Macro confirms setup, falling US yields and gold strength favor CHF.",
     "top": [
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 7.32
       }
     ],
-    "updated": "2026-08-19T20:10:55.310040+00:00"
+    "updated": "2026-08-19T22:10:46.303575+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T20:10:55.310040+00:00"
+    "updated": "2026-08-19T22:10:46.303575+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-19T08:19:48.450583+00:00"
+    "generated_at": "2026-08-19T22:11:12.454113+00:00"
   },
   "breaking": {
     "headlines": [
       "Surprise US Treasury announcement sends dollar lower, gold higher",
-      "US Treasury increases liquidity support buyback operations for longer-dated securities",
-      "UK inflation picks up in July, pound under pressure"
+      "Australia jobs preview: Divergence on whether June's hiring surge holds",
+      "US Treasury auctions $18 billion 20-year bonds at 5.204% yield"
     ],
-    "updated": "2026-08-19T20:10:55.310040+00:00"
+    "updated": "2026-08-19T22:10:46.303575+00:00"
   },
   "last_alert": "2026-08-19T17:32:26.644853+00:00",
   "gold_signal": {
