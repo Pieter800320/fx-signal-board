@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T00:25:01.232656+00:00",
+  "updated": "2026-08-19T02:46:24.128373+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4396.2,
-      "delta_pct": -0.5,
+      "value": 4411.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.601,
-      "delta_pct": -0.0,
+      "value": 99.575,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.471,
-      "delta_pct": -2.0,
+      "value": 6.4565,
+      "delta_pct": -2.2,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.5,
-      "delta_pct": 0.0,
+      "value": 84.92,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64555.0,
-      "delta_pct": 0.1,
+      "value": 64363.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG at risk. Canada tariff uncertainty with US could weaken CAD, conflicting with long setup conviction.",
-    "updated": "2026-08-19T00:25:01.232656+00:00"
+    "text": "Trump tariff pause supports CADJPY long as USD/CAD weakens. Strong Japan machine orders support all three JPY longs.",
+    "updated": "2026-08-19T02:46:24.128373+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms carry trade strength thesis today.\n\nCADJPY LONG: Mixed macro challenges momentum, copper weakness pressures CAD upside.\n\nEURJPY LONG: Risk-On supports JPY weakness, but equity selloff creates headwind.",
+    "text": "GBPJPY: Risk-On regime confirms Long, JPY weakness primary driver.\n\nCADJPY: Risk-On regime confirms Long, carry trade momentum driver.\n\nEURJPY: Risk-On regime confirms Long, but equity weakness challenges conviction.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-19T00:25:01.232656+00:00"
+    "updated": "2026-08-19T02:46:24.128373+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T00:25:01.232656+00:00"
+    "updated": "2026-08-19T02:46:24.128373+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Canada, US race against midnight tariff deadline as talks continue",
-      "Japan June Machine Orders +16.9% y/y, beats +10.8% expectation",
-      "US Dollar Gains Ground As Inflation Rate Meets Expectations"
+      "Trump pauses 50% Canada tariffs for three day period",
+      "Japan June Machine Orders +16.9% y/y, beats +10.8% forecast",
+      "US Dollar gains ground as inflation rate meets expectations"
     ],
-    "updated": "2026-08-19T00:25:01.232656+00:00"
+    "updated": "2026-08-19T02:46:24.128373+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
