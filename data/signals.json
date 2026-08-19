@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T07:45:37.475926+00:00",
+  "updated": "2026-08-19T08:19:20.486296+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.84,
-      "delta_pct": 4.3,
+      "value": 15.83,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4393.1,
-      "delta_pct": 0.6,
+      "value": 4412.7,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.512,
-      "delta_pct": -0.1,
+      "value": 99.43,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4565,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.44,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.91,
-      "delta_pct": -0.0,
+      "value": 84.6,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64193.0,
-      "delta_pct": -0.5,
+      "value": 64235.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG and GBPJPY LONG supported by UK inflation data. USDCAD SHORT supported by Trump tariff pause. No direct conflicts detected.",
-    "updated": "2026-08-19T06:19:35.414343+00:00"
+    "text": "Trump pauses 50% Canada tariffs for 'three day period' directly supports USDCAD SHORT by reducing upside pressure on CAD weakness.",
+    "updated": "2026-08-19T08:19:20.486296+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-off favors JPY strength, challenging setup.\n\nUSDCAD SHORT: Gold strength supports CAD weakness, confirming.\n\nGBPUSD LONG: Risk-off headwinds challenge GBP upside bias.",
+    "text": "USDCAD SHORT: Risk-off favors safe-haven USD, challenging short bias.\n\nGBPJPY LONG: Risk-off supports JPY strength, challenging GBP long.\n\nGBPUSD LONG: Risk-off pressures GBP, challenging long setup fundamentals.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 5.6
-      },
       {
         "pair": "USDCAD",
         "direction": "bear",
         "score": 5.3
       },
       {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 4.83
+      },
+      {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 4.7
+        "score": 4.1
       }
     ],
-    "updated": "2026-08-19T06:19:35.414343+00:00"
+    "updated": "2026-08-19T08:19:20.486296+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T06:19:35.414343+00:00"
+    "updated": "2026-08-19T08:19:20.486296+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-18T20:08:52.522744+00:00"
+    "generated_at": "2026-08-19T08:19:48.450583+00:00"
   },
   "breaking": {
     "headlines": [
-      "UK headline inflation picks up July, core prices hold steady",
+      "UK headline inflation picks up in July, core prices hold steady",
       "Trump pauses 50% Canada tariffs for three day period",
-      "US Dollar gains ground as inflation rate meets expectations"
+      "U.S. Dollar gains ground as inflation rate meets expectations"
     ],
-    "updated": "2026-08-19T06:19:35.414343+00:00"
+    "updated": "2026-08-19T08:19:20.486296+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
