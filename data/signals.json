@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T11:31:49.935435+00:00",
+  "updated": "2026-08-19T12:16:39.084757+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.87,
-      "delta_pct": 0.2,
+      "value": 15.73,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,15 +567,15 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4414.6,
-      "delta_pct": 1.1,
+      "value": 4420.0,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.4,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.402,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.0,
-      "delta_pct": 0.1,
+      "value": 84.66,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64337.0,
-      "delta_pct": -0.5,
+      "value": 64452.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Trump pauses 50% Canada tariffs for 'three day period' could accelerate USDCAD SHORT by reducing safe haven demand for USD.",
-    "updated": "2026-08-19T10:14:15.164538+00:00"
+    "text": "USDCAD SHORT threatened by Trump pausing 50 percent Canada tariffs for three day period, reducing near term downside pressure on CAD.",
+    "updated": "2026-08-19T12:16:39.084757+00:00"
   },
   "ranked": {
-    "text": "EURUSD LONG: Gold strength confirms risk-on setup, USD weakness driver.\n\nUSDCAD SHORT: Copper weakness challenges risk-on thesis, CAD vulnerable.\n\nGBPUSD LONG: Gold rally confirms DXY decline, risk-on aligned.",
+    "text": "EURUSD LONG: Gold strength confirms risk-off undercurrent challenging upside momentum.\n\nUSDCAD SHORT: Copper weakness supports risk-off macro conflicting with risk-on regime.\n\nGBPJPY LONG: S&P weakness contradicts momentum setup in conflicted macro environment.",
     "top": [
       {
         "pair": "EURUSD",
         "direction": "bull",
-        "score": 7.65
+        "score": 7.05
       },
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 6.2
+        "score": 5.6
       },
       {
-        "pair": "GBPUSD",
+        "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.0
+        "score": 4.6
       }
     ],
-    "updated": "2026-08-19T10:14:15.164538+00:00"
+    "updated": "2026-08-19T12:16:39.084757+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T10:14:15.164538+00:00"
+    "updated": "2026-08-19T12:16:39.084757+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Trump pauses 50% Canada tariffs for three day period",
-      "Euro area inflation confirmed to nudge up in July",
-      "UK headline inflation picks up in July, core steady"
+      "UK headline inflation picks up in July, core prices hold",
+      "US Dollar softens on mixed markets, Fed Minutes await"
     ],
-    "updated": "2026-08-19T10:14:15.164538+00:00"
+    "updated": "2026-08-19T12:16:39.084757+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
