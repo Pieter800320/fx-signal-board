@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T13:49:48.368745+00:00",
+  "updated": "2026-08-19T14:20:04.557397+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -548,97 +548,97 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.73,
-      "delta_pct": -0.7,
+      "value": 15.26,
+      "delta_pct": -3.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7691.76,
-      "delta_pct": -0.7,
-      "direction": "down",
+      "value": 7716.92,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4420.0,
-      "delta_pct": 1.2,
+      "value": 4530.8,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.402,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 98.923,
+      "delta_pct": -0.7,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4225,
-      "delta_pct": -0.9,
-      "direction": "down",
+      "value": 6.469,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.706,
-      "delta_bp": -1.8,
-      "direction": "flat",
+      "value": 4.649,
+      "delta_bp": -5.7,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.705,
+      "value": 3.707,
       "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.66,
-      "delta_pct": -0.3,
+      "value": 84.64,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64452.0,
-      "delta_pct": -0.4,
+      "value": 65387.0,
+      "delta_pct": 1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.1,
-      "delta_bp": -2.0,
-      "direction": "flat",
+      "value": 94.2,
+      "delta_bp": -5.9,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USDCAD SHORT threatened by Trump pausing 50 percent Canada tariffs for three day period, reducing near term downside pressure on CAD.",
-    "updated": "2026-08-19T12:16:39.084757+00:00"
+    "text": "EURUSD and NZDUSD long setups at risk. US Treasury liquidity support and mixed inflation data suggest dollar strength potential, conflicting with bullish euro and kiwi positioning.",
+    "updated": "2026-08-19T14:20:04.557397+00:00"
   },
   "ranked": {
-    "text": "EURUSD LONG: Gold strength confirms risk-off undercurrent challenging upside momentum.\n\nUSDCAD SHORT: Copper weakness supports risk-off macro conflicting with risk-on regime.\n\nGBPJPY LONG: S&P weakness contradicts momentum setup in conflicted macro environment.",
+    "text": "AUDUSD LONG: Gold surge and falling DXY perfectly confirm the setup.\n\nEURUSD LONG: Risk-on regime supports long, but momentum divergence challenges conviction.\n\nNZDUSD LONG: DXY weakness helps, but weak price action challenges entry timing.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 8.07
+      },
       {
         "pair": "EURUSD",
         "direction": "bull",
-        "score": 7.05
+        "score": 7.45
       },
       {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 5.6
-      },
-      {
-        "pair": "GBPJPY",
+        "pair": "NZDUSD",
         "direction": "bull",
-        "score": 4.6
+        "score": 6.07
       }
     ],
-    "updated": "2026-08-19T12:16:39.084757+00:00"
+    "updated": "2026-08-19T14:20:04.557397+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T12:16:39.084757+00:00"
+    "updated": "2026-08-19T14:20:04.557397+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump pauses 50% Canada tariffs for three day period",
-      "UK headline inflation picks up in July, core prices hold",
-      "US Dollar softens on mixed markets, Fed Minutes await"
+      "US Treasury increases liquidity support buyback operations for longer-dated securities",
+      "UK headline inflation picks up in July, core prices hold steady",
+      "Euro area inflation confirmed to nudge up in July"
     ],
-    "updated": "2026-08-19T12:16:39.084757+00:00"
+    "updated": "2026-08-19T14:20:04.557397+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
