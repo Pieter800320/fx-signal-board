@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T15:38:04.021149+00:00",
+  "updated": "2026-08-19T16:14:53.482573+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,77 +555,77 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.26,
-      "delta_pct": -3.7,
+      "value": 15.16,
+      "delta_pct": -4.3,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7716.92,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 7735.88,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4530.8,
-      "delta_pct": 3.8,
+      "value": 4552.2,
+      "delta_pct": 4.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.923,
-      "delta_pct": -0.7,
+      "value": 98.89,
+      "delta_pct": -0.8,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.469,
-      "delta_pct": -0.2,
+      "value": 6.5005,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.649,
-      "delta_bp": -5.7,
+      "value": 4.653,
+      "delta_bp": -5.3,
       "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.707,
-      "delta_bp": 0.2,
+      "value": 3.705,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.64,
-      "delta_pct": -0.4,
+      "value": 85.39,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 65387.0,
-      "delta_pct": 1.1,
-      "direction": "flat",
+      "value": 68547.0,
+      "delta_pct": 6.0,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 94.2,
-      "delta_bp": -5.9,
+      "value": 94.8,
+      "delta_bp": -5.3,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD and NZDUSD long setups at risk. US Treasury liquidity support and mixed inflation data suggest dollar strength potential, conflicting with bullish euro and kiwi positioning.",
-    "updated": "2026-08-19T14:20:04.557397+00:00"
+    "text": "EURUSD Long challenged by mixed dollar signals and Fed rate cut expectations fading. EUR inflation confirmed up but DXY recovering strength on US data.",
+    "updated": "2026-08-19T16:14:53.482573+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Gold surge and falling DXY perfectly confirm the setup.\n\nEURUSD LONG: Risk-on regime supports long, but momentum divergence challenges conviction.\n\nNZDUSD LONG: DXY weakness helps, but weak price action challenges entry timing.",
+    "text": "AUDUSD LONG: Gold surge and equity strength decisively confirm risk-on setup.\n\nEURUSD LONG: Falling yields and weakening dollar fully support long positioning.\n\nEURJPY LONG: Risk-on regime supports but lacks specific cross-asset confirmation today.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.07
+        "score": 8.4
       },
       {
         "pair": "EURUSD",
@@ -633,12 +633,12 @@
         "score": 7.45
       },
       {
-        "pair": "NZDUSD",
+        "pair": "EURJPY",
         "direction": "bull",
-        "score": 6.07
+        "score": 7.22
       }
     ],
-    "updated": "2026-08-19T14:20:04.557397+00:00"
+    "updated": "2026-08-19T16:14:53.482573+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T14:20:04.557397+00:00"
+    "updated": "2026-08-19T16:14:53.482573+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -713,9 +713,9 @@
     "headlines": [
       "US Treasury increases liquidity support buyback operations for longer-dated securities",
       "UK headline inflation picks up in July, core prices hold steady",
-      "Euro area inflation confirmed to nudge up in July"
+      "Euro area inflation confirmed to nudge up slightly in July"
     ],
-    "updated": "2026-08-19T14:20:04.557397+00:00"
+    "updated": "2026-08-19T16:14:53.482573+00:00"
   },
   "last_alert": "2026-08-19T15:38:04.021149+00:00",
   "gold_signal": {
