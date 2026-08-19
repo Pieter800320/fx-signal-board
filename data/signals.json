@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T02:46:24.128373+00:00",
+  "updated": "2026-08-19T04:22:58.035922+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -561,27 +561,27 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7691.76,
-      "delta_pct": -0.7,
+      "value": 7745.06,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4411.0,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 4408.2,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.575,
+      "value": 99.577,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4565,
-      "delta_pct": -2.2,
-      "direction": "down",
+      "value": 6.4645,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.92,
-      "delta_pct": 0.5,
+      "value": 84.8,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64363.0,
-      "delta_pct": -0.2,
+      "value": 64315.0,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Trump tariff pause supports CADJPY long as USD/CAD weakens. Strong Japan machine orders support all three JPY longs.",
-    "updated": "2026-08-19T02:46:24.128373+00:00"
+    "text": "CADJPY LONG threatened by US Canada tariff deadline talks creating CAD volatility and uncertainty near critical support levels.",
+    "updated": "2026-08-19T04:22:58.035922+00:00"
   },
   "ranked": {
-    "text": "GBPJPY: Risk-On regime confirms Long, JPY weakness primary driver.\n\nCADJPY: Risk-On regime confirms Long, carry trade momentum driver.\n\nEURJPY: Risk-On regime confirms Long, but equity weakness challenges conviction.",
+    "text": "GBPJPY LONG: Risk-On regime confirms, but Gold strength challenges carry unwinding.\n\nCADJPY LONG: Risk-On regime confirms, but macro divergence challenges CAD weakness.\n\nEURJPY LONG: Risk-On regime confirms, but S&P weakness challenges risk sentiment.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-19T02:46:24.128373+00:00"
+    "updated": "2026-08-19T04:22:58.035922+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T02:46:24.128373+00:00"
+    "updated": "2026-08-19T04:22:58.035922+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Trump pauses 50% Canada tariffs for three day period",
-      "Japan June Machine Orders +16.9% y/y, beats +10.8% forecast",
-      "US Dollar gains ground as inflation rate meets expectations"
+      "Canada, US race against midnight tariff deadline as talks continue",
+      "US Dollar Price Forecast: Softer PPI boosts Fed cut bets"
     ],
-    "updated": "2026-08-19T02:46:24.128373+00:00"
+    "updated": "2026-08-19T04:22:58.035922+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
