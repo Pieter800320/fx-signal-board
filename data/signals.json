@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T22:08:04.619041+00:00",
+  "updated": "2026-08-19T00:25:01.232656+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4389.5,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4396.2,
+      "delta_pct": -0.5,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.655,
-      "delta_pct": 0.0,
+      "value": 99.601,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.456,
-      "delta_pct": -2.2,
+      "value": 6.471,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.42,
-      "delta_pct": -0.1,
+      "value": 84.5,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 64523.0,
-      "delta_pct": 0.0,
+      "value": 64555.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG invalidated by Canadian dollar extending losses amid US tariff uncertainty and failed trade deal negotiations.",
-    "updated": "2026-08-18T22:08:04.619041+00:00"
+    "text": "CADJPY LONG at risk. Canada tariff uncertainty with US could weaken CAD, conflicting with long setup conviction.",
+    "updated": "2026-08-19T00:25:01.232656+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, macro tailwind intact today.\n\nCADJPY LONG: Risk-On regime confirms setup, commodity weakness challenges CAD strength.\n\nEURJPY LONG: Risk-On regime confirms setup, but copper decline signals caution.",
+    "text": "GBPJPY LONG: Risk-On regime confirms carry trade strength thesis today.\n\nCADJPY LONG: Mixed macro challenges momentum, copper weakness pressures CAD upside.\n\nEURJPY LONG: Risk-On supports JPY weakness, but equity selloff creates headwind.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.33
       }
     ],
-    "updated": "2026-08-18T22:08:04.619041+00:00"
+    "updated": "2026-08-19T00:25:01.232656+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-18T22:08:04.619041+00:00"
+    "updated": "2026-08-19T00:25:01.232656+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump weighs Canada tariff reprieve as midnight deadline approaches",
-      "Canadian dollar extends losses on failed US trade deal hopes",
-      "US Dollar gains as inflation meets expectations, EUR/USD pressured"
+      "Canada, US race against midnight tariff deadline as talks continue",
+      "Japan June Machine Orders +16.9% y/y, beats +10.8% expectation",
+      "US Dollar Gains Ground As Inflation Rate Meets Expectations"
     ],
-    "updated": "2026-08-18T22:08:04.619041+00:00"
+    "updated": "2026-08-19T00:25:01.232656+00:00"
   },
   "last_alert": "2026-08-17T11:32:16.548143+00:00",
   "gold_signal": {
