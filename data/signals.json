@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T19:31:36.694414+00:00",
+  "updated": "2026-08-19T20:10:55.310040+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
-    "total": 2,
+    "total": 4,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.21,
-      "delta_pct": -4.0,
-      "direction": "flat",
+      "value": 15.04,
+      "delta_pct": -5.1,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7714.81,
-      "delta_pct": 0.3,
+      "value": 7707.98,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4552.7,
-      "delta_pct": 4.3,
+      "value": 4566.6,
+      "delta_pct": 4.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.896,
-      "delta_pct": -0.8,
+      "value": 98.796,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4895,
-      "delta_pct": 0.1,
+      "value": 6.4955,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.67,
-      "delta_bp": -3.6,
-      "direction": "flat",
+      "value": 4.653,
+      "delta_bp": -5.3,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.705,
-      "delta_bp": 0.0,
+      "value": 3.7,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.09,
-      "delta_pct": 0.2,
+      "value": 84.25,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 68142.0,
-      "delta_pct": 5.4,
+      "value": 68588.0,
+      "delta_pct": 6.0,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 96.5,
-      "delta_bp": -3.6,
+      "value": 95.3,
+      "delta_bp": -4.8,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURUSD and GBPUSD rally on Fed cut bets conflicts with mixed dollar strength signals. Euro inflation confirmed higher supports EURUSD long. Treasury buyback operations could support dollar, pressuring all three longs.",
-    "updated": "2026-08-19T18:13:40.090884+00:00"
+    "text": "USDCHF SHORT invalidated. US Treasury liquidity support buyback operations and surprise dollar weakness contradict short USD positioning.",
+    "updated": "2026-08-19T20:10:55.310040+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro confirms via gold surge supporting commodity currency bid.\n\nNZDUSD LONG: Macro confirms via DXY weakness and risk-on sentiment alignment.\n\nEURUSD LONG: Macro challenges due risk-off macro conflicting with risk-on setup.",
+    "text": "AUDUSD LONG: VIX falling and gold rising strongly confirm setup momentum.\n\nNZDUSD LONG: VIX falling confirms but momentum divergence challenges conviction slightly.\n\nUSDCHF SHORT: Falling yields and gold rising confirm CHF bid decisively.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.4
+        "score": 8.0
       },
       {
         "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.77
+        "score": 7.67
       },
       {
-        "pair": "EURUSD",
-        "direction": "bull",
-        "score": 7.45
+        "pair": "USDCHF",
+        "direction": "bear",
+        "score": 7.32
       }
     ],
-    "updated": "2026-08-19T18:13:40.090884+00:00"
+    "updated": "2026-08-19T20:10:55.310040+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T18:13:40.090884+00:00"
+    "updated": "2026-08-19T20:10:55.310040+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump suggests US-Canada deal reached, Iran negotiations continue",
-      "UK headline inflation picks up in July, core steady",
-      "Euro area inflation confirmed to nudge up in July"
+      "Surprise US Treasury announcement sends dollar lower, gold higher",
+      "US Treasury increases liquidity support buyback operations for longer-dated securities",
+      "UK inflation picks up in July, pound under pressure"
     ],
-    "updated": "2026-08-19T18:13:40.090884+00:00"
+    "updated": "2026-08-19T20:10:55.310040+00:00"
   },
   "last_alert": "2026-08-19T17:32:26.644853+00:00",
   "gold_signal": {
