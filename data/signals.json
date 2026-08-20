@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T15:39:49.956986+00:00",
+  "updated": "2026-08-20T16:17:59.100012+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,12 +539,12 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,33 +555,33 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.97,
-      "delta_pct": 7.3,
+      "value": 15.89,
+      "delta_pct": 6.7,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7678.03,
+      "value": 7674.23,
       "delta_pct": -0.4,
-      "direction": "flat",
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4542.9,
-      "delta_pct": 1.2,
+      "value": 4576.0,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.871,
+      "value": 98.861,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4365,
-      "delta_pct": -0.8,
-      "direction": "down",
+      "value": 6.467,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -591,54 +591,54 @@
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.7,
-      "delta_bp": 0.0,
+      "value": 3.703,
+      "delta_bp": 0.3,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.6,
-      "delta_pct": 0.9,
+      "value": 86.67,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 71504.0,
-      "delta_pct": 3.2,
+      "value": 72255.0,
+      "delta_pct": 4.3,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.0,
-      "delta_bp": 4.7,
+      "value": 99.7,
+      "delta_bp": 4.4,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG conflicts with Canada July PPI beat at +0.6% vs -0.5%, likely strengthening CAD against JPY.",
-    "updated": "2026-08-20T14:22:13.031580+00:00"
+    "text": "CADJPY LONG invalidated by Canada July PPI plus 0.6 percent versus minus 0.5 percent expected strengthens CAD against JPY.",
+    "updated": "2026-08-20T16:17:59.100012+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Rising US 10Y confirms JPY weakness driver perfectly today.\n\nCADJPY LONG: Rising US 10Y confirms JPY weakness driver perfectly today.\n\nNZDUSD LONG: VIX spike and rising rates challenge risk-on NZD bid.",
+    "text": "NZDJPY LONG: Rising US 10Y and Bitcoin confirm JPY weakness thesis strongly.\n\nCADJPY LONG: Rising US 10Y confirms JPY offered carry unwind setup.\n\nGBPJPY LONG: VIX spike and risk-off medium challenge momentum despite 10Y support.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.38
+        "score": 8.28
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 8.25
+        "score": 7.68
       },
       {
-        "pair": "NZDUSD",
+        "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.38
+        "score": 7.5
       }
     ],
-    "updated": "2026-08-20T14:22:13.031580+00:00"
+    "updated": "2026-08-20T16:17:59.100012+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T14:22:13.031580+00:00"
+    "updated": "2026-08-20T16:17:59.100012+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -713,9 +713,9 @@
     "headlines": [
       "US August Philly Fed business index +47.4 vs +25.0 expected",
       "Canada July PPI +0.6% vs -0.5% expected",
-      "Dollar, yields recover poise; Fed Minutes and UK inflation loom"
+      "US initial jobless claims 206K vs 210K expected"
     ],
-    "updated": "2026-08-20T14:22:13.031580+00:00"
+    "updated": "2026-08-20T16:17:59.100012+00:00"
   },
   "last_alert": "2026-08-20T15:39:49.956986+00:00",
   "gold_signal": {
