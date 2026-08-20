@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T02:45:23.828420+00:00",
+  "updated": "2026-08-20T04:23:00.115250+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -542,8 +542,8 @@
     "regime": "Risk-Off",
     "confidence": "Medium",
     "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "signals": 2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4548.7,
-      "delta_pct": 4.2,
+      "value": 4554.6,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.85,
-      "delta_pct": 0.0,
+      "value": 98.798,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4725,
-      "delta_pct": -0.2,
+      "value": 6.49,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.55,
-      "delta_pct": -0.5,
-      "direction": "flat",
+      "value": 84.59,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 69290.0,
+      "value": 69259.0,
       "delta_pct": 7.1,
       "direction": "up",
       "label": "Bitcoin"
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "AUDUSD LONG invalidated. Australia jobless rate 4.5% vs 4.4% expected signals economic weakness, bearish for AUD.",
-    "updated": "2026-08-20T02:45:23.828420+00:00"
+    "text": "Australia's jobless rate climbs to near four year high. AUDUSD LONG invalidated. Higher unemployment weakens AUD fundamentally.",
+    "updated": "2026-08-20T04:23:00.115250+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: VIX decline and gold strength confirm risk-on AUD bid thesis.\n\nNZDUSD LONG: Bitcoin rise confirms risk-on NZD bid, momentum divergence challenges.\n\nUSDCHF SHORT: Falling yields and gold strength confirm safe-haven CHF appreciation setup.",
+    "text": "AUDUSD LONG: VIX decline and gold strength confirm risk-on AUD bid setup.\n\nNZDUSD LONG: Falling US 10Y challenges NZD strength in risk-off environment.\n\nUSDCHF SHORT: Gold rally and declining yields strongly confirm CHF safe-haven bid.",
     "top": [
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 7.12
       }
     ],
-    "updated": "2026-08-20T02:45:23.828420+00:00"
+    "updated": "2026-08-20T04:23:00.115250+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T02:45:23.828420+00:00"
+    "updated": "2026-08-20T04:23:00.115250+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -713,9 +713,9 @@
     "headlines": [
       "Australia jobless rate climbs to near four-year high in July",
       "Japan exports surge 49% on AI boom, semiconductor shipments higher",
-      "US Dollar gains ground as inflation rate meets expectations"
+      "US inflation meets expectations, dollar gains ground on major pairs"
     ],
-    "updated": "2026-08-20T02:45:23.828420+00:00"
+    "updated": "2026-08-20T04:23:00.115250+00:00"
   },
   "last_alert": "2026-08-19T17:32:26.644853+00:00",
   "gold_signal": {
