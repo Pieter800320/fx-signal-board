@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T11:33:19.035461+00:00",
+  "updated": "2026-08-20T12:18:27.501899+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -540,24 +540,24 @@
   },
   "regime_w1": {
     "regime": "Risk-Off",
-    "confidence": "High",
+    "confidence": "Medium",
     "score": 10.0,
-    "signals": 3,
-    "total": 3,
+    "signals": 2,
+    "total": 2,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 4,
+    "total": 4,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.23,
-      "delta_pct": 2.3,
-      "direction": "flat",
+      "value": 15.67,
+      "delta_pct": 5.2,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4543.0,
-      "delta_pct": 1.2,
+      "value": 4513.5,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.593,
-      "delta_pct": -0.2,
+      "value": 98.823,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4605,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.423,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.6,
-      "delta_pct": 0.9,
-      "direction": "flat",
+      "value": 87.25,
+      "delta_pct": 1.7,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72311.0,
-      "delta_pct": 4.4,
+      "value": 71691.0,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY and NZDJPY longs at risk from USD strength narrative and potential Fed rate hold bias emerging from recent inflation data and upcoming Fed minutes.",
-    "updated": "2026-08-20T10:15:51.141257+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-20T12:18:27.501899+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro challenges setup, US yields falling reduces carry appeal.\n\nEURJPY LONG: Macro challenges setup, risk-off medium undermines yen weakness thesis.\n\nNZDUSD LONG: Macro confirms setup, Bitcoin strength supports NZD bid continuation.",
+    "text": "CADJPY LONG: Macro confirms setup, WTI oil rising supports CAD strength today.\n\nNZDJPY LONG: Macro challenges setup, risk off medium contradicts risk on positioning.\n\nUSDCAD SHORT: Macro confirms setup, WTI oil rising strengthens CAD fundamentals directly.",
     "top": [
+      {
+        "pair": "CADJPY",
+        "direction": "bull",
+        "score": 8.18
+      },
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.78
+        "score": 7.98
       },
       {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 7.38
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bull",
-        "score": 7.08
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 7.32
       }
     ],
-    "updated": "2026-08-20T10:15:51.141257+00:00"
+    "updated": "2026-08-20T12:18:27.501899+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T10:15:51.141257+00:00"
+    "updated": "2026-08-20T12:18:27.501899+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Bundesbank: German economy may grow slightly this quarter",
-      "Trump vows sweeping new Iran sanctions",
-      "Softer PPI boosts Fed cut bets, EUR/USD rallies"
+      "U.S. Dollar gains ground as inflation rate meets expectations",
+      "German economy may grow slightly this quarter - Bundesbank",
+      "Fed minutes loom as EUR/USD and GBP/USD test resistance"
     ],
-    "updated": "2026-08-20T10:15:51.141257+00:00"
+    "updated": "2026-08-20T12:18:27.501899+00:00"
   },
   "last_alert": "2026-08-20T11:33:19.035461+00:00",
   "gold_signal": {
