@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T17:36:07.138053+00:00",
+  "updated": "2026-08-20T18:17:57.768555+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.89,
-      "delta_pct": 6.7,
+      "value": 15.87,
+      "delta_pct": 6.6,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7674.23,
-      "delta_pct": -0.4,
+      "value": 7651.33,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4576.0,
+      "value": 4573.5,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.861,
-      "delta_pct": 0.0,
+      "value": 98.899,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.467,
-      "delta_pct": -0.3,
+      "value": 6.478,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.67,
-      "delta_pct": 1.0,
+      "value": 86.4,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72255.0,
-      "delta_pct": 4.3,
+      "value": 72579.0,
+      "delta_pct": 4.8,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG invalidated by Canada July PPI plus 0.6 percent versus minus 0.5 percent expected strengthens CAD against JPY.",
-    "updated": "2026-08-20T16:17:59.100012+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-20T18:17:57.768555+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Rising US 10Y and Bitcoin confirm JPY weakness thesis strongly.\n\nCADJPY LONG: Rising US 10Y confirms JPY offered carry unwind setup.\n\nGBPJPY LONG: VIX spike and risk-off medium challenge momentum despite 10Y support.",
+    "text": "NZDJPY LONG: US 10Y rise confirms JPY weakness, supports setup strongly.\n\nCADJPY LONG: US 10Y rise confirms JPY weakness, supports setup strongly.\n\nGBPJPY LONG: US 10Y rise confirms JPY weakness, supports setup strongly.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.28
+        "score": 7.9
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 7.68
+        "score": 7.47
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.5
+        "score": 7.18
       }
     ],
-    "updated": "2026-08-20T16:17:59.100012+00:00"
+    "updated": "2026-08-20T18:17:57.768555+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T16:17:59.100012+00:00"
+    "updated": "2026-08-20T18:17:57.768555+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -715,7 +715,7 @@
       "Canada July PPI +0.6% vs -0.5% expected",
       "US initial jobless claims 206K vs 210K expected"
     ],
-    "updated": "2026-08-20T16:17:59.100012+00:00"
+    "updated": "2026-08-20T18:17:57.768555+00:00"
   },
   "last_alert": "2026-08-20T17:36:07.138053+00:00",
   "gold_signal": {
