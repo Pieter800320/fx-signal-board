@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T22:10:46.303575+00:00",
+  "updated": "2026-08-20T00:25:31.521227+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4581.5,
-      "delta_pct": 4.9,
+      "value": 4572.5,
+      "delta_pct": 4.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.778,
-      "delta_pct": -0.9,
+      "value": 98.817,
+      "delta_pct": -0.8,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5085,
-      "delta_pct": 0.4,
+      "value": 6.4995,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 84.62,
-      "delta_pct": -0.4,
+      "value": 84.49,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 69391.0,
-      "delta_pct": 7.3,
+      "value": 69643.0,
+      "delta_pct": 7.7,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "AUDUSD LONG at risk: Australia jobs preview headline suggests uncertainty on hiring surge, could weaken AUD if data disappoints expectations.\n\nUSDCHF SHORT pressured: Dollar weakness from Treasury bond buyback move and Fed cut bets support the short thesis.",
-    "updated": "2026-08-19T22:10:46.303575+00:00"
+    "text": "AUDUSD LONG threatened by Australia jobs preview uncertainty. USDCHF SHORT supported by dollar weakness from Treasury move and Fed cut bets.",
+    "updated": "2026-08-20T00:25:31.521227+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro confirms setup, VIX falling and gold rising drive AUD strength.\n\nNZDUSD LONG: Macro confirms setup, DXY weakness and risk-on environment support NZD.\n\nUSDCHF SHORT: Macro confirms setup, falling US yields and gold strength favor CHF.",
+    "text": "AUDUSD LONG: VIX decline and gold strength confirm risk-on AUD demand thesis.\n\nNZDUSD LONG: Falling US yields and DXY weakness confirm NZD outperformance setup.\n\nUSDCHF SHORT: Declining yields and rising gold confirm safe-haven CHF appreciation pressure.",
     "top": [
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 7.32
       }
     ],
-    "updated": "2026-08-19T22:10:46.303575+00:00"
+    "updated": "2026-08-20T00:25:31.521227+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-19T22:10:46.303575+00:00"
+    "updated": "2026-08-20T00:25:31.521227+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Surprise US Treasury announcement sends dollar lower, gold higher",
-      "Australia jobs preview: Divergence on whether June's hiring surge holds",
-      "US Treasury auctions $18 billion 20-year bonds at 5.204% yield"
+      "Fed Minutes loom as EUR/USD and GBP/USD test resistance",
+      "Australia jobs preview: Divergence on whether June's hiring surge holds"
     ],
-    "updated": "2026-08-19T22:10:46.303575+00:00"
+    "updated": "2026-08-20T00:25:31.521227+00:00"
   },
   "last_alert": "2026-08-19T17:32:26.644853+00:00",
   "gold_signal": {
