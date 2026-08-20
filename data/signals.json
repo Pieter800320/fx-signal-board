@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T09:41:30.397322+00:00",
+  "updated": "2026-08-20T10:15:51.141257+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -540,10 +540,10 @@
   },
   "regime_w1": {
     "regime": "Risk-Off",
-    "confidence": "Medium",
+    "confidence": "High",
     "score": 10.0,
-    "signals": 2,
-    "total": 2,
+    "signals": 3,
+    "total": 3,
     "stable": true
   },
   "macro": {
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.13,
-      "delta_pct": 1.6,
+      "value": 15.23,
+      "delta_pct": 2.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4551.2,
-      "delta_pct": 1.4,
+      "value": 4543.0,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.709,
-      "delta_pct": -0.1,
+      "value": 98.593,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4665,
-      "delta_pct": -0.3,
+      "value": 6.4605,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.49,
-      "delta_pct": -0.4,
+      "value": 86.6,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 71223.0,
-      "delta_pct": 2.8,
+      "value": 72311.0,
+      "delta_pct": 4.4,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "CADJPY LONG at risk: Canadian economic weakness implied by Australia jobless rate climb suggests regional labor softening, potential BoC cut pressure.",
-    "updated": "2026-08-20T08:20:36.820320+00:00"
+    "text": "EURJPY and NZDJPY longs at risk from USD strength narrative and potential Fed rate hold bias emerging from recent inflation data and upcoming Fed minutes.",
+    "updated": "2026-08-20T10:15:51.141257+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms via risk-on regime and Bitcoin strength supporting NZD.\n\nNZDUSD LONG: Macro challenges via US 10Y decline reducing USD carry appeal.\n\nCADJPY LONG: Macro confirms via risk-on regime supporting JPY weakness and CAD.",
+    "text": "NZDJPY LONG: Macro challenges setup, US yields falling reduces carry appeal.\n\nEURJPY LONG: Macro challenges setup, risk-off medium undermines yen weakness thesis.\n\nNZDUSD LONG: Macro confirms setup, Bitcoin strength supports NZD bid continuation.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.05
+        "score": 7.78
       },
       {
-        "pair": "NZDUSD",
+        "pair": "EURJPY",
         "direction": "bull",
         "score": 7.38
       },
       {
-        "pair": "CADJPY",
+        "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.28
+        "score": 7.08
       }
     ],
-    "updated": "2026-08-20T08:20:36.820320+00:00"
+    "updated": "2026-08-20T10:15:51.141257+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T08:20:36.820320+00:00"
+    "updated": "2026-08-20T10:15:51.141257+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-19T22:11:12.454113+00:00"
+    "generated_at": "2026-08-20T10:16:16.986942+00:00"
   },
   "breaking": {
     "headlines": [
-      "Australia's jobless rate climbs to near four-year high in July",
-      "Trump vows sweeping new Iran sanctions, escalating economic tensions",
-      "Fed Minutes loom as EUR/USD and GBP/USD test resistance"
+      "Bundesbank: German economy may grow slightly this quarter",
+      "Trump vows sweeping new Iran sanctions",
+      "Softer PPI boosts Fed cut bets, EUR/USD rallies"
     ],
-    "updated": "2026-08-20T08:20:36.820320+00:00"
+    "updated": "2026-08-20T10:15:51.141257+00:00"
   },
   "last_alert": "2026-08-20T09:41:30.397322+00:00",
   "gold_signal": {
