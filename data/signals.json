@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T20:10:03.138041+00:00",
+  "updated": "2026-08-21T22:09:34.291184+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.21,
-      "delta_pct": -5.0,
-      "direction": "flat",
+      "value": 15.13,
+      "delta_pct": -5.5,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4673.9,
-      "delta_pct": 3.5,
+      "value": 4661.6,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.83,
+      "value": 98.839,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.582,
+      "value": 6.58,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77046.0,
-      "delta_pct": 5.5,
+      "value": 78683.0,
+      "delta_pct": 7.7,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-21T20:10:03.138041+00:00"
+    "text": "DXY weakness pressures USD pairs. AUDJPY and NZDJPY long setups supported by dollar decline. AUDUSD gains reinforced. No direct conflicts.",
+    "updated": "2026-08-21T22:09:34.291184+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise and gold strength confirm AUD/JPY bullish setup.\n\nAUDUSD LONG: Copper and gold gains confirm AUD strength against USD.\n\nNZDJPY LONG: US 10Y rise and equity strength confirm NZD/JPY setup.",
+    "text": "AUDJPY LONG: VIX falling and US 10Y rising confirm setup perfectly.\n\nAUDUSD LONG: VIX falling confirms but S&P momentum stalling challenges strength.\n\nNZDJPY LONG: VIX falling and S&P rising confirm risk on setup.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-21T20:10:03.138041+00:00"
+    "updated": "2026-08-21T22:09:34.291184+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T20:10:03.138041+00:00"
+    "updated": "2026-08-21T22:09:34.291184+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 Can EUR/USD and GBP/USD Rally?",
-      "EU consumer confidence -15.5 versus -16.3 expected"
+      "US Dollar weakens as Fed cut bets rise, EUR/USD rallies",
+      "EU consumer confidence beats expectations at -15.5 versus -16.3",
+      "Canada retail sales surge to 0.6%, exceeding 0.4% forecast"
     ],
-    "updated": "2026-08-21T20:10:03.138041+00:00"
+    "updated": "2026-08-21T22:09:34.291184+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
