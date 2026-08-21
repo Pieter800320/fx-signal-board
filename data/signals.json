@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T09:43:57.436252+00:00",
+  "updated": "2026-08-21T10:16:13.084855+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.88,
-      "delta_pct": -0.8,
+      "value": 15.65,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4622.5,
-      "delta_pct": 2.4,
+      "value": 4641.1,
+      "delta_pct": 2.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.739,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 98.645,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.573,
-      "delta_pct": 1.7,
+      "value": 6.5815,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.49,
-      "delta_pct": -1.5,
-      "direction": "down",
+      "value": 86.98,
+      "delta_pct": -1.0,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77009.0,
-      "delta_pct": 5.4,
+      "value": 78135.0,
+      "delta_pct": 7.0,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-21T08:22:20.202476+00:00"
+    "updated": "2026-08-21T10:16:13.084855+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Rising US 10Y confirms JPY weakness driver perfectly today.\n\nAUDJPY LONG: Gold and copper rises confirm AUD bid thesis strongly.\n\nAUDUSD LONG: Gold copper bitcoin rises confirm AUD bid despite equity weakness.",
+    "text": "NZDJPY LONG: US 10Y rise confirms JPY weakness driver perfectly today.\n\nAUDJPY LONG: Gold and copper gains confirm AUD bid thesis strongly.\n\nAUDUSD LONG: Gold strength confirms AUD bid but S&P weakness complicates.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.85
+        "score": 8.38
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 8.28
+        "score": 7.77
       },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.18
+        "score": 7.67
       }
     ],
-    "updated": "2026-08-21T08:22:20.202476+00:00"
+    "updated": "2026-08-21T10:16:13.084855+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T08:22:20.202476+00:00"
+    "updated": "2026-08-21T10:16:13.084855+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
+      "UK August flash services PMI 52.8 vs 51.8 expected",
       "Germany August flash manufacturing PMI 54.1 vs 52.0 expected",
-      "Eurozone August flash services PMI 51.7 vs 51.5 expected",
-      "UK retail sales fall in July as early summer buzz fades"
+      "French business activity contracts further in August as demand conditions remain subdued"
     ],
-    "updated": "2026-08-21T08:22:20.202476+00:00"
+    "updated": "2026-08-21T10:16:13.084855+00:00"
   },
   "last_alert": "2026-08-21T09:43:57.436252+00:00",
   "gold_signal": {
