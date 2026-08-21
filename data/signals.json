@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T15:40:09.075465+00:00",
+  "updated": "2026-08-21T16:16:14.459444+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
-    "total": 1,
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
     "stable": false
   },
   "macro": {
@@ -551,24 +551,24 @@
     "signals": 0,
     "total": 2,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.36,
-      "delta_pct": -4.1,
+      "value": 15.39,
+      "delta_pct": -3.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7663.56,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 7683.68,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4644.6,
-      "delta_pct": 2.8,
+      "value": 4671.7,
+      "delta_pct": 3.4,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,48 +579,48 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5855,
-      "delta_pct": 1.9,
+      "value": 6.577,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.714,
-      "delta_bp": 1.8,
+      "value": 4.734,
+      "delta_bp": 3.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.705,
-      "delta_bp": 0.2,
+      "value": 3.718,
+      "delta_bp": 1.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.41,
-      "delta_pct": -1.6,
+      "value": 86.95,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76624.0,
-      "delta_pct": 4.9,
+      "value": 76927.0,
+      "delta_pct": 5.3,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.9,
-      "delta_bp": 1.6,
+      "value": 101.6,
+      "delta_bp": 2.3,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "DXY breaks 99.38 and dollar stays under pressure conflicts with AUDJPY and NZDJPY longs. Weakening dollar should support these pairs but headlines suggest dollar weakness may be overdone.",
-    "updated": "2026-08-21T14:21:17.667277+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-21T16:16:14.459444+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold and copper strength confirm AUD appreciation bias today.\n\nAUDUSD LONG: Risk-on regime supports AUD but oil weakness creates headwind.\n\nNZDJPY LONG: Copper rally confirms NZD bid despite mixed macro signals overall.",
+    "text": "AUDJPY LONG: Gold surge confirms AUD strength thesis today.\n\nNZDJPY LONG: S&P 500 and copper gains support setup.\n\nAUDUSD LONG: Risk-on regime with gold bid confirms pair.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -628,17 +628,17 @@
         "score": 8.38
       },
       {
-        "pair": "AUDUSD",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.18
+        "score": 8.38
       },
       {
-        "pair": "NZDJPY",
+        "pair": "AUDUSD",
         "direction": "bull",
         "score": 8.18
       }
     ],
-    "updated": "2026-08-21T14:21:17.667277+00:00"
+    "updated": "2026-08-21T16:16:14.459444+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T14:21:17.667277+00:00"
+    "updated": "2026-08-21T16:16:14.459444+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar weakens as Fed cut bets increase, EUR/USD rallies",
-      "UK August flash services PMI beats at 52.8 versus 51.8",
-      "Canada retail sales exceed forecast at 0.6% versus 0.4%"
+      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 Can EUR/USD and GBP/USD Rally?",
+      "EU consumer confidence -15.5 versus -16.3 expected"
     ],
-    "updated": "2026-08-21T14:21:17.667277+00:00"
+    "updated": "2026-08-21T16:16:14.459444+00:00"
   },
   "last_alert": "2026-08-21T13:50:29.304967+00:00",
   "gold_signal": {
