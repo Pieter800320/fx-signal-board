@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T19:30:33.491594+00:00",
+  "updated": "2026-08-21T20:10:03.138041+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.23,
-      "delta_pct": -4.9,
+      "value": 15.21,
+      "delta_pct": -5.0,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7672.31,
+      "value": 7674.37,
       "delta_pct": 0.4,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4683.3,
-      "delta_pct": 3.7,
+      "value": 4673.9,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.803,
+      "value": 98.83,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.581,
+      "value": 6.582,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.74,
-      "delta_bp": 4.4,
+      "value": 4.738,
+      "delta_bp": 4.2,
       "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.713,
-      "delta_bp": 1.0,
+      "value": 3.71,
+      "delta_bp": 0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.09,
-      "delta_pct": -0.8,
-      "direction": "flat",
+      "value": 86.64,
+      "delta_pct": -1.4,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77280.0,
-      "delta_pct": 5.8,
+      "value": 77046.0,
+      "delta_pct": 5.5,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.7,
-      "delta_bp": 3.4,
+      "value": 102.8,
+      "delta_bp": 3.5,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "US Dollar weakness accelerates NZDJPY and AUDJPY long setups. DXY breaking below 99.38 supports JPY pairs and AUDUSD strength.",
-    "updated": "2026-08-21T18:17:01.626461+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-21T20:10:03.138041+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: US 10Y and equity strength confirm JPY weakness positioning.\n\nAUDJPY LONG: Gold surge and risk-on backdrop confirm AUD outperformance thesis.\n\nAUDUSD LONG: Triple commodity bid (gold, copper, equities) confirms AUD strength.",
+    "text": "AUDJPY LONG: US 10Y rise and gold strength confirm AUD/JPY bullish setup.\n\nAUDUSD LONG: Copper and gold gains confirm AUD strength against USD.\n\nNZDJPY LONG: US 10Y rise and equity strength confirm NZD/JPY setup.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 8.57
-      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 8.38
+        "score": 8.78
       },
       {
         "pair": "AUDUSD",
         "direction": "bull",
         "score": 8.18
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 8.12
       }
     ],
-    "updated": "2026-08-21T18:17:01.626461+00:00"
+    "updated": "2026-08-21T20:10:03.138041+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T18:17:01.626461+00:00"
+    "updated": "2026-08-21T20:10:03.138041+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar weakens as Fed cut bets increase, EUR/USD rallies",
-      "EU consumer confidence beats expectations at -15.5 versus -16.3",
-      "Canada retail sales exceed forecast at 0.6% versus 0.4%"
+      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 Can EUR/USD and GBP/USD Rally?",
+      "EU consumer confidence -15.5 versus -16.3 expected"
     ],
-    "updated": "2026-08-21T18:17:01.626461+00:00"
+    "updated": "2026-08-21T20:10:03.138041+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
