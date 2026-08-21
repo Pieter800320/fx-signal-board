@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T05:38:34.480054+00:00",
+  "updated": "2026-08-21T06:20:48.235001+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4595.9,
-      "delta_pct": 1.8,
+      "value": 4604.7,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.747,
+      "value": 98.741,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.545,
+      "value": 6.546,
       "delta_pct": 1.3,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.46,
-      "delta_pct": -1.6,
+      "value": 86.27,
+      "delta_pct": -1.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 74793.0,
-      "delta_pct": 8.0,
+      "value": 75231.0,
+      "delta_pct": 8.6,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY LONG: UK consumer confidence hits two year high could accelerate GBP strength against JPY. CADJPY LONG: Softer PPI boosts Fed cut bets may weaken CAD relative to JPY.",
-    "updated": "2026-08-21T04:25:13.286750+00:00"
+    "text": "US Dollar strengthening headlines conflict with JPY pairs (NZDJPY, AUDJPY) and support USD strength against NZDUSD.",
+    "updated": "2026-08-21T06:20:48.235001+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, copper bid and JPY weakness align perfectly.\n\nGBPJPY LONG: Macro confirms setup, US 10Y rise offers JPY as expected.\n\nCADJPY LONG: Macro challenges setup, oil weakness pressures CAD despite JPY offered.",
+    "text": "NZDJPY LONG: Macro confirms setup, JPY weakness from rising US 10Y.\n\nAUDJPY LONG: Macro confirms setup, JPY offered despite risk-off equities signal.\n\nNZDUSD LONG: Macro challenges setup, risk-off medium headwinds offset commodity strength.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.83
+        "score": 8.88
       },
       {
-        "pair": "GBPJPY",
+        "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.18
+        "score": 8.07
       },
       {
-        "pair": "CADJPY",
+        "pair": "NZDUSD",
         "direction": "bull",
-        "score": 7.18
+        "score": 7.57
       }
     ],
-    "updated": "2026-08-21T04:25:13.286750+00:00"
+    "updated": "2026-08-21T06:20:48.235001+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T04:25:13.286750+00:00"
+    "updated": "2026-08-21T06:20:48.235001+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "China signals more fiscal support as economy slows significantly",
-      "Japan factories show strongest growth since February, CPI meets expectations",
-      "US Dollar gains as inflation meets expectations, EUR/USD GBP/USD affected"
+      "China signals more fiscal support as economy slows, CNY softens",
+      "US yields push higher, challenging Bessent put and USD strength",
+      "Japan factories lead strongest growth since February, JPY tested"
     ],
-    "updated": "2026-08-21T04:25:13.286750+00:00"
+    "updated": "2026-08-21T06:20:48.235001+00:00"
   },
   "last_alert": "2026-08-21T05:38:34.480054+00:00",
   "gold_signal": {
