@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T07:49:14.999079+00:00",
+  "updated": "2026-08-21T08:22:20.202476+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 16.01,
-      "delta_pct": 7.5,
-      "direction": "up",
+      "value": 15.88,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4604.7,
-      "delta_pct": 2.0,
+      "value": 4622.5,
+      "delta_pct": 2.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.741,
+      "value": 98.739,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.546,
-      "delta_pct": 1.3,
+      "value": 6.573,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.27,
-      "delta_pct": -1.8,
+      "value": 86.49,
+      "delta_pct": -1.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75231.0,
-      "delta_pct": 8.6,
+      "value": 77009.0,
+      "delta_pct": 5.4,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "US Dollar strengthening headlines conflict with JPY pairs (NZDJPY, AUDJPY) and support USD strength against NZDUSD.",
-    "updated": "2026-08-21T06:20:48.235001+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-21T08:22:20.202476+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, JPY weakness from rising US 10Y.\n\nAUDJPY LONG: Macro confirms setup, JPY offered despite risk-off equities signal.\n\nNZDUSD LONG: Macro challenges setup, risk-off medium headwinds offset commodity strength.",
+    "text": "NZDJPY LONG: Rising US 10Y confirms JPY weakness driver perfectly today.\n\nAUDJPY LONG: Gold and copper rises confirm AUD bid thesis strongly.\n\nAUDUSD LONG: Gold copper bitcoin rises confirm AUD bid despite equity weakness.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 8.88
+        "score": 8.85
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 8.07
+        "score": 8.28
       },
       {
-        "pair": "NZDUSD",
+        "pair": "AUDUSD",
         "direction": "bull",
-        "score": 7.57
+        "score": 8.18
       }
     ],
-    "updated": "2026-08-21T06:20:48.235001+00:00"
+    "updated": "2026-08-21T08:22:20.202476+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T06:20:48.235001+00:00"
+    "updated": "2026-08-21T08:22:20.202476+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "China signals more fiscal support as economy slows, CNY softens",
-      "US yields push higher, challenging Bessent put and USD strength",
-      "Japan factories lead strongest growth since February, JPY tested"
+      "Germany August flash manufacturing PMI 54.1 vs 52.0 expected",
+      "Eurozone August flash services PMI 51.7 vs 51.5 expected",
+      "UK retail sales fall in July as early summer buzz fades"
     ],
-    "updated": "2026-08-21T06:20:48.235001+00:00"
+    "updated": "2026-08-21T08:22:20.202476+00:00"
   },
   "last_alert": "2026-08-21T07:49:14.999079+00:00",
   "gold_signal": {
