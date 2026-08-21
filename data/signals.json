@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T22:12:49.900781+00:00",
+  "updated": "2026-08-21T00:28:30.710550+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4575.5,
+      "value": 4575.0,
       "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.855,
-      "delta_pct": 0.0,
+      "value": 98.78,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4845,
-      "delta_pct": -0.0,
+      "value": 6.495,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.3,
-      "delta_pct": 0.5,
+      "value": 86.16,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 72600.0,
-      "delta_pct": 4.8,
+      "value": 73833.0,
+      "delta_pct": 6.6,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-20T22:12:49.900781+00:00"
+    "updated": "2026-08-21T00:28:30.710550+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: US 10Y rise confirms JPY weakness setup perfectly.\n\nGBPJPY LONG: Rising yields support carry trade despite risk-off headline.\n\nCADJPY LONG: VIX surge challenges risk-on regime despite yield tailwind.",
+    "text": "NZDJPY LONG: US 10Y rise confirms JPY weakness, NZD supported.\n\nGBPJPY LONG: Rising yields confirm carry unwind headwind, challenges setup.\n\nCADJPY LONG: US 10Y confirms JPY offered, but risk-off challenges.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 7.18
       }
     ],
-    "updated": "2026-08-20T22:12:49.900781+00:00"
+    "updated": "2026-08-21T00:28:30.710550+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-20T22:12:49.900781+00:00"
+    "updated": "2026-08-21T00:28:30.710550+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-20T10:16:16.986942+00:00"
+    "generated_at": "2026-08-21T00:28:57.576682+00:00"
   },
   "breaking": {
     "headlines": [
-      "US leading index July +0.2% vs +0.1% expected, supports Dollar",
-      "US Treasury 30-year TIPS auction 2.973% signals bond market shift",
-      "Fed Minutes and UK inflation data loom for currency direction"
+      "New Zealand July trade balance NZ$-1.95 billion, significant deterioration from prior",
+      "Australia private sector growth softens as cost pressures intensify in August",
+      "U.S. Dollar gains ground as inflation rate meets expectations"
     ],
-    "updated": "2026-08-20T22:12:49.900781+00:00"
+    "updated": "2026-08-21T00:28:30.710550+00:00"
   },
   "last_alert": "2026-08-20T17:36:07.138053+00:00",
   "gold_signal": {
