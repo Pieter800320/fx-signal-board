@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-21T00:28:30.710550+00:00",
+  "updated": "2026-08-21T02:52:20.996250+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4575.0,
-      "delta_pct": 1.9,
+      "value": 4589.4,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.78,
-      "delta_pct": -0.1,
+      "value": 98.733,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.495,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 6.538,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.16,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 86.71,
+      "delta_pct": 1.0,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 73833.0,
-      "delta_pct": 6.6,
+      "value": 74444.0,
+      "delta_pct": 7.5,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-21T00:28:30.710550+00:00"
+    "text": "New Zealand trade deficit worsens NZDJPY setup risk. Softer US inflation data accelerates JPY strength, pressuring NZDJPY and CADJPY longs. USD weakness conflicts with USDCAD short thesis.",
+    "updated": "2026-08-21T02:52:20.996250+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: US 10Y rise confirms JPY weakness, NZD supported.\n\nGBPJPY LONG: Rising yields confirm carry unwind headwind, challenges setup.\n\nCADJPY LONG: US 10Y confirms JPY offered, but risk-off challenges.",
+    "text": "NZDJPY LONG: Macro confirms setup, US 10Y rise weakens JPY fundamentally.\n\nCADJPY LONG: Macro confirms setup, WTI strength bids CAD but JPY offered.\n\nUSDCAD SHORT: Macro challenges setup, oil bid conflicts with risk-off macro backdrop.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.62
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 7.18
+        "score": 7.83
       },
       {
         "pair": "CADJPY",
         "direction": "bull",
-        "score": 7.18
+        "score": 7.58
+      },
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 7.25
       }
     ],
-    "updated": "2026-08-21T00:28:30.710550+00:00"
+    "updated": "2026-08-21T02:52:20.996250+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-21T00:28:30.710550+00:00"
+    "updated": "2026-08-21T02:52:20.996250+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "New Zealand July trade balance NZ$-1.95 billion, significant deterioration from prior",
-      "Australia private sector growth softens as cost pressures intensify in August",
-      "U.S. Dollar gains ground as inflation rate meets expectations"
+      "China signals more fiscal support as economy slows significantly",
+      "Japan factories lead strongest growth since February, PMI surges",
+      "US inflation meets expectations, dollar gains ground across majors"
     ],
-    "updated": "2026-08-21T00:28:30.710550+00:00"
+    "updated": "2026-08-21T02:52:20.996250+00:00"
   },
   "last_alert": "2026-08-20T17:36:07.138053+00:00",
   "gold_signal": {
