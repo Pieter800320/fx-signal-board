@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T10:09:17.421725+00:00",
+  "updated": "2026-08-22T12:11:39.826776+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76755.0,
-      "delta_pct": -2.0,
+      "value": 77256.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T10:09:17.421725+00:00"
+    "updated": "2026-08-22T12:11:39.826776+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and rates rising align perfectly.\n\nAUDUSD LONG: Macro confirms setup, VIX declining supports AUD strength sustainably.\n\nNZDJPY LONG: Macro confirms setup, equity bid and JPY weakness reinforce directionally.",
+    "text": "AUDJPY LONG: VIX falling and rising US 10Y confirm setup perfectly today.\n\nAUDUSD LONG: VIX falling and gold rising confirm AUD strength thesis.\n\nNZDJPY LONG: VIX falling and rising equities confirm NZD bid momentum.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T10:09:17.421725+00:00"
+    "updated": "2026-08-22T12:11:39.826776+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T10:09:17.421725+00:00"
+    "updated": "2026-08-22T12:11:39.826776+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed hike bets fade as EUR/USD and GBP/USD rally strongly",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "Trump folds on beef tariffs, signals policy shift reversal"
+      "Fed Minutes loom as EUR/USD and GBP/USD test resistance levels",
+      "Trump folds on beef tariffs, USD weakens against major pairs",
+      "Softer PPI boosts Fed cut bets, EUR/USD and GBP/USD rally"
     ],
-    "updated": "2026-08-22T10:09:17.421725+00:00"
+    "updated": "2026-08-22T12:11:39.826776+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
