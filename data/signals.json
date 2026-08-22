@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T02:43:44.982428+00:00",
+  "updated": "2026-08-22T04:18:44.078557+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4661.6,
-      "delta_pct": 3.2,
+      "value": 4624.1,
+      "delta_pct": 2.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.839,
+      "value": 98.8,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.58,
-      "delta_pct": 1.9,
+      "value": 6.5795,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.64,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 87.06,
+      "delta_pct": -0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78429.0,
-      "delta_pct": 7.4,
+      "value": 78234.0,
+      "delta_pct": 7.1,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T02:43:44.982428+00:00"
+    "updated": "2026-08-22T04:18:44.078557+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and US 10Y rising strongly confirm setup.\n\nAUDUSD LONG: VIX falling and gold rising confirm bullish AUD bias.\n\nNZDJPY LONG: VIX falling and S&P rising confirm risk-on NZD strength.",
+    "text": "AUDJPY LONG: VIX falling and 10Y rising strongly confirm setup perfectly.\n\nAUDUSD LONG: VIX falling confirms but macro risk-on low challenges momentum.\n\nNZDJPY LONG: VIX falling confirms but risk-on low limits upside conviction.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T02:43:44.982428+00:00"
+    "updated": "2026-08-22T04:18:44.078557+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T02:43:44.982428+00:00"
+    "updated": "2026-08-22T04:18:44.078557+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance",
-      "Trump Folds on Beef Tariffs, Reduces Trade Tension",
+      "Trump Folds on Beef Tariffs, Reducing Trade Tensions",
       "EU Consumer Confidence Beats Expectations at -15.5"
     ],
-    "updated": "2026-08-22T02:43:44.982428+00:00"
+    "updated": "2026-08-22T04:18:44.078557+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
