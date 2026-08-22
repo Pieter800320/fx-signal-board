@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T18:09:30.026699+00:00",
+  "updated": "2026-08-22T20:07:36.104595+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77255.0,
-      "delta_pct": -1.4,
+      "value": 77412.0,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T18:09:30.026699+00:00"
+    "updated": "2026-08-22T20:07:36.104595+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling bids AUD strongly today.\n\nAUDUSD LONG: Macro confirms setup, falling VIX and rising gold bid AUD.\n\nNZDJPY LONG: Macro confirms setup, VIX falling bids NZD, JPY offered.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling strengthens AUD bid dynamics.\n\nAUDUSD LONG: Macro confirms setup, gold rising supports Australian dollar bid.\n\nNZDJPY LONG: Macro confirms setup, US 10Y rise pressures yen lower.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T18:09:30.026699+00:00"
+    "updated": "2026-08-22T20:07:36.104595+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T18:09:30.026699+00:00"
+    "updated": "2026-08-22T20:07:36.104595+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed minutes loom as EUR/USD and GBP/USD test resistance levels",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "Trump folds on beef tariffs, signals policy shift reversal"
+      "US Dollar weakens as Fed rate cut bets increase, EUR/USD rallies",
+      "Trump removes 26.4% beef tariffs, signals softer trade policy stance",
+      "EU consumer confidence improves to -15.5, beats expectations"
     ],
-    "updated": "2026-08-22T18:09:30.026699+00:00"
+    "updated": "2026-08-22T20:07:36.104595+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
