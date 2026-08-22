@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T16:07:46.881414+00:00",
+  "updated": "2026-08-22T18:09:30.026699+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77033.0,
-      "delta_pct": -1.7,
+      "value": 77255.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T16:07:46.881414+00:00"
+    "updated": "2026-08-22T18:09:30.026699+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup via VIX falling and US 10Y rising dynamics.\n\nAUDUSD LONG: Macro confirms setup via VIX falling and gold strength convergence.\n\nNZDJPY LONG: Macro confirms setup via VIX falling and S&P 500 bid support.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling bids AUD strongly today.\n\nAUDUSD LONG: Macro confirms setup, falling VIX and rising gold bid AUD.\n\nNZDJPY LONG: Macro confirms setup, VIX falling bids NZD, JPY offered.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T16:07:46.881414+00:00"
+    "updated": "2026-08-22T18:09:30.026699+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T16:07:46.881414+00:00"
+    "updated": "2026-08-22T18:09:30.026699+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump folds on beef tariffs, reverses 26.4% import duty stance",
-      "Fed cut bets fade, softer PPI boosts EUR/USD rally",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
+      "Fed minutes loom as EUR/USD and GBP/USD test resistance levels",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
+      "Trump folds on beef tariffs, signals policy shift reversal"
     ],
-    "updated": "2026-08-22T16:07:46.881414+00:00"
+    "updated": "2026-08-22T18:09:30.026699+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
