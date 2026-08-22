@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T14:08:01.514772+00:00",
+  "updated": "2026-08-22T16:07:46.881414+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77038.0,
+      "value": 77033.0,
       "delta_pct": -1.7,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T14:08:01.514772+00:00"
+    "updated": "2026-08-22T16:07:46.881414+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and US 10Y rising perfectly confirm setup simultaneously.\n\nAUDUSD LONG: VIX falling and gold rising confirm AUD strength bias.\n\nNZDJPY LONG: VIX falling and S&P rising confirm NZD bid momentum.",
+    "text": "AUDJPY LONG: Macro confirms setup via VIX falling and US 10Y rising dynamics.\n\nAUDUSD LONG: Macro confirms setup via VIX falling and gold strength convergence.\n\nNZDJPY LONG: Macro confirms setup via VIX falling and S&P 500 bid support.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T14:08:01.514772+00:00"
+    "updated": "2026-08-22T16:07:46.881414+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T14:08:01.514772+00:00"
+    "updated": "2026-08-22T16:07:46.881414+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-22T02:44:09.665753+00:00"
+    "generated_at": "2026-08-22T16:08:11.657835+00:00"
   },
   "breaking": {
     "headlines": [
-      "Trump folds on beef tariffs, removes 26.4% duties immediately",
-      "Fed cut bets fade as softer PPI data emerges",
+      "Trump folds on beef tariffs, reverses 26.4% import duty stance",
+      "Fed cut bets fade, softer PPI boosts EUR/USD rally",
       "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
     ],
-    "updated": "2026-08-22T14:08:01.514772+00:00"
+    "updated": "2026-08-22T16:07:46.881414+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
