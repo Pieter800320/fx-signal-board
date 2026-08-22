@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T04:18:44.078557+00:00",
+  "updated": "2026-08-22T06:16:03.753285+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78234.0,
-      "delta_pct": 7.1,
+      "value": 77252.0,
+      "delta_pct": 5.8,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-22T04:18:44.078557+00:00"
+    "text": "DXY weakness from Fed cut bets and softer PPI accelerates AUDJPY and AUDUSD longs. Trump tariff reversal removes downside risk to risk sentiment supporting setups.",
+    "updated": "2026-08-22T06:16:03.753285+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and 10Y rising strongly confirm setup perfectly.\n\nAUDUSD LONG: VIX falling confirms but macro risk-on low challenges momentum.\n\nNZDJPY LONG: VIX falling confirms but risk-on low limits upside conviction.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and US 10Y rising aligned perfectly.\n\nAUDUSD LONG: Macro confirms setup, VIX falling and gold rising supporting AUD bid.\n\nNZDJPY LONG: Macro confirms setup, VIX falling and S and P 500 rising supporting NZD.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T04:18:44.078557+00:00"
+    "updated": "2026-08-22T06:16:03.753285+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T04:18:44.078557+00:00"
+    "updated": "2026-08-22T06:16:03.753285+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance",
-      "Trump Folds on Beef Tariffs, Reducing Trade Tensions",
-      "EU Consumer Confidence Beats Expectations at -15.5"
+      "Trump folds on beef tariffs, reducing protectionist pressure",
+      "Fed rate cut bets rise as softer PPI emerges",
+      "EUR/USD and GBP/USD rally, DXY breaks 99.38 support"
     ],
-    "updated": "2026-08-22T04:18:44.078557+00:00"
+    "updated": "2026-08-22T06:16:03.753285+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
