@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T10:09:50.251181+00:00",
+  "updated": "2026-08-23T12:12:05.290590+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "btc": {
-      "value": 76679.0,
-      "delta_pct": -0.5,
+      "value": 77000.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -611,10 +611,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-23T10:09:50.251181+00:00"
+    "updated": "2026-08-23T12:12:05.290590+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and 10Y rising perfectly confirm this setup.\n\nAUDUSD LONG: VIX falling and gold rising strongly confirm AUD strength.\n\nNZDJPY LONG: VIX falling and S&P 500 rising confirm NZD bid.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and yields rising align perfectly.\n\nAUDUSD LONG: Macro confirms setup, risk-on regime with falling VIX supports AUD.\n\nNZDJPY LONG: Macro confirms setup, risk-on equities bid NZD while JPY offered.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -632,7 +632,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T10:09:50.251181+00:00"
+    "updated": "2026-08-23T12:12:05.290590+00:00"
   },
   "calendar": {
     "events": [
@@ -697,7 +697,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T10:09:50.251181+00:00"
+    "updated": "2026-08-23T12:12:05.290590+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -705,11 +705,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar weakens as Fed rate hike bets fade, EUR/USD rallies",
-      "Trump removes 26.4% beef tariffs, signals tariff policy shift",
-      "EU consumer confidence better than expected at -15.5"
+      "Trump reverses 26.4% beef tariffs, signals protectionist policy shift",
+      "Fed cut bets rise as softer PPI weakens dollar",
+      "EUR/USD and GBP/USD extend gains, DXY breaks 99.38"
     ],
-    "updated": "2026-08-23T10:09:50.251181+00:00"
+    "updated": "2026-08-23T12:12:05.290590+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
