@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T12:12:05.290590+00:00",
+  "updated": "2026-08-23T14:10:41.150635+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -596,9 +596,15 @@
       "direction": "flat",
       "label": "US 3M"
     },
+    "wti": {
+      "value": 87.06,
+      "delta_pct": -0.9,
+      "direction": "flat",
+      "label": "WTI Oil"
+    },
     "btc": {
-      "value": 77000.0,
-      "delta_pct": -0.1,
+      "value": 77449.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -611,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-23T12:12:05.290590+00:00"
+    "updated": "2026-08-23T14:10:41.150635+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and yields rising align perfectly.\n\nAUDUSD LONG: Macro confirms setup, risk-on regime with falling VIX supports AUD.\n\nNZDJPY LONG: Macro confirms setup, risk-on equities bid NZD while JPY offered.",
+    "text": "AUDJPY LONG: Macro confirms; VIX falling and US 10Y rising perfectly aligned setup.\n\nAUDUSD LONG: Macro confirms; VIX falling and Gold rising both support AUD strength.\n\nNZDJPY LONG: Macro confirms; VIX falling and S&P 500 rising drive NZD bid.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -632,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T12:12:05.290590+00:00"
+    "updated": "2026-08-23T14:10:41.150635+00:00"
   },
   "calendar": {
     "events": [
@@ -697,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T12:12:05.290590+00:00"
+    "updated": "2026-08-23T14:10:41.150635+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -705,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump reverses 26.4% beef tariffs, signals protectionist policy shift",
-      "Fed cut bets rise as softer PPI weakens dollar",
-      "EUR/USD and GBP/USD extend gains, DXY breaks 99.38"
+      "Trump folds on beef tariffs, reduces protectionist stance",
+      "Fed hike bets fade as EUR/USD and GBP/USD rally",
+      "S&P Global manufacturing PMI misses at 53.2 versus 53.9"
     ],
-    "updated": "2026-08-23T12:12:05.290590+00:00"
+    "updated": "2026-08-23T14:10:41.150635+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
