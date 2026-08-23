@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T22:07:11.373826+00:00",
+  "updated": "2026-08-23T00:27:37.308794+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77076.0,
-      "delta_pct": -1.6,
+      "value": 77239.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-22T22:07:11.373826+00:00"
+    "updated": "2026-08-23T00:27:37.308794+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and US 10Y rising align perfectly.\n\nAUDUSD LONG: Macro confirms setup, VIX falling and Gold rising drive AUD strength.\n\nNZDJPY LONG: Macro confirms setup, VIX falling and S and P 500 rising align.",
+    "text": "AUDJPY LONG: Macro confirms via VIX falling and US 10Y rising simultaneously.\n\nAUDUSD LONG: Macro confirms via VIX falling and gold appreciating together today.\n\nNZDJPY LONG: Macro confirms via VIX falling and S&P 500 rising today.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-22T22:07:11.373826+00:00"
+    "updated": "2026-08-23T00:27:37.308794+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-22T22:07:11.373826+00:00"
+    "updated": "2026-08-23T00:27:37.308794+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -712,10 +712,10 @@
   "breaking": {
     "headlines": [
       "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance",
-      "Trump folds on beef tariffs, signaling policy shift",
-      "EU consumer confidence beats expectations, supports EUR strength"
+      "DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gains",
+      "Trump Folds on Beef Tariffs, USD Weakens"
     ],
-    "updated": "2026-08-22T22:07:11.373826+00:00"
+    "updated": "2026-08-23T00:27:37.308794+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
