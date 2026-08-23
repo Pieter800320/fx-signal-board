@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T08:14:04.126365+00:00",
+  "updated": "2026-08-23T10:09:50.251181+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "btc": {
-      "value": 76184.0,
-      "delta_pct": -1.2,
+      "value": 76679.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -611,10 +611,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-23T08:14:04.126365+00:00"
+    "updated": "2026-08-23T10:09:50.251181+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and 10Y rising both confirm the setup strongly.\n\nAUDUSD LONG: VIX falling confirms setup but rising 10Y slightly challenges AUD.\n\nNZDJPY LONG: VIX falling and S&P rising confirm the setup well.",
+    "text": "AUDJPY LONG: VIX falling and 10Y rising perfectly confirm this setup.\n\nAUDUSD LONG: VIX falling and gold rising strongly confirm AUD strength.\n\nNZDJPY LONG: VIX falling and S&P 500 rising confirm NZD bid.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -632,7 +632,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T08:14:04.126365+00:00"
+    "updated": "2026-08-23T10:09:50.251181+00:00"
   },
   "calendar": {
     "events": [
@@ -697,7 +697,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T08:14:04.126365+00:00"
+    "updated": "2026-08-23T10:09:50.251181+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -705,11 +705,11 @@
   },
   "breaking": {
     "headlines": [
-      "Trump folds on beef tariffs, reducing protectionist pressure on USD",
-      "Fed cut bets rise as softer PPI weakens dollar momentum",
-      "EUR/USD and GBP/USD rally as DXY breaks key 99.38 level"
+      "US Dollar weakens as Fed rate hike bets fade, EUR/USD rallies",
+      "Trump removes 26.4% beef tariffs, signals tariff policy shift",
+      "EU consumer confidence better than expected at -15.5"
     ],
-    "updated": "2026-08-23T08:14:04.126365+00:00"
+    "updated": "2026-08-23T10:09:50.251181+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
