@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T16:09:13.121933+00:00",
+  "updated": "2026-08-23T18:09:34.453269+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77224.0,
-      "delta_pct": 0.2,
+      "value": 77196.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-23T16:09:13.121933+00:00"
+    "updated": "2026-08-23T18:09:34.453269+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and yields rising ideal.\n\nAUDUSD LONG: Macro confirms setup, risk-on regime and gold strength align.\n\nNZDJPY LONG: Macro confirms setup, risk-on and falling VIX support currencies.",
+    "text": "AUDJPY LONG: Macro confirms setup via VIX falling and US 10Y rising.\n\nAUDUSD LONG: Macro confirms setup via VIX falling and gold rising.\n\nNZDJPY LONG: Macro confirms setup via VIX falling and S and P rising.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T16:09:13.121933+00:00"
+    "updated": "2026-08-23T18:09:34.453269+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T16:09:13.121933+00:00"
+    "updated": "2026-08-23T18:09:34.453269+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-23T04:24:16.060086+00:00"
+    "generated_at": "2026-08-23T18:10:05.076571+00:00"
   },
   "breaking": {
     "headlines": [
-      "Trump folds on beef tariffs, reducing trade tensions with Brazil",
-      "Fed hike bets fade as EUR/USD and GBP/USD rally strongly",
-      "Softer PPI boosts Fed cut bets, weakens US Dollar"
+      "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance Levels",
+      "Trump Folds on Beef Tariffs, USD Weakens Against Major Pairs",
+      "EU Consumer Confidence Beats Expectations, Supports EUR Strength"
     ],
-    "updated": "2026-08-23T16:09:13.121933+00:00"
+    "updated": "2026-08-23T18:09:34.453269+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
