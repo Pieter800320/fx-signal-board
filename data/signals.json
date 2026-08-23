@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T20:07:01.365177+00:00",
+  "updated": "2026-08-23T21:21:04.778191+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77218.0,
-      "delta_pct": 0.2,
+      "value": 77980.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-23T20:07:01.365177+00:00"
+    "text": "US-Canada trade collapse and retaliation threats weaken CAD, supporting AUDUSD and NZDJPY longs. Fed cut bets fade, pressuring USD strength thesis for these pairs.",
+    "updated": "2026-08-23T21:21:04.778191+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms via VIX fall and US 10Y rise simultaneously.\n\nAUDUSD LONG: Macro confirms via VIX fall and Gold strength alignment.\n\nNZDJPY LONG: Macro confirms via VIX fall offsetting Risk-On Low macro caution.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and US 10Y rising aligned perfectly.\n\nAUDUSD LONG: Macro confirms setup, VIX falling and gold rising support AUD strength.\n\nNZDJPY LONG: Macro confirms setup, VIX falling and S&P 500 rising drive NZD bid.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T20:07:01.365177+00:00"
+    "updated": "2026-08-23T21:21:04.778191+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T20:07:01.365177+00:00"
+    "updated": "2026-08-23T21:21:04.778191+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance",
-      "Trump folds on beef tariffs, reversing 26.4% import duties",
-      "Softer PPI boosts Fed cut bets, EUR/USD and GBP/USD rally"
+      "US-Canada trade talks collapse as 50% tariffs take effect, Carney vows retaliation",
+      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
+      "EU consumer confidence -15.5 versus -16.3 expected"
     ],
-    "updated": "2026-08-23T20:07:01.365177+00:00"
+    "updated": "2026-08-23T21:21:04.778191+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
@@ -725,5 +725,9 @@
     "h4_confidence": "High",
     "h1_confirmed": true,
     "updated": "2026-08-21T19:30:33.491594+00:00"
+  },
+  "week_ahead": {
+    "text": "I'll search for current weekly FX previews to get the latest market outlook. The coming week's most important data points are US Core PCE Price Index, US Preliminary Benchmark Payrolls Revision, US Preliminary GDP, Australian CPI, and Canadian GDP , with Thursday's PCE and GDP readings presenting the critical test for USD positioning amid signals of slowing growth. This week's Forex forecast highlights a bullish US Dollar and strong USD/JPY , though Gold extended its rally to a two-month peak near $4,450 before correcting lower as the Middle East crisis remained unresolved , creating mixed signals across risk assets. US-Canada trade negotiations collapsed late Friday with tariffs of 50% on $20 billion worth of Canadian imports imposed, with Canada set to impose retaliatory tariffs on 8th September , making USD/CAD the critical pair as escalating trade tensions threaten volatility in commodity-linked currencies. The wildcard remains whether the Jackson Hole Symposium commentary and an unexpectedly weak GDP print could trigger risk-off rotation that overwhelms the hawkish USD narrative dominating early week positioning.",
+    "generated_at": "2026-08-23T21:21:04.778191+00:00"
   }
 }
