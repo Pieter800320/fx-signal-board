@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T02:52:18.065494+00:00",
+  "updated": "2026-08-24T04:31:49.857019+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4696.3,
-      "delta_pct": 1.6,
+      "value": 4695.2,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.83,
+      "value": 98.843,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.556,
+      "value": 6.5525,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.58,
+      "value": 85.59,
       "delta_pct": -1.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77321.0,
-      "delta_pct": 0.3,
+      "value": 77198.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY LONG invalidated: New Zealand Q2 retail sales much worse than expected weakens NZD fundamentals.",
-    "updated": "2026-08-24T02:52:18.065494+00:00"
+    "text": "New Zealand Q2 retail sales missed expectations, weakening NZD. This directly pressures NZDJPY LONG and AUDUSD LONG setups negatively.",
+    "updated": "2026-08-24T04:31:49.857019+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms setup, VIX falling supports AUD strength.\n\nAUDUSD LONG: Macro confirms setup, risk-on regime favors commodity currencies.\n\nNZDJPY LONG: Macro confirms setup, falling VIX bids NZD higher.",
+    "text": "AUDJPY LONG: VIX falling and US 10Y rising both confirm setup strongly.\n\nAUDUSD LONG: VIX falling confirms but mixed macro context slightly challenges momentum.\n\nNZDJPY LONG: VIX falling and S&P rising confirm risk-on directional bias clearly.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-24T02:52:18.065494+00:00"
+    "updated": "2026-08-24T04:31:49.857019+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T02:52:18.065494+00:00"
+    "updated": "2026-08-24T04:31:49.857019+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "New Zealand Q2 retail sales slowed much worse than expected",
-      "US-Canada trade talks collapse as 50% tariffs take effect",
-      "Fed Minutes loom as EUR/USD and GBP/USD test resistance"
+      "US-Canada trade talks collapse as 50% tariffs take effect, Carney vows retaliation",
+      "New Zealand Q2 retail sales have slowed much worse than expected",
+      "US Dollar Price Forecast: Fed Hike Bets Fade as EUR/USD and GBP/USD Rally"
     ],
-    "updated": "2026-08-24T02:52:18.065494+00:00"
+    "updated": "2026-08-24T04:31:49.857019+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
