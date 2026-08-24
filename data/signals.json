@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T09:55:29.989450+00:00",
+  "updated": "2026-08-24T10:24:21.908991+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
-    "stable": false
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.93,
-      "delta_pct": 5.3,
-      "direction": "up",
+      "value": 15.88,
+      "delta_pct": 5.0,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4693.8,
-      "delta_pct": 1.5,
+      "value": 4706.5,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.992,
+      "value": 98.976,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.61,
+      "value": 6.612,
       "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.55,
-      "delta_pct": -1.7,
+      "value": 85.08,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76977.0,
-      "delta_pct": -1.0,
+      "value": 77863.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,21 +616,21 @@
     }
   },
   "catalyst": {
-    "text": "EURJPY GBPJPY at risk. USD weakness narrative conflicts with JPY strength assumptions in these long setups. Monitor DXY breakdown.",
-    "updated": "2026-08-24T08:32:04.715002+00:00"
+    "text": "AUDJPY EURJPY GBPJPY at risk. New Zealand retail sales miss and US-Canada trade collapse could weaken AUD and trigger risk-off, favoring JPY strength.",
+    "updated": "2026-08-24T10:24:21.908991+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: US 10Y strength confirms JPY weakness thesis perfectly.\n\nAUDJPY LONG: Gold and equities bid AUD while rates weaken JPY.\n\nGBPJPY LONG: Rising rates and stocks support both GBP and JPY offered.",
+    "text": "AUDJPY LONG: Macro confirms via US 10Y rise weakening JPY demand.\n\nEURJPY LONG: Macro confirms via US 10Y rise offering JPY.\n\nGBPJPY LONG: Macro confirms via US 10Y rise and equity strength.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.53
+      },
       {
         "pair": "EURJPY",
         "direction": "bull",
         "score": 7.43
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 7.3
       },
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 6.97
       }
     ],
-    "updated": "2026-08-24T08:32:04.715002+00:00"
+    "updated": "2026-08-24T10:24:21.908991+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T08:32:04.715002+00:00"
+    "updated": "2026-08-24T10:24:21.908991+00:00"
   },
   "week_ahead": {
     "text": "I'll search for current weekly FX previews to provide you with the latest market analysis. This week's key data focuses on US Core PCE Price Index, US Preliminary Benchmark Payrolls Revision, US Preliminary GDP, Australian CPI, and Canadian GDP , with the Jackson Hole Symposium commencing towards the end of the week . This week's forex forecast highlights a bullish US Dollar and strong USD/JPY , while Thursday's PCE reading will be the most critical event affecting dollar positioning as inflation data carries outsized weight heading into the Fed's September decision cycle. Watch USD/JPY closely this week as it balances geopolitical risk, interest rate expectations, and the technical recovery from recent lows. US-Canada trade negotiations collapsed Friday with 50% tariffs on $20 billion Canadian imports set to take effect , presenting a tail risk that could spike USD/CAD volatility if markets reprice currency valuations on widening growth divergence.",
@@ -719,7 +719,7 @@
       "New Zealand Q2 retail sales have slowed much worse than expected",
       "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance"
     ],
-    "updated": "2026-08-24T08:32:04.715002+00:00"
+    "updated": "2026-08-24T10:24:21.908991+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
