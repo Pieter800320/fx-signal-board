@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T11:35:29.957666+00:00",
+  "updated": "2026-08-24T12:18:54.643252+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.88,
-      "delta_pct": 5.0,
-      "direction": "flat",
+      "value": 15.92,
+      "delta_pct": 5.2,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4706.5,
-      "delta_pct": 1.8,
+      "value": 4712.0,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.976,
+      "value": 98.994,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.612,
-      "delta_pct": 0.5,
+      "value": 6.5915,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.08,
-      "delta_pct": -2.3,
+      "value": 85.35,
+      "delta_pct": -2.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77863.0,
-      "delta_pct": 0.1,
+      "value": 78181.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "AUDJPY EURJPY GBPJPY at risk. New Zealand retail sales miss and US-Canada trade collapse could weaken AUD and trigger risk-off, favoring JPY strength.",
-    "updated": "2026-08-24T10:24:21.908991+00:00"
+    "text": "US Dollar weakening per multiple headlines supports JPY pairs long setups. DXY breaking below 99.38 accelerates EURJPY, AUDJPY, GBPJPY upside.",
+    "updated": "2026-08-24T12:18:54.643252+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms via US 10Y rise weakening JPY demand.\n\nEURJPY LONG: Macro confirms via US 10Y rise offering JPY.\n\nGBPJPY LONG: Macro confirms via US 10Y rise and equity strength.",
+    "text": "EURJPY: US 10Y rising confirms JPY weakness, supporting long thesis.\n\nAUDJPY: Gold and S&P rising confirm AUD strength, supporting long.\n\nGBPJPY: US 10Y rising confirms JPY offered, supporting long setup.",
     "top": [
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 7.53
-      },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 7.43
+        "score": 7.25
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 6.95
       },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 6.97
+        "score": 6.42
       }
     ],
-    "updated": "2026-08-24T10:24:21.908991+00:00"
+    "updated": "2026-08-24T12:18:54.643252+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T10:24:21.908991+00:00"
+    "updated": "2026-08-24T12:18:54.643252+00:00"
   },
   "week_ahead": {
     "text": "I'll search for current weekly FX previews to provide you with the latest market analysis. This week's key data focuses on US Core PCE Price Index, US Preliminary Benchmark Payrolls Revision, US Preliminary GDP, Australian CPI, and Canadian GDP , with the Jackson Hole Symposium commencing towards the end of the week . This week's forex forecast highlights a bullish US Dollar and strong USD/JPY , while Thursday's PCE reading will be the most critical event affecting dollar positioning as inflation data carries outsized weight heading into the Fed's September decision cycle. Watch USD/JPY closely this week as it balances geopolitical risk, interest rate expectations, and the technical recovery from recent lows. US-Canada trade negotiations collapsed Friday with 50% tariffs on $20 billion Canadian imports set to take effect , presenting a tail risk that could spike USD/CAD volatility if markets reprice currency valuations on widening growth divergence.",
@@ -715,11 +715,11 @@
   },
   "breaking": {
     "headlines": [
-      "US-Canada trade talks collapse as 50% tariffs take effect, Carney vows retaliation",
-      "New Zealand Q2 retail sales have slowed much worse than expected",
-      "Fed Minutes Loom as EUR/USD and GBP/USD Test Resistance"
+      "Canadian dollar extends losses after trade talks collapse",
+      "New Zealand Q2 retail sales slowed much worse than expected",
+      "Fed cut bets fade as EUR/USD and GBP/USD rally"
     ],
-    "updated": "2026-08-24T10:24:21.908991+00:00"
+    "updated": "2026-08-24T12:18:54.643252+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
