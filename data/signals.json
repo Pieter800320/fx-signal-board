@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T22:07:17.319819+00:00",
+  "updated": "2026-08-24T00:26:29.660681+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4680.6,
-      "delta_pct": 3.6,
+      "value": 4696.0,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.8,
-      "delta_pct": -0.1,
+      "value": 98.777,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.587,
-      "delta_pct": 2.0,
-      "direction": "up",
+      "value": 6.5825,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.06,
-      "delta_pct": -0.9,
-      "direction": "flat",
+      "value": 86.14,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77736.0,
-      "delta_pct": 0.8,
+      "value": 77361.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-23T22:07:17.319819+00:00"
+    "text": "NZDJPY LONG invalidated. New Zealand Q2 retail sales significantly worse than expected weakens NZD fundamentals directly.",
+    "updated": "2026-08-24T00:26:29.660681+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: VIX falling and US 10Y rising both confirm setup.\n\nAUDUSD LONG: VIX falling and gold rising confirm AUD strength.\n\nNZDJPY LONG: VIX falling and S&P rising confirm NZD bid.",
+    "text": "AUDJPY LONG: Macro confirms setup, VIX falling and UST rising align perfectly.\n\nAUDUSD LONG: Macro confirms setup, VIX falling and gold rising support AUD.\n\nNZDJPY LONG: Macro confirms setup, VIX falling and equity strength support NZD.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -638,7 +638,7 @@
         "score": 8.12
       }
     ],
-    "updated": "2026-08-23T22:07:17.319819+00:00"
+    "updated": "2026-08-24T00:26:29.660681+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-23T22:07:17.319819+00:00"
+    "updated": "2026-08-24T00:26:29.660681+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US-Canada trade talks collapse as 50% tariffs take effect, Carney vows retaliation",
-      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
-      "EU consumer confidence -15.5 versus -16.3 expected"
+      "New Zealand Q2 retail sales slowed much worse than expected",
+      "US-Canada trade talks collapse as 50% tariffs take effect",
+      "Fed Minutes loom as EUR/USD and GBP/USD test resistance"
     ],
-    "updated": "2026-08-23T22:07:17.319819+00:00"
+    "updated": "2026-08-24T00:26:29.660681+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
