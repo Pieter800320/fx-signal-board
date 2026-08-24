@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T15:46:25.210998+00:00",
+  "updated": "2026-08-24T16:19:32.137891+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 10.0,
     "signals": 2,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,80 +555,80 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.97,
-      "delta_pct": 5.6,
-      "direction": "up",
+      "value": 15.65,
+      "delta_pct": 3.4,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7646.74,
-      "delta_pct": -0.4,
+      "value": 7668.97,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4715.4,
-      "delta_pct": 2.0,
+      "value": 4711.8,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.975,
+      "value": 98.981,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.621,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 6.6135,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.7,
-      "delta_bp": -3.8,
-      "direction": "flat",
+      "value": 4.682,
+      "delta_bp": -5.6,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.715,
-      "delta_bp": 0.5,
+      "value": 3.703,
+      "delta_bp": -0.7,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.22,
-      "delta_pct": -2.1,
+      "value": 84.97,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79363.0,
-      "delta_pct": 2.1,
-      "direction": "flat",
+      "value": 79793.0,
+      "delta_pct": 2.6,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.5,
-      "delta_bp": -4.3,
+      "value": 97.9,
+      "delta_bp": -4.9,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBP/USD rallying as USD weakens from softer inflation data and fading Fed hike bets supports GBPJPY long setup.",
-    "updated": "2026-08-24T14:28:40.603893+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-24T16:19:32.137891+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, VIX surge challenges conviction slightly.",
+    "text": "GBPJPY LONG: Risk-On regime confirms setup; US rates falling supports carry.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 7.05
+        "score": 5.65
       }
     ],
-    "updated": "2026-08-24T14:28:40.603893+00:00"
+    "updated": "2026-08-24T16:19:32.137891+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T14:28:40.603893+00:00"
+    "updated": "2026-08-24T16:19:32.137891+00:00"
   },
   "week_ahead": {
     "text": "I'll search for current weekly FX previews to provide you with the latest market analysis. This week's key data focuses on US Core PCE Price Index, US Preliminary Benchmark Payrolls Revision, US Preliminary GDP, Australian CPI, and Canadian GDP , with the Jackson Hole Symposium commencing towards the end of the week . This week's forex forecast highlights a bullish US Dollar and strong USD/JPY , while Thursday's PCE reading will be the most critical event affecting dollar positioning as inflation data carries outsized weight heading into the Fed's September decision cycle. Watch USD/JPY closely this week as it balances geopolitical risk, interest rate expectations, and the technical recovery from recent lows. US-Canada trade negotiations collapsed Friday with 50% tariffs on $20 billion Canadian imports set to take effect , presenting a tail risk that could spike USD/CAD volatility if markets reprice currency valuations on widening growth divergence.",
@@ -705,11 +705,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
-      "New Zealand Q2 retail sales have slowed much worse than expected",
-      "Canadian dollar extends losses after trade talks collapse"
+      "US set to impose 7.5% tariff on Chinese goods - report",
+      "Canadian dollar extends losses after trade talks collapse",
+      "New Zealand Q2 retail sales slowed much worse than expected"
     ],
-    "updated": "2026-08-24T14:28:40.603893+00:00"
+    "updated": "2026-08-24T16:19:32.137891+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
