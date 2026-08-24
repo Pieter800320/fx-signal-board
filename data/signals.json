@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T20:14:24.087317+00:00",
+  "updated": "2026-08-24T22:11:45.412344+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.84,
-      "delta_pct": 4.7,
+      "value": 15.85,
+      "delta_pct": 4.8,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4708.4,
-      "delta_pct": 1.8,
+      "value": 4713.1,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.015,
+      "value": 98.986,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6015,
-      "delta_pct": 0.3,
+      "value": 6.6075,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.0,
-      "delta_pct": -2.4,
+      "value": 85.03,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78653.0,
-      "delta_pct": 1.2,
+      "value": 78877.0,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,10 +617,10 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-24T20:14:24.087317+00:00"
+    "updated": "2026-08-24T22:11:45.412344+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro challenges setup, oil weakness contradicts risk-on momentum.",
+    "text": "GBPJPY LONG: Risk-On regime confirms setup; Oil weakness challenges GBP carry demand.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,7 +628,7 @@
         "score": 5.65
       }
     ],
-    "updated": "2026-08-24T20:14:24.087317+00:00"
+    "updated": "2026-08-24T22:11:45.412344+00:00"
   },
   "calendar": {
     "events": [
@@ -693,11 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T20:14:24.087317+00:00"
-  },
-  "week_ahead": {
-    "text": "I'll search for current weekly FX previews to provide you with the latest market analysis. This week's key data focuses on US Core PCE Price Index, US Preliminary Benchmark Payrolls Revision, US Preliminary GDP, Australian CPI, and Canadian GDP , with the Jackson Hole Symposium commencing towards the end of the week . This week's forex forecast highlights a bullish US Dollar and strong USD/JPY , while Thursday's PCE reading will be the most critical event affecting dollar positioning as inflation data carries outsized weight heading into the Fed's September decision cycle. Watch USD/JPY closely this week as it balances geopolitical risk, interest rate expectations, and the technical recovery from recent lows. US-Canada trade negotiations collapsed Friday with 50% tariffs on $20 billion Canadian imports set to take effect , presenting a tail risk that could spike USD/CAD volatility if markets reprice currency valuations on widening growth divergence.",
-    "generated_at": "2026-08-23T22:07:17.319819+00:00"
+    "updated": "2026-08-24T22:11:45.412344+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -705,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US set to impose 7.5% tariff on Chinese goods - report",
-      "Canadian dollar extends losses after trade talks collapse",
-      "Fed hike bets fade as EUR/USD and GBP/USD rally"
+      "US Dollar breaks 99.38; EUR/USD and GBP/USD extend gains",
+      "Trump threatens Canada trade; USD volatility expected",
+      "Softer PPI boosts Fed cut bets; EUR/USD rallies"
     ],
-    "updated": "2026-08-24T20:14:24.087317+00:00"
+    "updated": "2026-08-24T22:11:45.412344+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
