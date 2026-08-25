@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T00:26:34.650834+00:00",
+  "updated": "2026-08-25T02:47:33.199167+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4741.8,
-      "delta_pct": 2.5,
+      "value": 4700.0,
+      "delta_pct": 1.3,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.956,
-      "delta_pct": 0.2,
+      "value": 99.018,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.61,
-      "delta_pct": 0.5,
+      "value": 6.602,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.11,
-      "delta_pct": -2.2,
-      "direction": "down",
+      "value": 85.73,
+      "delta_pct": 0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78797.0,
-      "delta_pct": 1.3,
-      "direction": "flat",
+      "value": 80768.0,
+      "delta_pct": 3.9,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "DXY strength headlines conflict with GBPJPY long. Dollar weakness needed for GBP appreciation against JPY.",
-    "updated": "2026-08-25T00:26:34.650834+00:00"
+    "text": "DXY weakness headlines support GBP strength. RBA minutes could impact JPY. US Canada tensions may support safe haven JPY demand, conflicting with GBPJPY long.",
+    "updated": "2026-08-25T02:47:33.199167+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup, but Oil weakness challenges carry trade fundamentals.",
+    "text": "GBPJPY LONG: Macro risk-off challenges setup despite strong technicals and momentum.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,7 +628,7 @@
         "score": 5.65
       }
     ],
-    "updated": "2026-08-25T00:26:34.650834+00:00"
+    "updated": "2026-08-25T02:47:33.199167+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T00:26:34.650834+00:00"
+    "updated": "2026-08-25T02:47:33.199167+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
-      "Trump and Canada trade threats escalate negotiations",
-      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 Can EUR/USD and GBP/USD Rally?"
+      "US Dollar weakens as Fed cut bets increase on softer PPI data",
+      "Trump threatens Canada trade action, escalates negotiation tensions",
+      "RBA August meeting minutes released, impacts AUD currency outlook"
     ],
-    "updated": "2026-08-25T00:26:34.650834+00:00"
+    "updated": "2026-08-25T02:47:33.199167+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
