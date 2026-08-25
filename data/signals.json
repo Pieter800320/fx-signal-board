@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T19:37:26.603145+00:00",
+  "updated": "2026-08-25T20:12:48.460856+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.56,
-      "delta_pct": -1.8,
+      "value": 15.45,
+      "delta_pct": -2.5,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7665.95,
-      "delta_pct": 0.2,
+      "value": 7677.28,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4704.0,
-      "delta_pct": 1.4,
+      "value": 4721.2,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.918,
+      "value": 98.89,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6985,
-      "delta_pct": 1.5,
+      "value": 6.7125,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.643,
-      "delta_bp": -6.1,
+      "value": 4.639,
+      "delta_bp": -6.5,
       "direction": "down",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.15,
-      "delta_pct": -3.4,
+      "value": 80.98,
+      "delta_pct": -4.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79300.0,
-      "delta_pct": 0.4,
+      "value": 78804.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.8,
-      "delta_bp": -6.3,
+      "value": 93.4,
+      "delta_bp": -6.7,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG challenged by DXY strength breaking 99.38, conflicting with GBP upside. AUDUSD LONG pressured by risk-off signals from weak US data and consumer confidence miss.",
-    "updated": "2026-08-25T18:19:09.558879+00:00"
+    "text": "GBPUSD LONG: UK inflation data looming could accelerate move if data surprises. Fed hike bets fading supports the setup. AUDUSD LONG: Australian inflation data due today is critical risk. NZDJPY LONG: No direct conflict",
+    "updated": "2026-08-25T20:12:48.460856+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, copper strength supports commodity currency bid.\n\nAUDUSD LONG: Macro confirms setup, gold and copper strength reinforce AUD demand.\n\nGBPUSD LONG: Macro challenges setup, risk off sentiment conflicts with GBP strength.",
+    "text": "NZDJPY LONG: Macro confirms setup, copper strength supports NZD bid.\n\nAUDUSD LONG: Macro confirms setup, gold and copper both bidding AUD.\n\nGBPUSD LONG: Macro challenges setup, risk off headwinds conflict long bias.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 7.28
+        "score": 6.93
       },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 6.97
+        "score": 6.6
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.22
+        "score": 6.2
       }
     ],
-    "updated": "2026-08-25T18:19:09.558879+00:00"
+    "updated": "2026-08-25T20:12:48.460856+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T18:19:09.558879+00:00"
+    "updated": "2026-08-25T20:12:48.460856+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury 2-year notes sell at high yield 4.204%",
-      "US consumer confidence 89.4 vs 90.2 expected, misses",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
+      "US 2-year Treasury yield hits 4.204%, highest recent level",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
+      "Australian inflation data due; Asia economic calendar focus"
     ],
-    "updated": "2026-08-25T18:19:09.558879+00:00"
+    "updated": "2026-08-25T20:12:48.460856+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
