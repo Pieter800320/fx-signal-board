@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T20:12:48.460856+00:00",
+  "updated": "2026-08-25T22:11:50.054509+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4721.2,
+      "value": 4717.8,
       "delta_pct": 1.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.89,
+      "value": 98.905,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7125,
-      "delta_pct": 1.7,
+      "value": 6.7065,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.98,
-      "delta_pct": -4.7,
+      "value": 81.15,
+      "delta_pct": -4.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78804.0,
-      "delta_pct": -0.2,
+      "value": 78904.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG: UK inflation data looming could accelerate move if data surprises. Fed hike bets fading supports the setup. AUDUSD LONG: Australian inflation data due today is critical risk. NZDJPY LONG: No direct conflict",
-    "updated": "2026-08-25T20:12:48.460856+00:00"
+    "text": "GBPUSD LONG accelerated by UK inflation data due and GBP rallying against weakening USD. AUDUSD LONG supported by Australian inflation data catalyst. NZDJPY LONG conflicted by USD strength near 99.38 breaking higher.",
+    "updated": "2026-08-25T22:11:50.054509+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Macro confirms setup, copper strength supports NZD bid.\n\nAUDUSD LONG: Macro confirms setup, gold and copper both bidding AUD.\n\nGBPUSD LONG: Macro challenges setup, risk off headwinds conflict long bias.",
+    "text": "NZDJPY LONG: Copper strength confirms risk-on setup perfectly today.\n\nAUDUSD LONG: Gold and copper rises confirm AUD bullish setup.\n\nGBPUSD LONG: Macro context neutral, no commodity drivers support sterling.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.2
       }
     ],
-    "updated": "2026-08-25T20:12:48.460856+00:00"
+    "updated": "2026-08-25T22:11:50.054509+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T20:12:48.460856+00:00"
+    "updated": "2026-08-25T22:11:50.054509+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-25T08:25:43.875320+00:00"
+    "generated_at": "2026-08-25T22:12:16.125804+00:00"
   },
   "breaking": {
     "headlines": [
-      "US 2-year Treasury yield hits 4.204%, highest recent level",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "Australian inflation data due; Asia economic calendar focus"
+      "US treasury sells $69B 2-year notes at 4.204% yield, signals rates",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains sharply",
+      "Richmond Fed manufacturing composite +4 vs +5 prior, signals slowdown"
     ],
-    "updated": "2026-08-25T20:12:48.460856+00:00"
+    "updated": "2026-08-25T22:11:50.054509+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
