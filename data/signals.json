@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T11:34:34.337273+00:00",
+  "updated": "2026-08-25T12:19:11.769827+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,7 +544,7 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-Off",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.88,
-      "delta_pct": 0.2,
+      "value": 15.79,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4690.5,
+      "value": 4693.6,
       "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.997,
-      "delta_pct": -0.0,
+      "value": 99.01,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6465,
+      "value": 6.643,
       "delta_pct": 0.7,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.47,
-      "delta_pct": -3.0,
+      "value": 82.03,
+      "delta_pct": -3.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79283.0,
-      "delta_pct": 0.4,
+      "value": 78949.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-25T10:17:54.240879+00:00"
+    "updated": "2026-08-25T12:19:11.769827+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup; momentum aligns with risk appetite.\n\nAUDJPY LONG: Gold and copper gains confirm AUD strength thesis.\n\nGBPUSD LONG: High ADX confirms trend; macro risk-off challenges momentum extension.",
+    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bid thesis today.\n\nAUDUSD LONG: Gold and copper strength confirm AUD bid thesis today.\n\nNZDJPY LONG: Copper strength confirms NZD bid but oil weakness challenges momentum.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 6.9
-      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.65
+        "score": 6.67
       },
       {
-        "pair": "GBPUSD",
+        "pair": "AUDUSD",
         "direction": "bull",
-        "score": 5.83
+        "score": 6.42
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bull",
+        "score": 5.98
       }
     ],
-    "updated": "2026-08-25T10:17:54.240879+00:00"
+    "updated": "2026-08-25T12:19:11.769827+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T10:17:54.240879+00:00"
+    "updated": "2026-08-25T12:19:11.769827+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar weakens as Fed cut bets increase, EUR/USD rallies",
-      "Germany Q2 GDP revised higher to +0.3%, Ifo beats",
-      "DXY breaks 99.38 support as EUR/USD and GBP/USD extend gains"
+      "US Dollar weakens as Fed cut bets rise on softer PPI",
+      "Germany Q2 GDP revised up to 0.3% q/q, beats forecast",
+      "EUR/USD and GBP/USD extend gains, test key resistance levels"
     ],
-    "updated": "2026-08-25T10:17:54.240879+00:00"
+    "updated": "2026-08-25T12:19:11.769827+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
