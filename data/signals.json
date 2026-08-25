@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T17:37:01.208302+00:00",
+  "updated": "2026-08-25T18:19:09.558879+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,38 +555,38 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.53,
-      "delta_pct": -2.0,
+      "value": 15.56,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7672.48,
-      "delta_pct": 0.3,
+      "value": 7665.95,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4700.4,
-      "delta_pct": 1.3,
+      "value": 4704.0,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.95,
+      "value": 98.918,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.709,
-      "delta_pct": 1.7,
+      "value": 6.6985,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.649,
-      "delta_bp": -5.5,
+      "value": 4.643,
+      "delta_bp": -6.1,
       "direction": "down",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.13,
+      "value": 82.15,
       "delta_pct": -3.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79233.0,
-      "delta_pct": 0.3,
+      "value": 79300.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 94.4,
-      "delta_bp": -5.7,
+      "value": 93.8,
+      "delta_bp": -6.3,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY LONG at risk. DXY weakness supports EUR strength but JPY weakness narratives absent. Monitor Warsh speech implications for rate divergence shifts.",
-    "updated": "2026-08-25T16:20:53.225856+00:00"
+    "text": "GBPUSD LONG challenged by DXY strength breaking 99.38, conflicting with GBP upside. AUDUSD LONG pressured by risk-off signals from weak US data and consumer confidence miss.",
+    "updated": "2026-08-25T18:19:09.558879+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper surge confirms carry trade positioning thesis today.\n\nAUDUSD LONG: Gold and copper rises doubly confirm commodity currency bid.\n\nEURJPY LONG: Falling yields challenge yen carry appeal despite risk on momentum.",
+    "text": "NZDJPY LONG: Macro confirms setup, copper strength supports commodity currency bid.\n\nAUDUSD LONG: Macro confirms setup, gold and copper strength reinforce AUD demand.\n\nGBPUSD LONG: Macro challenges setup, risk off sentiment conflicts with GBP strength.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 6.93
+        "score": 7.28
       },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 6.6
+        "score": 6.97
       },
       {
-        "pair": "EURJPY",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 6.28
+        "score": 6.22
       }
     ],
-    "updated": "2026-08-25T16:20:53.225856+00:00"
+    "updated": "2026-08-25T18:19:09.558879+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T16:20:53.225856+00:00"
+    "updated": "2026-08-25T18:19:09.558879+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US consumer confidence 89.4 vs 90.2 expected, signals economic slowdown",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "US new home sales miss estimate at 0.607M versus 0.620M"
+      "US treasury 2-year notes sell at high yield 4.204%",
+      "US consumer confidence 89.4 vs 90.2 expected, misses",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
     ],
-    "updated": "2026-08-25T16:20:53.225856+00:00"
+    "updated": "2026-08-25T18:19:09.558879+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
