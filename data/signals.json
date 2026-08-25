@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24T22:11:45.412344+00:00",
+  "updated": "2026-08-25T00:26:34.650834+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4713.1,
-      "delta_pct": 1.9,
+      "value": 4741.8,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.986,
+      "value": 98.956,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6075,
-      "delta_pct": 0.4,
+      "value": 6.61,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.03,
-      "delta_pct": -2.3,
+      "value": 85.11,
+      "delta_pct": -2.2,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78877.0,
-      "delta_pct": 1.4,
+      "value": 78797.0,
+      "delta_pct": 1.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-24T22:11:45.412344+00:00"
+    "text": "DXY strength headlines conflict with GBPJPY long. Dollar weakness needed for GBP appreciation against JPY.",
+    "updated": "2026-08-25T00:26:34.650834+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Risk-On regime confirms setup; Oil weakness challenges GBP carry demand.",
+    "text": "GBPJPY LONG: Risk-On regime confirms setup, but Oil weakness challenges carry trade fundamentals.",
     "top": [
       {
         "pair": "GBPJPY",
@@ -628,7 +628,7 @@
         "score": 5.65
       }
     ],
-    "updated": "2026-08-24T22:11:45.412344+00:00"
+    "updated": "2026-08-25T00:26:34.650834+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-24T22:11:45.412344+00:00"
+    "updated": "2026-08-25T00:26:34.650834+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar breaks 99.38; EUR/USD and GBP/USD extend gains",
-      "Trump threatens Canada trade; USD volatility expected",
-      "Softer PPI boosts Fed cut bets; EUR/USD rallies"
+      "US Dollar Price Forecast: DXY Breaks 99.38 as EUR/USD and GBP/USD Extend Gain",
+      "Trump and Canada trade threats escalate negotiations",
+      "US Dollar Price Forecast: Softer PPI Boosts Fed Cut Bets \u2013 Can EUR/USD and GBP/USD Rally?"
     ],
-    "updated": "2026-08-24T22:11:45.412344+00:00"
+    "updated": "2026-08-25T00:26:34.650834+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
