@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T05:37:32.552797+00:00",
+  "updated": "2026-08-25T06:20:53.378209+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4690.9,
-      "delta_pct": 1.1,
+      "value": 4705.7,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.066,
+      "value": 99.073,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5925,
-      "delta_pct": -0.1,
+      "value": 6.599,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.37,
-      "delta_pct": 0.4,
+      "value": 84.31,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 80342.0,
-      "delta_pct": 3.3,
+      "value": 80777.0,
+      "delta_pct": 3.9,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -617,18 +617,23 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-08-25T04:25:13.125234+00:00"
+    "updated": "2026-08-25T06:20:53.378209+00:00"
   },
   "ranked": {
-    "text": "GBPJPY LONG: Macro challenges setup, gold strength signals risk-off headwinds.",
+    "text": "AUDJPY LONG: Gold strength directly confirms AUD bid thesis today.\n\nGBPJPY LONG: Risk-on regime confirms but lacks cross-asset confirmation driver.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.38
+      },
       {
         "pair": "GBPJPY",
         "direction": "bull",
-        "score": 5.65
+        "score": 6.35
       }
     ],
-    "updated": "2026-08-25T04:25:13.125234+00:00"
+    "updated": "2026-08-25T06:20:53.378209+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T04:25:13.125234+00:00"
+    "updated": "2026-08-25T06:20:53.378209+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "Fed hike bets fade as EUR/USD and GBP/USD rally",
-      "Trump and Canada trade threats escalate tensions"
+      "US Dollar weakens as Fed cut bets increase, EUR/USD rallies",
+      "Germany Q2 GDP beats forecast at +0.3% quarter-over-quarter",
+      "Trump threatens Canada trade action, USD volatility expected"
     ],
-    "updated": "2026-08-25T04:25:13.125234+00:00"
+    "updated": "2026-08-25T06:20:53.378209+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
