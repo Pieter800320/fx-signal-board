@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T22:11:50.054509+00:00",
+  "updated": "2026-08-26T00:27:43.745938+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4717.8,
-      "delta_pct": 1.7,
+      "value": 4710.5,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.905,
+      "value": 98.908,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7065,
+      "value": 6.705,
       "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.15,
-      "delta_pct": -4.5,
+      "value": 80.94,
+      "delta_pct": -4.8,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78904.0,
-      "delta_pct": -0.1,
+      "value": 78539.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG accelerated by UK inflation data due and GBP rallying against weakening USD. AUDUSD LONG supported by Australian inflation data catalyst. NZDJPY LONG conflicted by USD strength near 99.38 breaking higher.",
-    "updated": "2026-08-25T22:11:50.054509+00:00"
+    "text": "Japan services inflation beat 3.6% vs 3.2% expected weakens NZDJPY long. DXY breaks 99.38 lower strengthens AUDUSD and GBPUSD longs. Australian inflation data imminent creates risk for AU",
+    "updated": "2026-08-26T00:27:43.745938+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms risk-on setup perfectly today.\n\nAUDUSD LONG: Gold and copper rises confirm AUD bullish setup.\n\nGBPUSD LONG: Macro context neutral, no commodity drivers support sterling.",
+    "text": "NZDJPY LONG: Copper strength confirms risk-on setup despite macro divergence.\n\nAUDUSD LONG: Gold and copper gains confirm dual commodity tailwind thesis.\n\nGBPUSD LONG: US rate decline challenges setup, lacks cross asset support.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.2
       }
     ],
-    "updated": "2026-08-25T22:11:50.054509+00:00"
+    "updated": "2026-08-26T00:27:43.745938+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-25T22:11:50.054509+00:00"
+    "updated": "2026-08-26T00:27:43.745938+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US treasury sells $69B 2-year notes at 4.204% yield, signals rates",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains sharply",
-      "Richmond Fed manufacturing composite +4 vs +5 prior, signals slowdown"
+      "Japan services inflation accelerates to 3.6% in July, beating forecasts",
+      "US weighs further trade escalation after Canada sets retaliatory tariffs",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
     ],
-    "updated": "2026-08-25T22:11:50.054509+00:00"
+    "updated": "2026-08-26T00:27:43.745938+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
