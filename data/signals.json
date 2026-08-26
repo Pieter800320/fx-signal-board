@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T19:09:31.185747+00:00",
+  "updated": "2026-08-26T19:27:13.996060+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -544,101 +544,96 @@
     "score": 0.0,
     "signals": -1,
     "total": 1,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Mixed",
     "signals": 0,
     "total": 0,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.59,
-      "delta_pct": 0.9,
+      "value": 15.35,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7662.92,
-      "delta_pct": -0.2,
+      "value": 7688.84,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4650.4,
-      "delta_pct": 0.3,
+      "value": 4647.7,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.149,
+      "value": 99.16,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.707,
+      "value": 6.7075,
       "delta_pct": -0.0,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.668,
-      "delta_bp": 2.9,
+      "value": 4.664,
+      "delta_bp": 2.5,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.693,
-      "delta_bp": -1.2,
+      "value": 3.69,
+      "delta_bp": -1.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.08,
-      "delta_pct": 0.9,
+      "value": 82.04,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78000.0,
-      "delta_pct": -0.7,
+      "value": 78543.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.5,
-      "delta_bp": 4.1,
+      "value": 97.4,
+      "delta_bp": 4.0,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "DXY breaking 99.38 and USD strength could pressure AUDJPY and AUDUSD longs. EUR/USD gains suggest risk-off sentiment headwinds.",
-    "updated": "2026-08-26T16:39:10.512218+00:00"
+    "text": "US treasury 4.393% yield and Dallas Fed inflation 2.2% support USD strength, pressuring EURJPY and AUDJPY longs. DXY breaking 99.38 confirms headwind.",
+    "updated": "2026-08-26T19:27:13.996060+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro risk-off challenges carry trade setup dynamics.\n\nAUDUSD LONG: Macro risk-off pressures commodity currency momentum thesis.\n\nEURJPY LONG: Macro risk-off contradicts yen weakness continuation premise.",
+    "text": "EURJPY LONG: Mixed neutral macro challenges risk-on setup lacking directional conviction.\n\nAUDJPY LONG: Risk-on regime confirms carry trade setup with conviction.",
     "top": [
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 6.42
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 6.4
-      },
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 5.83
+        "score": 7.08
+      },
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 6.92
       }
     ],
-    "updated": "2026-08-26T16:39:10.512218+00:00"
+    "updated": "2026-08-26T19:27:13.996060+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T16:39:10.512218+00:00"
+    "updated": "2026-08-26T19:27:13.996060+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US durable goods orders beat expectations at 1.1% versus 0.5%",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
-      "Fed minutes loom as EUR/USD and GBP/USD test resistance"
+      "Dallas Fed Trimmed Mean +2.2% versus 1.5% last month, inflation pressure",
+      "US July durable goods orders +1.1% vs +0.5% expected, strong data",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains significantly"
     ],
-    "updated": "2026-08-26T16:39:10.512218+00:00"
+    "updated": "2026-08-26T19:27:13.996060+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
