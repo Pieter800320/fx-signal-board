@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T00:27:43.745938+00:00",
+  "updated": "2026-08-26T02:54:10.636572+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4710.5,
-      "delta_pct": 1.5,
+      "value": 4725.8,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.908,
-      "delta_pct": -0.1,
+      "value": 98.929,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.705,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 6.7455,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.94,
-      "delta_pct": -4.8,
+      "value": 80.38,
+      "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78539.0,
-      "delta_pct": -0.5,
+      "value": 79056.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "Japan services inflation beat 3.6% vs 3.2% expected weakens NZDJPY long. DXY breaks 99.38 lower strengthens AUDUSD and GBPUSD longs. Australian inflation data imminent creates risk for AU",
-    "updated": "2026-08-26T00:27:43.745938+00:00"
+    "text": "AUDUSD LONG at risk: Australian CPI beat 3.5% vs 3.2% expected may trigger RBA hawkish repricing, weakening AUD momentum.",
+    "updated": "2026-08-26T02:54:10.636572+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms risk-on setup despite macro divergence.\n\nAUDUSD LONG: Gold and copper gains confirm dual commodity tailwind thesis.\n\nGBPUSD LONG: US rate decline challenges setup, lacks cross asset support.",
+    "text": "NZDJPY LONG: Risk-On regime confirms setup; carry trade tailwind supports position.\n\nGBPUSD LONG: Risk-On regime confirms; US rates falling favors GBP relative strength.\n\nAUDUSD LONG: Gold strength confirms AUD bid; macro tailwind reinforces cross-asset alignment.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bull",
-        "score": 6.93
-      },
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 6.6
+        "score": 6.73
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
         "score": 6.2
+      },
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 6.2
       }
     ],
-    "updated": "2026-08-26T00:27:43.745938+00:00"
+    "updated": "2026-08-26T02:54:10.636572+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T00:27:43.745938+00:00"
+    "updated": "2026-08-26T02:54:10.636572+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan services inflation accelerates to 3.6% in July, beating forecasts",
-      "US weighs further trade escalation after Canada sets retaliatory tariffs",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
+      "Australian CPI beats 3.5% y/y, exceeds 3.2% forecast significantly",
+      "Japan services inflation accelerates to 3.6%, beats forecast expectations",
+      "Fed minutes and Warsh Jackson Hole speech drive dollar weakness"
     ],
-    "updated": "2026-08-26T00:27:43.745938+00:00"
+    "updated": "2026-08-26T02:54:10.636572+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
