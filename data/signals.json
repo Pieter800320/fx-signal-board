@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T19:27:13.996060+00:00",
+  "updated": "2026-08-26T22:31:59.305282+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,40 +547,40 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.35,
-      "delta_pct": -0.6,
+      "value": 15.21,
+      "delta_pct": -1.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7688.84,
-      "delta_pct": 0.2,
+      "value": 7675.7,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4647.7,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 4665.3,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.16,
+      "value": 99.134,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7075,
-      "delta_pct": -0.0,
+      "value": 6.71,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.04,
-      "delta_pct": -0.4,
+      "value": 81.84,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78543.0,
-      "delta_pct": -0.0,
+      "value": 78739.0,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "US treasury 4.393% yield and Dallas Fed inflation 2.2% support USD strength, pressuring EURJPY and AUDJPY longs. DXY breaking 99.38 confirms headwind.",
-    "updated": "2026-08-26T19:27:13.996060+00:00"
+    "text": "USD strength from higher yields and Dallas Fed inflation data directly conflicts with AUDJPY and EURJPY long setups. JPY weakness needed.",
+    "updated": "2026-08-26T22:31:59.305282+00:00"
   },
   "ranked": {
-    "text": "EURJPY LONG: Mixed neutral macro challenges risk-on setup lacking directional conviction.\n\nAUDJPY LONG: Risk-on regime confirms carry trade setup with conviction.",
+    "text": "AUDJPY LONG: Gold strength directly confirms AUD bid thesis today.\n\nEURJPY LONG: Mixed macro neutral context provides no directional confirmation headwind.",
     "top": [
+      {
+        "pair": "AUDJPY",
+        "direction": "bull",
+        "score": 7.12
+      },
       {
         "pair": "EURJPY",
         "direction": "bull",
         "score": 7.08
-      },
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 6.92
       }
     ],
-    "updated": "2026-08-26T19:27:13.996060+00:00"
+    "updated": "2026-08-26T22:31:59.305282+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T19:27:13.996060+00:00"
+    "updated": "2026-08-26T22:31:59.305282+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-26T10:21:49.776702+00:00"
+    "generated_at": "2026-08-26T22:32:23.958060+00:00"
   },
   "breaking": {
     "headlines": [
-      "Dallas Fed Trimmed Mean +2.2% versus 1.5% last month, inflation pressure",
-      "US July durable goods orders +1.1% vs +0.5% expected, strong data",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains significantly"
+      "US Treasury 5-year yields hit 4.393% at auction",
+      "Dallas Fed Trimmed Mean inflation rises to 2.2%",
+      "DXY breaks 99.38 as EUR/USD extends gains"
     ],
-    "updated": "2026-08-26T19:27:13.996060+00:00"
+    "updated": "2026-08-26T22:31:59.305282+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
