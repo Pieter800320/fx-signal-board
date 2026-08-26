@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T13:57:55.324662+00:00",
+  "updated": "2026-08-26T14:31:24.100565+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -539,106 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
-    "confidence": "Medium",
-    "score": 6.7,
-    "signals": 1,
-    "total": 3,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 2,
+    "stable": false
   },
   "macro": {
     "label": "Risk-Off",
     "signals": 1,
-    "total": 3,
+    "total": 1,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.66,
-      "delta_pct": 1.4,
+      "value": 15.48,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7677.28,
-      "delta_pct": 0.3,
+      "value": 7668.88,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4681.6,
+      "value": 4679.9,
       "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.974,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 99.191,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.8025,
-      "delta_pct": 1.4,
-      "direction": "up",
+      "value": 6.7465,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.639,
-      "delta_bp": -6.5,
-      "direction": "down",
+      "value": 4.664,
+      "delta_bp": 2.5,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.705,
-      "delta_bp": 0.2,
+      "value": 3.7,
+      "delta_bp": -0.5,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.52,
-      "delta_pct": -2.2,
-      "direction": "down",
+      "value": 81.6,
+      "delta_pct": -0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78428.0,
-      "delta_pct": -0.2,
+      "value": 78175.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 93.4,
-      "delta_bp": -6.7,
-      "direction": "down",
+      "value": 96.4,
+      "delta_bp": 3.0,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Australian monthly CPI 3.5% y/y beats 3.2% expected, supporting AUD strength. Accelerates AUDJPY and AUDUSD long setups. DXY weakness also supports these pairs.",
-    "updated": "2026-08-26T12:21:06.857135+00:00"
+    "text": "DXY breaks 99.38 as USD strengthens significantly. This weakens EURJPY and AUDJPY long setups where USD strength typically pressures JPY pairs lower.",
+    "updated": "2026-08-26T14:31:24.100565+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bid thesis today.\n\nAUDUSD LONG: Copper rally reinforces Australian dollar upside macro narrative today.\n\nEURJPY LONG: Risk-on regime supports yen weakness but lacks specific macro driver.",
+    "text": "EURJPY LONG: Risk-On regime confirms setup, JPY weakness primary driver.\n\nAUDJPY LONG: Gold strength confirms AUD bid, cross-asset alignment supports.\n\nAUDUSD LONG: Gold rally confirms AUD strength, commodity currency tailwind present.",
     "top": [
+      {
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 7.48
+      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.9
+        "score": 7.4
       },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 7.73
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bull",
-        "score": 6.65
+        "score": 7.33
       }
     ],
-    "updated": "2026-08-26T12:21:06.857135+00:00"
+    "updated": "2026-08-26T14:31:24.100565+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T12:21:06.857135+00:00"
+    "updated": "2026-08-26T14:31:24.100565+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australian monthly CPI July 2026 3.5% y/y beats 3.2% expected",
-      "US Dollar DXY breaks 99.38 as EUR/USD GBP/USD extend gains",
-      "UK retail sales sharp decline CBI survey weighs on Sterling"
+      "US July durable goods orders +1.1% vs +0.5% expected",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains",
+      "UK retail sales decline sharply, CBI survey shows pressure"
     ],
-    "updated": "2026-08-26T12:21:06.857135+00:00"
+    "updated": "2026-08-26T14:31:24.100565+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
