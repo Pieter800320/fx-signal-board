@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T07:51:48.146723+00:00",
+  "updated": "2026-08-26T08:26:19.310744+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -548,15 +548,15 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.45,
-      "delta_pct": -2.5,
+      "value": 15.66,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4695.2,
-      "delta_pct": 1.2,
+      "value": 4681.8,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.0,
-      "delta_pct": 0.1,
+      "value": 98.925,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.762,
-      "delta_pct": 0.8,
+      "value": 6.832,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.82,
-      "delta_pct": -1.9,
+      "value": 80.16,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78923.0,
-      "delta_pct": -0.1,
+      "value": 78996.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "Australian CPI beat expectations at 3.5% vs 3.2% forecast, supporting AUD strength. This accelerates AUDUSD LONG and AUDJPY LONG setups. DXY weakness also supports these positions.",
-    "updated": "2026-08-26T06:22:55.372703+00:00"
+    "text": "Australian CPI beat forecasts at 3.5% vs 3.2% expected, supporting AUD strength. This accelerates AUDUSD LONG and AUDJPY LONG setups. USD weakness from fading hike bets also helps.",
+    "updated": "2026-08-26T08:26:19.310744+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Gold and copper strength confirm AUD bid thesis clearly.\n\nAUDJPY LONG: Gold and copper strength confirm AUD bid thesis clearly.\n\nEURJPY LONG: Risk-off macro challenges carry trade despite strong technicals today.",
+    "text": "AUDUSD LONG: Gold and copper strength confirm AUD upside bias today.\n\nAUDJPY LONG: Gold strength confirms AUD bid despite risk-off macro headwinds.\n\nEURJPY LONG: Rising 10Y yields challenge carry setup, risk-off contradicts long.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.07
+        "score": 7.87
       },
       {
         "pair": "AUDJPY",
@@ -635,10 +635,10 @@
       {
         "pair": "EURJPY",
         "direction": "bull",
-        "score": 5.92
+        "score": 5.68
       }
     ],
-    "updated": "2026-08-26T06:22:55.372703+00:00"
+    "updated": "2026-08-26T08:26:19.310744+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T06:22:55.372703+00:00"
+    "updated": "2026-08-26T08:26:19.310744+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australian CPI beats at 3.5% y/y, stronger than 3.2% forecast",
-      "US Dollar breaks 99.38, EUR/USD and GBP/USD extend gains",
-      "Fed's favoured inflation gauge lands before Warsh Jackson Hole speech"
+      "Australian monthly CPI July 2026 3.5% y/y beats 3.2% expected",
+      "Japan services inflation accelerates 3.6% July exceeding forecasts",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
     ],
-    "updated": "2026-08-26T06:22:55.372703+00:00"
+    "updated": "2026-08-26T08:26:19.310744+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
