@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T05:39:57.760741+00:00",
+  "updated": "2026-08-26T06:22:55.372703+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4699.9,
-      "delta_pct": 1.3,
+      "value": 4695.2,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.976,
+      "value": 99.0,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7555,
-      "delta_pct": 0.7,
+      "value": 6.762,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 80.41,
-      "delta_pct": -2.4,
+      "value": 80.82,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79027.0,
-      "delta_pct": 0.1,
+      "value": 78923.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD and AUDUSD longs supported by USD weakness headlines. NZDJPY long challenged by Japan services inflation acceleration at 3.6pct.",
-    "updated": "2026-08-26T04:26:45.612040+00:00"
+    "text": "Australian CPI beat expectations at 3.5% vs 3.2% forecast, supporting AUD strength. This accelerates AUDUSD LONG and AUDJPY LONG setups. DXY weakness also supports these positions.",
+    "updated": "2026-08-26T06:22:55.372703+00:00"
   },
   "ranked": {
-    "text": "NZDJPY LONG: Copper strength confirms risk-on NZD bid setup today.\n\nAUDUSD LONG: Gold and copper gains confirm AUD strength thesis.\n\nGBPUSD LONG: Risk-off macro challenges positioning despite strong technical momentum.",
+    "text": "AUDUSD LONG: Gold and copper strength confirm AUD bid thesis clearly.\n\nAUDJPY LONG: Gold and copper strength confirm AUD bid thesis clearly.\n\nEURJPY LONG: Risk-off macro challenges carry trade despite strong technicals today.",
     "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bull",
-        "score": 6.93
-      },
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 6.6
+        "score": 8.07
       },
       {
-        "pair": "GBPUSD",
+        "pair": "AUDJPY",
         "direction": "bull",
         "score": 6.2
+      },
+      {
+        "pair": "EURJPY",
+        "direction": "bull",
+        "score": 5.92
       }
     ],
-    "updated": "2026-08-26T04:26:45.612040+00:00"
+    "updated": "2026-08-26T06:22:55.372703+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T04:26:45.612040+00:00"
+    "updated": "2026-08-26T06:22:55.372703+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australian monthly CPI July 2026 3.5% y/y beats 3.2% expected forecast",
-      "Japan services inflation accelerates to 3.6pct in July beating forecasts",
-      "US Dollar breaks 99.38 as EUR/USD and GBP/USD extend gains"
+      "Australian CPI beats at 3.5% y/y, stronger than 3.2% forecast",
+      "US Dollar breaks 99.38, EUR/USD and GBP/USD extend gains",
+      "Fed's favoured inflation gauge lands before Warsh Jackson Hole speech"
     ],
-    "updated": "2026-08-26T04:26:45.612040+00:00"
+    "updated": "2026-08-26T06:22:55.372703+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
