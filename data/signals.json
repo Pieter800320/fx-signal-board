@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-27T16:20:07.032507+00:00",
+  "updated": "2026-08-27T16:52:30.870937+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -539,101 +539,106 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
-  },
-  "macro": {
-    "label": "Mixed",
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
     "signals": 0,
     "total": 2,
-    "confidence": "Neutral",
+    "stable": false
+  },
+  "macro": {
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.21,
-      "delta_pct": -1.6,
-      "direction": "flat",
+      "value": 14.43,
+      "delta_pct": -5.1,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7675.7,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 7735.87,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4672.2,
-      "delta_pct": 1.6,
+      "value": 4664.5,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.147,
-      "delta_pct": -0.0,
+      "value": 99.111,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.708,
-      "delta_pct": 1.7,
+      "value": 6.675,
+      "delta_pct": 1.2,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.664,
-      "delta_bp": 2.5,
+      "value": 4.658,
+      "delta_bp": -0.6,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.69,
-      "delta_bp": -1.5,
+      "value": 3.678,
+      "delta_bp": -1.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.82,
-      "delta_pct": -0.5,
+      "value": 82.72,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78674.0,
-      "delta_pct": 0.1,
+      "value": 80478.0,
+      "delta_pct": 1.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 97.4,
-      "delta_bp": 4.0,
-      "direction": "up",
+      "value": 98.0,
+      "delta_bp": 0.6,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USD strength from higher yields and DXY breaking 99.38 directly conflicts with AUDJPY and EURJPY long setups. JPY weakness needed.",
-    "updated": "2026-08-27T05:10:57.298758+00:00"
+    "text": "GBPUSD and AUDUSD longs conflicted by sticky inflation lifting DXY and USD strength. Trade deficit and wholesale inventory surprise support USD upside near term.",
+    "updated": "2026-08-27T16:52:30.870937+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bid thesis today.\n\nEURJPY LONG: Risk-on regime supports carry, but macro context lacks specific drivers.",
+    "text": "AUDUSD LONG: Macro confirms, VIX falling strengthens risk-on AUD bid.\n\nAUDJPY LONG: Macro confirms, falling VIX supports carry trade unwind.\n\nGBPUSD LONG: Macro challenges, weak CSM divergence contradicts bullish setup.",
     "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bull",
+        "score": 8.3
+      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
         "score": 7.52
       },
       {
-        "pair": "EURJPY",
+        "pair": "GBPUSD",
         "direction": "bull",
-        "score": 7.08
+        "score": 3.17
       }
     ],
-    "updated": "2026-08-27T05:10:57.298758+00:00"
+    "updated": "2026-08-27T16:52:30.870937+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-27T05:10:57.298758+00:00"
+    "updated": "2026-08-27T16:52:30.870937+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-26T22:32:23.958060+00:00"
+    "generated_at": "2026-08-27T16:53:11.397018+00:00"
   },
   "breaking": {
     "headlines": [
-      "Dallas Fed Trimmed Mean +2.2% versus 1.5% last month",
-      "US treasury sells $70 billion 5-year notes at 4.393% yield",
-      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
+      "US July advance trade balance -118.8B vs -100.5B expected",
+      "US initial jobless claims 203K vs 208K estimate",
+      "Canada Q2 current account +$8.84B vs -$2.00B expected"
     ],
-    "updated": "2026-08-27T05:10:57.298758+00:00"
+    "updated": "2026-08-27T16:52:30.870937+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
