@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-26T22:31:59.305282+00:00",
+  "updated": "2026-08-27T05:10:57.298758+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "High",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4665.3,
-      "delta_pct": 0.6,
+      "value": 4672.2,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.134,
-      "delta_pct": 0.2,
+      "value": 99.147,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.71,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 6.708,
+      "delta_pct": 1.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 81.84,
-      "delta_pct": -0.6,
+      "value": 81.82,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78739.0,
-      "delta_pct": 0.2,
+      "value": 78674.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "USD strength from higher yields and Dallas Fed inflation data directly conflicts with AUDJPY and EURJPY long setups. JPY weakness needed.",
-    "updated": "2026-08-26T22:31:59.305282+00:00"
+    "text": "USD strength from higher yields and DXY breaking 99.38 directly conflicts with AUDJPY and EURJPY long setups. JPY weakness needed.",
+    "updated": "2026-08-27T05:10:57.298758+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Gold strength directly confirms AUD bid thesis today.\n\nEURJPY LONG: Mixed macro neutral context provides no directional confirmation headwind.",
+    "text": "AUDJPY LONG: Gold and copper strength confirm AUD bid thesis today.\n\nEURJPY LONG: Risk-on regime supports carry, but macro context lacks specific drivers.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.12
+        "score": 7.52
       },
       {
         "pair": "EURJPY",
@@ -633,7 +633,7 @@
         "score": 7.08
       }
     ],
-    "updated": "2026-08-26T22:31:59.305282+00:00"
+    "updated": "2026-08-27T05:10:57.298758+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-26T22:31:59.305282+00:00"
+    "updated": "2026-08-27T05:10:57.298758+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Treasury 5-year yields hit 4.393% at auction",
-      "Dallas Fed Trimmed Mean inflation rises to 2.2%",
-      "DXY breaks 99.38 as EUR/USD extends gains"
+      "Dallas Fed Trimmed Mean +2.2% versus 1.5% last month",
+      "US treasury sells $70 billion 5-year notes at 4.393% yield",
+      "DXY breaks 99.38 as EUR/USD and GBP/USD extend gains"
     ],
-    "updated": "2026-08-26T22:31:59.305282+00:00"
+    "updated": "2026-08-27T05:10:57.298758+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
