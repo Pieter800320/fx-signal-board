@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T01:24:27.308441+00:00",
+  "updated": "2026-08-28T01:48:02.743866+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -544,49 +544,49 @@
     "score": 5.0,
     "signals": 0,
     "total": 2,
-    "stable": false
+    "stable": true
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.43,
-      "delta_pct": -5.1,
-      "direction": "down",
+      "value": 14.51,
+      "delta_pct": -4.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7735.87,
-      "delta_pct": 0.8,
+      "value": 7730.99,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4664.5,
-      "delta_pct": 1.4,
+      "value": 4638.2,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
       "value": 99.111,
-      "delta_pct": -0.1,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.675,
-      "delta_pct": 1.2,
+      "value": 6.7035,
+      "delta_pct": 1.7,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.658,
-      "delta_bp": -0.6,
+      "value": 4.672,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "US 10Y"
     },
@@ -597,48 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.72,
-      "delta_pct": 0.6,
+      "value": 83.04,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 80478.0,
-      "delta_pct": 1.8,
+      "value": 80762.0,
+      "delta_pct": 2.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.0,
-      "delta_bp": 0.6,
+      "value": 99.4,
+      "delta_bp": 2.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD and AUDUSD longs conflicted by sticky inflation lifting DXY and USD strength. Trade deficit and wholesale inventory surprise support USD upside near term.",
-    "updated": "2026-08-27T16:52:30.870937+00:00"
+    "text": "AUDUSD LONG and NZDJPY LONG conflict with strong dollar bias headlines. USD strength headwinds for AUD pairs, JPY strength headwinds for NZDJPY.",
+    "updated": "2026-08-28T01:48:02.743866+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro confirms, VIX falling strengthens risk-on AUD bid.\n\nAUDJPY LONG: Macro confirms, falling VIX supports carry trade unwind.\n\nGBPUSD LONG: Macro challenges, weak CSM divergence contradicts bullish setup.",
+    "text": "AUDUSD LONG: Macro confirms setup, copper and equity strength drive AUD bid.\n\nAUDJPY LONG: Macro confirms setup, risk-on environment strengthens AUD carry appeal.\n\nNZDJPY LONG: Macro challenges setup, low macro risk-on conflicts weak conviction score.",
     "top": [
       {
         "pair": "AUDUSD",
         "direction": "bull",
-        "score": 8.3
+        "score": 8.12
       },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.52
+        "score": 7.95
       },
       {
-        "pair": "GBPUSD",
+        "pair": "NZDJPY",
         "direction": "bull",
-        "score": 3.17
+        "score": 4.6
       }
     ],
-    "updated": "2026-08-27T16:52:30.870937+00:00"
+    "updated": "2026-08-28T01:48:02.743866+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-27T16:52:30.870937+00:00"
+    "updated": "2026-08-28T01:48:02.743866+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US July advance trade balance -118.8B vs -100.5B expected",
-      "US initial jobless claims 203K vs 208K estimate",
-      "Canada Q2 current account +$8.84B vs -$2.00B expected"
+      "Tokyo inflation strengthens case for September BOJ rate hike",
+      "US Dollar favors ahead of Jackson Hole amid sticky inflation",
+      "Foreign countries reduce Treasury purchases, pressuring dollar dynamics"
     ],
-    "updated": "2026-08-27T16:52:30.870937+00:00"
+    "updated": "2026-08-28T01:48:02.743866+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
