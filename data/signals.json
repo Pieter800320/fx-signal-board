@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T17:17:59.748654+00:00",
+  "updated": "2026-08-28T23:14:03.069681+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -543,102 +543,102 @@
     "confidence": "Low",
     "score": 5.0,
     "signals": 0,
-    "total": 2,
-    "stable": true
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.47,
-      "delta_pct": -0.3,
+      "value": 14.43,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7730.99,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 7711.76,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4651.3,
-      "delta_pct": 0.9,
-      "direction": "up",
+      "value": 4504.1,
+      "delta_pct": -2.3,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.201,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 99.677,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7225,
-      "delta_pct": 2.1,
+      "value": 6.64,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.682,
-      "delta_bp": 1.0,
-      "direction": "flat",
+      "value": 4.72,
+      "delta_bp": 4.8,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.68,
-      "delta_bp": 0.2,
-      "direction": "flat",
+      "value": 3.73,
+      "delta_bp": 5.2,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 82.63,
-      "delta_pct": -1.1,
-      "direction": "down",
+      "value": 83.44,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79300.0,
-      "delta_pct": -1.2,
-      "direction": "flat",
+      "value": 77752.0,
+      "delta_pct": -3.1,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.2,
-      "delta_bp": 0.8,
+      "value": 99.0,
+      "delta_bp": -0.4,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "DXY rebounds and USD strength ahead of Jackson Hole conflicts with all three AUD and NZD long setups.",
-    "updated": "2026-08-28T13:24:53.384866+00:00"
+    "text": "Jackson Hole and sticky inflation headlines support USD strength, conflicting with AUDJPY, USDCAD, and GBPJPY long setups which depend on JPY weakness or USD weakness.",
+    "updated": "2026-08-28T23:14:03.069681+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Gold and copper strength confirm bullish AUD bias decisively.\n\nAUDJPY LONG: Risk-on environment with rising equities confirms carry trade setup.\n\nNZDJPY LONG: Copper strength supports NZD but low ADX challenges momentum.",
+    "text": "AUDJPY LONG: Macro confirms via rising yields weakening JPY offered.\n\nUSDCAD LONG: Macro confirms via multiple USD bid drivers aligned.\n\nGBPJPY LONG: Macro challenges as CSM divergence contradicts momentum setup.",
     "top": [
-      {
-        "pair": "AUDUSD",
-        "direction": "bull",
-        "score": 8.12
-      },
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 7.95
+        "score": 6.1
       },
       {
-        "pair": "NZDJPY",
+        "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.6
+        "score": 5.45
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bull",
+        "score": 3.9
       }
     ],
-    "updated": "2026-08-28T13:24:53.384866+00:00"
+    "updated": "2026-08-28T23:14:03.069681+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-28T13:24:53.384866+00:00"
+    "updated": "2026-08-28T23:14:03.069681+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
+      "Non-farm payrolls benchmark revisions trimmed employment by 79K jobs",
       "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
-      "Probabilities for tighter policy in view as central bankers meet",
-      "US Dollar price forecast: sticky inflation lifts DXY as EUR/USD pulls back"
+      "Canada GDP Q2 annualized 3.3% vs 3.4% estimate"
     ],
-    "updated": "2026-08-28T13:24:53.384866+00:00"
+    "updated": "2026-08-28T23:14:03.069681+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
