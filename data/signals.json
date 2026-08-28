@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T01:48:02.743866+00:00",
+  "updated": "2026-08-28T13:24:53.384866+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.51,
-      "delta_pct": -4.6,
+      "value": 14.47,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,60 +567,60 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4638.2,
+      "value": 4651.3,
       "delta_pct": 0.9,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.111,
-      "delta_pct": -0.0,
+      "value": 99.201,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7035,
-      "delta_pct": 1.7,
+      "value": 6.7225,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.672,
-      "delta_bp": 0.8,
+      "value": 4.682,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.678,
-      "delta_bp": -1.2,
+      "value": 3.68,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.04,
-      "delta_pct": 1.0,
-      "direction": "flat",
+      "value": 82.63,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 80762.0,
-      "delta_pct": 2.2,
+      "value": 79300.0,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.4,
-      "delta_bp": 2.0,
+      "value": 100.2,
+      "delta_bp": 0.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "AUDUSD LONG and NZDJPY LONG conflict with strong dollar bias headlines. USD strength headwinds for AUD pairs, JPY strength headwinds for NZDJPY.",
-    "updated": "2026-08-28T01:48:02.743866+00:00"
+    "text": "DXY rebounds and USD strength ahead of Jackson Hole conflicts with all three AUD and NZD long setups.",
+    "updated": "2026-08-28T13:24:53.384866+00:00"
   },
   "ranked": {
-    "text": "AUDUSD LONG: Macro confirms setup, copper and equity strength drive AUD bid.\n\nAUDJPY LONG: Macro confirms setup, risk-on environment strengthens AUD carry appeal.\n\nNZDJPY LONG: Macro challenges setup, low macro risk-on conflicts weak conviction score.",
+    "text": "AUDUSD LONG: Gold and copper strength confirm bullish AUD bias decisively.\n\nAUDJPY LONG: Risk-on environment with rising equities confirms carry trade setup.\n\nNZDJPY LONG: Copper strength supports NZD but low ADX challenges momentum.",
     "top": [
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 4.6
       }
     ],
-    "updated": "2026-08-28T01:48:02.743866+00:00"
+    "updated": "2026-08-28T13:24:53.384866+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +703,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-28T01:48:02.743866+00:00"
+    "updated": "2026-08-28T13:24:53.384866+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-27T16:53:11.397018+00:00"
+    "generated_at": "2026-08-28T13:25:29.432315+00:00"
   },
   "breaking": {
     "headlines": [
-      "Tokyo inflation strengthens case for September BOJ rate hike",
-      "US Dollar favors ahead of Jackson Hole amid sticky inflation",
-      "Foreign countries reduce Treasury purchases, pressuring dollar dynamics"
+      "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
+      "Probabilities for tighter policy in view as central bankers meet",
+      "US Dollar price forecast: sticky inflation lifts DXY as EUR/USD pulls back"
     ],
-    "updated": "2026-08-28T01:48:02.743866+00:00"
+    "updated": "2026-08-28T13:24:53.384866+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
