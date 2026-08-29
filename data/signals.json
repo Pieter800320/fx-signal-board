@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T18:55:57.584738+00:00",
+  "updated": "2026-08-29T22:02:41.526338+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,88 +539,88 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-Off",
+    "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 10.0,
-    "signals": 1,
+    "score": 0.0,
+    "signals": -1,
     "total": 1,
-    "stable": true
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
     "signals": -1,
-    "total": 1,
+    "total": 3,
     "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.51,
-      "delta_pct": -4.6,
+      "value": 14.43,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7730.99,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 7711.76,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4609.7,
-      "delta_pct": 0.3,
-      "direction": "flat",
+      "value": 4478.1,
+      "delta_pct": -2.9,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.16,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 99.7,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.587,
-      "delta_pct": -0.1,
+      "value": 6.562,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.672,
-      "delta_bp": 0.8,
-      "direction": "flat",
+      "value": 4.72,
+      "delta_bp": 4.8,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.678,
-      "delta_bp": -1.2,
-      "direction": "flat",
+      "value": 3.73,
+      "delta_bp": 5.2,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.53,
-      "delta_pct": 1.6,
-      "direction": "up",
+      "value": 83.4,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78207.0,
+      "value": 78176.0,
       "delta_pct": -2.6,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.4,
-      "delta_bp": 2.0,
+      "value": 99.0,
+      "delta_bp": -0.4,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USD strength headlines favor USDCAD long. Canada GDP miss slightly weakens CAD. Jackson Hole volatility could impact both pairs.",
-    "updated": "2026-08-29T18:55:57.584738+00:00"
+    "text": "USD strength headlines and Jackson Hole volatility favor USDCAD LONG. Canada GDP miss slightly negative. No direct conflicts with setups.",
+    "updated": "2026-08-29T22:02:41.526338+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: S&P 500 rising confirms AUD strength thesis today.\n\nUSDCAD LONG: Risk-on low contradicts weak momentum divergence setup.",
+    "text": "AUDJPY LONG: US 10Y rise challenges setup, contradicts JPY offered thesis.\n\nUSDCAD LONG: US 10Y rise and gold fall confirm setup strongly.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -630,10 +630,10 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 4.83
+        "score": 5.62
       }
     ],
-    "updated": "2026-08-29T18:55:57.584738+00:00"
+    "updated": "2026-08-29T22:02:41.526338+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-29T18:55:57.584738+00:00"
+    "updated": "2026-08-29T22:02:41.526338+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -710,7 +710,7 @@
       "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
       "Canada GDP Q2 annualized 3.3% vs 3.4% estimate"
     ],
-    "updated": "2026-08-29T18:55:57.584738+00:00"
+    "updated": "2026-08-29T22:02:41.526338+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
