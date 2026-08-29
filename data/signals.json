@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T15:46:28.817921+00:00",
+  "updated": "2026-08-29T18:55:57.584738+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77877.0,
-      "delta_pct": -3.0,
+      "value": 78207.0,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "USDCAD LONG could be accelerated by Canada GDP miss at 3.3% vs 3.4%, supporting USD strength relative to CAD weakness.",
-    "updated": "2026-08-29T15:46:28.817921+00:00"
+    "text": "USD strength headlines favor USDCAD long. Canada GDP miss slightly weakens CAD. Jackson Hole volatility could impact both pairs.",
+    "updated": "2026-08-29T18:55:57.584738+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: S&P 500 rising confirms AUD strength thesis today.\n\nUSDCAD LONG: Risk-on low environment challenges USD safe-haven positioning currently.",
+    "text": "AUDJPY LONG: S&P 500 rising confirms AUD strength thesis today.\n\nUSDCAD LONG: Risk-on low contradicts weak momentum divergence setup.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -633,7 +633,7 @@
         "score": 4.83
       }
     ],
-    "updated": "2026-08-29T15:46:28.817921+00:00"
+    "updated": "2026-08-29T18:55:57.584738+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-29T15:46:28.817921+00:00"
+    "updated": "2026-08-29T18:55:57.584738+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-29T04:22:33.005725+00:00"
+    "generated_at": "2026-08-29T18:56:22.009577+00:00"
   },
   "breaking": {
     "headlines": [
       "Non-farm payrolls benchmark revisions trimmed employment by 79K jobs",
-      "EUR/USD, USD/JPY and USD/CAD Favor Dollar Ahead of Jackson Hole",
-      "Foreign Countries Aren't Buying Treasuries Like They Used To"
+      "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
+      "Canada GDP Q2 annualized 3.3% vs 3.4% estimate"
     ],
-    "updated": "2026-08-29T15:46:28.817921+00:00"
+    "updated": "2026-08-29T18:55:57.584738+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
