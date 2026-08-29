@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T02:02:02.032101+00:00",
+  "updated": "2026-08-29T04:21:58.405464+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -561,27 +561,27 @@
       "label": "VIX"
     },
     "spx": {
-      "value": 7711.76,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 7730.99,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4504.1,
-      "delta_pct": -2.3,
-      "direction": "down",
+      "value": 4609.7,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.677,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 99.16,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.64,
-      "delta_pct": 0.8,
-      "direction": "up",
+      "value": 6.587,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 83.44,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 83.53,
+      "delta_pct": 1.6,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77752.0,
-      "delta_pct": -3.1,
+      "value": 77603.0,
+      "delta_pct": -3.3,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,29 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "Jackson Hole and sticky inflation headlines support USD strength, conflicting with AUDJPY, USDCAD, and GBPJPY long setups which depend on JPY weakness or USD weakness.",
-    "updated": "2026-08-28T23:14:03.069681+00:00"
+    "text": "USD strength headlines conflict with AUDJPY LONG. Jackson Hole volatility ahead threatens both setups. USDCAD supportive given USD bullish bias.",
+    "updated": "2026-08-29T04:21:58.405464+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: Macro confirms via rising yields weakening JPY offered.\n\nUSDCAD LONG: Macro confirms via multiple USD bid drivers aligned.\n\nGBPJPY LONG: Macro challenges as CSM divergence contradicts momentum setup.",
+    "text": "AUDJPY LONG: US 10Y and S&P 500 rises confirm dual tailwinds perfectly.\n\nUSDCAD LONG: Rising US 10Y supports USD but oil strength challenges CAD strength.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.1
+        "score": 6.12
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.45
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bull",
-        "score": 3.9
+        "score": 5.22
       }
     ],
-    "updated": "2026-08-28T23:14:03.069681+00:00"
+    "updated": "2026-08-29T04:21:58.405464+00:00"
   },
   "calendar": {
     "events": [
@@ -703,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-28T23:14:03.069681+00:00"
+    "updated": "2026-08-29T04:21:58.405464+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-28T13:25:29.432315+00:00"
+    "generated_at": "2026-08-29T04:22:33.005725+00:00"
   },
   "breaking": {
     "headlines": [
       "Non-farm payrolls benchmark revisions trimmed employment by 79K jobs",
       "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
-      "Canada GDP Q2 annualized 3.3% vs 3.4% estimate"
+      "Foreign countries aren't buying treasuries like they used to"
     ],
-    "updated": "2026-08-28T23:14:03.069681+00:00"
+    "updated": "2026-08-29T04:21:58.405464+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
