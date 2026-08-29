@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-29T04:21:58.405464+00:00",
+  "updated": "2026-08-29T11:48:34.497629+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,11 +539,11 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 0,
+    "regime": "Risk-Off",
+    "confidence": "Medium",
+    "score": 10.0,
+    "signals": 1,
+    "total": 1,
     "stable": false
   },
   "macro": {
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.43,
-      "delta_pct": -0.6,
+      "value": 14.51,
+      "delta_pct": -4.6,
       "direction": "flat",
       "label": "VIX"
     },
@@ -585,15 +585,15 @@
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.72,
-      "delta_bp": 4.8,
-      "direction": "up",
+      "value": 4.672,
+      "delta_bp": 0.8,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.73,
-      "delta_bp": 5.2,
-      "direction": "up",
+      "value": 3.678,
+      "delta_bp": -1.2,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
@@ -603,37 +603,37 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77603.0,
-      "delta_pct": -3.3,
+      "value": 77653.0,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.0,
-      "delta_bp": -0.4,
+      "value": 99.4,
+      "delta_bp": 2.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "USD strength headlines conflict with AUDJPY LONG. Jackson Hole volatility ahead threatens both setups. USDCAD supportive given USD bullish bias.",
-    "updated": "2026-08-29T04:21:58.405464+00:00"
+    "text": "USDCAD LONG potentially accelerated by stronger US Dollar momentum ahead of Jackson Hole. AUDJPY LONG neutral to slightly pressured by risk-off sentiment.",
+    "updated": "2026-08-29T11:48:34.497629+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y and S&P 500 rises confirm dual tailwinds perfectly.\n\nUSDCAD LONG: Rising US 10Y supports USD but oil strength challenges CAD strength.",
+    "text": "AUDJPY LONG: S&P 500 rising confirms AUD bid strength today.\n\nUSDCAD LONG: Risk-on low challenges weak momentum divergence setup.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 6.12
+        "score": 5.72
       },
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.22
+        "score": 4.83
       }
     ],
-    "updated": "2026-08-29T04:21:58.405464+00:00"
+    "updated": "2026-08-29T11:48:34.497629+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-29T04:21:58.405464+00:00"
+    "updated": "2026-08-29T11:48:34.497629+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -708,9 +708,9 @@
     "headlines": [
       "Non-farm payrolls benchmark revisions trimmed employment by 79K jobs",
       "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
-      "Foreign countries aren't buying treasuries like they used to"
+      "Canada GDP Q2 annualized 3.3% vs 3.4% estimate"
     ],
-    "updated": "2026-08-29T04:21:58.405464+00:00"
+    "updated": "2026-08-29T11:48:34.497629+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
