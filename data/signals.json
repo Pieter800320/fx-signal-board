@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-30T01:49:10.837089+00:00",
+  "updated": "2026-08-30T07:33:01.037637+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -539,18 +539,18 @@
     }
   },
   "regime_w1": {
-    "regime": "Risk-On",
-    "confidence": "Medium",
-    "score": 0.0,
-    "signals": -1,
-    "total": 1,
-    "stable": true
+    "regime": "Mixed",
+    "confidence": "Low",
+    "score": 5.0,
+    "signals": 0,
+    "total": 0,
+    "stable": false
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4478.1,
-      "delta_pct": -2.9,
+      "value": 4529.9,
+      "delta_pct": -1.7,
       "direction": "down",
       "label": "Gold"
     },
@@ -579,9 +579,9 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.562,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 6.659,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78108.0,
-      "delta_pct": -2.7,
+      "value": 78190.0,
+      "delta_pct": -2.6,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -616,16 +616,16 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-30T01:49:10.837089+00:00"
+    "text": "USD strength headlines favor USDCAD LONG. Canada GDP miss slightly weakens CAD. Jackson Hole volatility could impact both setups materially.",
+    "updated": "2026-08-30T07:33:01.037637+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise challenges setup, weakens JPY bid thesis.\n\nUSDCAD LONG: US 10Y rise and gold fall confirm setup solidly.",
+    "text": "AUDJPY LONG: US 10Y rise and copper strength confirm setup nicely.\n\nUSDCAD LONG: US 10Y rise and gold decline confirm setup strongly.",
     "top": [
       {
         "pair": "AUDJPY",
         "direction": "bull",
-        "score": 5.72
+        "score": 6.12
       },
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 5.62
       }
     ],
-    "updated": "2026-08-30T01:49:10.837089+00:00"
+    "updated": "2026-08-30T07:33:01.037637+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-30T01:49:10.837089+00:00"
+    "updated": "2026-08-30T07:33:01.037637+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-29T18:56:22.009577+00:00"
+    "generated_at": "2026-08-30T07:33:35.280956+00:00"
   },
   "breaking": {
     "headlines": [
       "Non-farm payrolls benchmark revisions trimmed employment by 79K jobs",
-      "EUR/USD, USD/JPY and USD/CAD favor dollar ahead of Jackson Hole",
-      "Foreign countries aren't buying treasuries, trouble for dollar stability"
+      "EUR/USD, USD/JPY and USD/CAD Favor Dollar Ahead of Jackson Hole",
+      "Foreign Countries Aren't Buying Treasuries Like They Used To"
     ],
-    "updated": "2026-08-30T01:49:10.837089+00:00"
+    "updated": "2026-08-30T07:33:01.037637+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
