@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T19:28:05.611413+00:00",
+  "updated": "2026-08-31T23:26:56.889827+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,158 +548,169 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": false
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.08,
-      "delta_pct": 4.5,
+      "value": 14.92,
+      "delta_pct": 3.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7683.18,
-      "delta_pct": -0.4,
+      "value": 7686.14,
+      "delta_pct": -0.3,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4481.2,
-      "delta_pct": 0.1,
+      "value": 4492.2,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.417,
+      "value": 99.413,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.685,
-      "delta_pct": 1.9,
+      "value": 6.6905,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.756,
-      "delta_bp": 3.6,
+      "value": 4.758,
+      "delta_bp": 3.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.735,
-      "delta_bp": 0.5,
+      "value": 3.732,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.63,
-      "delta_pct": 2.7,
+      "value": 86.31,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78894.0,
-      "delta_pct": 1.4,
+      "value": 78548.0,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.1,
-      "delta_bp": 3.1,
+      "value": 102.6,
+      "delta_bp": 3.6,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-08-31T18:14:02.694655+00:00"
+    "text": "GBPUSD LONG at risk. UK inflation headline contradicts bullish setup, suggests BoE hawkish tilt ahead.",
+    "updated": "2026-08-31T23:26:56.889827+00:00"
   },
   "ranked": {
-    "text": "No qualifying setups.",
-    "top": [],
-    "updated": "2026-08-31T18:14:02.694655+00:00"
+    "text": "USDCAD SHORT: Macro confirms setup; risk-on low constrains upside, oil supports CAD.\n\nGBPUSD LONG: Macro challenges setup; risk-on low limits GBP strength despite DXY weakness.",
+    "top": [
+      {
+        "pair": "USDCAD",
+        "direction": "bear",
+        "score": 6.4
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bull",
+        "score": 4.1
+      }
+    ],
+    "updated": "2026-08-31T23:26:56.889827+00:00"
   },
   "calendar": {
     "events": [
       {
-        "day": "Wed",
-        "time": "18:00",
-        "iso": "2026-07-29T18:00:00+00:00",
+        "day": "Tue",
+        "time": "08:45",
+        "iso": "2026-09-01T08:45:00+00:00",
         "currency": "USD",
-        "name": "Fed Funds Rate Decision",
-        "forecast": "3.5%-3.75%",
-        "previous": "3.5%-3.75%",
-        "note": "FOMC hold expected, major USD catalyst"
+        "name": "Manufacturing PMI",
+        "forecast": "53.2",
+        "previous": "53.2",
+        "note": "S&P Global index measuring manufacturing activity"
+      },
+      {
+        "day": "Tue",
+        "time": "10:00",
+        "iso": "2026-09-01T10:00:00+00:00",
+        "currency": "USD",
+        "name": "ISM Manufacturing PMI",
+        "forecast": "55.2",
+        "previous": "55.6",
+        "note": "High impact; survey of 400+ industrial companies"
+      },
+      {
+        "day": "Tue",
+        "time": "09:00",
+        "iso": "2026-09-01T09:00:00+00:00",
+        "currency": "USD",
+        "name": "JOLTS Job Openings",
+        "forecast": "7.330M",
+        "previous": "7.359M",
+        "note": "Labor market demand indicator"
+      },
+      {
+        "day": "Tue",
+        "time": "09:00",
+        "iso": "2026-09-01T09:00:00+00:00",
+        "currency": "USD",
+        "name": "Construction Spending",
+        "forecast": "0.0%",
+        "previous": "-0.1%",
+        "note": "Month-over-month change in construction projects"
       },
       {
         "day": "Thu",
-        "time": "12:30",
-        "iso": "2026-07-30T12:30:00+00:00",
+        "time": "10:00",
+        "iso": "2026-09-03T10:00:00+00:00",
         "currency": "USD",
-        "name": "PCE Price Index",
-        "forecast": "2.8%",
-        "previous": "2.7%",
-        "note": "Fed preferred inflation gauge, sharp moves"
+        "name": "ISM Services PMI",
+        "forecast": "54.0",
+        "previous": "54.1",
+        "note": "High impact; services sector represents majority of US economy"
       },
       {
-        "day": "Thu",
-        "time": "12:30",
-        "iso": "2026-07-30T12:30:00+00:00",
+        "day": "Fri",
+        "time": "08:30",
+        "iso": "2026-09-04T08:30:00+00:00",
         "currency": "USD",
-        "name": "GDP (Advance Estimate)",
-        "forecast": "2.0%",
-        "previous": "2.4%",
-        "note": "Key economic growth data, USD impact"
-      },
-      {
-        "day": "Mon",
-        "time": "12:30",
-        "iso": "2026-07-27T12:30:00+00:00",
-        "currency": "USD",
-        "name": "Durable Goods Orders",
-        "forecast": "-0.2%",
-        "previous": "0.1%",
-        "note": "Business investment indicator, medium impact"
-      },
-      {
-        "day": "Thu",
-        "time": "11:00",
-        "iso": "2026-07-30T11:00:00+00:00",
-        "currency": "GBP",
-        "name": "BoE Bank Rate Decision",
-        "forecast": "3.75%",
-        "previous": "3.75%",
-        "note": "Hold expected with hawkish tilt likely"
-      },
-      {
-        "day": "Thu",
-        "time": "22:40",
-        "iso": "2026-07-30T22:40:00+00:00",
-        "currency": "AUD",
-        "name": "RBA Interest Rate Decision",
-        "forecast": "4.35%",
-        "previous": "4.35%",
-        "note": "Hold expected, key AUD catalyst"
+        "name": "Nonfarm Payrolls",
+        "forecast": "55K",
+        "previous": "-23K",
+        "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-08-31T18:14:02.694655+00:00"
+    "updated": "2026-08-31T23:26:56.889827+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-31T10:08:19.402623+00:00"
+    "generated_at": "2026-08-31T23:27:51.589352+00:00"
   },
   "breaking": {
     "headlines": [
-      "Bessent: US 10yr yield matches Trump inauguration levels, oil prices falling",
-      "Hawkish Warsh lifts DXY as EUR/USD and GBP/USD fall sharply",
-      "Foreign countries reducing Treasury purchases, potential trouble for US debt markets"
+      "Warsh's hawkish Jackson Hole speech lifts USD, EUR/USD falls sharply",
+      "UK shop prices rise fastest pace since 2024, inflation concerns",
+      "Foreign countries reducing Treasury purchases, pressure on US fiscal policy"
     ],
-    "updated": "2026-08-31T18:14:02.694655+00:00"
+    "updated": "2026-08-31T23:26:56.889827+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
