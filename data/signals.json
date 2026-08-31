@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T02:29:46.685909+00:00",
+  "updated": "2026-08-31T10:07:42.271509+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 14.43,
-      "delta_pct": -0.6,
-      "direction": "flat",
+      "value": 15.2,
+      "delta_pct": 5.3,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4470.5,
-      "delta_pct": -0.2,
+      "value": 4493.8,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.597,
-      "delta_pct": -0.1,
+      "value": 99.54,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.606,
-      "delta_pct": 0.7,
+      "value": 6.665,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 85.33,
-      "delta_pct": 2.3,
+      "value": 86.61,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77853.0,
-      "delta_pct": 0.0,
+      "value": 78345.0,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "AUDJPY LONG faces headwind: Australian inventory data expected to drag Q2 GDP growth, weakening AUD fundamentals ahead.\n\nUSDCAD LONG supported: DXY strength and dollar favoritism ahead of Jackson Hole supports USD appreciation thesis.",
-    "updated": "2026-08-31T02:29:46.685909+00:00"
+    "text": "AUDJPY LONG faces headwind: Oil jumps and Iran US strikes tension could lift JPY safe haven demand, weakening AUD relative strength.",
+    "updated": "2026-08-31T10:07:42.271509+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise and copper strength both confirm AUD bid thesis.\n\nUSDCAD LONG: US 10Y rise confirms USD bid but oil strength challenges.",
+    "text": "AUDJPY LONG: US 10Y rise confirms JPY weakness, supports short.\n\nUSDCAD LONG: VIX and 10Y rise both confirm USD bid.",
     "top": [
       {
         "pair": "AUDJPY",
@@ -630,10 +630,10 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 5.22
+        "score": 5.42
       }
     ],
-    "updated": "2026-08-31T02:29:46.685909+00:00"
+    "updated": "2026-08-31T10:07:42.271509+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +698,19 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-31T02:29:46.685909+00:00"
+    "updated": "2026-08-31T10:07:42.271509+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-30T20:08:17.764666+00:00"
+    "generated_at": "2026-08-31T10:08:19.402623+00:00"
   },
   "breaking": {
     "headlines": [
-      "China Manufacturing PMI beats 49.8 vs 49.7 expected, still contracting",
-      "New Zealand business confidence drops to 53.7 from 56.1 prior",
-      "Japan factory output tops forecasts, retail sales rebound sharply"
+      "Oil jumps on Iran-US strikes, Strait of Hormuz tensions escalate",
+      "Central bankers meet amid tighter policy probabilities before Jackson Hole",
+      "US Dollar rebounds as sticky inflation lifts DXY, EUR/USD pulls back"
     ],
-    "updated": "2026-08-31T02:29:46.685909+00:00"
+    "updated": "2026-08-31T10:07:42.271509+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
