@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T11:30:50.239720+00:00",
+  "updated": "2026-08-31T18:14:02.694655+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,98 +542,87 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 2,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.2,
-      "delta_pct": 5.3,
-      "direction": "up",
+      "value": 15.08,
+      "delta_pct": 4.5,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7711.76,
-      "delta_pct": -0.2,
+      "value": 7683.18,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4493.8,
-      "delta_pct": 0.4,
+      "value": 4481.2,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.54,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 99.417,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.665,
-      "delta_pct": 1.6,
+      "value": 6.685,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.72,
-      "delta_bp": 4.8,
-      "direction": "up",
+      "value": 4.756,
+      "delta_bp": 3.6,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.73,
-      "delta_bp": 5.2,
-      "direction": "up",
+      "value": 3.735,
+      "delta_bp": 0.5,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.61,
-      "delta_pct": 3.8,
+      "value": 85.63,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78345.0,
-      "delta_pct": 0.7,
+      "value": 78894.0,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.0,
-      "delta_bp": -0.4,
-      "direction": "flat",
+      "value": 102.1,
+      "delta_bp": 3.1,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "AUDJPY LONG faces headwind: Oil jumps and Iran US strikes tension could lift JPY safe haven demand, weakening AUD relative strength.",
-    "updated": "2026-08-31T10:07:42.271509+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-08-31T18:14:02.694655+00:00"
   },
   "ranked": {
-    "text": "AUDJPY LONG: US 10Y rise confirms JPY weakness, supports short.\n\nUSDCAD LONG: VIX and 10Y rise both confirm USD bid.",
-    "top": [
-      {
-        "pair": "AUDJPY",
-        "direction": "bull",
-        "score": 6.12
-      },
-      {
-        "pair": "USDCAD",
-        "direction": "bull",
-        "score": 5.42
-      }
-    ],
-    "updated": "2026-08-31T10:07:42.271509+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-08-31T18:14:02.694655+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +687,7 @@
         "note": "Hold expected, key AUD catalyst"
       }
     ],
-    "updated": "2026-08-31T10:07:42.271509+00:00"
+    "updated": "2026-08-31T18:14:02.694655+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +695,11 @@
   },
   "breaking": {
     "headlines": [
-      "Oil jumps on Iran-US strikes, Strait of Hormuz tensions escalate",
-      "Central bankers meet amid tighter policy probabilities before Jackson Hole",
-      "US Dollar rebounds as sticky inflation lifts DXY, EUR/USD pulls back"
+      "Bessent: US 10yr yield matches Trump inauguration levels, oil prices falling",
+      "Hawkish Warsh lifts DXY as EUR/USD and GBP/USD fall sharply",
+      "Foreign countries reducing Treasury purchases, potential trouble for US debt markets"
     ],
-    "updated": "2026-08-31T10:07:42.271509+00:00"
+    "updated": "2026-08-31T18:14:02.694655+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
