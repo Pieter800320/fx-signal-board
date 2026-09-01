@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-31T23:26:56.889827+00:00",
+  "updated": "2026-09-01T02:07:49.726580+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4492.2,
+      "value": 4491.3,
       "delta_pct": 0.3,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.413,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.476,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6905,
-      "delta_pct": 2.0,
+      "value": 6.711,
+      "delta_pct": 2.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.31,
-      "delta_pct": 3.5,
+      "value": 86.37,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78548.0,
-      "delta_pct": 0.9,
+      "value": 78292.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,24 +616,24 @@
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG at risk. UK inflation headline contradicts bullish setup, suggests BoE hawkish tilt ahead.",
-    "updated": "2026-08-31T23:26:56.889827+00:00"
+    "text": "GBPUSD LONG at risk. UK shop prices rise fastest since 2024 signals inflation concerns, supporting hawkish USD positioning and DXY strength per Warsh headlines.",
+    "updated": "2026-09-01T02:07:49.726580+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup; risk-on low constrains upside, oil supports CAD.\n\nGBPUSD LONG: Macro challenges setup; risk-on low limits GBP strength despite DXY weakness.",
+    "text": "USDCAD SHORT: Macro confirms setup, oil strength directly bids Canadian dollar higher.\n\nGBPUSD LONG: Macro challenges setup, risk-on medium lacks GBP-specific bullish catalyst.",
     "top": [
       {
         "pair": "USDCAD",
         "direction": "bear",
-        "score": 6.4
+        "score": 6.2
       },
       {
         "pair": "GBPUSD",
         "direction": "bull",
-        "score": 4.1
+        "score": 3.7
       }
     ],
-    "updated": "2026-08-31T23:26:56.889827+00:00"
+    "updated": "2026-09-01T02:07:49.726580+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-08-31T23:26:56.889827+00:00"
+    "updated": "2026-09-01T02:07:49.726580+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "Warsh's hawkish Jackson Hole speech lifts USD, EUR/USD falls sharply",
-      "UK shop prices rise fastest pace since 2024, inflation concerns",
-      "Foreign countries reducing Treasury purchases, pressure on US fiscal policy"
+      "Japan manufacturing PMI hits 54.9, new orders surge most since 2018",
+      "US Dollar rebounds as hawkish Warsh lifts DXY, EUR/USD falls",
+      "UK shop prices rise fastest pace since 2024, inflation concerns mount"
     ],
-    "updated": "2026-08-31T23:26:56.889827+00:00"
+    "updated": "2026-09-01T02:07:49.726580+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
