@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T02:07:49.726580+00:00",
+  "updated": "2026-09-01T08:56:06.263477+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,52 +542,52 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.92,
-      "delta_pct": 3.4,
+      "value": 15.57,
+      "delta_pct": 4.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
       "value": 7686.14,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4491.3,
-      "delta_pct": 0.3,
+      "value": 4424.8,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.476,
-      "delta_pct": -0.2,
+      "value": 99.584,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.711,
-      "delta_pct": 2.3,
-      "direction": "up",
+      "value": 6.629,
+      "delta_pct": 0.5,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
       "value": 4.758,
-      "delta_bp": 3.8,
-      "direction": "flat",
+      "delta_bp": 8.6,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,30 +597,30 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 86.37,
-      "delta_pct": 3.6,
+      "value": 87.9,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78292.0,
-      "delta_pct": 0.6,
+      "value": 77872.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
       "value": 102.6,
-      "delta_bp": 3.6,
+      "delta_bp": 8.4,
       "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG at risk. UK shop prices rise fastest since 2024 signals inflation concerns, supporting hawkish USD positioning and DXY strength per Warsh headlines.",
-    "updated": "2026-09-01T02:07:49.726580+00:00"
+    "text": "GBPUSD LONG conflicted by Warsh hawkish USD stance lifting DXY, weighing on GBP upside potential near term.",
+    "updated": "2026-09-01T08:56:06.263477+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Macro confirms setup, oil strength directly bids Canadian dollar higher.\n\nGBPUSD LONG: Macro challenges setup, risk-on medium lacks GBP-specific bullish catalyst.",
+    "text": "USDCAD SHORT: Rising oil strengthens CAD, confirming short bias directionally.\n\nGBPUSD LONG: Risk-on medium supports long, but weak technicals challenge entry.",
     "top": [
       {
         "pair": "USDCAD",
@@ -633,7 +633,7 @@
         "score": 3.7
       }
     ],
-    "updated": "2026-09-01T02:07:49.726580+00:00"
+    "updated": "2026-09-01T08:56:06.263477+00:00"
   },
   "calendar": {
     "events": [
@@ -698,7 +698,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-01T02:07:49.726580+00:00"
+    "updated": "2026-09-01T08:56:06.263477+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -706,11 +706,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan manufacturing PMI hits 54.9, new orders surge most since 2018",
-      "US Dollar rebounds as hawkish Warsh lifts DXY, EUR/USD falls",
-      "UK shop prices rise fastest pace since 2024, inflation concerns mount"
+      "Italy manufacturing PMI 49.6 misses 51.3 forecast, signals eurozone weakness",
+      "US Dollar rebounds on hawkish Warsh, EUR/USD and GBP/USD fall",
+      "Foreign countries reduce Treasury purchases, potential trouble for dollar support"
     ],
-    "updated": "2026-09-01T02:07:49.726580+00:00"
+    "updated": "2026-09-01T08:56:06.263477+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
