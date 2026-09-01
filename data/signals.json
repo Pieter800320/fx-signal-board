@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T15:26:28.884660+00:00",
+  "updated": "2026-09-01T18:53:43.362007+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -541,94 +541,94 @@
   "regime_w1": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "score": 3.3,
+    "signals": -1,
+    "total": 3,
     "stable": true
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": false
+    "signals": 2,
+    "total": 4,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.7,
-      "delta_pct": 5.2,
+      "value": 16.41,
+      "delta_pct": 10.0,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7650.85,
-      "delta_pct": -0.5,
+      "value": 7618.19,
+      "delta_pct": -0.9,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4413.8,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 4376.2,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.52,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 99.717,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6035,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 6.529,
+      "delta_pct": -1.0,
+      "direction": "down",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.768,
-      "delta_bp": 1.0,
+      "value": 4.796,
+      "delta_bp": 3.8,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.77,
-      "delta_bp": 3.8,
+      "value": 3.772,
+      "delta_bp": 4.0,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 88.05,
-      "delta_pct": 2.7,
+      "value": 90.41,
+      "delta_pct": 5.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78178.0,
-      "delta_pct": -0.5,
+      "value": 76940.0,
+      "delta_pct": -2.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 99.8,
-      "delta_bp": -2.8,
+      "value": 102.4,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-09-01T14:20:22.983660+00:00"
+    "text": "Trump Iran strike escalates geopolitical risk, strengthening safe haven USD demand. This accelerates USDCHF long setup as CHF also benefits from risk-off sentiment.",
+    "updated": "2026-09-01T18:53:43.362007+00:00"
   },
   "ranked": {
-    "text": "CADJPY LONG: Oil strength supports CAD bid thesis but equity weakness tempers risk appetite.",
+    "text": "VIX surge and gold decline both strongly confirm USD bid thesis.",
     "top": [
       {
-        "pair": "CADJPY",
+        "pair": "USDCHF",
         "direction": "bull",
-        "score": 6.25
+        "score": 7.1
       }
     ],
-    "updated": "2026-09-01T14:20:22.983660+00:00"
+    "updated": "2026-09-01T18:53:43.362007+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-01T14:20:22.983660+00:00"
+    "updated": "2026-09-01T18:53:43.362007+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "Euro area inflation climbs above 3% in August on higher energy prices",
-      "US manufacturing PMI 54.6 versus 55.2 estimate, signals economic slowdown",
-      "Foreign countries reduce Treasury purchases, pressures dollar funding costs"
+      "Trump confirms US striking Iran; crude oil spikes to $90.50",
+      "US construction spending misses expectations at -0.5% for July",
+      "Foreign countries reduce Treasury purchases; implications for Bessent economy"
     ],
-    "updated": "2026-09-01T14:20:22.983660+00:00"
+    "updated": "2026-09-01T18:53:43.362007+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
