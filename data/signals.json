@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T09:54:04.019506+00:00",
+  "updated": "2026-09-01T14:20:22.983660+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -542,98 +542,93 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -1,
+    "label": "Risk-Off",
+    "signals": 1,
     "total": 1,
     "confidence": "Low",
-    "stable": true
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.57,
-      "delta_pct": 4.4,
-      "direction": "flat",
+      "value": 15.7,
+      "delta_pct": 5.2,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7686.14,
-      "delta_pct": -0.6,
+      "value": 7650.85,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4424.8,
-      "delta_pct": -0.1,
+      "value": 4413.8,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.584,
-      "delta_pct": 0.2,
+      "value": 99.52,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.629,
-      "delta_pct": 0.5,
+      "value": 6.6035,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.758,
-      "delta_bp": 8.6,
-      "direction": "up",
+      "value": 4.768,
+      "delta_bp": 1.0,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.732,
-      "delta_bp": 0.2,
-      "direction": "flat",
+      "value": 3.77,
+      "delta_bp": 3.8,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 87.9,
-      "delta_pct": 2.5,
+      "value": 88.05,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77872.0,
-      "delta_pct": -0.9,
+      "value": 78178.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.6,
-      "delta_bp": 8.4,
-      "direction": "up",
+      "value": 99.8,
+      "delta_bp": -2.8,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "GBPUSD LONG conflicted by Warsh hawkish USD stance lifting DXY, weighing on GBP upside potential near term.",
-    "updated": "2026-09-01T08:56:06.263477+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-09-01T14:20:22.983660+00:00"
   },
   "ranked": {
-    "text": "USDCAD SHORT: Rising oil strengthens CAD, confirming short bias directionally.\n\nGBPUSD LONG: Risk-on medium supports long, but weak technicals challenge entry.",
+    "text": "CADJPY LONG: Oil strength supports CAD bid thesis but equity weakness tempers risk appetite.",
     "top": [
       {
-        "pair": "USDCAD",
-        "direction": "bear",
-        "score": 6.2
-      },
-      {
-        "pair": "GBPUSD",
+        "pair": "CADJPY",
         "direction": "bull",
-        "score": 3.7
+        "score": 6.25
       }
     ],
-    "updated": "2026-09-01T08:56:06.263477+00:00"
+    "updated": "2026-09-01T14:20:22.983660+00:00"
   },
   "calendar": {
     "events": [
@@ -698,19 +693,19 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-01T08:56:06.263477+00:00"
+    "updated": "2026-09-01T14:20:22.983660+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-08-31T23:27:51.589352+00:00"
+    "generated_at": "2026-09-01T14:21:14.141911+00:00"
   },
   "breaking": {
     "headlines": [
-      "Italy manufacturing PMI 49.6 misses 51.3 forecast, signals eurozone weakness",
-      "US Dollar rebounds on hawkish Warsh, EUR/USD and GBP/USD fall",
-      "Foreign countries reduce Treasury purchases, potential trouble for dollar support"
+      "Euro area inflation climbs above 3% in August on higher energy prices",
+      "US manufacturing PMI 54.6 versus 55.2 estimate, signals economic slowdown",
+      "Foreign countries reduce Treasury purchases, pressures dollar funding costs"
     ],
-    "updated": "2026-09-01T08:56:06.263477+00:00"
+    "updated": "2026-09-01T14:20:22.983660+00:00"
   },
   "last_alert": "2026-08-21T19:30:33.491594+00:00",
   "gold_signal": {
