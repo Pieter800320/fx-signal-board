@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T21:42:36.978648+00:00",
+  "updated": "2026-09-02T23:37:18.564580+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.31,
-      "delta_pct": -6.3,
+      "value": 15.2,
+      "delta_pct": -7.0,
       "direction": "down",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4437.0,
-      "delta_pct": 2.0,
+      "value": 4427.8,
+      "delta_pct": 1.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.564,
+      "value": 99.577,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.608,
-      "delta_pct": 1.6,
+      "value": 6.605,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.79,
-      "delta_pct": 0.6,
+      "value": 90.68,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77363.0,
-      "delta_pct": -0.1,
+      "value": 77103.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,29 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY SHORT and NZDJPY SHORT at risk. USD strength headlines (DXY, Fed hawkish bets) support JPY appreciation, accelerating these shorts favorably but also increasing volatility risk significantly.",
-    "updated": "2026-09-02T20:09:40.028564+00:00"
+    "text": "GBPJPY SHORT and USDCHF LONG conflict with \"US Dollar Price Forecast: DXY Eyes 99.58\" suggesting dollar strength may reverse near-term.",
+    "updated": "2026-09-02T23:37:18.564580+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rising confirms JPY strength bid thesis today.\n\nGBPJPY SHORT: Gold rising confirms JPY strength bid thesis today.\n\nUSDCHF LONG: Risk-on low challenges USD strength without clear macro driver.",
+    "text": "NZDJPY SHORT: Gold rising and Risk-On Low confirm JPY bid thesis.\n\nGBPJPY SHORT: Gold rising supports JPY strength despite Risk-On environment.\n\nUSDCHF LONG: Risk-On Low challenges USD strength against safe haven CHF.",
     "top": [
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 7.55
+        "score": 7.58
       },
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.55
+        "score": 6.58
       },
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 5.62
+        "score": 5.35
       }
     ],
-    "updated": "2026-09-02T20:09:40.028564+00:00"
+    "updated": "2026-09-02T23:37:18.564580+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-02T20:09:40.028564+00:00"
+    "updated": "2026-09-02T23:37:18.564580+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "US factory orders beat 0.9% versus 0.6% expected, supporting dollar strength",
-      "Fed Hike Bets Lift DXY as EUR/USD and GBP/USD Fall",
-      "Higher bond yields continue pressuring markets, tectonic shift in bond market"
+      "US factory orders beat expectations at 0.9% versus 0.6% expected",
+      "Fed hike bets lift DXY as EUR/USD and GBP/USD fall",
+      "Higher bond yields keep markets on edge, testing dollar strength"
     ],
-    "updated": "2026-09-02T20:09:40.028564+00:00"
+    "updated": "2026-09-02T23:37:18.564580+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
