@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T01:30:48.691702+00:00",
+  "updated": "2026-09-02T06:28:31.869952+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -541,16 +541,16 @@
   "regime_w1": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 3.3,
-    "signals": -1,
-    "total": 3,
+    "score": 0.0,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
+    "label": "Risk-Off",
+    "signals": 2,
     "total": 2,
-    "confidence": "Neutral",
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4368.0,
-      "delta_pct": -1.4,
-      "direction": "down",
+      "value": 4371.9,
+      "delta_pct": 0.5,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.74,
+      "value": 99.727,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.551,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 6.5455,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.72,
-      "delta_pct": 6.9,
-      "direction": "up",
+      "value": 90.77,
+      "delta_pct": 0.6,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77088.0,
-      "delta_pct": -1.9,
+      "value": 77578.0,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,18 +617,18 @@
   },
   "catalyst": {
     "text": "No breaking catalysts.",
-    "updated": "2026-09-02T01:30:48.691702+00:00"
+    "updated": "2026-09-02T06:28:31.869952+00:00"
   },
   "ranked": {
-    "text": "VIX rising and gold falling both confirm USD strength bias.",
+    "text": "VIX surge confirms USD safety bid, supporting long setup thesis.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 5.92
+        "score": 5.72
       }
     ],
-    "updated": "2026-09-02T01:30:48.691702+00:00"
+    "updated": "2026-09-02T06:28:31.869952+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-02T01:30:48.691702+00:00"
+    "updated": "2026-09-02T06:28:31.869952+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-09-01T14:21:14.141911+00:00"
+    "generated_at": "2026-09-02T06:29:09.396727+00:00"
   },
   "breaking": {
     "headlines": [
-      "US strikes Iran confirmed, crude oil rallies to $90.50",
-      "DXY rebounds on hawkish Warsh comments, EUR/USD pulls back",
-      "Foreign countries reduce Treasury purchases, threatens Bessent's policy"
+      "Australia Q2 GDP beats at 0.4%, keeps September rate hike in play",
+      "Hawkish Warsh lifts DXY as EUR/USD and GBP/USD fall",
+      "Trump says Iran will be wiped out, crude oil trades $90.50"
     ],
-    "updated": "2026-09-02T01:30:48.691702+00:00"
+    "updated": "2026-09-02T06:28:31.869952+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
