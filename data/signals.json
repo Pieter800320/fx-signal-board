@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-01T22:07:24.118710+00:00",
+  "updated": "2026-09-02T01:30:48.691702+00:00",
   "regime_d1": {
     "regime": "Risk-On",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 3,
-    "confidence": "Low",
-    "stable": true
+    "label": "Mixed",
+    "signals": 0,
+    "total": 2,
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4375.7,
-      "delta_pct": -1.3,
+      "value": 4368.0,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.665,
-      "delta_pct": 0.2,
+      "value": 99.74,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.534,
-      "delta_pct": -0.9,
+      "value": 6.551,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.68,
-      "delta_pct": 5.7,
+      "value": 91.72,
+      "delta_pct": 6.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77189.0,
-      "delta_pct": -1.7,
+      "value": 77088.0,
+      "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "Iran conflict and crude oil spike at $90.50 could weaken CHF as safe haven demand shifts to USD and commodities, potentially supporting USDCHF long.",
-    "updated": "2026-09-01T22:07:24.118710+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-09-02T01:30:48.691702+00:00"
   },
   "ranked": {
-    "text": "VIX surge and gold weakness strongly confirm USD bid thesis today.",
+    "text": "VIX rising and gold falling both confirm USD strength bias.",
     "top": [
       {
         "pair": "USDCHF",
@@ -628,7 +628,7 @@
         "score": 5.92
       }
     ],
-    "updated": "2026-09-01T22:07:24.118710+00:00"
+    "updated": "2026-09-02T01:30:48.691702+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-01T22:07:24.118710+00:00"
+    "updated": "2026-09-02T01:30:48.691702+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar strengthens as hawkish Fed signals support DXY rally",
-      "US military strikes Iran; crude oil surges to $90.50",
-      "Foreign countries reduce Treasury purchases, pressuring US bond market"
+      "US strikes Iran confirmed, crude oil rallies to $90.50",
+      "DXY rebounds on hawkish Warsh comments, EUR/USD pulls back",
+      "Foreign countries reduce Treasury purchases, threatens Bessent's policy"
     ],
-    "updated": "2026-09-01T22:07:24.118710+00:00"
+    "updated": "2026-09-02T01:30:48.691702+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
