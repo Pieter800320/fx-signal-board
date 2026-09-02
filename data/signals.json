@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02T09:25:35.121554+00:00",
+  "updated": "2026-09-02T12:18:23.987050+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 2,
+    "label": "Mixed",
+    "signals": 0,
     "total": 2,
-    "confidence": "Medium",
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.34,
-      "delta_pct": 9.5,
-      "direction": "up",
+      "value": 16.21,
+      "delta_pct": -0.8,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4371.9,
-      "delta_pct": 0.5,
+      "value": 4377.6,
+      "delta_pct": 0.7,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.727,
+      "value": 99.743,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5455,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 6.6145,
+      "delta_pct": 1.7,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.77,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 89.23,
+      "delta_pct": -1.1,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77578.0,
-      "delta_pct": -1.2,
+      "value": 76881.0,
+      "delta_pct": -0.7,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,19 +616,29 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-09-02T06:28:31.869952+00:00"
+    "text": "Australia Q2 GDP beats at 0.4%, keeps September rate hike in play could accelerate NZDJPY SHORT as RBA tightening pressures antipodean currencies and supports JPY strength.",
+    "updated": "2026-09-02T12:18:23.987050+00:00"
   },
   "ranked": {
-    "text": "VIX surge confirms USD safety bid, supporting long setup thesis.",
+    "text": "USDCHF LONG: Risk-off medium supports CHF bid, challenging long setup.\n\nNZDJPY SHORT: Gold rising and equities falling both reinforce JPY bid.\n\nCADJPY SHORT: Oil weakness and equity decline strongly confirm JPY appreciation bias.",
     "top": [
       {
         "pair": "USDCHF",
         "direction": "bull",
-        "score": 5.72
+        "score": 5.88
+      },
+      {
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 5.35
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 5.28
       }
     ],
-    "updated": "2026-09-02T06:28:31.869952+00:00"
+    "updated": "2026-09-02T12:18:23.987050+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +703,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-02T06:28:31.869952+00:00"
+    "updated": "2026-09-02T12:18:23.987050+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Australia Q2 GDP beats at 0.4%, keeps September rate hike in play",
-      "Hawkish Warsh lifts DXY as EUR/USD and GBP/USD fall",
-      "Trump says Iran will be wiped out, crude oil trades $90.50"
+      "Australia Q2 GDP beats, September rate hike remains in play",
+      "US Dollar strengthens on Fed hawkish bets, EUR/USD falls",
+      "Higher bond yields pressure markets, tectonic shift in bonds"
     ],
-    "updated": "2026-09-02T06:28:31.869952+00:00"
+    "updated": "2026-09-02T12:18:23.987050+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
