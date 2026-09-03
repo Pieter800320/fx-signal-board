@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T21:37:51.858331+00:00",
+  "updated": "2026-09-03T23:34:54.107358+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.31,
-      "delta_pct": -5.9,
+      "value": 14.32,
+      "delta_pct": -5.8,
       "direction": "down",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4520.3,
+      "value": 4519.2,
       "delta_pct": 3.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.971,
+      "value": 99.003,
       "delta_pct": -0.6,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.672,
-      "delta_pct": 2.6,
+      "value": 6.6745,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.68,
-      "delta_pct": 0.7,
+      "value": 91.85,
+      "delta_pct": 0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81603.0,
-      "delta_pct": 5.6,
+      "value": 81186.0,
+      "delta_pct": 5.0,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "No breaking catalysts.",
-    "updated": "2026-09-03T20:10:33.940588+00:00"
+    "text": "GBPJPY and CADJPY shorts conflicted by Fed hike bets lifting dollar, supporting yen pairs inversely. NFP risk remains key test ahead.",
+    "updated": "2026-09-03T23:34:54.107358+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold strength confirms JPY bid, challenges risk-on equity flows.\n\nGBPJPY SHORT: Gold surge strongly confirms carry unwind thesis today.\n\nCADJPY SHORT: Risk-on stocks challenge shorts, gold bid supports.",
+    "text": "NZDJPY SHORT: Gold rise confirms JPY strength thesis via safe haven bid.\n\nGBPJPY SHORT: Risk-on macro challenges short, but gold outbid offsets equity strength.\n\nCADJPY SHORT: Mixed regime supports JPY bid despite modest risk-on backdrop today.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -630,15 +630,15 @@
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.9
+        "score": 6.93
       },
       {
         "pair": "CADJPY",
         "direction": "bear",
-        "score": 6.38
+        "score": 6.12
       }
     ],
-    "updated": "2026-09-03T20:10:33.940588+00:00"
+    "updated": "2026-09-03T23:34:54.107358+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-03T20:10:33.940588+00:00"
+    "updated": "2026-09-03T23:34:54.107358+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ISM non-manufacturing PMI beats at 55.4 versus 54.2 estimate",
-      "Dollar faces NFP risk with key EUR/USD, GBP/USD tests",
-      "US trade deficit widens sharply as AI-related imports surge"
+      "Waller tamps down rate hike bets, pressuring dollar strength",
+      "ISM non-manufacturing PMI 55.4 beats estimate, stronger than expected",
+      "US trade deficit widens sharply in July, AI imports surge"
     ],
-    "updated": "2026-09-03T20:10:33.940588+00:00"
+    "updated": "2026-09-03T23:34:54.107358+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
