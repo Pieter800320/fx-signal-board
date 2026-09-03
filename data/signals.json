@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T01:34:36.536817+00:00",
+  "updated": "2026-09-03T06:32:20.106187+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4442.4,
-      "delta_pct": 2.2,
+      "value": 4470.0,
+      "delta_pct": 2.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.551,
-      "delta_pct": -0.1,
+      "value": 99.375,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.605,
-      "delta_pct": 1.5,
+      "value": 6.5905,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.98,
-      "delta_pct": 0.8,
-      "direction": "flat",
+      "value": 89.68,
+      "delta_pct": -1.5,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77486.0,
-      "delta_pct": 0.1,
+      "value": 77703.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "NZDJPY SHORT and GBPJPY SHORT conflicted by Japan services PMI five month high strengthening BOJ hike case supporting yen.",
-    "updated": "2026-09-03T01:34:36.536817+00:00"
+    "text": "GBPJPY SHORT and USDCHF LONG conflict with hawkish Fed narrative lifting USD. Bond yield pullback reduces short JPY appeal.",
+    "updated": "2026-09-03T06:32:20.106187+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rise confirms JPY strength bid thesis.\n\nGBPJPY SHORT: Gold rise confirms JPY strength bid thesis.\n\nUSDCHF LONG: Risk-on low challenges USD strength assumption today.",
+    "text": "NZDJPY SHORT: Gold rising confirms JPY bid strength, supporting short.\n\nGBPJPY SHORT: Gold rising confirms JPY bid strength, supporting short.\n\nUSDCHF LONG: Risk-on low challenges USD strength, weakens setup.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 5.35
       }
     ],
-    "updated": "2026-09-03T01:34:36.536817+00:00"
+    "updated": "2026-09-03T06:32:20.106187+00:00"
   },
   "calendar": {
     "events": [
@@ -703,7 +703,7 @@
         "note": "Most important labor report; unemployment rate and wages also released"
       }
     ],
-    "updated": "2026-09-03T01:34:36.536817+00:00"
+    "updated": "2026-09-03T06:32:20.106187+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -711,11 +711,11 @@
   },
   "breaking": {
     "headlines": [
-      "Japan services PMI hits five-month high, strengthens BOJ hike case",
-      "US factory orders beat expectations at 0.9% versus 0.6%",
-      "Hawkish Fed bets lift DXY as EUR/USD and GBP/USD fall"
+      "US jobs report next; bond yields pull back from highs",
+      "Japan services PMI five-month high strengthens BOJ hike case",
+      "DXY eyes 99.58 as jobs week tests hawkish Fed"
     ],
-    "updated": "2026-09-03T01:34:36.536817+00:00"
+    "updated": "2026-09-03T06:32:20.106187+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
