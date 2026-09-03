@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T18:28:22.664268+00:00",
+  "updated": "2026-09-03T20:10:33.940588+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -555,90 +555,90 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 14.6,
-      "delta_pct": -3.9,
-      "direction": "flat",
+      "value": 14.31,
+      "delta_pct": -5.9,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7740.51,
-      "delta_pct": 1.0,
+      "value": 7747.71,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4533.8,
-      "delta_pct": 3.8,
+      "value": 4520.3,
+      "delta_pct": 3.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.89,
-      "delta_pct": -0.7,
+      "value": 98.971,
+      "delta_pct": -0.6,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6665,
-      "delta_pct": 2.5,
+      "value": 6.672,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.752,
-      "delta_bp": -4.4,
-      "direction": "down",
+      "value": 4.762,
+      "delta_bp": -3.4,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.745,
-      "delta_bp": -2.7,
+      "value": 3.74,
+      "delta_bp": -3.2,
       "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.78,
-      "delta_pct": 0.8,
+      "value": 91.68,
+      "delta_pct": 0.7,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81056.0,
-      "delta_pct": 4.9,
+      "value": 81603.0,
+      "delta_pct": 5.6,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 100.7,
-      "delta_bp": -1.7,
+      "value": 102.2,
+      "delta_bp": -0.2,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "Japanese yen surges higher for second straight day contradicts all three JPY shorts. Strong ISM non manufacturing PMI supports USD strength against JPY pairs.",
-    "updated": "2026-09-03T17:19:31.498875+00:00"
+    "text": "No breaking catalysts.",
+    "updated": "2026-09-03T20:10:33.940588+00:00"
   },
   "ranked": {
-    "text": "GBPJPY SHORT: US 10Y fall and gold rise confirm JPY strength thesis.\n\nNZDJPY SHORT: Falling US yields and rising gold both support JPY bid.\n\nUSDJPY SHORT: DXY weakness challenges short USD conviction despite 10Y and gold.",
+    "text": "NZDJPY SHORT: Gold strength confirms JPY bid, challenges risk-on equity flows.\n\nGBPJPY SHORT: Gold surge strongly confirms carry unwind thesis today.\n\nCADJPY SHORT: Risk-on stocks challenge shorts, gold bid supports.",
     "top": [
-      {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 7.92
-      },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 7.75
+        "score": 7.35
       },
       {
-        "pair": "USDJPY",
+        "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.85
+        "score": 6.9
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 6.38
       }
     ],
-    "updated": "2026-09-03T17:19:31.498875+00:00"
+    "updated": "2026-09-03T20:10:33.940588+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-03T17:19:31.498875+00:00"
+    "updated": "2026-09-03T20:10:33.940588+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "ISM non-manufacturing PMI 55.4 beats 54.2 estimate, signals US strength",
-      "US trade deficit widens sharply in July, AI imports surge",
-      "Japanese yen surges higher for second consecutive day"
+      "ISM non-manufacturing PMI beats at 55.4 versus 54.2 estimate",
+      "Dollar faces NFP risk with key EUR/USD, GBP/USD tests",
+      "US trade deficit widens sharply as AI-related imports surge"
     ],
-    "updated": "2026-09-03T17:19:31.498875+00:00"
+    "updated": "2026-09-03T20:10:33.940588+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
