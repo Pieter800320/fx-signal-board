@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T14:56:27.981601+00:00",
+  "updated": "2026-09-03T17:19:31.498875+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,172 +548,152 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 3,
-    "confidence": "Low",
+    "signals": -3,
+    "total": 5,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.39,
-      "delta_pct": 1.3,
+      "value": 14.6,
+      "delta_pct": -3.9,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7666.6,
-      "delta_pct": 0.5,
+      "value": 7740.51,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4494.7,
-      "delta_pct": 2.9,
+      "value": 4533.8,
+      "delta_pct": 3.8,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.114,
-      "delta_pct": -0.4,
+      "value": 98.89,
+      "delta_pct": -0.7,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.628,
-      "delta_pct": 2.0,
+      "value": 6.6665,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.796,
-      "delta_bp": 0.0,
-      "direction": "flat",
+      "value": 4.752,
+      "delta_bp": -4.4,
+      "direction": "down",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.772,
-      "delta_bp": 0.0,
-      "direction": "flat",
+      "value": 3.745,
+      "delta_bp": -2.7,
+      "direction": "down",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.91,
-      "delta_pct": 2.1,
-      "direction": "up",
+      "value": 91.78,
+      "delta_pct": 0.8,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78049.0,
-      "delta_pct": 1.0,
-      "direction": "flat",
+      "value": 81056.0,
+      "delta_pct": 4.9,
+      "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.4,
-      "delta_bp": 0.0,
+      "value": 100.7,
+      "delta_bp": -1.7,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "EURJPY SHORT conflicts. Euro area business activity steadier reaffirms ECB policy, supporting EUR against JPY weakness.",
-    "updated": "2026-09-03T12:16:25.784077+00:00"
+    "text": "Japanese yen surges higher for second straight day contradicts all three JPY shorts. Strong ISM non manufacturing PMI supports USD strength against JPY pairs.",
+    "updated": "2026-09-03T17:19:31.498875+00:00"
   },
   "ranked": {
-    "text": "GBPJPY SHORT: Gold rally confirms JPY strength bias, macro supports.\n\nNZDJPY SHORT: Risk-on low contradicts commodity-driven JPY bid strength today.\n\nEURJPY SHORT: Mixed regime with gold support confirms JPY safe-haven appeal.",
+    "text": "GBPJPY SHORT: US 10Y fall and gold rise confirm JPY strength thesis.\n\nNZDJPY SHORT: Falling US yields and rising gold both support JPY bid.\n\nUSDJPY SHORT: DXY weakness challenges short USD conviction despite 10Y and gold.",
     "top": [
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 7.9
+        "score": 7.92
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.9
+        "score": 7.75
       },
       {
-        "pair": "EURJPY",
+        "pair": "USDJPY",
         "direction": "bear",
-        "score": 6.33
+        "score": 6.85
       }
     ],
-    "updated": "2026-09-03T12:16:25.784077+00:00"
+    "updated": "2026-09-03T17:19:31.498875+00:00"
   },
   "calendar": {
     "events": [
       {
         "day": "Wednesday",
-        "time": "02:00 GMT",
-        "iso": "",
-        "currency": "NZD",
-        "name": "RBNZ Interest Rate Decision",
-        "forecast": "2.75%",
-        "previous": "2.50%",
-        "note": "Rate hike to 2.75% widely expected; decision already made"
-      },
-      {
-        "day": "Wednesday",
-        "time": "09:45 ET / 13:45 GMT",
+        "time": "09:45 ET",
         "iso": "",
         "currency": "CAD",
-        "name": "Bank of Canada Rate Decision",
+        "name": "Bank of Canada Interest Rate Decision",
         "forecast": "2.25%",
         "previous": "2.25%",
-        "note": "Hold expected; decision already made"
+        "note": "Hold - 7th consecutive"
       },
       {
         "day": "Monday",
-        "time": "10:00 GMT",
+        "time": "10:00 ET",
         "iso": "",
-        "currency": "EUR",
-        "name": "Eurozone Flash CPI (August)",
-        "forecast": "3.3%",
-        "previous": "2.9%",
-        "note": "Released already; headline inflation 3.3% YoY, core 2.4%"
+        "currency": "USD",
+        "name": "ISM Manufacturing PMI",
+        "forecast": "54.8",
+        "previous": "54.6",
+        "note": "High Impact"
       },
       {
         "day": "Thursday",
-        "time": "09:30 GMT",
-        "iso": "",
-        "currency": "CHF",
-        "name": "Swiss CPI",
-        "forecast": "0.0%",
-        "previous": "-0.1%",
-        "note": "High impact event"
-      },
-      {
-        "day": "Thursday",
-        "time": "12:30 GMT",
+        "time": "07:30 ET",
         "iso": "",
         "currency": "USD",
         "name": "Initial Jobless Claims",
         "forecast": "205K",
         "previous": "203K",
-        "note": "Weekly unemployment claims"
+        "note": "High Impact"
       },
       {
         "day": "Thursday",
-        "time": "14:00 GMT / 18:00 ET",
+        "time": "10:00 ET",
         "iso": "",
         "currency": "USD",
         "name": "ISM Non-Manufacturing PMI",
-        "forecast": "53.8",
+        "forecast": "54.2",
         "previous": "54.1",
-        "note": "Services sector activity indicator"
+        "note": "High Impact"
       },
       {
         "day": "Friday",
-        "time": "12:30 GMT / 08:30 ET",
+        "time": "08:30 ET",
         "iso": "",
         "currency": "USD",
-        "name": "Non-Farm Payrolls (August)",
-        "forecast": "55K",
-        "previous": "-23K",
-        "note": "Most important jobs report; includes unemployment rate and average earnings"
+        "name": "Nonfarm Payrolls (NFP)",
+        "forecast": "50K-55K",
+        "previous": "72K",
+        "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-03T12:16:25.784077+00:00"
+    "updated": "2026-09-03T17:19:31.498875+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -721,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
-      "US Dollar Price Forecast: DXY Eyes 99.58 as Jobs Week Tests Hawkish Fed",
-      "Japanese yen surges higher for second straight day amid risk-off sentiment",
-      "Bond yields pull back from highs as focus turns to US jobs report"
+      "ISM non-manufacturing PMI 55.4 beats 54.2 estimate, signals US strength",
+      "US trade deficit widens sharply in July, AI imports surge",
+      "Japanese yen surges higher for second consecutive day"
     ],
-    "updated": "2026-09-03T12:16:25.784077+00:00"
+    "updated": "2026-09-03T17:19:31.498875+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
