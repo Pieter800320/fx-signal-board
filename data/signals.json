@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T14:53:14.255992+00:00",
+  "updated": "2026-09-04T17:11:29.220638+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -549,96 +549,96 @@
   "macro": {
     "label": "Risk-On",
     "signals": -2,
-    "total": 4,
+    "total": 2,
     "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.14,
-      "delta_pct": -1.3,
+      "value": 14.06,
+      "delta_pct": -1.8,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7747.71,
-      "delta_pct": 1.1,
-      "direction": "up",
+      "value": 7720.46,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4515.0,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 4480.1,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.062,
+      "value": 99.119,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.653,
-      "delta_pct": 1.2,
+      "value": 6.6785,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.762,
-      "delta_bp": -3.4,
+      "value": 4.764,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.74,
-      "delta_bp": -3.2,
-      "direction": "down",
+      "value": 3.763,
+      "delta_bp": 2.3,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.49,
-      "delta_pct": -0.9,
+      "value": 91.3,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81146.0,
-      "delta_pct": 5.0,
-      "direction": "up",
+      "value": 79699.0,
+      "delta_pct": -1.9,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.2,
-      "delta_bp": -0.2,
+      "value": 100.1,
+      "delta_bp": -2.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-04T12:16:53.876470+00:00"
+    "updated": "2026-09-04T17:11:29.220638+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 7.08
+      },
+      {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 6.45
+        "score": 6.5
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.28
-      },
-      {
-        "pair": "EURJPY",
-        "direction": "bear",
-        "score": 5.78
+        "score": 5.88
       }
     ],
-    "updated": "2026-09-04T12:16:53.876470+00:00"
+    "updated": "2026-09-04T17:11:29.220638+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-04T12:16:53.876470+00:00"
+    "updated": "2026-09-04T17:11:29.220638+00:00"
   },
   "deep_analysis": {
-    "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-09-04T01:28:30.239660+00:00"
+    "text": "Unavailable (HTTP Error 401: Unauthorized)",
+    "generated_at": "2026-09-04T17:11:51.073829+00:00"
   },
   "breaking": {
     "headlines": [
-      "Locked and loaded for the August edition of non-farm payrolls"
+      "Trump tells Fed: Lower the rate or I'll stop trading with countries with which we have a deficit"
     ],
-    "updated": "2026-09-04T12:16:53.876470+00:00"
+    "updated": "2026-09-04T17:11:29.220638+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
