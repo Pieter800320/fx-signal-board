@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-03T23:34:54.107358+00:00",
+  "updated": "2026-09-04T01:28:04.303051+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4519.2,
-      "delta_pct": 3.5,
+      "value": 4524.2,
+      "delta_pct": 3.6,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.003,
+      "value": 98.984,
       "delta_pct": -0.6,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6745,
-      "delta_pct": 2.7,
+      "value": 6.701,
+      "delta_pct": 3.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.85,
+      "value": 91.82,
       "delta_pct": 0.9,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81186.0,
-      "delta_pct": 5.0,
+      "value": 80860.0,
+      "delta_pct": 4.6,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -616,11 +616,11 @@
     }
   },
   "catalyst": {
-    "text": "GBPJPY and CADJPY shorts conflicted by Fed hike bets lifting dollar, supporting yen pairs inversely. NFP risk remains key test ahead.",
-    "updated": "2026-09-03T23:34:54.107358+00:00"
+    "text": "NZDJPY SHORT: Household spending worst in 18 months supports JPY strength. GBPJPY SHORT and CADJPY SHORT: Strong ISM, Fed hawkish bets support USD and JPY strength. All setups aligned with headlines.",
+    "updated": "2026-09-04T01:28:04.303051+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold rise confirms JPY strength thesis via safe haven bid.\n\nGBPJPY SHORT: Risk-on macro challenges short, but gold outbid offsets equity strength.\n\nCADJPY SHORT: Mixed regime supports JPY bid despite modest risk-on backdrop today.",
+    "text": "NZDJPY SHORT: Gold strength confirms JPY bid thesis despite risk-on.\n\nGBPJPY SHORT: VIX decline challenges short signal, weakens safe-haven JPY demand.\n\nCADJPY SHORT: Risk-on environment challenges setup, contradicts typical commodity currency weakness.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.12
       }
     ],
-    "updated": "2026-09-03T23:34:54.107358+00:00"
+    "updated": "2026-09-04T01:28:04.303051+00:00"
   },
   "calendar": {
     "events": [
@@ -693,19 +693,19 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-03T23:34:54.107358+00:00"
+    "updated": "2026-09-04T01:28:04.303051+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
-    "generated_at": "2026-09-03T12:17:18.997344+00:00"
+    "generated_at": "2026-09-04T01:28:30.239660+00:00"
   },
   "breaking": {
     "headlines": [
-      "Waller tamps down rate hike bets, pressuring dollar strength",
-      "ISM non-manufacturing PMI 55.4 beats estimate, stronger than expected",
-      "US trade deficit widens sharply in July, AI imports surge"
+      "Waller tamps down rate hike bets, USD weakens",
+      "ISM non-manufacturing PMI 55.4 beats 54.2 estimate",
+      "Japan household spending worst in 18 months, JPY pressured"
     ],
-    "updated": "2026-09-03T23:34:54.107358+00:00"
+    "updated": "2026-09-04T01:28:04.303051+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
