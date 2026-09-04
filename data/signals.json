@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T01:28:04.303051+00:00",
+  "updated": "2026-09-04T06:34:36.484003+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,79 +548,79 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 5,
-    "confidence": "High",
+    "signals": -2,
+    "total": 4,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.32,
-      "delta_pct": -5.8,
+      "value": 15.2,
+      "delta_pct": -7.0,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7747.71,
-      "delta_pct": 1.1,
+      "value": 7666.6,
+      "delta_pct": 0.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4524.2,
-      "delta_pct": 3.6,
+      "value": 4513.4,
+      "delta_pct": 3.4,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.984,
+      "value": 99.005,
       "delta_pct": -0.6,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.701,
-      "delta_pct": 3.1,
+      "value": 6.6435,
+      "delta_pct": 2.2,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.762,
-      "delta_bp": -3.4,
+      "value": 4.796,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.74,
-      "delta_bp": -3.2,
-      "direction": "down",
+      "value": 3.772,
+      "delta_bp": 0.0,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.82,
-      "delta_pct": 0.9,
+      "value": 91.4,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 80860.0,
-      "delta_pct": 4.6,
+      "value": 80697.0,
+      "delta_pct": 4.4,
       "direction": "up",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 102.2,
-      "delta_bp": -0.2,
+      "value": 102.4,
+      "delta_bp": 0.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
-    "text": "NZDJPY SHORT: Household spending worst in 18 months supports JPY strength. GBPJPY SHORT and CADJPY SHORT: Strong ISM, Fed hawkish bets support USD and JPY strength. All setups aligned with headlines.",
-    "updated": "2026-09-04T01:28:04.303051+00:00"
+    "text": "NZDJPY GBPJPY CADJPY SHORT setups conflict with stronger USD bias from Fed hawkish signals and upcoming NFP data potentially strengthening JPY crosses.",
+    "updated": "2026-09-04T06:34:36.484003+00:00"
   },
   "ranked": {
-    "text": "NZDJPY SHORT: Gold strength confirms JPY bid thesis despite risk-on.\n\nGBPJPY SHORT: VIX decline challenges short signal, weakens safe-haven JPY demand.\n\nCADJPY SHORT: Risk-on environment challenges setup, contradicts typical commodity currency weakness.",
+    "text": "NZDJPY SHORT: Gold rally confirms JPY bid strength today specifically.\n\nGBPJPY SHORT: VIX drop challenges risk-on bias against JPY shorts.\n\nCADJPY SHORT: Gold strength confirms carry unwind JPY bid thesis.",
     "top": [
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 6.12
       }
     ],
-    "updated": "2026-09-04T01:28:04.303051+00:00"
+    "updated": "2026-09-04T06:34:36.484003+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-04T01:28:04.303051+00:00"
+    "updated": "2026-09-04T06:34:36.484003+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 404: Not Found)",
@@ -701,11 +701,11 @@
   },
   "breaking": {
     "headlines": [
+      "US non-farm payrolls data today critical dollar test",
       "Waller tamps down rate hike bets, USD weakens",
-      "ISM non-manufacturing PMI 55.4 beats 54.2 estimate",
       "Japan household spending worst in 18 months, JPY pressured"
     ],
-    "updated": "2026-09-04T01:28:04.303051+00:00"
+    "updated": "2026-09-04T06:34:36.484003+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
