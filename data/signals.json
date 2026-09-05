@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T23:27:18.638490+00:00",
+  "updated": "2026-09-05T01:29:39.736542+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79766.0,
+      "value": 79720.0,
       "delta_pct": -1.9,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-04T23:27:18.638490+00:00"
+    "updated": "2026-09-05T01:29:39.736542+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-09-04T23:27:18.638490+00:00"
+    "updated": "2026-09-05T01:29:39.736542+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-04T23:27:18.638490+00:00"
+    "updated": "2026-09-05T01:29:39.736542+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive Americas market news wrap: Big beat for non-farm payrolls"
+      "EUR/USD, USD/JPY, & USD/CAD Short-Term Forecasts for 04/09/2026"
     ],
-    "updated": "2026-09-04T23:27:18.638490+00:00"
+    "updated": "2026-09-05T01:29:39.736542+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
