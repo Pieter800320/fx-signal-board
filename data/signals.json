@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-06T06:32:36.891351+00:00",
+  "updated": "2026-09-06T11:45:37.801091+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79843.0,
+      "value": 79945.0,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-06T06:32:36.891351+00:00"
+    "updated": "2026-09-06T11:45:37.801091+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-09-06T06:32:36.891351+00:00"
+    "updated": "2026-09-06T11:45:37.801091+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-06T06:32:36.891351+00:00"
+    "updated": "2026-09-06T11:45:37.801091+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-05T19:36:18.768552+00:00"
+    "generated_at": "2026-09-06T11:45:59.533132+00:00"
   },
   "breaking": {
     "headlines": [
       "investingLive Americas market news wrap: Big beat for non-farm payrolls"
     ],
-    "updated": "2026-09-06T06:32:36.891351+00:00"
+    "updated": "2026-09-06T11:45:37.801091+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
