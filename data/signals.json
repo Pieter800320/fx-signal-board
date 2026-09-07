@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T20:26:43.447709+00:00",
+  "updated": "2026-09-07T22:19:06.794369+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -573,9 +573,9 @@
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.906,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 99.176,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
@@ -603,8 +603,8 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79142.0,
-      "delta_pct": -1.5,
+      "value": 79042.0,
+      "delta_pct": -1.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,18 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-07T18:26:06.121512+00:00"
+    "updated": "2026-09-07T22:19:06.794369+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 7.85
-      },
-      {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 6.73
-      },
-      {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 6.42
+        "score": 6.83
       }
     ],
-    "updated": "2026-09-07T18:26:06.121512+00:00"
+    "updated": "2026-09-07T22:19:06.794369+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +683,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-07T18:26:06.121512+00:00"
+    "updated": "2026-09-07T22:19:06.794369+00:00"
   },
   "week_ahead": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -705,9 +695,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive European session wrap: Oil climbs, yen surges amid US holiday"
+      "Preview: China trade data due today, a beat could firm up AUD as a demand proxy trade"
     ],
-    "updated": "2026-09-07T18:26:06.121512+00:00"
+    "updated": "2026-09-07T22:19:06.794369+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
