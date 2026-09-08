@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T21:45:12.564697+00:00",
+  "updated": "2026-09-08T23:42:44.200830+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -555,8 +555,8 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.77,
-      "delta_pct": 3.1,
+      "value": 15.72,
+      "delta_pct": 2.7,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4404.1,
+      "value": 4403.3,
       "delta_pct": -0.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.861,
+      "value": 98.836,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.77,
-      "delta_pct": 2.6,
+      "value": 6.7755,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.13,
-      "delta_pct": 2.9,
+      "value": 94.37,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78479.0,
-      "delta_pct": -0.8,
+      "value": 78440.0,
+      "delta_pct": -0.9,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-08T20:21:13.833987+00:00"
+    "updated": "2026-09-08T23:42:44.200830+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "top": [
-      {
-        "pair": "NZDJPY",
-        "direction": "bear",
-        "score": 7.6
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.55
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bear",
-        "score": 5.62
-      }
-    ],
-    "updated": "2026-09-08T20:21:13.833987+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-09-08T23:42:44.200830+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-08T20:21:13.833987+00:00"
+    "updated": "2026-09-08T23:42:44.200830+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +685,9 @@
   },
   "breaking": {
     "headlines": [
-      "Economic and event calendar in Asia Wednesday, September 9, 2026 - China inflation data"
+      "Japan factory mood hits near 5-year high as chip demand lifts Reuters Tankan"
     ],
-    "updated": "2026-09-08T20:21:13.833987+00:00"
+    "updated": "2026-09-08T23:42:44.200830+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
