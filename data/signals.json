@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T09:30:40.876717+00:00",
+  "updated": "2026-09-08T12:18:42.283696+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -549,15 +549,15 @@
   "macro": {
     "label": "Risk-On",
     "signals": -1,
-    "total": 3,
+    "total": 1,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.3,
-      "delta_pct": 5.3,
-      "direction": "up",
+      "value": 15.67,
+      "delta_pct": 2.4,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4447.5,
+      "value": 4447.9,
       "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.843,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 98.956,
+      "delta_pct": -0.2,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.762,
-      "delta_pct": 2.5,
+      "value": 6.8105,
+      "delta_pct": 3.2,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.84,
-      "delta_pct": 2.6,
+      "value": 93.81,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78356.0,
-      "delta_pct": -2.5,
+      "value": 78229.0,
+      "delta_pct": -1.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,18 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-08T06:34:33.485428+00:00"
+    "updated": "2026-09-08T12:18:42.283696+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "top": [
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 6.83
-      }
-    ],
-    "updated": "2026-09-08T06:34:33.485428+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-09-08T12:18:42.283696+00:00"
   },
   "calendar": {
     "events": [
@@ -683,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-08T06:34:33.485428+00:00"
+    "updated": "2026-09-08T12:18:42.283696+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -691,9 +685,9 @@
   },
   "breaking": {
     "headlines": [
-      "Germany's trade surplus widens sharply in July as imports slump"
+      "investingLive European news wrap: Oil prices rise as Houthis escalate attacks on Saudi targets"
     ],
-    "updated": "2026-09-08T06:34:33.485428+00:00"
+    "updated": "2026-09-08T12:18:42.283696+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
