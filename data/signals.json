@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T18:30:23.205503+00:00",
+  "updated": "2026-09-08T20:21:13.833987+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -548,97 +548,97 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.29,
-      "delta_pct": -0.1,
+      "value": 15.77,
+      "delta_pct": 3.1,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7693.11,
-      "delta_pct": -0.3,
-      "direction": "flat",
+      "value": 7673.52,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4437.6,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 4404.1,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.871,
+      "value": 98.861,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.8315,
-      "delta_pct": 3.6,
+      "value": 6.77,
+      "delta_pct": 2.6,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.788,
-      "delta_bp": 0.4,
+      "value": 4.806,
+      "delta_bp": 2.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.778,
-      "delta_bp": 2.1,
-      "direction": "up",
+      "value": 3.775,
+      "delta_bp": 1.8,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.05,
-      "delta_pct": 0.6,
-      "direction": "flat",
+      "value": 94.13,
+      "delta_pct": 2.9,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78621.0,
-      "delta_pct": -0.6,
+      "value": 78479.0,
+      "delta_pct": -0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 101.0,
-      "delta_bp": -1.7,
+      "value": 103.1,
+      "delta_bp": 0.4,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-08T17:36:03.746703+00:00"
+    "updated": "2026-09-08T20:21:13.833987+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.7
-      },
-      {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 7.2
+        "score": 7.6
       },
       {
-        "pair": "EURJPY",
+        "pair": "NZDUSD",
         "direction": "bear",
-        "score": 5.58
+        "score": 7.55
+      },
+      {
+        "pair": "USDJPY",
+        "direction": "bear",
+        "score": 5.62
       }
     ],
-    "updated": "2026-09-08T17:36:03.746703+00:00"
+    "updated": "2026-09-08T20:21:13.833987+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-08T17:36:03.746703+00:00"
+    "updated": "2026-09-08T20:21:13.833987+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-08T06:34:54.914809+00:00"
+    "generated_at": "2026-09-08T20:21:35.508410+00:00"
   },
   "breaking": {
     "headlines": [
-      "U.S. Treasury sells $58 billion of 3 or notes at a high yield of 4.474%"
+      "Economic and event calendar in Asia Wednesday, September 9, 2026 - China inflation data"
     ],
-    "updated": "2026-09-08T17:36:03.746703+00:00"
+    "updated": "2026-09-08T20:21:13.833987+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
