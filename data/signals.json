@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-07T22:19:06.794369+00:00",
+  "updated": "2026-09-08T01:31:47.585747+00:00",
   "regime_d1": {
     "regime": "Mixed",
     "confidence": "Low",
@@ -542,8 +542,8 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -1,
-    "total": 1,
+    "signals": -2,
+    "total": 2,
     "stable": true
   },
   "macro": {
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4476.6,
-      "delta_pct": 1.1,
+      "value": 4474.8,
+      "delta_pct": 1.0,
       "direction": "up",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6825,
-      "delta_pct": 1.3,
+      "value": 6.76,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.48,
-      "delta_pct": 0.0,
-      "direction": "flat",
+      "value": 92.5,
+      "delta_pct": 1.1,
+      "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79042.0,
-      "delta_pct": -1.6,
+      "value": 79362.0,
+      "delta_pct": -1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-07T22:19:06.794369+00:00"
+    "updated": "2026-09-08T01:31:47.585747+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -628,7 +628,7 @@
         "score": 6.83
       }
     ],
-    "updated": "2026-09-07T22:19:06.794369+00:00"
+    "updated": "2026-09-08T01:31:47.585747+00:00"
   },
   "calendar": {
     "events": [
@@ -683,11 +683,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-07T22:19:06.794369+00:00"
-  },
-  "week_ahead": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-06T22:43:24.059869+00:00"
+    "updated": "2026-09-08T01:31:47.585747+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -695,9 +691,9 @@
   },
   "breaking": {
     "headlines": [
-      "Preview: China trade data due today, a beat could firm up AUD as a demand proxy trade"
+      "Japan wage growth strongest since 1997, cementing BOJ hike case"
     ],
-    "updated": "2026-09-07T22:19:06.794369+00:00"
+    "updated": "2026-09-08T01:31:47.585747+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
