@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T09:33:22.775647+00:00",
+  "updated": "2026-09-09T12:30:07.401496+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,16 +548,16 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
-    "stable": false
+    "signals": 2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 15.72,
-      "delta_pct": 2.7,
-      "direction": "flat",
+      "value": 16.56,
+      "delta_pct": 5.3,
+      "direction": "up",
       "label": "VIX"
     },
     "spx": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4447.2,
-      "delta_pct": 1.2,
+      "value": 4440.6,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.671,
+      "value": 98.613,
       "delta_pct": -0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.783,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 6.765,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.41,
-      "delta_pct": 1.5,
+      "value": 95.72,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79164.0,
-      "delta_pct": 0.1,
+      "value": 79382.0,
+      "delta_pct": 1.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-09T06:46:59.236064+00:00"
+    "updated": "2026-09-09T12:30:07.401496+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-09T06:46:59.236064+00:00"
+    "updated": "2026-09-09T12:30:07.401496+00:00"
   },
   "calendar": {
     "events": [
@@ -677,17 +677,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-09T06:46:59.236064+00:00"
+    "updated": "2026-09-09T12:30:07.401496+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-08T20:21:35.508410+00:00"
+    "generated_at": "2026-09-09T12:30:29.316689+00:00"
   },
   "breaking": {
     "headlines": [
-      "What are the main events for today?"
+      "investingLive European markets wrap: Brent crude hits $100, equities fall"
     ],
-    "updated": "2026-09-09T06:46:59.236064+00:00"
+    "updated": "2026-09-09T12:30:07.401496+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
