@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-08T23:42:44.200830+00:00",
+  "updated": "2026-09-09T01:39:38.041292+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
-    "total": 3,
-    "confidence": "High",
+    "signals": -1,
+    "total": 1,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4403.3,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 4416.6,
+      "delta_pct": -0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.836,
-      "delta_pct": -0.3,
-      "direction": "down",
+      "value": 98.811,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7755,
-      "delta_pct": 2.7,
+      "value": 6.7785,
+      "delta_pct": 2.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 94.37,
-      "delta_pct": 3.2,
+      "value": 94.51,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78440.0,
-      "delta_pct": -0.9,
+      "value": 78831.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-08T23:42:44.200830+00:00"
+    "updated": "2026-09-09T01:39:38.041292+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-08T23:42:44.200830+00:00"
+    "updated": "2026-09-09T01:39:38.041292+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-08T23:42:44.200830+00:00"
+    "updated": "2026-09-09T01:39:38.041292+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -685,9 +685,9 @@
   },
   "breaking": {
     "headlines": [
-      "Japan factory mood hits near 5-year high as chip demand lifts Reuters Tankan"
+      "China August CPI 0.8% y/y (expected 0.8%, prior 0.5%)"
     ],
-    "updated": "2026-09-08T23:42:44.200830+00:00"
+    "updated": "2026-09-09T01:39:38.041292+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
