@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-09T15:04:29.384707+00:00",
+  "updated": "2026-09-09T17:21:38.576100+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,82 +547,98 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 2,
+    "label": "Mixed",
+    "signals": 0,
     "total": 2,
-    "confidence": "Medium",
-    "stable": true
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.56,
-      "delta_pct": 5.3,
-      "direction": "up",
+      "value": 16.29,
+      "delta_pct": 3.6,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7673.52,
-      "delta_pct": -0.6,
-      "direction": "down",
+      "value": 7644.13,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4440.6,
-      "delta_pct": 1.1,
+      "value": 4461.5,
+      "delta_pct": 1.5,
       "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 98.613,
-      "delta_pct": -0.2,
+      "value": 98.742,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.765,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 6.89,
+      "delta_pct": 2.2,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.806,
-      "delta_bp": 2.2,
+      "value": 4.83,
+      "delta_bp": 2.4,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 3.775,
-      "delta_bp": 1.8,
-      "direction": "flat",
+      "value": 3.807,
+      "delta_bp": 3.2,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 95.72,
-      "delta_pct": 2.9,
+      "value": 95.34,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 79382.0,
-      "delta_pct": 1.2,
+      "value": 78789.0,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 103.1,
-      "delta_bp": 0.4,
+      "value": 102.3,
+      "delta_bp": -0.8,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-09T12:30:07.401496+00:00"
+    "updated": "2026-09-09T17:21:38.576100+00:00"
   },
   "ranked": {
-    "text": "No qualifying setups.",
-    "top": [],
-    "updated": "2026-09-09T12:30:07.401496+00:00"
+    "text": "Unavailable (HTTP Error 401: Unauthorized)",
+    "top": [
+      {
+        "pair": "NZDJPY",
+        "direction": "bear",
+        "score": 8.03
+      },
+      {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 7.38
+      },
+      {
+        "pair": "CADJPY",
+        "direction": "bear",
+        "score": 6.08
+      }
+    ],
+    "updated": "2026-09-09T17:21:38.576100+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-09T12:30:07.401496+00:00"
+    "updated": "2026-09-09T17:21:38.576100+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -687,7 +703,7 @@
     "headlines": [
       "investingLive European markets wrap: Brent crude hits $100, equities fall"
     ],
-    "updated": "2026-09-09T12:30:07.401496+00:00"
+    "updated": "2026-09-09T17:21:38.576100+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
