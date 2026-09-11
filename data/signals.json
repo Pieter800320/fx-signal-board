@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T09:29:25.252404+00:00",
+  "updated": "2026-09-11T12:22:39.939601+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -539,25 +539,25 @@
     }
   },
   "regime_w1": {
-    "regime": "Mixed",
-    "confidence": "Low",
-    "score": 5.0,
-    "signals": 0,
-    "total": 2,
-    "stable": true
+    "regime": "Risk-On",
+    "confidence": "Medium",
+    "score": 0.0,
+    "signals": -1,
+    "total": 1,
+    "stable": false
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
-    "stable": true
+    "label": "Risk-On",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 17.84,
-      "delta_pct": 8.4,
-      "direction": "up",
+      "value": 17.08,
+      "delta_pct": -4.3,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4392.1,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 4371.5,
+      "delta_pct": 0.2,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.033,
-      "delta_pct": -0.1,
+      "value": 99.157,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.5815,
-      "delta_pct": 1.8,
+      "value": 6.5245,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 101.11,
-      "delta_pct": -1.3,
+      "value": 99.4,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77202.0,
-      "delta_pct": -1.4,
+      "value": 76981.0,
+      "delta_pct": 0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-11T06:40:01.229083+00:00"
+    "updated": "2026-09-11T12:22:39.939601+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-11T06:40:01.229083+00:00"
+    "updated": "2026-09-11T12:22:39.939601+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-11T06:40:01.229083+00:00"
+    "updated": "2026-09-11T12:22:39.939601+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -685,9 +685,9 @@
   },
   "breaking": {
     "headlines": [
-      "UK July monthly GDP +0.4% vs 0.0% m/m expected"
+      "investingLive European news wrap: The calm before the storm?"
     ],
-    "updated": "2026-09-11T06:40:01.229083+00:00"
+    "updated": "2026-09-11T12:22:39.939601+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
