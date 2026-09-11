@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-11T01:33:33.502253+00:00",
+  "updated": "2026-09-11T06:40:01.229083+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -551,7 +551,7 @@
     "signals": 0,
     "total": 4,
     "confidence": "Neutral",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4364.7,
-      "delta_pct": -1.2,
-      "direction": "down",
+      "value": 4392.1,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.048,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 99.033,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.534,
-      "delta_pct": -4.0,
-      "direction": "down",
+      "value": 6.5815,
+      "delta_pct": 1.8,
+      "direction": "up",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 102.57,
-      "delta_pct": 6.8,
-      "direction": "up",
+      "value": 101.11,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76686.0,
-      "delta_pct": -2.0,
+      "value": 77202.0,
+      "delta_pct": -1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-11T01:33:33.502253+00:00"
+    "updated": "2026-09-11T06:40:01.229083+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-11T01:33:33.502253+00:00"
+    "updated": "2026-09-11T06:40:01.229083+00:00"
   },
   "calendar": {
     "events": [
@@ -677,17 +677,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-11T01:33:33.502253+00:00"
+    "updated": "2026-09-11T06:40:01.229083+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-10T17:20:19.127428+00:00"
+    "generated_at": "2026-09-11T06:40:23.328565+00:00"
   },
   "breaking": {
     "headlines": [
-      "Japan wholesale inflation stays hot in August, cements case for BOJ hike"
+      "UK July monthly GDP +0.4% vs 0.0% m/m expected"
     ],
-    "updated": "2026-09-11T01:33:33.502253+00:00"
+    "updated": "2026-09-11T06:40:01.229083+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
