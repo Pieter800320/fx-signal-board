@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-12T01:39:52.273759+00:00",
+  "updated": "2026-09-12T06:33:49.496534+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -549,7 +549,7 @@
   "macro": {
     "label": "Risk-On",
     "signals": -2,
-    "total": 4,
+    "total": 2,
     "confidence": "Medium",
     "stable": true
   },
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4390.0,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 4366.2,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.095,
+      "value": 99.12,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.557,
-      "delta_pct": 1.4,
-      "direction": "up",
+      "value": 6.4695,
+      "delta_pct": 0.0,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,13 +597,13 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 99.99,
+      "value": 100.05,
       "delta_pct": -2.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77285.0,
+      "value": 77274.0,
       "delta_pct": 0.9,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-12T01:39:52.273759+00:00"
+    "updated": "2026-09-12T06:33:49.496534+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-12T01:39:52.273759+00:00"
+    "updated": "2026-09-12T06:33:49.496534+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-12T01:39:52.273759+00:00"
+    "updated": "2026-09-12T06:33:49.496534+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -687,7 +687,7 @@
     "headlines": [
       "investingLive Americas FX news wrap 11 Sept: US CPI raises odds for Fed rate hike"
     ],
-    "updated": "2026-09-12T01:39:52.273759+00:00"
+    "updated": "2026-09-12T06:33:49.496534+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
