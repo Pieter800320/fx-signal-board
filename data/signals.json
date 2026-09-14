@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T01:48:10.457104+00:00",
+  "updated": "2026-09-14T07:13:35.903192+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4381.3,
-      "delta_pct": 0.3,
+      "value": 4359.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.18,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 99.447,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4845,
-      "delta_pct": 0.2,
+      "value": 6.471,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 102.72,
-      "delta_pct": 2.7,
+      "value": 102.97,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76853.0,
-      "delta_pct": -0.5,
+      "value": 77624.0,
+      "delta_pct": 1.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-14T01:48:10.457104+00:00"
+    "updated": "2026-09-14T07:13:35.903192+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-14T01:48:10.457104+00:00"
+    "updated": "2026-09-14T07:13:35.903192+00:00"
   },
   "calendar": {
     "events": [
@@ -677,17 +677,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-14T01:48:10.457104+00:00"
+    "updated": "2026-09-14T07:13:35.903192+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-13T17:06:05.681987+00:00"
+    "generated_at": "2026-09-14T07:13:57.326245+00:00"
   },
   "breaking": {
     "headlines": [
-      "Carney explores Canada as EU associate member, WSJ reports"
+      "What are the main events for today?"
     ],
-    "updated": "2026-09-14T01:48:10.457104+00:00"
+    "updated": "2026-09-14T07:13:35.903192+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
