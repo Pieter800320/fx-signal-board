@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T20:51:40.748334+00:00",
+  "updated": "2026-09-14T22:53:08.506182+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,32 +555,32 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 16.88,
-      "delta_pct": 6.6,
+      "value": 17.1,
+      "delta_pct": 8.0,
       "direction": "up",
       "label": "VIX"
     },
     "spx": {
-      "value": 7623.71,
-      "delta_pct": -0.4,
+      "value": 7619.98,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4330.5,
-      "delta_pct": -1.8,
+      "value": 4336.6,
+      "delta_pct": -1.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.461,
-      "delta_pct": 0.3,
+      "value": 99.467,
+      "delta_pct": 0.4,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.401,
-      "delta_pct": -1.1,
+      "value": 6.402,
+      "delta_pct": -1.0,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,15 +597,15 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 101.73,
-      "delta_pct": 1.7,
+      "value": 101.98,
+      "delta_pct": 1.9,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78982.0,
-      "delta_pct": 2.8,
-      "direction": "up",
+      "value": 78554.0,
+      "delta_pct": 2.2,
+      "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-14T19:57:32.247888+00:00"
+    "updated": "2026-09-14T22:53:08.506182+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
+        "pair": "NZDUSD",
+        "direction": "bear",
+        "score": 8.07
+      },
+      {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.1
+        "score": 7.9
       },
       {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.7
-      },
-      {
-        "pair": "CADJPY",
-        "direction": "bear",
-        "score": 6.1
+        "score": 7.5
       }
     ],
-    "updated": "2026-09-14T19:57:32.247888+00:00"
+    "updated": "2026-09-14T22:53:08.506182+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-14T19:57:32.247888+00:00"
+    "updated": "2026-09-14T22:53:08.506182+00:00"
   },
   "week_ahead": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -705,9 +705,9 @@
   },
   "breaking": {
     "headlines": [
-      "Trump: AI will be the greatest economic development engine in history"
+      "investingLive Americas FX news wrap 14 Sept: It\u2019s a Wrap: Oil tops $100 as higher yields and AI worries pressure stocks"
     ],
-    "updated": "2026-09-14T19:57:32.247888+00:00"
+    "updated": "2026-09-14T22:53:08.506182+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
