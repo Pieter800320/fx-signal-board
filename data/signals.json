@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T20:29:18.485723+00:00",
+  "updated": "2026-09-15T23:46:27.857520+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
-    "total": 1,
-    "confidence": "Low",
+    "signals": -2,
+    "total": 2,
+    "confidence": "Medium",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4336.0,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 4327.3,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.651,
+      "value": 99.612,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.456,
-      "delta_pct": 2.0,
+      "value": 6.4605,
+      "delta_pct": 2.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 105.85,
-      "delta_pct": 4.4,
+      "value": 105.46,
+      "delta_pct": 4.0,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75766.0,
-      "delta_pct": -3.1,
+      "value": 75645.0,
+      "delta_pct": -3.2,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-15T20:29:18.485723+00:00"
+    "updated": "2026-09-15T23:46:27.857520+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -630,7 +630,7 @@
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 5.95
+        "score": 6.15
       },
       {
         "pair": "GBPJPY",
@@ -638,7 +638,7 @@
         "score": 4.53
       }
     ],
-    "updated": "2026-09-15T20:29:18.485723+00:00"
+    "updated": "2026-09-15T23:46:27.857520+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-15T20:29:18.485723+00:00"
+    "updated": "2026-09-15T23:46:27.857520+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Carney: Canada to allow immediate expensing for most new capital investment"
+      "Washington seeks cap on foreign parts in AI chips and servers"
     ],
-    "updated": "2026-09-15T20:29:18.485723+00:00"
+    "updated": "2026-09-15T23:46:27.857520+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
