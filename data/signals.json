@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-14T22:53:08.506182+00:00",
+  "updated": "2026-09-15T01:57:44.356949+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-Off",
-    "signals": 2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": 1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4336.6,
+      "value": 4339.5,
       "delta_pct": -1.6,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.467,
-      "delta_pct": 0.4,
-      "direction": "up",
+      "value": 99.586,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.402,
-      "delta_pct": -1.0,
+      "value": 6.376,
+      "delta_pct": -1.4,
       "direction": "down",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 101.98,
-      "delta_pct": 1.9,
+      "value": 102.8,
+      "delta_pct": 2.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 78554.0,
-      "delta_pct": 2.2,
+      "value": 77905.0,
+      "delta_pct": 1.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-14T22:53:08.506182+00:00"
+    "updated": "2026-09-15T01:57:44.356949+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -625,12 +625,12 @@
       {
         "pair": "NZDUSD",
         "direction": "bear",
-        "score": 8.07
+        "score": 7.67
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 7.9
+        "score": 7.5
       },
       {
         "pair": "NZDJPY",
@@ -638,7 +638,7 @@
         "score": 7.5
       }
     ],
-    "updated": "2026-09-14T22:53:08.506182+00:00"
+    "updated": "2026-09-15T01:57:44.356949+00:00"
   },
   "calendar": {
     "events": [
@@ -693,11 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-14T22:53:08.506182+00:00"
-  },
-  "week_ahead": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-13T22:54:55.778345+00:00"
+    "updated": "2026-09-15T01:57:44.356949+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -705,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive Americas FX news wrap 14 Sept: It\u2019s a Wrap: Oil tops $100 as higher yields and AI worries pressure stocks"
+      "China home prices keep falling in August as property slump drags on"
     ],
-    "updated": "2026-09-14T22:53:08.506182+00:00"
+    "updated": "2026-09-15T01:57:44.356949+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
