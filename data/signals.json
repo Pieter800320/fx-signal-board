@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T20:06:15.982925+00:00",
+  "updated": "2026-09-15T20:29:18.485723+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,39 +555,39 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 17.61,
-      "delta_pct": 3.0,
+      "value": 17.2,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7582.8,
-      "delta_pct": -0.5,
+      "value": 7585.73,
+      "delta_pct": -0.4,
       "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4338.0,
-      "delta_pct": -0.3,
+      "value": 4336.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.641,
+      "value": 99.651,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.4415,
-      "delta_pct": 1.8,
+      "value": 6.456,
+      "delta_pct": 2.0,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 5.01,
-      "delta_bp": 4.9,
-      "direction": "up",
+      "value": 4.996,
+      "delta_bp": 3.5,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
@@ -597,43 +597,48 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 106.33,
-      "delta_pct": 4.9,
+      "value": 105.85,
+      "delta_pct": 4.4,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76918.0,
-      "delta_pct": -1.6,
-      "direction": "flat",
+      "value": 75766.0,
+      "delta_pct": -3.1,
+      "direction": "down",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 105.0,
-      "delta_bp": 2.4,
+      "value": 103.6,
+      "delta_bp": 1.0,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-15T17:47:20.999036+00:00"
+    "updated": "2026-09-15T20:29:18.485723+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.53
-      },
-      {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.0
+        "score": 6.2
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 5.95
+      },
+      {
+        "pair": "GBPJPY",
+        "direction": "bear",
+        "score": 4.53
       }
     ],
-    "updated": "2026-09-15T17:47:20.999036+00:00"
+    "updated": "2026-09-15T20:29:18.485723+00:00"
   },
   "calendar": {
     "events": [
@@ -688,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-15T17:47:20.999036+00:00"
+    "updated": "2026-09-15T20:29:18.485723+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -698,7 +703,7 @@
     "headlines": [
       "Carney: Canada to allow immediate expensing for most new capital investment"
     ],
-    "updated": "2026-09-15T17:47:20.999036+00:00"
+    "updated": "2026-09-15T20:29:18.485723+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
