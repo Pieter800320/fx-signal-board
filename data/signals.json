@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T01:48:33.462390+00:00",
+  "updated": "2026-09-16T06:52:36.044039+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,11 +547,11 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-On",
-    "signals": -2,
+    "label": "Mixed",
+    "signals": 0,
     "total": 2,
-    "confidence": "Medium",
-    "stable": true
+    "confidence": "Neutral",
+    "stable": false
   },
   "macro_assets": {
     "vix": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4328.2,
-      "delta_pct": -0.5,
-      "direction": "down",
+      "value": 4365.1,
+      "delta_pct": 0.7,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 99.731,
-      "delta_pct": 0.3,
-      "direction": "up",
+      "value": 99.61,
+      "delta_pct": -0.0,
+      "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.45,
-      "delta_pct": 1.9,
+      "value": 6.472,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 105.16,
-      "delta_pct": 3.7,
-      "direction": "up",
+      "value": 104.48,
+      "delta_pct": -1.3,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 75525.0,
-      "delta_pct": -3.4,
+      "value": 75868.0,
+      "delta_pct": -2.9,
       "direction": "down",
       "label": "Bitcoin"
     },
@@ -617,28 +617,28 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-16T01:48:33.462390+00:00"
+    "updated": "2026-09-16T06:52:36.044039+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
     "top": [
       {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.55
-      },
-      {
         "pair": "NZDJPY",
         "direction": "bear",
-        "score": 6.2
+        "score": 6.4
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 5.95
       },
       {
         "pair": "GBPJPY",
         "direction": "bear",
-        "score": 4.53
+        "score": 4.73
       }
     ],
-    "updated": "2026-09-16T01:48:33.462390+00:00"
+    "updated": "2026-09-16T06:52:36.044039+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-16T01:48:33.462390+00:00"
+    "updated": "2026-09-16T06:52:36.044039+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Australia: Westpac leading index signals softer but improving growth as RBA holds firm"
+      "What are the main events for today?"
     ],
-    "updated": "2026-09-16T01:48:33.462390+00:00"
+    "updated": "2026-09-16T06:52:36.044039+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
