@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-16T20:28:42.360088+00:00",
+  "updated": "2026-09-16T23:55:07.097100+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -551,11 +551,11 @@
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 17.72,
+      "value": 17.71,
       "delta_pct": 3.0,
       "direction": "flat",
       "label": "VIX"
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4306.5,
-      "delta_pct": -0.6,
+      "value": 4310.8,
+      "delta_pct": -0.5,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.3,
-      "delta_pct": 0.7,
+      "value": 100.27,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.441,
-      "delta_pct": 1.1,
+      "value": 6.456,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 102.05,
-      "delta_pct": -3.6,
+      "value": 101.63,
+      "delta_pct": -4.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76046.0,
-      "delta_pct": 0.6,
+      "value": 76197.0,
+      "delta_pct": 0.8,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-16T20:28:42.360088+00:00"
+    "updated": "2026-09-16T23:55:07.097100+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 7.22
       }
     ],
-    "updated": "2026-09-16T20:28:42.360088+00:00"
+    "updated": "2026-09-16T23:55:07.097100+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-16T20:28:42.360088+00:00"
+    "updated": "2026-09-16T23:55:07.097100+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "New Zealand Q2 GDP preview as RBNZ weighs timing of its next rate hike"
+      "New Zealand dollar pops a little on better than expected GDP data"
     ],
-    "updated": "2026-09-16T20:28:42.360088+00:00"
+    "updated": "2026-09-16T23:55:07.097100+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
