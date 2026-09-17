@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T20:36:03.001145+00:00",
+  "updated": "2026-09-17T23:45:45.031511+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -567,19 +567,19 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4384.4,
+      "value": 4383.3,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.23,
+      "value": 100.24,
       "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.615,
+      "value": 6.6205,
       "delta_pct": 2.9,
       "direction": "up",
       "label": "Copper"
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 101.23,
-      "delta_pct": -1.2,
+      "value": 101.1,
+      "delta_pct": -1.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76580.0,
-      "delta_pct": 0.6,
+      "value": 76364.0,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-17T20:36:03.001145+00:00"
+    "updated": "2026-09-17T23:45:45.031511+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 6.67
       }
     ],
-    "updated": "2026-09-17T20:36:03.001145+00:00"
+    "updated": "2026-09-17T23:45:45.031511+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-17T20:36:03.001145+00:00"
+    "updated": "2026-09-17T23:45:45.031511+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "A view on inflation is increasingly important"
+      "Japan August inflation: Headline CPI 1.9% y/y (expected 2%)"
     ],
-    "updated": "2026-09-17T20:36:03.001145+00:00"
+    "updated": "2026-09-17T23:45:45.031511+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
