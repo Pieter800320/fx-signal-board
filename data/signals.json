@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T20:08:35.389473+00:00",
+  "updated": "2026-09-17T20:36:03.001145+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -555,20 +555,20 @@
   },
   "macro_assets": {
     "vix": {
-      "value": 15.66,
-      "delta_pct": -11.6,
+      "value": 15.44,
+      "delta_pct": -12.8,
       "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7636.16,
+      "value": 7637.76,
       "delta_pct": 1.1,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4403.3,
-      "delta_pct": 0.4,
+      "value": 4384.4,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
@@ -579,14 +579,14 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.6585,
-      "delta_pct": 3.5,
+      "value": 6.615,
+      "delta_pct": 2.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.953,
-      "delta_bp": -5.3,
+      "value": 4.947,
+      "delta_bp": -5.9,
       "direction": "down",
       "label": "US 10Y"
     },
@@ -597,27 +597,27 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 102.03,
-      "delta_pct": -0.4,
-      "direction": "flat",
+      "value": 101.23,
+      "delta_pct": -1.2,
+      "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 76560.0,
-      "delta_pct": 0.5,
+      "value": 76580.0,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.8,
-      "delta_bp": -4.8,
+      "value": 98.2,
+      "delta_bp": -5.4,
       "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-17T17:46:10.528586+00:00"
+    "updated": "2026-09-17T20:36:03.001145+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -628,17 +628,17 @@
         "score": 7.1
       },
       {
-        "pair": "GBPJPY",
-        "direction": "bear",
-        "score": 6.88
-      },
-      {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 6.47
+        "score": 6.93
+      },
+      {
+        "pair": "USDCHF",
+        "direction": "bull",
+        "score": 6.67
       }
     ],
-    "updated": "2026-09-17T17:46:10.528586+00:00"
+    "updated": "2026-09-17T20:36:03.001145+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-17T17:46:10.528586+00:00"
+    "updated": "2026-09-17T20:36:03.001145+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-17T06:48:22.816914+00:00"
+    "generated_at": "2026-09-17T20:36:24.358390+00:00"
   },
   "breaking": {
     "headlines": [
-      "Trump says he faces a \u201cbig decision\u201d on whether to launch new attacks on Iran"
+      "A view on inflation is increasingly important"
     ],
-    "updated": "2026-09-17T17:46:10.528586+00:00"
+    "updated": "2026-09-17T20:36:03.001145+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
