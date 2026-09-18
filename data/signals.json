@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-18T09:34:10.327318+00:00",
+  "updated": "2026-09-18T12:23:37.149785+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,17 +547,17 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 4,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.44,
-      "delta_pct": -12.8,
-      "direction": "down",
+      "value": 15.45,
+      "delta_pct": 0.1,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4431.5,
-      "delta_pct": 0.7,
-      "direction": "up",
+      "value": 4411.8,
+      "delta_pct": 0.3,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.29,
-      "delta_pct": 0.1,
-      "direction": "flat",
+      "value": 100.52,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.631,
-      "delta_pct": 0.7,
+      "value": 6.657,
+      "delta_pct": 1.1,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 100.12,
-      "delta_pct": -1.8,
+      "value": 96.35,
+      "delta_pct": -5.5,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 77454.0,
-      "delta_pct": 1.7,
+      "value": 77951.0,
+      "delta_pct": 2.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,28 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-18T06:43:58.499341+00:00"
+    "updated": "2026-09-18T12:23:37.149785+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "top": [
-      {
-        "pair": "GBPUSD",
-        "direction": "bear",
-        "score": 7.1
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 6.93
-      },
-      {
-        "pair": "USDCHF",
-        "direction": "bull",
-        "score": 6.67
-      }
-    ],
-    "updated": "2026-09-18T06:43:58.499341+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-09-18T12:23:37.149785+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +677,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-18T06:43:58.499341+00:00"
+    "updated": "2026-09-18T12:23:37.149785+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-17T20:36:24.358390+00:00"
+    "generated_at": "2026-09-18T12:23:59.281466+00:00"
   },
   "breaking": {
     "headlines": [
-      "What are the main events for today?"
+      "investingLive European session wrap: Yen slides after BOJ hike as markets stay on edge"
     ],
-    "updated": "2026-09-18T06:43:58.499341+00:00"
+    "updated": "2026-09-18T12:23:37.149785+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
