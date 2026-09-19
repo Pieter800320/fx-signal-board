@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-19T01:44:09.988605+00:00",
+  "updated": "2026-09-19T06:43:06.943615+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -548,9 +548,9 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -3,
+    "signals": -1,
     "total": 3,
-    "confidence": "High",
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
@@ -567,21 +567,21 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4415.9,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4424.9,
+      "delta_pct": 0.6,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.21,
-      "delta_pct": -0.0,
+      "value": 100.22,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7155,
-      "delta_pct": 2.0,
-      "direction": "up",
+      "value": 6.615,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 95.47,
-      "delta_pct": -6.3,
+      "value": 100.3,
+      "delta_pct": -1.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81157.0,
-      "delta_pct": 6.2,
+      "value": 81050.0,
+      "delta_pct": 6.1,
       "direction": "up",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-19T01:44:09.988605+00:00"
+    "updated": "2026-09-19T06:43:06.943615+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-19T01:44:09.988605+00:00"
+    "updated": "2026-09-19T06:43:06.943615+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-19T01:44:09.988605+00:00"
+    "updated": "2026-09-19T06:43:06.943615+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -687,7 +687,7 @@
     "headlines": [
       "investingLive Americas market news wrap: Bonds slump again, yen rate check adds intrigue after BOJ"
     ],
-    "updated": "2026-09-19T01:44:09.988605+00:00"
+    "updated": "2026-09-19T06:43:06.943615+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
