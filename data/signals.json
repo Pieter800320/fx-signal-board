@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-20T23:41:27.402413+00:00",
+  "updated": "2026-09-21T01:47:27.899729+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4413.5,
-      "delta_pct": -0.3,
+      "value": 4416.3,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.27,
+      "value": 100.22,
       "delta_pct": 0.0,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.714,
-      "delta_pct": 1.5,
+      "value": 6.7225,
+      "delta_pct": 1.6,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 96.01,
-      "delta_pct": -4.3,
+      "value": 94.01,
+      "delta_pct": -6.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 81189.0,
-      "delta_pct": -0.1,
+      "value": 81323.0,
+      "delta_pct": 0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,12 +617,12 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-20T23:41:27.402413+00:00"
+    "updated": "2026-09-21T01:47:27.899729+00:00"
   },
   "ranked": {
     "text": "No qualifying setups.",
     "top": [],
-    "updated": "2026-09-20T23:41:27.402413+00:00"
+    "updated": "2026-09-21T01:47:27.899729+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +677,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-20T23:41:27.402413+00:00"
+    "updated": "2026-09-21T01:47:27.899729+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -685,9 +685,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive Americas market news wrap: Bonds slump again, yen rate check adds intrigue after BOJ"
+      "Bessent calls US-China talks very successful, Board of Trade operational ahead of summit"
     ],
-    "updated": "2026-09-20T23:41:27.402413+00:00"
+    "updated": "2026-09-21T01:47:27.899729+00:00"
   },
   "last_alert": "2026-09-01T19:49:27.683719+00:00",
   "gold_signal": {
