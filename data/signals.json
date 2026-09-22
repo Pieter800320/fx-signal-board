@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T20:31:29.621345+00:00",
+  "updated": "2026-09-22T23:52:34.359960+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4397.5,
-      "delta_pct": 0.3,
+      "value": 4402.5,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.54,
+      "value": 100.56,
       "delta_pct": 0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.902,
-      "delta_pct": 3.2,
+      "value": 6.91,
+      "delta_pct": 3.3,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.87,
-      "delta_pct": -6.2,
+      "value": 89.61,
+      "delta_pct": -6.4,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 86269.0,
-      "delta_pct": -0.4,
+      "value": 86193.0,
+      "delta_pct": -0.5,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-22T20:31:29.621345+00:00"
+    "updated": "2026-09-22T23:52:34.359960+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 8.07
       }
     ],
-    "updated": "2026-09-22T20:31:29.621345+00:00"
+    "updated": "2026-09-22T23:52:34.359960+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-22T20:31:29.621345+00:00"
+    "updated": "2026-09-22T23:52:34.359960+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive Americas market news wrap: US and Iran officials meet at UN"
+      "Australia flash PMI: growth slows to Q3 low as factories contract and firms cut jobs"
     ],
-    "updated": "2026-09-22T20:31:29.621345+00:00"
+    "updated": "2026-09-22T23:52:34.359960+00:00"
   },
   "last_alert": "2026-09-21T20:56:06.709056+00:00",
   "gold_signal": {
