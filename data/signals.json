@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-22T23:52:34.359960+00:00",
+  "updated": "2026-09-23T01:54:15.085573+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4402.5,
-      "delta_pct": 0.4,
+      "value": 4382.0,
+      "delta_pct": -0.0,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.56,
-      "delta_pct": 0.1,
+      "value": 100.63,
+      "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.91,
-      "delta_pct": 3.3,
+      "value": 6.854,
+      "delta_pct": 2.5,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,8 +597,8 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 89.61,
-      "delta_pct": -6.4,
+      "value": 90.22,
+      "delta_pct": -5.8,
       "direction": "down",
       "label": "WTI Oil"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-22T23:52:34.359960+00:00"
+    "updated": "2026-09-23T01:54:15.085573+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 8.07
       }
     ],
-    "updated": "2026-09-22T23:52:34.359960+00:00"
+    "updated": "2026-09-23T01:54:15.085573+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-22T23:52:34.359960+00:00"
+    "updated": "2026-09-23T01:54:15.085573+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -703,7 +703,7 @@
     "headlines": [
       "Australia flash PMI: growth slows to Q3 low as factories contract and firms cut jobs"
     ],
-    "updated": "2026-09-22T23:52:34.359960+00:00"
+    "updated": "2026-09-23T01:54:15.085573+00:00"
   },
   "last_alert": "2026-09-21T20:56:06.709056+00:00",
   "gold_signal": {
