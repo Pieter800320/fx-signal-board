@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T01:54:15.085573+00:00",
+  "updated": "2026-09-23T06:48:54.179124+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -541,83 +541,83 @@
   "regime_w1": {
     "regime": "Risk-On",
     "confidence": "Medium",
-    "score": 3.3,
+    "score": 0.0,
     "signals": -1,
-    "total": 3,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 2,
-    "confidence": "Medium",
+    "signals": -3,
+    "total": 3,
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.21,
-      "delta_pct": -4.4,
+      "value": 14.87,
+      "delta_pct": 0.4,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7764.64,
-      "delta_pct": -0.0,
-      "direction": "flat",
+      "value": 7764.7,
+      "delta_pct": 1.5,
+      "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4382.0,
-      "delta_pct": -0.0,
+      "value": 4370.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.63,
-      "delta_pct": 0.2,
-      "direction": "flat",
+      "value": 100.73,
+      "delta_pct": 0.3,
+      "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.854,
-      "delta_pct": 2.5,
+      "value": 6.817,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.968,
-      "delta_bp": 0.5,
+      "value": 4.963,
+      "delta_bp": -3.5,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 4.005,
-      "delta_bp": 2.3,
-      "direction": "up",
+      "value": 3.982,
+      "delta_bp": 0.4,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 90.22,
-      "delta_pct": -5.8,
+      "value": 89.29,
+      "delta_pct": -5.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 86193.0,
-      "delta_pct": -0.5,
+      "value": 86478.0,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 96.3,
-      "delta_bp": -1.8,
-      "direction": "flat",
+      "value": 98.1,
+      "delta_bp": -3.9,
+      "direction": "down",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-23T01:54:15.085573+00:00"
+    "updated": "2026-09-23T06:48:54.179124+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 8.68
+        "score": 8.88
       },
       {
         "pair": "GBPUSD",
         "direction": "bear",
-        "score": 8.3
+        "score": 8.7
       },
       {
         "pair": "EURUSD",
         "direction": "bear",
-        "score": 8.07
+        "score": 8.47
       }
     ],
-    "updated": "2026-09-23T01:54:15.085573+00:00"
+    "updated": "2026-09-23T06:48:54.179124+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-23T01:54:15.085573+00:00"
+    "updated": "2026-09-23T06:48:54.179124+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Australia flash PMI: growth slows to Q3 low as factories contract and firms cut jobs"
+      "What are the main events for today?"
     ],
-    "updated": "2026-09-23T01:54:15.085573+00:00"
+    "updated": "2026-09-23T06:48:54.179124+00:00"
   },
   "last_alert": "2026-09-21T20:56:06.709056+00:00",
   "gold_signal": {
