@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T15:23:27.908365+00:00",
+  "updated": "2026-09-23T17:59:32.024144+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -548,81 +548,97 @@
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -2,
-    "total": 4,
-    "confidence": "Medium",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": true
   },
   "macro_assets": {
     "vix": {
-      "value": 14.31,
-      "delta_pct": -3.8,
+      "value": 15.13,
+      "delta_pct": 1.7,
       "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7764.7,
-      "delta_pct": 1.5,
-      "direction": "up",
+      "value": 7719.84,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4338.5,
-      "delta_pct": -0.9,
+      "value": 4327.2,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 100.93,
-      "delta_pct": 0.5,
+      "value": 101.06,
+      "delta_pct": 0.6,
       "direction": "up",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7945,
-      "delta_pct": 0.5,
+      "value": 6.7525,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 4.988,
-      "delta_bp": 2.5,
-      "direction": "flat",
+      "value": 5.118,
+      "delta_bp": 15.5,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 4.005,
-      "delta_bp": 2.3,
+      "value": 4.028,
+      "delta_bp": 4.6,
       "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 91.16,
-      "delta_pct": -3.6,
+      "value": 91.78,
+      "delta_pct": -3.0,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 85430.0,
-      "delta_pct": -0.9,
+      "value": 84317.0,
+      "delta_pct": -2.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 98.3,
-      "delta_bp": 0.2,
-      "direction": "flat",
+      "value": 109.0,
+      "delta_bp": 10.9,
+      "direction": "up",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-23T13:02:29.013455+00:00"
+    "updated": "2026-09-23T17:59:32.024144+00:00"
   },
   "ranked": {
-    "text": "No qualifying setups.",
-    "top": [],
-    "updated": "2026-09-23T13:02:29.013455+00:00"
+    "text": "Unavailable (HTTP Error 401: Unauthorized)",
+    "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bear",
+        "score": 9.18
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 9.05
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 8.95
+      }
+    ],
+    "updated": "2026-09-23T17:59:32.024144+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-23T13:02:29.013455+00:00"
+    "updated": "2026-09-23T17:59:32.024144+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -685,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "investingLive European session wrap: Brent crude retakes $100 as dollar rises, yields climb and stocks slip"
+      "US treasury sells $70 billion of 5 year notes at a high yield of 5.033%"
     ],
-    "updated": "2026-09-23T13:02:29.013455+00:00"
+    "updated": "2026-09-23T17:59:32.024144+00:00"
   },
   "last_alert": "2026-09-23T15:23:27.908365+00:00",
   "gold_signal": {
