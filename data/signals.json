@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T21:05:28.692203+00:00",
+  "updated": "2026-09-24T00:02:03.054967+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -567,8 +567,8 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4326.0,
-      "delta_pct": -1.2,
+      "value": 4326.5,
+      "delta_pct": -1.1,
       "direction": "down",
       "label": "Gold"
     },
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7905,
-      "delta_pct": 0.5,
+      "value": 6.782,
+      "delta_pct": 0.3,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.7,
-      "delta_pct": -2.0,
+      "value": 92.05,
+      "delta_pct": -2.7,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 84288.0,
-      "delta_pct": -2.2,
+      "value": 84433.0,
+      "delta_pct": -2.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-23T21:05:28.692203+00:00"
+    "updated": "2026-09-24T00:02:03.054967+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 8.72
       }
     ],
-    "updated": "2026-09-23T21:05:28.692203+00:00"
+    "updated": "2026-09-24T00:02:03.054967+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-23T21:05:28.692203+00:00"
+    "updated": "2026-09-24T00:02:03.054967+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Economic and event calendar in Asia Thursday, September 24, 2026: Australian jobs report"
+      "US and China extend Busan trade truce to January 10 as Xi arrives for Trump summit"
     ],
-    "updated": "2026-09-23T21:05:28.692203+00:00"
+    "updated": "2026-09-24T00:02:03.054967+00:00"
   },
   "last_alert": "2026-09-23T20:07:54.870235+00:00",
   "gold_signal": {
