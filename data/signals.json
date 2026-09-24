@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T15:46:48.698583+00:00",
+  "updated": "2026-09-24T18:00:31.079380+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -547,82 +547,98 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
+    "label": "Risk-On",
+    "signals": -2,
     "total": 2,
-    "confidence": "Neutral",
+    "confidence": "Medium",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 16.03,
-      "delta_pct": 5.6,
-      "direction": "up",
+      "value": 15.84,
+      "delta_pct": 4.3,
+      "direction": "flat",
       "label": "VIX"
     },
     "spx": {
-      "value": 7706.03,
-      "delta_pct": -0.8,
-      "direction": "down",
+      "value": 7698.13,
+      "delta_pct": -0.1,
+      "direction": "flat",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4308.1,
-      "delta_pct": -0.2,
-      "direction": "flat",
+      "value": 4294.5,
+      "delta_pct": -0.6,
+      "direction": "down",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.28,
+      "value": 101.34,
       "delta_pct": 0.2,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7475,
-      "delta_pct": 1.0,
+      "value": 6.7685,
+      "delta_pct": 1.4,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 5.121,
-      "delta_bp": 0.7,
-      "direction": "flat",
+      "value": 5.158,
+      "delta_bp": 4.4,
+      "direction": "up",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 4.028,
-      "delta_bp": 0.0,
-      "direction": "flat",
+      "value": 4.057,
+      "delta_bp": 2.9,
+      "direction": "up",
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.73,
-      "delta_pct": 1.7,
+      "value": 95.55,
+      "delta_pct": 3.7,
       "direction": "up",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 83509.0,
-      "delta_pct": -1.0,
+      "value": 84045.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 109.3,
-      "delta_bp": 0.7,
+      "value": 110.1,
+      "delta_bp": 1.5,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-24T12:55:57.020990+00:00"
+    "updated": "2026-09-24T18:00:31.079380+00:00"
   },
   "ranked": {
-    "text": "No qualifying setups.",
-    "top": [],
-    "updated": "2026-09-24T12:55:57.020990+00:00"
+    "text": "Unavailable (HTTP Error 401: Unauthorized)",
+    "top": [
+      {
+        "pair": "AUDUSD",
+        "direction": "bear",
+        "score": 8.98
+      },
+      {
+        "pair": "GBPUSD",
+        "direction": "bear",
+        "score": 8.85
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 8.75
+      }
+    ],
+    "updated": "2026-09-24T18:00:31.079380+00:00"
   },
   "calendar": {
     "events": [
@@ -677,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-24T12:55:57.020990+00:00"
+    "updated": "2026-09-24T18:00:31.079380+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -685,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Canada retail sales for the month of July -0.7% vs -0.8% estimate"
+      "US treasury sells $44 billion of 7 year notes at a high yield of 5.085%"
     ],
-    "updated": "2026-09-24T12:55:57.020990+00:00"
+    "updated": "2026-09-24T18:00:31.079380+00:00"
   },
   "last_alert": "2026-09-23T20:07:54.870235+00:00",
   "gold_signal": {
