@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T10:06:30.315194+00:00",
+  "updated": "2026-09-25T13:02:46.290841+00:00",
   "regime_d1": {
     "regime": "Ranging",
     "confidence": "Low",
@@ -547,16 +547,16 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-Off",
+    "signals": 1,
+    "total": 1,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.67,
-      "delta_pct": 3.2,
+      "value": 15.2,
+      "delta_pct": -3.0,
       "direction": "flat",
       "label": "VIX"
     },
@@ -567,78 +567,62 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4313.5,
-      "delta_pct": 0.4,
-      "direction": "flat",
+      "value": 4332.9,
+      "delta_pct": 0.8,
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.15,
-      "delta_pct": -0.1,
-      "direction": "flat",
+      "value": 101.01,
+      "delta_pct": -0.3,
+      "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.756,
+      "value": 6.7585,
       "delta_pct": 0.6,
       "direction": "flat",
       "label": "Copper"
     },
     "us10y": {
-      "value": 5.162,
-      "delta_bp": 4.8,
-      "direction": "up",
+      "value": 5.173,
+      "delta_bp": 1.1,
+      "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
       "value": 4.068,
-      "delta_bp": 4.0,
-      "direction": "up",
+      "delta_bp": 0.0,
+      "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.08,
-      "delta_pct": -1.6,
+      "value": 92.8,
+      "delta_pct": -1.9,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 83866.0,
-      "delta_pct": -0.6,
+      "value": 84415.0,
+      "delta_pct": 0.0,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 109.4,
-      "delta_bp": 0.8,
+      "value": 110.5,
+      "delta_bp": 1.1,
       "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-25T07:10:08.799321+00:00"
+    "updated": "2026-09-25T13:02:46.290841+00:00"
   },
   "ranked": {
-    "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "top": [
-      {
-        "pair": "AUDUSD",
-        "direction": "bear",
-        "score": 8.65
-      },
-      {
-        "pair": "USDJPY",
-        "direction": "bull",
-        "score": 8.32
-      },
-      {
-        "pair": "EURUSD",
-        "direction": "bear",
-        "score": 8.05
-      }
-    ],
-    "updated": "2026-09-25T07:10:08.799321+00:00"
+    "text": "No qualifying setups.",
+    "top": [],
+    "updated": "2026-09-25T13:02:46.290841+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +677,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-25T07:10:08.799321+00:00"
+    "updated": "2026-09-25T13:02:46.290841+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-24T22:45:06.562899+00:00"
+    "generated_at": "2026-09-25T13:03:08.296253+00:00"
   },
   "breaking": {
     "headlines": [
-      "Spain Q2 GDP confirmed at 0.7% as domestic demand keeps growth resilient"
+      "USTR's Greer: We have reached agreements with China on a sub-set of goods we can trade"
     ],
-    "updated": "2026-09-25T07:10:08.799321+00:00"
+    "updated": "2026-09-25T13:02:46.290841+00:00"
   },
   "last_alert": "2026-09-24T20:21:01.694573+00:00",
   "gold_signal": {
