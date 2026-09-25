@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T02:00:08.858731+00:00",
+  "updated": "2026-09-25T07:10:08.799321+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "High",
@@ -547,10 +547,10 @@
     "stable": true
   },
   "macro": {
-    "label": "Risk-Off",
-    "signals": 1,
-    "total": 1,
-    "confidence": "Low",
+    "label": "Mixed",
+    "signals": 0,
+    "total": 0,
+    "confidence": "Neutral",
     "stable": false
   },
   "macro_assets": {
@@ -567,20 +567,20 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4322.6,
-      "delta_pct": 0.6,
-      "direction": "up",
+      "value": 4313.5,
+      "delta_pct": 0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.27,
-      "delta_pct": -0.0,
+      "value": 101.15,
+      "delta_pct": -0.1,
       "direction": "flat",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.7545,
-      "delta_pct": 0.5,
+      "value": 6.756,
+      "delta_pct": 0.6,
       "direction": "flat",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 93.14,
+      "value": 93.08,
       "delta_pct": -1.6,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 84592.0,
-      "delta_pct": 0.2,
+      "value": 83866.0,
+      "delta_pct": -0.6,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-25T02:00:08.858731+00:00"
+    "updated": "2026-09-25T07:10:08.799321+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 8.05
       }
     ],
-    "updated": "2026-09-25T02:00:08.858731+00:00"
+    "updated": "2026-09-25T07:10:08.799321+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-25T02:00:08.858731+00:00"
+    "updated": "2026-09-25T07:10:08.799321+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "China shuts for Mid-Autumn Festival holiday today, a preview of the week-long National Day gap to come"
+      "Spain Q2 GDP confirmed at 0.7% as domestic demand keeps growth resilient"
     ],
-    "updated": "2026-09-25T02:00:08.858731+00:00"
+    "updated": "2026-09-25T07:10:08.799321+00:00"
   },
   "last_alert": "2026-09-24T20:21:01.694573+00:00",
   "gold_signal": {
