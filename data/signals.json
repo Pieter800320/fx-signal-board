@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T20:21:22.817063+00:00",
+  "updated": "2026-09-25T22:50:57.064256+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -547,77 +547,77 @@
     "stable": true
   },
   "macro": {
-    "label": "Mixed",
-    "signals": 0,
-    "total": 0,
-    "confidence": "Neutral",
+    "label": "Risk-On",
+    "signals": -1,
+    "total": 3,
+    "confidence": "Low",
     "stable": false
   },
   "macro_assets": {
     "vix": {
-      "value": 15.0,
-      "delta_pct": -4.3,
-      "direction": "flat",
+      "value": 14.87,
+      "delta_pct": -5.1,
+      "direction": "down",
       "label": "VIX"
     },
     "spx": {
-      "value": 7740.64,
+      "value": 7743.41,
       "delta_pct": 0.5,
       "direction": "up",
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4319.4,
+      "value": 4320.5,
       "delta_pct": 0.5,
-      "direction": "flat",
+      "direction": "up",
       "label": "Gold"
     },
     "dxy": {
-      "value": 101.03,
+      "value": 101.04,
       "delta_pct": -0.3,
       "direction": "down",
       "label": "DXY"
     },
     "copper": {
-      "value": 6.767,
-      "delta_pct": 0.7,
+      "value": 6.779,
+      "delta_pct": 0.9,
       "direction": "up",
       "label": "Copper"
     },
     "us10y": {
-      "value": 5.2,
-      "delta_bp": 3.8,
+      "value": 5.184,
+      "delta_bp": 2.2,
       "direction": "flat",
       "label": "US 10Y"
     },
     "us3m": {
-      "value": 4.075,
-      "delta_bp": 0.7,
+      "value": 4.07,
+      "delta_bp": 0.2,
       "direction": "flat",
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.15,
-      "delta_pct": -2.6,
+      "value": 92.44,
+      "delta_pct": -2.3,
       "direction": "down",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 83873.0,
-      "delta_pct": -0.6,
+      "value": 84054.0,
+      "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
     },
     "curve": {
-      "value": 112.5,
-      "delta_bp": 3.1,
-      "direction": "up",
+      "value": 111.4,
+      "delta_bp": 2.0,
+      "direction": "flat",
       "label": "10Y-3M"
     }
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-25T18:06:47.408329+00:00"
+    "updated": "2026-09-25T22:50:57.064256+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -625,20 +625,20 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 8.05
-      },
-      {
-        "pair": "NZDUSD",
-        "direction": "bear",
-        "score": 7.22
+        "score": 7.92
       },
       {
         "pair": "AUDUSD",
         "direction": "bear",
-        "score": 7.0
+        "score": 6.6
+      },
+      {
+        "pair": "EURUSD",
+        "direction": "bear",
+        "score": 6.28
       }
     ],
-    "updated": "2026-09-25T18:06:47.408329+00:00"
+    "updated": "2026-09-25T22:50:57.064256+00:00"
   },
   "calendar": {
     "events": [
@@ -693,7 +693,7 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-25T18:06:47.408329+00:00"
+    "updated": "2026-09-25T22:50:57.064256+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -701,9 +701,9 @@
   },
   "breaking": {
     "headlines": [
-      "Trump will meet with Xi again in November"
+      "investingLive Americas market news wrap: Iran hopes spring eternal"
     ],
-    "updated": "2026-09-25T18:06:47.408329+00:00"
+    "updated": "2026-09-25T22:50:57.064256+00:00"
   },
   "last_alert": "2026-09-24T20:21:01.694573+00:00",
   "gold_signal": {
