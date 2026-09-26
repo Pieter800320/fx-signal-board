@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-25T22:50:57.064256+00:00",
+  "updated": "2026-09-26T02:05:48.772572+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -551,7 +551,7 @@
     "signals": -1,
     "total": 3,
     "confidence": "Low",
-    "stable": false
+    "stable": true
   },
   "macro_assets": {
     "vix": {
@@ -603,7 +603,7 @@
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 84054.0,
+      "value": 84002.0,
       "delta_pct": -0.4,
       "direction": "flat",
       "label": "Bitcoin"
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-25T22:50:57.064256+00:00"
+    "updated": "2026-09-26T02:05:48.772572+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-09-25T22:50:57.064256+00:00"
+    "updated": "2026-09-26T02:05:48.772572+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-25T22:50:57.064256+00:00"
+    "updated": "2026-09-26T02:05:48.772572+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-25T13:03:08.296253+00:00"
+    "generated_at": "2026-09-26T02:06:10.312519+00:00"
   },
   "breaking": {
     "headlines": [
       "investingLive Americas market news wrap: Iran hopes spring eternal"
     ],
-    "updated": "2026-09-25T22:50:57.064256+00:00"
+    "updated": "2026-09-26T02:05:48.772572+00:00"
   },
   "last_alert": "2026-09-24T20:21:01.694573+00:00",
   "gold_signal": {
