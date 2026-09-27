@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-27T19:20:16.748556+00:00",
+  "updated": "2026-09-27T22:36:31.166213+00:00",
   "regime_d1": {
     "regime": "Risk-Off",
     "confidence": "Medium",
@@ -542,15 +542,15 @@
     "regime": "Risk-On",
     "confidence": "Medium",
     "score": 0.0,
-    "signals": -2,
-    "total": 2,
+    "signals": -1,
+    "total": 1,
     "stable": true
   },
   "macro": {
     "label": "Risk-On",
-    "signals": -1,
+    "signals": -3,
     "total": 3,
-    "confidence": "Low",
+    "confidence": "High",
     "stable": true
   },
   "macro_assets": {
@@ -567,9 +567,9 @@
       "label": "S&P 500"
     },
     "gold": {
-      "value": 4321.2,
-      "delta_pct": 0.5,
-      "direction": "up",
+      "value": 4305.1,
+      "delta_pct": -0.4,
+      "direction": "flat",
       "label": "Gold"
     },
     "dxy": {
@@ -579,8 +579,8 @@
       "label": "DXY"
     },
     "copper": {
-      "value": 6.766,
-      "delta_pct": 0.7,
+      "value": 6.7505,
+      "delta_pct": 0.8,
       "direction": "up",
       "label": "Copper"
     },
@@ -597,14 +597,14 @@
       "label": "US 3M"
     },
     "wti": {
-      "value": 92.41,
-      "delta_pct": -2.3,
-      "direction": "down",
+      "value": 93.27,
+      "delta_pct": 0.9,
+      "direction": "flat",
       "label": "WTI Oil"
     },
     "btc": {
-      "value": 84826.0,
-      "delta_pct": 0.5,
+      "value": 84219.0,
+      "delta_pct": -0.2,
       "direction": "flat",
       "label": "Bitcoin"
     },
@@ -617,7 +617,7 @@
   },
   "catalyst": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "updated": "2026-09-27T19:20:16.748556+00:00"
+    "updated": "2026-09-27T22:36:31.166213+00:00"
   },
   "ranked": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
@@ -625,7 +625,7 @@
       {
         "pair": "USDCAD",
         "direction": "bull",
-        "score": 7.92
+        "score": 7.33
       },
       {
         "pair": "AUDUSD",
@@ -638,7 +638,7 @@
         "score": 6.28
       }
     ],
-    "updated": "2026-09-27T19:20:16.748556+00:00"
+    "updated": "2026-09-27T22:36:31.166213+00:00"
   },
   "calendar": {
     "events": [
@@ -693,17 +693,17 @@
         "note": "Critical - FOMC prep"
       }
     ],
-    "updated": "2026-09-27T19:20:16.748556+00:00"
+    "updated": "2026-09-27T22:36:31.166213+00:00"
   },
   "deep_analysis": {
     "text": "Unavailable (HTTP Error 401: Unauthorized)",
-    "generated_at": "2026-09-27T09:33:35.175076+00:00"
+    "generated_at": "2026-09-27T22:36:52.453744+00:00"
   },
   "breaking": {
     "headlines": [
       "investingLive Americas market news wrap: Iran hopes spring eternal"
     ],
-    "updated": "2026-09-27T19:20:16.748556+00:00"
+    "updated": "2026-09-27T22:36:31.166213+00:00"
   },
   "last_alert": "2026-09-24T20:21:01.694573+00:00",
   "gold_signal": {
@@ -713,5 +713,9 @@
     "h4_confidence": "Medium",
     "h1_confirmed": false,
     "updated": "2026-09-25T20:21:22.817063+00:00"
+  },
+  "week_ahead": {
+    "text": "Unavailable (HTTP Error 401: Unauthorized)",
+    "generated_at": "2026-09-27T22:36:31.166213+00:00"
   }
 }
